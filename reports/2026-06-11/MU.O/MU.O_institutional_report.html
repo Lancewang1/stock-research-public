@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MU.O Micron Technology, Inc.：AI 存储周期的认知差研究</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17212b;
+      --muted: #5c6873;
+      --line: #d7dde3;
+      --soft: #f4f6f8;
+      --navy: #17324d;
+      --blue: #2d6da3;
+      --warn: #9a5b14;
+      --risk: #9b2c2c;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #edf1f4;
+      color: var(--ink);
+      font-family: Inter, "Segoe UI", "Microsoft YaHei", Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.62;
+    }
+    main {
+      width: min(1160px, calc(100% - 32px));
+      margin: 24px auto 56px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-top: 5px solid var(--navy);
+      padding: 42px 52px 56px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+      margin-bottom: 24px;
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0 0 26px;
+      color: var(--navy);
+      font-size: 34px;
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+    h2 {
+      margin: 34px 0 12px;
+      padding: 0 0 7px;
+      border-bottom: 2px solid var(--navy);
+      color: var(--navy);
+      font-size: 20px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+    h3 { margin: 24px 0 8px; color: var(--blue); font-size: 16px; letter-spacing: 0; }
+    p { margin: 8px 0 14px; }
+    ul, ol { margin: 8px 0 16px; padding-left: 24px; }
+    li { margin: 5px 0; }
+    code {
+      padding: 1px 4px;
+      border: 1px solid var(--line);
+      background: var(--soft);
+      font-family: Consolas, monospace;
+      font-size: 0.92em;
+    }
+    .table-wrap { overflow-x: auto; margin: 12px 0 22px; }
+    table { width: 100%; min-width: 680px; border-collapse: collapse; font-size: 13px; }
+    th {
+      background: var(--navy);
+      color: #fff;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    th, td { padding: 8px 10px; border: 1px solid var(--line); vertical-align: top; }
+    tbody tr:nth-child(even) { background: var(--soft); }
+    .align-left { text-align: left; }
+    .align-center { text-align: center; }
+    .align-right { text-align: right; }
+    @media (max-width: 720px) {
+      main { width: 100%; margin: 0; border-left: 0; border-right: 0; padding: 26px 18px 42px; }
+      h1 { font-size: 27px; }
+      h2 { font-size: 18px; }
+      body { font-size: 14px; }
+    }
+    @media print {
+      body { background: #fff; }
+      main { width: 100%; margin: 0; border: 0; padding: 0; }
+      .table-wrap { overflow: visible; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="meta"><span><strong>Date</strong> 2026-06-11</span><span><strong>Ticker</strong> MU.O</span><span><strong>Type</strong> 顶级机构级AI产业链个股研究报告</span><span><strong>Language</strong> zh-CN</span><span><strong>Status</strong> draft_for_review</span><span><strong>Data Source</strong> Wind Financial Data Service + engine evidence ledger</span></div>
+    <h1>MU.O Micron Technology, Inc.：AI 存储周期的认知差研究</h1>
+<h2>1. 一页投资结论</h2>
+<ul>
+<li><strong>当前结论</strong>：基本面方向偏正面，但交易/估值层面偏谨慎；估值模型未放行。</li>
+<li><strong>研究状态</strong>：draft_for_review；投资评级仍为 not_final。</li>
+<li><strong>DCF gate</strong>：blocked_missing_clean_net_debt。在 clean net debt、租赁负债、稀释股数、税率和 capex 假设确认前，不输出最终 Excel DCF。</li>
+<li><strong>核心矛盾</strong>：市场已经相信 AI 存储需求强，真正的超额收益取决于 HBM/DRAM/NAND 高景气能持续多久、MU 能拿到多少 HBM 份额，以及当前估值是否已经资本化峰值利润。</li>
+<li><strong>交易位置</strong>：1 年涨幅 670.5%、PE 41.7x、PB 13.9x、Beta 2.18，说明基本面判断和入场价格必须分开处理。</li>
+</ul>
+<div class="table-wrap"><table><thead><tr><th class="align-left">指标</th><th class="align-right">当前值</th><th class="align-left">投资含义</th></tr></thead><tbody><tr><td class="align-left">最新股价</td><td class="align-right">$891.88</td><td class="align-left">与 Wind kline 收盘价差异 0.0%</td></tr><tr><td class="align-left">市值</td><td class="align-right">$1,005.80bn</td><td class="align-left">已是大市值高预期资产</td></tr><tr><td class="align-left">最新收入</td><td class="align-right">$37.38bn</td><td class="align-left">验证 FY2023 后复苏力度</td></tr><tr><td class="align-left">最新毛利率</td><td class="align-right">39.8%</td><td class="align-left">判断是否接近高景气利润率</td></tr><tr><td class="align-left">FCF proxy</td><td class="align-right">$1.67bn</td><td class="align-left">受 capex 强度影响大</td></tr><tr><td class="align-left">1 年涨幅</td><td class="align-right">670.5%</td><td class="align-left">趋势强，但拥挤度和回撤风险同步上升</td></tr></tbody></table></div>
+<h2>2. 市场共识与认知差</h2>
+<h3>市场大概率已经定价</h3>
+<ul>
+<li>AI 训练和推理会显著提高 HBM、高容量 DRAM 和 enterprise SSD 需求。</li>
+<li>存储行业从 FY2023 低谷恢复，价格和毛利率进入上行周期。</li>
+<li>MU 是 AI 存储重要受益者，但不是 HBM 份额领先者。</li>
+</ul>
+<h3>仍需要验证的认知差</h3>
+<ul>
+<li><strong>市场关切从复苏转向持续性</strong>：真正影响超额收益的是高毛利持续时间、HBM 份额和 capex discipline 是否被低估/高估。</li>
+<li>基准情形：市场已接受 AI 存储需求强、价格上行和利润恢复。</li>
+<li>观察指标：HBM backlog; DRAM/NAND contract price; inventory days; capex intensity</li>
+<li>反证：库存上升但价格不再上行; HBM 认证/份额低于管理层指引; capex 加速导致供给周期提前反转</li>
+<li><strong>AI 存储 lead-lag 框架</strong>：若上游 CoWoS/GPU 出货和下游云 capex 同时强，存储周期可能比传统 PC/mobile 周期更长。</li>
+<li>基准情形：云厂商 capex 和 GPU 平台升级拉动 HBM 与高容量 DRAM/NAND 需求。</li>
+<li>观察指标：NVDA 数据中心收入和 backlog; hyperscaler capex guidance; TSMC CoWoS/advanced packaging 产能; SK Hynix/Samsung/MU HBM qualification; DRAM/NAND contract price</li>
+<li>反证：云 capex 放缓; HBM 供给快速释放; DRAM/NAND 合约价转跌</li>
+</ul>
+<h2>3. 六模块研究引擎输出</h2>
+<h3>3.1 研报自动阅读</h3>
+<ul>
+<li>状态：ok。</li>
+<li>模块结论：研报模块聚焦提取市场共识、卖方分歧和关键假设，不再做简单摘要。</li>
+<li><strong>判断 C-RPT-001</strong>：当前外部叙事已高度集中在 AI 存储超级周期，单纯证明 HBM 需求强已不足以形成认知差。 投资含义：报告必须转向验证周期持续时间、HBM 份额爬坡和高毛利是否可持续。 证据：R001, R002, R003, R004。</li>
+<li>数据缺口：未检测到来自 Chrome 的已读研报；已用 Wind 新闻/研报线索作为低置信度替代。</li>
+</ul>
+<h3>3.2 每日新闻 / 投资人观点 / 持仓变化</h3>
+<ul>
+<li>状态：ok。</li>
+<li>模块结论：日度模块跟踪新闻、投资人观点、持仓变化和叙事温度。</li>
+<li><strong>判断 C-DAY-001</strong>：日度信息流显示 MU 的交易焦点集中在 AI 存储供需紧张、DRAM/NAND 价格、HBM 订单和大幅上涨后的拥挤度。 投资含义：短期催化剂来自价格/订单继续上修；反向风险来自任何供需正常化或持仓降温信号。 证据：D001, D002, D003, D004, D005, D006。</li>
+<li>数据缺口：投资人观点源需要 Chrome 登录或公开页面输入后才能形成高置信度结论。</li>
+</ul>
+<h3>3.3 公司基本面与 filing</h3>
+<ul>
+<li>状态：ok。</li>
+<li>模块结论：基本面模块读取财报、filing、业绩会和 Wind 财务数据，目标是定位市场最关心的财务变量。</li>
+<li><strong>判断 C-FND-001</strong>：MU 已经从 FY2023 存储下行周期恢复到 FY2025 高景气：最新收入约 37.38bn USD，毛利率约 39.8%，相对低点改善 48.9%。 投资含义：核心问题不再是是否复苏，而是 FY2026-FY2027 的毛利率和 FCF 能否维持在高位。 证据：E002, F001, F002, F003。</li>
+<li><strong>判断 C-FND-002</strong>：DCF 仍然不能直接落最终模型，因为当前 Wind 债务字段可能等于总负债，净债务桥不干净。 投资含义：估值可以先用周期中枢和场景框架，Excel DCF 必须等待 clean debt、租赁、稀释股数和税率确认。 证据：E002。</li>
+</ul>
+<h3>3.4 AI 产业链上下游</h3>
+<ul>
+<li>状态：ok。</li>
+<li>模块结论：产业链模块把单股放回 AI 算力-封装-存储-云 capex 链条，寻找领先变量和相对份额差。</li>
+<li><strong>判断 C-CHN-001</strong>：MU 在 AI 产业链中不是最上游算力定价权节点，而是 HBM/DRAM/NAND 供给约束节点。 投资含义：研究应把 NVDA/云厂商 capex、TSMC CoWoS、HBM 竞争格局、DRAM/NAND 合约价作为领先变量。 证据：I001。</li>
+<li><strong>判断 C-CHN-002</strong>：HBM 份额差异决定 MU 的超额弹性：SK Hynix 是份额领先者，MU 的 upside 更依赖追赶速度和产品认证。 投资含义：不能只看行业 beta，要跟踪 MU 相对 SK Hynix/Samsung 的资格认证、产能分配和客户结构。 证据：I001。</li>
+</ul>
+<h3>3.5 量化分析</h3>
+<ul>
+<li>状态：ok。</li>
+<li>模块结论：量化模块提供截面与时序验证，不替代基本面结论。</li>
+<li><strong>判断 C-QNT-001</strong>：MU 当前时序动量为极高，但估值分位和回撤风险也同步升高。 投资含义：基本面看多不等于当下追高；仓位和入场点应由价格确认、回撤承受和催化剂窗口共同决定。 证据：Q001。</li>
+<li><strong>判断 C-QNT-002</strong>：量化模块后续必须同时覆盖截面因子和时序因子：AI 产业链相对强弱、估值/修正/动量，以及单股趋势/波动/回撤。 投资含义：旧 ML 截面因子可复用，但必须补充单股时序 regime 与事件窗口分析。 证据：Q001。</li>
+</ul>
+<h3>3.6 资金流向</h3>
+<ul>
+<li>状态：partial。</li>
+<li>模块结论：资金流模块先用持仓和价格行为形成拥挤度快照，后续接 ETF flow、13F、杠杆和期权。</li>
+<li><strong>判断 C-FLW-001</strong>：资金面初步判断为高拥挤度：股价大幅上涨叠加被动资金权重暴露，短期波动会被资金流放大。 投资含义：需要接入 ETF flow、13F、short interest、options 和融资/杠杆数据，才能判断是否还有增量买盘。 证据：FL001。</li>
+<li>数据缺口：ETF fund flow、13F、short interest、options 尚未接入正式数据源。</li>
+</ul>
+<h2>4. 公司基本面：从复苏验证转向持续性验证</h2>
+<div class="table-wrap"><table><thead><tr><th class="align-left">财年/期间</th><th class="align-right">收入</th><th class="align-right">净利润</th><th class="align-right">OCF</th><th class="align-right">Capex</th><th class="align-right">FCF proxy</th><th class="align-right">毛利率</th></tr></thead><tbody><tr><td class="align-left">Q4 FY2021</td><td class="align-right">$27.71bn</td><td class="align-right">$5.86bn</td><td class="align-right">$12.47bn</td><td class="align-right">$10.03bn</td><td class="align-right">$2.44bn</td><td class="align-right">37.6%</td></tr><tr><td class="align-left">Q4 FY2022</td><td class="align-right">$30.76bn</td><td class="align-right">$8.69bn</td><td class="align-right">$15.18bn</td><td class="align-right">$12.07bn</td><td class="align-right">$3.11bn</td><td class="align-right">45.2%</td></tr><tr><td class="align-left">Q4 FY2023</td><td class="align-right">$15.54bn</td><td class="align-right">$-5.83bn</td><td class="align-right">$1.56bn</td><td class="align-right">$7.68bn</td><td class="align-right">$-6.12bn</td><td class="align-right">-9.1%</td></tr><tr><td class="align-left">Q4 FY2024</td><td class="align-right">$25.11bn</td><td class="align-right">$0.78bn</td><td class="align-right">$8.51bn</td><td class="align-right">$8.39bn</td><td class="align-right">$0.12bn</td><td class="align-right">22.4%</td></tr><tr><td class="align-left">Q4 FY2025</td><td class="align-right">$37.38bn</td><td class="align-right">$8.54bn</td><td class="align-right">$17.52bn</td><td class="align-right">$15.86bn</td><td class="align-right">$1.67bn</td><td class="align-right">39.8%</td></tr></tbody></table></div>
+<p>基本面判断：MU 的数据已经证明存储周期从 FY2023 低谷明显恢复，但报告不能停在“复苏”二字。真正要 underwriting 的变量是：</p>
+<ul>
+<li>HBM 收入占比和毛利率是否足以让 MU 的利润率中枢上移。</li>
+<li>DRAM/NAND 合约价是否只是短缺驱动的周期上行，还是 AI workload 改变需求曲线后的更长周期。</li>
+<li>capex 是否会在 2026-2027 形成新供给压力，提前终结当前利润弹性。</li>
+<li>Crucial/消费级业务收缩是否意味着资源重新配置到更高回报 AI 数据中心客户。</li>
+</ul>
+<h2>5. AI 产业链上下游验证</h2>
+<div class="table-wrap"><table><thead><tr><th class="align-left">领先变量</th><th class="align-left">为什么重要</th><th class="align-left">对 MU 的读数</th></tr></thead><tbody><tr><td class="align-left">Hyperscaler capex</td><td class="align-left">决定 AI server 和 HBM 真实需求</td><td class="align-left">capex 上修支持长周期，放缓则压缩估值</td></tr><tr><td class="align-left">NVDA / ASIC 出货</td><td class="align-left">决定 HBM attach 和容量需求</td><td class="align-left">GPU 平台升级会提高 HBM 容量和带宽需求</td></tr><tr><td class="align-left">TSMC CoWoS / advanced packaging</td><td class="align-left">AI 加速器供给瓶颈</td><td class="align-left">若封装瓶颈缓解，HBM 拉货可能继续；若瓶颈转弱，需求传导放慢</td></tr><tr><td class="align-left">SK Hynix / Samsung HBM 进展</td><td class="align-left">决定 MU 相对份额</td><td class="align-left">MU 是追赶者，alpha 来自份额超预期而非行业 beta 本身</td></tr><tr><td class="align-left">DRAM/NAND 合约价和库存</td><td class="align-left">判断周期持续时间</td><td class="align-left">价格上行且库存可控支持 bull case；库存累积是反证</td></tr></tbody></table></div>
+<h2>6. 估值与场景框架</h2>
+<p>MU 不适合只用单一年份 PE 给目标价。更合理的是三层框架：</p>
+<ol>
+<li><strong>周期中枢估值</strong>：用 normalized earnings / mid-cycle margin 防止把峰值利润永久化。</li>
+<li><strong>AI/HBM 结构性上移情景</strong>：若 HBM mix 和 AI server DDR/NAND 让毛利率中枢上移，可给更高 PB/EV-EBITDA。</li>
+<li><strong>下行 stress case</strong>：若供给扩张或客户预拉货反转，毛利率和估值倍数会同时压缩。</li>
+</ol>
+<p>当前 PE 41.7x、PB 13.9x、1 年涨幅 670.5%，说明市场已经把相当多的长周期假设放进价格。报告不能给机械买入结论，必须等待下一组 filing、pricing 和资金流证据。</p>
+<h2>7. 量化与资金流验证</h2>
+<div class="table-wrap"><table><thead><tr><th class="align-left">维度</th><th class="align-left">当前观察</th><th class="align-left">结论</th></tr></thead><tbody><tr><td class="align-left">时序动量</td><td class="align-left">1 年涨幅 670.5%</td><td class="align-left">趋势强，但追高风险高</td></tr><tr><td class="align-left">风险</td><td class="align-left">Beta 2.18，最大回撤 -30.3%</td><td class="align-left">仓位需要按高 beta 资产处理</td></tr><tr><td class="align-left">估值</td><td class="align-left">PE 41.7x，PB 13.9x</td><td class="align-left">更像高预期周期股，不是低估值修复</td></tr><tr><td class="align-left">持仓</td><td class="align-left">前十大股东含 BlackRock, Inc., VANGUARD CAPITAL MANAGEMENT LLC, Capital World Investors</td><td class="align-left">需要进一步接 ETF flow / 13F / options</td></tr></tbody></table></div>
+<p>量化模块后续要接两类信号：AI 产业链截面相对强弱，以及 MU 单股时序 regime。资金流模块要接 ETF fund flow、13F、short interest、options 和杠杆数据，判断是否已经 crowded。</p>
+<h2>8. 催化剂与反证清单</h2>
+<div class="table-wrap"><table><thead><tr><th class="align-left">时间维度</th><th class="align-left">正向催化剂</th><th class="align-left">反证/风险</th></tr></thead><tbody><tr><td class="align-left">1-4 周</td><td class="align-left">DRAM/NAND 合约价继续上修；研报继续上调 FY2026 EPS</td><td class="align-left">股价对利好钝化；期权和 ETF 资金过度拥挤</td></tr><tr><td class="align-left">1 个季度</td><td class="align-left">earnings call 确认 HBM backlog、gross margin 和 capex discipline</td><td class="align-left">管理层提示客户预拉货、库存上升或 capex 加速</td></tr><tr><td class="align-left">6-12 个月</td><td class="align-left">MU HBM 份额持续追赶 SK Hynix/Samsung</td><td class="align-left">HBM qualification 低于预期或价格正常化提前发生</td></tr></tbody></table></div>
+<h2>9. 风险和止损条件</h2>
+<ul>
+<li><strong>周期风险</strong>：短缺最终可能转成过剩，尤其当行业 capex 同步扩张时。</li>
+<li><strong>份额风险</strong>：MU 是 HBM 追赶者，不能把 SK Hynix 的份额领先直接映射到 MU。</li>
+<li><strong>估值风险</strong>：当前估值已经显著资本化 AI 存储长周期，任何增速放缓都会造成双杀。</li>
+<li><strong>数据质量风险</strong>：Wind 债务字段疑似等于总负债，DCF 不能直接使用。</li>
+<li><strong>交易风险</strong>：高 beta、高涨幅、高叙事热度使回撤可能大于基本面新闻本身。</li>
+</ul>
+<h2>10. Evidence Ledger</h2>
+<div class="table-wrap"><table><thead><tr><th class="align-left">ID</th><th class="align-left">类型</th><th class="align-left">来源</th><th class="align-left">日期</th><th class="align-left">标题 / 摘要</th></tr></thead><tbody><tr><td class="align-left">E001</td><td class="align-left">company_profile</td><td class="align-left">Wind global_stock_basicinfo</td><td class="align-left"></td><td class="align-left">MU.O</td></tr><tr><td class="align-left">E002</td><td class="align-left">financial_history</td><td class="align-left">Wind global_stock_fundamentals</td><td class="align-left"></td><td class="align-left">5</td></tr><tr><td class="align-left">E003</td><td class="align-left">market_data</td><td class="align-left">Wind global_stock_price_indicators</td><td class="align-left"></td><td class="align-left"></td></tr><tr><td class="align-left">E004</td><td class="align-left">risk_metrics</td><td class="align-left">Wind global_stock_risk_metrics</td><td class="align-left"></td><td class="align-left"></td></tr><tr><td class="align-left">E005</td><td class="align-left">ownership</td><td class="align-left">Wind global_stock_equity_holders</td><td class="align-left"></td><td class="align-left"></td></tr><tr><td class="align-left">E006</td><td class="align-left">capital_actions</td><td class="align-left">Wind global_stock_events</td><td class="align-left"></td><td class="align-left"></td></tr><tr><td class="align-left">F001</td><td class="align-left">primary_filing</td><td class="align-left">Wind financial_docs</td><td class="align-left">2024-06-27</td><td class="align-left">Form 10-Q 美光科技(MICRON TECHNOLOGY) : Quarterly report-20240530</td></tr><tr><td class="align-left">F002</td><td class="align-left">primary_filing</td><td class="align-left">Wind financial_docs</td><td class="align-left">2024-12-19</td><td class="align-left">Form 10-Q 美光科技(MICRON TECHNOLOGY) : Quarterly report-20241128</td></tr><tr><td class="align-left">F003</td><td class="align-left">primary_filing</td><td class="align-left">Wind financial_docs</td><td class="align-left">2022-10-07</td><td class="align-left">Form 10-K 美光科技(MICRON TECHNOLOGY) : Annual report-20220901</td></tr><tr><td class="align-left">F004</td><td class="align-left">primary_filing</td><td class="align-left">Wind financial_docs</td><td class="align-left">2023-12-21</td><td class="align-left">Form 10-Q 美光科技(MICRON TECHNOLOGY) : Quarterly report-20231130</td></tr><tr><td class="align-left">F005</td><td class="align-left">primary_filing</td><td class="align-left">Wind financial_docs</td><td class="align-left">2025-06-25</td><td class="align-left">Presentation 美光科技(MICRON TECHNOLOGY) : 2025 Q3 - Results - Earnings Call</td></tr><tr><td class="align-left">A001</td><td class="align-left">announcement</td><td class="align-left">Wind financial_docs</td><td class="align-left">2026-03-18</td><td class="align-left">Transcript 美光科技(MICRON TECHNOLOGY) : Q2 2026 Earnings Call</td></tr><tr><td class="align-left">A002</td><td class="align-left">announcement</td><td class="align-left">Wind financial_docs</td><td class="align-left">2025-06-25</td><td class="align-left">Transcript 美光科技(MICRON TECHNOLOGY) : Q3 2025 Earnings Call</td></tr><tr><td class="align-left">A003</td><td class="align-left">announcement</td><td class="align-left">Wind financial_docs</td><td class="align-left">2025-06-25</td><td class="align-left">Presentation 美光科技(MICRON TECHNOLOGY) : 2025 Q3 - Results - Earnings Call</td></tr><tr><td class="align-left">N001</td><td class="align-left">news_or_sell_side_narrative</td><td class="align-left">Wind financial_news</td><td class="align-left">2025-12-18</td><td class="align-left">美光科技CEO：DRAM供应短缺将持续至2026年后</td></tr><tr><td class="align-left">N002</td><td class="align-left">news_or_sell_side_narrative</td><td class="align-left">Wind financial_news</td><td class="align-left">2026-03-17</td><td class="align-left">存储芯片超级周期可持续性明朗 RBC看高美光科技(MU.US)至525美元</td></tr><tr><td class="align-left">N003</td><td class="align-left">news_or_sell_side_narrative</td><td class="align-left">Wind financial_news</td><td class="align-left">2026-03-05</td><td class="align-left">DRAM与NAND携手狂飙! 存储芯片成AI时代最硬通货 美光(MU.US)与闪迪(SNDK.US)迎接“AI超级红利”</td></tr><tr><td class="align-left">N004</td><td class="align-left">news_or_sell_side_narrative</td><td class="align-left">Wind financial_news</td><td class="align-left">2026-01-19</td><td class="align-left">AI快把存储芯片抽干了</td></tr><tr><td class="align-left">N005</td><td class="align-left">news_or_sell_side_narrative</td><td class="align-left">Wind financial_news</td><td class="align-left">2026-05-20</td><td class="align-left">存储股普涨 美光科技(MU)涨3.47% 资金极致抱团AI存储设备链</td></tr><tr><td class="align-left">N006</td><td class="align-left">news_or_sell_side_narrative</td><td class="align-left">Wind financial_news</td><td class="align-left">2026-06-01</td><td class="align-left">美光科技市值超1.1万亿美元后！三星以40%的市场份额反超美光科技，中国存储芯片企业也迎来好机会</td></tr><tr><td class="align-left">N007</td><td class="align-left">news_or_sell_side_narrative</td><td class="align-left">Wind financial_news</td><td class="align-left">2026-05-06</td><td class="align-left">存储芯片狂飙之后：美光与闪迪，分析师更看好谁？</td></tr><tr><td class="align-left">N008</td><td class="align-left">news_or_sell_side_narrative</td><td class="align-left">Wind financial_news</td><td class="align-left">2026-02-08</td><td class="align-left">电子：美光科技：乘AI之东风 存储龙头高速增长</td></tr><tr><td class="align-left">R001</td><td class="align-left">sell_side_report</td><td class="align-left">Wind financial_news</td><td class="align-left">2026-03-17</td><td class="align-left">存储芯片超级周期可持续性明朗 RBC看高美光科技(MU.US)至525美元</td></tr><tr><td class="align-left">R002</td><td class="align-left">sell_side_report</td><td class="align-left">Wind financial_news</td><td class="align-left">2026-05-20</td><td class="align-left">存储股普涨 美光科技(MU)涨3.47% 资金极致抱团AI存储设备链</td></tr><tr><td class="align-left">R003</td><td class="align-left">sell_side_report</td><td class="align-left">Wind financial_news</td><td class="align-left">2026-05-06</td><td class="align-left">存储芯片狂飙之后：美光与闪迪，分析师更看好谁？</td></tr><tr><td class="align-left">R004</td><td class="align-left">sell_side_report</td><td class="align-left">Wind financial_news</td><td class="align-left">2025-12-04</td><td class="align-left">存储市场“雪上加霜”？美光将退出“消费级存储业务”，聚焦AI存储芯片</td></tr><tr><td class="align-left">R005</td><td class="align-left">sell_side_report</td><td class="align-left">Wind financial_news</td><td class="align-left">2026-03-11</td><td class="align-left">三星电子罢工影响，DDR4飙涨15%；美光科技DRAM合约涨价翻倍</td></tr><tr><td class="align-left">D001</td><td class="align-left">news</td><td class="align-left">Wind financial_news</td><td class="align-left">2025-12-18</td><td class="align-left">美光科技CEO：DRAM供应短缺将持续至2026年后</td></tr><tr><td class="align-left">D002</td><td class="align-left">news</td><td class="align-left">Wind financial_news</td><td class="align-left">2026-03-17</td><td class="align-left">存储芯片超级周期可持续性明朗 RBC看高美光科技(MU.US)至525美元</td></tr><tr><td class="align-left">D003</td><td class="align-left">news</td><td class="align-left">Wind financial_news</td><td class="align-left">2026-03-05</td><td class="align-left">DRAM与NAND携手狂飙! 存储芯片成AI时代最硬通货 美光(MU.US)与闪迪(SNDK.US)迎接“AI超级红利”</td></tr><tr><td class="align-left">D004</td><td class="align-left">news</td><td class="align-left">Wind financial_news</td><td class="align-left">2026-01-19</td><td class="align-left">AI快把存储芯片抽干了</td></tr><tr><td class="align-left">D005</td><td class="align-left">news</td><td class="align-left">Wind financial_news</td><td class="align-left">2026-05-20</td><td class="align-left">存储股普涨 美光科技(MU)涨3.47% 资金极致抱团AI存储设备链</td></tr><tr><td class="align-left">D006</td><td class="align-left">news</td><td class="align-left">Wind financial_news</td><td class="align-left">2026-06-01</td><td class="align-left">美光科技市值超1.1万亿美元后！三星以40%的市场份额反超美光科技，中国存储芯片企业也迎来好机会</td></tr><tr><td class="align-left">F006</td><td class="align-left">filing</td><td class="align-left">Wind financial_docs</td><td class="align-left">2025-06-25</td><td class="align-left">Form 8-K 美光科技(MICRON TECHNOLOGY) : Current report, items 2.02 and 9.01</td></tr><tr><td class="align-left">T001</td><td class="align-left">transcript</td><td class="align-left">Wind financial_docs</td><td class="align-left">2026-03-18</td><td class="align-left">Transcript 美光科技(MICRON TECHNOLOGY) : Q2 2026 Earnings Call</td></tr><tr><td class="align-left">T002</td><td class="align-left">transcript</td><td class="align-left">Wind financial_docs</td><td class="align-left">2025-06-25</td><td class="align-left">Transcript 美光科技(MICRON TECHNOLOGY) : Q3 2025 Earnings Call</td></tr><tr><td class="align-left">T003</td><td class="align-left">transcript</td><td class="align-left">Wind financial_docs</td><td class="align-left">2025-06-25</td><td class="align-left">Presentation 美光科技(MICRON TECHNOLOGY) : 2025 Q3 - Results - Earnings Call</td></tr><tr><td class="align-left">I001</td><td class="align-left">industry_data</td><td class="align-left">configs/universe.ai_supply_chain.yaml</td><td class="align-left"></td><td class="align-left">AI 产业链 universe 与角色映射</td></tr><tr><td class="align-left">Q001</td><td class="align-left">quant_signal</td><td class="align-left">Wind kline/risk metrics + legacy ML factor framework</td><td class="align-left"></td><td class="align-left">时序量化与风险快照</td></tr><tr><td class="align-left">FL001</td><td class="align-left">fund_flow</td><td class="align-left">Wind global_stock_equity_holders</td><td class="align-left"></td><td class="align-left">前十大股东与被动资金暴露</td></tr></tbody></table></div>
+<h2>11. 数据质量与待办</h2>
+<ul>
+<li><strong>high / dcf_clean_net_debt_missing</strong>：Capital structure query returned total debt equal to total liabilities, so the debt field may not be clean debt. 处理：Retrieve or confirm cash, short-term debt, long-term debt, leases, and diluted shares before Excel DCF.</li>
+<li><strong>medium / extreme_price_momentum_requires_cycle_duration_check</strong>：1Y price return exceeds 300%; thesis must underwrite cycle duration and trading position explicitly. 处理：Frame upside/downside around memory-cycle duration rather than a simple next-quarter beat.</li>
+<li><strong>medium / valuation_multiple_high_cycle_risk</strong>：PE and PB both screen high for a cyclical memory company. 处理：Use normalized-cycle valuation and stress test peak-margin mean reversion.</li>
+<li><strong>medium / wind_announcement_cross_ticker_contamination</strong>：Dropped 5 announcement rows that did not map to MU.O.</li>
+<li><strong>medium / wind_events_cross_ticker_contamination</strong>：Dropped 16 event rows that did not map to MU.O.</li>
+<li><strong>low / narrative_sources_need_primary_confirmation</strong>：News and sell-side narrative inputs are present and marked as non-primary evidence. 处理：Promote only claims corroborated by filings, company releases, or repeatable Wind structured data.</li>
+<li>覆盖缺口：未检测到来自 Chrome 的已读研报；已用 Wind 新闻/研报线索作为低置信度替代。</li>
+<li>覆盖缺口：投资人观点源需要 Chrome 登录或公开页面输入后才能形成高置信度结论。</li>
+<li>覆盖缺口：ETF fund flow、13F、short interest、options 尚未接入正式数据源。</li>
+</ul>
+<h2>数据说明</h2>
+<p>本报告由 research engine 在 2026-06-11 生成。市场、财务和文档线索主要来自 Wind；Chrome 采集、研报、投资人观点、资金流和量化模块按 evidence ledger 纳入。未纳入 evidence 的判断均视为待验证假设。</p>
+<p>数据来源于万得 Wind 金融数据服务及本地研究引擎采集结果。</p>
+  </main>
+</body>
+</html>
