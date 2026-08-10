@@ -122,6 +122,42 @@
 
 **可产品化的信号示例**：如果某只券的 `BID AXE` 连续多日基本不变，而多个 dealer 的 `OFFER AXE` 频繁消失并在相同或更紧的 spread 重新补出，同时 RFQ/fill/成交记录显示 buy-side 主动 lift offer，则可推断 offer inventory 被持续消化，市场偏强。反之，如果 offer 只是被撤回、没有成交佐证，随后在更宽 spread 重现，更可能是 dealer 撤风险或流动性恶化，不能简单判为买盘强。
 
+### C10. Realized Duration：单券与组合的经验 USD 利率敏感度（P1）
+
+- **谁**：亚洲信用债交易员、信用 PM、组合风险经理、利率对冲交易员。
+- **什么时候**：每日风险检查、美国利率大幅变化后、组合调仓或决定 Treasury/IRS hedge ratio 前。
+- **要解决什么**：即使两只信用债拥有相同的 analytical modified duration，它们对 USD rates 的实际价格反应也可能因流动性、供需、dealer inventory、spread-rate correlation、票息/价格和可赎回性而明显不同。模型需要估计每只券过去 30/60/90 个交易日的 realized sensitivity，识别相对 analytical duration 的 outlier，并汇总组合层面的 realized duration 与 hedge gap。
+- **现在怎么解决**：前台和风险通常使用静态 analytical duration/key-rate duration，再按名义 DV01 配 Treasury 或 IRS hedge；交易员凭经验修正“这只券不跟 rates”或“这只券 beta 特别大”，但这种判断很少被系统保存、回测或组合化。
+- **AI 应如何介入**：对齐债券 total return/经票息与应计调整的价格变化和 USD Treasury key-rate/主成分变化；滚动计算 30/60/90 日 robust beta、置信区间、R²、稳定性和 stale-price 诊断；同时控制市场信用 spread、行业/评级 beta 和事件日，区分纯 rates sensitivity 与 flow/liquidity residual；输出单券 `realized duration gap = empirical duration - analytical duration`、同类 outlier、组合 bottom-up 与直接回归两套 realized duration，以及不同 hedge ratio 下的历史和压力情景误差。
+- **关键数据**：同一收盘时点或可对齐的可执行/evaluated bond prices、coupon/accrual/call/corporate actions、UST par/zero/key-rate curves 或 IRS、OAS/市场信用指数、成交/quote freshness、组合权重和现有 Treasury/IRS hedge。
+- **成功指标**：下一期 out-of-sample rates hedge error、30/60/90 日估计稳定性、相对 analytical duration 的增量解释力、outlier 命中率、组合 residual DV01、重大 rate move 下的对冲偏差。
+
+**重要口径**：这里的 Realized Duration 本质上是经验 USD rates beta，不是债券合同现金流决定的传统久期。若不控制信用 spread、流动性和非同步报价，它会把“利率变化时恰好发生的买卖流”错误归因给 rates；产品必须并列展示 analytical KRD、empirical rates beta、置信区间和 unexplained residual，不能用一个黑箱数字替换正式风险指标。
+
+### C11. Client Flow 与对冲行为监控（P2）
+
+- **谁**：sell-side credit market maker、sales trader、desk strategist、inventory/risk manager。
+- **什么时候**：盘中观察客户交易、美国利率大幅变化、desk inventory 偏离、制定 axes/报价或预判下一阶段买卖压力时。
+- **要解决什么**：不同客户群对信用债利率风险的处理方式不同。部分 hedge fund 会快速用 Treasury/IRS/CDX 对冲，部分银行、保险和 long-only 账户可能保留更多 outright duration；这些结构性差异使同一 rates shock 下各类投资者产生不同的买卖方向、时滞和期限偏好。模型要总结历史 flow 与 hedge propensity，帮助 market maker 预判可能的现金债供需和 inventory duration transfer。
+- **现在怎么解决**：sales 和交易员依赖个人记忆、聊天和日终 flow recap；CRM 客户标签、RFQ、现金债成交、对冲腿和 desk inventory 分散在不同系统。类似 convertible bond desk 会持续统计 delta，信用 desk 却很少形成可复算的 client rate-hedge ratio 或 flow beta。
+- **AI 应如何介入**：在合规批准的客户 cohort 层面连接 RFQ/order/fill 与邻近时间窗口内的 Treasury future、IRS、CDS/CDX 或其他 hedge legs；学习不同 cohort、评级、久期、行业和 rate regime 下的 hedge ratio、hedge lag、cash-bond flow beta、net duration transfer 和后续 flow persistence；输出聚合 heatmap、情景化预期流和 desk inventory 风险，而不预测或展示单一客户下一笔交易。
+- **关键数据**：合规维护的 client type/cohort、RFQ 与成交方向/规模/时间、可能的配套 hedge trades、sales notes、desk inventory/DV01、axes/quote response、rates/credit 市场变化、客户 mandate 和历史标签修正。
+- **成功指标**：client/cohort 与 trade-side 映射覆盖率、paired-hedge 识别精度、hedge ratio 校准误差、rate shock 后聚合净 flow 方向命中率、inventory/DV01 预测改善、最小 cohort 和隐私规则违规数。
+
+**重要边界**：`HF fully hedged`、`bank unhedged`只能作为待验证假设，不应成为硬编码规则；同一机构会因 mandate、会计、资金、basis 和仓位变化而改变行为。模型只能基于 sell-side 自有且获准使用的数据做聚合统计，并设置最小 cohort、匿名化、用途限制和完整审计，防止反推出客户身份或交易意图。
+
+### C12. Fund Flow / Bond Maturity / Primary Pipeline 资金日历（P1/P2）
+
+- **谁**：亚洲信用 PM、信用交易员、sell-side market maker、syndicate/new issue 团队、CIO。
+- **什么时候**：每日/每周技术面判断、月末季末、集中到期/付息期、指数再平衡以及大型新券宣布和交割前。
+- **要解决什么**：亚洲信用市场短期定价经常由投资人申赎和净供给主导。模型需要系统追踪大型 mutual fund/ETF inflow/outflow，与公开债券 maturity/coupon/call/tender profile、已宣布 primary pipeline 和 settlement date 对齐，形成按日期、国家、行业、评级、币种和久期分桶的净资金日历。
+- **现在怎么解决**：团队分别查看 EPFR/Lipper/Morningstar、ETF shares outstanding、基金公告、Bloomberg/Dealogic new issue 页面和债券 maturity 表，再手工在 Excel 估算“有多少 cash 要 reinvest、多少 primary 要吸收”；数据频率、覆盖范围和到账/交割时间经常不一致。
+- **AI 应如何介入**：建立 point-in-time cash-event ledger，计算 `预计净技术面 = fund inflow + maturity/coupon/call cash × reinvestment probability - fund redemption sale need - primary settlement - 其他已知供给`；将基金 flow 按最新可得持仓映射到 Asia credit bucket，对 announced deal 使用 settlement date，对未定价 pipeline 使用概率和规模区间；输出未来 1/5/20 个交易日的资金缺口、再投资高峰、供给拥堵和情景区间。
+- **关键数据**：大型 mutual fund/ETF flow、AUM/shares outstanding、creation/redemption 与持仓；完整 bond master、maturity/coupon/call/tender/exchange offer；已宣布 primary deal、IPT/pricing/size/settlement、内部获准 pipeline；指数再平衡、基金分红/申赎规则、dealer inventory 和历史 reinvestment behavior。
+- **成功指标**：maturity/coupon/call 覆盖率、fund-flow 覆盖和时滞、announced pipeline recall、净供给预测误差、reinvestment probability 校准、资金拥堵告警精确率、技术面信号对 spread/成交方向的增量解释力。
+
+**重要边界**：债券到期现金不一定重新投入亚洲信用，ETF shares 变化也不等于所有最终投资者 flow；大型 mutual fund 的实时申赎通常不是公开数据，未宣布 primary pipeline 还可能包含 MNPI。产品必须显示数据覆盖率、公布时滞和概率区间，并把公开/商业数据与内部受限 pipeline 严格分层。
+
 ---
 
 ## 2. Rates 场景清单
@@ -323,19 +359,20 @@
 | Moody's CreditView / S&P RatingsDirect / Fitch Connect | 评级、评级行动、方法论、信用研究 | 高 | 低 | 低 | B/C | 评级行动标题常公开，完整报告和批量历史通常付费；训练及大段输出权高度敏感 |
 | Wind / iFinD | 中国宏观、在岸债券、发行人财务、公告及部分全球市场数据 | 高 | 高 | 中 | C | 中国市场很有价值；亚洲跨国覆盖和实时 OTC 深度需验证；API 与 AI 使用权另谈 |
 | CEIC / Macrobond / Haver | 亚洲及全球宏观历史、季调、共识/高频指标，依供应商而异 | 中 | 高 | 高 | C | 显著减少各国数据工程；vintage、导出、服务器及再分发权限需确认 |
-| Dealogic DCM / LSEG Deals / Bloomberg new issue tools / IFR | 债券发行、承销、league table、定价过程和市场报道 | 高 | 中 | 低 | C | 对 C2 很关键；实时 book color 和完整订单仍属于承销团/内部数据 |
+| Dealogic DCM / LSEG Deals / Bloomberg new issue tools / IFR | 债券发行、承销、league table、定价过程、pipeline 和市场报道 | 高 | 中 | 低 | C | 对 C2/C12 很关键；已宣布发行可商业获取，实时 book color、未公开 pipeline 和完整订单仍属于承销团/内部数据 |
 | MarketAxess | 机构信用债 RFQ、交易、流动性/估值类数据及执行工作流 | 高 | 低 | 低 | C/D | 需机构客户和合同；覆盖取决于债券与地区，不能视为全市场 order book |
 | Tradeweb | 国债、利率衍生品、信用和部分 FX 的电子交易/市场数据 | 中 | 高 | 中 | C/D | 最有价值的数据往往与交易接入绑定；历史和派生用途另行许可 |
 | Sell-side dealer/broker 报价渠道 | Dealer axes、indicative/firm quotes、runs、broker markets；可能经 Bloomberg IB/ALLQ、LSEG Messenger、合规邮箱、CSV/FIX/API 或交易平台送达 | 高 | 高 | 中 | D/E | 数据通常属于客户可见的双边/定向信息而非公共行情；能阅读不等于允许机器抓取，必须取得渠道、dealer 与客户合规授权 |
 | BondbloX / BondEvalue 等亚洲债券平台 | 亚洲债券价格发现、分级交易或估值/分析，依产品而异 | 高 | 低 | 低 | C/D | 有亚洲特色，但覆盖、可成交深度、API 和历史需逐券 POC 验证 |
-| Cbonds | 全球债券主数据、公司行动、价格/指数和发行信息 | 高 | 中 | 低 | C | 可补 instrument master；机构级实时准确性和地域覆盖需抽样测试 |
+| Cbonds | 全球债券主数据、到期/票息/call 等公司行动、价格/指数和发行信息 | 高 | 中 | 低 | C | 可补 C10/C12 的 instrument master 和现金事件；机构级实时准确性和地域覆盖需抽样测试 |
 | FINRA TRACE | FINRA 成员上报的 TRACE-eligible 债券成交 | 高 | 低 | 低 | A/B/C | 对部分亚洲美元债有价值，但不覆盖全部 Reg S/离岸 OTC 活动；免费、延迟、历史和订阅产品粒度不同 |
 | DTCC Swap Data Repository 公共披露 | 美国报告制度下部分利率/信用/FX 衍生品交易 | 中 | 中 | 中 | A/B | 原始数据量大、修订多、匿名且字段复杂；只能视作市场活动的部分窗口 |
 | CME / SGX / HKEX / JPX / KRX 等交易所数据 | 上市利率、FX 期货/期权、成交与持仓 | 低 | 高 | 高 | A/B/C | EOD 常较易得，实时 tick/order book 通常收费；对 OTC 市场只是代理 |
 | EBS / 360T / Currenex / FXall 等 FX 场所 | spot、forward、swap/NDF 报价、成交和执行 | 低 | 低 | 高 | C/D | 通常需交易关系；单一场所不代表全市场，客户数据隔离要求高 |
 | CLS | FX 结算量、部分聚合市场数据和机构级数据产品 | 低 | 低 | 中 | A/C | 公开多为聚合统计；详细流量非开放且覆盖受 CLS eligible currencies/participants 限制 |
-| EPFR / IIF 等资金流数据 | 基金流、跨境资本流和持仓代理 | 中 | 中 | 高 | C | 可解释技术面与拥挤度；频率、样本偏差和再分发权需审查 |
-| FactSet / Morningstar / eVestment 等 | 组合、基金、持仓、公司与市场数据，依模块而异 | 中 | 中 | 中 | C | 适合持仓/同业/资金流补充，不是亚洲 OTC 实时定价的替代品 |
+| EPFR / Lipper / IIF 等资金流数据 | mutual fund/ETF flow、跨境资本流和持仓代理，具体取决于产品 | 高 | 中 | 高 | C | C12 的重要底座；频率、基金覆盖、look-through、公布时滞、样本偏差和再分发权需逐项审查 |
+| ETF sponsor/交易所公开文件 | shares outstanding、NAV/AUM、部分 daily holdings 与 creation/redemption 文件 | 中 | 低 | 中 | A/B/C | 大型 ETF 可低成本覆盖，但不同 sponsor 历史深度与许可不同；不能替代 mutual fund 实时申赎 |
+| FactSet / Morningstar / eVestment 等 | 组合、基金、持仓、公司与市场数据，依模块而异 | 高 | 中 | 中 | C | 适合 C11/C12 的持仓、同业和资金流补充，不是亚洲 OTC 实时定价或客户 flow 的替代品 |
 | Reuters / Bloomberg News / Dow Jones Newswires | 可信实时新闻和机器可读新闻产品 | 高 | 高 | 高 | C | 终端阅读权与机器摄取权不同；摘要、保存、训练和对客展示需单独许可 |
 | GDELT / 经许可的开放新闻源 | 全球多语言新闻和事件元数据 | 中 | 中 | 中 | A/B | 适合低成本事件发现，不适合单独作为信用事实来源；需去重、来源评级和版权控制 |
 
@@ -385,9 +422,11 @@
 | OMS/EMS/order/fill | 交易前检查、执行复盘、TCA | D | 交易敏感数据隔离、时间同步、不可用于跨客户训练 |
 | Sell-side axes、indicative quotes、dealer/broker runs | C9 的连续报价状态、库存意愿、市场广度与买卖压力 | D/E | 保留原始消息与版本；遵守渠道和 dealer 条款、counterparty 保密、client-specific visibility、保存期限和不再分发限制 |
 | RFQ、quote response、order 与 fill | 验证 axe 是否可能被 hit/lift、衡量真实可成交价和 dealer 质量 | D | 精确时间同步、交易意图隔离、不可跨客户训练或反推出单一客户行为 |
+| 合规 client cohort、历史 flow 与配套 hedge legs | C11 的 client hedge propensity、flow beta 和 net duration transfer | D/E | 只做最小样本以上的聚合；客户身份、交易意图和跨 desk 权限严格隔离，禁止跨客户/跨机构训练 |
+| Desk inventory、DV01 与 hedge history | C10/C11 的组合 realized duration、库存风险和对冲行为验证 | D | 前台敏感数据、point-in-time 快照、职责分离，不允许模型直接执行 hedge |
 | 风险和估值引擎输出 | DV01/OAS/Greeks/情景 P&L 的正式数字 | D | 模型只调用和解释，不复制或自行替换正式方法 |
 | 内部研究、信用 memo、watchlist 与批准记录 | 机构自己的判断框架、历史决策和术语 | D | 文档权限继承、版本控制、MNPI 标签、引用原作者 |
-| 新券承销团信息、book update、内部聊天 | C2 的速度与市场颜色 | D/E | 可能含 wall-crossed/MNPI 信息；默认不进入通用模型或跨团队索引 |
+| 新券承销团信息、book update、内部 pipeline | C2 的速度与市场颜色，以及 C12 的未来 primary cash absorption | D/E | 可能含 wall-crossed/MNPI 信息；按 deal/team 隔离，默认不进入通用模型或跨团队索引 |
 | Treasury、融资、抵押品和保证金 | R8、F3、组合流动性 | D | 高敏感、实时性、职责分离与操作审批 |
 | 客户问询、CRM、销售笔记 | 需求洞察和自动答复 | D | PII、适当性、跨客户隔离、营销与研究合规 |
 | 人工修正、接受/拒绝与事后结果 | 模型评估和持续学习 | D | 防止把最终 P&L 当唯一标签；保留操作者、时间和理由 |
@@ -403,6 +442,14 @@
 | Credit | 官方财报/公告、募集说明书、公开评级行动、EOD 价格、OpenFIGI/LEI；C9 可用经脱敏的历史 axes/runs 样本做 POC | 可靠 bond master、evaluated/live quote、评级全文、可信新闻、内部持仓，以及带版本的 dealer axes/runs、RFQ/fill | “实时可成交公允价”、全市场流动性、新券 book color；没有报价历史与成交验证时，不能承诺准确的 hit/lift 或市场强弱判断 |
 | Rates | 央行/统计局、官方曲线与拍卖、EOD 国债/FX、经济日历 | OIS/IRS/期货实时与 tick、调查分布、repo、内部风险/持仓 | 秒级事件交易、完整跨市场 RV、精确 hedge ticket、资金面预警 |
 | FX | 官方 fixing/外储/国际收支、EOD spot/forward、公开政策文档 | 可成交 spot/forward/NDF、basis、vol surface、venue/RFQ、持仓现金流 | 最佳执行、精确 options 结构、真实 hedge cost、dealer/venue 排序 |
+
+### 8.1 新增交易场景的数据可得性
+
+| 场景 | POC 最小数据 | 机构版必须补齐 | 可获取性判断 |
+|---|---|---|---|
+| C10 Realized Duration | 统一时点的日频 bond price/total return、analytical duration、UST curve、基础信用指数 | 可执行/高质量 evaluated price、quote freshness、OAS、组合权重和真实 hedge history | B/C 可做单券研究；组合级生产需要 D。流动性差的券可能只能给低置信度或不估计 |
+| C11 Client Flow | 至少需要 sell-side 自有、去标识化的历史 RFQ/trade 与合规 client cohort；公开数据没有可信替代 | 配套 hedge legs、desk inventory/DV01、sales 标签修正和实时 flow | D/E。最有壁垒也最敏感；若没有 paired hedge，只能估 cash-flow pattern，不能声称知道客户 hedge ratio |
+| C12 Funding Calendar | 公开 bond maturity/coupon/call、ETF shares/AUM/holdings、已宣布 primary deals | EPFR/Lipper/Morningstar 等 fund flow、完整 bond master、deal settlement、内部获准 pipeline 和历史 reinvestment ratio | A/B 可做骨架，C 可提高 fund-flow 覆盖，D/E 才能加入未公开 pipeline；所有预测必须显示覆盖率 |
 
 ---
 
@@ -428,14 +475,35 @@
 - 核心特征包括 dealer breadth/concentration、bid/offer persistence、axe churn、quote half-life、spread tightening/widening、跨 dealer dispersion、RFQ response 和成交验证率。
 - **报价消失本身不等于成交**。只有结合重新补价方向、实际 RFQ/fill/TRACE、多个 dealer 的同步行为及该 dealer 历史习惯后，才可标记为 `LIKELY_HIT/LIFTED`，且必须显示置信度与反证。
 
-### 9.4 输出可信度
+### 9.4 Realized Duration 模型纪律
+
+- 基础估计可写为 `bond total return = alpha - realized duration × ΔUSD rate + credit/liquidity controls + residual`；rates 必须用小数单位并与债券估值时点对齐，避免 bp/百分比和亚洲收盘/纽约收盘错配。
+- 同时报告 30/60/90 日 robust regression 或 shrinkage estimate、置信区间、R²、样本数、stale/zero-return 比例和结构变化；非同步或长期无成交的券允许返回“不可可靠估计”。
+- 平行 rate beta 与 2Y/5Y/10Y key-rate beta、level/slope/curvature factor 应分开；加入市场信用 spread、行业/评级和事件控制，防止把 risk-off spread widening 全算成 duration。
+- 组合结果需同时用逐券 exposure 加总和 portfolio return 直接回归做一致性检查，并纳入已有 Treasury/IRS hedge、现金和动态权重；输出目标是降低下一期 hedge error，而不是最大化样本内 R²。
+
+### 9.5 Client Flow 建模与隐私
+
+- 每笔 flow 保存 point-in-time client cohort、side/aggressor、cash bond risk、可能 hedge instrument、时间窗和匹配置信度；不得用事后 CRM 标签回填历史而不保留 vintage。
+- Paired hedge 必须允许一对多、多对一和延迟执行；看不到客户在其他 dealer 的交易时，应明确标记 partial view，不能把“未观察到 hedge”当成“未对冲”。
+- 输出限制在合规批准的 cohort/segment，设置最小样本、差分隐私或抑制规则；禁止单客户预测、跨客户模型记忆和销售人员越权查询。
+- 评测采用未来 rate shock 下聚合 flow、hedge ratio 和 inventory duration transfer，不使用单一交易员主观标签作为唯一真值。
+
+### 9.6 Funding Calendar 的 point-in-time 规则
+
+- 每个 cash event 保存 announce、effective、settlement、maturity/call 和 ingest time；primary deal 只能在当时已知的 stage/size/probability 下进入历史回测，禁止用最终发行规模回填。
+- Fund flow、ETF shares、holdings 和 mutual-fund 披露按各自公布时滞进入模型；用最新可得持仓做 bucket 映射时显示 coverage 和 mapping error。
+- Maturity/coupon/call 是确定性 gross cash，真正回流 Asia credit 的金额需乘以动态 reinvestment probability；primary pipeline、tender 和 fund redemption 使用概率分布而不是单点。
+- 资金日历同时输出 base/upside/downside 和数据缺口，并单独列出 index rebalance、月末季末、长假与大额 settlement 等机械性日期。
+
+### 9.7 输出可信度
 
 - 数字结论必须来自结构化字段或确定性计算，不允许模型凭上下文“心算”。
 - 文本事实必须带句子/页码级引用；来源冲突时并列展示，不静默选择。
 - 把“已确认事实、模型推断、市场传闻、用户假设”用不同视觉标签区分。
 - 任何交易建议都显示输入数据 freshness、流动性等级、主要反证和人工审批点。
 
-### 9.5 权限与合规
+### 9.8 权限与合规
 
 - 检索必须继承原系统权限，不能因为模型能搜到就扩大用户权限。
 - MNPI、wall-crossed、新券 book、dealer quote、客户 PII 和交易意图必须分类隔离。
@@ -459,19 +527,23 @@
 1. C3 事件到持仓告警。
 2. C5 信用换券与流动性筛选。
 3. **C9 OTC quote/axe 盯盘一期**：先接入合规邮箱/CSV 历史 runs，建立跨 dealer 报价状态和市场强弱面板。
-4. R4 曲线 RV/carry-roll。
-5. R6 组合风险与对冲解释。
-6. F3 动态 FX hedge。
-7. C8 主权—银行—企业传导图。
+4. **C10 Realized Duration**：用 30/60/90 日 rates beta、置信区间和 portfolio hedge error 补充 analytical duration。
+5. **C12 资金日历一期**：接入公开 maturity/coupon/call、ETF flow 和已宣布 primary settlement，形成未来 1/5/20 日净技术面。
+6. R4 曲线 RV/carry-roll。
+7. R6 组合风险与对冲解释。
+8. F3 动态 FX hedge。
+9. C8 主权—银行—企业传导图。
 
 ### 第三阶段：接入交易和专有数据，建立高壁垒（P2）
 
 1. C2 新券实时定价与订单建议包。
 2. **C9 OTC quote/axe 盯盘二期**：接入实时 RFQ/fill，校准 dealer-specific 的 hit/lift 推断和可成交价格区间。
-3. R8 资金面/抵押品压力。
-4. F5 FX options surface 与结构比较。
-5. F7 执行前流动性和交易后 TCA。
-6. C7 困境债/重组工作台。
+3. **C11 Client Flow Monitor**：在合规 cohort 层面连接 cash trade 与 hedge legs，估计 flow beta、hedge lag 和 inventory duration transfer。
+4. **C12 资金日历二期**：加入商业 mutual-fund flow、历史 reinvestment 模型和内部获准 primary pipeline。
+5. R8 资金面/抵押品压力。
+6. F5 FX options surface 与结构比较。
+7. F7 执行前流动性和交易后 TCA。
+8. C7 困境债/重组工作台。
 
 ### 不建议一开始承诺
 
@@ -494,6 +566,9 @@
 | 决策价值 | 人工接受率、节省时间、后续修改量、异常发现数 | 全部 |
 | 交易质量 | 滑点、fill ratio、成本后收益、对冲误差 | C2/C5/R4/F3/F7 |
 | 微观结构信号 | security/dealer/side 映射准确率、stale rate、疑似 hit/lift 精度、dealer breadth 覆盖率 | C9 |
+| 经验利率风险 | 30/60/90 日 beta 稳定性、置信区间覆盖、下一期 portfolio hedge error、rate shock residual | C10 |
+| 客户流行为 | paired-hedge precision、cohort hedge-ratio 校准、聚合 flow 方向、inventory duration transfer 误差 | C11 |
+| 资金技术面 | maturity/coupon/call 覆盖、fund-flow 时滞、primary pipeline recall、净资金预测误差 | C12 |
 | 安全合规 | 权限泄露、MNPI/PII 违规、不可审计答案数 | 全部 |
 
 最终北极星指标不应只是“回答看起来专业”，而应是：**在不增加事实、权限和模型风险的前提下，缩短从新信息到可审计决策的时间。**
