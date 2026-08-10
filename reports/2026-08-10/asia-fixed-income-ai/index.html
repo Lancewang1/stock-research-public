@@ -1,0 +1,1365 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="亚洲固定收益金融垂类 AI 的 Credit、Rates、FX 应用场景与数据源蓝图">
+  <title>亚洲固定收益金融垂类 AI：应用场景与数据源蓝图</title>
+  <style>
+    :root {
+      --navy: #102a43;
+      --blue: #1f5f99;
+      --blue-soft: #eaf3fb;
+      --teal: #147d73;
+      --ink: #243b53;
+      --muted: #627d98;
+      --line: #d9e2ec;
+      --paper: #ffffff;
+      --canvas: #f2f6f9;
+      --warm: #fff8e8;
+      --shadow: 0 12px 36px rgba(16, 42, 67, 0.10);
+      --radius: 14px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--canvas);
+      font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+      font-size: 16px;
+      line-height: 1.78;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .hero {
+      color: #fff;
+      background:
+        radial-gradient(circle at 82% 18%, rgba(84, 179, 211, 0.34), transparent 34%),
+        linear-gradient(135deg, #0b2540 0%, #174d70 55%, #147d73 100%);
+      padding: 58px 28px 54px;
+    }
+    .hero-inner { max-width: 1180px; margin: 0 auto; }
+    .eyebrow {
+      margin: 0 0 12px;
+      color: #bfe8f4;
+      font-size: 0.78rem;
+      font-weight: 750;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      max-width: 920px;
+      margin: 0;
+      color: #fff;
+      font-size: clamp(2rem, 4vw, 3.35rem);
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+    }
+    .hero-subtitle {
+      max-width: 850px;
+      margin: 18px 0 0;
+      color: #d9edf4;
+      font-size: 1.04rem;
+    }
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(120px, 1fr));
+      gap: 12px;
+      max-width: 820px;
+      margin-top: 28px;
+    }
+    .metric {
+      padding: 13px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.20);
+      border-radius: 11px;
+      background: rgba(255, 255, 255, 0.10);
+      backdrop-filter: blur(4px);
+    }
+    .metric strong { display: block; font-size: 1.3rem; line-height: 1.15; }
+    .metric span { color: #d6e9ef; font-size: 0.83rem; }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 270px minmax(0, 1fr);
+      gap: 28px;
+      max-width: 1380px;
+      margin: 28px auto 64px;
+      padding: 0 24px;
+      align-items: start;
+    }
+    .sidebar {
+      position: sticky;
+      top: 20px;
+      max-height: calc(100vh - 40px);
+      overflow: auto;
+      padding: 20px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: 0 7px 24px rgba(16, 42, 67, 0.06);
+      scrollbar-width: thin;
+    }
+    .sidebar-title {
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .sidebar .toc > ul { margin: 0; padding: 0; list-style: none; }
+    .sidebar .toc > ul > li { margin: 2px 0 8px; }
+    .sidebar .toc ul ul { margin: 6px 0 0 12px; padding: 0 0 0 11px; border-left: 1px solid var(--line); list-style: none; }
+    .sidebar .toc a {
+      display: block;
+      padding: 5px 8px;
+      border-radius: 7px;
+      color: var(--muted);
+      font-size: 0.83rem;
+      line-height: 1.35;
+    }
+    .sidebar .toc > ul > li > a { color: var(--navy); font-weight: 700; }
+    .sidebar .toc a:hover,
+    .sidebar .toc a.active { color: var(--blue); background: var(--blue-soft); text-decoration: none; }
+
+    main {
+      min-width: 0;
+      padding: 44px clamp(24px, 5vw, 68px) 58px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+    article > h1:first-child { display: none; }
+    article > p:nth-of-type(-n+3) {
+      margin: 0 0 4px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    h2, h3, h4 { color: var(--navy); scroll-margin-top: 24px; }
+    h2 {
+      margin: 3.2rem 0 1.25rem;
+      padding-bottom: 0.55rem;
+      border-bottom: 2px solid var(--line);
+      font-size: clamp(1.45rem, 2.3vw, 2rem);
+      line-height: 1.35;
+      letter-spacing: -0.018em;
+    }
+    article > h2:first-of-type { margin-top: 2.5rem; }
+    h3 {
+      margin: 2.2rem 0 0.85rem;
+      padding: 14px 16px;
+      border-left: 5px solid var(--teal);
+      border-radius: 0 9px 9px 0;
+      background: linear-gradient(90deg, #edf8f6, #f8fbfc);
+      font-size: 1.16rem;
+      line-height: 1.45;
+    }
+    h4 { margin: 1.8rem 0 0.7rem; font-size: 1rem; }
+    p { margin: 0.75rem 0 1rem; }
+    ul, ol { padding-left: 1.45rem; }
+    li { margin: 0.42rem 0; }
+    li::marker { color: var(--teal); }
+    strong { color: #173f5f; }
+    code {
+      padding: 0.12em 0.36em;
+      border: 1px solid #d8e6ef;
+      border-radius: 5px;
+      color: #8b3e20;
+      background: #f6f9fb;
+      font-family: Consolas, "SFMono-Regular", monospace;
+      font-size: 0.9em;
+    }
+    hr { margin: 2.7rem 0; border: 0; border-top: 1px solid var(--line); }
+
+    .table-wrap {
+      max-width: 100%;
+      margin: 1.2rem 0 1.8rem;
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      background: #fff;
+      box-shadow: 0 4px 15px rgba(16, 42, 67, 0.045);
+    }
+    table {
+      width: 100%;
+      min-width: 760px;
+      border-collapse: collapse;
+      font-size: 0.89rem;
+      line-height: 1.55;
+    }
+    th, td {
+      padding: 11px 13px;
+      border-right: 1px solid #e8eef3;
+      border-bottom: 1px solid #e8eef3;
+      vertical-align: top;
+      text-align: left;
+    }
+    th:last-child, td:last-child { border-right: 0; }
+    tr:last-child td { border-bottom: 0; }
+    thead th {
+      color: #fff;
+      background: #174d70;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    tbody tr:nth-child(even) { background: #f8fafc; }
+    tbody tr:hover { background: #eef7fb; }
+
+    blockquote {
+      margin: 1.2rem 0;
+      padding: 12px 18px;
+      border-left: 4px solid #e5a832;
+      border-radius: 0 8px 8px 0;
+      color: #684f18;
+      background: var(--warm);
+    }
+
+    .footer {
+      max-width: 1380px;
+      margin: -38px auto 42px;
+      padding: 0 24px;
+      color: var(--muted);
+      font-size: 0.8rem;
+      text-align: right;
+    }
+    .back-top {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 10;
+      width: 42px;
+      height: 42px;
+      border: 0;
+      border-radius: 50%;
+      color: #fff;
+      background: var(--navy);
+      box-shadow: 0 7px 20px rgba(16, 42, 67, 0.25);
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: 180ms ease;
+    }
+    .back-top.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 980px) {
+      .metrics { grid-template-columns: repeat(2, minmax(120px, 1fr)); }
+      .layout { display: block; padding: 0 14px; margin-top: 16px; }
+      .sidebar { position: relative; top: auto; max-height: none; margin-bottom: 16px; }
+      .sidebar .toc ul ul { display: none; }
+      main { padding: 32px 20px 44px; }
+    }
+    @media (max-width: 560px) {
+      .hero { padding: 42px 20px 38px; }
+      .metrics { grid-template-columns: 1fr 1fr; }
+      body { font-size: 15px; }
+      h3 { padding: 12px 13px; }
+    }
+
+    @media print {
+      @page { size: A4; margin: 15mm 13mm 17mm; }
+      body { color: #111; background: #fff; font-size: 10.2pt; line-height: 1.55; }
+      .hero { padding: 0 0 16mm; color: #111; background: none; }
+      .hero h1, .eyebrow, .hero-subtitle { color: #111; }
+      .metrics { grid-template-columns: repeat(4, 1fr); }
+      .metric { color: #111; border-color: #aaa; background: #fff; }
+      .metric span { color: #444; }
+      .layout { display: block; max-width: none; margin: 0; padding: 0; }
+      .sidebar, .back-top, .footer { display: none; }
+      main { padding: 0; border: 0; box-shadow: none; }
+      h2, h3 { break-after: avoid-page; }
+      h3 { background: #f3f3f3; }
+      li, tr { break-inside: avoid; }
+      .table-wrap { overflow: visible; border-color: #aaa; box-shadow: none; }
+      table { min-width: 0; font-size: 7.7pt; }
+      th, td { padding: 5px 6px; }
+      thead th { color: #111; background: #ddd; }
+      a { color: inherit; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero" id="top">
+    <div class="hero-inner">
+      <p class="eyebrow">Asia Fixed Income · Product Blueprint</p>
+      <h1>亚洲固定收益金融垂类 AI：应用场景与数据源蓝图</h1>
+      <p class="hero-subtitle">面向机构用户的 Credit、Rates 与 FX 工作流设计，覆盖数据可得性、MVP 路线、模型治理与评测标准。</p>
+      <div class="metrics" aria-label="文档摘要">
+        <div class="metric"><strong>25</strong><span>具体应用场景</span></div>
+        <div class="metric"><strong>3</strong><span>Credit / Rates / FX</span></div>
+        <div class="metric"><strong>5</strong><span>数据可得性等级</span></div>
+        <div class="metric"><strong>3</strong><span>MVP 建设阶段</span></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" aria-label="文档目录">
+      <p class="sidebar-title">目录</p>
+      <div class="toc">
+<ul>
+<li><a href="#0">0. 先说结论</a><ul>
+<li><a href="#_1">场景优先级定义</a></li>
+</ul>
+</li>
+<li><a href="#1-credit">1. Credit 场景清单</a><ul>
+<li><a href="#c1-p0">C1. 主体信用“变化检测”与滚动信用备忘录（P0）</a></li>
+<li><a href="#c2-p1p2">C2. 新券定价、相对价值与下单建议包（P1/P2）</a></li>
+<li><a href="#c3-p0p1">C3. 信用事件雷达与“事件到持仓”告警（P0/P1）</a></li>
+<li><a href="#c4-p0">C4. 募集说明书、契约与资本结构条款解析（P0）</a></li>
+<li><a href="#c5-p1">C5. 二级市场相对价值、换券与流动性筛选（P1）</a></li>
+<li><a href="#c6-p1">C6. 组合信用风险、降级/违约与流动性压力测试（P1）</a></li>
+<li><a href="#c7-p1p2">C7. 困境债、交换要约与重组回收分析（P1/P2）</a></li>
+<li><a href="#c8-p1">C8. 主权—银行—企业信用传导图（P1）</a></li>
+<li><a href="#c9-otc-sell-side-axe-p1p2">C9. OTC 报价、sell-side axe 与做市商行为盯盘（P1/P2）</a></li>
+</ul>
+</li>
+<li><a href="#2-rates">2. Rates 场景清单</a><ul>
+<li><a href="#r1-p0p1">R1. 亚洲利率晨报与隔夜市场归因（P0/P1）</a></li>
+<li><a href="#r2-copilotp0p1">R2. 央行反应函数与议息会议 Copilot（P0/P1）</a></li>
+<li><a href="#r3-p1">R3. 宏观数据发布的即时拆解与曲线影响（P1）</a></li>
+<li><a href="#r4-swap-spread-carryrollp1">R4. 曲线、蝴蝶、swap spread 的相对价值与 carry/roll（P1）</a></li>
+<li><a href="#r5-p0p1">R5. 国债供给、拍卖与财政融资冲击（P0/P1）</a></li>
+<li><a href="#r6-p1">R6. 组合久期、关键期限风险与宏观情景对冲（P1）</a></li>
+<li><a href="#r7-cross-currency-basis-p1">R7. 跨市场、汇率对冲后收益与 cross-currency basis 比较（P1）</a></li>
+<li><a href="#r8-p1p2">R8. 资金面、回购与抵押品压力监控（P1/P2）</a></li>
+</ul>
+</li>
+<li><a href="#3-fx">3. FX 场景清单</a><ul>
+<li><a href="#f1-fx-regime-p0p1">F1. 亚洲 FX 晨报、驱动因子与 regime 识别（P0/P1）</a></li>
+<li><a href="#f2-fx-playbookp1">F2. 央行/宏观事件前后的 FX playbook（P1）</a></li>
+<li><a href="#f3-p1">F3. 亚洲债券组合的动态汇率对冲（P1）</a></li>
+<li><a href="#f4-carryp1">F4. Carry、估值、动量与拥挤度的机会筛选（P1）</a></li>
+<li><a href="#f5-fx-options-p1p2">F5. FX options 波动率、偏斜与尾部保护（P1/P2）</a></li>
+<li><a href="#f6-p0p1">F6. 干预、资本管制与可兑换性风险监测（P0/P1）</a></li>
+<li><a href="#f7-fx-tcap2">F7. FX 执行前流动性选择与交易后 TCA（P2）</a></li>
+<li><a href="#f8-fx-p0p1">F8. 企业外币错配与“FX 到信用”传导（P0/P1）</a></li>
+</ul>
+</li>
+<li><a href="#4">4. 数据可获取性：先统一判断标准</a><ul>
+<li><a href="#_2">建议的数据权利字段</a></li>
+</ul>
+</li>
+<li><a href="#5">5. 数据源清单：跨市场与商业数据</a></li>
+<li><a href="#6">6. 数据源清单：公开的区域与国家级来源</a><ul>
+<li><a href="#61">6.1 全球/区域公共底座</a></li>
+<li><a href="#62">6.2 主要亚洲市场官方/半官方来源</a></li>
+</ul>
+</li>
+<li><a href="#7">7. 数据源清单：客户内部数据——真正的产品壁垒</a></li>
+<li><a href="#8">8. 三类场景所需的最小数据包</a></li>
+<li><a href="#9">9. 数据工程与模型设计的硬要求</a><ul>
+<li><a href="#91">9.1 时间与版本</a></li>
+<li><a href="#92">9.2 固收主数据</a></li>
+<li><a href="#93-otc">9.3 OTC 报价状态模型</a></li>
+<li><a href="#94">9.4 输出可信度</a></li>
+<li><a href="#95">9.5 权限与合规</a></li>
+</ul>
+</li>
+<li><a href="#10-mvp">10. 推荐 MVP 排序</a><ul>
+<li><a href="#p0">第一阶段：用公开/文档数据证明“读得准、找得快”（P0）</a></li>
+<li><a href="#p1">第二阶段：接入客户持仓与机构行情，证明“能进入决策流程”（P1）</a></li>
+<li><a href="#p2">第三阶段：接入交易和专有数据，建立高壁垒（P2）</a></li>
+<li><a href="#_3">不建议一开始承诺</a></li>
+</ul>
+</li>
+<li><a href="#11">11. 评测框架：产品是否真的有用</a></li>
+</ul>
+</div>
+
+
+    </aside>
+    <main>
+      <article>
+        <h1 id="ai">亚洲固定收益金融垂类 AI：应用场景与数据源蓝图</h1>
+<p>日期：2026-08-10<br>
+范围：Asia Fixed Income，覆盖亚洲离岸信用债、主要本币债券、利率衍生品与相关外汇市场<br>
+目标用户：资产管理人、保险资管、银行自营与交易台、对冲基金、私人银行/财富管理机构的专业团队  </p>
+<h2 id="0">0. 先说结论</h2>
+<p>这个产品不应被定义为“会回答债券问题的聊天机器人”，而应被拆成三个相互连接的工作台：</p>
+<ol>
+<li><strong>Asia Credit Copilot</strong>：读懂主体、债券条款、事件与组合暴露，回答“信用发生了什么变化，我应关注哪只券”。</li>
+<li><strong>Asia Rates Copilot</strong>：追踪央行反应函数、曲线、供给与资金面，回答“利率为何变化，下一步有哪些可检验的情景”。</li>
+<li><strong>Asia FX &amp; Hedging Copilot</strong>：把汇率、远期点、基差、波动率与债券现金流连接起来，回答“外汇风险来自哪里，怎样以可解释的成本对冲”。</li>
+</ol>
+<p>最合适的技术形态不是把实时价格、财务数字和政策事实训练进模型参数，而是：</p>
+<ul>
+<li>大模型负责意图理解、跨语言文档阅读、信息归纳、假设生成和解释；</li>
+<li>检索系统负责返回带时间戳、来源和权限控制的事实；</li>
+<li>确定性引擎负责收益率、OAS、DV01、carry/roll、远期点、对冲比例和情景 P&amp;L；</li>
+<li>每个关键结论显示 <code>as-of time</code>、原始出处、计算口径、置信度和缺失数据；</li>
+<li>初期定位为“决策支持”，而不是自主下单或无人工复核的信用审批。</li>
+</ul>
+<h3 id="_1">场景优先级定义</h3>
+<ul>
+<li><strong>P0</strong>：数据较容易获得，能快速证明模型在研究效率和事实准确性上的价值。</li>
+<li><strong>P1</strong>：需要机构级行情、组合持仓或风险系统，价值高，适合付费客户试点。</li>
+<li><strong>P2</strong>：需要交易场所、经纪商、内部通信或高频数据，壁垒最高，但接入和合规成本也最高。</li>
+</ul>
+<hr>
+<h2 id="1-credit">1. Credit 场景清单</h2>
+<h3 id="c1-p0">C1. 主体信用“变化检测”与滚动信用备忘录（P0）</h3>
+<ul>
+<li><strong>谁</strong>：买方信用分析师、行业研究员、信用 PM。</li>
+<li><strong>什么时候</strong>：财报、经营数据、评级行动、重大公告发布后；月度/季度例行复核前。</li>
+<li><strong>要解决什么</strong>：不是重写一份静态公司介绍，而是快速回答“与上次判断相比，偿债能力、流动性、资本结构和管理层行为究竟变了什么”。</li>
+<li><strong>现在怎么解决</strong>：分析师下载多期财报和公告，在 Excel 更新指标，再翻卖方报告、评级报告和电话会记录；跨中文、英文、日文、韩文材料时通常还要人工翻译。一次完整更新常需数小时。</li>
+<li><strong>AI 应如何介入</strong>：自动做多期财务桥接、识别一次性项目和会计口径变化；对管理层表述做逐期 diff；把“事实—分析—结论”分开，并对每项事实给出页码级引用；输出 bull/base/bear 三种信用路径。</li>
+<li><strong>关键数据</strong>：审计财报、临时公告、业绩会材料、评级报告、债务到期表、债券价格/利差、同业指标、历史版信用备忘录。</li>
+<li><strong>成功指标</strong>：首稿用时下降 60% 以上；关键数字可追溯率接近 100%；分析师对“重要变化遗漏率”的抽检持续下降。</li>
+</ul>
+<h3 id="c2-p1p2">C2. 新券定价、相对价值与下单建议包（P1/P2）</h3>
+<ul>
+<li><strong>谁</strong>：信用 PM、信用交易员、新券分析师、银行 DCM/销售支持团队。</li>
+<li><strong>什么时候</strong>：新券宣布、IPT、价格指引收窄到最终定价的数小时内。</li>
+<li><strong>要解决什么</strong>：估计合理发行利差、新券溢价、合适的订单规模，以及新券相对存量曲线、同评级同业和不同币种融资的性价比。</li>
+<li><strong>现在怎么解决</strong>：从承销团邮件或聊天中抄录条款，在 Bloomberg/LSEG 找可比券，用 Excel 调整久期、评级、优先级和流动性，再通过交易员和卖方 sales 获取市场颜色。</li>
+<li><strong>AI 应如何介入</strong>：实时抽取 term sheet；自动生成可比券集合并说明纳入/排除理由；给出曲线插值、新券溢价区间、carry/roll 和压力情景 P&amp;L；将“模型公允值”“交易员颜色”“内部持仓约束”明确分栏，避免伪精确。</li>
+<li><strong>关键数据</strong>：新券条款与 book updates、存量券/同业价格、无风险及 swap 曲线、内部 RFQ/axes、投资者订单和组合限额。</li>
+<li><strong>成功指标</strong>：从条款到初版建议小于 5 分钟；公允利差区间有稳定校准度；最终下单理由可以事后复盘。</li>
+</ul>
+<h3 id="c3-p0p1">C3. 信用事件雷达与“事件到持仓”告警（P0/P1）</h3>
+<ul>
+<li><strong>谁</strong>：信用分析师、PM、交易员、风险经理、CIO 值班人员。</li>
+<li><strong>什么时候</strong>：评级下调、盈利预警、监管处罚、资产出售、再融资失败、管理层变化、法律诉讼或价格跳空发生时。</li>
+<li><strong>要解决什么</strong>：判断事件是否真正影响偿债能力、哪些债券和账户受影响、需要立即交易还是等待更多证据，并识别同一集团或行业的二阶传导。</li>
+<li><strong>现在怎么解决</strong>：依赖新闻终端、评级邮件、微信群/聊天和价格告警；人工去重、关联发行主体与担保人，再手工查组合持仓。噪声大且夜间容易漏报。</li>
+<li><strong>AI 应如何介入</strong>：多语言事件聚类与去重；把事件映射到法人、母公司、担保人和具体 ISIN；按“现金流、融资、契约、治理、监管、市场技术面”打影响标签；只在达到阈值时发送带证据的分级告警。</li>
+<li><strong>关键数据</strong>：官方公告、评级行动、可信新闻、实时/延迟价格、公司关系图、债券主数据、内部持仓和预设风险规则。</li>
+<li><strong>成功指标</strong>：高影响事件召回率、告警精确率、从首个可信来源到持仓告警的延迟、夜间人工值班负担。</li>
+</ul>
+<h3 id="c4-p0">C4. 募集说明书、契约与资本结构条款解析（P0）</h3>
+<ul>
+<li><strong>谁</strong>：信用分析师、法律/合规、PM、特殊机会投资者。</li>
+<li><strong>什么时候</strong>：首次覆盖、新券评审、交换要约、违约或重组前。</li>
+<li><strong>要解决什么</strong>：确认担保范围、抵押物、结构性次级、cross-default、change of control、restricted payments、资产出售、财务维持条款、适用法律及债权人表决机制。</li>
+<li><strong>现在怎么解决</strong>：在数百页 PDF 中 Ctrl+F，手工抄到 covenant matrix；复杂结构交给律师，多个版本之间的条款变化难以及时比较。</li>
+<li><strong>AI 应如何介入</strong>：做版面感知 OCR、条款分类、定义回链和 clause-level 引用；生成“债务层级—担保—资产—法人”结构图；逐条比较新旧债券或交换前后条款；对无法确认的法律结论明确拒答并提交人工复核。</li>
+<li><strong>关键数据</strong>：offering circular、indenture、trust deed、supplement、担保文件、交易所公告、公司组织架构和债务清单。</li>
+<li><strong>成功指标</strong>：条款抽取准确率、引用命中率、律师复核修改率、单只债券建档时间。</li>
+</ul>
+<h3 id="c5-p1">C5. 二级市场相对价值、换券与流动性筛选（P1）</h3>
+<ul>
+<li><strong>谁</strong>：信用 PM、交易员、相对价值策略团队。</li>
+<li><strong>什么时候</strong>：每日开盘前、价格异常时、组合再平衡或有资金申赎时。</li>
+<li><strong>要解决什么</strong>：识别同一发行人曲线、母子公司、不同优先级、不同币种或同业之间的便宜/昂贵券，并判断价差是否足以覆盖流动性和交易成本。</li>
+<li><strong>现在怎么解决</strong>：终端筛券、手工维护 issuer curve、Excel z-score、询价和阅读 dealer runs；不同数据源的 evaluated price、可成交价和陈旧报价经常混在一起。</li>
+<li><strong>AI 应如何介入</strong>：先区分 firm quote、indicative quote、evaluated price 和 last trade；再做 OAS/曲线残差、carry/roll、可选性和流动性调整；生成“买 A/卖 B”的可执行检查表和盈亏平衡交易成本，而不是只报一个 z-score。</li>
+<li><strong>关键数据</strong>：双边报价、TRACE/场所成交、evaluated pricing、收益率/掉期曲线、债券现金流和嵌入期权、dealer axes、内部成交历史。</li>
+<li><strong>成功指标</strong>：候选券人工接受率、成交后滑点、价格陈旧误报率、扣除成本后的换券收益。</li>
+</ul>
+<h3 id="c6-p1">C6. 组合信用风险、降级/违约与流动性压力测试（P1）</h3>
+<ul>
+<li><strong>谁</strong>：信用 PM、独立风险、CIO、保险资管 ALM 团队。</li>
+<li><strong>什么时候</strong>：每日风险检查、周会、评级迁移、赎回压力或宏观冲击情景下。</li>
+<li><strong>要解决什么</strong>：看清集团、行业、国家、担保链、再融资窗口和流动性集中度；估算降级、违约、回收率变化和被迫出售对组合的影响。</li>
+<li><strong>现在怎么解决</strong>：风险系统计算基础敏感度，分析师用 Excel 补充主体映射和情景；对“同一风险通过不同 SPV/担保人重复出现”的识别往往不完整。</li>
+<li><strong>AI 应如何介入</strong>：统一 ultimate parent、issuer、guarantor 和 security；把自然语言情景转换为经批准的确定性压力参数；解释 P&amp;L 来源，列出最脆弱持仓和数据缺口；禁止模型自行修改估值方法。</li>
+<li><strong>关键数据</strong>：完整持仓、benchmark、现金流、评级迁移矩阵、PD/LGD、价格和流动性指标、集团关系、基金申赎/保险负债信息。</li>
+<li><strong>成功指标</strong>：风险归因覆盖率、法人映射错误率、情景生成时间、与正式风险引擎结果的一致性。</li>
+</ul>
+<h3 id="c7-p1p2">C7. 困境债、交换要约与重组回收分析（P1/P2）</h3>
+<ul>
+<li><strong>谁</strong>：distressed/special situations 团队、信用 PM、法律顾问、风险委员会。</li>
+<li><strong>什么时候</strong>：利息或本金延付、交叉违约、同意征求、交换要约、破产/清盘程序启动时。</li>
+<li><strong>要解决什么</strong>：重建完整资本结构和债权优先顺序；理解表决门槛和不同方案；估算抵押物、企业价值、时间成本和司法辖区差异下的回收率。</li>
+<li><strong>现在怎么解决</strong>：律师、财务顾问和分析师分别维护文档与模型，人工拼接法院材料、债券条款、资产估值和债权人委员会消息。</li>
+<li><strong>AI 应如何介入</strong>：建立可追溯事件时间线、claim tree 和 waterfall 输入表；对不同企业价值/折价率/处置期做敏感性；标记事实、传闻和法律意见的证据等级；绝不把生成文本当正式法律意见。</li>
+<li><strong>关键数据</strong>：所有债务文件、法院/监管材料、交换条款、资产清单和估值、持有人披露、历史重组案例、内部法律意见。</li>
+<li><strong>成功指标</strong>：资本结构遗漏率、版本同步速度、情景复算一致性、外部顾问复核效率。</li>
+</ul>
+<h3 id="c8-p1">C8. 主权—银行—企业信用传导图（P1）</h3>
+<ul>
+<li><strong>谁</strong>：亚洲信用 PM、主权分析师、跨资产风险团队。</li>
+<li><strong>什么时候</strong>：主权评级变化、汇率贬值、地产/银行压力、资本管制、制裁或大宗商品冲击时。</li>
+<li><strong>要解决什么</strong>：判断风险如何从主权资产负债表传到银行融资、国企支持、企业外币债务和离岸美元债，而不是只看单一主体。</li>
+<li><strong>现在怎么解决</strong>：各分析师按行业写孤立报告，靠会议口头拼接；政府持股、银行授信、担保、供应链和外币错配缺少统一实体图。</li>
+<li><strong>AI 应如何介入</strong>：构建带时间版本的所有权、担保、融资、收入和政策支持知识图；根据冲击类型给出一阶/二阶暴露；同时展示反证和传导链中最不确定的节点。</li>
+<li><strong>关键数据</strong>：主权宏观与财政、银行资产负债表、公司债务币种、政府持股、担保/授信、跨境资金流、CDS/债券/FX 市场数据。</li>
+<li><strong>成功指标</strong>：隐藏关联风险发现数、事件后解释速度、跨团队重复劳动下降、错误关联率。</li>
+</ul>
+<h3 id="c9-otc-sell-side-axe-p1p2">C9. OTC 报价、sell-side axe 与做市商行为盯盘（P1/P2）</h3>
+<ul>
+<li><strong>谁</strong>：信用交易员、信用 PM、交易助理、市场风险团队；也适用于现金国债/利率产品的 OTC 交易台。</li>
+<li><strong>什么时候</strong>：每日开盘前、盘中 dealer runs/axes 到达时、重大事件后、询价或交易决策前后。</li>
+<li><strong>要解决什么</strong>：把散落在 dealer 邮件、聊天、CSV、电子平台和 broker runs 中的 <code>BID AXE</code>、<code>OFFER AXE</code>、indicative quote、firm quote 与 RFQ 回应整合成连续的报价状态；观察不同 market maker 报价的边际变化，从报价广度、持续性、方向和更新速度判断真实买卖压力、流动性与市场强弱。</li>
+<li><strong>现在怎么解决</strong>：交易员和助理人工阅读 Bloomberg IB/合规聊天、邮件、Excel runs 及平台报价，手工统一债券代码、价格/收益率/利差和报价方向；报价更新频繁、格式不一，同一券跨 dealer 的历史变化很难留存，最终判断高度依赖个人记忆。</li>
+<li><strong>AI 应如何介入</strong>：在获准渠道内解析原始消息，映射 <code>security—dealer—side</code>，统一 clean price/yield/spread、size、firm/indicative 和有效期；为每条报价标记 <code>NEW</code>、<code>REFRESH</code>、<code>IMPROVE</code>、<code>WORSEN</code>、<code>SIZE_UP/DOWN</code>、<code>WITHDRAW</code>、<code>EXPIRE</code>、<code>LIKELY_HIT/LIFTED</code>；按债券、发行人、行业和国家聚合 quote breadth、dealer dispersion、bid/offer persistence、axe churn、报价半衰期和价格改善，并生成带证据的强弱告警。</li>
+<li><strong>关键数据</strong>：带原始时间戳和版本的 sell-side axes/runs、broker markets、indicative/firm quotes、dealer identity、side、price/yield/spread、size/minimum piece、有效期；内部 RFQ/quote response/fill、TRACE/场所成交、内部持仓与 dealer 历史行为。</li>
+<li><strong>成功指标</strong>：债券与报价字段解析准确率、stale quote 识别率、跨 dealer 覆盖率、疑似 hit/lift 判断精度、告警误报率、从原始消息到可用市场图的延迟、人工整理时间下降。</li>
+</ul>
+<p><strong>可产品化的信号示例</strong>：如果某只券的 <code>BID AXE</code> 连续多日基本不变，而多个 dealer 的 <code>OFFER AXE</code> 频繁消失并在相同或更紧的 spread 重新补出，同时 RFQ/fill/成交记录显示 buy-side 主动 lift offer，则可推断 offer inventory 被持续消化，市场偏强。反之，如果 offer 只是被撤回、没有成交佐证，随后在更宽 spread 重现，更可能是 dealer 撤风险或流动性恶化，不能简单判为买盘强。</p>
+<hr>
+<h2 id="2-rates">2. Rates 场景清单</h2>
+<h3 id="r1-p0p1">R1. 亚洲利率晨报与隔夜市场归因（P0/P1）</h3>
+<ul>
+<li><strong>谁</strong>：利率 PM、宏观策略师、交易员、机构销售。</li>
+<li><strong>什么时候</strong>：亚洲各市场开盘前，以及伦敦/纽约向亚洲交接时。</li>
+<li><strong>要解决什么</strong>：在 10 分钟内掌握隔夜美债、美元、商品和风险资产变化，区分真正驱动因素与事后叙事，并映射到 JGB、CGB、KTB、IGB、MGS 等本地曲线。</li>
+<li><strong>现在怎么解决</strong>：依次查看终端图表、卖方晨报、新闻和聊天，手工截取关键价格；不同市场时区和休市日常导致错误比较。</li>
+<li><strong>AI 应如何介入</strong>：按共同时间窗口重建价格路径；把已知事件、数据公布和价格反应对齐；输出“事实—可能解释—待验证证据”，并生成当天关键事件与风险清单。</li>
+<li><strong>关键数据</strong>：全球及亚洲国债/OIS/IRS/期货、FX、商品、经济日历、新闻、央行操作和本地假日历。</li>
+<li><strong>成功指标</strong>：晨报生成时间、价格/时间戳错误率、PM 对驱动归因的采纳率、引用覆盖率。</li>
+</ul>
+<h3 id="r2-copilotp0p1">R2. 央行反应函数与议息会议 Copilot（P0/P1）</h3>
+<ul>
+<li><strong>谁</strong>：宏观策略师、利率/FX 交易员、经济学家、资产配置团队。</li>
+<li><strong>什么时候</strong>：议息会前一至两周、决定发布瞬间、记者会和会议纪要发布后。</li>
+<li><strong>要解决什么</strong>：理解每家亚洲央行当前最重视的增长、通胀、汇率、金融稳定变量；区分基准情景与尾部情景；判断声明措辞和政策工具发生了什么变化。</li>
+<li><strong>现在怎么解决</strong>：人工读声明、演讲和纪要，维护政策表格并参考卖方预测；语言差异和政策框架差异使跨国比较非常耗时。</li>
+<li><strong>AI 应如何介入</strong>：逐句比较历次声明；建立可更新的 reaction-function card；结合 point-in-time 宏观数据和市场定价生成条件概率树；会后立即区分“决定、措辞、预测、操作工具”四类 surprise。</li>
+<li><strong>关键数据</strong>：央行声明/纪要/演讲、官方预测、宏观 vintage、调查预期、OIS/IRS/FX 定价和历史会议反应。</li>
+<li><strong>成功指标</strong>：声明变化召回率、发布时间到首版解读的延迟、情景概率校准、错误引用率。</li>
+</ul>
+<h3 id="r3-p1">R3. 宏观数据发布的即时拆解与曲线影响（P1）</h3>
+<ul>
+<li><strong>谁</strong>：利率交易员、宏观 PM、销售交易、风险值班人员。</li>
+<li><strong>什么时候</strong>：CPI、就业、PMI、GDP、贸易、信贷、预算等数据发布后的数秒到数分钟。</li>
+<li><strong>要解决什么</strong>：区分 headline surprise、内部构成、前值修订和季节性噪声，并判断前端、长端、breakeven、swap spread 或 FX 哪个方向最敏感。</li>
+<li><strong>现在怎么解决</strong>：依靠终端 headline、经济学家即时消息和人工 Excel；最初反应常只看 headline，之后才发现构成或修订相反。</li>
+<li><strong>AI 应如何介入</strong>：解析原始表格而非转述新闻；与逐家调查分布、前值及历史 vintage 比较；调用事件研究返回相似情景；生成可证伪的曲线影响假设，不在数据不足时声称单一因果。</li>
+<li><strong>关键数据</strong>：官方 release、调查分布、历史 vintage、分钟级曲线/FX/商品、事件日历和仓位代理。</li>
+<li><strong>成功指标</strong>：结构化解析延迟、数字准确率、修订识别率、对历史反应分布的覆盖。</li>
+</ul>
+<h3 id="r4-swap-spread-carryrollp1">R4. 曲线、蝴蝶、swap spread 的相对价值与 carry/roll（P1）</h3>
+<ul>
+<li><strong>谁</strong>：本币债 PM、利率 RV 交易员、银行自营盘。</li>
+<li><strong>什么时候</strong>：每日筛选、曲线异常、政策预期变化或再平衡前。</li>
+<li><strong>要解决什么</strong>：识别 2s5s10s、5s10s30s、现券—IRS、国债—准主权等结构的偏离；判断偏离是否有足够 carry、roll 和均值回归空间。</li>
+<li><strong>现在怎么解决</strong>：每个市场维护独立 Excel/Python 模型；day count、假日、交割、最便宜交割券和 fixing 规则不一致，模型难复用。</li>
+<li><strong>AI 应如何介入</strong>：自然语言生成筛选条件，但所有定价由统一曲线库执行；输出历史分位、carry/roll、风险中性盈亏平衡、止损触发和结构性解释；自动检查 convention 与 stale data。</li>
+<li><strong>关键数据</strong>：可交易现券、OIS/IRS、期货及 CTD、repo、发行计划、曲线历史、合约和市场惯例。</li>
+<li><strong>成功指标</strong>：计算与交易台基准一致性、错误 convention 告警、候选采纳率、扣成本后表现。</li>
+</ul>
+<h3 id="r5-p0p1">R5. 国债供给、拍卖与财政融资冲击（P0/P1）</h3>
+<ul>
+<li><strong>谁</strong>：国债 PM、primary dealer、利率策略师、银行流动性团队。</li>
+<li><strong>什么时候</strong>：财政预算、季度借款计划、拍卖公告、投标和结果发布前后。</li>
+<li><strong>要解决什么</strong>：估算净供给、期限结构、到期再融资、央行持有变化和 dealer capacity；判断 auction tail、间接投标需求及对曲线的影响。</li>
+<li><strong>现在怎么解决</strong>：从财政部/债务管理办公室网站抄日历，在 Excel 维护发行与到期，再结合 dealer survey 和历史拍卖表格判断。</li>
+<li><strong>AI 应如何介入</strong>：自动维护逐券供给数据库；区分 gross issuance、redemption、coupon 和央行操作；生成拍卖预览/复盘 scorecard，并对异常结果寻找可验证解释。</li>
+<li><strong>关键数据</strong>：官方发行和到期日历、拍卖结果、持有人结构、央行购债/回购、dealer 仓位代理、收益率曲线。</li>
+<li><strong>成功指标</strong>：供给表准确率、公告到更新延迟、拍卖异常识别率、手工维护时间。</li>
+</ul>
+<h3 id="r6-p1">R6. 组合久期、关键期限风险与宏观情景对冲（P1）</h3>
+<ul>
+<li><strong>谁</strong>：利率/信用 PM、保险 ALM、独立风险、CIO。</li>
+<li><strong>什么时候</strong>：建仓、组合再平衡、事件前降风险、赎回或资本约束变化时。</li>
+<li><strong>要解决什么</strong>：把自然语言风险观点转换为 DV01、key-rate duration、convexity、spread duration、curve beta 和 hedge ratio；比较现券、期货、IRS、OIS 的成本和基差风险。</li>
+<li><strong>现在怎么解决</strong>：风险系统导出敏感度，PM 在 Excel 试算，再由交易员选择工具；意图、约束和最终交易之间缺乏可审计链。</li>
+<li><strong>AI 应如何介入</strong>：把“降低中国 5 年端风险但保留韩国 carry”等意图转换为明确约束；调用已批准优化器；解释剩余风险、保证金、流动性和模型失配；输出人可审批的 hedge ticket 草案。</li>
+<li><strong>关键数据</strong>：逐券持仓与现金流、曲线和波动率、衍生品合约、保证金/融资、交易成本、组合和监管限额。</li>
+<li><strong>成功指标</strong>：与正式风险引擎一致性、对冲后残余风险、审批时间、约束违规次数。</li>
+</ul>
+<h3 id="r7-cross-currency-basis-p1">R7. 跨市场、汇率对冲后收益与 cross-currency basis 比较（P1）</h3>
+<ul>
+<li><strong>谁</strong>：全球债券配置 PM、保险公司、银行 ALM、宏观 RV 团队。</li>
+<li><strong>什么时候</strong>：国家/币种配置、替代资产比较、季度再平衡或基差剧烈变化时。</li>
+<li><strong>要解决什么</strong>：在同一基准币种下比较不同亚洲国债/准主权的 fully hedged yield、carry、roll、basis、保证金和流动性，而不是只比较名义收益率。</li>
+<li><strong>现在怎么解决</strong>：从多个终端页面抄现券收益率、FX forward 和 basis，在复杂 Excel 中统一 day count 与 tenor；滚动对冲成本和节假日错配容易算错。</li>
+<li><strong>AI 应如何介入</strong>：调用确定性跨币种收益引擎；列出所有现金流和 hedge roll 假设；分解 local duration、FX hedge、basis 和 funding 对总回报的贡献；给出可交易性过滤。</li>
+<li><strong>关键数据</strong>：国债/掉期曲线、FX spot/forward、cross-currency basis、融资和保证金、税务/预提税、市场准入和资本限制。</li>
+<li><strong>成功指标</strong>：与交易台独立模型误差、漏计成本次数、配置分析时间、事后归因完整度。</li>
+</ul>
+<h3 id="r8-p1p2">R8. 资金面、回购与抵押品压力监控（P1/P2）</h3>
+<ul>
+<li><strong>谁</strong>：银行资金交易员、利率 PM、杠杆基金、风险与 treasury。</li>
+<li><strong>什么时候</strong>：月末/季末、税期、长假前后、央行公开市场操作、国债结算高峰或市场压力期。</li>
+<li><strong>要解决什么</strong>：发现 repo specialness、资金利率跳升、抵押品短缺、haircut/保证金变化和跨币种美元融资压力，并判断会影响哪些曲线和持仓。</li>
+<li><strong>现在怎么解决</strong>：查看本地货币市场屏幕、经纪商颜色、央行操作和内部 treasury 表；很多真正可交易信息只存在于内部成交和聊天中。</li>
+<li><strong>AI 应如何介入</strong>：把公开操作、市场 rates、内部融资与结算日历合并；识别异常但不把月末季节性当危机；把 funding shock 映射到杠杆、margin call 和被迫卖出风险。</li>
+<li><strong>关键数据</strong>：repo/拆借/OIS、央行操作、抵押品和 haircut、内部融资成交、保证金、结算失败、FX swap/basis。</li>
+<li><strong>成功指标</strong>：资金异常提前量、误报率、潜在 margin shortfall 覆盖率、人工监控时间。</li>
+</ul>
+<hr>
+<h2 id="3-fx">3. FX 场景清单</h2>
+<h3 id="f1-fx-regime-p0p1">F1. 亚洲 FX 晨报、驱动因子与 regime 识别（P0/P1）</h3>
+<ul>
+<li><strong>谁</strong>：FX PM/交易员、宏观 PM、亚洲债券 PM、机构销售。</li>
+<li><strong>什么时候</strong>：亚洲开盘前、主要市场交接时，以及美元/人民币/日元出现大幅波动时。</li>
+<li><strong>要解决什么</strong>：回答各货币变化主要来自美元 beta、利差、风险偏好、商品、人民币联动、本地政策还是技术性流量，并识别驱动结构是否改变。</li>
+<li><strong>现在怎么解决</strong>：终端图表、卖方晨报、交易员聊天和手工回归；解释往往是“看图讲故事”，变量发布时间和价格窗口不一致。</li>
+<li><strong>AI 应如何介入</strong>：先给精确价格事实，再展示多因子归因及不确定性；区分短期 flow 与中期宏观 regime；把结论映射到相关本币债和美元债持仓。</li>
+<li><strong>关键数据</strong>：spot、forward/NDF、利差、美元指数、商品、权益、宏观 surprise、资金流和事件新闻。</li>
+<li><strong>成功指标</strong>：事实错误率、驱动稳定性、错误因果表述率、用户追问减少。</li>
+</ul>
+<h3 id="f2-fx-playbookp1">F2. 央行/宏观事件前后的 FX playbook（P1）</h3>
+<ul>
+<li><strong>谁</strong>：FX spot/forward 交易员、宏观 PM、options trader。</li>
+<li><strong>什么时候</strong>：央行会议、CPI、就业、选举、预算、评级事件或资本管制政策发布前后。</li>
+<li><strong>要解决什么</strong>：定义不同结果下 spot、forward points、curve、vol/skew 的可能反应，以及哪些价位/时间窗口会证伪原判断。</li>
+<li><strong>现在怎么解决</strong>：交易员手工翻历史图、问策略师、参考卖方 event preview；案例选择容易受记忆偏差影响。</li>
+<li><strong>AI 应如何介入</strong>：用 point-in-time 数据检索相似事件；输出条件情景而非确定预测；把预期差、仓位、流动性和政策反应分开；自动生成事件后复盘。</li>
+<li><strong>关键数据</strong>：事件日历、调查分布、历史 spot/forward/options 分钟数据、央行文本、positioning/flow proxy、内部交易日志。</li>
+<li><strong>成功指标</strong>：playbook 覆盖率、情景校准、事件后复盘完成率、事前/事后叙事漂移。</li>
+</ul>
+<h3 id="f3-p1">F3. 亚洲债券组合的动态汇率对冲（P1）</h3>
+<ul>
+<li><strong>谁</strong>：全球债券 PM、保险/养老金 ALM、基金 treasury、风险团队。</li>
+<li><strong>什么时候</strong>：买入外币债、对冲到期滚动、申赎、FX 波动或 basis/forward points 变化时。</li>
+<li><strong>要解决什么</strong>：确定按净资产、现金流、duration 或风险预算对冲多少；选择 deliverable forward、NDF、FX swap 或 option；平衡 carry、tail risk、流动性和会计要求。</li>
+<li><strong>现在怎么解决</strong>：按月用固定 hedge ratio 批量滚动，Excel 汇总各币种现金流；PM 观点、投资者基准和 treasury 执行常彼此脱节。</li>
+<li><strong>AI 应如何介入</strong>：读取逐笔债券现金流与基准币种；生成静态/动态/尾部三类方案；确定性计算 hedge cost、roll schedule、basis 和情景 P&amp;L；解释会计、准入和 liquidity 约束并交由人工审批。</li>
+<li><strong>关键数据</strong>：持仓和现金流、spot/forward/NDF/swap、basis、vol surface、基金申赎、会计/监管规则、内部限额和历史执行成本。</li>
+<li><strong>成功指标</strong>：未解释 FX P&amp;L、对冲成本、现金流错配、滚动失败和超限次数。</li>
+</ul>
+<h3 id="f4-carryp1">F4. Carry、估值、动量与拥挤度的机会筛选（P1）</h3>
+<ul>
+<li><strong>谁</strong>：宏观/FX PM、系统化策略团队、研究员。</li>
+<li><strong>什么时候</strong>：每日/每周组合构建、regime 切换或跨货币比较时。</li>
+<li><strong>要解决什么</strong>：在亚洲可交易货币中寻找经波动、尾部、交易成本和资本管制调整后的 carry/RV 机会，并避免把高 carry 误当免费收益。</li>
+<li><strong>现在怎么解决</strong>：Excel/Python 因子表、卖方 scorecard 和人工主观覆盖；数据修订、NDF convention 和不可交易时期常处理不一致。</li>
+<li><strong>AI 应如何介入</strong>：允许用户自然语言组合因子，但用版本化研究引擎回测；显示每个信号的经济逻辑、历史失效期、成本敏感性和当前数据质量；不根据一次回测自动建议实盘。</li>
+<li><strong>关键数据</strong>：spot/forward/NDF、利率曲线、CPI/REER、外部平衡、vol、positioning、交易成本、资本流动和可交易性标签。</li>
+<li><strong>成功指标</strong>：数据泄漏为零、成本后稳定性、信号解释覆盖率、研究到审批周期。</li>
+</ul>
+<h3 id="f5-fx-options-p1p2">F5. FX options 波动率、偏斜与尾部保护（P1/P2）</h3>
+<ul>
+<li><strong>谁</strong>：options trader、宏观 PM、风险经理、结构化产品团队。</li>
+<li><strong>什么时候</strong>：重大事件前、隐含波动率异常、组合需要尾部保护或卖出波动率时。</li>
+<li><strong>要解决什么</strong>：理解 ATM vol、risk reversal、butterfly、term structure 与 realized vol 的关系；比较不同 strike/tenor 的保护效率和 Greeks 风险。</li>
+<li><strong>现在怎么解决</strong>：交易台专用 vol surface、broker runs 和定价表；非期权团队很难把报价 convention 转为组合层面的直观损益。</li>
+<li><strong>AI 应如何介入</strong>：把自然语言风险转成经批准的期权结构候选；调用定价引擎生成 Greeks、情景和 breakeven；解释 smile、barrier 和流动性风险；报价缺失时不插值出伪流动性。</li>
+<li><strong>关键数据</strong>：可成交 vol surface、spot/forward、利率曲线、交易 convention、历史 realized vol、内部 RFQ 和交易成本。</li>
+<li><strong>成功指标</strong>：与前台定价误差、结构解释正确率、遗漏风险条款数、单位保护成本。</li>
+</ul>
+<h3 id="f6-p0p1">F6. 干预、资本管制与可兑换性风险监测（P0/P1）</h3>
+<ul>
+<li><strong>谁</strong>：EM FX PM、亚洲债券 PM、treasury、风险与合规。</li>
+<li><strong>什么时候</strong>：汇率接近政策敏感区、外储快速变化、NDF/在岸价差扩大、监管调整或流动性骤降时。</li>
+<li><strong>要解决什么</strong>：识别口头/实际干预概率、结算与资金汇出风险、在岸离岸分割及政策工具变化，并评估对债券回报和对冲可执行性的影响。</li>
+<li><strong>现在怎么解决</strong>：阅读央行声明、当地新闻和 dealer color，手工跟踪外储、fixing、onshore/offshore basis；不同国家规则散落在多份通知中。</li>
+<li><strong>AI 应如何介入</strong>：维护逐国 policy playbook 和规则变更时间线；区分已确认干预、推测干预和季节性官方流量；把政策变化映射到可交易产品、结算路径和持仓。</li>
+<li><strong>关键数据</strong>：央行/监管公告、fixing、外储、国际收支、spot/NDF/basis、成交量、custodian/银行操作通知。</li>
+<li><strong>成功指标</strong>：规则更新及时性、错误告警率、受影响持仓识别率、结算事件减少。</li>
+</ul>
+<h3 id="f7-fx-tcap2">F7. FX 执行前流动性选择与交易后 TCA（P2）</h3>
+<ul>
+<li><strong>谁</strong>：FX execution trader、treasury、交易主管、合规。</li>
+<li><strong>什么时候</strong>：大额 spot/forward/NDF/roll 下单前，以及日终/月度 best-execution 复盘时。</li>
+<li><strong>要解决什么</strong>：选择 venue、dealer、算法、时段和拆单方式；解释滑点来自市场冲击、延迟、spread、last look 还是错误 benchmark。</li>
+<li><strong>现在怎么解决</strong>：EMS/多银行平台提供基础 TCA，团队再用 Excel 对比报价；dealer 响应质量与币种/时段关系没有充分利用。</li>
+<li><strong>AI 应如何介入</strong>：基于历史 RFQ 和成交构建条件化 liquidity map；下单前预测可执行区间并建议人工批准的执行计划；成交后自动生成可审计 TCA 叙述，严格隔离敏感 dealer 数据。</li>
+<li><strong>关键数据</strong>：逐笔 quote/RFQ、order、fill、timestamp、venue/dealer、benchmark、市场 tick、拒单/last-look、内部交易规则。</li>
+<li><strong>成功指标</strong>：implementation shortfall、fill ratio、信息泄露代理、TCA 解释覆盖率、合规例外。</li>
+</ul>
+<h3 id="f8-fx-p0p1">F8. 企业外币错配与“FX 到信用”传导（P0/P1）</h3>
+<ul>
+<li><strong>谁</strong>：信用分析师、信用 PM、主权/银行研究员。</li>
+<li><strong>什么时候</strong>：本币大幅贬值、美元融资成本上升、企业发布债务或套保披露时。</li>
+<li><strong>要解决什么</strong>：识别收入、成本、债务、现金和 hedge 的币种错配；估算汇率变化如何影响 EBITDA、利息覆盖、契约空间和再融资能力。</li>
+<li><strong>现在怎么解决</strong>：从财报附注手工抄外币债务和敏感性，很多公司只给净敞口或定性披露；之后在 Excel 做粗略冲击。</li>
+<li><strong>AI 应如何介入</strong>：跨期抽取币种暴露和套保政策；区分交易、折算和经济敞口；生成透明的 FX-to-credit bridge 及缺失假设；与同业和主权情景联动。</li>
+<li><strong>关键数据</strong>：财报附注、债务明细、衍生品披露、分地区收入/成本、FX 曲线、商品价格、信用指标和持仓。</li>
+<li><strong>成功指标</strong>：披露抽取准确率、未说明假设数、情景复算一致性、信用预警提前量。</li>
+</ul>
+<hr>
+<h2 id="4">4. 数据可获取性：先统一判断标准</h2>
+<p>“能在终端或网页上看到”不等于“能批量下载”，更不等于“允许用于模型训练、RAG、生成派生数据或向客户再分发”。建议把每个数据集同时标记技术可得性与法律权利。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>等级</th>
+<th>可获取性判断</th>
+<th>典型情况</th>
+<th>对产品的含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>公开、较容易批量获取</td>
+<td>官方 API、CSV、稳定下载页、开放许可数据</td>
+<td>可立即做 POC；仍需保存许可条款和抓取时间</td>
+</tr>
+<tr>
+<td>B</td>
+<td>公开但有摩擦</td>
+<td>PDF/网页、注册、限流、当地语言、格式频繁变化</td>
+<td>可做 POC/RAG，但需要 OCR、解析、缓存和人工质检</td>
+</tr>
+<tr>
+<td>C</td>
+<td>商业可得</td>
+<td>Bloomberg、LSEG、ICE、评级/指数/宏观商业库</td>
+<td>机构版通常必需；逐项谈 API、历史深度、派生权和 AI 使用权</td>
+</tr>
+<tr>
+<td>D</td>
+<td>机构或客户内部可得</td>
+<td>持仓、RFQ、dealer axes、OMS、风险、研究和通信</td>
+<td>最具差异化；必须做租户隔离、权限继承、脱敏和用途限制</td>
+</tr>
+<tr>
+<td>E</td>
+<td>不稳定或不可可靠获得</td>
+<td>完整 OTC order book、全部 dealer inventory、未披露套保、真实干预流量</td>
+<td>不应作为产品承诺；只能用代理变量并明确不确定性</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="_2">建议的数据权利字段</h3>
+<p>每个数据源至少记录：<code>owner</code>、<code>contract</code>、<code>permitted_users</code>、<code>raw_storage</code>、<code>RAG_allowed</code>、<code>fine_tuning_allowed</code>、<code>derived_data_allowed</code>、<code>display_allowed</code>、<code>redistribution_allowed</code>、<code>retention</code>、<code>region</code>、<code>PII/MNPI classification</code>。</p>
+<hr>
+<h2 id="5">5. 数据源清单：跨市场与商业数据</h2>
+<p>以下“可获取性”是产品规划判断，不替代供应商合同审查；商业产品的模块、地域和 AI 使用许可需要逐项确认。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>数据源</th>
+<th>主要内容</th>
+<th style="text-align: right;">Credit</th>
+<th style="text-align: right;">Rates</th>
+<th style="text-align: right;">FX</th>
+<th>可获取性</th>
+<th>关键限制/判断</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bloomberg Terminal / Data License / B-PIPE / BVAL</td>
+<td>实时与历史行情、债券主数据、曲线、evaluated price、新券、新闻、财务与分析工具</td>
+<td style="text-align: right;">高</td>
+<td style="text-align: right;">高</td>
+<td style="text-align: right;">高</td>
+<td>C</td>
+<td>亚洲机构覆盖广；终端席位不自动包含服务器 API、训练、缓存或再分发权</td>
+</tr>
+<tr>
+<td>LSEG Workspace / Real-Time / Tick History</td>
+<td>跨资产实时与历史、Refinitiv instrument master、新闻、交易与宏观</td>
+<td style="text-align: right;">高</td>
+<td style="text-align: right;">高</td>
+<td style="text-align: right;">高</td>
+<td>C</td>
+<td>适合 Bloomberg 冗余或替代；需分别确认 tick、server、derived data 和 AI 权利</td>
+</tr>
+<tr>
+<td>ICE Data Services</td>
+<td>债券主数据、evaluated pricing、固定收益指数与部分实时/历史数据</td>
+<td style="text-align: right;">高</td>
+<td style="text-align: right;">中</td>
+<td style="text-align: right;">低</td>
+<td>C</td>
+<td>适合估值和组合；evaluated price 不是可成交报价，派生/展示权需谈判</td>
+</tr>
+<tr>
+<td>S&amp;P Global Market Intelligence / Capital IQ / iBoxx / Markit 模块</td>
+<td>公司财务、债券/指数、CDS、经济与行业数据，具体取决于模块</td>
+<td style="text-align: right;">高</td>
+<td style="text-align: right;">高</td>
+<td style="text-align: right;">中</td>
+<td>C</td>
+<td>产品线分散；不能假设一个合同覆盖全部内容</td>
+</tr>
+<tr>
+<td>Moody's CreditView / S&amp;P RatingsDirect / Fitch Connect</td>
+<td>评级、评级行动、方法论、信用研究</td>
+<td style="text-align: right;">高</td>
+<td style="text-align: right;">低</td>
+<td style="text-align: right;">低</td>
+<td>B/C</td>
+<td>评级行动标题常公开，完整报告和批量历史通常付费；训练及大段输出权高度敏感</td>
+</tr>
+<tr>
+<td>Wind / iFinD</td>
+<td>中国宏观、在岸债券、发行人财务、公告及部分全球市场数据</td>
+<td style="text-align: right;">高</td>
+<td style="text-align: right;">高</td>
+<td style="text-align: right;">中</td>
+<td>C</td>
+<td>中国市场很有价值；亚洲跨国覆盖和实时 OTC 深度需验证；API 与 AI 使用权另谈</td>
+</tr>
+<tr>
+<td>CEIC / Macrobond / Haver</td>
+<td>亚洲及全球宏观历史、季调、共识/高频指标，依供应商而异</td>
+<td style="text-align: right;">中</td>
+<td style="text-align: right;">高</td>
+<td style="text-align: right;">高</td>
+<td>C</td>
+<td>显著减少各国数据工程；vintage、导出、服务器及再分发权限需确认</td>
+</tr>
+<tr>
+<td>Dealogic DCM / LSEG Deals / Bloomberg new issue tools / IFR</td>
+<td>债券发行、承销、league table、定价过程和市场报道</td>
+<td style="text-align: right;">高</td>
+<td style="text-align: right;">中</td>
+<td style="text-align: right;">低</td>
+<td>C</td>
+<td>对 C2 很关键；实时 book color 和完整订单仍属于承销团/内部数据</td>
+</tr>
+<tr>
+<td>MarketAxess</td>
+<td>机构信用债 RFQ、交易、流动性/估值类数据及执行工作流</td>
+<td style="text-align: right;">高</td>
+<td style="text-align: right;">低</td>
+<td style="text-align: right;">低</td>
+<td>C/D</td>
+<td>需机构客户和合同；覆盖取决于债券与地区，不能视为全市场 order book</td>
+</tr>
+<tr>
+<td>Tradeweb</td>
+<td>国债、利率衍生品、信用和部分 FX 的电子交易/市场数据</td>
+<td style="text-align: right;">中</td>
+<td style="text-align: right;">高</td>
+<td style="text-align: right;">中</td>
+<td>C/D</td>
+<td>最有价值的数据往往与交易接入绑定；历史和派生用途另行许可</td>
+</tr>
+<tr>
+<td>Sell-side dealer/broker 报价渠道</td>
+<td>Dealer axes、indicative/firm quotes、runs、broker markets；可能经 Bloomberg IB/ALLQ、LSEG Messenger、合规邮箱、CSV/FIX/API 或交易平台送达</td>
+<td style="text-align: right;">高</td>
+<td style="text-align: right;">高</td>
+<td style="text-align: right;">中</td>
+<td>D/E</td>
+<td>数据通常属于客户可见的双边/定向信息而非公共行情；能阅读不等于允许机器抓取，必须取得渠道、dealer 与客户合规授权</td>
+</tr>
+<tr>
+<td>BondbloX / BondEvalue 等亚洲债券平台</td>
+<td>亚洲债券价格发现、分级交易或估值/分析，依产品而异</td>
+<td style="text-align: right;">高</td>
+<td style="text-align: right;">低</td>
+<td style="text-align: right;">低</td>
+<td>C/D</td>
+<td>有亚洲特色，但覆盖、可成交深度、API 和历史需逐券 POC 验证</td>
+</tr>
+<tr>
+<td>Cbonds</td>
+<td>全球债券主数据、公司行动、价格/指数和发行信息</td>
+<td style="text-align: right;">高</td>
+<td style="text-align: right;">中</td>
+<td style="text-align: right;">低</td>
+<td>C</td>
+<td>可补 instrument master；机构级实时准确性和地域覆盖需抽样测试</td>
+</tr>
+<tr>
+<td>FINRA TRACE</td>
+<td>FINRA 成员上报的 TRACE-eligible 债券成交</td>
+<td style="text-align: right;">高</td>
+<td style="text-align: right;">低</td>
+<td style="text-align: right;">低</td>
+<td>A/B/C</td>
+<td>对部分亚洲美元债有价值，但不覆盖全部 Reg S/离岸 OTC 活动；免费、延迟、历史和订阅产品粒度不同</td>
+</tr>
+<tr>
+<td>DTCC Swap Data Repository 公共披露</td>
+<td>美国报告制度下部分利率/信用/FX 衍生品交易</td>
+<td style="text-align: right;">中</td>
+<td style="text-align: right;">中</td>
+<td style="text-align: right;">中</td>
+<td>A/B</td>
+<td>原始数据量大、修订多、匿名且字段复杂；只能视作市场活动的部分窗口</td>
+</tr>
+<tr>
+<td>CME / SGX / HKEX / JPX / KRX 等交易所数据</td>
+<td>上市利率、FX 期货/期权、成交与持仓</td>
+<td style="text-align: right;">低</td>
+<td style="text-align: right;">高</td>
+<td style="text-align: right;">高</td>
+<td>A/B/C</td>
+<td>EOD 常较易得，实时 tick/order book 通常收费；对 OTC 市场只是代理</td>
+</tr>
+<tr>
+<td>EBS / 360T / Currenex / FXall 等 FX 场所</td>
+<td>spot、forward、swap/NDF 报价、成交和执行</td>
+<td style="text-align: right;">低</td>
+<td style="text-align: right;">低</td>
+<td style="text-align: right;">高</td>
+<td>C/D</td>
+<td>通常需交易关系；单一场所不代表全市场，客户数据隔离要求高</td>
+</tr>
+<tr>
+<td>CLS</td>
+<td>FX 结算量、部分聚合市场数据和机构级数据产品</td>
+<td style="text-align: right;">低</td>
+<td style="text-align: right;">低</td>
+<td style="text-align: right;">中</td>
+<td>A/C</td>
+<td>公开多为聚合统计；详细流量非开放且覆盖受 CLS eligible currencies/participants 限制</td>
+</tr>
+<tr>
+<td>EPFR / IIF 等资金流数据</td>
+<td>基金流、跨境资本流和持仓代理</td>
+<td style="text-align: right;">中</td>
+<td style="text-align: right;">中</td>
+<td style="text-align: right;">高</td>
+<td>C</td>
+<td>可解释技术面与拥挤度；频率、样本偏差和再分发权需审查</td>
+</tr>
+<tr>
+<td>FactSet / Morningstar / eVestment 等</td>
+<td>组合、基金、持仓、公司与市场数据，依模块而异</td>
+<td style="text-align: right;">中</td>
+<td style="text-align: right;">中</td>
+<td style="text-align: right;">中</td>
+<td>C</td>
+<td>适合持仓/同业/资金流补充，不是亚洲 OTC 实时定价的替代品</td>
+</tr>
+<tr>
+<td>Reuters / Bloomberg News / Dow Jones Newswires</td>
+<td>可信实时新闻和机器可读新闻产品</td>
+<td style="text-align: right;">高</td>
+<td style="text-align: right;">高</td>
+<td style="text-align: right;">高</td>
+<td>C</td>
+<td>终端阅读权与机器摄取权不同；摘要、保存、训练和对客展示需单独许可</td>
+</tr>
+<tr>
+<td>GDELT / 经许可的开放新闻源</td>
+<td>全球多语言新闻和事件元数据</td>
+<td style="text-align: right;">中</td>
+<td style="text-align: right;">中</td>
+<td style="text-align: right;">中</td>
+<td>A/B</td>
+<td>适合低成本事件发现，不适合单独作为信用事实来源；需去重、来源评级和版权控制</td>
+</tr>
+</tbody>
+</table></div>
+<hr>
+<h2 id="6">6. 数据源清单：公开的区域与国家级来源</h2>
+<h3 id="61">6.1 全球/区域公共底座</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>数据源</th>
+<th>可用内容</th>
+<th>可获取性</th>
+<th>适合场景</th>
+<th>主要缺口</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADB AsianBondsOnline</td>
+<td>亚洲本币债券市场规模、收益率曲线、政策与市场报告</td>
+<td>A/B</td>
+<td>R1、R5、跨市场概览</td>
+<td>非实时；部分序列和国家粒度有限</td>
+</tr>
+<tr>
+<td>BIS Data Portal</td>
+<td>政策利率、有效汇率、信贷、跨境银行、债务证券、衍生品统计</td>
+<td>A</td>
+<td>C8、R2、F4、F6</td>
+<td>频率偏低、修订和口径需要 point-in-time 管理</td>
+</tr>
+<tr>
+<td>IMF Data / IFS / WEO / COFER</td>
+<td>宏观、国际收支、外储、预测与全球比较</td>
+<td>A/B</td>
+<td>C8、R2、F4、F6</td>
+<td>部分详细数据/API 或下载方式会变化；COFER 多为聚合</td>
+</tr>
+<tr>
+<td>World Bank Data / International Debt Statistics</td>
+<td>宏观、外债、发展与主权指标</td>
+<td>A</td>
+<td>C8、F8</td>
+<td>频率低，不适合实时交易</td>
+</tr>
+<tr>
+<td>OECD Data</td>
+<td>成员经济体宏观与领先指标</td>
+<td>A/B</td>
+<td>R2、F4</td>
+<td>亚洲新兴市场覆盖不完整</td>
+</tr>
+<tr>
+<td>FRED / ALFRED</td>
+<td>全球及美国宏观、部分 vintage 数据</td>
+<td>A</td>
+<td>R1、R2、R3</td>
+<td>亚洲本地序列不全面；必须检查原始来源和发布时间</td>
+</tr>
+<tr>
+<td>GLEIF LEI / OpenFIGI</td>
+<td>法人 LEI、部分证券标识映射</td>
+<td>A/B</td>
+<td>全部实体与证券主数据</td>
+<td>覆盖、映射唯一性和速率限制；不能单独解决复杂担保关系</td>
+</tr>
+<tr>
+<td>UN / OFAC / EU / UK HMT 等制裁清单</td>
+<td>制裁主体、船舶、项目与规则</td>
+<td>A/B</td>
+<td>C3、C8、F6</td>
+<td>名称匹配误报高；需本地监管和商业 KYC 数据补充</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="62">6.2 主要亚洲市场官方/半官方来源</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>市场</th>
+<th>代表来源</th>
+<th>主要内容</th>
+<th>可获取性判断</th>
+<th>产品判断</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>中国内地</td>
+<td>PBOC、SAFE、NBS、MOF、ChinaMoney/CFETS、CCDC/ChinaBond、SHCH、NAFMII、SSE/SZSE</td>
+<td>宏观、货币政策、外汇、发行/托管、收益率、估值、公告和交易规则</td>
+<td>A/B/C</td>
+<td>宏观和公告可做 POC；完整历史、实时成交/报价、批量估值及再分发通常需机构账号或商业许可</td>
+</tr>
+<tr>
+<td>香港</td>
+<td>HKMA、CMU、HKEX、Bond Connect 相关公开统计</td>
+<td>货币局数据、Exchange Fund 票据/债券、发行托管、上市文件、跨境持有/成交统计</td>
+<td>A/B</td>
+<td>官方数据较友好；亚洲美元信用债的可成交报价仍需商业/内部源</td>
+</tr>
+<tr>
+<td>新加坡</td>
+<td>MAS、SGX、Singapore Department of Statistics</td>
+<td>政策/宏观、SGS 发行与收益率、汇率、上市债券文件和公司公告</td>
+<td>A/B</td>
+<td>适合宏观、SGS 和文档；SGD corporate/OTC credit 的实时深度有限</td>
+</tr>
+<tr>
+<td>日本</td>
+<td>BOJ、MOF Japan、JSDA、JPX</td>
+<td>政策、宏观、JGB 拍卖、资金流、交易统计、利率期货</td>
+<td>A/B/C</td>
+<td>官方时间序列丰富；精细实时现金 JGB/IRS 与机构报价仍需许可数据</td>
+</tr>
+<tr>
+<td>韩国</td>
+<td>BOK ECOS、MOEF、KOFIA Bond、KRX</td>
+<td>宏观、政策、国债/公司债价格与统计、交易所衍生品</td>
+<td>A/B/C</td>
+<td>公共覆盖较好但韩文和批量接口有摩擦；详细实时数据可能需会员/商业许可</td>
+</tr>
+<tr>
+<td>印度</td>
+<td>RBI DBIE、CCIL、SEBI、NSE/BSE、Controller General of Accounts</td>
+<td>宏观、政策、G-sec、money market、FX、公司债披露与财政</td>
+<td>A/B/C</td>
+<td>G-sec 和宏观基础较强；公司债、NDS/场所级实时和历史批量权限需逐项确认</td>
+</tr>
+<tr>
+<td>印度尼西亚</td>
+<td>Bank Indonesia、Ministry of Finance/DJPPR、OJK、IDX、PHEI</td>
+<td>宏观、政策、政府债发行、公司披露和债券定价/估值</td>
+<td>A/B/C</td>
+<td>官方报告可得；高质量逐券估值与成交往往依赖本地商业源或机构接入</td>
+</tr>
+<tr>
+<td>马来西亚</td>
+<td>Bank Negara Malaysia、FAST、Bursa Malaysia、BPAM</td>
+<td>宏观、政策、政府/公司债发行、公告、估值</td>
+<td>A/B/C</td>
+<td>发行和宏观较易得；BPAM 详细估值与批量使用通常是商业关系</td>
+</tr>
+<tr>
+<td>泰国</td>
+<td>Bank of Thailand、ThaiBMA、Public Debt Management Office</td>
+<td>宏观、政策、政府债、公司债、资金流与市场统计</td>
+<td>A/B/C</td>
+<td>部分数据公开；逐券历史、实时和专业分析常需 ThaiBMA 会员/许可</td>
+</tr>
+<tr>
+<td>菲律宾</td>
+<td>BSP、Bureau of the Treasury、PDS/PDEx</td>
+<td>宏观、政策、国债拍卖、固定收益交易/参考数据</td>
+<td>A/B/C</td>
+<td>官方宏观和拍卖可得；完整场内外价格历史与 API 需与 PDS/供应商确认</td>
+</tr>
+<tr>
+<td>越南</td>
+<td>State Bank of Vietnam、HNX、Ministry of Finance、VBMA</td>
+<td>政策、政府/公司债发行、交易和规则</td>
+<td>B/C</td>
+<td>数据碎片化、语言和历史/API 一致性较弱；需要本地合作方与较多质检</td>
+</tr>
+<tr>
+<td>台湾</td>
+<td>CBC、FSC、TPEx、TWSE、财政主管部门</td>
+<td>宏观、政策、政府/公司债、柜买交易与公司披露</td>
+<td>A/B/C</td>
+<td>官方资料较丰富但中文、本地代码与许可需要适配；OTC 实时数据非完全开放</td>
+</tr>
+</tbody>
+</table></div>
+<p>结论：<strong>公开数据足以完成政策、宏观、发行、文档理解类 POC；公开数据不足以稳定支撑实时亚洲信用定价、真实流动性、完整 FX vol surface 和最佳执行。</strong></p>
+<hr>
+<h2 id="7">7. 数据源清单：客户内部数据——真正的产品壁垒</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>内部数据</th>
+<th>对应价值</th>
+<th>可获取性</th>
+<th>主要治理要求</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IBOR/PMS/基金会计持仓与现金流</td>
+<td>事件到持仓、组合风险、FX hedge、收益归因</td>
+<td>D</td>
+<td>租户隔离、最小权限、账户/客户脱敏、as-of 快照</td>
+</tr>
+<tr>
+<td>OMS/EMS/order/fill</td>
+<td>交易前检查、执行复盘、TCA</td>
+<td>D</td>
+<td>交易敏感数据隔离、时间同步、不可用于跨客户训练</td>
+</tr>
+<tr>
+<td>Sell-side axes、indicative quotes、dealer/broker runs</td>
+<td>C9 的连续报价状态、库存意愿、市场广度与买卖压力</td>
+<td>D/E</td>
+<td>保留原始消息与版本；遵守渠道和 dealer 条款、counterparty 保密、client-specific visibility、保存期限和不再分发限制</td>
+</tr>
+<tr>
+<td>RFQ、quote response、order 与 fill</td>
+<td>验证 axe 是否可能被 hit/lift、衡量真实可成交价和 dealer 质量</td>
+<td>D</td>
+<td>精确时间同步、交易意图隔离、不可跨客户训练或反推出单一客户行为</td>
+</tr>
+<tr>
+<td>风险和估值引擎输出</td>
+<td>DV01/OAS/Greeks/情景 P&amp;L 的正式数字</td>
+<td>D</td>
+<td>模型只调用和解释，不复制或自行替换正式方法</td>
+</tr>
+<tr>
+<td>内部研究、信用 memo、watchlist 与批准记录</td>
+<td>机构自己的判断框架、历史决策和术语</td>
+<td>D</td>
+<td>文档权限继承、版本控制、MNPI 标签、引用原作者</td>
+</tr>
+<tr>
+<td>新券承销团信息、book update、内部聊天</td>
+<td>C2 的速度与市场颜色</td>
+<td>D/E</td>
+<td>可能含 wall-crossed/MNPI 信息；默认不进入通用模型或跨团队索引</td>
+</tr>
+<tr>
+<td>Treasury、融资、抵押品和保证金</td>
+<td>R8、F3、组合流动性</td>
+<td>D</td>
+<td>高敏感、实时性、职责分离与操作审批</td>
+</tr>
+<tr>
+<td>客户问询、CRM、销售笔记</td>
+<td>需求洞察和自动答复</td>
+<td>D</td>
+<td>PII、适当性、跨客户隔离、营销与研究合规</td>
+</tr>
+<tr>
+<td>人工修正、接受/拒绝与事后结果</td>
+<td>模型评估和持续学习</td>
+<td>D</td>
+<td>防止把最终 P&amp;L 当唯一标签；保留操作者、时间和理由</td>
+</tr>
+</tbody>
+</table></div>
+<p>关键判断：商业数据让产品“能工作”，客户内部数据让产品“比通用模型更有价值”。内部数据不应混入共享基础模型；更适合在客户租户内做权限感知的 RAG、特征计算和轻量适配。</p>
+<hr>
+<h2 id="8">8. 三类场景所需的最小数据包</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>产品包</th>
+<th>POC 最小数据</th>
+<th>机构版必须补齐</th>
+<th>没有就不能承诺的能力</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Credit</td>
+<td>官方财报/公告、募集说明书、公开评级行动、EOD 价格、OpenFIGI/LEI；C9 可用经脱敏的历史 axes/runs 样本做 POC</td>
+<td>可靠 bond master、evaluated/live quote、评级全文、可信新闻、内部持仓，以及带版本的 dealer axes/runs、RFQ/fill</td>
+<td>“实时可成交公允价”、全市场流动性、新券 book color；没有报价历史与成交验证时，不能承诺准确的 hit/lift 或市场强弱判断</td>
+</tr>
+<tr>
+<td>Rates</td>
+<td>央行/统计局、官方曲线与拍卖、EOD 国债/FX、经济日历</td>
+<td>OIS/IRS/期货实时与 tick、调查分布、repo、内部风险/持仓</td>
+<td>秒级事件交易、完整跨市场 RV、精确 hedge ticket、资金面预警</td>
+</tr>
+<tr>
+<td>FX</td>
+<td>官方 fixing/外储/国际收支、EOD spot/forward、公开政策文档</td>
+<td>可成交 spot/forward/NDF、basis、vol surface、venue/RFQ、持仓现金流</td>
+<td>最佳执行、精确 options 结构、真实 hedge cost、dealer/venue 排序</td>
+</tr>
+</tbody>
+</table></div>
+<hr>
+<h2 id="9">9. 数据工程与模型设计的硬要求</h2>
+<h3 id="91">9.1 时间与版本</h3>
+<ul>
+<li>所有行情、宏观、财务、评级和文档都要同时保存 <code>event_time</code>、<code>publish_time</code>、<code>ingest_time</code> 和 <code>effective_time</code>。</li>
+<li>宏观必须保留 vintage；财务和评级必须保留修订/撤回；不能用今天修订后的数据解释当时决策。</li>
+<li>价格必须标明来源、bid/ask/mid/last/evaluated、时区、市场状态和 stale flag。</li>
+</ul>
+<h3 id="92">9.2 固收主数据</h3>
+<ul>
+<li>统一 ISIN、FIGI、CUSIP/SEDOL/本地代码、issuer、borrower、guarantor、ultimate parent 和 SPV。</li>
+<li>保存 clean/dirty price、day-count、coupon、business-day calendar、settlement、call/put、sink、indexation、seniority、担保和适用法律。</li>
+<li>在岸/离岸、deliverable/NDF、不同 share class/法人不得靠名称字符串猜测。</li>
+</ul>
+<h3 id="93-otc">9.3 OTC 报价状态模型</h3>
+<ul>
+<li>最小标准字段应包括 <code>security_id</code>、<code>dealer_id</code>、<code>side</code>、<code>quote_type</code>、<code>level_type</code>、<code>level</code>、<code>size</code>、<code>currency</code>、<code>quote_time</code>、<code>received_time</code>、<code>expiry</code>、<code>source</code>、<code>raw_message_id</code> 和 <code>visibility_scope</code>。</li>
+<li>不覆盖上一条报价，而是保存事件流与状态迁移：<code>NEW</code>、<code>REFRESH</code>、<code>IMPROVE</code>、<code>WORSEN</code>、<code>SIZE_UP</code>、<code>SIZE_DOWN</code>、<code>WITHDRAW</code>、<code>EXPIRE</code>、<code>LIKELY_HIT/LIFTED</code>。</li>
+<li>不直接比较不同票息和期限债券的 dollar price；需按各自曲线和 convention 转为 yield/spread/OAS，并保留原始报价。</li>
+<li>核心特征包括 dealer breadth/concentration、bid/offer persistence、axe churn、quote half-life、spread tightening/widening、跨 dealer dispersion、RFQ response 和成交验证率。</li>
+<li><strong>报价消失本身不等于成交</strong>。只有结合重新补价方向、实际 RFQ/fill/TRACE、多个 dealer 的同步行为及该 dealer 历史习惯后，才可标记为 <code>LIKELY_HIT/LIFTED</code>，且必须显示置信度与反证。</li>
+</ul>
+<h3 id="94">9.4 输出可信度</h3>
+<ul>
+<li>数字结论必须来自结构化字段或确定性计算，不允许模型凭上下文“心算”。</li>
+<li>文本事实必须带句子/页码级引用；来源冲突时并列展示，不静默选择。</li>
+<li>把“已确认事实、模型推断、市场传闻、用户假设”用不同视觉标签区分。</li>
+<li>任何交易建议都显示输入数据 freshness、流动性等级、主要反证和人工审批点。</li>
+</ul>
+<h3 id="95">9.5 权限与合规</h3>
+<ul>
+<li>检索必须继承原系统权限，不能因为模型能搜到就扩大用户权限。</li>
+<li>MNPI、wall-crossed、新券 book、dealer quote、客户 PII 和交易意图必须分类隔离。</li>
+<li>不用一个客户的内部数据训练服务其他客户的共享模型。</li>
+<li>保留问题、检索证据、工具调用、计算版本、答案和人工修改的完整审计链。</li>
+</ul>
+<hr>
+<h2 id="10-mvp">10. 推荐 MVP 排序</h2>
+<h3 id="p0">第一阶段：用公开/文档数据证明“读得准、找得快”（P0）</h3>
+<ol>
+<li><strong>C1 主体信用变化 memo</strong>：最能体现多语言长文档和跨期比较能力。</li>
+<li><strong>C4 covenant/资本结构解析</strong>：输出结构化、可量化、容易做金标准评测。</li>
+<li><strong>R2 央行反应函数与 statement diff</strong>：亚洲多央行、多语言是天然垂类壁垒。</li>
+<li><strong>R1/F1 联合晨报</strong>：展示跨时区、多资产、带引用的工作流，但避免先承诺“预测”。</li>
+<li><strong>F8 企业外币错配</strong>：把 credit 与 FX 真正连起来，区别于通用金融问答。</li>
+</ol>
+<h3 id="p1">第二阶段：接入客户持仓与机构行情，证明“能进入决策流程”（P1）</h3>
+<ol>
+<li>C3 事件到持仓告警。</li>
+<li>C5 信用换券与流动性筛选。</li>
+<li><strong>C9 OTC quote/axe 盯盘一期</strong>：先接入合规邮箱/CSV 历史 runs，建立跨 dealer 报价状态和市场强弱面板。</li>
+<li>R4 曲线 RV/carry-roll。</li>
+<li>R6 组合风险与对冲解释。</li>
+<li>F3 动态 FX hedge。</li>
+<li>C8 主权—银行—企业传导图。</li>
+</ol>
+<h3 id="p2">第三阶段：接入交易和专有数据，建立高壁垒（P2）</h3>
+<ol>
+<li>C2 新券实时定价与订单建议包。</li>
+<li><strong>C9 OTC quote/axe 盯盘二期</strong>：接入实时 RFQ/fill，校准 dealer-specific 的 hit/lift 推断和可成交价格区间。</li>
+<li>R8 资金面/抵押品压力。</li>
+<li>F5 FX options surface 与结构比较。</li>
+<li>F7 执行前流动性和交易后 TCA。</li>
+<li>C7 困境债/重组工作台。</li>
+</ol>
+<h3 id="_3">不建议一开始承诺</h3>
+<ul>
+<li>仅凭公开 EOD 数据给出亚洲美元债“实时可成交价”；</li>
+<li>对所有亚洲司法辖区自动生成无需律师复核的法律结论；</li>
+<li>没有内部持仓、现金流和限额却给出具体组合交易数量；</li>
+<li>没有 venue/RFQ 数据却声称能做 best execution；</li>
+<li>用大模型生成的主观评分直接替代正式定价、风险或信用审批模型。</li>
+</ul>
+<hr>
+<h2 id="11">11. 评测框架：产品是否真的有用</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>维度</th>
+<th>建议指标</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>事实性</td>
+<td>数字准确率、引用命中率、unsupported claim rate</td>
+<td>全部</td>
+</tr>
+<tr>
+<td>完整性</td>
+<td>重要条款/事件/风险遗漏率、实体映射覆盖率</td>
+<td>C1/C3/C4/C7/C8</td>
+</tr>
+<tr>
+<td>时效性</td>
+<td>来源发布到结构化、告警或首稿的延迟</td>
+<td>C2/C3/C9/R1/R2/R3/F1/F2</td>
+</tr>
+<tr>
+<td>计算正确性</td>
+<td>与前台/风险/独立 benchmark 的差异</td>
+<td>C5/C6/R4/R6/R7/F3/F5</td>
+</tr>
+<tr>
+<td>决策价值</td>
+<td>人工接受率、节省时间、后续修改量、异常发现数</td>
+<td>全部</td>
+</tr>
+<tr>
+<td>交易质量</td>
+<td>滑点、fill ratio、成本后收益、对冲误差</td>
+<td>C2/C5/R4/F3/F7</td>
+</tr>
+<tr>
+<td>微观结构信号</td>
+<td>security/dealer/side 映射准确率、stale rate、疑似 hit/lift 精度、dealer breadth 覆盖率</td>
+<td>C9</td>
+</tr>
+<tr>
+<td>安全合规</td>
+<td>权限泄露、MNPI/PII 违规、不可审计答案数</td>
+<td>全部</td>
+</tr>
+</tbody>
+</table></div>
+<p>最终北极星指标不应只是“回答看起来专业”，而应是：<strong>在不增加事实、权限和模型风险的前提下，缩短从新信息到可审计决策的时间。</strong></p>
+      </article>
+    </main>
+  </div>
+
+  <footer class="footer">生成日期：2026-08-10 · 自包含 HTML · 来源：同名 Markdown 文档</footer>
+  <button class="back-top" type="button" aria-label="返回顶部" title="返回顶部">↑</button>
+
+  <script>
+    (() => {
+      const links = [...document.querySelectorAll('.sidebar a[href^="#"]')];
+      const targets = links
+        .map(link => document.getElementById(decodeURIComponent(link.hash.slice(1))))
+        .filter(Boolean);
+      const byId = new Map(links.map(link => [decodeURIComponent(link.hash.slice(1)), link]));
+      const observer = new IntersectionObserver(entries => {
+        const visible = entries
+          .filter(entry => entry.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
+        if (!visible) return;
+        links.forEach(link => link.classList.remove('active'));
+        const active = byId.get(visible.target.id);
+        if (active) active.classList.add('active');
+      }, { rootMargin: '-8% 0px -80% 0px', threshold: 0 });
+      targets.forEach(target => observer.observe(target));
+
+      const button = document.querySelector('.back-top');
+      const updateButton = () => button.classList.toggle('visible', window.scrollY > 700);
+      window.addEventListener('scroll', updateButton, { passive: true });
+      button.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+      updateButton();
+    })();
+  </script>
+</body>
+</html>
