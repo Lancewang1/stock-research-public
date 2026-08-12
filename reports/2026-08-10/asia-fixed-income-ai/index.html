@@ -291,10 +291,10 @@
     <div class="hero-inner">
       <p class="eyebrow">Asia Fixed Income · Product Blueprint</p>
       <h1>亚洲固定收益金融垂类 AI：应用场景与数据源蓝图</h1>
-      <p class="hero-subtitle">面向机构用户的 Credit、Rates 与 FX 工作流设计，覆盖数据可得性、MVP 路线、模型治理与评测标准。</p>
+      <p class="hero-subtitle">面向机构用户的 Credit 与 Rates &amp; FX 工作流设计，覆盖数据可得性、MVP 路线、模型治理与评测标准。</p>
       <div class="metrics" aria-label="文档摘要">
-        <div class="metric"><strong>26</strong><span>具体应用场景</span></div>
-        <div class="metric"><strong>3</strong><span>Credit / Rates / FX</span></div>
+        <div class="metric"><strong>19</strong><span>具体应用场景</span></div>
+        <div class="metric"><strong>2</strong><span>Credit / Rates &amp; FX</span></div>
         <div class="metric"><strong>5</strong><span>数据可得性等级</span></div>
         <div class="metric"><strong>3</strong><span>MVP 建设阶段</span></div>
       </div>
@@ -326,27 +326,18 @@
 <li><a href="#c12-fund-flow-bond-maturity-primary-pipeline-p1p2">C12. Fund Flow / Bond Maturity / Primary Pipeline 资金日历（P1/P2）</a></li>
 </ul>
 </li>
-<li><a href="#2-rates">2. Rates 场景清单</a><ul>
-<li><a href="#r1-p0p1">R1. 亚洲开盘晨报：隔夜大类资产时间线与驱动归因（P0/P1）</a></li>
-<li><a href="#r2-copilotp0p1">R2. 央行反应函数与议息会议 Copilot（P0/P1）</a></li>
+<li><a href="#2-rates-fx">2. Rates &amp; FX 场景清单</a><ul>
+<li><a href="#r1-ratesfx-p0p1">R1. 亚洲开盘晨报：隔夜 Rates、FX 与大类资产时间线（P0/P1）</a></li>
+<li><a href="#r2-ratesfx-copilotp0p1">R2. 央行反应函数与 Rates/FX 议息会议 Copilot（P0/P1）</a></li>
 <li><a href="#r3-p1">R3. 宏观数据发布前、中、后全流程拆解与市场验证（P1）</a></li>
-<li><a href="#r4-carryroll-p1">R4. 曲线相对价值、carry/roll 与策略回测机（P1）</a></li>
+<li><a href="#r4-rates-fx-carryrollvolatility-p1p2">R4. Rates 曲线与 FX carry/roll/volatility 相对价值回测机（P1/P2）</a></li>
 <li><a href="#r5-p0p1">R5. 国债供给、拍卖与财政融资冲击（P0/P1）</a></li>
-<li><a href="#r8-rates-p0p1">R8. Rates 资金与事件日历（P0/P1）</a></li>
-<li><a href="#r9-rates-p1p2">R9. Rates 盘中盯盘与异动归因（P1/P2）</a></li>
+<li><a href="#r8-rates-fx-p0p1">R8. Rates &amp; FX 资金、政策与事件日历（P0/P1）</a></li>
+<li><a href="#r9-rates-fx-p1p2">R9. Rates &amp; FX 盘中盯盘、异动归因与政策风险（P1/P2）</a></li>
+<li><a href="#r10-fx-hedgeroll-p1p2">R10. 债券组合 FX hedge、roll 与执行管理（P1/P2）</a></li>
 </ul>
 </li>
-<li><a href="#3-fx">3. FX 场景清单</a><ul>
-<li><a href="#f1-fx-regime-p0p1">F1. 亚洲 FX 晨报、驱动因子与 regime 识别（P0/P1）</a></li>
-<li><a href="#f2-fx-playbookp1">F2. 央行/宏观事件前后的 FX playbook（P1）</a></li>
-<li><a href="#f3-p1">F3. 亚洲债券组合的动态汇率对冲（P1）</a></li>
-<li><a href="#f4-carryp1">F4. Carry、估值、动量与拥挤度的机会筛选（P1）</a></li>
-<li><a href="#f5-fx-options-p1p2">F5. FX options 波动率、偏斜与尾部保护（P1/P2）</a></li>
-<li><a href="#f6-p0p1">F6. 干预、资本管制与可兑换性风险监测（P0/P1）</a></li>
-<li><a href="#f7-fx-tcap2">F7. FX 执行前流动性选择与交易后 TCA（P2）</a></li>
-<li><a href="#f8-fx-p0p1">F8. 企业外币错配与“FX 到信用”传导（P0/P1）</a></li>
-</ul>
-</li>
+<li><a href="#3-fx">3. FX 场景整合边界</a></li>
 <li><a href="#4">4. 数据可获取性：先统一判断标准</a><ul>
 <li><a href="#_2">建议的数据权利字段</a></li>
 </ul>
@@ -358,9 +349,9 @@
 </ul>
 </li>
 <li><a href="#7">7. 数据源清单：客户内部数据——真正的产品壁垒</a></li>
-<li><a href="#8">8. 三类场景所需的最小数据包</a><ul>
+<li><a href="#8">8. 两类产品所需的最小数据包</a><ul>
 <li><a href="#81-credit">8.1 Credit 重点场景的数据可得性</a></li>
-<li><a href="#82-rates">8.2 Rates 重点场景的数据可得性</a></li>
+<li><a href="#82-rates-fx">8.2 Rates &amp; FX 重点场景的数据可得性</a></li>
 </ul>
 </li>
 <li><a href="#9">9. 数据工程与模型设计的硬要求</a><ul>
@@ -387,26 +378,22 @@
 </ul>
 </div>
 
-
-
-
-</div>
+      </div>
 
 
 
     </aside>
     <main>
       <article>
-        <h1 id="ai">亚洲固定收益金融垂类 AI：应用场景与数据源蓝图</h1>
+<h1 id="ai">亚洲固定收益金融垂类 AI：应用场景与数据源蓝图</h1>
 <p>日期：2026-08-10<br />
 范围：Asia Fixed Income，覆盖亚洲离岸信用债、主要本币债券、利率衍生品、相关外汇市场，以及 Private Credit / Asset-Backed Financing<br>
 目标用户：资产管理人、保险资管、银行自营与交易台、对冲基金、私人银行/财富管理机构的专业团队  </p>
 <h2 id="0">0. 先说结论</h2>
-<p>这个产品不应被定义为“会回答债券问题的聊天机器人”，而应被拆成三个相互连接的工作台：</p>
+<p>这个产品不应被定义为“会回答债券问题的聊天机器人”，而应被拆成两个相互连接的工作台：</p>
 <ol>
 <li><strong>Asia Credit Copilot</strong>：连接信用主体、研究观点、债券与贷款条款、风险事件、市场行为和组合暴露，回答“信用发生了什么变化，风险如何传导，我应关注哪项资产”。</li>
-<li><strong>Asia Rates Copilot</strong>：连接隔夜大类资产、宏观与央行事件、曲线相对价值、市场异动和资金日历，回答“利率在什么时候因何变化，当前结构是否可交易，今天还应关注什么”。</li>
-<li><strong>Asia FX &amp; Hedging Copilot</strong>：把汇率、远期点、基差、波动率与债券现金流连接起来，回答“外汇风险来自哪里，怎样以可解释的成本对冲”。</li>
+<li><strong>Asia Rates &amp; FX Copilot</strong>：连接隔夜大类资产、宏观与央行事件、利率曲线、FX carry/roll/volatility、盘中异动、资金日历和债券组合对冲，回答“Rates 与 FX 在什么时候因何变化，当前结构是否可交易，风险应如何管理”。</li>
 </ol>
 <p>最合适的技术形态不是把实时价格、财务数字和政策事实训练进模型参数，而是：</p>
 <ul>
@@ -424,15 +411,15 @@
 </ul>
 <hr />
 <h2 id="1-credit">1. Credit 场景清单</h2>
-<p>本章保留 11 个场景。原 C8“主权—银行—企业信用传导图”不再作为独立产品场景；所需的关联关系和风险传导能力并入 C3 与 C6。为保持既有讨论和引用稳定，C9—C12 暂不重新编号。</p>
+<p>本章保留 11 个场景。原 C8“主权—银行—企业信用传导图”不再作为独立产品场景；所需的关联关系和风险传导能力并入 C3 与 C6。为保持既有讨论和引用稳定，C9—C12 暂不重新编号。连同 Rates &amp; FX 的 8 个场景，当前共定义 19 个场景。</p>
 <h3 id="c1-p0p1">C1. 信用研究整合、横截面对标与观点演化（P0/P1）</h3>
 <ul>
 <li><strong>谁</strong>：买方信用分析师、行业研究员、信用 PM、投资委员会成员。</li>
 <li><strong>什么时候</strong>：首次覆盖、财报或重大事件发布后、月度/季度复核前，以及需要形成或挑战信用观点时。</li>
-<li><strong>要解决什么</strong>：在公司披露、评级报告、卖方研究和内部历史判断之间建立统一的信用研究视图。横截面上，一方面比较不同卖方机构对同一主体的预测、评级、公允利差、催化剂和风险判断，识别共识与真正分歧；另一方面将该主体与合适的行业 peers 比较，判断其业务质量、杠杆、流动性、再融资能力、债券结构和市场估值处于什么位置。时序上，追踪同一主体及各家机构的观点如何随财报、融资、评级和其他事件变化，判断哪些假设得到验证、哪些机构领先或滞后于事实与市场。</li>
+<li><strong>要解决什么</strong>：在公司披露、评级报告、卖方研究和内部历史判断之间建立统一的信用研究视图。横截面上，一方面比较不同卖方机构对同一主体的预测、评级、公允利差、催化剂和风险判断，识别共识与真正分歧；另一方面将该主体与合适的行业 peers 比较，判断其业务质量、杠杆、流动性、再融资能力、外币资产负债与收入错配、债券结构和市场估值处于什么位置。时序上，追踪同一主体及各家机构的观点如何随财报、融资、评级、汇率和其他事件变化，判断哪些假设得到验证、哪些机构领先或滞后于事实与市场。</li>
 <li><strong>现在怎么解决</strong>：分析师分别下载多期财报、公告、评级和卖方报告，在 Excel 更新指标，在不同文档中寻找同业口径和历史观点；报告版本、数据截止日、预测口径和 peer 选择经常不一致，跨中文、英文、日文、韩文材料时还需人工翻译。</li>
-<li><strong>AI 应如何介入</strong>：整合多语言、多版本研究材料，把“公司已披露事实、外部机构观点、内部判断和市场定价”分开；生成同一主体的跨机构观点比较、主体对 peers 的横截面对标，以及按事件组织的观点演化时间线；解释 peer 的纳入/排除理由和各家观点分歧的来源，并为事实与观点保留原文引用和 as-of time。</li>
-<li><strong>关键数据</strong>：审计财报、临时公告、业绩会材料、评级报告、卖方研究及其历史版本、债务到期表、债券价格/利差、行业与同业指标、内部信用备忘录和历史投资判断。</li>
+<li><strong>AI 应如何介入</strong>：整合多语言、多版本研究材料，把“公司已披露事实、外部机构观点、内部判断和市场定价”分开；生成同一主体的跨机构观点比较、主体对 peers 的横截面对标，以及按事件组织的观点演化时间线；识别外币债务、收入、成本和现金之间的结构性错配及其变化，解释 peer 的纳入/排除理由和各家观点分歧的来源，并为事实与观点保留原文引用和 as-of time。</li>
+<li><strong>关键数据</strong>：审计财报、临时公告、业绩会材料、评级报告、卖方研究及其历史版本、分币种债务到期表、收入/成本/现金币种构成及对冲披露、债券价格/利差、FX、行业与同业指标、内部信用备忘录和历史投资判断。</li>
 <li><strong>成功指标</strong>：研究首稿和例行更新用时、关键数字与观点的可追溯率、重要分歧和观点变化的遗漏率、peer 对标的人工接受率、分析师对整合结果的修改量。</li>
 </ul>
 <p><strong>重要边界</strong>：不同卖方报告的发布时间、预测期、评级体系和估值口径不可直接混为“市场共识”；受版权或合同限制的研究材料只能在获准范围内检索、引用和展示。</p>
@@ -544,27 +531,27 @@
 </ul>
 <p><strong>重要边界</strong>：债券到期现金不一定重新投入亚洲信用，ETF shares 变化也不等于所有最终投资者 flow；大型 mutual fund 的实时申赎通常不是公开数据，未宣布 primary pipeline 还可能包含 MNPI。产品必须显示数据覆盖率、公布时滞和概率区间，并把公开/商业数据与内部受限 pipeline 严格分层。</p>
 <hr />
-<h2 id="2-rates">2. Rates 场景清单</h2>
-<p>本章保留 7 个场景。原 R6“组合久期、关键期限风险与宏观情景对冲”和 R7“跨市场、汇率对冲后收益比较”暂不纳入本轮场景；R8 改为资金与事件日历，并新增 R9 盘中盯盘。为保持既有讨论和引用稳定，暂不重新编号。</p>
-<h3 id="r1-p0p1">R1. 亚洲开盘晨报：隔夜大类资产时间线与驱动归因（P0/P1）</h3>
+<h2 id="2-rates-fx">2. Rates &amp; FX 场景清单</h2>
+<p>本章保留 8 个场景，将原独立 FX 场景并入 Rates 的同类工作流。原 R6“组合久期、关键期限风险与宏观情景对冲”和 R7“跨市场、汇率对冲后收益比较”暂不纳入本轮场景；R8 改为资金与事件日历，R9 为盘中盯盘，并新增 R10 债券组合 FX hedge、roll 与执行。为保持既有讨论和引用稳定，暂不重新编号。</p>
+<h3 id="r1-ratesfx-p0p1">R1. 亚洲开盘晨报：隔夜 Rates、FX 与大类资产时间线（P0/P1）</h3>
 <ul>
 <li><strong>谁</strong>：利率 PM、宏观策略师、交易员、机构销售。</li>
 <li><strong>什么时候</strong>：亚洲各市场开盘前，以及伦敦/纽约向亚洲交接时。</li>
-<li><strong>要解决什么</strong>：客户需要的不是一组 close-to-close 涨跌幅，而是一条可核查的隔夜市场时间线：在亚洲收盘、伦敦交易和纽约交易的不同时段，哪一个资产先动、何时加速或反转、幅度多大，当时发生了什么，以及这个变化如何传导到其他资产。重点覆盖 UST 曲线与期货、主要股指、美元及 JPY/CNH、原油和黄金、信用利差、政策利率预期，并映射到 JGB、CGB、KTB、IGB、MGS 等亚洲本地曲线。</li>
+<li><strong>要解决什么</strong>：客户需要的不是一组 close-to-close 涨跌幅，而是一条可核查的隔夜市场时间线：在亚洲收盘、伦敦交易和纽约交易的不同时段，哪一个资产先动、何时加速或反转、幅度多大，当时发生了什么，以及这个变化如何传导到其他资产。重点覆盖 UST 曲线与期货、主要股指、美元及亚洲 spot/forward/NDF、原油和黄金、信用利差、政策利率预期，并映射到 JGB、CGB、KTB、IGB、MGS 等本地曲线及相关 FX。</li>
 <li><strong>现在怎么解决</strong>：用户依次查看终端收盘表、盘中图表、新闻、卖方晨报和聊天，再凭记忆拼接“数据—新闻—价格”的先后顺序；常见问题是只报收盘变化、混用不同时区或休市日、忽略盘中反转，并把同时发生的消息写成确定因果。</li>
 <li><strong>AI 应如何介入</strong>：按统一市场窗口和本地时钟重建分钟级价格路径，识别主要拐点、加速和跨资产先后关系；把每段行情与数据发布、央行讲话、拍卖、政策新闻及其他可信事件对齐；对每项归因标记为“已知触发、可信解释、同步观察或待验证推断”，并在结尾列出亚洲开盘需要继续验证的价格位、事件和风险。</li>
 <li><strong>关键数据</strong>：全球及亚洲国债/OIS/IRS/期货的分钟级或 tick 数据，主要 FX、权益、商品和信用指数，经济日历、官方发布、可信新闻、央行操作、拍卖结果、市场时区和本地假日历。</li>
 <li><strong>成功指标</strong>：关键隔夜波动和盘中反转的覆盖率、拐点时间与价格变化准确率、事件到价格的时间对齐误差、无证据归因率、晨报生成时间和用户对归因的采纳率。</li>
 </ul>
 <p><strong>重要边界</strong>：价格与新闻在时间上相邻不等于存在因果关系；晨报必须保留事件原始时间戳和价格窗口，并区分官方事实、市场普遍解释和模型推断，不能把事后叙事写成确定结论。</p>
-<h3 id="r2-copilotp0p1">R2. 央行反应函数与议息会议 Copilot（P0/P1）</h3>
+<h3 id="r2-ratesfx-copilotp0p1">R2. 央行反应函数与 Rates/FX 议息会议 Copilot（P0/P1）</h3>
 <ul>
 <li><strong>谁</strong>：宏观策略师、利率/FX 交易员、经济学家、资产配置团队。</li>
 <li><strong>什么时候</strong>：议息会前一至两周、决定发布瞬间、记者会和会议纪要发布后。</li>
-<li><strong>要解决什么</strong>：理解每家亚洲央行当前最重视的增长、通胀、汇率、金融稳定变量；区分基准情景与尾部情景；判断声明措辞和政策工具发生了什么变化。</li>
+<li><strong>要解决什么</strong>：理解每家亚洲央行当前最重视的增长、通胀、汇率、金融稳定变量；区分基准情景与尾部情景；判断声明措辞和政策工具发生了什么变化，并比较不同结果对 Rates、spot、forward points、NDF 和 FX volatility 的条件化影响。</li>
 <li><strong>现在怎么解决</strong>：人工读声明、演讲和纪要，维护政策表格并参考卖方预测；语言差异和政策框架差异使跨国比较非常耗时。</li>
-<li><strong>AI 应如何介入</strong>：逐句比较历次声明；建立可更新的 reaction-function card；结合 point-in-time 宏观数据和市场定价生成条件概率树；会后立即区分“决定、措辞、预测、操作工具”四类 surprise。</li>
-<li><strong>关键数据</strong>：央行声明/纪要/演讲、官方预测、宏观 vintage、调查预期、OIS/IRS/FX 定价和历史会议反应。</li>
+<li><strong>AI 应如何介入</strong>：逐句比较历次声明；建立可更新的 reaction-function card；结合 point-in-time 宏观数据和 Rates/FX 市场定价生成条件概率树；会前比较不同机构对政策路径和市场反应的分歧，会后立即区分“决定、措辞、预测、操作工具”四类 surprise，并对照曲线、spot、forward 和 vol 的真实变化。</li>
+<li><strong>关键数据</strong>：央行声明/纪要/演讲、官方预测、宏观 vintage、调查预期、OIS/IRS、spot/forward/NDF、FX vol surface 和历史会议反应。</li>
 <li><strong>成功指标</strong>：声明变化召回率、发布时间到首版解读的延迟、情景概率校准、错误引用率。</li>
 </ul>
 <h3 id="r3-p1">R3. 宏观数据发布前、中、后全流程拆解与市场验证（P1）</h3>
@@ -578,17 +565,17 @@
 <li><strong>成功指标</strong>：卖方观点覆盖率、结构化解析延迟和数字准确率、细分项与修订识别率、实际值对逐家预测的比较完整度、发布后解读归类准确率、市场反应时间对齐误差和事前/事后叙事漂移。</li>
 </ul>
 <p><strong>重要边界</strong>：必须使用当时可得的预测、数据 vintage 和研究版本；不能用最终修订值回填历史，也不能因为价格在数据后变化就断言数据是唯一驱动因素。</p>
-<h3 id="r4-carryroll-p1">R4. 曲线相对价值、carry/roll 与策略回测机（P1）</h3>
+<h3 id="r4-rates-fx-carryrollvolatility-p1p2">R4. Rates 曲线与 FX carry/roll/volatility 相对价值回测机（P1/P2）</h3>
 <ul>
-<li><strong>谁</strong>：本币债 PM、利率 RV 交易员、银行自营盘。</li>
-<li><strong>什么时候</strong>：每日筛选、曲线或 swap spread 异常、政策预期变化，以及准备建立或复核相对价值交易时。</li>
-<li><strong>要解决什么</strong>：识别 2s5s10s、5s10s30s、现券—IRS、国债—准主权和跨品种结构的偏离，并判断偏离是结构性变化还是可交易的均值回归机会。历史百分位只是起点，用户还需要把观点写成明确规则，回测不同入场、退出、持有期、止损、carry/roll、融资和交易成本假设，查看策略在不同市场状态、参数范围和样本外时期是否仍然成立。</li>
-<li><strong>现在怎么解决</strong>：每个市场维护独立 Excel、Python 或 BQuant 分析；历史 z-score 与交易回测常被分开，day count、假日、交割、CTD、fixing、roll 和融资规则不一致；研究结果容易停留在挑选案例或最优参数，难以系统检验稳健性。</li>
-<li><strong>AI 应如何介入</strong>：允许用户用自然语言提出 RV 假设和筛选条件，但由统一曲线与回测引擎将其转换为无歧义规则；并列输出当前估值、历史分布、carry/roll、风险中性盈亏平衡和完整回测结果；强制检查 point-in-time 数据、look-ahead、交易成本、参数敏感性、不同 regime、walk-forward/样本外表现和失败区间，优先寻找稳定参数区间，而不是展示最高样本内收益。</li>
-<li><strong>关键数据</strong>：可交易现券、OIS/IRS、期货及 CTD、repo 和融资成本、bid/ask 与成交成本、发行计划、point-in-time 曲线历史、合约条款、roll 规则和各市场 convention。</li>
-<li><strong>成功指标</strong>：定价和 P&amp;L 与交易台/BQuant 基准的一致性、look-ahead 和 convention 错误数、成本后及样本外表现、参数与 regime 稳定性、候选交易人工接受率，以及回测到事后实盘表现的偏差。</li>
+<li><strong>谁</strong>：本币债 PM、利率和 FX RV 交易员、宏观 PM、options trader、银行自营盘和系统化研究团队。</li>
+<li><strong>什么时候</strong>：每日筛选，曲线、swap spread、forward points、cross-currency basis 或 FX volatility 异常，政策预期变化，以及准备建立或复核相对价值交易时。</li>
+<li><strong>要解决什么</strong>：在同一研究框架中分析两类机会。Rates 侧识别 2s5s10s、5s10s30s、现券—IRS、国债—准主权和跨品种结构的偏离；FX 侧比较不同亚洲货币的 spot、forward/NDF carry、roll-down、利差、cross-currency basis、估值和动量，并分析 ATM vol、risk reversal、butterfly、期限结构与 realized volatility 的关系。历史百分位只是起点，用户还需要将观点写成明确规则，回测入场、退出、持有期、止损、carry/roll、volatility regime、融资、hedging 和交易成本，判断结构在不同参数、市场状态和样本外时期是否仍然成立。</li>
+<li><strong>现在怎么解决</strong>：Rates 和 FX 团队分别维护 Excel、Python、BQuant、vol surface 和卖方 scorecard；历史 z-score/百分位与交易回测经常分开，Rates 的 day count、CTD、repo、roll 规则与 FX 的 deliverable/NDF、forward tenor、holiday、delta/vol convention 和资本管制处理不一致；研究容易停留在挑选案例或最优参数。</li>
+<li><strong>AI 应如何介入</strong>：允许用户用自然语言提出 Rates/FX RV 假设和筛选条件，但由统一定价与回测引擎转换为无歧义规则；并列输出当前水平、历史百分位、carry/roll、forward/basis、implied-versus-realized vol、风险中性盈亏平衡和完整回测结果；强制检查 point-in-time 数据、look-ahead、bid/ask/slippage、参数敏感性、不同 regime、walk-forward/样本外表现和失败区间，优先寻找稳定参数区间，而不是最高样本内收益。</li>
+<li><strong>关键数据</strong>：Rates 侧包括可交易现券、OIS/IRS、期货及 CTD、repo、发行计划和曲线历史；FX 侧包括 spot、forward/NDF、local/USD curves、cross-currency basis、可成交 vol surface、realized vol、positioning、资本流动和可交易性标签；两侧均需要 bid/ask、交易与融资成本、point-in-time 历史、合约条款及市场 convention。</li>
+<li><strong>成功指标</strong>：定价和 P&amp;L 与交易台/BQuant/独立期权基准的一致性、look-ahead 和 convention 错误数、成本后及样本外表现、参数与 regime 稳定性、vol surface 解释正确率、候选交易人工接受率，以及回测到事后实盘表现的偏差。</li>
 </ul>
-<p><strong>重要边界</strong>：回测的目标是判断策略在现实摩擦下是否“最不容易失效”，不是寻找历史收益最高的参数；样本不足、只在单一 regime 有效或对成本高度敏感的策略应明确标为不可验证或不稳健。</p>
+<p><strong>重要边界</strong>：回测的目标是判断策略在现实摩擦下是否“最不容易失效”，不是寻找历史收益最高的参数；样本不足、只在单一 regime 有效或对成本高度敏感的策略应明确标为不可验证或不稳健。高 FX carry 不是无风险收益，缺失的 options 报价也不能被插值成可交易流动性。</p>
 <h3 id="r5-p0p1">R5. 国债供给、拍卖与财政融资冲击（P0/P1）</h3>
 <ul>
 <li><strong>谁</strong>：国债 PM、primary dealer、利率策略师、银行流动性团队。</li>
@@ -600,109 +587,48 @@
 <li><strong>成功指标</strong>：供给表准确率、公告到更新延迟、拍卖异常识别率、手工维护时间。</li>
 </ul>
 <p><strong>与 R8 的边界</strong>：R8 负责把发行、拍卖和结算作为每日事件与资金项目统一排程；R5 负责对单次供给计划和拍卖做事前分析、结果拆解及曲线影响判断。</p>
-<h3 id="r8-rates-p0p1">R8. Rates 资金与事件日历（P0/P1）</h3>
+<h3 id="r8-rates-fx-p0p1">R8. Rates &amp; FX 资金、政策与事件日历（P0/P1）</h3>
 <ul>
 <li><strong>谁</strong>：利率 PM、交易员、宏观策略师、银行资金交易员、treasury 和风险值班团队。</li>
 <li><strong>什么时候</strong>：每天开盘前和盘中更新；重点覆盖未来一日、一周和一个月，以及月末/季末、税期、长假、国债集中交割和央行流动性操作窗口。</li>
-<li><strong>要解决什么</strong>：把每天可能影响利率与资金面的事件放在同一时间轴上，包括关键宏观数据、央行会议与讲话、公开市场操作及到期、政府债发行/拍卖/结算/到期付息、财政收支和税款、repo 与资金利率窗口、指数再平衡、重要假日和已知监管事件；同时记录可观察的资金行为和预期净流动性影响，帮助用户判断“今天什么时候可能有波动、资金是投放还是回笼、哪些期限最可能受影响”。</li>
+<li><strong>要解决什么</strong>：把每天可能影响 Rates、FX 与资金面的事件放在同一时间轴上，包括关键宏观数据、央行会议与讲话、公开市场操作及到期、政府债发行/拍卖/结算/到期付息、财政收支和税款、repo 与资金利率窗口、fixing、外储和干预相关发布、资本管制或结算规则、forward/NDF 与 hedge roll、指数再平衡、重要假日和已知监管事件；同时记录可观察的资金行为和预期流动性影响，帮助用户判断“今天什么时候可能有波动、资金是投放还是回笼、哪些 Rates/FX 期限最可能受影响”。</li>
 <li><strong>现在怎么解决</strong>：团队分别维护经济日历、央行操作表、财政和国债发行表、repo 到期、结算日历及内部 treasury 计划，再通过晨会和聊天人工拼接；不同来源的 announce、effective、auction、settlement 和 maturity 时间经常混用，临时变更也容易遗漏。</li>
-<li><strong>AI 应如何介入</strong>：建立 point-in-time 的 rates event ledger，统一事件的当地时间、公布时间、实施时间和结算时间；自动识别新增、取消、修改和超预期规模，按市场、事件类型、期限和预期流动性方向组织每日清单；把已知资金投放/回笼、国债现金流和结算需求与历史季节性对照，并在事件发生后补充实际结果和市场反应。</li>
-<li><strong>关键数据</strong>：官方经济日历、央行会议/讲话和公开市场操作、政府债发行与拍卖、财政收支和税期、国债到期/付息/结算、repo/拆借/OIS、指数调整、交易所与本地假日、内部获准使用的资金计划和历史事件反应。</li>
+<li><strong>AI 应如何介入</strong>：建立 point-in-time 的 Rates &amp; FX event ledger，统一事件的当地时间、公布时间、实施时间和结算时间；自动识别新增、取消、修改和超预期规模，按市场、事件类型、期限和预期流动性方向组织每日清单；把已知资金投放/回笼、国债现金流、FX fixing、hedge roll 和结算需求与历史季节性对照，并在事件发生后补充实际结果和市场反应。</li>
+<li><strong>关键数据</strong>：官方经济日历、央行会议/讲话和公开市场操作、政府债发行与拍卖、财政收支和税期、国债到期/付息/结算、repo/拆借/OIS、fixing、外储、资本管制和结算通知、forward/NDF/option expiry、指数调整、交易所与本地假日、内部获准使用的资金与 hedge roll 计划及历史事件反应。</li>
 <li><strong>成功指标</strong>：关键事件和资金项目覆盖率、时间与规模准确率、临时变更捕获延迟、预期投放/回笼方向准确率、事件后实际结果补全率、人工维护时间和遗漏事件数。</li>
 </ul>
 <p><strong>重要边界</strong>：公开操作规模不等于最终市场净流动性，财政支出、银行准备金和机构行为也可能抵消其影响；日历必须区分确定事件、估算资金行为和情景判断，不应把估算净投放写成已发生事实。</p>
-<h3 id="r9-rates-p1p2">R9. Rates 盘中盯盘与异动归因（P1/P2）</h3>
+<h3 id="r9-rates-fx-p1p2">R9. Rates &amp; FX 盘中盯盘、异动归因与政策风险（P1/P2）</h3>
 <ul>
 <li><strong>谁</strong>：利率交易员、PM、销售交易、银行自营盘、市场风险和值班团队。</li>
 <li><strong>什么时候</strong>：亚洲、伦敦和纽约交易时段持续运行；在数据发布、央行操作、拍卖、新闻或价格/成交异常时重点触发。</li>
-<li><strong>要解决什么</strong>：连续观察现金国债、国债期货、OIS/IRS、swap spread、repo、breakeven 和相关 FX 的水平、曲线形态、价差、成交量与流动性变化；发现单一市场或跨市场异动后，回答“什么资产在什么时候先动、变化是否扩散、是否有真实成交或报价支持、与哪项已知事件同时发生、哪些解释仍缺证据”。</li>
+<li><strong>要解决什么</strong>：连续观察现金国债、国债期货、OIS/IRS、swap spread、repo、breakeven，以及 spot、forward/NDF、onshore/offshore basis、FX vol/skew 的水平、曲线形态、价差、成交量与流动性变化；同时监测 fixing 异常、口头/实际干预、资本管制和可兑换性风险。发现单一市场或跨市场异动后，回答“什么资产在什么时候先动、变化是否扩散、是否有真实成交或报价支持、与哪项已知事件同时发生、哪些解释仍缺证据”。</li>
 <li><strong>现在怎么解决</strong>：交易员在多个终端、broker screens、聊天和内部 blotter 之间切换，分别盯价格、成交和事件；跨产品代码、时区和报价 convention 不统一，曲线或 basis 的边际变化依赖个人记忆，盘后也难重建完整行情路径。</li>
-<li><strong>AI 应如何介入</strong>：把获准使用的实时行情、成交、broker/dealer 报价和事件流统一到同一市场时钟，监测 outright、curve、butterfly、swap spread、cash-futures basis 和 funding 指标的状态变化；对异常生成带原始价格路径、成交/报价佐证、关联事件、置信度和反证的分级告警，并保存盘中观点如何随新证据更新。</li>
-<li><strong>关键数据</strong>：现金国债和期货 tick/order book、OIS/IRS 和 swap spread、repo/拆借、breakeven、FX 与相关风险资产、broker/dealer quotes、成交量和持仓量、拍卖/央行/宏观事件、内部获准的 RFQ、成交和仓位数据。</li>
+<li><strong>AI 应如何介入</strong>：把获准使用的实时行情、成交、broker/dealer 报价和事件流统一到同一市场时钟，监测 Rates outright/curve/butterfly/swap spread/cash-futures basis、FX spot/forward/basis/vol surface 和 funding 指标的状态变化；结合央行/监管公告、fixing 和在岸离岸价格区分已确认政策行动、市场推测和季节性流量；对异常生成带原始价格路径、成交/报价佐证、关联事件、置信度和反证的分级告警，并保存盘中观点如何随新证据更新。</li>
+<li><strong>关键数据</strong>：现金国债和期货 tick/order book、OIS/IRS 和 swap spread、repo/拆借、breakeven、spot/forward/NDF、onshore/offshore basis、FX vol surface、broker/dealer quotes、成交量和持仓量、央行/监管公告和 fixing、内部获准的 RFQ、成交和仓位数据。</li>
 <li><strong>成功指标</strong>：关键市场和期限覆盖率、价格与 curve/basis 计算准确率、异动检出率和告警误报率、从行情变化到告警的延迟、事件匹配准确率、成交或报价验证覆盖率，以及盘后时间线的完整度。</li>
 </ul>
 <p><strong>重要边界</strong>：同步波动和领先滞后关系只能提供归因证据，不能自动证明因果；indicative quote、last trade 和可执行价格必须分开，单一场所或 dealer 的行为也不能代表整个市场。</p>
+<h3 id="r10-fx-hedgeroll-p1p2">R10. 债券组合 FX hedge、roll 与执行管理（P1/P2）</h3>
+<ul>
+<li><strong>谁</strong>：全球债券 PM、保险/养老金 ALM、基金 treasury、FX execution trader、风险、交易主管和合规。</li>
+<li><strong>什么时候</strong>：买入外币债、对冲到期滚动、基金申赎、FX 或 basis/forward points 大幅变化、大额 spot/forward/NDF/roll 下单前，以及交易后 best-execution 复盘时。</li>
+<li><strong>要解决什么</strong>：根据基准币种、逐笔债券现金流、净资产和风险预算决定 hedge ratio，比较 deliverable forward、NDF、FX swap 和 option 的 carry、basis、tail risk、流动性、会计与监管约束；同时选择执行时段、venue、dealer 和拆单方式，并解释交易后滑点来自 spread、市场冲击、延迟、last look 还是 benchmark 选择。</li>
+<li><strong>现在怎么解决</strong>：组合通常按月使用固定 hedge ratio 批量滚动，现金流和到期日在 Excel 汇总；PM 观点、treasury 计划、dealer 报价和执行复盘分散在不同系统，动态对冲决策与实际交易成本难以连成可审计链。</li>
+<li><strong>AI 应如何介入</strong>：读取逐笔债券现金流与基准币种，生成静态、动态和尾部保护方案，由确定性引擎计算 hedge cost、roll schedule、basis 和情景 P&amp;L；结合历史 RFQ/fill 建立条件化流动性图，给出需人工批准的执行方案，并在成交后生成可审计 TCA，解释计划、执行和最终对冲效果之间的偏差。</li>
+<li><strong>关键数据</strong>：持仓和现金流、spot/forward/NDF/swap、cross-currency basis、可成交 vol surface、基金申赎、会计/监管规则、内部限额、逐笔 quote/RFQ/order/fill、venue/dealer、market tick、拒单/last-look 和历史执行成本。</li>
+<li><strong>成功指标</strong>：未解释 FX P&amp;L、对冲成本、现金流错配、roll 失败和超限次数，implementation shortfall、fill ratio、TCA 解释覆盖率，以及对冲计划与实际风险下降的一致性。</li>
+</ul>
+<p><strong>重要边界</strong>：AI 只生成分析与待审批方案，不直接执行 hedge；单一 dealer 或 venue 的历史不能代表全市场流动性，客户持仓、交易意图和 dealer 数据必须严格权限隔离。</p>
 <hr />
-<h2 id="3-fx">3. FX 场景清单</h2>
-<h3 id="f1-fx-regime-p0p1">F1. 亚洲 FX 晨报、驱动因子与 regime 识别（P0/P1）</h3>
+<h2 id="3-fx">3. FX 场景整合边界</h2>
+<p>FX 不再作为独立产品工作台或单独编号的场景清单，而是按用户的实际决策流程并入 Rates &amp; FX 和 Credit：</p>
 <ul>
-<li><strong>谁</strong>：FX PM/交易员、宏观 PM、亚洲债券 PM、机构销售。</li>
-<li><strong>什么时候</strong>：亚洲开盘前、主要市场交接时，以及美元/人民币/日元出现大幅波动时。</li>
-<li><strong>要解决什么</strong>：回答各货币变化主要来自美元 beta、利差、风险偏好、商品、人民币联动、本地政策还是技术性流量，并识别驱动结构是否改变。</li>
-<li><strong>现在怎么解决</strong>：终端图表、卖方晨报、交易员聊天和手工回归；解释往往是“看图讲故事”，变量发布时间和价格窗口不一致。</li>
-<li><strong>AI 应如何介入</strong>：先给精确价格事实，再展示多因子归因及不确定性；区分短期 flow 与中期宏观 regime；把结论映射到相关本币债和美元债持仓。</li>
-<li><strong>关键数据</strong>：spot、forward/NDF、利差、美元指数、商品、权益、宏观 surprise、资金流和事件新闻。</li>
-<li><strong>成功指标</strong>：事实错误率、驱动稳定性、错误因果表述率、用户追问减少。</li>
-</ul>
-<h3 id="f2-fx-playbookp1">F2. 央行/宏观事件前后的 FX playbook（P1）</h3>
-<ul>
-<li><strong>谁</strong>：FX spot/forward 交易员、宏观 PM、options trader。</li>
-<li><strong>什么时候</strong>：央行会议、CPI、就业、选举、预算、评级事件或资本管制政策发布前后。</li>
-<li><strong>要解决什么</strong>：定义不同结果下 spot、forward points、curve、vol/skew 的可能反应，以及哪些价位/时间窗口会证伪原判断。</li>
-<li><strong>现在怎么解决</strong>：交易员手工翻历史图、问策略师、参考卖方 event preview；案例选择容易受记忆偏差影响。</li>
-<li><strong>AI 应如何介入</strong>：用 point-in-time 数据检索相似事件；输出条件情景而非确定预测；把预期差、仓位、流动性和政策反应分开；自动生成事件后复盘。</li>
-<li><strong>关键数据</strong>：事件日历、调查分布、历史 spot/forward/options 分钟数据、央行文本、positioning/flow proxy、内部交易日志。</li>
-<li><strong>成功指标</strong>：playbook 覆盖率、情景校准、事件后复盘完成率、事前/事后叙事漂移。</li>
-</ul>
-<h3 id="f3-p1">F3. 亚洲债券组合的动态汇率对冲（P1）</h3>
-<ul>
-<li><strong>谁</strong>：全球债券 PM、保险/养老金 ALM、基金 treasury、风险团队。</li>
-<li><strong>什么时候</strong>：买入外币债、对冲到期滚动、申赎、FX 波动或 basis/forward points 变化时。</li>
-<li><strong>要解决什么</strong>：确定按净资产、现金流、duration 或风险预算对冲多少；选择 deliverable forward、NDF、FX swap 或 option；平衡 carry、tail risk、流动性和会计要求。</li>
-<li><strong>现在怎么解决</strong>：按月用固定 hedge ratio 批量滚动，Excel 汇总各币种现金流；PM 观点、投资者基准和 treasury 执行常彼此脱节。</li>
-<li><strong>AI 应如何介入</strong>：读取逐笔债券现金流与基准币种；生成静态/动态/尾部三类方案；确定性计算 hedge cost、roll schedule、basis 和情景 P&amp;L；解释会计、准入和 liquidity 约束并交由人工审批。</li>
-<li><strong>关键数据</strong>：持仓和现金流、spot/forward/NDF/swap、basis、vol surface、基金申赎、会计/监管规则、内部限额和历史执行成本。</li>
-<li><strong>成功指标</strong>：未解释 FX P&amp;L、对冲成本、现金流错配、滚动失败和超限次数。</li>
-</ul>
-<h3 id="f4-carryp1">F4. Carry、估值、动量与拥挤度的机会筛选（P1）</h3>
-<ul>
-<li><strong>谁</strong>：宏观/FX PM、系统化策略团队、研究员。</li>
-<li><strong>什么时候</strong>：每日/每周组合构建、regime 切换或跨货币比较时。</li>
-<li><strong>要解决什么</strong>：在亚洲可交易货币中寻找经波动、尾部、交易成本和资本管制调整后的 carry/RV 机会，并避免把高 carry 误当免费收益。</li>
-<li><strong>现在怎么解决</strong>：Excel/Python 因子表、卖方 scorecard 和人工主观覆盖；数据修订、NDF convention 和不可交易时期常处理不一致。</li>
-<li><strong>AI 应如何介入</strong>：允许用户自然语言组合因子，但用版本化研究引擎回测；显示每个信号的经济逻辑、历史失效期、成本敏感性和当前数据质量；不根据一次回测自动建议实盘。</li>
-<li><strong>关键数据</strong>：spot/forward/NDF、利率曲线、CPI/REER、外部平衡、vol、positioning、交易成本、资本流动和可交易性标签。</li>
-<li><strong>成功指标</strong>：数据泄漏为零、成本后稳定性、信号解释覆盖率、研究到审批周期。</li>
-</ul>
-<h3 id="f5-fx-options-p1p2">F5. FX options 波动率、偏斜与尾部保护（P1/P2）</h3>
-<ul>
-<li><strong>谁</strong>：options trader、宏观 PM、风险经理、结构化产品团队。</li>
-<li><strong>什么时候</strong>：重大事件前、隐含波动率异常、组合需要尾部保护或卖出波动率时。</li>
-<li><strong>要解决什么</strong>：理解 ATM vol、risk reversal、butterfly、term structure 与 realized vol 的关系；比较不同 strike/tenor 的保护效率和 Greeks 风险。</li>
-<li><strong>现在怎么解决</strong>：交易台专用 vol surface、broker runs 和定价表；非期权团队很难把报价 convention 转为组合层面的直观损益。</li>
-<li><strong>AI 应如何介入</strong>：把自然语言风险转成经批准的期权结构候选；调用定价引擎生成 Greeks、情景和 breakeven；解释 smile、barrier 和流动性风险；报价缺失时不插值出伪流动性。</li>
-<li><strong>关键数据</strong>：可成交 vol surface、spot/forward、利率曲线、交易 convention、历史 realized vol、内部 RFQ 和交易成本。</li>
-<li><strong>成功指标</strong>：与前台定价误差、结构解释正确率、遗漏风险条款数、单位保护成本。</li>
-</ul>
-<h3 id="f6-p0p1">F6. 干预、资本管制与可兑换性风险监测（P0/P1）</h3>
-<ul>
-<li><strong>谁</strong>：EM FX PM、亚洲债券 PM、treasury、风险与合规。</li>
-<li><strong>什么时候</strong>：汇率接近政策敏感区、外储快速变化、NDF/在岸价差扩大、监管调整或流动性骤降时。</li>
-<li><strong>要解决什么</strong>：识别口头/实际干预概率、结算与资金汇出风险、在岸离岸分割及政策工具变化，并评估对债券回报和对冲可执行性的影响。</li>
-<li><strong>现在怎么解决</strong>：阅读央行声明、当地新闻和 dealer color，手工跟踪外储、fixing、onshore/offshore basis；不同国家规则散落在多份通知中。</li>
-<li><strong>AI 应如何介入</strong>：维护逐国 policy playbook 和规则变更时间线；区分已确认干预、推测干预和季节性官方流量；把政策变化映射到可交易产品、结算路径和持仓。</li>
-<li><strong>关键数据</strong>：央行/监管公告、fixing、外储、国际收支、spot/NDF/basis、成交量、custodian/银行操作通知。</li>
-<li><strong>成功指标</strong>：规则更新及时性、错误告警率、受影响持仓识别率、结算事件减少。</li>
-</ul>
-<h3 id="f7-fx-tcap2">F7. FX 执行前流动性选择与交易后 TCA（P2）</h3>
-<ul>
-<li><strong>谁</strong>：FX execution trader、treasury、交易主管、合规。</li>
-<li><strong>什么时候</strong>：大额 spot/forward/NDF/roll 下单前，以及日终/月度 best-execution 复盘时。</li>
-<li><strong>要解决什么</strong>：选择 venue、dealer、算法、时段和拆单方式；解释滑点来自市场冲击、延迟、spread、last look 还是错误 benchmark。</li>
-<li><strong>现在怎么解决</strong>：EMS/多银行平台提供基础 TCA，团队再用 Excel 对比报价；dealer 响应质量与币种/时段关系没有充分利用。</li>
-<li><strong>AI 应如何介入</strong>：基于历史 RFQ 和成交构建条件化 liquidity map；下单前预测可执行区间并建议人工批准的执行计划；成交后自动生成可审计 TCA 叙述，严格隔离敏感 dealer 数据。</li>
-<li><strong>关键数据</strong>：逐笔 quote/RFQ、order、fill、timestamp、venue/dealer、benchmark、市场 tick、拒单/last-look、内部交易规则。</li>
-<li><strong>成功指标</strong>：implementation shortfall、fill ratio、信息泄露代理、TCA 解释覆盖率、合规例外。</li>
-</ul>
-<h3 id="f8-fx-p0p1">F8. 企业外币错配与“FX 到信用”传导（P0/P1）</h3>
-<ul>
-<li><strong>谁</strong>：信用分析师、信用 PM、主权/银行研究员。</li>
-<li><strong>什么时候</strong>：本币大幅贬值、美元融资成本上升、企业发布债务或套保披露时。</li>
-<li><strong>要解决什么</strong>：识别收入、成本、债务、现金和 hedge 的币种错配；估算汇率变化如何影响 EBITDA、利息覆盖、契约空间和再融资能力。</li>
-<li><strong>现在怎么解决</strong>：从财报附注手工抄外币债务和敏感性，很多公司只给净敞口或定性披露；之后在 Excel 做粗略冲击。</li>
-<li><strong>AI 应如何介入</strong>：跨期抽取币种暴露和套保政策；区分交易、折算和经济敞口；生成透明的 FX-to-credit bridge 及缺失假设；与同业和主权情景联动。</li>
-<li><strong>关键数据</strong>：财报附注、债务明细、衍生品披露、分地区收入/成本、FX 曲线、商品价格、信用指标和持仓。</li>
-<li><strong>成功指标</strong>：披露抽取准确率、未说明假设数、情景复算一致性、信用预警提前量。</li>
+<li>亚洲开盘、央行会议和宏观数据事件中的 FX 分析归入 R1—R3，与 Rates 和其他大类资产使用同一时间线和证据标准。</li>
+<li>FX carry、roll-down、估值、动量、basis、implied/realized volatility、skew 和尾部保护归入 R4 的统一历史百分位与策略回测机。</li>
+<li>干预、资本管制、可兑换性、fixing 和在岸/离岸异常归入 R8 的事件日历与 R9 的盘中监控。</li>
+<li>债券组合的动态 FX 对冲、hedge roll、执行和 TCA 归入 R10。</li>
+<li>企业外币错配不作为独立 FX 场景，其研究、告警和组合压力能力分别归入 C1、C3 和 C6。</li>
 </ul>
 <hr />
 <h2 id="4">4. 数据可获取性：先统一判断标准</h2>
@@ -760,8 +686,7 @@
 <th>数据源</th>
 <th>主要内容</th>
 <th style="text-align: right;">Credit</th>
-<th style="text-align: right;">Rates</th>
-<th style="text-align: right;">FX</th>
+<th style="text-align: right;">Rates &amp; FX</th>
 <th>可获取性</th>
 <th>关键限制/判断</th>
 </tr>
@@ -772,14 +697,12 @@
 <td>实时与历史行情、债券主数据、曲线、evaluated price、新券、新闻、财务与分析工具</td>
 <td style="text-align: right;">高</td>
 <td style="text-align: right;">高</td>
-<td style="text-align: right;">高</td>
 <td>C</td>
 <td>亚洲机构覆盖广；终端席位不自动包含服务器 API、训练、缓存或再分发权</td>
 </tr>
 <tr>
 <td>LSEG Workspace / Real-Time / Tick History</td>
 <td>跨资产实时与历史、Refinitiv instrument master、新闻、交易与宏观</td>
-<td style="text-align: right;">高</td>
 <td style="text-align: right;">高</td>
 <td style="text-align: right;">高</td>
 <td>C</td>
@@ -790,7 +713,6 @@
 <td>债券主数据、evaluated pricing、固定收益指数与部分实时/历史数据</td>
 <td style="text-align: right;">高</td>
 <td style="text-align: right;">中</td>
-<td style="text-align: right;">低</td>
 <td>C</td>
 <td>适合估值和组合；evaluated price 不是可成交报价，派生/展示权需谈判</td>
 </tr>
@@ -799,7 +721,6 @@
 <td>公司财务、债券/指数、CDS、经济与行业数据，具体取决于模块</td>
 <td style="text-align: right;">高</td>
 <td style="text-align: right;">高</td>
-<td style="text-align: right;">中</td>
 <td>C</td>
 <td>产品线分散；不能假设一个合同覆盖全部内容</td>
 </tr>
@@ -807,7 +728,6 @@
 <td>Moody's CreditView / S&amp;P RatingsDirect / Fitch Connect</td>
 <td>评级、评级行动、方法论、信用研究</td>
 <td style="text-align: right;">高</td>
-<td style="text-align: right;">低</td>
 <td style="text-align: right;">低</td>
 <td>B/C</td>
 <td>评级行动标题常公开，完整报告和批量历史通常付费；训练及大段输出权高度敏感</td>
@@ -817,7 +737,6 @@
 <td>卖方信用研究、宏观数据 preview/review、预测、评级/推荐、公允利差与历史观点版本</td>
 <td style="text-align: right;">高</td>
 <td style="text-align: right;">高</td>
-<td style="text-align: right;">中</td>
 <td>C/D</td>
 <td>C1/R3 的跨机构观点比较需要合法取得历史版本；终端阅读权不等于批量摄取、跨用户展示或模型训练权</td>
 </tr>
@@ -826,7 +745,6 @@
 <td>中国宏观、在岸债券、发行人财务、公告及部分全球市场数据</td>
 <td style="text-align: right;">高</td>
 <td style="text-align: right;">高</td>
-<td style="text-align: right;">中</td>
 <td>C</td>
 <td>中国市场很有价值；亚洲跨国覆盖和实时 OTC 深度需验证；API 与 AI 使用权另谈</td>
 </tr>
@@ -834,7 +752,6 @@
 <td>CEIC / Macrobond / Haver</td>
 <td>亚洲及全球宏观历史、季调、共识/高频指标，依供应商而异</td>
 <td style="text-align: right;">中</td>
-<td style="text-align: right;">高</td>
 <td style="text-align: right;">高</td>
 <td>C</td>
 <td>显著减少各国数据工程；vintage、导出、服务器及再分发权限需确认</td>
@@ -844,7 +761,6 @@
 <td>债券发行、承销、league table、定价过程、pipeline 和市场报道</td>
 <td style="text-align: right;">高</td>
 <td style="text-align: right;">中</td>
-<td style="text-align: right;">低</td>
 <td>C</td>
 <td>对 C2/C12 很关键；已宣布发行可商业获取，实时 book color、未公开 pipeline 和完整订单仍属于承销团/内部数据</td>
 </tr>
@@ -852,7 +768,6 @@
 <td>MarketAxess</td>
 <td>机构信用债 RFQ、交易、流动性/估值类数据及执行工作流</td>
 <td style="text-align: right;">高</td>
-<td style="text-align: right;">低</td>
 <td style="text-align: right;">低</td>
 <td>C/D</td>
 <td>需机构客户和合同；覆盖取决于债券与地区，不能视为全市场 order book</td>
@@ -862,7 +777,6 @@
 <td>国债、利率衍生品、信用和部分 FX 的电子交易/市场数据</td>
 <td style="text-align: right;">中</td>
 <td style="text-align: right;">高</td>
-<td style="text-align: right;">中</td>
 <td>C/D</td>
 <td>最有价值的数据往往与交易接入绑定；历史和派生用途另行许可</td>
 </tr>
@@ -871,7 +785,6 @@
 <td>Dealer axes、indicative/firm quotes、runs、broker markets；可能经 Bloomberg IB/ALLQ、LSEG Messenger、合规邮箱、CSV/FIX/API 或交易平台送达</td>
 <td style="text-align: right;">高</td>
 <td style="text-align: right;">高</td>
-<td style="text-align: right;">中</td>
 <td>D/E</td>
 <td>数据通常属于客户可见的双边/定向信息而非公共行情；能阅读不等于允许机器抓取，必须取得渠道、dealer 与客户合规授权</td>
 </tr>
@@ -879,7 +792,6 @@
 <td>BondbloX / BondEvalue 等亚洲债券平台</td>
 <td>亚洲债券价格发现、分级交易或估值/分析，依产品而异</td>
 <td style="text-align: right;">高</td>
-<td style="text-align: right;">低</td>
 <td style="text-align: right;">低</td>
 <td>C/D</td>
 <td>有亚洲特色，但覆盖、可成交深度、API 和历史需逐券 POC 验证</td>
@@ -889,7 +801,6 @@
 <td>全球债券主数据、到期/票息/call 等公司行动、价格/指数和发行信息</td>
 <td style="text-align: right;">高</td>
 <td style="text-align: right;">中</td>
-<td style="text-align: right;">低</td>
 <td>C</td>
 <td>可补 C10/C12 的 instrument master 和现金事件；机构级实时准确性和地域覆盖需抽样测试</td>
 </tr>
@@ -898,14 +809,12 @@
 <td>FINRA 成员上报的 TRACE-eligible 债券成交</td>
 <td style="text-align: right;">高</td>
 <td style="text-align: right;">低</td>
-<td style="text-align: right;">低</td>
 <td>A/B/C</td>
 <td>对部分亚洲美元债有价值，但不覆盖全部 Reg S/离岸 OTC 活动；免费、延迟、历史和订阅产品粒度不同</td>
 </tr>
 <tr>
 <td>DTCC Swap Data Repository 公共披露</td>
 <td>美国报告制度下部分利率/信用/FX 衍生品交易</td>
-<td style="text-align: right;">中</td>
 <td style="text-align: right;">中</td>
 <td style="text-align: right;">中</td>
 <td>A/B</td>
@@ -916,14 +825,12 @@
 <td>上市利率、FX 期货/期权、成交与持仓</td>
 <td style="text-align: right;">低</td>
 <td style="text-align: right;">高</td>
-<td style="text-align: right;">高</td>
 <td>A/B/C</td>
 <td>EOD 常较易得，实时 tick/order book 通常收费；对 OTC 市场只是代理</td>
 </tr>
 <tr>
 <td>EBS / 360T / Currenex / FXall 等 FX 场所</td>
 <td>spot、forward、swap/NDF 报价、成交和执行</td>
-<td style="text-align: right;">低</td>
 <td style="text-align: right;">低</td>
 <td style="text-align: right;">高</td>
 <td>C/D</td>
@@ -933,7 +840,6 @@
 <td>CLS</td>
 <td>FX 结算量、部分聚合市场数据和机构级数据产品</td>
 <td style="text-align: right;">低</td>
-<td style="text-align: right;">低</td>
 <td style="text-align: right;">中</td>
 <td>A/C</td>
 <td>公开多为聚合统计；详细流量非开放且覆盖受 CLS eligible currencies/participants 限制</td>
@@ -942,16 +848,14 @@
 <td>EPFR / Lipper / IIF 等资金流数据</td>
 <td>mutual fund/ETF flow、跨境资本流和持仓代理，具体取决于产品</td>
 <td style="text-align: right;">高</td>
-<td style="text-align: right;">中</td>
 <td style="text-align: right;">高</td>
 <td>C</td>
-<td>C12 的重要底座；频率、基金覆盖、look-through、公布时滞、样本偏差和再分发权需逐项审查</td>
+<td>C12/R8 的重要底座；频率、基金覆盖、look-through、公布时滞、样本偏差和再分发权需逐项审查</td>
 </tr>
 <tr>
 <td>ETF sponsor/交易所公开文件</td>
 <td>shares outstanding、NAV/AUM、部分 daily holdings 与 creation/redemption 文件</td>
 <td style="text-align: right;">中</td>
-<td style="text-align: right;">低</td>
 <td style="text-align: right;">中</td>
 <td>A/B/C</td>
 <td>大型 ETF 可低成本覆盖，但不同 sponsor 历史深度与许可不同；不能替代 mutual fund 实时申赎</td>
@@ -961,7 +865,6 @@
 <td>组合、基金、持仓、公司与市场数据，依模块而异</td>
 <td style="text-align: right;">高</td>
 <td style="text-align: right;">中</td>
-<td style="text-align: right;">中</td>
 <td>C</td>
 <td>适合 C11/C12 的持仓、同业和资金流补充，不是亚洲 OTC 实时定价或客户 flow 的替代品</td>
 </tr>
@@ -969,7 +872,6 @@
 <td>PitchBook / Preqin / 9fin / KBRA DLD 等私募市场数据</td>
 <td>Private credit、leveraged finance、借款人、sponsor、交易条款和可比案例，依产品而异</td>
 <td style="text-align: right;">高</td>
-<td style="text-align: right;">低</td>
 <td style="text-align: right;">低</td>
 <td>C</td>
 <td>可为 C7 提供市场背景和可比交易，但无法替代客户 data room、贷款文件、工程尽调和持续 borrower reporting</td>
@@ -979,14 +881,12 @@
 <td>可信实时新闻和机器可读新闻产品</td>
 <td style="text-align: right;">高</td>
 <td style="text-align: right;">高</td>
-<td style="text-align: right;">高</td>
 <td>C</td>
 <td>终端阅读权与机器摄取权不同；摘要、保存、训练和对客展示需单独许可</td>
 </tr>
 <tr>
 <td>GDELT / 经许可的开放新闻源</td>
 <td>全球多语言新闻和事件元数据</td>
-<td style="text-align: right;">中</td>
 <td style="text-align: right;">中</td>
 <td style="text-align: right;">中</td>
 <td>A/B</td>
@@ -1019,28 +919,28 @@
 <td>BIS Data Portal</td>
 <td>政策利率、有效汇率、信贷、跨境银行、债务证券、衍生品统计</td>
 <td>A</td>
-<td>C3、C6、R2、F4、F6</td>
+<td>C3、C6、R2、R4、R8/R9</td>
 <td>频率偏低、修订和口径需要 point-in-time 管理</td>
 </tr>
 <tr>
 <td>IMF Data / IFS / WEO / COFER</td>
 <td>宏观、国际收支、外储、预测与全球比较</td>
 <td>A/B</td>
-<td>C3、C6、R2、F4、F6</td>
+<td>C3、C6、R2、R4、R8/R9</td>
 <td>部分详细数据/API 或下载方式会变化；COFER 多为聚合</td>
 </tr>
 <tr>
 <td>World Bank Data / International Debt Statistics</td>
 <td>宏观、外债、发展与主权指标</td>
 <td>A</td>
-<td>C3、C6、F8</td>
+<td>C1、C3、C6</td>
 <td>频率低，不适合实时交易</td>
 </tr>
 <tr>
 <td>OECD Data</td>
 <td>成员经济体宏观与领先指标</td>
 <td>A/B</td>
-<td>R2、F4</td>
+<td>R2、R4</td>
 <td>亚洲新兴市场覆盖不完整</td>
 </tr>
 <tr>
@@ -1061,7 +961,7 @@
 <td>UN / OFAC / EU / UK HMT 等制裁清单</td>
 <td>制裁主体、船舶、项目与规则</td>
 <td>A/B</td>
-<td>C3、F6</td>
+<td>C3、R8/R9</td>
 <td>名称匹配误报高；需本地监管和商业 KYC 数据补充</td>
 </tr>
 </tbody>
@@ -1239,7 +1139,7 @@
 </tr>
 <tr>
 <td>Treasury、融资、公开市场操作计划、抵押品和保证金</td>
-<td>R8/R9、F3、组合流动性</td>
+<td>R8/R9/R10、组合流动性与 FX hedge roll</td>
 <td>D</td>
 <td>高敏感、实时性、职责分离与操作审批；内部资金计划不得与公开日历混为已披露事实</td>
 </tr>
@@ -1259,7 +1159,7 @@
 </table></div>
 <p>关键判断：商业数据让产品“能工作”，客户内部数据让产品“比通用模型更有价值”。内部数据不应混入共享基础模型；更适合在客户租户内做权限感知的 RAG、特征计算和轻量适配。</p>
 <hr />
-<h2 id="8">8. 三类场景所需的最小数据包</h2>
+<h2 id="8">8. 两类产品所需的最小数据包</h2>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -1277,16 +1177,10 @@
 <td>没有合法研究权限时不能承诺跨机构观点比较；没有 data room 不能承诺 Private Credit 尽调；没有报价历史与成交验证时不能承诺实时可成交价、准确 hit/lift 或全市场流动性</td>
 </tr>
 <tr>
-<td>Rates</td>
-<td>央行/统计局、官方曲线与拍卖、EOD 国债/FX/大类资产、经济与资金事件日历</td>
-<td>分钟/tick 级国债、OIS/IRS、期货和跨资产行情，逐家调查与获准研究，repo、broker/dealer quote、成交和内部资金数据</td>
-<td>没有高频行情不能承诺精确隔夜时间线和盘中盯盘；没有 point-in-time 研究与市场 convention 不能承诺跨机构比较和可靠 RV 回测；没有内部资金数据不能承诺完整净流动性判断</td>
-</tr>
-<tr>
-<td>FX</td>
-<td>官方 fixing/外储/国际收支、EOD spot/forward、公开政策文档</td>
-<td>可成交 spot/forward/NDF、basis、vol surface、venue/RFQ、持仓现金流</td>
-<td>最佳执行、精确 options 结构、真实 hedge cost、dealer/venue 排序</td>
+<td>Rates &amp; FX</td>
+<td>央行/统计局、官方曲线与拍卖、EOD 国债/大类资产/spot/forward/NDF、公开 fixing/外储/国际收支、经济与资金事件日历</td>
+<td>分钟/tick 级国债、OIS/IRS、期货和跨资产行情，逐家调查与获准研究，repo、可成交 spot/forward/NDF、cross-currency basis、vol surface、broker/dealer/venue quote、RFQ/fill、持仓现金流、内部资金与 hedge roll 数据</td>
+<td>没有高频行情不能承诺精确隔夜时间线和盘中盯盘；没有 point-in-time 数据、完整 convention 和可成交成本不能承诺可靠的 Rates/FX RV 回测；没有持仓现金流和执行数据不能承诺真实 hedge cost、动态对冲、best execution 或 dealer/venue 排序</td>
 </tr>
 </tbody>
 </table></div>
@@ -1345,7 +1239,7 @@
 </tr>
 </tbody>
 </table></div>
-<h3 id="82-rates">8.2 Rates 重点场景的数据可得性</h3>
+<h3 id="82-rates-fx">8.2 Rates &amp; FX 重点场景的数据可得性</h3>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -1357,9 +1251,9 @@
 </thead>
 <tbody>
 <tr>
-<td>R1 Overnight Timeline Brief</td>
+<td>R1 Overnight Rates &amp; FX Timeline Brief</td>
 <td>分钟级 UST futures、主要 FX/equity/commodity、官方经济日历和可信新闻</td>
-<td>完整 UST/OIS/IRS、信用指数、机器可读新闻、跨市场 tick 和统一时钟</td>
+<td>完整 UST/OIS/IRS、spot/forward/NDF、信用指数、机器可读新闻、跨市场 tick 和统一时钟</td>
 <td>A/B/C 可做主要资产时间线；高覆盖、低延迟和可靠事件归因需要 C，部分亚洲 OTC 市场仍只能用代理</td>
 </tr>
 <tr>
@@ -1369,22 +1263,28 @@
 <td>官方数据可做发布中拆解；发布前后的跨机构比较依赖 C/D 级研究权限</td>
 </tr>
 <tr>
-<td>R4 Rates RV Backtester</td>
-<td>EOD point-in-time 曲线、合约规则和基础交易成本假设</td>
-<td>可执行现券/OIS/IRS/期货、CTD、repo、bid/ask、完整 convention 和 BQuant/交易台基准</td>
-<td>B/C 可做研究演示；可交易、成本可信且无 look-ahead 的生产回测需要 C/D</td>
+<td>R4 Rates Curve &amp; FX Carry/Roll/Volatility Backtester</td>
+<td>EOD point-in-time 曲线、spot/forward/NDF、基础 vol/realized vol、合约规则和交易成本假设</td>
+<td>可执行现券/OIS/IRS/期货、CTD、repo、bid/ask，以及 FX basis、完整 vol surface、delta/holiday/NDF convention、融资和 hedging 成本、BQuant/交易台/期权基准</td>
+<td>B/C 可展示历史百分位与研究回测；可交易、成本可信且无 look-ahead 的生产回测需要 C/D，并必须经过参数、regime 和 walk-forward/样本外验证</td>
 </tr>
 <tr>
-<td>R8 Funding &amp; Event Calendar</td>
-<td>官方数据日历、央行操作、政府债发行/到期/结算、税期和假日</td>
-<td>repo/拆借、财政与准备金细节、内部获准资金计划和历史实际资金行为</td>
-<td>A/B 可建立公开日历；完整净流动性判断依赖 C/D，且内部计划必须权限隔离</td>
+<td>R8 Rates &amp; FX Funding/Event Calendar</td>
+<td>官方数据日历、央行操作、政府债发行/到期/结算、税期、fixing、option expiry、forward/NDF roll 和假日</td>
+<td>repo/拆借、财政与准备金细节、内部获准资金与 hedge roll 计划和历史实际资金行为</td>
+<td>A/B 可建立公开日历；完整净流动性和 FX roll 判断依赖 C/D，且内部计划必须权限隔离</td>
 </tr>
 <tr>
-<td>R9 Rates Market Monitor</td>
-<td>交易所期货和部分现券/曲线实时数据、公开事件流</td>
-<td>OTC OIS/IRS、broker/dealer quote、repo、RFQ/fill、内部仓位和多场所 tick</td>
-<td>交易所市场可用 A/B/C 建立骨架；亚洲 OTC 全市场盯盘需要 C/D，单一数据源不能代表整体市场</td>
+<td>R9 Rates &amp; FX Market Monitor</td>
+<td>交易所期货、主要 spot/forward/NDF 和部分现券/曲线实时数据、公开事件流</td>
+<td>OTC OIS/IRS、repo、FX basis/vol surface、broker/dealer/venue quote、RFQ/fill、内部仓位和多场所 tick</td>
+<td>交易所和主要 FX 市场可用 A/B/C 建立骨架；亚洲 OTC 全市场盯盘需要 C/D，单一数据源不能代表整体市场</td>
+</tr>
+<tr>
+<td>R10 FX Hedge, Roll &amp; Execution</td>
+<td>模拟组合现金流、EOD spot/forward/NDF/basis 和基础成本假设</td>
+<td>实际持仓与申赎、可成交 forward/NDF/swap/option、内部限额、逐笔 quote/RFQ/order/fill、venue/dealer 和 TCA benchmark</td>
+<td>POC 可比较静态 hedge cost；动态对冲、真实 roll 成本、best execution 和 TCA 均依赖 D，且必须保留人工审批</td>
 </tr>
 </tbody>
 </table></div>
@@ -1395,7 +1295,7 @@
 <li>所有行情、宏观、财务、评级和文档都要同时保存 <code>event_time</code>、<code>publish_time</code>、<code>ingest_time</code> 和 <code>effective_time</code>。</li>
 <li>宏观必须保留 vintage；财务和评级必须保留修订/撤回；不能用今天修订后的数据解释当时决策。</li>
 <li>价格必须标明来源、bid/ask/mid/last/evaluated、时区、市场状态和 stale flag。</li>
-<li>R1/R3/R8/R9 必须统一保存当地市场时间和 UTC，并区分 scheduled time、actual release time、headline arrival、research publish time 与 price reaction window；R4 回测只能读取当时已经可得的曲线、合约和成本数据。</li>
+<li>R1/R3/R8/R9 必须统一保存当地市场时间和 UTC，并区分 scheduled time、actual release time、headline arrival、research publish time 与 price reaction window；R4 回测只能读取当时已经可得的 Rates 曲线、spot/forward/NDF、vol surface、合约 convention 和成本数据。</li>
 </ul>
 <h3 id="92">9.2 固收主数据</h3>
 <ul>
@@ -1450,12 +1350,11 @@
 <h2 id="10-mvp">10. 推荐 MVP 排序</h2>
 <h3 id="p0">第一阶段：用公开/文档数据证明“读得准、找得快”（P0）</h3>
 <ol>
-<li><strong>C1 信用研究整合、横截面对标与观点演化</strong>：最能体现多语言长文档、跨机构比较和历史观点追踪能力。</li>
+<li><strong>C1 信用研究整合、横截面对标与观点演化</strong>：最能体现多语言长文档、跨机构比较和历史观点追踪能力，并把分币种债务、收入、成本、现金与对冲披露纳入主体和 peer 分析。</li>
 <li><strong>C4 covenant/资本结构解析</strong>：输出结构化、可量化、容易做金标准评测。</li>
 <li><strong>R1 亚洲开盘晨报</strong>：用隔夜大类资产时间线展示“何时、什么资产、因何、如何变化”，避免只报收盘涨跌。</li>
 <li><strong>R2 央行反应函数与 statement diff</strong>：亚洲多央行、多语言是天然垂类壁垒。</li>
-<li><strong>R8 Rates 资金与事件日历</strong>：先用官方数据建立每日 key release、央行操作、发行结算与资金事件底座。</li>
-<li><strong>F8 企业外币错配</strong>：把 credit 与 FX 真正连起来，区别于通用金融问答。</li>
+<li><strong>R8 Rates &amp; FX 资金、政策与事件日历</strong>：先用官方数据建立每日 key release、央行操作、发行结算、fixing 与 hedge roll 事件底座。</li>
 </ol>
 <h3 id="p1">第二阶段：接入客户持仓与机构行情，证明“能进入决策流程”（P1）</h3>
 <ol>
@@ -1465,9 +1364,9 @@
 <li><strong>C10 Realized Duration</strong>：用 30/60/90 日 rates beta、置信区间和 portfolio hedge error 补充 analytical duration。</li>
 <li><strong>C12 资金日历一期</strong>：接入公开 maturity/coupon/call、ETF flow 和已宣布 primary settlement，形成未来 1/5/20 日净技术面。</li>
 <li><strong>R3 宏观数据发布全流程拆解</strong>：接入逐家预测、发布前后研究与分钟级真实行情。</li>
-<li><strong>R4 曲线 RV 与策略回测机</strong>：用 BQuant demo 展示，并补齐 point-in-time、成本、参数稳健性和样本外验证。</li>
+<li><strong>R4 Rates 曲线与 FX carry/roll/volatility 回测机</strong>：用 BQuant demo 展示统一历史百分位与策略回测，并补齐 point-in-time、完整交易/融资/hedging 成本、参数稳健性、regime 和 walk-forward/样本外验证。</li>
 <li>C6 组合多因子风险、动态相关性与压力测试。</li>
-<li>F3 动态 FX hedge。</li>
+<li><strong>R10 债券组合 FX hedge 与 roll 一期</strong>：接入持仓现金流和可成交 forward/NDF/basis，在人工审批下比较静态、动态和尾部保护方案。</li>
 </ol>
 <h3 id="p2">第三阶段：接入交易和专有数据，建立高壁垒（P2）</h3>
 <ol>
@@ -1475,9 +1374,9 @@
 <li><strong>C9 OTC quote/axe 盯盘二期</strong>：接入实时 RFQ/fill，校准 dealer-specific 的 hit/lift 推断和可成交价格区间。</li>
 <li><strong>C11 Client Flow Monitor</strong>：在合规 cohort 层面连接 cash trade 与 hedge legs，估计 flow beta、hedge lag 和 inventory duration transfer。</li>
 <li><strong>C12 资金日历二期</strong>：加入商业 mutual-fund flow、历史 reinvestment 模型和内部获准 primary pipeline。</li>
-<li><strong>R9 Rates 盘中盯盘</strong>：接入实时 OTC 报价、成交、RFQ 和 repo，形成跨产品异动与证据化归因。</li>
-<li>F5 FX options surface 与结构比较。</li>
-<li>F7 执行前流动性和交易后 TCA。</li>
+<li><strong>R9 Rates &amp; FX 盘中盯盘</strong>：接入实时 OTC Rates、spot/forward/NDF、FX vol、repo、报价、成交和 RFQ，形成跨产品异动与证据化归因。</li>
+<li><strong>R4 FX volatility 扩展</strong>：接入可成交 vol surface，比较 ATM、risk reversal、butterfly、期限结构和 implied-versus-realized volatility，并回测尾部保护结构。</li>
+<li><strong>R10 FX 执行与 TCA 二期</strong>：接入 venue/dealer quote、order/fill 与 benchmark，形成执行前流动性选择和交易后 TCA。</li>
 <li>C7 Private Credit 与 Asset-Backed Financing 分析。</li>
 </ol>
 <h3 id="_3">不建议一开始承诺</h3>
@@ -1512,12 +1411,12 @@
 <tr>
 <td>时效性</td>
 <td>来源发布到结构化、告警或首稿的延迟</td>
-<td>C2/C3/C9/R1/R2/R3/R8/R9/F1/F2</td>
+<td>C2/C3/C9/R1/R2/R3/R8/R9</td>
 </tr>
 <tr>
 <td>计算正确性</td>
 <td>与前台/风险/独立 benchmark 的差异，VaR/Expected Shortfall 回溯表现</td>
-<td>C5/C6/R4/R9/F3/F5</td>
+<td>C5/C6/R4/R9/R10</td>
 </tr>
 <tr>
 <td>决策价值</td>
@@ -1527,7 +1426,7 @@
 <tr>
 <td>交易质量</td>
 <td>滑点、fill ratio、成本后收益、对冲误差</td>
-<td>C2/C5/R4/F3/F7</td>
+<td>C2/C5/R4/R10</td>
 </tr>
 <tr>
 <td>微观结构信号</td>
@@ -1550,14 +1449,19 @@
 <td>C12</td>
 </tr>
 <tr>
-<td>Rates 时间线与事件</td>
+<td>Rates &amp; FX 时间线与事件</td>
 <td>拐点覆盖率、时间对齐误差、细分项 surprise 准确率、无证据归因率、日历遗漏率</td>
 <td>R1/R3/R8/R9</td>
 </tr>
 <tr>
-<td>Rates RV 回测</td>
-<td>point-in-time 正确率、成本后和样本外表现、参数/regime 稳定性、实盘偏差</td>
+<td>Rates &amp; FX RV 回测</td>
+<td>point-in-time 正确率、carry/roll/vol 计算与 convention 准确率、成本后和样本外表现、参数/regime 稳定性、实盘偏差</td>
 <td>R4</td>
+</tr>
+<tr>
+<td>FX hedge 与执行</td>
+<td>对冲成本、未解释 FX P&amp;L、现金流错配、roll 失败率、implementation shortfall、TCA 覆盖率</td>
+<td>R10</td>
 </tr>
 <tr>
 <td>安全合规</td>
