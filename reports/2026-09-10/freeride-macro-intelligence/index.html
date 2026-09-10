@@ -93,8 +93,8 @@
 
     <main id="mainContent" class="main-content">
       <div class="demo-banner" role="note">
-        <i data-lucide="flask-conical"></i>
-        <span><strong>Interactive prototype.</strong> All event, research, news, impact and portfolio results are synthetic.</span>
+        <i data-lucide="database-zap"></i>
+        <span><strong>Mixed-source prototype.</strong> UST yields are observed FRED data; GS/JPM views are licensed research-derived. Event studies and portfolio scenarios remain illustrative.</span>
       </div>
 
       <section id="calendarView" class="view-section" aria-labelledby="calendarTitle">
@@ -188,18 +188,18 @@
               </div>
               <div class="research-delta-list">
                 <button type="button" data-event-open="us-cpi-aug">
-                  <span class="time">08:12</span>
-                  <span><strong>Northstar</strong> raised headline CPI to 3.1%</span>
+                  <span class="time">08 Sep</span>
+                  <span><strong>GS</strong> published August CPI preview</span>
                   <i data-lucide="arrow-up-right"></i>
                 </button>
-                <button type="button" data-event-open="us-fomc-sep">
-                  <span class="time">07:40</span>
-                  <span><strong>Harbor</strong> kept its hold call; risks skew hawkish</span>
+                <button type="button" data-event-open="us-payrolls-aug">
+                  <span class="time">04 Sep</span>
+                  <span><strong>GS</strong> reviewed the August payroll upside</span>
                   <i data-lucide="arrow-right"></i>
                 </button>
-                <button type="button" data-event-open="cn-cpi-aug">
-                  <span class="time">Yesterday</span>
-                  <span><strong>Eastbridge</strong> trimmed China CPI forecast</span>
+                <button type="button" data-event-open="us-fomc-sep">
+                  <span class="time">03 Sep</span>
+                  <span><strong>GS</strong> linked Waller's stance to incoming data</span>
                   <i data-lucide="arrow-down-right"></i>
                 </button>
               </div>
@@ -310,7 +310,7 @@
                   </div>
                   <div>
                     <span class="point-index">02</span>
-                    <div><strong>House dispersion was meaningful</strong><p>Northstar captured both the level and driver; Harbor's goods-disinflation call held, but its shelter weight was too low.</p></div>
+                    <div><strong>House dispersion was meaningful</strong><p>Eligible point-in-time forecasts reveal where the consensus distribution was fragile.</p></div>
                   </div>
                   <div>
                     <span class="point-index">03</span>
@@ -333,7 +333,7 @@
 
             <aside class="secondary-column">
               <section class="analysis-section compact-section">
-                <span class="section-kicker">INITIAL REACTION ? T+30M</span>
+                <span class="section-kicker">ILLUSTRATIVE SHOCK ? T+30M</span>
                 <h2>Cross-asset pulse</h2>
                 <div class="asset-pulse-list">
                   <div><span>USD index</span><strong class="positive">+0.25%</strong><small>74th pct</small></div>
@@ -351,11 +351,46 @@
                   <li><i data-lucide="landmark"></i><span><strong>Official release</strong>BLS ? first vintage</span><em>Verified</em></li>
                   <li><i data-lucide="users"></i><span><strong>Consensus</strong>Licensed PIT snapshot</span><em>08:20 ET</em></li>
                   <li><i data-lucide="files"></i><span><strong>Research</strong>3 entitled documents</span><em>Original</em></li>
-                  <li><i data-lucide="line-chart"></i><span><strong>Market data</strong>1-minute event window</span><em>Complete</em></li>
+                  <li><i data-lucide="line-chart"></i><span><strong>Rates market data</strong>FRED daily curve</span><em>Observed</em></li>
                 </ul>
               </section>
             </aside>
           </div>
+
+          <section class="analysis-section rates-section">
+            <div class="rates-heading">
+              <div>
+                <span class="section-kicker">RATES & CATALYSTS</span>
+                <h2>US Treasury yield timeline</h2>
+                <p>Daily constant-maturity yields with every supplied GS/JPM report, major US data release and Fed communication marked on the same clock.</p>
+              </div>
+              <div class="rates-controls">
+                <div class="curve-toggles" aria-label="Treasury tenors">
+                  <label><input type="checkbox" data-tenor="DGS2" checked><i class="curve-swatch two"></i>2Y</label>
+                  <label><input type="checkbox" data-tenor="DGS10" checked><i class="curve-swatch ten"></i>10Y</label>
+                  <label><input type="checkbox" data-tenor="DGS30" checked><i class="curve-swatch thirty"></i>30Y</label>
+                </div>
+                <label class="filter-select catalyst-filter"><i data-lucide="list-filter"></i><select id="catalystFilter"><option value="ALL">All catalysts</option><option value="RESEARCH">GS/JPM research</option><option value="DATA">CPI & NFP</option><option value="FED">Fed events</option></select></label>
+              </div>
+            </div>
+            <div class="rates-stat-strip">
+              <div><span>Latest 2Y</span><strong id="latest2Y">4.39%</strong><small id="change2Y">+22 bp since 01 Jul</small></div>
+              <div><span>Latest 10Y</span><strong id="latest10Y">4.80%</strong><small id="change10Y">+32 bp since 01 Jul</small></div>
+              <div><span>Latest 30Y</span><strong id="latest30Y">5.25%</strong><small id="change30Y">+28 bp since 01 Jul</small></div>
+              <div><span>2s10s</span><strong id="latestCurve">+41 bp</strong><small>curve slope</small></div>
+            </div>
+            <div class="rates-chart-shell">
+              <svg id="ratesChart" class="rates-chart" viewBox="0 0 1120 390" role="img" aria-label="US Treasury 2-year, 10-year and 30-year yields with research, data and Federal Reserve event markers"></svg>
+              <div id="ratesTooltip" class="rates-tooltip" hidden></div>
+            </div>
+            <div class="catalyst-legend">
+              <span><i class="event-key research"></i>Research publication</span>
+              <span><i class="event-key data"></i>Data release</span>
+              <span><i class="event-key fed"></i>Fed meeting / communication</span>
+              <span class="chart-source">Source: FRED DGS2, DGS10, DGS30 ? through 08 Sep 2026</span>
+            </div>
+            <div id="catalystRail" class="catalyst-rail"></div>
+          </section>
         </div>
 
         <div id="institutionsTab" class="tab-panel" data-panel="institutions">
@@ -365,18 +400,14 @@
                 <span class="section-kicker">HORIZONTAL COMPARISON</span>
                 <h2>How the street framed the same release</h2>
               </div>
-              <span class="cutoff-label"><i data-lucide="clock-3"></i> Cutoff 08:25 ET</span>
+              <span id="researchCutoff" class="cutoff-label"><i data-lucide="clock-3"></i> Point-in-time document set</span>
             </div>
             <div class="table-scroll">
               <table class="comparison-table">
                 <thead>
                   <tr><th>Source</th><th>Forecast</th><th>Vs street</th><th>Core thesis</th><th>Key risk before release</th><th>Actual ? forecast</th></tr>
                 </thead>
-                <tbody>
-                  <tr class="consensus-row"><td><strong>Street consensus</strong><small>64 contributors</small></td><td>3.0%</td><td>?</td><td>Moderating goods, sticky shelter</td><td>Energy pass-through</td><td><span class="result-chip miss">+0.1</span></td></tr>
-                  <tr><td><strong>Northstar Macro</strong><small>Preview ? 01 Sep</small></td><td>3.1%</td><td class="positive">+0.1</td><td>Shelter and services remain firm</td><td>Airfares reverse lower</td><td><span class="result-chip hit">0.0</span></td></tr>
-                  <tr><td><strong>Harbor Economics</strong><small>Preview ? 02 Sep</small></td><td>2.9%</td><td class="negative">-0.1</td><td>Goods disinflation offsets shelter</td><td>Shelter re-acceleration</td><td><span class="result-chip miss">+0.2</span></td></tr>
-                </tbody>
+                <tbody id="researchComparisonBody"></tbody>
               </table>
             </div>
           </section>
@@ -384,37 +415,16 @@
           <div class="institution-grid">
             <section class="analysis-section">
               <div class="section-heading-row">
-                <div><span class="section-kicker">VERTICAL COMPARISON</span><h2>Forecast path by institution</h2></div>
-                <div class="chart-legend"><span><i class="legend-line northstar"></i>Northstar</span><span><i class="legend-line harbor"></i>Harbor</span><span><i class="legend-line actual"></i>Actual</span></div>
+                <div><span class="section-kicker">VERTICAL COMPARISON</span><h2 id="researchPathTitle">Forecast-to-outturn gap</h2></div>
+                <div class="chart-legend"><span><i class="legend-line northstar"></i>Goldman Sachs</span><span><i class="legend-line harbor"></i>J.P. Morgan</span><span><i class="legend-line actual"></i>Actual</span></div>
               </div>
-              <div class="forecast-chart" role="img" aria-label="????????????">
-                <div class="chart-axis"><span>3.2</span><span>3.0</span><span>2.8</span><span>2.6</span></div>
-                <svg viewBox="0 0 600 220" preserveAspectRatio="none" aria-hidden="true">
-                  <g class="grid-lines"><line x1="0" y1="20" x2="600" y2="20"/><line x1="0" y1="80" x2="600" y2="80"/><line x1="0" y1="140" x2="600" y2="140"/><line x1="0" y1="200" x2="600" y2="200"/></g>
-                  <polyline class="line actual" points="70,140 290,140 530,80"/>
-                  <polyline class="line northstar" points="70,170 290,140 530,80"/>
-                  <polyline class="line harbor" points="70,140 290,170 530,140"/>
-                  <g class="dots actual"><circle cx="70" cy="140" r="5"/><circle cx="290" cy="140" r="5"/><circle cx="530" cy="80" r="5"/></g>
-                  <g class="dots northstar"><circle cx="70" cy="170" r="5"/><circle cx="290" cy="140" r="5"/><circle cx="530" cy="80" r="5"/></g>
-                  <g class="dots harbor"><circle cx="70" cy="140" r="5"/><circle cx="290" cy="170" r="5"/><circle cx="530" cy="140" r="5"/></g>
-                </svg>
-                <div class="chart-x-labels"><span>June</span><span>July</span><span>August</span></div>
-              </div>
-              <div class="chart-callout"><i data-lucide="scan-line"></i><span><strong>Detected pattern</strong> Harbor has under-estimated the last two releases; the recurring gap is concentrated in shelter assumptions.</span></div>
+              <div id="researchForecastChart" class="research-forecast-chart" role="img" aria-label="Institution forecasts compared with release outcome"></div>
+              <div class="chart-callout"><i data-lucide="scan-line"></i><span><strong>FreeRide read-through</strong> <span id="researchPattern"></span></span></div>
             </section>
 
             <section class="analysis-section document-section">
               <div class="section-heading-row"><div><span class="section-kicker">VIEW CHANGES</span><h2>Preview ? flash</h2></div></div>
-              <article>
-                <header><span class="institution-mark northstar">N</span><div><strong>Northstar Macro</strong><small>Flash note ? 08:42 ET</small></div><span class="stance-tag confirmed">Thesis confirmed</span></header>
-                <p>Retained the sticky-services framework and moved the next policy easing window one meeting later.</p>
-                <footer><i data-lucide="file-text"></i> DOC-NM-20260903-0842 ? cited paragraphs 3, 6</footer>
-              </article>
-              <article>
-                <header><span class="institution-mark harbor">H</span><div><strong>Harbor Economics</strong><small>Flash note ? 08:47 ET</small></div><span class="stance-tag revised">Driver revised</span></header>
-                <p>Acknowledged stronger shelter but argued against reading the print as broad re-acceleration.</p>
-                <footer><i data-lucide="file-text"></i> DOC-HE-20260903-0847 ? cited paragraphs 2, 5</footer>
-              </article>
+              <div id="researchDocuments"></div>
             </section>
           </div>
         </div>
@@ -545,6 +555,7 @@
     </form>
   </dialog>
 
+  <script src="data.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
