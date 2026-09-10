@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#13231f">
+  <title>FREERIDE Macro Intelligence</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+  <header class="app-header">
+    <button class="brand" type="button" data-action="home" aria-label="??????">
+      <span class="brand-mark">FR</span>
+      <span class="brand-copy">
+        <strong>FREERIDE</strong>
+        <span>Macro Intelligence</span>
+      </span>
+    </button>
+
+    <div class="header-context" aria-label="?????">
+      <button class="context-control" type="button" title="????">
+        <i data-lucide="globe-2"></i>
+        <span>CN + US</span>
+        <i data-lucide="chevron-down"></i>
+      </button>
+      <span class="as-of">AS OF 09 SEP 2026 ? 09:00 SGT</span>
+    </div>
+
+    <div class="header-actions">
+      <button class="icon-button" type="button" title="??" aria-label="??">
+        <i data-lucide="search"></i>
+      </button>
+      <button class="icon-button notification-button" type="button" title="??" aria-label="??">
+        <i data-lucide="bell"></i>
+        <span class="notification-dot" aria-hidden="true"></span>
+      </button>
+      <button class="avatar-button" type="button" title="??" aria-label="??">LC</button>
+    </div>
+  </header>
+
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="???">
+      <div class="sidebar-label">EVENT WORKSPACE</div>
+      <nav class="primary-nav">
+        <button class="nav-item is-active" type="button" data-nav="calendar">
+          <i data-lucide="calendar-days"></i>
+          <span>Macro calendar</span>
+          <span class="nav-count">12</span>
+        </button>
+        <button class="nav-item" type="button" data-nav="news">
+          <i data-lucide="newspaper"></i>
+          <span>News monitor</span>
+          <span class="nav-count alert">6</span>
+        </button>
+        <button class="nav-item" type="button" data-nav="impact">
+          <i data-lucide="activity"></i>
+          <span>Impact library</span>
+        </button>
+        <button class="nav-item" type="button" data-nav="portfolio">
+          <i data-lucide="briefcase-business"></i>
+          <span>Portfolio lab</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-label secondary-label">SAVED VIEWS</div>
+      <nav class="saved-nav">
+        <button type="button" data-filter-preset="week">
+          <span class="saved-dot high"></span>
+          This week's high impact
+        </button>
+        <button type="button" data-filter-preset="inflation">
+          <span class="saved-dot inflation"></span>
+          Inflation watch
+        </button>
+        <button type="button" data-filter-preset="portfolio">
+          <span class="saved-dot portfolio"></span>
+          My portfolio events
+        </button>
+      </nav>
+
+      <div class="sidebar-spacer"></div>
+      <div class="data-status">
+        <div class="status-line">
+          <span class="status-indicator"></span>
+          <strong>Data contracts</strong>
+        </div>
+        <div>3 feed classes mapped</div>
+        <button type="button" data-action="show-sources">View source map</button>
+      </div>
+    </aside>
+
+    <main id="mainContent" class="main-content">
+      <div class="demo-banner" role="note">
+        <i data-lucide="flask-conical"></i>
+        <span><strong>Interactive prototype.</strong> All event, research, news, impact and portfolio results are synthetic.</span>
+      </div>
+
+      <section id="calendarView" class="view-section" aria-labelledby="calendarTitle">
+        <div class="page-toolbar">
+          <div>
+            <div class="eyebrow">MACRO EVENT INTELLIGENCE</div>
+            <h1 id="calendarTitle">Economic calendar</h1>
+            <p>Release facts, street expectations and portfolio-relevant event risk in one view.</p>
+          </div>
+          <div class="toolbar-actions">
+            <button class="secondary-button" type="button" data-action="export" title="??????">
+              <i data-lucide="download"></i>
+              Export
+            </button>
+            <button class="primary-button" type="button" data-action="create-alert">
+              <i data-lucide="bell-plus"></i>
+              <span>Create alert</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="calendar-layout">
+          <div class="calendar-workspace">
+            <div class="calendar-controls">
+              <div class="month-navigation">
+                <button class="icon-button light" type="button" data-action="previous-month" title="???" aria-label="???">
+                  <i data-lucide="chevron-left"></i>
+                </button>
+                <button class="icon-button light" type="button" data-action="next-month" title="???" aria-label="???">
+                  <i data-lucide="chevron-right"></i>
+                </button>
+                <h2 id="monthLabel">September 2026</h2>
+                <button class="text-button" type="button" data-action="today">Today</button>
+              </div>
+
+              <div class="filter-row">
+                <div class="segmented-control" aria-label="????">
+                  <button type="button" class="is-selected" data-country="ALL">All</button>
+                  <button type="button" data-country="US">US</button>
+                  <button type="button" data-country="CN">CN</button>
+                </div>
+                <label class="filter-select">
+                  <span class="sr-only">????</span>
+                  <i data-lucide="sliders-horizontal"></i>
+                  <select id="impactFilter">
+                    <option value="ALL">All impact</option>
+                    <option value="HIGH">High impact</option>
+                    <option value="MEDIUM">Medium impact</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+
+            <div class="calendar-legend" aria-label="??">
+              <span><i class="legend-dot released"></i> Released</span>
+              <span><i class="legend-dot upcoming"></i> Upcoming</span>
+              <span><i class="legend-dot tentative"></i> Tentative</span>
+              <span class="legend-note">Times shown in Singapore / Beijing time</span>
+            </div>
+
+            <div id="calendarGrid" class="calendar-grid" aria-label="??"></div>
+            <div id="mobileAgenda" class="mobile-agenda" aria-label="????"></div>
+          </div>
+
+          <aside class="calendar-rail" aria-label="????">
+            <section class="rail-panel focus-panel">
+              <div class="panel-heading">
+                <div>
+                  <span class="section-kicker">THIS WEEK</span>
+                  <h2>Risk radar</h2>
+                </div>
+                <span class="risk-score">74</span>
+              </div>
+              <div class="risk-meter" aria-label="???? 74 ?">
+                <span style="width: 74%"></span>
+              </div>
+              <p>Inflation and labor prints cluster before the FOMC decision window.</p>
+              <dl class="compact-stats">
+                <div><dt>High impact</dt><dd>4</dd></div>
+                <div><dt>Research updates</dt><dd>11</dd></div>
+                <div><dt>Portfolio flags</dt><dd>3</dd></div>
+              </dl>
+            </section>
+
+            <section class="rail-panel">
+              <div class="panel-title-row">
+                <h2>Research delta</h2>
+                <button type="button" class="icon-button light" title="??" aria-label="??">
+                  <i data-lucide="refresh-cw"></i>
+                </button>
+              </div>
+              <div class="research-delta-list">
+                <button type="button" data-event-open="us-cpi-aug">
+                  <span class="time">08:12</span>
+                  <span><strong>Northstar</strong> raised headline CPI to 3.1%</span>
+                  <i data-lucide="arrow-up-right"></i>
+                </button>
+                <button type="button" data-event-open="us-fomc-sep">
+                  <span class="time">07:40</span>
+                  <span><strong>Harbor</strong> kept its hold call; risks skew hawkish</span>
+                  <i data-lucide="arrow-right"></i>
+                </button>
+                <button type="button" data-event-open="cn-cpi-aug">
+                  <span class="time">Yesterday</span>
+                  <span><strong>Eastbridge</strong> trimmed China CPI forecast</span>
+                  <i data-lucide="arrow-down-right"></i>
+                </button>
+              </div>
+            </section>
+
+            <section class="rail-panel portfolio-rail">
+              <div class="panel-title-row">
+                <h2>Portfolio event risk</h2>
+                <i data-lucide="shield-alert"></i>
+              </div>
+              <div class="portfolio-risk-row">
+                <span>US CPI upside</span>
+                <strong class="negative">-28 bp</strong>
+              </div>
+              <div class="contribution-track" aria-label="????">
+                <span class="equity" style="width: 56%"></span>
+                <span class="rates" style="width: 24%"></span>
+                <span class="fx" style="width: 8%"></span>
+                <span class="other" style="width: 12%"></span>
+              </div>
+              <div class="track-labels">
+                <span><i class="swatch equity"></i>Equity</span>
+                <span><i class="swatch rates"></i>Rates</span>
+                <span><i class="swatch fx"></i>FX</span>
+              </div>
+              <button class="full-width-button" type="button" data-nav="portfolio">Open sensitivity lab</button>
+            </section>
+          </aside>
+        </div>
+      </section>
+
+      <section id="detailView" class="view-section" hidden aria-labelledby="eventTitle">
+        <div class="detail-topbar">
+          <button class="back-button" type="button" data-action="back-to-calendar">
+            <i data-lucide="arrow-left"></i>
+            Calendar
+          </button>
+          <div class="detail-actions">
+            <button id="watchButton" class="secondary-button" type="button" data-action="toggle-watch">
+              <i data-lucide="bell"></i>
+              <span>Watch event</span>
+            </button>
+            <button class="icon-button light" type="button" title="????" aria-label="????" data-action="copy-link">
+              <i data-lucide="link-2"></i>
+            </button>
+            <button class="icon-button light" type="button" title="????" aria-label="????" data-action="export">
+              <i data-lucide="download"></i>
+            </button>
+          </div>
+        </div>
+
+        <header class="event-header">
+          <div class="event-title-block">
+            <div class="event-badges">
+              <span id="eventCountry" class="country-badge us">US</span>
+              <span id="eventStatus" class="status-badge released">Released</span>
+              <span id="eventImpact" class="impact-badge high"><i data-lucide="zap"></i> High impact</span>
+            </div>
+            <h1 id="eventTitle">US CPI ? August</h1>
+            <p id="eventSubtitle">03 Sep 2026 ? 20:30 SGT ? Bureau of Labor Statistics</p>
+          </div>
+          <div class="confidence-box">
+            <span>Evidence coverage</span>
+            <strong>92%</strong>
+            <div><span style="width: 92%"></span></div>
+          </div>
+        </header>
+
+        <nav class="detail-tabs" aria-label="??????">
+          <button type="button" class="is-active" data-tab="overview">
+            <i data-lucide="layout-dashboard"></i> Overview
+          </button>
+          <button type="button" data-tab="institutions">
+            <i data-lucide="columns-3"></i> Institution views
+            <span class="tab-count">3</span>
+          </button>
+          <button type="button" data-tab="history">
+            <i data-lucide="chart-no-axes-combined"></i> Historical impact
+          </button>
+          <button type="button" data-tab="portfolio">
+            <i data-lucide="briefcase-business"></i> Portfolio sensitivity
+          </button>
+        </nav>
+
+        <div id="overviewTab" class="tab-panel is-active" data-panel="overview">
+          <section class="metric-strip" aria-label="????">
+            <div><span>Actual</span><strong id="actualValue">3.1%</strong><small>first release</small></div>
+            <div><span>Street consensus</span><strong id="consensusValue">3.0%</strong><small>n = 64</small></div>
+            <div><span>Previous</span><strong id="previousValue">2.9%</strong><small>as known at release</small></div>
+            <div class="surprise-metric"><span>Surprise</span><strong id="surpriseValue">+0.1 pct</strong><small>above consensus</small></div>
+          </section>
+
+          <div class="detail-grid">
+            <div class="primary-column">
+              <section class="analysis-section lead-commentary">
+                <div class="section-heading-row">
+                  <div>
+                    <span class="section-kicker">FREERIDE COMMENTARY</span>
+                    <h2>What matters</h2>
+                  </div>
+                  <span class="evidence-tag"><i data-lucide="check-check"></i> 7 cited claims</span>
+                </div>
+                <p class="lead-take">The print was modestly above consensus, but the more informative signal was its composition: shelter and core services ran firmer than the median house assumption.</p>
+                <div class="commentary-points">
+                  <div>
+                    <span class="point-index">01</span>
+                    <div><strong>Composition beat the headline</strong><p>Sticky services explain more of the surprise than goods or energy. This supports a policy-path repricing interpretation.</p></div>
+                  </div>
+                  <div>
+                    <span class="point-index">02</span>
+                    <div><strong>House dispersion was meaningful</strong><p>Northstar captured both the level and driver; Harbor's goods-disinflation call held, but its shelter weight was too low.</p></div>
+                  </div>
+                  <div>
+                    <span class="point-index">03</span>
+                    <div><strong>Do not over-read one window</strong><p>Front-end rates led the initial move, yet one release and a 30-minute reaction do not establish a persistent inflation regime.</p></div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="analysis-section">
+                <div class="section-heading-row">
+                  <div>
+                    <span class="section-kicker">LIVE CONTEXT</span>
+                    <h2>News & research timeline</h2>
+                  </div>
+                  <button class="text-button" type="button" data-action="view-all-news">View all</button>
+                </div>
+                <div id="newsTimeline" class="news-timeline"></div>
+              </section>
+            </div>
+
+            <aside class="secondary-column">
+              <section class="analysis-section compact-section">
+                <span class="section-kicker">INITIAL REACTION ? T+30M</span>
+                <h2>Cross-asset pulse</h2>
+                <div class="asset-pulse-list">
+                  <div><span>USD index</span><strong class="positive">+0.25%</strong><small>74th pct</small></div>
+                  <div><span>UST 2Y</span><strong class="negative">+5 bp</strong><small>81st pct</small></div>
+                  <div><span>UST 10Y</span><strong class="negative">+2 bp</strong><small>61st pct</small></div>
+                  <div><span>S&P futures</span><strong class="negative">-0.40%</strong><small>68th pct</small></div>
+                </div>
+                <button class="full-width-button" type="button" data-tab-target="history">Open event study</button>
+              </section>
+
+              <section class="analysis-section compact-section source-section">
+                <span class="section-kicker">SOURCE TRACE</span>
+                <h2>Evidence map</h2>
+                <ul>
+                  <li><i data-lucide="landmark"></i><span><strong>Official release</strong>BLS ? first vintage</span><em>Verified</em></li>
+                  <li><i data-lucide="users"></i><span><strong>Consensus</strong>Licensed PIT snapshot</span><em>08:20 ET</em></li>
+                  <li><i data-lucide="files"></i><span><strong>Research</strong>3 entitled documents</span><em>Original</em></li>
+                  <li><i data-lucide="line-chart"></i><span><strong>Market data</strong>1-minute event window</span><em>Complete</em></li>
+                </ul>
+              </section>
+            </aside>
+          </div>
+        </div>
+
+        <div id="institutionsTab" class="tab-panel" data-panel="institutions">
+          <section class="analysis-section">
+            <div class="section-heading-row">
+              <div>
+                <span class="section-kicker">HORIZONTAL COMPARISON</span>
+                <h2>How the street framed the same release</h2>
+              </div>
+              <span class="cutoff-label"><i data-lucide="clock-3"></i> Cutoff 08:25 ET</span>
+            </div>
+            <div class="table-scroll">
+              <table class="comparison-table">
+                <thead>
+                  <tr><th>Source</th><th>Forecast</th><th>Vs street</th><th>Core thesis</th><th>Key risk before release</th><th>Actual ? forecast</th></tr>
+                </thead>
+                <tbody>
+                  <tr class="consensus-row"><td><strong>Street consensus</strong><small>64 contributors</small></td><td>3.0%</td><td>?</td><td>Moderating goods, sticky shelter</td><td>Energy pass-through</td><td><span class="result-chip miss">+0.1</span></td></tr>
+                  <tr><td><strong>Northstar Macro</strong><small>Preview ? 01 Sep</small></td><td>3.1%</td><td class="positive">+0.1</td><td>Shelter and services remain firm</td><td>Airfares reverse lower</td><td><span class="result-chip hit">0.0</span></td></tr>
+                  <tr><td><strong>Harbor Economics</strong><small>Preview ? 02 Sep</small></td><td>2.9%</td><td class="negative">-0.1</td><td>Goods disinflation offsets shelter</td><td>Shelter re-acceleration</td><td><span class="result-chip miss">+0.2</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <div class="institution-grid">
+            <section class="analysis-section">
+              <div class="section-heading-row">
+                <div><span class="section-kicker">VERTICAL COMPARISON</span><h2>Forecast path by institution</h2></div>
+                <div class="chart-legend"><span><i class="legend-line northstar"></i>Northstar</span><span><i class="legend-line harbor"></i>Harbor</span><span><i class="legend-line actual"></i>Actual</span></div>
+              </div>
+              <div class="forecast-chart" role="img" aria-label="????????????">
+                <div class="chart-axis"><span>3.2</span><span>3.0</span><span>2.8</span><span>2.6</span></div>
+                <svg viewBox="0 0 600 220" preserveAspectRatio="none" aria-hidden="true">
+                  <g class="grid-lines"><line x1="0" y1="20" x2="600" y2="20"/><line x1="0" y1="80" x2="600" y2="80"/><line x1="0" y1="140" x2="600" y2="140"/><line x1="0" y1="200" x2="600" y2="200"/></g>
+                  <polyline class="line actual" points="70,140 290,140 530,80"/>
+                  <polyline class="line northstar" points="70,170 290,140 530,80"/>
+                  <polyline class="line harbor" points="70,140 290,170 530,140"/>
+                  <g class="dots actual"><circle cx="70" cy="140" r="5"/><circle cx="290" cy="140" r="5"/><circle cx="530" cy="80" r="5"/></g>
+                  <g class="dots northstar"><circle cx="70" cy="170" r="5"/><circle cx="290" cy="140" r="5"/><circle cx="530" cy="80" r="5"/></g>
+                  <g class="dots harbor"><circle cx="70" cy="140" r="5"/><circle cx="290" cy="170" r="5"/><circle cx="530" cy="140" r="5"/></g>
+                </svg>
+                <div class="chart-x-labels"><span>June</span><span>July</span><span>August</span></div>
+              </div>
+              <div class="chart-callout"><i data-lucide="scan-line"></i><span><strong>Detected pattern</strong> Harbor has under-estimated the last two releases; the recurring gap is concentrated in shelter assumptions.</span></div>
+            </section>
+
+            <section class="analysis-section document-section">
+              <div class="section-heading-row"><div><span class="section-kicker">VIEW CHANGES</span><h2>Preview ? flash</h2></div></div>
+              <article>
+                <header><span class="institution-mark northstar">N</span><div><strong>Northstar Macro</strong><small>Flash note ? 08:42 ET</small></div><span class="stance-tag confirmed">Thesis confirmed</span></header>
+                <p>Retained the sticky-services framework and moved the next policy easing window one meeting later.</p>
+                <footer><i data-lucide="file-text"></i> DOC-NM-20260903-0842 ? cited paragraphs 3, 6</footer>
+              </article>
+              <article>
+                <header><span class="institution-mark harbor">H</span><div><strong>Harbor Economics</strong><small>Flash note ? 08:47 ET</small></div><span class="stance-tag revised">Driver revised</span></header>
+                <p>Acknowledged stronger shelter but argued against reading the print as broad re-acceleration.</p>
+                <footer><i data-lucide="file-text"></i> DOC-HE-20260903-0847 ? cited paragraphs 2, 5</footer>
+              </article>
+            </section>
+          </div>
+        </div>
+
+        <div id="historyTab" class="tab-panel" data-panel="history">
+          <section class="analysis-section event-study-header">
+            <div>
+              <span class="section-kicker">HISTORICAL EVENT STUDY</span>
+              <h2>How assets behaved after comparable CPI surprises</h2>
+              <p>First-release actual versus final eligible pre-release consensus. All qualifying releases are included.</p>
+            </div>
+            <div class="study-controls">
+              <div class="segmented-control" aria-label="????">
+                <button type="button" class="is-selected" data-surprise-bucket="upside">Upside</button>
+                <button type="button" data-surprise-bucket="inline">In line</button>
+                <button type="button" data-surprise-bucket="downside">Downside</button>
+              </div>
+              <div class="segmented-control" aria-label="????">
+                <button type="button" class="is-selected" data-horizon="30m">30m</button>
+                <button type="button" data-horizon="1d">1d</button>
+                <button type="button" data-horizon="5d">5d</button>
+              </div>
+            </div>
+          </section>
+
+          <div class="study-meta">
+            <span><i data-lucide="database"></i> US CPI ? Jan 2016?Aug 2026</span>
+            <span><i data-lucide="sigma"></i> Bucket: +0.1 to +0.2 pct</span>
+            <span id="sampleMeta"><i data-lucide="list-filter"></i> n = 42 releases</span>
+            <span><i data-lucide="shield-check"></i> No cherry-picked cases</span>
+          </div>
+
+          <div class="history-grid">
+            <section class="analysis-section">
+              <div class="section-heading-row"><div><span class="section-kicker">MEDIAN RESPONSE</span><h2>Cross-asset distribution</h2></div><button class="icon-button light" type="button" title="????" aria-label="????" data-action="show-method"><i data-lucide="info"></i></button></div>
+              <div id="impactRows" class="impact-rows"></div>
+              <div class="impact-axis"><span>negative</span><span>0</span><span>positive</span></div>
+            </section>
+
+            <section class="analysis-section distribution-section">
+              <div class="section-heading-row"><div><span class="section-kicker">SAMPLE QUALITY</span><h2>Outcome distribution</h2></div><span id="sampleBadge" class="sample-badge">n=42 ? usable</span></div>
+              <div id="distributionChart" class="distribution-chart" aria-label="????"></div>
+              <div class="distribution-summary">
+                <div><span>Direction hit rate</span><strong id="hitRate">67%</strong></div>
+                <div><span>Median / mean gap</span><strong id="meanGap">0.08?</strong></div>
+                <div><span>Regime stability</span><strong id="regimeStability">Mixed</strong></div>
+              </div>
+              <div class="warning-note"><i data-lucide="triangle-alert"></i><span>Event-study association is not a causal forecast. Results vary by inflation regime, positioning and simultaneous releases.</span></div>
+            </section>
+          </div>
+
+          <section class="analysis-section analog-section">
+            <div class="section-heading-row"><div><span class="section-kicker">NEAREST ANALOGS</span><h2>Comparable historical releases</h2></div><button class="text-button" type="button">Open full library</button></div>
+            <div class="table-scroll">
+              <table class="analog-table">
+                <thead><tr><th>Release</th><th>Surprise</th><th>Inflation regime</th><th>UST 2Y ? 30m</th><th>USD ? 30m</th><th>S&P fut. ? 30m</th><th>Similarity</th></tr></thead>
+                <tbody>
+                  <tr><td>14 Mar 2024</td><td>+0.1 pct</td><td>Sticky services</td><td class="negative">+6 bp</td><td class="positive">+0.31%</td><td class="negative">-0.46%</td><td><span class="similarity"><i style="width:88%"></i></span>88%</td></tr>
+                  <tr><td>12 Oct 2023</td><td>+0.1 pct</td><td>Late disinflation</td><td class="negative">+5 bp</td><td class="positive">+0.22%</td><td class="negative">-0.35%</td><td><span class="similarity"><i style="width:81%"></i></span>81%</td></tr>
+                  <tr><td>13 Sep 2022</td><td>+0.2 pct</td><td>High inflation</td><td class="negative">+17 bp</td><td class="positive">+0.72%</td><td class="negative">-1.84%</td><td><span class="similarity"><i style="width:69%"></i></span>69%</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+
+        <div id="portfolioTab" class="tab-panel" data-panel="portfolio">
+          <section class="portfolio-header analysis-section">
+            <div>
+              <span class="section-kicker">PORTFOLIO SENSITIVITY</span>
+              <h2>Translate the event into portfolio-level scenario exposure</h2>
+              <p>Apply historical bucket shocks to user-supplied weights and sensitivity multipliers. This is not VaR or a trade recommendation.</p>
+            </div>
+            <label class="scenario-select">
+              <span>Scenario</span>
+              <select id="portfolioScenario">
+                <option value="upside">CPI upside ? +0.1 to +0.2 pct</option>
+                <option value="large-upside">Large CPI upside ? &gt;+0.2 pct</option>
+                <option value="downside">CPI downside ? -0.1 to -0.2 pct</option>
+              </select>
+            </label>
+          </section>
+
+          <div class="portfolio-grid">
+            <section class="analysis-section holdings-section">
+              <div class="section-heading-row"><div><span class="section-kicker">INPUTS</span><h2>Portfolio exposures</h2></div><button class="secondary-button compact" type="button" data-action="add-holding"><i data-lucide="plus"></i>Add exposure</button></div>
+              <div class="table-scroll">
+                <table class="holdings-table">
+                  <thead><tr><th>Exposure</th><th>Weight</th><th>Event beta</th><th>Scenario return</th><th>Contribution</th><th><span class="sr-only">Remove</span></th></tr></thead>
+                  <tbody id="holdingsBody"></tbody>
+                </table>
+              </div>
+              <div class="holdings-footer"><span id="weightCheck"><i data-lucide="circle-check"></i> Weights total 100%</span><button class="primary-button" type="button" data-action="recalculate"><i data-lucide="calculator"></i>Recalculate</button></div>
+            </section>
+
+            <aside class="analysis-section portfolio-result">
+              <span class="section-kicker">ILLUSTRATIVE RESULT</span>
+              <h2>Estimated event impact</h2>
+              <div class="impact-number"><strong id="portfolioImpact">-28</strong><span>bp</span></div>
+              <div id="portfolioImpactBar" class="portfolio-impact-bar"><span></span><i></i></div>
+              <dl>
+                <div><dt>Largest detractor</dt><dd id="largestDetractor">US equities ? -22 bp</dd></div>
+                <div><dt>Largest offset</dt><dd id="largestOffset">USD cash ? +2 bp</dd></div>
+                <div><dt>Historical range</dt><dd id="portfolioRange">-12 to -51 bp</dd></div>
+                <div><dt>Sample</dt><dd>42 releases</dd></div>
+              </dl>
+              <div class="portfolio-comment"><i data-lucide="sparkles"></i><p id="portfolioComment">The portfolio is most exposed through US equities and front-end duration. USD cash provides a small offset, but does not materially change the scenario loss.</p></div>
+            </aside>
+          </div>
+
+          <section class="method-band">
+            <div><i data-lucide="sigma"></i><span><strong>Method</strong> Weight ? event beta ? median historical bucket return</span></div>
+            <div><i data-lucide="shield-alert"></i><span><strong>Boundary</strong> No covariance, liquidity, options convexity or second-order effects</span></div>
+            <div><i data-lucide="scan-search"></i><span><strong>Next check</strong> Stress 25th/75th percentile and alternate inflation regimes</span></div>
+          </section>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <dialog id="infoDialog" class="info-dialog">
+    <form method="dialog">
+      <div class="dialog-header"><h2 id="dialogTitle">Methodology</h2><button class="icon-button light" value="cancel" aria-label="??"><i data-lucide="x"></i></button></div>
+      <div id="dialogBody" class="dialog-body"></div>
+      <div class="dialog-footer"><button class="primary-button" value="default">Close</button></div>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
