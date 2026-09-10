@@ -141,9 +141,9 @@
     $("#eventStatus").className = `status-badge ${event.status}`;
     $("#eventImpact").innerHTML = `<i data-lucide="zap"></i> ${event.impact[0] + event.impact.slice(1).toLowerCase()} impact`;
     $("#eventImpact").className = `impact-badge ${event.impact.toLowerCase()}`;
-    $("#eventTitle").textContent = `${event.country} ${event.name} ? ${event.period}`;
+    $("#eventTitle").textContent = `${event.country} ${event.name} / ${event.period}`;
     const formatted = new Intl.DateTimeFormat("en", { day: "2-digit", month: "short", year: "numeric" }).format(new Date(`${event.date}T00:00:00`));
-    $("#eventSubtitle").textContent = `${formatted} ? ${event.time} SGT ? ${event.source}`;
+    $("#eventSubtitle").textContent = `${formatted} | ${event.time} SGT | ${event.source}`;
     $("#actualValue").textContent = event.actual;
     $("#consensusValue").textContent = event.consensus;
     $("#previousValue").textContent = event.previous;
