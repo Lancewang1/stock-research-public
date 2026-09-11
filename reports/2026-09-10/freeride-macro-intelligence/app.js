@@ -9,7 +9,7 @@
     { id: "us-payrolls-aug", date: "2026-09-04", time: "20:30", country: "US", impact: "HIGH", status: "released", name: "Nonfarm Payrolls", period: "August", actual: "162k", consensus: "55k", previous: "21k revised", surprise: "+107k", unit: "change", source: "Bureau of Labor Statistics", sample: 39, theme: "Labor", lead: "August payrolls delivered a large upside surprise and forced both GS and JPM to reassess the sector rebound.", researchKey: "us-payrolls-aug" },
     { id: "cn-trade-aug", date: "2026-09-07", time: "11:00", country: "CN", impact: "MEDIUM", status: "released", name: "Trade Balance", period: "August", actual: "$96.2bn", consensus: "$92.0bn", previous: "$89.7bn", surprise: "+$4.2bn", unit: "USD", source: "General Administration of Customs", sample: 28, theme: "Trade", lead: "The wider surplus reflected resilient exports more than domestic-demand strength, leaving the growth read-through uneven across assets." },
     { id: "cn-cpi-aug", date: "2026-09-09", time: "09:30", country: "CN", impact: "HIGH", status: "released", name: "Consumer Price Index", period: "August", actual: "0.2%", consensus: "0.3%", previous: "0.4%", surprise: "-0.1 pct", unit: "YoY", source: "National Bureau of Statistics", sample: 35, theme: "Inflation", lead: "Inflation undershot expectations as food-price support faded. The mix points to limited household pricing power rather than a renewed deflation shock." },
-    { id: "us-cpi-aug", date: "2026-09-10", time: "20:30", country: "US", impact: "HIGH", status: "upcoming", name: "Core CPI", period: "August", actual: "?", consensus: "0.20%", previous: "0.22%", surprise: "Pending", unit: "MoM", source: "Bureau of Labor Statistics", sample: 42, theme: "Inflation", lead: "GS expects 0.23% core CPI versus 0.20% consensus; the supplied research set contains no same-vintage JPM preview.", researchKey: "us-cpi-aug" },
+    { id: "us-cpi-aug", date: "2026-09-11", time: "20:30", country: "US", impact: "HIGH", status: "upcoming", name: "Core CPI", period: "August", actual: "?", consensus: "0.20%", previous: "0.22%", surprise: "Pending", unit: "MoM", source: "Bureau of Labor Statistics", sourceTimestamp: "2026-09-11T08:30:00-04:00", displayTimeZone: "Asia/Hong_Kong", sample: 42, theme: "Inflation", lead: "GS expects 0.23% core CPI versus 0.20% consensus; the supplied research set contains no same-vintage JPM preview.", researchKey: "us-cpi-aug" },
     { id: "us-ppi-aug", date: "2026-09-10", time: "20:30", country: "US", impact: "MEDIUM", status: "upcoming", name: "Producer Price Index", period: "August", actual: "?", consensus: "2.7%", previous: "2.6%", surprise: "Pending", unit: "YoY", source: "Bureau of Labor Statistics", sample: 37, theme: "Inflation", lead: "The key question is whether pipeline services prices validate the CPI composition. Goods alone would be a weaker policy signal." },
     { id: "us-retail-aug", date: "2026-09-15", time: "20:30", country: "US", impact: "MEDIUM", status: "upcoming", name: "Retail Sales", period: "August", actual: "?", consensus: "0.3%", previous: "0.5%", surprise: "Pending", unit: "MoM", source: "US Census Bureau", sample: 34, theme: "Growth", lead: "Control-group spending is the cleaner signal for consumption momentum; autos and gasoline may make the headline unusually noisy." },
     { id: "us-fomc-sep", date: "2026-09-17", time: "02:00", country: "US", impact: "HIGH", status: "upcoming", name: "FOMC Rate Decision", period: "September", actual: "?", consensus: "Hold focus", previous: "Hold", surprise: "Pending", unit: "decision", source: "Federal Reserve", sample: 24, theme: "Policy", lead: "The supplied research points to a data-dependent hold, with disagreement concentrated in the later policy path rather than the September decision.", researchKey: "us-fomc-sep" },
@@ -20,16 +20,16 @@
 
   const NEWS = {
     Inflation: [
-      ["08:30", "Official", "Release", "Headline and core inflation data published; first-vintage values locked."],
-      ["08:34", "Wire", "Market", "Front-end yields lead the immediate rates move as traders reprice the policy path."],
-      ["08:42", "Research desk", "Flash", "Services composition supports the preview thesis; conviction raised."],
-      ["08:47", "Research desk", "Flash", "Headline miss acknowledged, but analysts caution against extrapolating one print."]
+      ["20:30", "Official", "Release", "Headline and core inflation data published; first-vintage values locked."],
+      ["20:34", "Wire", "Market", "Front-end yields lead the immediate rates move as traders reprice the policy path."],
+      ["20:42", "Research desk", "Flash", "Services composition supports the preview thesis; conviction raised."],
+      ["20:47", "Research desk", "Flash", "Headline miss acknowledged, but analysts caution against extrapolating one print."]
     ],
     Labor: [
-      ["08:30", "Official", "Release", "Payrolls, unemployment and earnings details published."],
-      ["08:35", "Wire", "Market", "Rates sell off initially; equity reaction is muted by softer hours worked."],
-      ["08:44", "Research desk", "Flash", "Hiring breadth improved, but the household survey remains a cross-check."],
-      ["09:05", "Research desk", "Comment", "The report does not close the door on easing if inflation continues to cool."]
+      ["20:30", "Official", "Release", "Payrolls, unemployment and earnings details published."],
+      ["20:35", "Wire", "Market", "Rates sell off initially; equity reaction is muted by softer hours worked."],
+      ["20:44", "Research desk", "Flash", "Hiring breadth improved, but the household survey remains a cross-check."],
+      ["21:05", "Research desk", "Comment", "The report does not close the door on easing if inflation continues to cool."]
     ],
     Policy: [
       ["T-2d", "Research desk", "Preview", "Base case unchanged; focus is on forward guidance and vote dispersion."],
@@ -122,7 +122,7 @@
     const inMonth = events.filter(event => {
       const date = new Date(`${event.date}T00:00:00`);
       return date.getFullYear() === state.year && date.getMonth() === state.month;
-    });
+    }).sort((a, b) => `${a.date}T${a.time}`.localeCompare(`${b.date}T${b.time}`));
     const groups = Object.groupBy ? Object.groupBy(inMonth, event => event.date) : inMonth.reduce((acc, event) => ((acc[event.date] ||= []).push(event), acc), {});
     $("#mobileAgenda").innerHTML = Object.entries(groups).map(([date, dayEvents]) => {
       const formatted = new Intl.DateTimeFormat("en", { weekday: "short", day: "2-digit", month: "short" }).format(new Date(`${date}T00:00:00`));
@@ -143,7 +143,7 @@
     $("#eventImpact").className = `impact-badge ${event.impact.toLowerCase()}`;
     $("#eventTitle").textContent = `${event.country} ${event.name} / ${event.period}`;
     const formatted = new Intl.DateTimeFormat("en", { day: "2-digit", month: "short", year: "numeric" }).format(new Date(`${event.date}T00:00:00`));
-    $("#eventSubtitle").textContent = `${formatted} | ${event.time} SGT | ${event.source}`;
+    $("#eventSubtitle").textContent = `${formatted} | ${event.time} HKT | ${event.source}`;
     $("#actualValue").textContent = event.actual;
     $("#consensusValue").textContent = event.consensus;
     $("#previousValue").textContent = event.previous;

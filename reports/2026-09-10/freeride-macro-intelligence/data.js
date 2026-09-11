@@ -41,7 +41,7 @@ window.FREERIDE_DATA = {
     { date:"2026-09-04", type:"DATA", institution:"BLS", title:"August employment report", eventId:"us-payrolls-aug" },
     { date:"2026-09-04", type:"RESEARCH", institution:"GS", title:"August payrolls review", eventId:"us-payrolls-aug" },
     { date:"2026-09-08", type:"RESEARCH", institution:"GS", title:"August CPI preview", eventId:"us-cpi-aug" },
-    { date:"2026-09-10", type:"DATA", institution:"BLS", title:"August CPI release", eventId:"us-cpi-aug", upcoming:true },
+    { date:"2026-09-11", type:"DATA", institution:"BLS", title:"August CPI release | 20:30 HKT", eventId:"us-cpi-aug", upcoming:true },
     { date:"2026-09-15", type:"FED", institution:"Fed", title:"September meeting begins", eventId:"us-fomc-sep", upcoming:true },
     { date:"2026-09-16", type:"FED", institution:"Fed", title:"FOMC decision, SEP & press conference", eventId:"us-fomc-sep", upcoming:true }
   ],
@@ -121,7 +121,7 @@ window.FREERIDE_DATA = {
       ],
       timeline:[
         ["08 Sep","GS","Preview","Core CPI forecast at 0.23% versus 0.20% consensus."],
-        ["10 Sep","BLS","Scheduled","Release remains pending at the page's 09 Sep cutoff."]
+        ["11 Sep | 20:30 HKT","BLS","Scheduled","Release remains pending at the page's 09 Sep cutoff."]
       ]
     },
     "us-fomc-jul": {
