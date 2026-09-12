@@ -230,7 +230,7 @@
     const items = state.contextItems.filter(item => state.contextFilter === "ALL" || item.kind === state.contextFilter);
     $("#contextCount").textContent = `${items.length} item${items.length === 1 ? "" : "s"}`;
     const status = $("#contextFeedStatus");
-    if (status) status.textContent = state.feedGeneratedAt ? `Auto feed refreshed ${new Intl.DateTimeFormat("en", { day:"2-digit", month:"short", hour:"2-digit", minute:"2-digit", hour12:false, timeZone:"Asia/Hong_Kong" }).format(new Date(state.feedGeneratedAt))} HKT` : state.feedStatus;
+    if (status) status.textContent = state.feedGeneratedAt ? `Feed content updated ${new Intl.DateTimeFormat("en", { day:"2-digit", month:"short", hour:"2-digit", minute:"2-digit", hour12:false, timeZone:"Asia/Hong_Kong" }).format(new Date(state.feedGeneratedAt))} HKT` : state.feedStatus;
     $("#homeContextFeed").innerHTML = items.map(item => {
       const content = `<span class="context-date">${esc(item.date)}<small>${esc(item.time)}</small></span><span class="context-copy"><span class="context-meta"><b class="context-kind ${item.kind.toLowerCase()}">${esc(item.kind)}</b><strong>${esc(item.source)}</strong></span><b class="context-title">${esc(item.title)}</b><small>${esc(item.summary)}</small><em>${esc(item.access)}</em></span><i data-lucide="arrow-up-right"></i>`;
       return item.url ? `<a class="context-item" href="${esc(item.url)}" target="_blank" rel="noopener noreferrer">${content}</a>` : `<button class="context-item" type="button" data-event-open="${item.eventId}">${content}</button>`;

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-12T07:54:28+00:00",
+  "generatedAt": "2026-09-12T08:00:18+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
@@ -53,8 +53,8 @@
     },
     {
       "date": "12 Sep",
-      "time": "00:47 HKT",
-      "publishedAt": "2026-09-12T00:47:12+08:00",
+      "time": "01:03 HKT",
+      "publishedAt": "2026-09-12T01:03:10+08:00",
       "kind": "NEWS",
       "source": "Bloomberg",
       "eventId": "us-cpi-aug",
@@ -86,18 +86,6 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOU2R5eFJ0eFBfbWR4dnNKaUdDZC1MTVY5aWYxc3BlaUY1S2ZMM0xwaFhMbEh1cWtsSFhFVGk5eEE4NkRTb3FxREhvbkpKVjdXdVY1VHhNT2NaUkhUNmEtSzdoQno5aWFRUGpWS0ZBMXcwUEFKSHFOVF9jcFJQSExCbjBYaU5JNTdMdlladkpZdkp2TURmcW94ZkxtV1dwbTR3TkJhUXlmc1A?oc=5"
-    },
-    {
-      "date": "11 Sep",
-      "time": "21:53 HKT",
-      "publishedAt": "2026-09-11T21:53:08+08:00",
-      "kind": "NEWS",
-      "source": "Financial Times",
-      "eventId": "us-cpi-aug",
-      "title": "Higher than expected core CPI gives Fed enough to tighten",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5iMTRldTEzMjNtdUE2Q3dZUGZIc2Y5QzItMHoxSHVPWmhNemMzeFNTSHdpZFZESWp6Vm1uRXd6aWVfSllrSnllT3EzMFFQTEdsNnJhSUhIaVhVYXNEMWxLREVEVmFiS3dTaVZsMmNTOGs?oc=5"
     },
     {
       "date": "11 Sep",
@@ -161,18 +149,6 @@
     },
     {
       "date": "11 Sep",
-      "time": "20:30 HKT",
-      "publishedAt": "2026-09-11T20:30:53+08:00",
-      "kind": "NEWS",
-      "source": "Financial Times",
-      "eventId": "us-cpi-aug",
-      "title": "Kevin Warsh under mounting pressure to raise rates as US inflation persists",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPaU11OG1TVmxJZC1hcVgyX09selQzQUZ0NjJ0ZEhEeXl4ajFXY2M4VElKOXR2dkFXTnBXbGl3YW9WMXZqVWw4QjFVYmwzOHFBQ2xYUnNDeDVoT2g3elYwVWZqU0h3UEQ3akdxd2l5a0lVdkp2SHN6dUEzUXluTXRCMkpSaGE?oc=5"
-    },
-    {
-      "date": "11 Sep",
       "time": "10:36 HKT",
       "publishedAt": "2026-09-11T10:36:00+08:00",
       "kind": "NEWS",
@@ -218,6 +194,30 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNUzZJNGJfYURYRlltYzdRUm5nODJzb245dkRFTml5bXB6YWs0QXQxaUdaRjZzZUp4bmVHeUFzNWJHbU8yVkoyZ2ltOTdHM2xmaHZ5WV9mbmNlRTFzMHpseG5SUklKbUJTRUVyUHRkVnZnMUV5UmVwbGtxOWh2Ti1EMkx2MkpZd09mWmt6TkFKQV9scUtIal8xd1NreFZQRURteVdN?oc=5"
+    },
+    {
+      "date": "11 Sep",
+      "time": "08:00 HKT",
+      "publishedAt": "2026-09-11T08:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Bloomberg",
+      "eventId": "us-cpi-aug",
+      "title": "Watch CPI Sets Up ‘Risk Management Hikes’ for Fed, Pimco’s Wilding Says",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOUnR6ejl4cnUyaVliWkIteER2aUJvYnhMYUZFN3dwYVN0Q0pueFhBRV84a3FVaUdORVdRX0M5TGFNN1BZSXlhX1h4c3dRZlhQRDVhTEE3QmRfeWc2cjhMcVMycER6dHZIbjZBWk1hTEpQUUxvek92VS1LSXIzdmJSTE4tQ1pfajFjUnpKODd5emhrTzFFZ0pKU0hSaHlSeWU3SGlSNg?oc=5"
+    },
+    {
+      "date": "11 Sep",
+      "time": "08:00 HKT",
+      "publishedAt": "2026-09-11T08:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Bloomberg",
+      "eventId": "us-cpi-aug",
+      "title": "Watch US Core CPI Tops Forecasts, Bolstering Case for Rate Hike",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQNk93c2xzMlc1ZHMxTUl5OTRnM0dtOFBXTVpzbkRwcndiYW45Ri1zUF9xbTI2VmR1TlFQeXhQX3JfaWx2N3U5U3VzTl9Gc28tS19Ic3pscnE4UWxmdnQ2cXNQRUUtWHhJUkxTdzduSDNSOHlFeUl2dm0xdGdJVmxfNHF5WG9ydktXcUtWOC1KelF6eU5ZWTBvaVRicEM2NkJNT09JNU4zTUJieWN4?oc=5"
     }
   ]
 }

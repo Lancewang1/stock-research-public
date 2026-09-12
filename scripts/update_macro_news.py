@@ -85,8 +85,16 @@ def main():
                 "url": link,
             }
     ordered = sorted(items.values(), key=lambda item: item["publishedAt"], reverse=True)[:18]
+    generated_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    if OUTPUT.exists():
+        try:
+            previous = json.loads(OUTPUT.read_text(encoding="utf-8"))
+            if previous.get("items") == ordered:
+                generated_at = previous.get("generatedAt", generated_at)
+        except (OSError, json.JSONDecodeError):
+            pass
     payload = {
-        "generatedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "generatedAt": generated_at,
         "displayTimeZone": "Asia/Hong_Kong",
         "method": "Publisher-labelled Google News RSS; public headline metadata only",
         "items": ordered,
