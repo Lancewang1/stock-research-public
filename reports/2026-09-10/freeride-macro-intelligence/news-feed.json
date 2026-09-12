@@ -1,20 +1,8 @@
 {
-  "generatedAt": "2026-09-12T08:00:50+00:00",
+  "generatedAt": "2026-09-12T12:12:50+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
-    {
-      "date": "12 Sep",
-      "time": "07:10 HKT",
-      "publishedAt": "2026-09-12T07:10:13+08:00",
-      "kind": "NEWS",
-      "source": "Bloomberg",
-      "eventId": "us-cpi-aug",
-      "title": "Watch Core CPI Hikes Ahead of FOMC Meeting",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQZHR0eTJaQmpFTnRrN3doQkg1ZG5QMzhheG5OOEE0cFUxc0NteXJmMXIxczRDR0dQYjM1MWtJNUVoS09NVHk3cHRKQnhsTE96TkllTjlNaDk3ellFRk93RWltTjFFRGktMks1V1RMRXFqODRDLUFSTEctUXdEQ1V0VnZUNms5V0VmVVBtUHk0dEVBZ0ZxV2ttYg?oc=5"
-    },
     {
       "date": "12 Sep",
       "time": "04:33 HKT",
@@ -101,18 +89,6 @@
     },
     {
       "date": "11 Sep",
-      "time": "20:54 HKT",
-      "publishedAt": "2026-09-11T20:54:13+08:00",
-      "kind": "NEWS",
-      "source": "Bloomberg",
-      "eventId": "us-fomc-sep",
-      "title": "Economists See Fed Defying Expectations for Rate Hikes",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOaGN6aS00aUNHRFNQTVIyZm5MZ2l3cXNrUERERGNKT1BUQXp3eGxnejZSUFM0eXdmN0djUF91V1QyWWZ6SXZsX3FfU0lYSF9IcUJ3LVQ3Rllwd0Q3bEw3VFN4dGxJQUFqLVV1WDZIWnVEamlEOWxQa3Rad0lKc1pvWGxjb3B6bHhLM2E5eWN5RWpja0c4VDA5TnhuX19CQjNGZS1GUWtTY3A1QXFQbVcwalBB?oc=5"
-    },
-    {
-      "date": "11 Sep",
       "time": "20:30 HKT",
       "publishedAt": "2026-09-11T20:30:53+08:00",
       "kind": "NEWS",
@@ -146,6 +122,18 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOUnR6ejl4cnUyaVliWkIteER2aUJvYnhMYUZFN3dwYVN0Q0pueFhBRV84a3FVaUdORVdRX0M5TGFNN1BZSXlhX1h4c3dRZlhQRDVhTEE3QmRfeWc2cjhMcVMycER6dHZIbjZBWk1hTEpQUUxvek92VS1LSXIzdmJSTE4tQ1pfajFjUnpKODd5emhrTzFFZ0pKU0hSaHlSeWU3SGlSNg?oc=5"
+    },
+    {
+      "date": "11 Sep",
+      "time": "08:00 HKT",
+      "publishedAt": "2026-09-11T08:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Bloomberg",
+      "eventId": "us-cpi-aug",
+      "title": "Watch Core CPI Hikes Ahead of FOMC Meeting",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQZHR0eTJaQmpFTnRrN3doQkg1ZG5QMzhheG5OOEE0cFUxc0NteXJmMXIxczRDR0dQYjM1MWtJNUVoS09NVHk3cHRKQnhsTE96TkllTjlNaDk3ellFRk93RWltTjFFRGktMks1V1RMRXFqODRDLUFSTEctUXdEQ1V0VnZUNms5V0VmVVBtUHk0dEVBZ0ZxV2ttYg?oc=5"
     },
     {
       "date": "11 Sep",
@@ -206,6 +194,18 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPYkl2TXVUS2Vmd0x5bVlfVWhCM25hYU1qTlRxcEdreEYxNGJ6NEw1Qnl2OGIwX1hXb3ZfVTVtNVFkT2VxbjdzSXpIMWVYZGxHRXRoRTRmay1QSjE2ZFE5X1pQZGFELUVDdG9SeGhRYlBJNXNkelFCQ0dCRVRfa081N2gxRy0?oc=5"
+    },
+    {
+      "date": "03 Sep",
+      "time": "15:00 HKT",
+      "publishedAt": "2026-09-03T15:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Bloomberg",
+      "eventId": "us-cpi-aug",
+      "title": "Fed’s Waller Leans Toward Holding Rates If Inflation Improving",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxORXlIcnZvV2lid3FGVjYtajNzbGlaMW5KLU5JVk5NWlJ0UGlyME5hUzZ5dmJkMHBaellQU09tUEo5NExTeHAtQUM0cGRXUmV1d1pWV1hZc3VaZHUyNzZEcF9ERFU0R0FZZU00Y0pyMkcwLUJ5UDRURnRiRm80TzY2WEZkc3loQnoxUFdwVDViYklNNmhQVnc0OTk1TG1RVFVJaTZSNjhUenU2eTdJbTZlOVctVQ?oc=5"
     },
     {
       "date": "30 Aug",
