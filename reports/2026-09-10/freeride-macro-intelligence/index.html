@@ -410,6 +410,11 @@
                 <tbody id="researchComparisonBody"></tbody>
               </table>
             </div>
+            <div class="accuracy-strip" id="houseAccuracy">
+              <div class="accuracy-heading"><span class="section-kicker">RECENT HOUSE CALL ACCURACY</span><strong>Completed research-linked events</strong><small>Exact row result across July CPI, July FOMC and August payrolls | small sample, not a track record</small></div>
+              <div class="accuracy-card"><span class="institution-mark northstar">GS</span><strong>0 / 3</strong><b>0%</b><small>exact call hit</small></div>
+              <div class="accuracy-card"><span class="institution-mark harbor">JPM</span><strong>2 / 3</strong><b>67%</b><small>exact call hit</small></div>
+            </div>
           </section>
 
           <div class="institution-grid">
@@ -459,16 +464,16 @@
 
           <div class="history-grid">
             <section class="analysis-section">
-              <div class="section-heading-row"><div><span class="section-kicker">MEDIAN RESPONSE</span><h2>Cross-asset distribution</h2></div><button class="icon-button light" type="button" title="????" aria-label="????" data-action="show-method"><i data-lucide="info"></i></button></div>
+              <div class="section-heading-row"><div><span class="section-kicker">MEDIAN RESPONSE</span><h2>Cross-asset response</h2></div><button class="icon-button light" type="button" title="????" aria-label="????" data-action="show-method"><i data-lucide="info"></i></button></div>
               <div id="impactRows" class="impact-rows"></div>
               <div class="impact-axis"><span>negative</span><span>0</span><span>positive</span></div>
             </section>
 
             <section class="analysis-section distribution-section">
-              <div class="section-heading-row"><div><span class="section-kicker">SAMPLE QUALITY</span><h2>Outcome distribution</h2></div><span id="sampleBadge" class="sample-badge">n=42 ? usable</span></div>
+              <div class="section-heading-row"><div><span class="section-kicker">SAMPLE QUALITY</span><h2>Asset outcome distributions</h2></div><span id="sampleBadge" class="sample-badge">n=42 ? usable</span></div>
               <div id="distributionChart" class="distribution-chart" aria-label="Historical outcome density for the selected surprise bucket and horizon"></div>
               <div class="distribution-axis" aria-hidden="true"><span>Lower / negative response</span><span>Median response</span><span>Higher / positive response</span></div>
-              <p class="distribution-explainer"><strong>How to read this:</strong> each bar is a normalized density band across the selected historical sample. Taller bars mean more comparable observations landed in that outcome band; they are not a forecast probability for the next release.</p>
+              <p class="distribution-explainer"><strong>How to read this:</strong> each row is one asset under the selected CPI surprise bucket and horizon. The marker is the historical median; the bars show normalized outcome density around that asset's response. This is a standardized presentation of the event-study summary, not raw observation counts or a forecast probability for the next release.</p>
               <div class="distribution-summary">
                 <div><span>Direction hit rate</span><strong id="hitRate">67%</strong></div>
                 <div><span>Median / mean gap</span><strong id="meanGap">0.08?</strong></div>

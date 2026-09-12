@@ -725,6 +725,15 @@ h2 { margin-bottom: 0; font-size: 16px; line-height: 1.25; }
 .comparison-table th, .analog-table th, .holdings-table th { color: var(--muted); background: #f8faf8; font-size: 10px; font-weight: 800; white-space: nowrap; }
 .comparison-table td strong, .comparison-table td small { display: block; }
 .comparison-table td small { margin-top: 3px; color: var(--muted); font-size: 9px; }
+.accuracy-strip { display: grid; grid-template-columns: minmax(0, 1fr) 120px 120px; gap: 10px; align-items: center; margin-top: 13px; padding: 11px; background: var(--canvas); border: 1px solid var(--line); border-radius: 4px; }
+.accuracy-heading { display: grid; gap: 2px; }
+.accuracy-heading strong { font-size: 11px; }
+.accuracy-heading small { color: var(--muted); font-size: 9px; line-height: 1.35; }
+.accuracy-card { display: grid; grid-template-columns: 25px 1fr; column-gap: 7px; align-items: center; padding-left: 9px; border-left: 1px solid var(--line); }
+.accuracy-card .institution-mark { grid-row: span 2; }
+.accuracy-card strong { font-size: 12px; }
+.accuracy-card b { color: var(--green); font-size: 11px; }
+.accuracy-card small { grid-column: 2; color: var(--muted); font-size: 8px; }
 .comparison-table .consensus-row { background: var(--blue-soft); }
 .result-chip.hit { color: var(--green); background: var(--green-soft); }
 .result-chip.miss { color: var(--red); background: var(--red-soft); }
@@ -784,9 +793,19 @@ h2 { margin-bottom: 0; font-size: 16px; line-height: 1.25; }
 .hit-rate { color: var(--muted); text-align: right; font-size: 10px; }
 .impact-axis { display: flex; justify-content: space-between; margin: 7px 63px 0 177px; color: #9aa59f; font-size: 8px; }
 .sample-badge { color: var(--green); background: var(--green-soft); }
-.distribution-chart { height: 155px; display: flex; align-items: flex-end; gap: 5px; padding: 13px 8px 0; border-bottom: 1px solid var(--line); background-image: linear-gradient(to bottom, transparent 32%, #edf0ed 33%, transparent 34%, transparent 65%, #edf0ed 66%, transparent 67%); }
-.distribution-chart span { flex: 1; min-width: 5px; background: var(--teal); opacity: .8; border-radius: 2px 2px 0 0; }
-.distribution-chart span.negative-bar { background: var(--red); }
+.distribution-chart { display: grid; gap: 13px; }
+.asset-distribution header { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; margin-bottom: 5px; }
+.asset-distribution header strong { font-size: 10px; }
+.asset-distribution header strong small { color: var(--muted); font-size: 8px; font-weight: 650; }
+.asset-distribution header span { color: var(--muted); font-size: 8px; }
+.asset-density { position: relative; height: 58px; padding: 5px 0 0; border-bottom: 1px solid var(--line); background-image: linear-gradient(to bottom, transparent 32%, #edf0ed 33%, transparent 34%, transparent 65%, #edf0ed 66%, transparent 67%); }
+.asset-density::after { content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 1px; background: #adb9b1; }
+.asset-density-bars { height: 100%; display: flex; align-items: flex-end; gap: 3px; }
+.asset-density-bars span { position: relative; z-index: 1; flex: 1; min-width: 4px; opacity: .82; border-radius: 2px 2px 0 0; }
+.asset-density-bars span.negative-bar { background: var(--red); }
+.asset-density-bars span.positive-bar { background: var(--teal); }
+.asset-median-marker { position: absolute; z-index: 2; top: 0; bottom: -3px; width: 3px; margin-left: -1px; background: var(--ink); border-radius: 2px; }
+.asset-density-axis { display: flex; justify-content: space-between; margin-top: 4px; color: #9aa59f; font-size: 8px; }
 .distribution-axis { display: flex; justify-content: space-between; gap: 8px; margin-top: 6px; color: var(--muted); font-size: 8px; }
 .distribution-explainer { margin: 10px 0 0; color: var(--muted); font-size: 10px; line-height: 1.45; }
 .distribution-explainer strong { color: var(--ink); }
@@ -1017,6 +1036,9 @@ h2 { margin-bottom: 0; font-size: 16px; line-height: 1.25; }
   .distribution-summary { grid-template-columns: 1fr; }
   .distribution-summary div { display: flex; justify-content: space-between; padding: 7px 0; border-right: 0; border-bottom: 1px solid var(--line); }
   .distribution-summary div:last-child { border-bottom: 0; }
+  .accuracy-strip { grid-template-columns: 1fr 1fr; }
+  .accuracy-heading { grid-column: 1 / -1; }
+  .accuracy-card { border-left: 0; padding-left: 0; }
   .scenario-select { min-width: 0; }
   .holdings-table { min-width: 690px; }
   .method-band { grid-template-columns: 1fr; }

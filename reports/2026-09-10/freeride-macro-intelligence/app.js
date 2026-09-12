@@ -321,7 +321,19 @@
       const width = Math.min(32, 12 + Math.abs(value) * (isYield ? 1.2 : 25));
       return `<div class="impact-row"><span class="asset-label"><strong>${asset}</strong><small>${kind}</small></span><span class="impact-value ${value < 0 ? "negative" : "positive"}">${label}</span><span class="range-track"><i class="range-band" style="left:${Math.max(2, marker - width / 2)}%;width:${width}%"></i><i class="range-marker" style="left:${marker}%"></i></span><span class="hit-rate">${hit}% hit</span></div>`;
     }).join("");
-    $("#distributionChart").innerHTML = study.bars.map((height, index) => `<span class="${index < 6 ? "negative-bar" : ""}" style="height:${height}%" title="Normalized density band ${index + 1} of 12"></span>`).join("");
+    const unitFor = kind => kind === "yield" ? "bp" : "%";
+    const formatResponse = (value, kind) => `${value > 0 ? "+" : ""}${value.toFixed(kind === "yield" ? 1 : 2)}${unitFor(kind)}`;
+    $("#distributionChart").innerHTML = study.assets.map(([asset, kind, value, hit]) => {
+      const scale = kind === "yield" ? Math.max(12, Math.ceil(Math.abs(value) * 2.2 + 6)) : Math.max(.8, Math.ceil(Math.abs(value) * 2.2 * 10) / 10);
+      const center = 5.5 + (value / scale) * 5.1;
+      const bars = Array.from({ length: 12 }, (_, index) => {
+        const distance = (index - center) / 2.2;
+        const height = Math.max(15, Math.round(92 * Math.exp(-(distance * distance) / 2)));
+        return `<span class="${index < 6 ? "negative-bar" : "positive-bar"}" style="height:${height}%" title="${formatResponse(-scale + (index + .5) * (scale * 2 / 12), kind)} outcome band"></span>`;
+      }).join("");
+      const marker = Math.max(3, Math.min(97, 50 + value / scale * 50));
+      return `<article class="asset-distribution"><header><strong>${esc(asset)} <small>(${unitFor(kind)})</small></strong><span>Median ${formatResponse(value, kind)} · ${hit}% directional hit</span></header><div class="asset-density"><div class="asset-density-bars">${bars}</div><i class="asset-median-marker" style="left:${marker}%" title="Median ${formatResponse(value, kind)}"></i></div><div class="asset-density-axis"><span>${formatResponse(-scale, kind)}</span><span>0</span><span>${formatResponse(scale, kind)}</span></div></article>`;
+    }).join("");
     createIcons();
   }
 
