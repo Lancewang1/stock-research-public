@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-12T17:51:59+00:00",
+  "generatedAt": "2026-09-12T20:38:41+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
@@ -137,18 +137,6 @@
     },
     {
       "date": "11 Sep",
-      "time": "20:54 HKT",
-      "publishedAt": "2026-09-11T20:54:13+08:00",
-      "kind": "NEWS",
-      "source": "Bloomberg",
-      "eventId": "us-fomc-sep",
-      "title": "Economists See Fed Defying Expectations for Rate Hikes",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOaGN6aS00aUNHRFNQTVIyZm5MZ2l3cXNrUERERGNKT1BUQXp3eGxnejZSUFM0eXdmN0djUF91V1QyWWZ6SXZsX3FfU0lYSF9IcUJ3LVQ3Rllwd0Q3bEw3VFN4dGxJQUFqLVV1WDZIWnVEamlEOWxQa3Rad0lKc1pvWGxjb3B6bHhLM2E5eWN5RWpja0c4VDA5TnhuX19CQjNGZS1GUWtTY3A1QXFQbVcwalBB?oc=5"
-    },
-    {
-      "date": "11 Sep",
       "time": "20:37 HKT",
       "publishedAt": "2026-09-11T20:37:00+08:00",
       "kind": "NEWS",
@@ -218,6 +206,18 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNUzZJNGJfYURYRlltYzdRUm5nODJzb245dkRFTml5bXB6YWs0QXQxaUdaRjZzZUp4bmVHeUFzNWJHbU8yVkoyZ2ltOTdHM2xmaHZ5WV9mbmNlRTFzMHpseG5SUklKbUJTRUVyUHRkVnZnMUV5UmVwbGtxOWh2Ti1EMkx2MkpZd09mWmt6TkFKQV9scUtIal8xd1NreFZQRURteVdN?oc=5"
+    },
+    {
+      "date": "11 Sep",
+      "time": "08:00 HKT",
+      "publishedAt": "2026-09-11T08:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Bloomberg",
+      "eventId": "us-cpi-aug",
+      "title": "Watch CPI Sets Up ‘Risk Management Hikes’ for Fed, Pimco’s Wilding Says",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOUnR6ejl4cnUyaVliWkIteER2aUJvYnhMYUZFN3dwYVN0Q0pueFhBRV84a3FVaUdORVdRX0M5TGFNN1BZSXlhX1h4c3dRZlhQRDVhTEE3QmRfeWc2cjhMcVMycER6dHZIbjZBWk1hTEpQUUxvek92VS1LSXIzdmJSTE4tQ1pfajFjUnpKODd5emhrTzFFZ0pKU0hSaHlSeWU3SGlSNg?oc=5"
     }
   ]
 }
