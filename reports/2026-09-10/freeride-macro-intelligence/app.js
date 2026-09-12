@@ -240,9 +240,23 @@
 
   async function loadAutoNews() {
     try {
-      const response = await fetch(`news-feed.json?v=${Date.now()}`, { cache: "no-store" });
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      const payload = await response.json();
+      const feedUrls = [
+        "https://raw.githubusercontent.com/Lancewang1/stock-research-public/main/reports/2026-09-10/freeride-macro-intelligence/news-feed.json",
+        "news-feed.json"
+      ];
+      let payload;
+      for (const url of feedUrls) {
+        try {
+          const separator = url.includes("?") ? "&" : "?";
+          const response = await fetch(`${url}${separator}v=${Date.now()}`, { cache: "no-store" });
+          if (!response.ok) continue;
+          payload = await response.json();
+          break;
+        } catch (error) {
+          // Try the bundled Pages snapshot when the live branch feed is unavailable.
+        }
+      }
+      if (!payload) throw new Error("No feed source available");
       const merged = [...(payload.items || []), ...(MARKET.homeContext || [])];
       const seen = new Set();
       state.contextItems = merged.filter(item => {
