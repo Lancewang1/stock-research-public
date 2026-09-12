@@ -1,14 +1,11 @@
 window.FREERIDE_DATA = {
   homeContext: [
-    {date:"09 Sep",time:"21:29 HKT",kind:"NEWS",source:"Reuters",eventId:"us-fomc-sep",title:"Fed hold remains the base case, but hike expectations are broadening",summary:"A Reuters poll kept steady policy as the central case for the rest of 2026 while noting that more analysts now see at least one hike.",access:"Public headline"},
-    {date:"08 Sep",time:"Research",kind:"RESEARCH",source:"GS",eventId:"us-cpi-aug",title:"August core CPI forecast at 0.23% MoM",summary:"GS stood 3bp above the 0.20% street median, expecting benign shelter, mixed autos and firmer airfares; persistent oil disruption was the upside tail.",access:"Licensed | pp.1–3"},
-    {date:"08 Sep",time:"Market context",kind:"NEWS",source:"Bloomberg",eventId:"us-cpi-aug",title:"Oil rally adds to the inflation-risk backdrop",summary:"The public headline framed stronger oil as a renewed inflation concern ahead of the US CPI and Fed decision window.",access:"Public headline"},
-    {date:"06 Sep",time:"19:00 HKT",kind:"NEWS",source:"Financial Times",eventId:"us-cpi-aug",title:"Will inflation data persuade the Fed to raise rates?",summary:"The FT preview centered the upcoming CPI release as the key test for whether policymakers would move from patience toward renewed tightening.",access:"Public headline"},
-    {date:"04 Sep",time:"Research",kind:"RESEARCH",source:"GS",eventId:"us-payrolls-aug",title:"Payroll rebound forced a sector-level rethink",summary:"After the 162k print, GS attributed the upside to leisure and hospitality, local education, healthcare and construction rather than a uniform acceleration.",access:"Licensed | p.1"},
-    {date:"04 Sep",time:"20:06 HKT",kind:"NEWS",source:"Reuters",eventId:"us-payrolls-aug",title:"August job growth expected to rebound",summary:"The pre-release Reuters framing expected firmer payroll growth with unemployment holding at 4.1%, providing a market baseline before the upside result.",access:"Public headline"},
-    {date:"03 Sep",time:"Research",kind:"RESEARCH",source:"JPM",eventId:"us-payrolls-aug",title:"Underlying private hiring seen near 40–55k",summary:"JPM forecast 50k payroll growth and a 4.1% unemployment rate, balancing ADP resilience against Homebase and seasonal softness.",access:"Licensed | p.1"},
-    {date:"03 Sep",time:"Research",kind:"RESEARCH",source:"GS",eventId:"us-fomc-sep",title:"Waller stance tied directly to incoming inflation",summary:"GS read continued disinflation as supporting a hold, while hotter August CPI and PPI would reopen the hike tail.",access:"Licensed | p.1"},
-    {date:"19 Aug",time:"Research",kind:"RESEARCH",source:"JPM",eventId:"us-fomc-sep",title:"Later hike risk retained after hawkish minutes",summary:"JPM kept a conditional later-year tightening view but acknowledged that softer subsequent inflation and labor data reduced near-term urgency.",access:"Licensed | p.1"}
+    {date:"11 Sep",time:"Post-release",publishedAt:"2026-09-11T16:49:00-04:00",kind:"RESEARCH",source:"GS",eventId:"us-cpi-aug",title:"GS adds a 25bp September hike",summary:"GS changed its September call from hold to hike, citing the risk of disappointing a market pricing nearly 90%, while saying the CPI did not materially alter its fundamental inflation view.",access:"Licensed | Adding a Hike | pp.1–2"},
+    {date:"11 Sep",time:"Post-release",publishedAt:"2026-09-11T09:53:00-04:00",kind:"RESEARCH",source:"GS",eventId:"us-cpi-aug",title:"Core CPI beats; core PCE tracking rises to 0.26%",summary:"Wireless services contributed about 10bp and travel was firm, while shelter was softer than GS expected. Its August core PCE estimate rose from 0.24% to 0.26%.",access:"Licensed | CPI review | pp.1–2"},
+    {date:"11 Sep",time:"Post-release",publishedAt:"2026-09-11T12:00:00-04:00",kind:"RESEARCH",source:"JPM",eventId:"us-cpi-aug",title:"JPM adds September hike but sees weak CPI read-through",summary:"JPM raised August core PCE tracking to 0.25% and added a September hike, yet emphasized that core CPI excluding telephone services was only 0.19%.",access:"Licensed | CPI & TIPS | pp.1–3"},
+    {date:"11 Sep",time:"Rates strategy",publishedAt:"2026-09-11T11:00:00-04:00",kind:"RESEARCH",source:"JPM",eventId:"us-cpi-aug",title:"Inflation-market signal softer than the headline",summary:"JPM saw a 10bp wireless contribution, commodity risk premium and crowded TIPS positioning; its macro call turned hawkish while its inflation-market bias stayed narrower.",access:"Licensed | TIPS Strategy | pp.1–4"},
+    {date:"11 Sep",time:"Post-release",publishedAt:"2026-09-11T14:51:00+00:00",kind:"RESEARCH",source:"Barclays",eventId:"us-cpi-aug",title:"August CPI clears the way for a September hike",summary:"Barclays estimated 0.25% August core PCE and maintained a 25bp September hike call, while treating much of the wireless and travel strength as unlikely to repeat.",access:"Licensed | US Economics | pp.1–2"},
+    {date:"11 Sep",time:"Inflation monitor",publishedAt:"2026-09-11T14:51:00+00:00",kind:"RESEARCH",source:"Barclays",eventId:"us-cpi-aug",title:"Separating inflation signal from wireless interference",summary:"Barclays expects core CPI to decelerate toward 0.20% in September as phone-plan inflation partially unwinds and volatile travel components cool.",access:"Licensed | Inflation Monitor | pp.1–2"}
   ],
   rates: [
     ["2026-07-01",4.17,4.48,4.97],["2026-07-02",4.14,4.49,4.98],["2026-07-06",4.13,4.48,4.99],
@@ -52,7 +49,13 @@ window.FREERIDE_DATA = {
     { date:"2026-09-04", type:"DATA", institution:"BLS", title:"August employment report", eventId:"us-payrolls-aug" },
     { date:"2026-09-04", type:"RESEARCH", institution:"GS", title:"August payrolls review", eventId:"us-payrolls-aug" },
     { date:"2026-09-08", type:"RESEARCH", institution:"GS", title:"August CPI preview", eventId:"us-cpi-aug" },
-    { date:"2026-09-11", type:"DATA", institution:"BLS", title:"August CPI release | 20:30 HKT", eventId:"us-cpi-aug", upcoming:true },
+    { date:"2026-09-11", type:"DATA", institution:"BLS", title:"August CPI release | 20:30 HKT", eventId:"us-cpi-aug", commentary:"Core CPI printed 0.29% MoM versus 0.20% consensus; headline CPI was 0.40% MoM and 3.40% YoY." },
+    { date:"2026-09-11", type:"RESEARCH", institution:"GS", title:"Core CPI above expectations", eventId:"us-cpi-aug", commentary:"GS saw wireless services add about 10bp and travel add another 8bp combined, while shelter was softer than expected; core PCE tracking rose to 0.26%." },
+    { date:"2026-09-11", type:"RESEARCH", institution:"GS", title:"Adding a September hike", eventId:"us-cpi-aug", commentary:"GS changed its September call from hold to a 25bp hike, while saying the CPI did not materially change its fundamental inflation view." },
+    { date:"2026-09-11", type:"RESEARCH", institution:"JPM", title:"CPI and TIPS review", eventId:"us-cpi-aug", commentary:"JPM emphasized that core CPI excluding telephone services was 0.19%, raised core PCE tracking to 0.25%, and added September and December hikes." },
+    { date:"2026-09-11", type:"RESEARCH", institution:"JPM", title:"TIPS strategy update", eventId:"us-cpi-aug", commentary:"JPM viewed the inflation-market read-through as softer than the headline because of wireless, commodity risk premium and vulnerable TIPS positioning." },
+    { date:"2026-09-11", type:"RESEARCH", institution:"Barclays", title:"August CPI clears the way", eventId:"us-cpi-aug", commentary:"Barclays maintained a 25bp September hike and tracked core PCE at 0.25%, while treating wireless and travel strength as partly one-off." },
+    { date:"2026-09-11", type:"RESEARCH", institution:"Barclays", title:"Wireless interference", eventId:"us-cpi-aug", commentary:"Barclays expects core CPI to slow toward 0.20% in September as phone-plan inflation partially unwinds and travel cools." },
     { date:"2026-09-15", type:"FED", institution:"Fed", title:"September meeting begins", eventId:"us-fomc-sep", upcoming:true },
     { date:"2026-09-16", type:"FED", institution:"Fed", title:"FOMC decision, SEP & press conference", eventId:"us-fomc-sep", upcoming:true }
   ],
@@ -113,26 +116,36 @@ window.FREERIDE_DATA = {
       ]
     },
     "us-cpi-aug": {
-      cutoff:"08 Sep 2026 ? pre-release set",
-      lead:"The supplied August CPI research set contains a GS preview but no same-vintage JPM preview. The correct product behavior is to show the coverage gap, not synthesize a JPM forecast.",
+      cutoff:"12 Sep 2026 | post-release set",
+      lead:"August core CPI rose 0.29% month-on-month versus 0.20% consensus. The beat was real, but unusually concentrated: wireless services added about 10bp, while airfares and lodging added about 4bp each. Excluding telephone services, JPM calculated core CPI at 0.19%.",
       points:[
-        ["GS is slightly above consensus on core","GS expects 0.23% core CPI versus 0.20% consensus, while its 0.39% headline call is essentially aligned with the 0.40% median."],
-        ["Composition is the real test","The preview expects benign shelter, mixed autos and firmer airfares. Oil-market disruption is the principal upside tail beyond August."],
-        ["The cross-house panel is intentionally incomplete","No eligible JPM August CPI preview exists in the supplied document set as of the cutoff."]
+        ["The surprise was large; the signal was narrower","Core beat consensus by 9bp, yet wireless and travel explain much of the gap. Shelter was softer than GS expected, tempering the persistence signal."],
+        ["Macro calls turned hawkish","GS moved from hold to a 25bp September hike; JPM added September and retained December; Barclays maintained its September hike call."],
+        ["Next month is the clean cross-check","Barclays sees September core CPI near 0.20% as phone-plan inflation partially unwinds. A repeat would make the August signal more persistent; a reversal would validate the one-off interpretation."]
       ],
       rows:[
-        {source:"Street consensus",meta:"Core CPI MoM",forecast:"0.20%",vs:"?",thesis:"Continued gradual disinflation",risk:"Energy and residual tariff effects",gap:"Pending",result:"neutral"},
-        {source:"Goldman Sachs",meta:"Preview ? 08 Sep ? pp.1?3",forecast:"0.23%",vs:"+0.03pp",thesis:"Benign shelter; mixed autos; firmer airfares",risk:"Persistent oil disruption",gap:"Pending",result:"neutral"},
-        {source:"J.P. Morgan",meta:"No eligible document in supplied set",forecast:"Unavailable",vs:"?",thesis:"Coverage gap shown explicitly",risk:"Do not backfill from July research",gap:"?",result:"neutral"}
+        {source:"Street consensus",meta:"Core CPI MoM | pre-release median",forecast:"0.20%",vs:"-",thesis:"Continued gradual disinflation",risk:"Wireless, travel and residual tariff effects",gap:"+0.09pp",result:"miss"},
+        {source:"Goldman Sachs",meta:"PIT preview | 08 Sep | pp.1-3",forecast:"0.23%",vs:"+0.03pp",thesis:"Benign shelter; mixed autos; firmer airfares",risk:"Persistent oil disruption",gap:"+0.06pp",result:"miss"},
+        {source:"J.P. Morgan",meta:"0.21% retrospectively cited | not PIT-verified",forecast:"0.21%",vs:"+0.01pp",thesis:"Underlying inflation softer ex-telephone",risk:"Wireless concentration and TIPS positioning",gap:"+0.08pp",result:"miss"},
+        {source:"Barclays",meta:"0.23% retrospectively cited | not PIT-verified",forecast:"0.23%",vs:"+0.03pp",thesis:"Wireless and travel partly one-off",risk:"Persistence into September",gap:"+0.06pp",result:"miss"}
       ],
-      bars:[{label:"Street",value:.20,meta:"Consensus",className:"actual"},{label:"GS",value:.23,meta:"Preview",className:"gs"}],
-      pattern:"The missing JPM point is a data-quality result. It prevents a false horizontal comparison and keeps the vintage boundary auditable.",
+      bars:[{label:"Street",value:.20,meta:"Consensus",className:"actual"},{label:"GS",value:.23,meta:"PIT preview",className:"gs"},{label:"JPM",value:.21,meta:"Retrospectively cited",className:"jpm"},{label:"Barclays",value:.23,meta:"Retrospectively cited",className:"jpm"},{label:"Actual",value:.29,meta:"BLS first print",className:"actual"}],
+      pattern:"All forecasts were below the 0.29% outturn, but the post-release interpretation converged: the headline beat overstated the persistent signal because wireless and travel dominated the surprise.",
       documents:[
-        {institution:"Goldman Sachs",mark:"GS",date:"08 Sep ? Preview",stance:"0.23% core",tone:"confirmed",text:"Forecast benign shelter, mixed autos and a 4% rise in airfares; flagged persistent oil disruption as an upside risk.",ref:"August CPI Preview ? pp.1?3"}
+        {institution:"Goldman Sachs",mark:"GS",date:"08 Sep | Preview",stance:"0.23% core",tone:"confirmed",text:"Forecast benign shelter, mixed autos and firmer airfares before the release.",ref:"August CPI Preview | pp.1-3"},
+        {institution:"Goldman Sachs",mark:"GS",date:"11 Sep | Review",stance:"0.26% core PCE",tone:"revised",text:"Attributed roughly 10bp to wireless, with airfares and lodging also firm; shelter was softer than expected.",ref:"Core CPI Above Expectations | pp.1-2"},
+        {institution:"Goldman Sachs",mark:"GS",date:"11 Sep | Policy",stance:"September +25bp",tone:"revised",text:"Added a September hike, partly reflecting market pricing and credibility, without materially changing the fundamental inflation view.",ref:"Adding a Hike in September | pp.1-2"},
+        {institution:"J.P. Morgan",mark:"JPM",date:"11 Sep | CPI/TIPS",stance:"0.25% core PCE",tone:"revised",text:"Calculated core CPI excluding telephone services at 0.19% and added September and December hikes.",ref:"US CPI & TIPS | pp.1-3"},
+        {institution:"J.P. Morgan",mark:"JPM",date:"11 Sep | TIPS",stance:"Softer read-through",tone:"confirmed",text:"Saw wireless, commodity risk premium and crowded positioning as reasons not to chase the headline inflation signal.",ref:"TIPS Strategy | pp.1-4"},
+        {institution:"Barclays",mark:"BARC",date:"11 Sep | Review",stance:"September +25bp",tone:"confirmed",text:"Maintained a September hike, tracked core PCE at 0.25%, and expected one-off components to cool.",ref:"August CPI clears the way | pp.1-2"},
+        {institution:"Barclays",mark:"BARC",date:"11 Sep | Monitor",stance:"Sep core 0.20%",tone:"revised",text:"Expected partial reversal in phone-plan inflation and cooler travel to slow the next core CPI print.",ref:"Wireless interference | pp.1-2"}
       ],
       timeline:[
-        ["08 Sep","GS","Preview","Core CPI forecast at 0.23% versus 0.20% consensus."],
-        ["11 Sep | 20:30 HKT","BLS","Scheduled","Release remains pending at the page's 09 Sep cutoff."]
+        ["08 Sep","GS","PIT preview","Core CPI forecast at 0.23% versus 0.20% consensus."],
+        ["11 Sep | 20:30 HKT","BLS","Release","Core CPI printed 0.29% MoM; headline printed 0.40% MoM and 3.40% YoY."],
+        ["11 Sep","GS","Post-release","Raised core PCE tracking to 0.26% and changed September from hold to hike."],
+        ["11 Sep","JPM","Post-release","Highlighted 0.19% core ex-telephone, raised PCE tracking to 0.25%, and added hikes."],
+        ["11 Sep","Barclays","Post-release","Maintained a September hike but forecast a 0.20% September core CPI reversal."]
       ]
     },
     "us-fomc-jul": {

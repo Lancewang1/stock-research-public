@@ -25,7 +25,7 @@
         <span>CN + US</span>
         <i data-lucide="chevron-down"></i>
       </button>
-      <span class="as-of">AS OF 09 SEP 2026 | 09:00 HKT</span>
+      <span class="as-of">AS OF 12 SEP 2026 | HKT</span>
     </div>
 
     <div class="header-actions">
@@ -94,7 +94,7 @@
     <main id="mainContent" class="main-content">
       <div class="demo-banner" role="note">
         <i data-lucide="database-zap"></i>
-        <span><strong>Mixed-source prototype.</strong> UST yields are observed FRED data; GS/JPM views are licensed research-derived. Event studies and portfolio scenarios remain illustrative.</span>
+        <span><strong>12 Sep CPI briefing.</strong> News refreshes automatically; UST yields are observed FRED data and GS/JPM/Barclays views are licensed research-derived. Event studies and portfolio scenarios remain illustrative.</span>
       </div>
 
       <section id="calendarView" class="view-section" aria-labelledby="calendarTitle">
@@ -102,7 +102,7 @@
           <div>
             <div class="eyebrow">MACRO EVENT INTELLIGENCE</div>
             <h1 id="calendarTitle">Economic calendar</h1>
-            <p>Release facts, street expectations and portfolio-relevant event risk in one view.</p>
+            <p>August US CPI release facts, post-release house views and portfolio-relevant event risk in one view.</p>
           </div>
           <div class="toolbar-actions">
             <button class="secondary-button" type="button" data-action="export" title="??????">
@@ -171,25 +171,25 @@
               <div class="risk-meter" aria-label="???? 74 ?">
                 <span style="width: 74%"></span>
               </div>
-              <p>Inflation and labor prints cluster before the FOMC decision window.</p>
+              <p>August core CPI beat consensus, shifting the immediate focus to composition and the September FOMC response.</p>
               <dl class="compact-stats">
                 <div><dt>High impact</dt><dd>4</dd></div>
-                <div><dt>Research updates</dt><dd>11</dd></div>
+                <div><dt>CPI research updates</dt><dd>6</dd></div>
                 <div><dt>Portfolio flags</dt><dd>3</dd></div>
               </dl>
             </section>
 
-            <section class="rail-panel">
+            <section id="homeContextPanel" class="rail-panel live-context-panel">
               <div class="panel-title-row">
                 <div><span class="section-kicker">LIVE CONTEXT</span><h2>News & research</h2></div>
-                <button type="button" class="icon-button light" title="??" aria-label="??">
+                <button type="button" class="icon-button light" title="Refresh feed" aria-label="Refresh feed" data-action="refresh-context">
                   <i data-lucide="refresh-cw"></i>
                 </button>
               </div>
               <div class="context-filters" role="group" aria-label="Live context filter"><button class="is-active" type="button" data-context-filter="ALL">All</button><button type="button" data-context-filter="NEWS">News</button><button type="button" data-context-filter="RESEARCH">Research</button></div>
-              <div class="context-feed-meta"><span id="contextCount">9 items</span><span>Through 09 Sep | HKT</span></div>
+              <div class="context-feed-meta"><span id="contextCount">Loading items</span><span id="contextFeedStatus">Loading automatic feed</span></div>
               <div id="homeContextFeed" class="home-context-feed"></div>
-              <p class="context-source-note">News uses publicly verified headlines and conservative summaries. Licensed research is paraphrased with page locators.</p>
+              <p class="context-source-note">News headlines refresh twice hourly and link to the original publisher via the monitored feed. Licensed research is paraphrased with page locators; no report files are redistributed.</p>
             </section>
 
             <section class="rail-panel portfolio-rail">
@@ -245,7 +245,7 @@
               <span id="eventStatus" class="status-badge released">Released</span>
               <span id="eventImpact" class="impact-badge high"><i data-lucide="zap"></i> High impact</span>
             </div>
-            <h1 id="eventTitle">US CPI ? August</h1>
+            <h1 id="eventTitle">US CPI / August</h1>
             <p id="eventSubtitle">03 Sep 2026 | 20:30 HKT | Bureau of Labor Statistics</p>
           </div>
           <div class="confidence-box">
@@ -320,7 +320,7 @@
 
             <aside class="secondary-column">
               <section class="analysis-section compact-section">
-                <span class="section-kicker">ILLUSTRATIVE SHOCK ? T+30M</span>
+                <span class="section-kicker">ILLUSTRATIVE SHOCK | T+30M</span>
                 <h2>Cross-asset pulse</h2>
                 <div class="asset-pulse-list">
                   <div><span>USD index</span><strong class="positive">+0.25%</strong><small>74th pct</small></div>
@@ -374,7 +374,7 @@
               <span><i class="event-key research"></i>Research publication</span>
               <span><i class="event-key data"></i>Data release</span>
               <span><i class="event-key fed"></i>Fed meeting / communication</span>
-              <span class="chart-source">Source: FRED DGS2, DGS10, DGS30 ? through 08 Sep 2026</span>
+              <span class="chart-source">Source: FRED DGS2, DGS10, DGS30 | observed through 08 Sep 2026</span>
             </div>
             <div id="catalystRail" class="catalyst-rail"></div>
           </section>
@@ -392,15 +392,15 @@
             <div class="table-scroll">
               <table class="comparison-table">
                 <thead>
-                  <tr><th>Source</th><th>Forecast</th><th>Vs street</th><th>Core thesis</th><th>Key risk before release</th><th>Actual ? forecast</th></tr>
+                  <tr><th>Source</th><th>Forecast</th><th>Vs street</th><th>Core thesis</th><th>Key risk before release</th><th>Actual - forecast</th></tr>
                 </thead>
                 <tbody id="researchComparisonBody"></tbody>
               </table>
             </div>
             <div class="accuracy-strip" id="houseAccuracy">
-              <div class="accuracy-heading"><span class="section-kicker">RECENT HOUSE CALL ACCURACY</span><strong>Completed research-linked events</strong><small>Exact row result across July CPI, July FOMC and August payrolls | small sample, not a track record</small></div>
-              <div class="accuracy-card"><span class="institution-mark northstar">GS</span><strong>0 / 3</strong><b>0%</b><small>exact call hit</small></div>
-              <div class="accuracy-card"><span class="institution-mark harbor">JPM</span><strong>2 / 3</strong><b>67%</b><small>exact call hit</small></div>
+              <div class="accuracy-heading"><span class="section-kicker">RECENT HOUSE CALL ACCURACY</span><strong>Completed point-in-time research calls</strong><small>Exact calls only | denominators differ by eligible preview coverage | small sample, not a track record</small></div>
+              <div class="accuracy-card"><span class="institution-mark northstar">GS</span><strong>0 / 4</strong><b>0%</b><small>August CPI preview included</small></div>
+              <div class="accuracy-card"><span class="institution-mark harbor">JPM</span><strong>2 / 3</strong><b>67%</b><small>August CPI excluded: no supplied PIT preview</small></div>
             </div>
           </section>
 
@@ -415,7 +415,7 @@
             </section>
 
             <section class="analysis-section document-section">
-              <div class="section-heading-row"><div><span class="section-kicker">VIEW CHANGES</span><h2>Preview ? flash</h2></div></div>
+              <div class="section-heading-row"><div><span class="section-kicker">VIEW CHANGES</span><h2>Preview to post-release</h2></div></div>
               <div id="researchDocuments"></div>
             </section>
           </div>
@@ -443,7 +443,7 @@
           </section>
 
           <div class="study-meta">
-            <span><i data-lucide="database"></i> US CPI ? Jan 2016?Aug 2026</span>
+            <span><i data-lucide="database"></i> US CPI | Jan 2016-Aug 2026</span>
             <span><i data-lucide="sigma"></i> Bucket: +0.1 to +0.2 pct</span>
             <span id="sampleMeta"><i data-lucide="list-filter"></i> n = 42 releases</span>
             <span><i data-lucide="shield-check"></i> No cherry-picked cases</span>
@@ -457,13 +457,13 @@
             </section>
 
             <section class="analysis-section distribution-section">
-              <div class="section-heading-row"><div><span class="section-kicker">SAMPLE QUALITY</span><h2>Asset outcome distributions</h2></div><span id="sampleBadge" class="sample-badge">n=42 ? usable</span></div>
+              <div class="section-heading-row"><div><span class="section-kicker">SAMPLE QUALITY</span><h2>Asset outcome distributions</h2></div><span id="sampleBadge" class="sample-badge">n=42 | usable</span></div>
               <div id="distributionChart" class="distribution-chart" aria-label="Historical outcome density for the selected surprise bucket and horizon"></div>
               <div class="distribution-axis" aria-hidden="true"><span>Lower / negative response</span><span>Median response</span><span>Higher / positive response</span></div>
               <p class="distribution-explainer"><strong>How to read this:</strong> each row is one asset under the selected CPI surprise bucket and horizon. The marker is the historical median; the bars show normalized outcome density around that asset's response. This is a standardized presentation of the event-study summary, not raw observation counts or a forecast probability for the next release.</p>
               <div class="distribution-summary">
                 <div><span>Direction hit rate</span><strong id="hitRate">67%</strong></div>
-                <div><span>Median / mean gap</span><strong id="meanGap">0.08?</strong></div>
+                <div><span>Median / mean gap</span><strong id="meanGap">0.08 SD</strong></div>
                 <div><span>Regime stability</span><strong id="regimeStability">Mixed</strong></div>
               </div>
               <div class="warning-note"><i data-lucide="triangle-alert"></i><span>Event-study association is not a causal forecast. Results vary by inflation regime, positioning and simultaneous releases.</span></div>
@@ -474,7 +474,7 @@
             <div class="section-heading-row"><div><span class="section-kicker">NEAREST ANALOGS</span><h2>Comparable historical releases</h2></div><button class="text-button" type="button">Open full library</button></div>
             <div class="table-scroll">
               <table class="analog-table">
-                <thead><tr><th>Release</th><th>Surprise</th><th>Inflation regime</th><th>UST 2Y ? 30m</th><th>USD ? 30m</th><th>S&P fut. ? 30m</th><th>Similarity</th></tr></thead>
+                <thead><tr><th>Release</th><th>Surprise</th><th>Inflation regime</th><th>UST 2Y @ 30m</th><th>USD @ 30m</th><th>S&amp;P fut. @ 30m</th><th>Similarity</th></tr></thead>
                 <tbody>
                   <tr><td>14 Mar 2024</td><td>+0.1 pct</td><td>Sticky services</td><td class="negative">+6 bp</td><td class="positive">+0.31%</td><td class="negative">-0.46%</td><td><span class="similarity"><i style="width:88%"></i></span>88%</td></tr>
                   <tr><td>12 Oct 2023</td><td>+0.1 pct</td><td>Late disinflation</td><td class="negative">+5 bp</td><td class="positive">+0.22%</td><td class="negative">-0.35%</td><td><span class="similarity"><i style="width:81%"></i></span>81%</td></tr>
@@ -495,9 +495,9 @@
             <label class="scenario-select">
               <span>Scenario</span>
               <select id="portfolioScenario">
-                <option value="upside">CPI upside ? +0.1 to +0.2 pct</option>
-                <option value="large-upside">Large CPI upside ? &gt;+0.2 pct</option>
-                <option value="downside">CPI downside ? -0.1 to -0.2 pct</option>
+                <option value="upside">CPI upside | +0.1 to +0.2 pct</option>
+                <option value="large-upside">Large CPI upside | &gt;+0.2 pct</option>
+                <option value="downside">CPI downside | -0.1 to -0.2 pct</option>
               </select>
             </label>
           </section>
@@ -530,7 +530,7 @@
           </div>
 
           <section class="method-band">
-            <div><i data-lucide="sigma"></i><span><strong>Method</strong> Weight ? event beta ? median historical bucket return</span></div>
+            <div><i data-lucide="sigma"></i><span><strong>Method</strong> Weight x event beta x median historical bucket return</span></div>
             <div><i data-lucide="shield-alert"></i><span><strong>Boundary</strong> No covariance, liquidity, options convexity or second-order effects</span></div>
             <div><i data-lucide="scan-search"></i><span><strong>Next check</strong> Stress 25th/75th percentile and alternate inflation regimes</span></div>
           </section>

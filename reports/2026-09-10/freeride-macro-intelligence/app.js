@@ -9,7 +9,7 @@
     { id: "us-payrolls-aug", date: "2026-09-04", time: "20:30", country: "US", impact: "HIGH", status: "released", name: "Nonfarm Payrolls", period: "August", actual: "162k", consensus: "55k", previous: "21k revised", surprise: "+107k", unit: "change", source: "Bureau of Labor Statistics", sample: 39, theme: "Labor", lead: "August payrolls delivered a large upside surprise and forced both GS and JPM to reassess the sector rebound.", researchKey: "us-payrolls-aug" },
     { id: "cn-trade-aug", date: "2026-09-07", time: "11:00", country: "CN", impact: "MEDIUM", status: "released", name: "Trade Balance", period: "August", actual: "$96.2bn", consensus: "$92.0bn", previous: "$89.7bn", surprise: "+$4.2bn", unit: "USD", source: "General Administration of Customs", sample: 28, theme: "Trade", lead: "The wider surplus reflected resilient exports more than domestic-demand strength, leaving the growth read-through uneven across assets." },
     { id: "cn-cpi-aug", date: "2026-09-09", time: "09:30", country: "CN", impact: "HIGH", status: "released", name: "Consumer Price Index", period: "August", actual: "0.2%", consensus: "0.3%", previous: "0.4%", surprise: "-0.1 pct", unit: "YoY", source: "National Bureau of Statistics", sample: 35, theme: "Inflation", lead: "Inflation undershot expectations as food-price support faded. The mix points to limited household pricing power rather than a renewed deflation shock." },
-    { id: "us-cpi-aug", date: "2026-09-11", time: "20:30", country: "US", impact: "HIGH", status: "upcoming", name: "Core CPI", period: "August", actual: "?", consensus: "0.20%", previous: "0.22%", surprise: "Pending", unit: "MoM", source: "Bureau of Labor Statistics", sourceTimestamp: "2026-09-11T08:30:00-04:00", displayTimeZone: "Asia/Hong_Kong", sample: 42, theme: "Inflation", lead: "GS expects 0.23% core CPI versus 0.20% consensus; the supplied research set contains no same-vintage JPM preview.", researchKey: "us-cpi-aug" },
+    { id: "us-cpi-aug", date: "2026-09-11", time: "20:30", country: "US", impact: "HIGH", status: "released", name: "Core CPI", period: "August", actual: "0.29%", consensus: "0.20%", previous: "0.22%", surprise: "+0.09 pct", unit: "MoM", source: "Bureau of Labor Statistics", sourceTimestamp: "2026-09-11T08:30:00-04:00", displayTimeZone: "Asia/Hong_Kong", sample: 42, theme: "Inflation", lead: "Core CPI beat consensus, but wireless services contributed about 10bp and travel was also firm; the signal beneath those volatile components was materially softer than the headline.", researchKey: "us-cpi-aug" },
     { id: "us-ppi-aug", date: "2026-09-10", time: "20:30", country: "US", impact: "MEDIUM", status: "upcoming", name: "Producer Price Index", period: "August", actual: "?", consensus: "2.7%", previous: "2.6%", surprise: "Pending", unit: "YoY", source: "Bureau of Labor Statistics", sample: 37, theme: "Inflation", lead: "The key question is whether pipeline services prices validate the CPI composition. Goods alone would be a weaker policy signal." },
     { id: "us-retail-aug", date: "2026-09-15", time: "20:30", country: "US", impact: "MEDIUM", status: "upcoming", name: "Retail Sales", period: "August", actual: "?", consensus: "0.3%", previous: "0.5%", surprise: "Pending", unit: "MoM", source: "US Census Bureau", sample: 34, theme: "Growth", lead: "Control-group spending is the cleaner signal for consumption momentum; autos and gasoline may make the headline unusually noisy." },
     { id: "us-fomc-sep", date: "2026-09-17", time: "02:00", country: "US", impact: "HIGH", status: "upcoming", name: "FOMC Rate Decision", period: "September", actual: "?", consensus: "Hold focus", previous: "Hold", surprise: "Pending", unit: "decision", source: "Federal Reserve", sample: 24, theme: "Policy", lead: "The supplied research points to a data-dependent hold, with disagreement concentrated in the later policy path rather than the September decision.", researchKey: "us-fomc-sep" },
@@ -47,7 +47,7 @@
 
   const STUDIES = {
     upside: {
-      "30m": { n: 42, hit: "67%", gap: "0.08?", stability: "Mixed", assets: [["UST 2Y", "yield", 5.2, 76], ["USD index", "return", 0.25, 67], ["S&P futures", "return", -0.40, 64], ["Gold", "return", -0.31, 60]], bars: [18,26,34,47,62,78,92,80,63,49,34,22] },
+      "30m": { n: 42, hit: "67%", gap: "0.08 SD", stability: "Mixed", assets: [["UST 2Y", "yield", 5.2, 76], ["USD index", "return", 0.25, 67], ["S&P futures", "return", -0.40, 64], ["Gold", "return", -0.31, 60]], bars: [18,26,34,47,62,78,92,80,63,49,34,22] },
       "1d": { n: 41, hit: "63%", gap: "0.12?", stability: "Mixed", assets: [["UST 2Y", "yield", 7.8, 71], ["USD index", "return", 0.36, 63], ["S&P futures", "return", -0.58, 61], ["Gold", "return", -0.44, 58]], bars: [14,21,29,43,57,71,87,93,71,50,31,18] },
       "5d": { n: 39, hit: "56%", gap: "0.21?", stability: "Low", assets: [["UST 2Y", "yield", 9.4, 59], ["USD index", "return", 0.42, 56], ["S&P futures", "return", -0.22, 52], ["Gold", "return", -0.61, 55]], bars: [23,29,38,55,69,84,91,77,65,53,41,30] }
     },
@@ -70,7 +70,7 @@
   };
 
   const MARKET = window.FREERIDE_DATA || { rates: [], catalysts: [], research: {}, homeContext: [] };
-  let state = { year: 2026, month: 8, country: "ALL", impact: "ALL", currentEvent: EVENTS.find(event => event.id === "us-payrolls-aug"), bucket: "upside", horizon: "30m", watched: false, catalystFilter: "ALL", contextFilter: "ALL", tenors: new Set(["DGS2", "DGS10", "DGS30"]) };
+  let state = { year: 2026, month: 8, country: "ALL", impact: "ALL", currentEvent: EVENTS.find(event => event.id === "us-cpi-aug"), bucket: "upside", horizon: "30m", watched: false, catalystFilter: "ALL", contextFilter: "ALL", contextItems: [...(MARKET.homeContext || [])], feedGeneratedAt: null, feedStatus: "Loading automatic feed", tenors: new Set(["DGS2", "DGS10", "DGS30"]) };
   let holdings = [
     { asset: "US equities", weight: 55, beta: 1.00 },
     { asset: "UST 2Y duration", weight: 20, beta: 0.75 },
@@ -107,7 +107,7 @@
       date.setDate(gridStart.getDate() + i);
       const iso = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
       const dayEvents = visible.filter(event => event.date === iso);
-      const classes = ["calendar-day", date.getMonth() !== state.month ? "outside-month" : "", iso === "2026-09-09" ? "is-today" : ""].filter(Boolean).join(" ");
+      const classes = ["calendar-day", date.getMonth() !== state.month ? "outside-month" : "", iso === "2026-09-12" ? "is-today" : ""].filter(Boolean).join(" ");
       days += `<div class="${classes}"><span class="day-number">${date.getDate()}</span><div class="day-events">${dayEvents.map(eventButton).join("")}</div></div>`;
     }
     $("#calendarGrid").innerHTML = weekdays + days;
@@ -126,7 +126,7 @@
     const groups = Object.groupBy ? Object.groupBy(inMonth, event => event.date) : inMonth.reduce((acc, event) => ((acc[event.date] ||= []).push(event), acc), {});
     $("#mobileAgenda").innerHTML = Object.entries(groups).map(([date, dayEvents]) => {
       const formatted = new Intl.DateTimeFormat("en", { weekday: "short", day: "2-digit", month: "short" }).format(new Date(`${date}T00:00:00`));
-      return `<section class="agenda-day"><div class="agenda-date"><strong>${formatted}</strong><span>${dayEvents.length} event${dayEvents.length > 1 ? "s" : ""}</span></div>${dayEvents.map(event => `<button type="button" class="agenda-event ${event.status}" data-event-open="${event.id}"><span>${event.time}</span><span><strong>${esc(event.name)}</strong><small>${event.country} ? ${event.impact.toLowerCase()} impact</small></span><span class="agenda-surprise">${esc(event.surprise)}</span></button>`).join("")}</section>`;
+      return `<section class="agenda-day"><div class="agenda-date"><strong>${formatted}</strong><span>${dayEvents.length} event${dayEvents.length > 1 ? "s" : ""}</span></div>${dayEvents.map(event => `<button type="button" class="agenda-event ${event.status}" data-event-open="${event.id}"><span>${event.time}</span><span><strong>${esc(event.name)}</strong><small>${event.country} | ${event.impact.toLowerCase()} impact</small></span><span class="agenda-surprise">${esc(event.surprise)}</span></button>`).join("")}</section>`;
     }).join("") || `<section class="agenda-day"><div class="agenda-date"><strong>No matching events</strong><span>Adjust filters</span></div></section>`;
   }
 
@@ -214,7 +214,7 @@
     if (item.commentary) return item.commentary;
     const title = item.title.toLowerCase();
     if (item.type === "DATA") {
-      if (title.includes("cpi")) return title.includes("august") ? "August CPI is scheduled for 20:30 HKT; the actual print is still pending." : "July core CPI printed 0.22% MoM, in line with JPM and 3bp above the GS call.";
+      if (title.includes("cpi")) return title.includes("august") ? "August core CPI printed 0.29% MoM versus 0.20% consensus; wireless and travel drove much of the upside." : "July core CPI printed 0.22% MoM, in line with JPM and 3bp above the GS call.";
       if (title.includes("employment")) return title.includes("august") ? "August payrolls printed 162k versus a 55k median, a large upside surprise." : "July payrolls were revised lower and kept the labor-softening debate alive.";
       return "Official data release; use the linked event for the first-vintage result and surprise.";
     }
@@ -227,10 +227,36 @@
   }
 
   function renderHomeContext() {
-    const items = (MARKET.homeContext || []).filter(item => state.contextFilter === "ALL" || item.kind === state.contextFilter);
-    $("#contextCount").textContent = `${items.length} item${items.length === 1 ? "" : "s"} | scroll for more`;
-    $("#homeContextFeed").innerHTML = items.map(item => `<button class="context-item" type="button" data-event-open="${item.eventId}"><span class="context-date">${esc(item.date)}<small>${esc(item.time)}</small></span><span class="context-copy"><span class="context-meta"><b class="context-kind ${item.kind.toLowerCase()}">${esc(item.kind)}</b><strong>${esc(item.source)}</strong></span><b class="context-title">${esc(item.title)}</b><small>${esc(item.summary)}</small><em>${esc(item.access)}</em></span><i data-lucide="arrow-up-right"></i></button>`).join("") || `<p class="context-empty">No context items match this filter.</p>`;
+    const items = state.contextItems.filter(item => state.contextFilter === "ALL" || item.kind === state.contextFilter);
+    $("#contextCount").textContent = `${items.length} item${items.length === 1 ? "" : "s"}`;
+    const status = $("#contextFeedStatus");
+    if (status) status.textContent = state.feedGeneratedAt ? `Auto feed refreshed ${new Intl.DateTimeFormat("en", { day:"2-digit", month:"short", hour:"2-digit", minute:"2-digit", hour12:false, timeZone:"Asia/Hong_Kong" }).format(new Date(state.feedGeneratedAt))} HKT` : state.feedStatus;
+    $("#homeContextFeed").innerHTML = items.map(item => {
+      const content = `<span class="context-date">${esc(item.date)}<small>${esc(item.time)}</small></span><span class="context-copy"><span class="context-meta"><b class="context-kind ${item.kind.toLowerCase()}">${esc(item.kind)}</b><strong>${esc(item.source)}</strong></span><b class="context-title">${esc(item.title)}</b><small>${esc(item.summary)}</small><em>${esc(item.access)}</em></span><i data-lucide="arrow-up-right"></i>`;
+      return item.url ? `<a class="context-item" href="${esc(item.url)}" target="_blank" rel="noopener noreferrer">${content}</a>` : `<button class="context-item" type="button" data-event-open="${item.eventId}">${content}</button>`;
+    }).join("") || `<p class="context-empty">No context items match this filter.</p>`;
     createIcons();
+  }
+
+  async function loadAutoNews() {
+    try {
+      const response = await fetch(`news-feed.json?v=${Date.now()}`, { cache: "no-store" });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const payload = await response.json();
+      const merged = [...(payload.items || []), ...(MARKET.homeContext || [])];
+      const seen = new Set();
+      state.contextItems = merged.filter(item => {
+        const key = String(item.title || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+        if (!key || seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      }).sort((a, b) => String(b.publishedAt || "").localeCompare(String(a.publishedAt || "")));
+      state.feedGeneratedAt = payload.generatedAt;
+      state.feedStatus = "Automatic feed live";
+    } catch (error) {
+      state.feedStatus = "Automatic feed unavailable | showing licensed research cache";
+    }
+    renderHomeContext();
   }
 
   function renderRates() {
@@ -263,13 +289,13 @@
       const lane = index % 3;
       return `<line class="catalyst-line ${type}" x1="${cx}" y1="${top-7}" x2="${cx}" y2="${H-bottom}"/><circle class="catalyst-dot ${type}" data-catalyst-date="${date}" cx="${cx}" cy="${top-13-lane*16}" r="5" tabindex="0"/><text class="catalyst-label" data-catalyst-date="${date}" x="${cx}" y="${top-23-lane*16}" text-anchor="middle">${esc(label)}</text>`;
     }).join("");
-    const futureX = x("2026-09-09");
+    const futureX = x("2026-09-12");
     const hits = MARKET.rates.map((row, index) => {
       const nextX = index === MARKET.rates.length - 1 ? x("2026-09-10") : x(MARKET.rates[index + 1][0]);
       const startX = index === 0 ? left : (x(MARKET.rates[index - 1][0]) + x(row[0])) / 2;
       return `<rect class="hover-hit" data-rate-index="${index}" x="${startX}" y="${top}" width="${Math.max(4,nextX-startX)}" height="${plotH}"/>`;
     }).join("");
-    svg.innerHTML = `<rect x="${futureX}" y="${top}" width="${W-right-futureX}" height="${plotH}" fill="#f5f1f8"/><text class="axis-label" x="${futureX+8}" y="${top+16}">UPCOMING</text>${grid.join("")}${tickMarkup}${markers}${series}<g id="rateHover"></g>${hits}`;
+    svg.innerHTML = `<rect x="${futureX}" y="${top}" width="${W-right-futureX}" height="${plotH}" fill="#f5f1f8"/><text class="axis-label" x="${futureX+8}" y="${top+16}">NO OBSERVED YIELD DATA</text>${grid.join("")}${tickMarkup}${markers}${series}<g id="rateHover"></g>${hits}`;
     svg.onpointermove = event => {
       const hit = event.target.closest("[data-rate-index]");
       const catalystTarget = event.target.closest("[data-catalyst-date]");
@@ -288,7 +314,7 @@
       tooltip.style.top = `${Math.max(8, event.clientY - shell.top - 25)}px`;
     };
     svg.onpointerleave = () => { $("#ratesTooltip").hidden = true; $("#rateHover").innerHTML = ""; };
-    $("#catalystRail").innerHTML = visibleCatalysts.map(item => `<button class="catalyst-card ${item.type}" type="button" data-event-open="${item.eventId}"><time>${formatDate(item.date)}</time><span><strong>${esc(item.title)}</strong><small>${item.institution} ? ${item.type.toLowerCase()}${item.upcoming ? " ? upcoming" : ""}</small></span></button>`).join("");
+    $("#catalystRail").innerHTML = visibleCatalysts.map(item => `<button class="catalyst-card ${item.type}" type="button" data-event-open="${item.eventId}"><time>${formatDate(item.date)}</time><span><strong>${esc(item.title)}</strong><small>${item.institution} | ${item.type.toLowerCase()}${item.upcoming ? " | upcoming" : ""}</small></span></button>`).join("");
     const first = MARKET.rates[0], latest = MARKET.rates[MARKET.rates.length - 1];
     [["2Y",1],["10Y",2],["30Y",3]].forEach(([label,index]) => {
       $(`#latest${label}`).textContent = `${latest[index].toFixed(2)}%`;
@@ -310,13 +336,13 @@
     const heading = $("#historyTab .event-study-header h2");
     if (heading) heading.textContent = `How assets behaved after comparable ${event.name} surprises`;
     const firstMeta = $("#historyTab .study-meta span");
-    if (firstMeta) firstMeta.innerHTML = `<i data-lucide="database"></i> ${event.country} ${esc(event.name)} ? Jan 2016?Aug 2026`;
+    if (firstMeta) firstMeta.innerHTML = `<i data-lucide="database"></i> ${event.country} ${esc(event.name)} | Jan 2016-Aug 2026`;
   }
 
   function renderStudy() {
     const study = STUDIES[state.bucket][state.horizon];
     $("#sampleMeta").innerHTML = `<i data-lucide="list-filter"></i> n = ${study.n} releases`;
-    $("#sampleBadge").textContent = `n=${study.n} ? ${study.n >= 40 ? "usable" : "limited"}`;
+    $("#sampleBadge").textContent = `n=${study.n} | ${study.n >= 40 ? "usable" : "limited"}`;
     $("#hitRate").textContent = study.hit;
     $("#meanGap").textContent = study.gap;
     $("#regimeStability").textContent = study.stability;
@@ -373,8 +399,8 @@
     const detractor = sorted[0] || { asset: "None", contribution: 0 };
     const offset = [...results].sort((a, b) => b.contribution - a.contribution)[0] || { asset: "None", contribution: 0 };
     $("#portfolioImpact").textContent = `${total > 0 ? "+" : ""}${Math.round(total)}`;
-    $("#largestDetractor").textContent = `${detractor.asset} ? ${detractor.contribution.toFixed(1)} bp`;
-    $("#largestOffset").textContent = `${offset.asset} ? ${offset.contribution > 0 ? "+" : ""}${offset.contribution.toFixed(1)} bp`;
+    $("#largestDetractor").textContent = `${detractor.asset} | ${detractor.contribution.toFixed(1)} bp`;
+    $("#largestOffset").textContent = `${offset.asset} | ${offset.contribution > 0 ? "+" : ""}${offset.contribution.toFixed(1)} bp`;
     $("#portfolioRange").textContent = `${Math.round(total * 0.55)} to ${Math.round(total * 1.8)} bp`;
     const magnitude = Math.min(48, Math.abs(total) / 1.3);
     const bar = $("#portfolioImpactBar span");
@@ -450,9 +476,9 @@
       if (route === "calendar") {
         $("#detailView").hidden = true;
         $("#calendarView").hidden = false;
-      } else if (route === "news") showDetail("us-payrolls-aug", "overview");
-      else if (route === "impact") showDetail("us-payrolls-aug", "history");
-      else if (route === "portfolio") showDetail("us-payrolls-aug", "portfolio");
+      } else if (route === "news") showDetail("us-cpi-aug", "overview");
+      else if (route === "impact") showDetail("us-cpi-aug", "history");
+      else if (route === "portfolio") showDetail("us-cpi-aug", "portfolio");
       $$("[data-nav]").forEach(button => button.classList.toggle("is-active", button === nav));
       return;
     }
@@ -463,6 +489,11 @@
       $("#calendarView").hidden = false;
       $$("[data-nav]").forEach(button => button.classList.toggle("is-active", button.dataset.nav === "calendar"));
       window.scrollTo({ top: 0, behavior: "smooth" });
+    } else if (action === "refresh-context") {
+      state.feedGeneratedAt = null;
+      state.feedStatus = "Refreshing automatic feed";
+      renderHomeContext();
+      loadAutoNews();
     } else if (action === "previous-month" || action === "next-month") {
       state.month += action === "previous-month" ? -1 : 1;
       if (state.month < 0) { state.month = 11; state.year -= 1; }
@@ -480,7 +511,7 @@
       toast("Prototype event link copied");
     } else if (action === "export") toast("Demo brief prepared with source classifications");
     else if (action === "create-alert") dialog("Create event alert", "<p>Alert rules would combine event time, consensus changes, research updates and portfolio thresholds.</p><p><strong>Prototype only:</strong> no notification is sent.</p>");
-    else if (action === "show-sources") dialog("Source map", "<p><strong>Official releases:</strong> BLS and Federal Reserve event facts.</p><p><strong>Research layer:</strong> 16 licensed GS/JPM documents supplied by the owner; only short attributed derivatives and page citations are published.</p><p><strong>Rates layer:</strong> FRED daily constant-maturity series DGS2, DGS10 and DGS30 through 08 Sep 2026.</p><p><strong>Illustrative modules:</strong> cross-asset event study and portfolio sensitivity are clearly separated from observed data.</p>");
+    else if (action === "show-sources") dialog("Source map", "<p><strong>Official releases:</strong> BLS and Federal Reserve event facts.</p><p><strong>Research layer:</strong> 22 whitelisted GS/JPM/Barclays documents supplied by the owner; only short attributed derivatives and page citations are published.</p><p><strong>News layer:</strong> publisher-labelled public headlines refresh twice hourly and preserve links to the original article.</p><p><strong>Rates layer:</strong> FRED daily constant-maturity series DGS2, DGS10 and DGS30 through 08 Sep 2026.</p><p><strong>Illustrative modules:</strong> cross-asset event study and portfolio sensitivity are clearly separated from observed data.</p>");
     else if (action === "show-method") dialog("Event-study method", "<p>Compare first-release actual with the last eligible point-in-time consensus before release. Include every qualifying observation in the bucket and use fixed 30-minute, one-day and five-day windows.</p><p>Median response, dispersion and regime stability are shown. This is association, not causal evidence or a trading backtest.</p>");
     else if (action === "view-all-news") dialog("News monitor", "<p>The production view would de-duplicate wires, official statements and entitled research; align each item to the event clock; and tag whether it changes facts, forecasts or interpretation.</p>");
     else if (action === "add-holding") {
@@ -508,6 +539,7 @@
 
   renderCalendar();
   renderHomeContext();
+  loadAutoNews();
   renderNews(state.currentEvent);
   renderResearch(state.currentEvent);
   renderRates();
