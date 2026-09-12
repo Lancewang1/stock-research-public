@@ -466,7 +466,9 @@
 
             <section class="analysis-section distribution-section">
               <div class="section-heading-row"><div><span class="section-kicker">SAMPLE QUALITY</span><h2>Outcome distribution</h2></div><span id="sampleBadge" class="sample-badge">n=42 ? usable</span></div>
-              <div id="distributionChart" class="distribution-chart" aria-label="????"></div>
+              <div id="distributionChart" class="distribution-chart" aria-label="Historical outcome density for the selected surprise bucket and horizon"></div>
+              <div class="distribution-axis" aria-hidden="true"><span>Lower / negative response</span><span>Median response</span><span>Higher / positive response</span></div>
+              <p class="distribution-explainer"><strong>How to read this:</strong> each bar is a normalized density band across the selected historical sample. Taller bars mean more comparable observations landed in that outcome band; they are not a forecast probability for the next release.</p>
               <div class="distribution-summary">
                 <div><span>Direction hit rate</span><strong id="hitRate">67%</strong></div>
                 <div><span>Median / mean gap</span><strong id="meanGap">0.08?</strong></div>

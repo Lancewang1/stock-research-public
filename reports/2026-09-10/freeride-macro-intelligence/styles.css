@@ -661,6 +661,10 @@ h2 { margin-bottom: 0; font-size: 16px; line-height: 1.25; }
 .rates-tooltip strong { display: block; margin-bottom: 5px; font-size: 11px; }
 .rates-tooltip span { display: flex; justify-content: space-between; gap: 16px; padding: 2px 0; }
 .rates-tooltip em { color: #aec0b7; font-style: normal; }
+.rates-tooltip .catalyst-tooltip { margin-top: 7px; padding-top: 7px; border-top: 1px solid rgba(174,192,183,.25); }
+.rates-tooltip .catalyst-tooltip b { display: block; color: #b9d8c9; font-size: 9px; text-transform: uppercase; letter-spacing: .04em; }
+.rates-tooltip .catalyst-tooltip strong { margin: 2px 0 3px; font-size: 10px; }
+.rates-tooltip .catalyst-tooltip p { margin: 0; color: #edf5f0; font-size: 9px; line-height: 1.4; }
 .catalyst-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 9px; color: var(--muted); font-size: 9px; }
 .catalyst-legend > span { display: inline-flex; align-items: center; gap: 5px; }
 .event-key { width: 7px; height: 7px; border-radius: 50%; }
@@ -783,6 +787,9 @@ h2 { margin-bottom: 0; font-size: 16px; line-height: 1.25; }
 .distribution-chart { height: 155px; display: flex; align-items: flex-end; gap: 5px; padding: 13px 8px 0; border-bottom: 1px solid var(--line); background-image: linear-gradient(to bottom, transparent 32%, #edf0ed 33%, transparent 34%, transparent 65%, #edf0ed 66%, transparent 67%); }
 .distribution-chart span { flex: 1; min-width: 5px; background: var(--teal); opacity: .8; border-radius: 2px 2px 0 0; }
 .distribution-chart span.negative-bar { background: var(--red); }
+.distribution-axis { display: flex; justify-content: space-between; gap: 8px; margin-top: 6px; color: var(--muted); font-size: 8px; }
+.distribution-explainer { margin: 10px 0 0; color: var(--muted); font-size: 10px; line-height: 1.45; }
+.distribution-explainer strong { color: var(--ink); }
 .distribution-summary { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 13px; }
 .distribution-summary div { padding: 0 10px; border-right: 1px solid var(--line); }
 .distribution-summary div:last-child { border-right: 0; }

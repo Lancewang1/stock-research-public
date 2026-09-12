@@ -210,6 +210,22 @@
     createIcons();
   }
 
+  function catalystView(item) {
+    if (item.commentary) return item.commentary;
+    const title = item.title.toLowerCase();
+    if (item.type === "DATA") {
+      if (title.includes("cpi")) return title.includes("august") ? "August CPI is scheduled for 20:30 HKT; the actual print is still pending." : "July core CPI printed 0.22% MoM, in line with JPM and 3bp above the GS call.";
+      if (title.includes("employment")) return title.includes("august") ? "August payrolls printed 162k versus a 55k median, a large upside surprise." : "July payrolls were revised lower and kept the labor-softening debate alive.";
+      return "Official data release; use the linked event for the first-vintage result and surprise.";
+    }
+    if (item.type === "FED") return title.includes("decision") ? "Decision day: the market focus is the reaction function, projections and vote dispersion." : "Fed communication: the key question is whether the policy path is becoming more or less restrictive.";
+    if (title.includes("cpi")) return "GS/JPM focus on the inflation mix: core services and shelter versus goods and energy risks.";
+    if (title.includes("payroll") || title.includes("employment")) return "Labor view: the forecast is sensitive to benchmark revisions, breadth and whether hiring momentum is re-accelerating.";
+    if (title.includes("waller")) return "GS links a hold to continued disinflation, with hotter CPI/PPI as the hike-tail risk.";
+    if (title.includes("fomc") || title.includes("minutes") || title.includes("jackson")) return "Policy view: near-term hold is the base case; the debate is the later path and hawkish-dissent risk.";
+    return "Sell-side research marker; open the event for the cited house view and source page.";
+  }
+
   function renderRates() {
     const svg = $("#ratesChart");
     if (!svg || !MARKET.rates.length) return;
@@ -238,7 +254,7 @@
       const type = items.some(item => item.type === "DATA") ? "DATA" : items.some(item => item.type === "FED") ? "FED" : "RESEARCH";
       const label = items.length > 1 ? `${items[0].institution} +${items.length-1}` : items[0].institution;
       const lane = index % 3;
-      return `<line class="catalyst-line ${type}" x1="${cx}" y1="${top-7}" x2="${cx}" y2="${H-bottom}"/><circle class="catalyst-dot ${type}" cx="${cx}" cy="${top-13-lane*16}" r="5"/><text class="catalyst-label" x="${cx}" y="${top-23-lane*16}" text-anchor="middle">${esc(label)}</text>`;
+      return `<line class="catalyst-line ${type}" x1="${cx}" y1="${top-7}" x2="${cx}" y2="${H-bottom}"/><circle class="catalyst-dot ${type}" data-catalyst-date="${date}" cx="${cx}" cy="${top-13-lane*16}" r="5" tabindex="0"/><text class="catalyst-label" data-catalyst-date="${date}" x="${cx}" y="${top-23-lane*16}" text-anchor="middle">${esc(label)}</text>`;
     }).join("");
     const futureX = x("2026-09-09");
     const hits = MARKET.rates.map((row, index) => {
@@ -249,13 +265,16 @@
     svg.innerHTML = `<rect x="${futureX}" y="${top}" width="${W-right-futureX}" height="${plotH}" fill="#f5f1f8"/><text class="axis-label" x="${futureX+8}" y="${top+16}">UPCOMING</text>${grid.join("")}${tickMarkup}${markers}${series}<g id="rateHover"></g>${hits}`;
     svg.onpointermove = event => {
       const hit = event.target.closest("[data-rate-index]");
-      if (!hit) return;
-      const row = MARKET.rates[Number(hit.dataset.rateIndex)];
-      const cx = x(row[0]);
-      $("#rateHover").innerHTML = `<line class="hover-line" x1="${cx}" y1="${top}" x2="${cx}" y2="${H-bottom}"/>${[1,2,3].map(i => `<circle cx="${cx}" cy="${y(row[i])}" r="4" fill="${Object.values(tenorMeta)[i-1].color}" stroke="#fff" stroke-width="1.5"/>`).join("")}`;
+      const catalystTarget = event.target.closest("[data-catalyst-date]");
+      if (!hit && !catalystTarget) return;
+      const catalystDate = catalystTarget?.dataset.catalystDate;
+      const row = hit ? MARKET.rates[Number(hit.dataset.rateIndex)] : MARKET.rates.find(item => item[0] === catalystDate);
+      const date = catalystDate || row[0];
+      const cx = x(date);
+      if (row) $("#rateHover").innerHTML = `<line class="hover-line" x1="${cx}" y1="${top}" x2="${cx}" y2="${H-bottom}"/>${[1,2,3].map(i => `<circle cx="${cx}" cy="${y(row[i])}" r="4" fill="${Object.values(tenorMeta)[i-1].color}" stroke="#fff" stroke-width="1.5"/>`).join("")}`;
       const tooltip = $("#ratesTooltip");
-      const catalysts = MARKET.catalysts.filter(item => item.date === row[0]);
-      tooltip.innerHTML = `<strong>${formatDate(row[0])}</strong><span><em>2Y</em><b>${row[1].toFixed(2)}%</b></span><span><em>10Y</em><b>${row[2].toFixed(2)}%</b></span><span><em>30Y</em><b>${row[3].toFixed(2)}%</b></span>${catalysts.map(item => `<span><em>${item.institution}</em><b>${esc(item.title)}</b></span>`).join("")}`;
+      const catalysts = MARKET.catalysts.filter(item => item.date === date);
+      tooltip.innerHTML = `<strong>${formatDate(date)} HKT</strong>${row ? `<span><em>2Y</em><b>${row[1].toFixed(2)}%</b></span><span><em>10Y</em><b>${row[2].toFixed(2)}%</b></span><span><em>30Y</em><b>${row[3].toFixed(2)}%</b></span>` : ""}${catalysts.map(item => `<div class="catalyst-tooltip"><b>${esc(item.institution)} · ${esc(item.type.toLowerCase())}</b><strong>${esc(item.title)}</strong><p>${esc(catalystView(item))}</p></div>`).join("")}`;
       tooltip.hidden = false;
       const shell = $(".rates-chart-shell").getBoundingClientRect();
       tooltip.style.left = `${Math.min(shell.width - 190, Math.max(8, event.clientX - shell.left + 12))}px`;
@@ -302,7 +321,7 @@
       const width = Math.min(32, 12 + Math.abs(value) * (isYield ? 1.2 : 25));
       return `<div class="impact-row"><span class="asset-label"><strong>${asset}</strong><small>${kind}</small></span><span class="impact-value ${value < 0 ? "negative" : "positive"}">${label}</span><span class="range-track"><i class="range-band" style="left:${Math.max(2, marker - width / 2)}%;width:${width}%"></i><i class="range-marker" style="left:${marker}%"></i></span><span class="hit-rate">${hit}% hit</span></div>`;
     }).join("");
-    $("#distributionChart").innerHTML = study.bars.map((height, index) => `<span class="${index < 6 ? "negative-bar" : ""}" style="height:${height}%" title="Synthetic observation density"></span>`).join("");
+    $("#distributionChart").innerHTML = study.bars.map((height, index) => `<span class="${index < 6 ? "negative-bar" : ""}" style="height:${height}%" title="Normalized density band ${index + 1} of 12"></span>`).join("");
     createIcons();
   }
 
