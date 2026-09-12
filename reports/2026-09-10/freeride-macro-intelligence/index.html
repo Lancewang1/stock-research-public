@@ -181,28 +181,15 @@
 
             <section class="rail-panel">
               <div class="panel-title-row">
-                <h2>Research delta</h2>
+                <div><span class="section-kicker">LIVE CONTEXT</span><h2>News & research</h2></div>
                 <button type="button" class="icon-button light" title="??" aria-label="??">
                   <i data-lucide="refresh-cw"></i>
                 </button>
               </div>
-              <div class="research-delta-list">
-                <button type="button" data-event-open="us-cpi-aug">
-                  <span class="time">08 Sep</span>
-                  <span><strong>GS</strong> published August CPI preview</span>
-                  <i data-lucide="arrow-up-right"></i>
-                </button>
-                <button type="button" data-event-open="us-payrolls-aug">
-                  <span class="time">04 Sep</span>
-                  <span><strong>GS</strong> reviewed the August payroll upside</span>
-                  <i data-lucide="arrow-right"></i>
-                </button>
-                <button type="button" data-event-open="us-fomc-sep">
-                  <span class="time">03 Sep</span>
-                  <span><strong>GS</strong> linked Waller's stance to incoming data</span>
-                  <i data-lucide="arrow-down-right"></i>
-                </button>
-              </div>
+              <div class="context-filters" role="group" aria-label="Live context filter"><button class="is-active" type="button" data-context-filter="ALL">All</button><button type="button" data-context-filter="NEWS">News</button><button type="button" data-context-filter="RESEARCH">Research</button></div>
+              <div class="context-feed-meta"><span id="contextCount">9 items</span><span>Through 09 Sep | HKT</span></div>
+              <div id="homeContextFeed" class="home-context-feed"></div>
+              <p class="context-source-note">News uses publicly verified headlines and conservative summaries. Licensed research is paraphrased with page locators.</p>
             </section>
 
             <section class="rail-panel portfolio-rail">

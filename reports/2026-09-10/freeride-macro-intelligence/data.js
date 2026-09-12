@@ -1,4 +1,15 @@
 window.FREERIDE_DATA = {
+  homeContext: [
+    {date:"09 Sep",time:"21:29 HKT",kind:"NEWS",source:"Reuters",eventId:"us-fomc-sep",title:"Fed hold remains the base case, but hike expectations are broadening",summary:"A Reuters poll kept steady policy as the central case for the rest of 2026 while noting that more analysts now see at least one hike.",access:"Public headline"},
+    {date:"08 Sep",time:"Research",kind:"RESEARCH",source:"GS",eventId:"us-cpi-aug",title:"August core CPI forecast at 0.23% MoM",summary:"GS stood 3bp above the 0.20% street median, expecting benign shelter, mixed autos and firmer airfares; persistent oil disruption was the upside tail.",access:"Licensed | pp.1–3"},
+    {date:"08 Sep",time:"Market context",kind:"NEWS",source:"Bloomberg",eventId:"us-cpi-aug",title:"Oil rally adds to the inflation-risk backdrop",summary:"The public headline framed stronger oil as a renewed inflation concern ahead of the US CPI and Fed decision window.",access:"Public headline"},
+    {date:"06 Sep",time:"19:00 HKT",kind:"NEWS",source:"Financial Times",eventId:"us-cpi-aug",title:"Will inflation data persuade the Fed to raise rates?",summary:"The FT preview centered the upcoming CPI release as the key test for whether policymakers would move from patience toward renewed tightening.",access:"Public headline"},
+    {date:"04 Sep",time:"Research",kind:"RESEARCH",source:"GS",eventId:"us-payrolls-aug",title:"Payroll rebound forced a sector-level rethink",summary:"After the 162k print, GS attributed the upside to leisure and hospitality, local education, healthcare and construction rather than a uniform acceleration.",access:"Licensed | p.1"},
+    {date:"04 Sep",time:"20:06 HKT",kind:"NEWS",source:"Reuters",eventId:"us-payrolls-aug",title:"August job growth expected to rebound",summary:"The pre-release Reuters framing expected firmer payroll growth with unemployment holding at 4.1%, providing a market baseline before the upside result.",access:"Public headline"},
+    {date:"03 Sep",time:"Research",kind:"RESEARCH",source:"JPM",eventId:"us-payrolls-aug",title:"Underlying private hiring seen near 40–55k",summary:"JPM forecast 50k payroll growth and a 4.1% unemployment rate, balancing ADP resilience against Homebase and seasonal softness.",access:"Licensed | p.1"},
+    {date:"03 Sep",time:"Research",kind:"RESEARCH",source:"GS",eventId:"us-fomc-sep",title:"Waller stance tied directly to incoming inflation",summary:"GS read continued disinflation as supporting a hold, while hotter August CPI and PPI would reopen the hike tail.",access:"Licensed | p.1"},
+    {date:"19 Aug",time:"Research",kind:"RESEARCH",source:"JPM",eventId:"us-fomc-sep",title:"Later hike risk retained after hawkish minutes",summary:"JPM kept a conditional later-year tightening view but acknowledged that softer subsequent inflation and labor data reduced near-term urgency.",access:"Licensed | p.1"}
+  ],
   rates: [
     ["2026-07-01",4.17,4.48,4.97],["2026-07-02",4.14,4.49,4.98],["2026-07-06",4.13,4.48,4.99],
     ["2026-07-07",4.19,4.55,5.05],["2026-07-08",4.21,4.56,5.06],["2026-07-09",4.16,4.54,5.05],

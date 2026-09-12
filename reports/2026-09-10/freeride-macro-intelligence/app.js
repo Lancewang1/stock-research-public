@@ -69,8 +69,8 @@
     downside: { label: "CPI downside", shocks: { "US equities": 0.46, "UST 2Y duration": 0.21, "USD cash": -0.05, "Gold": 0.29, "China equities": 0.18, "Credit": 0.15 } }
   };
 
-  const MARKET = window.FREERIDE_DATA || { rates: [], catalysts: [], research: {} };
-  let state = { year: 2026, month: 8, country: "ALL", impact: "ALL", currentEvent: EVENTS.find(event => event.id === "us-payrolls-aug"), bucket: "upside", horizon: "30m", watched: false, catalystFilter: "ALL", tenors: new Set(["DGS2", "DGS10", "DGS30"]) };
+  const MARKET = window.FREERIDE_DATA || { rates: [], catalysts: [], research: {}, homeContext: [] };
+  let state = { year: 2026, month: 8, country: "ALL", impact: "ALL", currentEvent: EVENTS.find(event => event.id === "us-payrolls-aug"), bucket: "upside", horizon: "30m", watched: false, catalystFilter: "ALL", contextFilter: "ALL", tenors: new Set(["DGS2", "DGS10", "DGS30"]) };
   let holdings = [
     { asset: "US equities", weight: 55, beta: 1.00 },
     { asset: "UST 2Y duration", weight: 20, beta: 0.75 },
@@ -224,6 +224,13 @@
     if (title.includes("waller")) return "GS links a hold to continued disinflation, with hotter CPI/PPI as the hike-tail risk.";
     if (title.includes("fomc") || title.includes("minutes") || title.includes("jackson")) return "Policy view: near-term hold is the base case; the debate is the later path and hawkish-dissent risk.";
     return "Sell-side research marker; open the event for the cited house view and source page.";
+  }
+
+  function renderHomeContext() {
+    const items = (MARKET.homeContext || []).filter(item => state.contextFilter === "ALL" || item.kind === state.contextFilter);
+    $("#contextCount").textContent = `${items.length} item${items.length === 1 ? "" : "s"} | scroll for more`;
+    $("#homeContextFeed").innerHTML = items.map(item => `<button class="context-item" type="button" data-event-open="${item.eventId}"><span class="context-date">${esc(item.date)}<small>${esc(item.time)}</small></span><span class="context-copy"><span class="context-meta"><b class="context-kind ${item.kind.toLowerCase()}">${esc(item.kind)}</b><strong>${esc(item.source)}</strong></span><b class="context-title">${esc(item.title)}</b><small>${esc(item.summary)}</small><em>${esc(item.access)}</em></span><i data-lucide="arrow-up-right"></i></button>`).join("") || `<p class="context-empty">No context items match this filter.</p>`;
+    createIcons();
   }
 
   function renderRates() {
@@ -419,6 +426,12 @@
       $$('[data-surprise-bucket]').forEach(button => button.classList.toggle("is-selected", button === bucket));
       return renderStudy();
     }
+    const contextFilter = event.target.closest("[data-context-filter]");
+    if (contextFilter) {
+      state.contextFilter = contextFilter.dataset.contextFilter;
+      $$('[data-context-filter]').forEach(button => button.classList.toggle("is-active", button === contextFilter));
+      return renderHomeContext();
+    }
     const horizon = event.target.closest("[data-horizon]");
     if (horizon) {
       state.horizon = horizon.dataset.horizon;
@@ -494,6 +507,7 @@
   $("#holdingsBody").addEventListener("input", calculatePortfolio);
 
   renderCalendar();
+  renderHomeContext();
   renderNews(state.currentEvent);
   renderResearch(state.currentEvent);
   renderRates();
