@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-09-15T15:03:51+00:00",
+  "generatedAt": "2026-09-15T19:03:34+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
     {
       "date": "15 Sep",
-      "time": "12:37 HKT",
-      "publishedAt": "2026-09-15T12:37:38+08:00",
+      "time": "12:38 HKT",
+      "publishedAt": "2026-09-15T12:38:18+08:00",
       "kind": "NEWS",
       "source": "Financial Times",
       "eventId": "us-fomc-sep",
@@ -17,8 +17,8 @@
     },
     {
       "date": "15 Sep",
-      "time": "12:02 HKT",
-      "publishedAt": "2026-09-15T12:02:11+08:00",
+      "time": "12:00 HKT",
+      "publishedAt": "2026-09-15T12:00:28+08:00",
       "kind": "NEWS",
       "source": "Financial Times",
       "eventId": "us-cpi-aug",
