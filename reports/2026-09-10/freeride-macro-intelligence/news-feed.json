@@ -1,8 +1,20 @@
 {
-  "generatedAt": "2026-09-15T05:00:16+00:00",
+  "generatedAt": "2026-09-15T10:08:45+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
+    {
+      "date": "15 Sep",
+      "time": "16:23 HKT",
+      "publishedAt": "2026-09-15T16:23:13+08:00",
+      "kind": "NEWS",
+      "source": "Financial Times",
+      "eventId": "us-fomc-sep",
+      "title": "Ten-year Treasury yield hits highest since global financial crisis",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNRkFXQVZYTHlqVDctU2ZDTTBLWVEycHpiUFI0SWd6TFVZbDNZQVJiVGxHcG9mNmR4NnVYLUd1U3o0bTl4UkZCRG8ya01SdndPa2dOOXZacXJBYTBLSlVNNXUtclpldHREZVhYX25CakNVMVNfWmdBSjRldlJUOU1nRlY1ZHY?oc=5"
+    },
     {
       "date": "15 Sep",
       "time": "12:00 HKT",
@@ -18,7 +30,7 @@
     {
       "date": "14 Sep",
       "time": "13:30 HKT",
-      "publishedAt": "2026-09-14T13:30:02+08:00",
+      "publishedAt": "2026-09-14T13:30:39+08:00",
       "kind": "NEWS",
       "source": "Financial Times",
       "eventId": "us-cpi-aug",
@@ -50,6 +62,18 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQU1pnZ2FJakJ4bkZhRXB5dHZZLXdtbGE1d0ZCQzctR0tOem1aNk4wSTJ4a1FHSVBXWlotRU9FeG5JbldSM0MtekxrcjhVYXoxbFhSRnZUWGlXeXJZaV9oWFYybnNWdXpZNl9XSjZReXNiMFNpNXFTVndrR044eUhIZHVmYko?oc=5"
+    },
+    {
+      "date": "13 Sep",
+      "time": "15:00 HKT",
+      "publishedAt": "2026-09-13T15:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-fomc-sep",
+      "title": "Wall St Week Ahead Investors brace for possible rate hike at uncertain Fed meeting",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOVGxBNmhfdWpkb1NxVGxZb2dSOEhrM0hRcjYwakJjdHJSNkVQYjNSWVVIbnlwRDB6Wk1yMFFxNTRYdUppekd1QldEbUZSUkVCWlJzWFlrMVQyS2VTV1hXRFB4Vms3RkNqUG5MTjNGNDhZbG5odFZ6dHdubWZfbXg3Z3ZjOExGOEJZcTdiMmU3eEtiQ1lwQV9zWHk0ODZoaFN4YWZEUUlJZ3B5MTFNRGRNRzlsNmduSjZndUJZMA?oc=5"
     },
     {
       "date": "12 Sep",
@@ -194,30 +218,6 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQY08xWWcxZWZRWG5WSFJ2ckZFcFk1T0cyNjlfS3F0U0Vyby1EWVJUaUNNaTUwVXRNVnk0Q2NfVVdYT2lPYjUxdjZlVHBXOWVPVnMzWk1DWmE4V1RGNzFrWFhwN3V5alYtbktTcDBST0RORllfc1Nhd0RBNFZ0UTVlbFFaM0FGMEpTLTIxdTVCeEJpcG5YdC1zTUZqMTQwNGhDZVBNbVBxX0Jmbkpsd2c?oc=5"
-    },
-    {
-      "date": "11 Sep",
-      "time": "21:22 HKT",
-      "publishedAt": "2026-09-11T21:22:27+08:00",
-      "kind": "NEWS",
-      "source": "Bloomberg",
-      "eventId": "us-cpi-aug",
-      "title": "US Core CPI Tops Forecasts, Bolstering Case for Rate Hike",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOMEVIWUw2aXFMWmtQTVJyLTVrWFZRbmM2cnRtRU5kQmVrTjBFbDFya1lRazZWVGtUWEtZcWxVMXJleFc2b0JiSEhrU1VKbjR0OXkxMGZHOFZ2RlB2WlBVaEtsQlNoMlNOcUY5NXlkZFFURU0wd1J4VmdyYUNia2hYbWdEOHZRb2hnNzJRak1qYmtCZ2Y5R2Y4SG94WkZybXhrVFBHaGhRNnZmN3NvdUhpbFdB?oc=5"
-    },
-    {
-      "date": "11 Sep",
-      "time": "21:20 HKT",
-      "publishedAt": "2026-09-11T21:20:48+08:00",
-      "kind": "NEWS",
-      "source": "Bloomberg",
-      "eventId": "us-cpi-aug",
-      "title": "Watch Stocks, Treasuries Get Relief Ahead of CPI, US Diesel Passes $6/Gallon",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQVGF1Rk0yTEtTU3otbXZLM2hMcTltWDc3Mzk2SkpqUXpHMDQ3dm9lWEpySkMtVE05eDdoLTlhUHlIcG5oYW5hNnN4SUNEUHJORnVuU1M0aXFEdkRDVFhpbGg1Z0FMRDN0VDVVRUI5aUx6SUt4c1FBZ09FZ0lvRDVIR2RNaDR4NGJm?oc=5"
     }
   ]
 }
