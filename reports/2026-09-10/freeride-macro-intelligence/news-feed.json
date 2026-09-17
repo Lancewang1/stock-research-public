@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-09-17T05:30:23+00:00",
+  "generatedAt": "2026-09-17T10:28:17+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
     {
       "date": "17 Sep",
       "time": "12:00 HKT",
-      "publishedAt": "2026-09-17T12:00:48+08:00",
+      "publishedAt": "2026-09-17T12:00:31+08:00",
       "kind": "NEWS",
       "source": "Financial Times",
       "eventId": "us-fomc-sep",
@@ -22,22 +22,10 @@
       "kind": "NEWS",
       "source": "Financial Times",
       "eventId": "us-cpi-aug",
-      "title": "Do inflation expectations matter in a social-media echo chamber?",
+      "title": "The social-media echo chamber is skewing inflation expectations",
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9zazQ3QlJZRXRLLXpWM1IyY2kyamlaRHJUUHBZd1UzV2hMalhTOGczSEw0ZE1VOURYUkxQc3Q1Y2JxSWVTejAwdVBseEVGZHZYbTNvcnpLakxjUHh6UkQ3Yi1JTllJcXFLRmI3RTcxR3A?oc=5"
-    },
-    {
-      "date": "17 Sep",
-      "time": "05:39 HKT",
-      "publishedAt": "2026-09-17T05:39:38+08:00",
-      "kind": "NEWS",
-      "source": "Financial Times",
-      "eventId": "us-fomc-sep",
-      "title": "FirstFT: Fed raises rates for first time since 2023",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxORFhKWUxXQ2poVlE4QnZ0eW0tTUpJWGhJS2xKbHB1QmtZdndzVDFWdXhPazFiMFZPek9sWkVrNi1FQjNvUElhLWlMREY4cHlMaUdNa3VfdlE0bl8xcTFWT2tTc05Sc05fUEYwVVNuQXlSQWJvN3NyTExXVU1WZERuZ0ZrZFk?oc=5"
     },
     {
       "date": "17 Sep",
@@ -76,9 +64,9 @@
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNYVdob3AzUDBiZzZLRzFyQnZSZVhuTUxaT0ptay10LWtILU10RVkwTFZpa3dpRlQ1SUxzTm9GX0w5R1JHTkJXQ0MyYWlRUG5rRlc4Q3I1VGlocVhfU2RWQ0Z5TUFSM3J6ZjJ1SXRDM1dBWVBZOXQ3YnlBUkFaUTZzRlNFUTQ?oc=5"
     },
     {
-      "date": "15 Sep",
-      "time": "12:38 HKT",
-      "publishedAt": "2026-09-15T12:38:18+08:00",
+      "date": "16 Sep",
+      "time": "02:13 HKT",
+      "publishedAt": "2026-09-16T02:13:53+08:00",
       "kind": "NEWS",
       "source": "Financial Times",
       "eventId": "us-fomc-sep",
@@ -89,8 +77,8 @@
     },
     {
       "date": "15 Sep",
-      "time": "12:01 HKT",
-      "publishedAt": "2026-09-15T12:01:44+08:00",
+      "time": "23:26 HKT",
+      "publishedAt": "2026-09-15T23:26:00+08:00",
       "kind": "NEWS",
       "source": "Financial Times",
       "eventId": "us-cpi-aug",
@@ -98,6 +86,18 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPVlA3clhoZHZZTXBPTkpZMjNHRVhucm1nTUxYclV2UF9mRVowVkcwekVpSW1PUUFRUnNfSUxlaHRyYWNpYk1uOHpqS1RkdDh0NlZyNnZlR2RUWFNhbnJnNmhEMmw5ZTRQTzYtblRuVWtiSmRobGxJZnBQRXQ0Q1hpaFZZMGk?oc=5"
+    },
+    {
+      "date": "15 Sep",
+      "time": "15:00 HKT",
+      "publishedAt": "2026-09-15T15:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-cpi-aug",
+      "title": "Global brokerages expect Fed rate hikes after strong inflation report",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOUlBCQ1ZYTXlQaDJhY3haMkVmRVdfQjkxYm95VUp5RWhGZ0diM1JkSm9MZlJlX2NUU0M4WVhsOG0yV0l5NDVrbUtsS09JNXFRNjhuTE1pM2FBRmJXYWRnOHNJeTd2Z1lPOTdVWnAzbDFEM3B3czBsR2QtTFdjN3dQcU1CTkRhUTI1RnV1S28zWnFXdkl1SjN5YTNOQzFlcUtQbTExeVFkWQ?oc=5"
     },
     {
       "date": "15 Sep",
