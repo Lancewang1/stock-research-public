@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-17T10:28:17+00:00",
+  "generatedAt": "2026-09-17T15:19:53+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
@@ -185,18 +185,6 @@
     },
     {
       "date": "12 Sep",
-      "time": "07:53 HKT",
-      "publishedAt": "2026-09-12T07:53:51+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-cpi-aug",
-      "title": "Gold rises on dip-buying even as Fed rate hike bets rise after US inflation data",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOMk9xQnh0dkJvU0VUbjhfa0E5ZHhmb21sU1k4RWktNC0tdERMUlFyb05jamhUa0p0dUEwejVJbHlUaWp6VnZuUEJrc0ZmYzBMM1RwaUp0SUdWWXBiU2pRVUF4ZlRsQk1fVmY2MUlTcTFFV3RjSnQzSE5UUHdKWHJYcV9YaUVmZ01PVnVUWHI0MzU4dnJja25CTmpxc3N4STVOb1E?oc=5"
-    },
-    {
-      "date": "12 Sep",
       "time": "07:19 HKT",
       "publishedAt": "2026-09-12T07:19:28+08:00",
       "kind": "NEWS",
@@ -209,15 +197,27 @@
     },
     {
       "date": "12 Sep",
-      "time": "04:33 HKT",
-      "publishedAt": "2026-09-12T04:33:05+08:00",
+      "time": "00:35 HKT",
+      "publishedAt": "2026-09-12T00:35:10+08:00",
       "kind": "NEWS",
-      "source": "Bloomberg",
+      "source": "Reuters",
       "eventId": "us-cpi-aug",
-      "title": "Treasuries End Bruising Week With Fed Hike Bets Firmed After CPI",
+      "title": "Dollar rises against euro and Swiss franc after US inflation data",
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNdXlONzZ4VHRzenV1NDBKWG82U3QxbC1QcjFlZGFaY1llQ1E5SnpjMWp2cTluRnpabTNmS2oxc1AxSW94SnN3bWhlRlNqTUtJQ05FMC01Q2V0ZzVjQ016elAzSlBuWVpEQlVBbGdpaVFOYTBVQm5pUXRqcEZwQ21rTWRpZHE2aEt3MG1yUHhxWlpzYXFkeEFMS0pKenl2OFBPUmhXbXNKMHJZbUo0RjFRRHZaMFNKZw?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPTUI0bHIwbWRHUzNiQmxNam13azJMSHZvUzhkMThQSDJpOGZqOUpfYVMtMG5taXlrRGVBcGViVWpPT20xTm12RnJLT1BIR2luVmZWOEl0TFVyTC1UX25qZU00cTY5UEMyTWpXd3ctZnVCSXVQMEswa21hTl85ZExMMm9xNkNHRDlHQnVTSlZNMFV5U1l3am1BQVprSUJqQ1VONTBOb3dBSnQxTm9YXzU0aldn?oc=5"
+    },
+    {
+      "date": "11 Sep",
+      "time": "23:18 HKT",
+      "publishedAt": "2026-09-11T23:18:42+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-cpi-aug",
+      "title": "Fed rate-hike case builds as inflation fails to cool",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOU2R5eFJ0eFBfbWR4dnNKaUdDZC1MTVY5aWYxc3BlaUY1S2ZMM0xwaFhMbEh1cWtsSFhFVGk5eEE4NkRTb3FxREhvbkpKVjdXdVY1VHhNT2NaUkhUNmEtSzdoQno5aWFRUGpWS0ZBMXcwUEFKSHFOVF9jcFJQSExCbjBYaU5JNTdMdlladkpZdkp2TURmcW94ZkxtV1dwbTR3TkJhUXlmc1A?oc=5"
     }
   ]
 }
