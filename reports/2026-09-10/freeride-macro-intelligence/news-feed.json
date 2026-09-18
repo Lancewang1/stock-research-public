@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T05:59:45+00:00",
+  "generatedAt": "2026-09-18T11:24:39+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
@@ -101,18 +101,6 @@
     },
     {
       "date": "15 Sep",
-      "time": "15:00 HKT",
-      "publishedAt": "2026-09-15T15:00:00+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-cpi-aug",
-      "title": "Global brokerages expect Fed rate hikes after strong inflation report",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOUlBCQ1ZYTXlQaDJhY3haMkVmRVdfQjkxYm95VUp5RWhGZ0diM1JkSm9MZlJlX2NUU0M4WVhsOG0yV0l5NDVrbUtsS09JNXFRNjhuTE1pM2FBRmJXYWRnOHNJeTd2Z1lPOTdVWnAzbDFEM3B3czBsR2QtTFdjN3dQcU1CTkRhUTI1RnV1S28zWnFXdkl1SjN5YTNOQzFlcUtQbTExeVFkWQ?oc=5"
-    },
-    {
-      "date": "15 Sep",
       "time": "03:25 HKT",
       "publishedAt": "2026-09-15T03:25:57+08:00",
       "kind": "NEWS",
@@ -172,18 +160,6 @@
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQU1pnZ2FJakJ4bkZhRXB5dHZZLXdtbGE1d0ZCQzctR0tOem1aNk4wSTJ4a1FHSVBXWlotRU9FeG5JbldSM0MtekxrcjhVYXoxbFhSRnZUWGlXeXJZaV9oWFYybnNWdXpZNl9XSjZReXNiMFNpNXFTVndrR044eUhIZHVmYko?oc=5"
     },
     {
-      "date": "13 Sep",
-      "time": "15:00 HKT",
-      "publishedAt": "2026-09-13T15:00:00+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-fomc-sep",
-      "title": "Wall St Week Ahead Investors brace for possible rate hike at uncertain Fed meeting",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOVGxBNmhfdWpkb1NxVGxZb2dSOEhrM0hRcjYwakJjdHJSNkVQYjNSWVVIbnlwRDB6Wk1yMFFxNTRYdUppekd1QldEbUZSUkVCWlJzWFlrMVQyS2VTV1hXRFB4Vms3RkNqUG5MTjNGNDhZbG5odFZ6dHdubWZfbXg3Z3ZjOExGOEJZcTdiMmU3eEtiQ1lwQV9zWHk0ODZoaFN4YWZEUUlJZ3B5MTFNRGRNRzlsNmduSjZndUJZMA?oc=5"
-    },
-    {
       "date": "12 Sep",
       "time": "08:36 HKT",
       "publishedAt": "2026-09-12T08:36:10+08:00",
@@ -218,6 +194,30 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNdXlONzZ4VHRzenV1NDBKWG82U3QxbC1QcjFlZGFaY1llQ1E5SnpjMWp2cTluRnpabTNmS2oxc1AxSW94SnN3bWhlRlNqTUtJQ05FMC01Q2V0ZzVjQ016elAzSlBuWVpEQlVBbGdpaVFOYTBVQm5pUXRqcEZwQ21rTWRpZHE2aEt3MG1yUHhxWlpzYXFkeEFMS0pKenl2OFBPUmhXbXNKMHJZbUo0RjFRRHZaMFNKZw?oc=5"
+    },
+    {
+      "date": "12 Sep",
+      "time": "01:03 HKT",
+      "publishedAt": "2026-09-12T01:03:10+08:00",
+      "kind": "NEWS",
+      "source": "Bloomberg",
+      "eventId": "us-cpi-aug",
+      "title": "Warsh Faces Intensifying Pressure to Raise Rates After Hot CPI",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQSlA0Sl9sSUFuNjJhanlXWXcxMlNNRENsaEtlRVZvMW5TX3VGb182NW50R2steXkwaDBINzhaWFdjYXI5M3drazl4UGJMOTlzQ0RXTnJXeG45eHROSjNwR1o5d0lmUVQtVnVaN3ZhdzBkd3JUTWFHODEtSEdzbEFlNmVOVy1QOHlLRk9uRmZRdUs0ekg4c3hocE5uNzdXSXc1NDduWmUyVGVPM2Z3SzAzY3lzQ1ZsMl9tQnR3QnJyRVZfN0NR?oc=5"
+    },
+    {
+      "date": "11 Sep",
+      "time": "23:43 HKT",
+      "publishedAt": "2026-09-11T23:43:04+08:00",
+      "kind": "NEWS",
+      "source": "Bloomberg",
+      "eventId": "us-fomc-sep",
+      "title": "Fed’s Rate Decision May Have Come Down to Phone Plan Changes",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPeWpxT2FjVFB3bV9JeDlYbkwxb2t5bHpHMm9MV0RNdUFObGVjdmxCNFNoUGNOY3RBOS1pczhpOWlxcHhCQkxoRmFvbTlPMG1jbkNBS3NlT1hwTmgxUDlKZGlGSHBwS1dNQVExT2Y4UURXWkN4X3RqU2VVb09nMnJiZmpCdmdmeVBKd2FrV0Jad1RiTUJaTWVuUlEzVUJkbVdQbEtzRVlNbm1tdEU2MXZneA?oc=5"
     }
   ]
 }
