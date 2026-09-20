@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-19T23:11:54+00:00",
+  "generatedAt": "2026-09-20T06:25:40+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
@@ -26,6 +26,18 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOY1dQRV9XLUcxZkxLcUlBeEtxM0RxM1dWOF9FM21EckpLT3d2Yk1rX2xzaVdES2dyTURTOEdkTEoxRWwwQ01PQTA4cHZNM3FXeG1oak81Q3N2Uzh6WUJyTUxBRzl3My1HdEM3ZDNMSHh3dDViYVUzZlNxazRwNFkyWllfbXM?oc=5"
+    },
+    {
+      "date": "17 Sep",
+      "time": "12:00 HKT",
+      "publishedAt": "2026-09-17T12:00:39+08:00",
+      "kind": "NEWS",
+      "source": "Financial Times",
+      "eventId": "us-cpi-aug",
+      "title": "The social-media echo chamber is skewing inflation expectations",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9zazQ3QlJZRXRLLXpWM1IyY2kyamlaRHJUUHBZd1UzV2hMalhTOGczSEw0ZE1VOURYUkxQc3Q1Y2JxSWVTejAwdVBseEVGZHZYbTNvcnpLakxjUHh6UkQ3Yi1JTllJcXFLRmI3RTcxR3A?oc=5"
     },
     {
       "date": "17 Sep",
@@ -206,18 +218,6 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPQ2l2aklZZV9FVlF3OFZCeDU5UzBIZXdXVkhTRDR3VVZsZV9seEJRT3dVa29MUFd4eTdlcHNnMnBfZFhQVUVqcnloVXJ5VFRkd3VhYlRMeVVCMS05NFlJSU00bXd1UmEtTjlYSHFIVHJzT1ZtTHlUVEFIQzlFaWFsNTQxeDl2dTdPR0pXTVZCTV8yOVNUeDJzOHhMQTdRRWtkakdjR0oxSG8?oc=5"
-    },
-    {
-      "date": "10 Sep",
-      "time": "15:00 HKT",
-      "publishedAt": "2026-09-10T15:00:00+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-cpi-aug",
-      "title": "COMMENTARY: US CPI, where the significant and the silly collide",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNSmhLc3dLcnJOclBhYjVoYmZrWG5RRHBzQ1VramVqZmxoczVpUXBIQndSRWIzTGhBUW5lV3d5eGhrTEZRZTB6WkhpcDAyaEtRaHVIRXdXOW9SVFVnN2NoMThjN2I4NWtVYU9obGo4elJHZTRLbzdYUlhWZGV1TUNyTTU3VDJrUlRmRTRkNndKREdoSzBBVnFVV2pzejUwMXdvU21aOUtKaUQ?oc=5"
     }
   ]
 }
