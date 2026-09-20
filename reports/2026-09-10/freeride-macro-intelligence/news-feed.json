@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-20T16:13:08+00:00",
+  "generatedAt": "2026-09-20T18:51:58+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
@@ -200,24 +200,24 @@
       "time": "15:00 HKT",
       "publishedAt": "2026-09-11T15:00:00+08:00",
       "kind": "NEWS",
-      "source": "Financial Times",
-      "eventId": "us-cpi-aug",
-      "title": "Kevin Warsh under mounting pressure to raise rates as US inflation persists",
+      "source": "Reuters",
+      "eventId": "us-fomc-sep",
+      "title": "Wall Street jumps, oil lower ahead of Fed vote next week",
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPaU11OG1TVmxJZC1hcVgyX09selQzQUZ0NjJ0ZEhEeXl4ajFXY2M4VElKOXR2dkFXTnBXbGl3YW9WMXZqVWw4QjFVYmwzOHFBQ2xYUnNDeDVoT2g3elYwVWZqU0h3UEQ3akdxd2l5a0lVdkp2SHN6dUEzUXluTXRCMkpSaGE?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1rQ3pYNkdSYUhxbHl1RjJnc01XMWdUV2NHRFBXaTJhN0FzcUtqV3RFOU5EaUZyTnZYTVJ5ZlduWkJGTzB1Wm8xdmpLdXNBSzdubXRLbmxZRlQtTkh4YkRrbjUwQVFScUVBM3MxLTdITll1ZnZmUGljV1NtRXk?oc=5"
     },
     {
       "date": "11 Sep",
       "time": "15:00 HKT",
       "publishedAt": "2026-09-11T15:00:00+08:00",
       "kind": "NEWS",
-      "source": "Bloomberg",
+      "source": "Financial Times",
       "eventId": "us-cpi-aug",
-      "title": "Watch US Economy: Core CPI Rises More Than Expected in August",
+      "title": "Kevin Warsh under mounting pressure to raise rates as US inflation persists",
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNUzZJNGJfYURYRlltYzdRUm5nODJzb245dkRFTml5bXB6YWs0QXQxaUdaRjZzZUp4bmVHeUFzNWJHbU8yVkoyZ2ltOTdHM2xmaHZ5WV9mbmNlRTFzMHpseG5SUklKbUJTRUVyUHRkVnZnMUV5UmVwbGtxOWh2Ti1EMkx2MkpZd09mWmt6TkFKQV9scUtIal8xd1NreFZQRURteVdN?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPaU11OG1TVmxJZC1hcVgyX09selQzQUZ0NjJ0ZEhEeXl4ajFXY2M4VElKOXR2dkFXTnBXbGl3YW9WMXZqVWw4QjFVYmwzOHFBQ2xYUnNDeDVoT2g3elYwVWZqU0h3UEQ3akdxd2l5a0lVdkp2SHN6dUEzUXluTXRCMkpSaGE?oc=5"
     }
   ]
 }
