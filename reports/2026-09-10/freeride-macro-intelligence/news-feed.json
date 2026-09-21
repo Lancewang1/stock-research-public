@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21T07:15:48+00:00",
+  "generatedAt": "2026-09-21T14:20:26+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
@@ -53,8 +53,8 @@
     },
     {
       "date": "16 Sep",
-      "time": "12:00 HKT",
-      "publishedAt": "2026-09-16T12:00:23+08:00",
+      "time": "12:01 HKT",
+      "publishedAt": "2026-09-16T12:01:48+08:00",
       "kind": "NEWS",
       "source": "Financial Times",
       "eventId": "us-fomc-sep",
@@ -98,18 +98,6 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOTmR4eUlzVVZXLUFSSEpiLUs3UkxJMDYwVVpsU2o1REJIOUFSTlN3U2VBV2NRZ3hUTUNzSy1KRTNlODFaTmh6bGgtTFpCM3BCWE13c250dlBDTW5XaS1rWHpUMjV0cFJiSkxqN3g4OTVVZmJKN1dKSXZhRHZ2bW1Lbndrc3UxRGhjNG9LY01lZklaajE4?oc=5"
-    },
-    {
-      "date": "14 Sep",
-      "time": "22:18 HKT",
-      "publishedAt": "2026-09-14T22:18:54+08:00",
-      "kind": "NEWS",
-      "source": "Financial Times",
-      "eventId": "us-fomc-sep",
-      "title": "Ten-year Treasury yield hits 5% for first time since 2023",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQcm9qMUhHdzZRZGFTVG9vQ2pxRmRZWWxSWXRLYlhFTlU1aF9hbmQ2aU9hNVNJZ3ZoYnNGVXhfREVzMVRzdFppM3dWUGpKeUtPcEp3RUhScUoyekJUNFJlN2h5NVdWRmEyaHl0MC1vc2FONG5ZTktPb1BhTTVjWmhIalExeDU?oc=5"
     },
     {
       "date": "14 Sep",
@@ -213,11 +201,23 @@
       "publishedAt": "2026-09-11T15:00:00+08:00",
       "kind": "NEWS",
       "source": "Bloomberg",
-      "eventId": "us-cpi-aug",
-      "title": "Watch US Core CPI Tops Forecasts, Bolstering Case for Rate Hike",
+      "eventId": "us-fomc-sep",
+      "title": "Fed’s Rate Decision May Have Come Down to Phone Plan Changes",
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQNk93c2xzMlc1ZHMxTUl5OTRnM0dtOFBXTVpzbkRwcndiYW45Ri1zUF9xbTI2VmR1TlFQeXhQX3JfaWx2N3U5U3VzTl9Gc28tS19Ic3pscnE4UWxmdnQ2cXNQRUUtWHhJUkxTdzduSDNSOHlFeUl2dm0xdGdJVmxfNHF5WG9ydktXcUtWOC1KelF6eU5ZWTBvaVRicEM2NkJNT09JNU4zTUJieWN4?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPeWpxT2FjVFB3bV9JeDlYbkwxb2t5bHpHMm9MV0RNdUFObGVjdmxCNFNoUGNOY3RBOS1pczhpOWlxcHhCQkxoRmFvbTlPMG1jbkNBS3NlT1hwTmgxUDlKZGlGSHBwS1dNQVExT2Y4UURXWkN4X3RqU2VVb09nMnJiZmpCdmdmeVBKd2FrV0Jad1RiTUJaTWVuUlEzVUJkbVdQbEtzRVlNbm1tdEU2MXZneA?oc=5"
+    },
+    {
+      "date": "10 Sep",
+      "time": "15:00 HKT",
+      "publishedAt": "2026-09-10T15:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-cpi-aug",
+      "title": "COMMENTARY: US CPI, where the significant and the silly collide",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNSmhLc3dLcnJOclBhYjVoYmZrWG5RRHBzQ1VramVqZmxoczVpUXBIQndSRWIzTGhBUW5lV3d5eGhrTEZRZTB6WkhpcDAyaEtRaHVIRXdXOW9SVFVnN2NoMThjN2I4NWtVYU9obGo4elJHZTRLbzdYUlhWZGV1TUNyTTU3VDJrUlRmRTRkNndKREdoSzBBVnFVV2pzejUwMXdvU21aOUtKaUQ?oc=5"
     }
   ]
 }
