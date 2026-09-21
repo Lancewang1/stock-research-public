@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-20T23:34:56+00:00",
+  "generatedAt": "2026-09-21T07:15:48+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
@@ -124,18 +124,6 @@
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQX1FlNm82dWhzNW1zVWg2YXU4bmtFeTVrcG90cGRXQXBFR3EzamFMOUpPMkpQUk1tM2VBTThrZWpRc0ZQcDljSjg1ZXo3anpHSjBFYlZzS0hGLVpzTUVhSkpPNzRRYWpqeW5DTmU3QnMzRmY5ZHJQS2JKS2pMR0lwT1c1ZEE?oc=5"
     },
     {
-      "date": "12 Sep",
-      "time": "04:33 HKT",
-      "publishedAt": "2026-09-12T04:33:05+08:00",
-      "kind": "NEWS",
-      "source": "Bloomberg",
-      "eventId": "us-cpi-aug",
-      "title": "Treasuries End Bruising Week With Fed Hike Bets Firmed After CPI",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNdXlONzZ4VHRzenV1NDBKWG82U3QxbC1QcjFlZGFaY1llQ1E5SnpjMWp2cTluRnpabTNmS2oxc1AxSW94SnN3bWhlRlNqTUtJQ05FMC01Q2V0ZzVjQ016elAzSlBuWVpEQlVBbGdpaVFOYTBVQm5pUXRqcEZwQ21rTWRpZHE2aEt3MG1yUHhxWlpzYXFkeEFMS0pKenl2OFBPUmhXbXNKMHJZbUo0RjFRRHZaMFNKZw?oc=5"
-    },
-    {
       "date": "11 Sep",
       "time": "21:45 HKT",
       "publishedAt": "2026-09-11T21:45:49+08:00",
@@ -194,6 +182,18 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOMEVIWUw2aXFMWmtQTVJyLTVrWFZRbmM2cnRtRU5kQmVrTjBFbDFya1lRazZWVGtUWEtZcWxVMXJleFc2b0JiSEhrU1VKbjR0OXkxMGZHOFZ2RlB2WlBVaEtsQlNoMlNOcUY5NXlkZFFURU0wd1J4VmdyYUNia2hYbWdEOHZRb2hnNzJRak1qYmtCZ2Y5R2Y4SG94WkZybXhrVFBHaGhRNnZmN3NvdUhpbFdB?oc=5"
+    },
+    {
+      "date": "11 Sep",
+      "time": "15:00 HKT",
+      "publishedAt": "2026-09-11T15:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Bloomberg",
+      "eventId": "us-cpi-aug",
+      "title": "Treasuries End Bruising Week With Fed Hike Bets Firmed After CPI",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNdXlONzZ4VHRzenV1NDBKWG82U3QxbC1QcjFlZGFaY1llQ1E5SnpjMWp2cTluRnpabTNmS2oxc1AxSW94SnN3bWhlRlNqTUtJQ05FMC01Q2V0ZzVjQ016elAzSlBuWVpEQlVBbGdpaVFOYTBVQm5pUXRqcEZwQ21rTWRpZHE2aEt3MG1yUHhxWlpzYXFkeEFMS0pKenl2OFBPUmhXbXNKMHJZbUo0RjFRRHZaMFNKZw?oc=5"
     },
     {
       "date": "11 Sep",
