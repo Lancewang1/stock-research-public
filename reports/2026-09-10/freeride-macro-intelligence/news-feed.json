@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21T22:50:57+00:00",
+  "generatedAt": "2026-09-22T01:37:56+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
@@ -100,6 +100,18 @@
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPVlA3clhoZHZZTXBPTkpZMjNHRVhucm1nTUxYclV2UF9mRVowVkcwekVpSW1PUUFRUnNfSUxlaHRyYWNpYk1uOHpqS1RkdDh0NlZyNnZlR2RUWFNhbnJnNmhEMmw5ZTRQTzYtblRuVWtiSmRobGxJZnBQRXQ0Q1hpaFZZMGk?oc=5"
     },
     {
+      "date": "15 Sep",
+      "time": "03:25 HKT",
+      "publishedAt": "2026-09-15T03:25:57+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-fomc-sep",
+      "title": "Fed's table is set for a rate hike, a first under Warsh",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOTmR4eUlzVVZXLUFSSEpiLUs3UkxJMDYwVVpsU2o1REJIOUFSTlN3U2VBV2NRZ3hUTUNzSy1KRTNlODFaTmh6bGgtTFpCM3BCWE13c250dlBDTW5XaS1rWHpUMjV0cFJiSkxqN3g4OTVVZmJKN1dKSXZhRHZ2bW1Lbndrc3UxRGhjNG9LY01lZklaajE4?oc=5"
+    },
+    {
       "date": "14 Sep",
       "time": "12:00 HKT",
       "publishedAt": "2026-09-14T12:00:58+08:00",
@@ -113,15 +125,39 @@
     },
     {
       "date": "11 Sep",
-      "time": "21:45 HKT",
-      "publishedAt": "2026-09-11T21:45:49+08:00",
+      "time": "15:00 HKT",
+      "publishedAt": "2026-09-11T15:00:00+08:00",
       "kind": "NEWS",
-      "source": "Bloomberg",
+      "source": "Reuters",
       "eventId": "us-cpi-aug",
-      "title": "Watch CPI Sets Up ‘Risk Management Hikes’ for Fed, Pimco’s Wilding Says",
+      "title": "Fed rate-hike case builds as inflation fails to cool",
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOUnR6ejl4cnUyaVliWkIteER2aUJvYnhMYUZFN3dwYVN0Q0pueFhBRV84a3FVaUdORVdRX0M5TGFNN1BZSXlhX1h4c3dRZlhQRDVhTEE3QmRfeWc2cjhMcVMycER6dHZIbjZBWk1hTEpQUUxvek92VS1LSXIzdmJSTE4tQ1pfajFjUnpKODd5emhrTzFFZ0pKU0hSaHlSeWU3SGlSNg?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOU2R5eFJ0eFBfbWR4dnNKaUdDZC1MTVY5aWYxc3BlaUY1S2ZMM0xwaFhMbEh1cWtsSFhFVGk5eEE4NkRTb3FxREhvbkpKVjdXdVY1VHhNT2NaUkhUNmEtSzdoQno5aWFRUGpWS0ZBMXcwUEFKSHFOVF9jcFJQSExCbjBYaU5JNTdMdlladkpZdkp2TURmcW94ZkxtV1dwbTR3TkJhUXlmc1A?oc=5"
+    },
+    {
+      "date": "11 Sep",
+      "time": "15:00 HKT",
+      "publishedAt": "2026-09-11T15:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-fomc-sep",
+      "title": "US consumer prices accelerate in August, push Fed closer to rate hike",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOdW10dVZWcHQ3MkdPRy1fRGN2VVUzeV8tV2tRSnRfVHdBbllhS0hfTzlWUy1tM0pHZWxmTl84b3loTVFqRHdUX3I2REFQQ1h5ZTZIcHBJTy1Jcmd1VUpPdDRtdVhvbVpHMEVCQmJkbnNqYXBCUGZiTjVmcTM5NUpEbFgwb08wQU92TFE?oc=5"
+    },
+    {
+      "date": "11 Sep",
+      "time": "15:00 HKT",
+      "publishedAt": "2026-09-11T15:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-cpi-aug",
+      "title": "VIEW Stocks, bonds rally after August inflation report",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQY08xWWcxZWZRWG5WSFJ2ckZFcFk1T0cyNjlfS3F0U0Vyby1EWVJUaUNNaTUwVXRNVnk0Q2NfVVdYT2lPYjUxdjZlVHBXOWVPVnMzWk1DWmE4V1RGNzFrWFhwN3V5alYtbktTcDBST0RORllfc1Nhd0RBNFZ0UTVlbFFaM0FGMEpTLTIxdTVCeEJpcG5YdC1zTUZqMTQwNGhDZVBNbVBxX0Jmbkpsd2c?oc=5"
     },
     {
       "date": "11 Sep",
@@ -182,42 +218,6 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQNk93c2xzMlc1ZHMxTUl5OTRnM0dtOFBXTVpzbkRwcndiYW45Ri1zUF9xbTI2VmR1TlFQeXhQX3JfaWx2N3U5U3VzTl9Gc28tS19Ic3pscnE4UWxmdnQ2cXNQRUUtWHhJUkxTdzduSDNSOHlFeUl2dm0xdGdJVmxfNHF5WG9ydktXcUtWOC1KelF6eU5ZWTBvaVRicEM2NkJNT09JNU4zTUJieWN4?oc=5"
-    },
-    {
-      "date": "11 Sep",
-      "time": "15:00 HKT",
-      "publishedAt": "2026-09-11T15:00:00+08:00",
-      "kind": "NEWS",
-      "source": "Bloomberg",
-      "eventId": "us-fomc-sep",
-      "title": "Fed’s Rate Decision May Have Come Down to Phone Plan Changes",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPeWpxT2FjVFB3bV9JeDlYbkwxb2t5bHpHMm9MV0RNdUFObGVjdmxCNFNoUGNOY3RBOS1pczhpOWlxcHhCQkxoRmFvbTlPMG1jbkNBS3NlT1hwTmgxUDlKZGlGSHBwS1dNQVExT2Y4UURXWkN4X3RqU2VVb09nMnJiZmpCdmdmeVBKd2FrV0Jad1RiTUJaTWVuUlEzVUJkbVdQbEtzRVlNbm1tdEU2MXZneA?oc=5"
-    },
-    {
-      "date": "11 Sep",
-      "time": "15:00 HKT",
-      "publishedAt": "2026-09-11T15:00:00+08:00",
-      "kind": "NEWS",
-      "source": "Bloomberg",
-      "eventId": "us-fomc-sep",
-      "title": "Watch US Economy Probably Needs Three Fed Rate Hikes, BNP’s Mateos y Lago Says",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQTlhfVXByNzdPRmt5NTNhNmtVNm5ORXdpSmoxX21DSTdfMzRpT2ZFYjJicWhxR2NvNzEtNENocFFETkNua1BKMERBWVFvZzAxdWNrWllfTXZTa2V4bUQwZjkwSng0N0hpZUpucndBN29aSldMWkVQaW9DbHZRX1o3d2tlQ2RBTWZVSnE1MFFWRjdCazhmSktyS1lUX29vWUR2QXNzZkk2MlY?oc=5"
-    },
-    {
-      "date": "10 Sep",
-      "time": "15:00 HKT",
-      "publishedAt": "2026-09-10T15:00:00+08:00",
-      "kind": "NEWS",
-      "source": "Bloomberg",
-      "eventId": "us-cpi-aug",
-      "title": "What a Fed Rate Hike Actually Means for the US Economy and Inflation",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPbURnSGJWd2lvYWxON2xJVEdlQ3lpQ2NGdy1zc3pfTnFybC0tRUg5ZTlFd3lEZlU2emJvQkhyREpWV2VUTzd5anQxUTRJbnROWTMyWml0YzFseHRqeURHekU0WWpPRmNMUVlheXkwNzFjUTBRRjJpT1hLUWF0VDRfbldJcktzZk1Db1RSdDN1dWhOOUpTZmJ6ZGcxNnJMbFBXNkQ1dS03RGRnR3lVaG90VFkzSQ?oc=5"
     }
   ]
 }
