@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-22T23:17:36+00:00",
+  "generatedAt": "2026-09-23T01:50:14+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
@@ -172,52 +172,52 @@
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPaU11OG1TVmxJZC1hcVgyX09selQzQUZ0NjJ0ZEhEeXl4ajFXY2M4VElKOXR2dkFXTnBXbGl3YW9WMXZqVWw4QjFVYmwzOHFBQ2xYUnNDeDVoT2g3elYwVWZqU0h3UEQ3akdxd2l5a0lVdkp2SHN6dUEzUXluTXRCMkpSaGE?oc=5"
     },
     {
-      "date": "11 Sep",
+      "date": "10 Sep",
       "time": "15:00 HKT",
-      "publishedAt": "2026-09-11T15:00:00+08:00",
+      "publishedAt": "2026-09-10T15:00:00+08:00",
       "kind": "NEWS",
-      "source": "Bloomberg",
+      "source": "Reuters",
       "eventId": "us-cpi-aug",
-      "title": "US Core CPI Tops Forecasts, Bolstering Case for Rate Hike",
+      "title": "COMMENTARY: US CPI, where the significant and the silly collide",
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOMEVIWUw2aXFMWmtQTVJyLTVrWFZRbmM2cnRtRU5kQmVrTjBFbDFya1lRazZWVGtUWEtZcWxVMXJleFc2b0JiSEhrU1VKbjR0OXkxMGZHOFZ2RlB2WlBVaEtsQlNoMlNOcUY5NXlkZFFURU0wd1J4VmdyYUNia2hYbWdEOHZRb2hnNzJRak1qYmtCZ2Y5R2Y4SG94WkZybXhrVFBHaGhRNnZmN3NvdUhpbFdB?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNSmhLc3dLcnJOclBhYjVoYmZrWG5RRHBzQ1VramVqZmxoczVpUXBIQndSRWIzTGhBUW5lV3d5eGhrTEZRZTB6WkhpcDAyaEtRaHVIRXdXOW9SVFVnN2NoMThjN2I4NWtVYU9obGo4elJHZTRLbzdYUlhWZGV1TUNyTTU3VDJrUlRmRTRkNndKREdoSzBBVnFVV2pzejUwMXdvU21aOUtKaUQ?oc=5"
     },
     {
-      "date": "11 Sep",
+      "date": "09 Sep",
       "time": "15:00 HKT",
-      "publishedAt": "2026-09-11T15:00:00+08:00",
+      "publishedAt": "2026-09-09T15:00:00+08:00",
       "kind": "NEWS",
-      "source": "Bloomberg",
-      "eventId": "us-cpi-aug",
-      "title": "Treasuries End Bruising Week With Fed Hike Bets Firmed After CPI",
+      "source": "Reuters",
+      "eventId": "us-fomc-sep",
+      "title": "Fed to hold rates steady in rest of 2026; rising number of analysts see at least one hike: Reuters poll",
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNdXlONzZ4VHRzenV1NDBKWG82U3QxbC1QcjFlZGFaY1llQ1E5SnpjMWp2cTluRnpabTNmS2oxc1AxSW94SnN3bWhlRlNqTUtJQ05FMC01Q2V0ZzVjQ016elAzSlBuWVpEQlVBbGdpaVFOYTBVQm5pUXRqcEZwQ21rTWRpZHE2aEt3MG1yUHhxWlpzYXFkeEFMS0pKenl2OFBPUmhXbXNKMHJZbUo0RjFRRHZaMFNKZw?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOZ0NreUFoTnFxX3ZzQnd3YU9FNFVkQmhfZlBrSVBUUm12Q0lCckxRTHdWcUVHbmJpcDZKbVhNZG5RektYQlpqaUZGMjl2TnJ0amhPMGJBWnB6OG9FVTB5dVJPTlc1ZjJaa2djUl9HR3VhYzIxODJjVEx1NUswdkVkblYxNVNSY1dYWlpUdzlEQU9UNTNzaUtVWXVtdXljVEUzSnVOQTV2bTJHSXN6Q2E3U0pzcVk5U19qUmc?oc=5"
     },
     {
-      "date": "11 Sep",
+      "date": "08 Sep",
       "time": "15:00 HKT",
-      "publishedAt": "2026-09-11T15:00:00+08:00",
+      "publishedAt": "2026-09-08T15:00:00+08:00",
       "kind": "NEWS",
-      "source": "Bloomberg",
-      "eventId": "us-cpi-aug",
-      "title": "Watch US Economy: Core CPI Rises More Than Expected in August",
+      "source": "Reuters",
+      "eventId": "us-fomc-sep",
+      "title": "COMMENTARY: Trump's baffling Fed threat could be gift to Warsh: Mike Dolan",
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNUzZJNGJfYURYRlltYzdRUm5nODJzb245dkRFTml5bXB6YWs0QXQxaUdaRjZzZUp4bmVHeUFzNWJHbU8yVkoyZ2ltOTdHM2xmaHZ5WV9mbmNlRTFzMHpseG5SUklKbUJTRUVyUHRkVnZnMUV5UmVwbGtxOWh2Ti1EMkx2MkpZd09mWmt6TkFKQV9scUtIal8xd1NreFZQRURteVdN?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOUlJyMEZjMzY1WGZkdzZwdlJ3c0NYc1RBOU9yZkRYb1FpNjBCUElLSWU1ejVfemROSmhWOVBUWkhGV1VNWU1XTVlJd3VNcmlXdDZfc01taXJVTnppazFSS05iQ1A4Smw0OVNPS3l0VWNZenBVT1JONkg4U2RsaUozR2xWR3ZubUo3XzVlZXptNEhJOHZGelJtRl92aWRhLS1sSXplRm5TdUQ3Mk1SMnlpdHRiT3JXTk5IMDREWll0dGlsanlNQ1VNTA?oc=5"
     },
     {
-      "date": "11 Sep",
+      "date": "07 Sep",
       "time": "15:00 HKT",
-      "publishedAt": "2026-09-11T15:00:00+08:00",
+      "publishedAt": "2026-09-07T15:00:00+08:00",
       "kind": "NEWS",
-      "source": "Bloomberg",
-      "eventId": "us-cpi-aug",
-      "title": "Watch US Core CPI Tops Forecasts, Bolstering Case for Rate Hike",
+      "source": "Reuters",
+      "eventId": "us-payrolls-aug",
+      "title": "Gold eases as strong US jobs data boosts Fed rate-hike bets",
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQNk93c2xzMlc1ZHMxTUl5OTRnM0dtOFBXTVpzbkRwcndiYW45Ri1zUF9xbTI2VmR1TlFQeXhQX3JfaWx2N3U5U3VzTl9Gc28tS19Ic3pscnE4UWxmdnQ2cXNQRUUtWHhJUkxTdzduSDNSOHlFeUl2dm0xdGdJVmxfNHF5WG9ydktXcUtWOC1KelF6eU5ZWTBvaVRicEM2NkJNT09JNU4zTUJieWN4?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPRGNES0hoVGlPMVZfR041a2MwVUNQOUI5dzBweW04UlNvWjNJUnJYUEdGMkkyb1I1MWdRcUp5SDJybUV4YlRTWEZ5aFd4M3NaTnE5clF1Y200Tk9oNFoxd3lncVkzbjFNdTVKazRLNVpSSloteGRvakNZWmxwLW5uUWo5V0U2dDc2TFE0Nkg4VWVOU1dpdE5tNUhzOWtXcUNjTUZQMmF3T2ZOQkpWRURmX20wSFlvam9UV1Yw?oc=5"
     }
   ]
 }
