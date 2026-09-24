@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T15:12:38+00:00",
+  "generatedAt": "2026-09-24T19:15:38+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
@@ -42,7 +42,7 @@
     {
       "date": "22 Sep",
       "time": "12:00 HKT",
-      "publishedAt": "2026-09-22T12:00:11+08:00",
+      "publishedAt": "2026-09-22T12:00:40+08:00",
       "kind": "NEWS",
       "source": "Financial Times",
       "eventId": "us-fomc-sep",
