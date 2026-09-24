@@ -1,8 +1,20 @@
 {
-  "generatedAt": "2026-09-24T04:59:51+00:00",
+  "generatedAt": "2026-09-24T10:07:47+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
+    {
+      "date": "24 Sep",
+      "time": "12:00 HKT",
+      "publishedAt": "2026-09-24T12:00:11+08:00",
+      "kind": "NEWS",
+      "source": "Financial Times",
+      "eventId": "us-cpi-aug",
+      "title": "Fed will act to ensure inflation resumes its moderation",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE4teXVtNVNqaHRiVkJyWWl4NE5zaW1FU05vY3pTSlpnUFRhTnlMelZ3UTAzUVBpUzdQRmsxN0JYdkVBZUIzSklJWnZNRHhKVHJtWlZDaWZTWG5BWHgtQWZhZ25yM3U5QWxSeXVJbFZQS1E?oc=5"
+    },
     {
       "date": "23 Sep",
       "time": "23:33 HKT",
@@ -68,24 +80,24 @@
       "time": "15:00 HKT",
       "publishedAt": "2026-09-15T15:00:00+08:00",
       "kind": "NEWS",
-      "source": "Financial Times",
-      "eventId": "us-fomc-sep",
-      "title": "Fed should defy Donald Trump with rate rise, top economists say",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNYVdob3AzUDBiZzZLRzFyQnZSZVhuTUxaT0ptay10LWtILU10RVkwTFZpa3dpRlQ1SUxzTm9GX0w5R1JHTkJXQ0MyYWlRUG5rRlc4Q3I1VGlocVhfU2RWQ0Z5TUFSM3J6ZjJ1SXRDM1dBWVBZOXQ3YnlBUkFaUTZzRlNFUTQ?oc=5"
-    },
-    {
-      "date": "15 Sep",
-      "time": "03:25 HKT",
-      "publishedAt": "2026-09-15T03:25:57+08:00",
-      "kind": "NEWS",
       "source": "Reuters",
       "eventId": "us-fomc-sep",
       "title": "Fed's table is set for a rate hike, a first under Warsh",
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOTmR4eUlzVVZXLUFSSEpiLUs3UkxJMDYwVVpsU2o1REJIOUFSTlN3U2VBV2NRZ3hUTUNzSy1KRTNlODFaTmh6bGgtTFpCM3BCWE13c250dlBDTW5XaS1rWHpUMjV0cFJiSkxqN3g4OTVVZmJKN1dKSXZhRHZ2bW1Lbndrc3UxRGhjNG9LY01lZklaajE4?oc=5"
+    },
+    {
+      "date": "15 Sep",
+      "time": "15:00 HKT",
+      "publishedAt": "2026-09-15T15:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Financial Times",
+      "eventId": "us-fomc-sep",
+      "title": "Fed should defy Donald Trump with rate rise, top economists say",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNYVdob3AzUDBiZzZLRzFyQnZSZVhuTUxaT0ptay10LWtILU10RVkwTFZpa3dpRlQ1SUxzTm9GX0w5R1JHTkJXQ0MyYWlRUG5rRlc4Q3I1VGlocVhfU2RWQ0Z5TUFSM3J6ZjJ1SXRDM1dBWVBZOXQ3YnlBUkFaUTZzRlNFUTQ?oc=5"
     },
     {
       "date": "13 Sep",
@@ -206,18 +218,6 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNUzZJNGJfYURYRlltYzdRUm5nODJzb245dkRFTml5bXB6YWs0QXQxaUdaRjZzZUp4bmVHeUFzNWJHbU8yVkoyZ2ltOTdHM2xmaHZ5WV9mbmNlRTFzMHpseG5SUklKbUJTRUVyUHRkVnZnMUV5UmVwbGtxOWh2Ti1EMkx2MkpZd09mWmt6TkFKQV9scUtIal8xd1NreFZQRURteVdN?oc=5"
-    },
-    {
-      "date": "11 Sep",
-      "time": "15:00 HKT",
-      "publishedAt": "2026-09-11T15:00:00+08:00",
-      "kind": "NEWS",
-      "source": "Bloomberg",
-      "eventId": "us-cpi-aug",
-      "title": "Watch CPI Sets Up ‘Risk Management Hikes’ for Fed, Pimco’s Wilding Says",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOUnR6ejl4cnUyaVliWkIteER2aUJvYnhMYUZFN3dwYVN0Q0pueFhBRV84a3FVaUdORVdRX0M5TGFNN1BZSXlhX1h4c3dRZlhQRDVhTEE3QmRfeWc2cjhMcVMycER6dHZIbjZBWk1hTEpQUUxvek92VS1LSXIzdmJSTE4tQ1pfajFjUnpKODd5emhrTzFFZ0pKU0hSaHlSeWU3SGlSNg?oc=5"
     }
   ]
 }
