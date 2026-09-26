@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-26T02:03:30+00:00",
+  "generatedAt": "2026-09-26T07:48:47+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
@@ -184,40 +184,40 @@
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPaU11OG1TVmxJZC1hcVgyX09selQzQUZ0NjJ0ZEhEeXl4ajFXY2M4VElKOXR2dkFXTnBXbGl3YW9WMXZqVWw4QjFVYmwzOHFBQ2xYUnNDeDVoT2g3elYwVWZqU0h3UEQ3akdxd2l5a0lVdkp2SHN6dUEzUXluTXRCMkpSaGE?oc=5"
     },
     {
-      "date": "11 Sep",
+      "date": "10 Sep",
       "time": "15:00 HKT",
-      "publishedAt": "2026-09-11T15:00:00+08:00",
+      "publishedAt": "2026-09-10T15:00:00+08:00",
       "kind": "NEWS",
-      "source": "Bloomberg",
-      "eventId": "us-cpi-aug",
-      "title": "US Core CPI Tops Forecasts, Bolstering Case for Rate Hike",
+      "source": "Reuters",
+      "eventId": "us-fomc-sep",
+      "title": "Dollar rises, euro slips after ECB rate increase",
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOMEVIWUw2aXFMWmtQTVJyLTVrWFZRbmM2cnRtRU5kQmVrTjBFbDFya1lRazZWVGtUWEtZcWxVMXJleFc2b0JiSEhrU1VKbjR0OXkxMGZHOFZ2RlB2WlBVaEtsQlNoMlNOcUY5NXlkZFFURU0wd1J4VmdyYUNia2hYbWdEOHZRb2hnNzJRak1qYmtCZ2Y5R2Y4SG94WkZybXhrVFBHaGhRNnZmN3NvdUhpbFdB?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOYU50UmRVNmIyeFBOSmd6azlDeDMxNlh1S0cycHpnYjU4NERYWjhoN2diSmthTngzdWZScmFTdldrTGtUcTh3SDFKbVIySmU2TUx3cnMtOEdKMnFkV3J1d3pYRmdvZDVWb2VPSXNjcG52cEVPTGtLNF9UT1BFSnJ3WlUzOXNuU1FwZmNSdGVTdV9Na1h6M3dPVGVtU0ttYlBlRWc0S1Q0Rl9HSmVCNlZaZXhjMVc0OUduMk1mOGRqVkxjY0d2SGhRbWJsUQ?oc=5"
     },
     {
-      "date": "11 Sep",
+      "date": "08 Sep",
       "time": "15:00 HKT",
-      "publishedAt": "2026-09-11T15:00:00+08:00",
+      "publishedAt": "2026-09-08T15:00:00+08:00",
       "kind": "NEWS",
-      "source": "Bloomberg",
-      "eventId": "us-cpi-aug",
-      "title": "Watch US Core CPI Tops Forecasts, Bolstering Case for Rate Hike",
+      "source": "Reuters",
+      "eventId": "us-fomc-sep",
+      "title": "COMMENTARY: Trump's baffling Fed threat could be gift to Warsh: Mike Dolan",
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQNk93c2xzMlc1ZHMxTUl5OTRnM0dtOFBXTVpzbkRwcndiYW45Ri1zUF9xbTI2VmR1TlFQeXhQX3JfaWx2N3U5U3VzTl9Gc28tS19Ic3pscnE4UWxmdnQ2cXNQRUUtWHhJUkxTdzduSDNSOHlFeUl2dm0xdGdJVmxfNHF5WG9ydktXcUtWOC1KelF6eU5ZWTBvaVRicEM2NkJNT09JNU4zTUJieWN4?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOUlJyMEZjMzY1WGZkdzZwdlJ3c0NYc1RBOU9yZkRYb1FpNjBCUElLSWU1ejVfemROSmhWOVBUWkhGV1VNWU1XTVlJd3VNcmlXdDZfc01taXJVTnppazFSS05iQ1A4Smw0OVNPS3l0VWNZenBVT1JONkg4U2RsaUozR2xWR3ZubUo3XzVlZXptNEhJOHZGelJtRl92aWRhLS1sSXplRm5TdUQ3Mk1SMnlpdHRiT3JXTk5IMDREWll0dGlsanlNQ1VNTA?oc=5"
     },
     {
-      "date": "11 Sep",
+      "date": "07 Sep",
       "time": "15:00 HKT",
-      "publishedAt": "2026-09-11T15:00:00+08:00",
+      "publishedAt": "2026-09-07T15:00:00+08:00",
       "kind": "NEWS",
-      "source": "Bloomberg",
-      "eventId": "us-cpi-aug",
-      "title": "Treasuries End Bruising Week With Fed Hike Bets Firmed After CPI",
+      "source": "Reuters",
+      "eventId": "us-payrolls-aug",
+      "title": "Gold eases as strong US jobs data boosts Fed rate-hike bets",
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNdXlONzZ4VHRzenV1NDBKWG82U3QxbC1QcjFlZGFaY1llQ1E5SnpjMWp2cTluRnpabTNmS2oxc1AxSW94SnN3bWhlRlNqTUtJQ05FMC01Q2V0ZzVjQ016elAzSlBuWVpEQlVBbGdpaVFOYTBVQm5pUXRqcEZwQ21rTWRpZHE2aEt3MG1yUHhxWlpzYXFkeEFMS0pKenl2OFBPUmhXbXNKMHJZbUo0RjFRRHZaMFNKZw?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPRGNES0hoVGlPMVZfR041a2MwVUNQOUI5dzBweW04UlNvWjNJUnJYUEdGMkkyb1I1MWdRcUp5SDJybUV4YlRTWEZ5aFd4M3NaTnE5clF1Y200Tk9oNFoxd3lncVkzbjFNdTVKazRLNVpSSloteGRvakNZWmxwLW5uUWo5V0U2dDc2TFE0Nkg4VWVOU1dpdE5tNUhzOWtXcUNjTUZQMmF3T2ZOQkpWRURmX20wSFlvam9UV1Yw?oc=5"
     }
   ]
 }
