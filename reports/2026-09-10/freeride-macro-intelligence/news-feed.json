@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-09-28T12:01:41+00:00",
+  "generatedAt": "2026-09-28T19:42:47+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
     {
       "date": "28 Sep",
-      "time": "12:01 HKT",
-      "publishedAt": "2026-09-28T12:01:29+08:00",
+      "time": "12:00 HKT",
+      "publishedAt": "2026-09-28T12:00:18+08:00",
       "kind": "NEWS",
       "source": "Financial Times",
       "eventId": "us-fomc-sep",
@@ -14,18 +14,6 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9CR2dRcGVvc0o5ZURBSEhSVEVsd1V4UDRBZGRIdFNyWndhX3hqYzJnTmRNbl9Ua3dDUlJpS0wtckRIOTU0VElGYjFINGNFV05kZk1raHpTaXRzSTUtTF9DMTJLZzNrMUZKQmc5Q3RqY04?oc=5"
-    },
-    {
-      "date": "28 Sep",
-      "time": "09:41 HKT",
-      "publishedAt": "2026-09-28T09:41:00+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-cpi-aug",
-      "title": "Gold hits 7-week low as oil-driven inflation fears boost rate-hike bets",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQenE0aVBHOTNMeURZcVZjN3J0S1RMZ2kzakFJYklBMXhZckhuTGxLVnVaa2pmZjg0MzJHMU1fOGwwY3pfWjBXYmZUcGYtUjMzOFB4UW9ydUdKZDNOU2JrTHotMk9qa1ZGNkZXdGs3b0NKcGhveU11cmZGOC0wbzM1WWVJSzk3bDAxLWs3QUxVSy02QQ?oc=5"
     },
     {
       "date": "27 Sep",
@@ -86,18 +74,6 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOREpWOFBmdE5jcTF6Z3BkeTFoaWNfMnRBQTR1dnoydDJUZ05RS190M2pRU0M5RERYcDFoT1VpYi1Zb2JOTUFkMURoNEM3N1Y3NkdLcmFfeHhzaVJzXzFXZFE3N2dqTnNvbTVtTmZqWnBxa0Zxem4yQk9vX3ZVd3Y1Vjg2NFc?oc=5"
-    },
-    {
-      "date": "22 Sep",
-      "time": "12:00 HKT",
-      "publishedAt": "2026-09-22T12:00:40+08:00",
-      "kind": "NEWS",
-      "source": "Financial Times",
-      "eventId": "us-fomc-sep",
-      "title": "Rate rises should not be ‘the only game in town’",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNODlvVkFxaFV2RzZ4UVBZZDk4T1FBWUdld3J2eXZZb3lybW1WZFJQUno2UTZ0RUxlVnNJZ0NReW4zZkJOeGcwT20wZ1hqMlA1NFJsejZ2dDRBS09EeFV5N29JV09HZERkSi1HVjcyMXNfLWRMUE16TUFjLW1yMUZ2TDNPY1o?oc=5"
     },
     {
       "date": "16 Sep",
@@ -218,6 +194,30 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOMEVIWUw2aXFMWmtQTVJyLTVrWFZRbmM2cnRtRU5kQmVrTjBFbDFya1lRazZWVGtUWEtZcWxVMXJleFc2b0JiSEhrU1VKbjR0OXkxMGZHOFZ2RlB2WlBVaEtsQlNoMlNOcUY5NXlkZFFURU0wd1J4VmdyYUNia2hYbWdEOHZRb2hnNzJRak1qYmtCZ2Y5R2Y4SG94WkZybXhrVFBHaGhRNnZmN3NvdUhpbFdB?oc=5"
+    },
+    {
+      "date": "11 Sep",
+      "time": "15:00 HKT",
+      "publishedAt": "2026-09-11T15:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Bloomberg",
+      "eventId": "us-cpi-aug",
+      "title": "Watch US Core CPI Tops Forecasts, Bolstering Case for Rate Hike",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQNk93c2xzMlc1ZHMxTUl5OTRnM0dtOFBXTVpzbkRwcndiYW45Ri1zUF9xbTI2VmR1TlFQeXhQX3JfaWx2N3U5U3VzTl9Gc28tS19Ic3pscnE4UWxmdnQ2cXNQRUUtWHhJUkxTdzduSDNSOHlFeUl2dm0xdGdJVmxfNHF5WG9ydktXcUtWOC1KelF6eU5ZWTBvaVRicEM2NkJNT09JNU4zTUJieWN4?oc=5"
+    },
+    {
+      "date": "11 Sep",
+      "time": "15:00 HKT",
+      "publishedAt": "2026-09-11T15:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Bloomberg",
+      "eventId": "us-cpi-aug",
+      "title": "Treasuries End Bruising Week With Fed Hike Bets Firmed After CPI",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNdXlONzZ4VHRzenV1NDBKWG82U3QxbC1QcjFlZGFaY1llQ1E5SnpjMWp2cTluRnpabTNmS2oxc1AxSW94SnN3bWhlRlNqTUtJQ05FMC01Q2V0ZzVjQ016elAzSlBuWVpEQlVBbGdpaVFOYTBVQm5pUXRqcEZwQ21rTWRpZHE2aEt3MG1yUHhxWlpzYXFkeEFMS0pKenl2OFBPUmhXbXNKMHJZbUo0RjFRRHZaMFNKZw?oc=5"
     }
   ]
 }
