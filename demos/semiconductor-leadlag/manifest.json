@@ -1,0 +1,10 @@
+{
+  "source": "Historical semiconductor basket research snapshot, 2026-05-13; original report records yfinance as source",
+  "sha256": "9bdc190546922d1404314c67d9be449b4a0f51c25a58e13816622e6e29034e80",
+  "first_date": "2014-03-28",
+  "last_date": "2026-05-12",
+  "pairs_per_frequency": 42,
+  "daily_lag_unit": "row in union of observed US/KR dates; missing values retained before shift",
+  "monthly": "non-overlapping calendar-month log returns; boundary months excluded",
+  "status": "exploratory historical analysis; not a tradable backtest"
+}
