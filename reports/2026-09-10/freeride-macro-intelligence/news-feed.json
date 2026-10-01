@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-10-01T16:30:32+00:00",
+  "generatedAt": "2026-10-01T21:24:58+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
     {
-      "date": "01 Oct",
-      "time": "12:48 HKT",
-      "publishedAt": "2026-10-01T12:48:00+08:00",
+      "date": "02 Oct",
+      "time": "01:52 HKT",
+      "publishedAt": "2026-10-02T01:52:57+08:00",
       "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-cpi-aug",
-      "title": "Gold rises as softer inflation data dents Fed rate-hike bets",
+      "source": "Financial Times",
+      "eventId": "us-fomc-sep",
+      "title": "Top Fed official signals central bank will keep rates on hold in October",
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNRjFDcnNwNW1uWWdUaW5iaWRNLV8wbnl4QlBGWHFjN0twMDlINnBTclUwYnRGN1pTVTJYbE94MFEyRk5yQ0FUcXlQLXNkYkdPQXQ3eFlDUko4cXF1Vkc5TUg2LXZKSTAzc3hnOGJrT1hoNl92bG1mY1lSM2MwR3lBcGVQS2NmNDVEWUdURERqcDVkYUhpVTVXZDZqUEF6c1RCMjFFeWpOZWNKVzdGS3dFNzQ3VQ?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNMVNwTXhUMWdOSTBlNlN5OTM2aVNfSFB3dkpma0paczRPeDVNd0h5b1puQ0o2cVVRMWpYbkRnNnhDZzZjWFlwQWpWQ2NMZk5EQlRGM0lsYnZwdTRwZ01PWE1UWTVxaFFtamdnZXJIR09wYjhGRk12TmxxVnhqcE4zUXNKNzI?oc=5"
     },
     {
       "date": "01 Oct",
