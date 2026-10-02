@@ -1,24 +1,24 @@
 {
-  "generatedAt": "2026-10-02T19:22:45+00:00",
+  "generatedAt": "2026-10-02T23:17:58+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
     {
       "date": "03 Oct",
-      "time": "02:37 HKT",
-      "publishedAt": "2026-10-03T02:37:09+08:00",
+      "time": "06:44 HKT",
+      "publishedAt": "2026-10-03T06:44:50+08:00",
       "kind": "NEWS",
       "source": "Reuters",
       "eventId": "us-payrolls-aug",
-      "title": "Nasdaq climbs to record after softer jobs data cools rate-hike expectations",
+      "title": "Equities close higher as softer jobs data quiets rate-hike expectations",
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPeTVxVTNLX2pUZEc1U0xtNWdyYWRjY0NjSVcweXJNYk9PTDVKVnJaTzFNTUdnNW5LVEFxaHlELU9fVW9neE93Q0VDanlUbkJPcUhMaXNmNUJQX3pXd0JvcU1VSHh5Z1NEZnQzWGFsclpXZ08zRTVmY2ZaV1J4a2JBU3lPTEVNTUNBSVdVcWRydUlJOEY5ZU13NERhMFE3YUstSzB2RE5JV1gtZw?oc=5"
     },
     {
       "date": "03 Oct",
-      "time": "02:26 HKT",
-      "publishedAt": "2026-10-03T02:26:38+08:00",
+      "time": "05:22 HKT",
+      "publishedAt": "2026-10-03T05:22:37+08:00",
       "kind": "NEWS",
       "source": "Reuters",
       "eventId": "us-fomc-sep",
@@ -58,7 +58,7 @@
       "kind": "NEWS",
       "source": "Reuters",
       "eventId": "us-payrolls-aug",
-      "title": "Stocks gain, dollar falls after US jobs data; bond yields higher",
+      "title": "Stocks climb after weak US jobs data, but bonds resume selling",
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE0xaEpXc3pMdGRXalZlcHdvWThBeklWRlpfRDd4cUZLbXNGS2s0YVF4Sm42YUpqaFNTbVkyWmIyanN6WmxtSG5yME8zTml3Z1N3a0NabmktSy1YYWp0SFlOM2NQZEN6WmFnX096dUREY1pHTFJ0NzlrUW54cw?oc=5"
