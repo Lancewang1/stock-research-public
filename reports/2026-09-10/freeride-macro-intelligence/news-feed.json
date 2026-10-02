@@ -1,12 +1,36 @@
 {
-  "generatedAt": "2026-10-02T13:55:24+00:00",
+  "generatedAt": "2026-10-02T19:22:45+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
     {
+      "date": "03 Oct",
+      "time": "02:37 HKT",
+      "publishedAt": "2026-10-03T02:37:09+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-payrolls-aug",
+      "title": "Nasdaq climbs to record after softer jobs data cools rate-hike expectations",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPeTVxVTNLX2pUZEc1U0xtNWdyYWRjY0NjSVcweXJNYk9PTDVKVnJaTzFNTUdnNW5LVEFxaHlELU9fVW9neE93Q0VDanlUbkJPcUhMaXNmNUJQX3pXd0JvcU1VSHh5Z1NEZnQzWGFsclpXZ08zRTVmY2ZaV1J4a2JBU3lPTEVNTUNBSVdVcWRydUlJOEY5ZU13NERhMFE3YUstSzB2RE5JV1gtZw?oc=5"
+    },
+    {
+      "date": "03 Oct",
+      "time": "02:26 HKT",
+      "publishedAt": "2026-10-03T02:26:38+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-fomc-sep",
+      "title": "Fed may skip October but pull rate hike trigger in December",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNOVRfM1dqWHpoenJab09IVXh3am1peVNMWFFPOFhOSjl1SkI5MklDUDl6VFpkSkZxUE8tU0Q4S3R3VXNxd0t5Mlc3NGxXNTBid1N4U0czdVA2b09hVmRyT0VtaEU3M243T09TQjVTSzVMYURvSkg5WjBSc2tjVnpzM29ZMHdTMC1hUGlRUzBJRXBQdWk3bG9heTJOQjQ3QQ?oc=5"
+    },
+    {
       "date": "02 Oct",
-      "time": "21:03 HKT",
-      "publishedAt": "2026-10-02T21:03:59+08:00",
+      "time": "21:33 HKT",
+      "publishedAt": "2026-10-02T21:33:10+08:00",
       "kind": "NEWS",
       "source": "Reuters",
       "eventId": "us-payrolls-aug",
@@ -17,27 +41,27 @@
     },
     {
       "date": "02 Oct",
-      "time": "20:31 HKT",
-      "publishedAt": "2026-10-02T20:31:25+08:00",
-      "kind": "NEWS",
-      "source": "Financial Times",
-      "eventId": "us-payrolls-aug",
-      "title": "US economy adds just 29,000 jobs in September as hiring slows sharply",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOanpxWlBhS200R0JORVFQSnp6dHJUMXNpUEt3VkVySm1kV0Q4OFNEZDMwbEFVMkNnYUNIZXZjQkwzLW1QbnhSeWxaY003M1VpUEg5bGtaNHNzd0ZHMVFEaTZ5RTBEUFBIUnZVal9Ob3hPdVdCcDJvRVYxTVNDV1Jybmx4d1Q?oc=5"
-    },
-    {
-      "date": "02 Oct",
       "time": "10:24 HKT",
       "publishedAt": "2026-10-02T10:24:00+08:00",
       "kind": "NEWS",
       "source": "Reuters",
-      "eventId": "us-payrolls-aug",
-      "title": "Gold steadies ahead of US payrolls data, heads for weekly decline",
+      "eventId": "us-fomc-sep",
+      "title": "Gold heads for weekly drop as strong dollar, elevated Treasury yields weigh",
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOcU0zNk9Vb0hCT2pmbmJmeVE2S0tGa3NIMEdscGhEamlzdUhTUFdfLTVUX3FCTHVWMFdySmktUmdvTFIwQnpsX192VzYxdnUyTTJOWXRETzh1Z2ZFYUJpYjM3MWJJdG1XSG1tQTZCMnhBRlAzaTZEdHJEREY5cEJla2VZU3ZaZGtVOFZQMzljR3JFdUtUUlJUbzk1NzZiRzBna1JIRmdiVng?oc=5"
+    },
+    {
+      "date": "02 Oct",
+      "time": "10:10 HKT",
+      "publishedAt": "2026-10-02T10:10:00+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-payrolls-aug",
+      "title": "Stocks gain, dollar falls after US jobs data; bond yields higher",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE0xaEpXc3pMdGRXalZlcHdvWThBeklWRlpfRDd4cUZLbXNGS2s0YVF4Sm42YUpqaFNTbVkyWmIyanN6WmxtSG5yME8zTml3Z1N3a0NabmktSy1YYWp0SFlOM2NQZEN6WmFnX096dUREY1pHTFJ0NzlrUW54cw?oc=5"
     },
     {
       "date": "02 Oct",
@@ -52,16 +76,16 @@
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNMVNwTXhUMWdOSTBlNlN5OTM2aVNfSFB3dkpma0paczRPeDVNd0h5b1puQ0o2cVVRMWpYbkRnNnhDZzZjWFlwQWpWQ2NMZk5EQlRGM0lsYnZwdTRwZ01PWE1UWTVxaFFtamdnZXJIR09wYjhGRk12TmxxVnhqcE4zUXNKNzI?oc=5"
     },
     {
-      "date": "01 Oct",
-      "time": "12:48 HKT",
-      "publishedAt": "2026-10-01T12:48:00+08:00",
+      "date": "02 Oct",
+      "time": "01:32 HKT",
+      "publishedAt": "2026-10-02T01:32:00+08:00",
       "kind": "NEWS",
       "source": "Reuters",
-      "eventId": "us-cpi-aug",
-      "title": "Gold edges up as softer inflation data dents Fed rate-hike bets",
+      "eventId": "us-fomc-sep",
+      "title": "Fed policymakers lean against October rate hike",
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNRjFDcnNwNW1uWWdUaW5iaWRNLV8wbnl4QlBGWHFjN0twMDlINnBTclUwYnRGN1pTVTJYbE94MFEyRk5yQ0FUcXlQLXNkYkdPQXQ3eFlDUko4cXF1Vkc5TUg2LXZKSTAzc3hnOGJrT1hoNl92bG1mY1lSM2MwR3lBcGVQS2NmNDVEWUdURERqcDVkYUhpVTVXZDZqUEF6c1RCMjFFeWpOZWNKVzdGS3dFNzQ3VQ?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQcEdmemN4NUZ5RjRobklFbGFkcWZ0NENTRmZfU2hmNnFuZ1ZkRzJKY09hV3VLcjllT2V3VEVHdGg1NTFBbU1BVUJycDV1ODc5cTRxM1hCWlk5aW1RY3c0RzQ2bTNMcmsybi1VdDdoMG9RdUFrakRXSnFfb2trYmpOQzU5RmNmMXpqZlpJNUY1OEtEOGxnNXhlUjkzdmpnaWZVSVcwX1MyTHl1UQ?oc=5"
     },
     {
       "date": "01 Oct",
@@ -110,18 +134,6 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQcGptd1ZRaEZLdElDcU5KTEYyT3pkU1Q5VU4tX3lCU2tIUmNYTThCTk1OU3RWNVhrVXRrUmFlRDRXN3FCUk5oTkNxUC1jdGNhM0dOVHktYmR1UlA4dkdFUGhCTzdTMTJyX25OSjU2M2JMTTN3Rk43ZXlubGdMWXY4WXdKRlc?oc=5"
-    },
-    {
-      "date": "28 Sep",
-      "time": "23:53 HKT",
-      "publishedAt": "2026-09-28T23:53:50+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-fomc-sep",
-      "title": "Gold hits seven-week low as oil surge fuels rate hike bets",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQenE0aVBHOTNMeURZcVZjN3J0S1RMZ2kzakFJYklBMXhZckhuTGxLVnVaa2pmZjg0MzJHMU1fOGwwY3pfWjBXYmZUcGYtUjMzOFB4UW9ydUdKZDNOU2JrTHotMk9qa1ZGNkZXdGs3b0NKcGhveU11cmZGOC0wbzM1WWVJSzk3bDAxLWs3QUxVSy02QQ?oc=5"
     },
     {
       "date": "28 Sep",
@@ -178,6 +190,18 @@
       "kind": "NEWS",
       "source": "Financial Times",
       "eventId": "us-fomc-sep",
+      "title": "Fed should defy Donald Trump with rate rise, top economists say",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNYVdob3AzUDBiZzZLRzFyQnZSZVhuTUxaT0ptay10LWtILU10RVkwTFZpa3dpRlQ1SUxzTm9GX0w5R1JHTkJXQ0MyYWlRUG5rRlc4Q3I1VGlocVhfU2RWQ0Z5TUFSM3J6ZjJ1SXRDM1dBWVBZOXQ3YnlBUkFaUTZzRlNFUTQ?oc=5"
+    },
+    {
+      "date": "16 Sep",
+      "time": "15:00 HKT",
+      "publishedAt": "2026-09-16T15:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Financial Times",
+      "eventId": "us-fomc-sep",
       "title": "Federal Reserve defies Donald Trump with first rate rise since 2023",
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
@@ -194,30 +218,6 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOTmR4eUlzVVZXLUFSSEpiLUs3UkxJMDYwVVpsU2o1REJIOUFSTlN3U2VBV2NRZ3hUTUNzSy1KRTNlODFaTmh6bGgtTFpCM3BCWE13c250dlBDTW5XaS1rWHpUMjV0cFJiSkxqN3g4OTVVZmJKN1dKSXZhRHZ2bW1Lbndrc3UxRGhjNG9LY01lZklaajE4?oc=5"
-    },
-    {
-      "date": "15 Sep",
-      "time": "15:00 HKT",
-      "publishedAt": "2026-09-15T15:00:00+08:00",
-      "kind": "NEWS",
-      "source": "Financial Times",
-      "eventId": "us-fomc-sep",
-      "title": "Fed should defy Donald Trump with rate rise, top economists say",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNYVdob3AzUDBiZzZLRzFyQnZSZVhuTUxaT0ptay10LWtILU10RVkwTFZpa3dpRlQ1SUxzTm9GX0w5R1JHTkJXQ0MyYWlRUG5rRlc4Q3I1VGlocVhfU2RWQ0Z5TUFSM3J6ZjJ1SXRDM1dBWVBZOXQ3YnlBUkFaUTZzRlNFUTQ?oc=5"
-    },
-    {
-      "date": "15 Sep",
-      "time": "15:00 HKT",
-      "publishedAt": "2026-09-15T15:00:00+08:00",
-      "kind": "NEWS",
-      "source": "Financial Times",
-      "eventId": "us-cpi-aug",
-      "title": "US manufacturers hit by fresh burst of supply chain cost inflation",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPVlA3clhoZHZZTXBPTkpZMjNHRVhucm1nTUxYclV2UF9mRVowVkcwekVpSW1PUUFRUnNfSUxlaHRyYWNpYk1uOHpqS1RkdDh0NlZyNnZlR2RUWFNhbnJnNmhEMmw5ZTRQTzYtblRuVWtiSmRobGxJZnBQRXQ0Q1hpaFZZMGk?oc=5"
     }
   ]
 }
