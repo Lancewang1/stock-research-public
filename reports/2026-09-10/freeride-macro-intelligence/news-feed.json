@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T08:34:49+00:00",
+  "generatedAt": "2026-10-03T13:56:46+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
@@ -16,18 +16,6 @@
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPeTVxVTNLX2pUZEc1U0xtNWdyYWRjY0NjSVcweXJNYk9PTDVKVnJaTzFNTUdnNW5LVEFxaHlELU9fVW9neE93Q0VDanlUbkJPcUhMaXNmNUJQX3pXd0JvcU1VSHh5Z1NEZnQzWGFsclpXZ08zRTVmY2ZaV1J4a2JBU3lPTEVNTUNBSVdVcWRydUlJOEY5ZU13NERhMFE3YUstSzB2RE5JV1gtZw?oc=5"
     },
     {
-      "date": "03 Oct",
-      "time": "05:22 HKT",
-      "publishedAt": "2026-10-03T05:22:37+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-fomc-sep",
-      "title": "Fed may skip October but pull rate hike trigger in December",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNOVRfM1dqWHpoenJab09IVXh3am1peVNMWFFPOFhOSjl1SkI5MklDUDl6VFpkSkZxUE8tU0Q4S3R3VXNxd0t5Mlc3NGxXNTBid1N4U0czdVA2b09hVmRyT0VtaEU3M243T09TQjVTSzVMYURvSkg5WjBSc2tjVnpzM29ZMHdTMC1hUGlRUzBJRXBQdWk3bG9heTJOQjQ3QQ?oc=5"
-    },
-    {
       "date": "02 Oct",
       "time": "21:33 HKT",
       "publishedAt": "2026-10-02T21:33:10+08:00",
@@ -38,6 +26,18 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQTkVCanhuNm9LTk9xbXE4RmNabmw1S0s0RXJEdVZzdTdqa1M1TXBxU1pBTm13LVRaZXNSeFY4UVNOa1ZaTEY5NFo0ejBmZnBxanVVM29nWll0S21yNWZzaXlJY0FJSXFMMFVvYy1QOXBxTlZiMXhRbTUwUktoVmg2ekxuNTBTVzRWWG1VVFB5S2k5Y0pnOTBpMjJ0SW45dw?oc=5"
+    },
+    {
+      "date": "02 Oct",
+      "time": "20:58 HKT",
+      "publishedAt": "2026-10-02T20:58:00+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-fomc-sep",
+      "title": "Fed may skip October but pull rate hike trigger in December",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNOVRfM1dqWHpoenJab09IVXh3am1peVNMWFFPOFhOSjl1SkI5MklDUDl6VFpkSkZxUE8tU0Q4S3R3VXNxd0t5Mlc3NGxXNTBid1N4U0czdVA2b09hVmRyT0VtaEU3M243T09TQjVTSzVMYURvSkg5WjBSc2tjVnpzM29ZMHdTMC1hUGlRUzBJRXBQdWk3bG9heTJOQjQ3QQ?oc=5"
     },
     {
       "date": "02 Oct",
