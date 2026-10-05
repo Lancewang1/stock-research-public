@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T02:25:55+00:00",
+  "generatedAt": "2026-10-05T09:38:02+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
@@ -14,6 +14,18 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPeTVxVTNLX2pUZEc1U0xtNWdyYWRjY0NjSVcweXJNYk9PTDVKVnJaTzFNTUdnNW5LVEFxaHlELU9fVW9neE93Q0VDanlUbkJPcUhMaXNmNUJQX3pXd0JvcU1VSHh5Z1NEZnQzWGFsclpXZ08zRTVmY2ZaV1J4a2JBU3lPTEVNTUNBSVdVcWRydUlJOEY5ZU13NERhMFE3YUstSzB2RE5JV1gtZw?oc=5"
+    },
+    {
+      "date": "03 Oct",
+      "time": "01:56 HKT",
+      "publishedAt": "2026-10-03T01:56:09+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-fomc-sep",
+      "title": "Fed may skip October but pull rate hike trigger in December",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNOVRfM1dqWHpoenJab09IVXh3am1peVNMWFFPOFhOSjl1SkI5MklDUDl6VFpkSkZxUE8tU0Q4S3R3VXNxd0t5Mlc3NGxXNTBid1N4U0czdVA2b09hVmRyT0VtaEU3M243T09TQjVTSzVMYURvSkg5WjBSc2tjVnpzM29ZMHdTMC1hUGlRUzBJRXBQdWk3bG9heTJOQjQ3QQ?oc=5"
     },
     {
       "date": "03 Oct",
@@ -53,18 +65,6 @@
     },
     {
       "date": "02 Oct",
-      "time": "20:58 HKT",
-      "publishedAt": "2026-10-02T20:58:00+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-fomc-sep",
-      "title": "Fed may skip October but pull rate hike trigger in December",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNOVRfM1dqWHpoenJab09IVXh3am1peVNMWFFPOFhOSjl1SkI5MklDUDl6VFpkSkZxUE8tU0Q4S3R3VXNxd0t5Mlc3NGxXNTBid1N4U0czdVA2b09hVmRyT0VtaEU3M243T09TQjVTSzVMYURvSkg5WjBSc2tjVnpzM29ZMHdTMC1hUGlRUzBJRXBQdWk3bG9heTJOQjQ3QQ?oc=5"
-    },
-    {
-      "date": "02 Oct",
       "time": "01:52 HKT",
       "publishedAt": "2026-10-02T01:52:57+08:00",
       "kind": "NEWS",
@@ -74,18 +74,6 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNMVNwTXhUMWdOSTBlNlN5OTM2aVNfSFB3dkpma0paczRPeDVNd0h5b1puQ0o2cVVRMWpYbkRnNnhDZzZjWFlwQWpWQ2NMZk5EQlRGM0lsYnZwdTRwZ01PWE1UWTVxaFFtamdnZXJIR09wYjhGRk12TmxxVnhqcE4zUXNKNzI?oc=5"
-    },
-    {
-      "date": "02 Oct",
-      "time": "01:32 HKT",
-      "publishedAt": "2026-10-02T01:32:00+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-fomc-sep",
-      "title": "Fed policymakers lean against October rate hike",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQcEdmemN4NUZ5RjRobklFbGFkcWZ0NENTRmZfU2hmNnFuZ1ZkRzJKY09hV3VLcjllT2V3VEVHdGg1NTFBbU1BVUJycDV1ODc5cTRxM1hCWlk5aW1RY3c0RzQ2bTNMcmsybi1VdDdoMG9RdUFrakRXSnFfb2trYmpOQzU5RmNmMXpqZlpJNUY1OEtEOGxnNXhlUjkzdmpnaWZVSVcwX1MyTHl1UQ?oc=5"
     },
     {
       "date": "01 Oct",
@@ -112,18 +100,6 @@
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQSnlaSEpONTJNNEpkUjRqcjROXy0tUHRWWWpSZjRpd2FtandnWjRDODI4cU53V2I0bzkyS2ZEMnBZbFEwME03NzBGWnVqV3NMN0VMSS1RVWtBNDNpa0YwZzR5SUNXeWg5UW5MdU4zRklkaDZ6OFEyQmNHdkwyb1p5YUpQR1Y?oc=5"
     },
     {
-      "date": "30 Sep",
-      "time": "22:24 HKT",
-      "publishedAt": "2026-09-30T22:24:57+08:00",
-      "kind": "NEWS",
-      "source": "Financial Times",
-      "eventId": "us-cpi-aug",
-      "title": "Weak PCE inflation eases pressure for Fed rate increases",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5ROS1mdXd6RlVHTmRiUzYzRXpzOW5lcnZZb19QbnJWbFVaY0c2MG01aUdUS2hmWm15MVpFeVlZT1JSeVUtUDE3V1UtQnRBbzdkWGUwLUhrb09BbTQxczR2NHFyR0dBck5oeVJmams0TF8?oc=5"
-    },
-    {
       "date": "29 Sep",
       "time": "23:20 HKT",
       "publishedAt": "2026-09-29T23:20:54+08:00",
@@ -146,18 +122,6 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQcGptd1ZRaEZLdElDcU5KTEYyT3pkU1Q5VU4tX3lCU2tIUmNYTThCTk1OU3RWNVhrVXRrUmFlRDRXN3FCUk5oTkNxUC1jdGNhM0dOVHktYmR1UlA4dkdFUGhCTzdTMTJyX25OSjU2M2JMTTN3Rk43ZXlubGdMWXY4WXdKRlc?oc=5"
-    },
-    {
-      "date": "28 Sep",
-      "time": "12:01 HKT",
-      "publishedAt": "2026-09-28T12:01:29+08:00",
-      "kind": "NEWS",
-      "source": "Financial Times",
-      "eventId": "us-fomc-sep",
-      "title": "For once, the Fed has put Main Street before Wall Street",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9CR2dRcGVvc0o5ZURBSEhSVEVsd1V4UDRBZGRIdFNyWndhX3hqYzJnTmRNbl9Ua3dDUlJpS0wtckRIOTU0VElGYjFINGNFV05kZk1raHpTaXRzSTUtTF9DMTJLZzNrMUZKQmc5Q3RqY04?oc=5"
     },
     {
       "date": "25 Sep",
@@ -218,6 +182,42 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPVlA3clhoZHZZTXBPTkpZMjNHRVhucm1nTUxYclV2UF9mRVowVkcwekVpSW1PUUFRUnNfSUxlaHRyYWNpYk1uOHpqS1RkdDh0NlZyNnZlR2RUWFNhbnJnNmhEMmw5ZTRQTzYtblRuVWtiSmRobGxJZnBQRXQ0Q1hpaFZZMGk?oc=5"
+    },
+    {
+      "date": "13 Sep",
+      "time": "15:00 HKT",
+      "publishedAt": "2026-09-13T15:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Financial Times",
+      "eventId": "us-fomc-sep",
+      "title": "Warsh and Trump on collision course as investors expect Fed to raise rates",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQX1FlNm82dWhzNW1zVWg2YXU4bmtFeTVrcG90cGRXQXBFR3EzamFMOUpPMkpQUk1tM2VBTThrZWpRc0ZQcDljSjg1ZXo3anpHSjBFYlZzS0hGLVpzTUVhSkpPNzRRYWpqeW5DTmU3QnMzRmY5ZHJQS2JKS2pMR0lwT1c1ZEE?oc=5"
+    },
+    {
+      "date": "11 Sep",
+      "time": "15:00 HKT",
+      "publishedAt": "2026-09-11T15:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-fomc-sep",
+      "title": "US consumer prices accelerate in August, push Fed closer to rate hike",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOdW10dVZWcHQ3MkdPRy1fRGN2VVUzeV8tV2tRSnRfVHdBbllhS0hfTzlWUy1tM0pHZWxmTl84b3loTVFqRHdUX3I2REFQQ1h5ZTZIcHBJTy1Jcmd1VUpPdDRtdVhvbVpHMEVCQmJkbnNqYXBCUGZiTjVmcTM5NUpEbFgwb08wQU92TFE?oc=5"
+    },
+    {
+      "date": "11 Sep",
+      "time": "15:00 HKT",
+      "publishedAt": "2026-09-11T15:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-cpi-aug",
+      "title": "VIEW Stocks, bonds rally after August inflation report",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQY08xWWcxZWZRWG5WSFJ2ckZFcFk1T0cyNjlfS3F0U0Vyby1EWVJUaUNNaTUwVXRNVnk0Q2NfVVdYT2lPYjUxdjZlVHBXOWVPVnMzWk1DWmE4V1RGNzFrWFhwN3V5alYtbktTcDBST0RORllfc1Nhd0RBNFZ0UTVlbFFaM0FGMEpTLTIxdTVCeEJpcG5YdC1zTUZqMTQwNGhDZVBNbVBxX0Jmbkpsd2c?oc=5"
     }
   ]
 }
