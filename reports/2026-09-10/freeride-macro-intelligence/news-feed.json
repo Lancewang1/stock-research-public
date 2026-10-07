@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T06:08:20+00:00",
+  "generatedAt": "2026-10-07T13:33:41+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
@@ -62,18 +62,6 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE0xaEpXc3pMdGRXalZlcHdvWThBeklWRlpfRDd4cUZLbXNGS2s0YVF4Sm42YUpqaFNTbVkyWmIyanN6WmxtSG5yME8zTml3Z1N3a0NabmktSy1YYWp0SFlOM2NQZEN6WmFnX096dUREY1pHTFJ0NzlrUW54cw?oc=5"
-    },
-    {
-      "date": "03 Oct",
-      "time": "01:00 HKT",
-      "publishedAt": "2026-10-03T01:00:05+08:00",
-      "kind": "NEWS",
-      "source": "Financial Times",
-      "eventId": "us-fomc-sep",
-      "title": "Treasuries are losing their moneyness",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9nNmxRUnhjLU1IeVV0bFdkclQwaS1wUGtuN0V4b19JYU9xLWszWmlRc094amtJV2lnanVIVHoxU2lGOFJUVGdRWlRKeFhqYm5uejJZY3hUWWN0VUwtdXc4MHZRcXBuTUpBdjBTYmF2Tmo?oc=5"
     },
     {
       "date": "03 Oct",
@@ -172,18 +160,6 @@
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNYVdob3AzUDBiZzZLRzFyQnZSZVhuTUxaT0ptay10LWtILU10RVkwTFZpa3dpRlQ1SUxzTm9GX0w5R1JHTkJXQ0MyYWlRUG5rRlc4Q3I1VGlocVhfU2RWQ0Z5TUFSM3J6ZjJ1SXRDM1dBWVBZOXQ3YnlBUkFaUTZzRlNFUTQ?oc=5"
     },
     {
-      "date": "15 Sep",
-      "time": "15:00 HKT",
-      "publishedAt": "2026-09-15T15:00:00+08:00",
-      "kind": "NEWS",
-      "source": "Financial Times",
-      "eventId": "us-cpi-aug",
-      "title": "US manufacturers hit by fresh burst of supply chain cost inflation",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPVlA3clhoZHZZTXBPTkpZMjNHRVhucm1nTUxYclV2UF9mRVowVkcwekVpSW1PUUFRUnNfSUxlaHRyYWNpYk1uOHpqS1RkdDh0NlZyNnZlR2RUWFNhbnJnNmhEMmw5ZTRQTzYtblRuVWtiSmRobGxJZnBQRXQ0Q1hpaFZZMGk?oc=5"
-    },
-    {
       "date": "13 Sep",
       "time": "15:00 HKT",
       "publishedAt": "2026-09-13T15:00:00+08:00",
@@ -218,6 +194,30 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQY08xWWcxZWZRWG5WSFJ2ckZFcFk1T0cyNjlfS3F0U0Vyby1EWVJUaUNNaTUwVXRNVnk0Q2NfVVdYT2lPYjUxdjZlVHBXOWVPVnMzWk1DWmE4V1RGNzFrWFhwN3V5alYtbktTcDBST0RORllfc1Nhd0RBNFZ0UTVlbFFaM0FGMEpTLTIxdTVCeEJpcG5YdC1zTUZqMTQwNGhDZVBNbVBxX0Jmbkpsd2c?oc=5"
+    },
+    {
+      "date": "11 Sep",
+      "time": "15:00 HKT",
+      "publishedAt": "2026-09-11T15:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-cpi-aug",
+      "title": "Gold rises on dip-buying even as Fed rate hike bets rise after US inflation data",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOMk9xQnh0dkJvU0VUbjhfa0E5ZHhmb21sU1k4RWktNC0tdERMUlFyb05jamhUa0p0dUEwejVJbHlUaWp6VnZuUEJrc0ZmYzBMM1RwaUp0SUdWWXBiU2pRVUF4ZlRsQk1fVmY2MUlTcTFFV3RjSnQzSE5UUHdKWHJYcV9YaUVmZ01PVnVUWHI0MzU4dnJja25CTmpxc3N4STVOb1E?oc=5"
+    },
+    {
+      "date": "11 Sep",
+      "time": "15:00 HKT",
+      "publishedAt": "2026-09-11T15:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Financial Times",
+      "eventId": "us-cpi-aug",
+      "title": "Kevin Warsh under mounting pressure to raise rates as US inflation persists",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPaU11OG1TVmxJZC1hcVgyX09selQzQUZ0NjJ0ZEhEeXl4ajFXY2M4VElKOXR2dkFXTnBXbGl3YW9WMXZqVWw4QjFVYmwzOHFBQ2xYUnNDeDVoT2g3elYwVWZqU0h3UEQ3akdxd2l5a0lVdkp2SHN6dUEzUXluTXRCMkpSaGE?oc=5"
     }
   ]
 }
