@@ -1,8 +1,20 @@
 {
-  "generatedAt": "2026-10-08T19:30:22+00:00",
+  "generatedAt": "2026-10-09T13:49:52+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
+    {
+      "date": "09 Oct",
+      "time": "00:38 HKT",
+      "publishedAt": "2026-10-09T00:38:09+08:00",
+      "kind": "NEWS",
+      "source": "Financial Times",
+      "eventId": "us-fomc-sep",
+      "title": "US mortgage rates rise for seventh straight week to hit highest since 2023",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNdlI1dlJUc2gtSWFsaGlCcV80Z0VDX1VfSHdnY1l3dGI1RTRETEtPRWZFdklieDNfQzluUC1CVW5nNVM0OWZsNlhuYW54eDRqNjNyUU9uUFBqOTB3N054QmFvOU5qdlBTTF9yZDNYWmNLU1kyQkg5X3VhNnFiemZCUnVfaEc?oc=5"
+    },
     {
       "date": "07 Oct",
       "time": "08:34 HKT",
@@ -14,18 +26,6 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBYX2pMNVRyTWtHcFJLY3pTUGdNX2VDSHRBSko5N00zQU90U0xlcXdLWDZwNlBZQVU4dkFFZmpOS3FqemVzNnRJdFdPVWZDVDk1RWNQM19Mc01zeEpBVms3Z3c4a3R4MloxNzVoWWVwY3I?oc=5"
-    },
-    {
-      "date": "06 Oct",
-      "time": "23:30 HKT",
-      "publishedAt": "2026-10-06T23:30:06+08:00",
-      "kind": "NEWS",
-      "source": "Financial Times",
-      "eventId": "us-fomc-sep",
-      "title": "Taking stock of public trust in the Kevin Warsh Fed era",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9jWjM3Uk1tRXFlUzN3anliMmdQNm9fX2MzbEQ1Wm1zZU5ia01NRkZJaVhKNVJVY01LOWVpcGYydG9SdmZSb3JwZ2dYb2ZBREFIMGxFM3kxMEpLY2xfTlhuT3V2SVlxR2dycHNvZ0Zienc?oc=5"
     },
     {
       "date": "03 Oct",
@@ -62,18 +62,6 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE0xaEpXc3pMdGRXalZlcHdvWThBeklWRlpfRDd4cUZLbXNGS2s0YVF4Sm42YUpqaFNTbVkyWmIyanN6WmxtSG5yME8zTml3Z1N3a0NabmktSy1YYWp0SFlOM2NQZEN6WmFnX096dUREY1pHTFJ0NzlrUW54cw?oc=5"
-    },
-    {
-      "date": "03 Oct",
-      "time": "00:43 HKT",
-      "publishedAt": "2026-10-03T00:43:25+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-fomc-sep",
-      "title": "Gold heads for weekly drop as strong dollar, elevated Treasury yields weigh",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOcU0zNk9Vb0hCT2pmbmJmeVE2S0tGa3NIMEdscGhEamlzdUhTUFdfLTVUX3FCTHVWMFdySmktUmdvTFIwQnpsX192VzYxdnUyTTJOWXRETzh1Z2ZFYUJpYjM3MWJJdG1XSG1tQTZCMnhBRlAzaTZEdHJEREY5cEJla2VZU3ZaZGtVOFZQMzljR3JFdUtUUlJUbzk1NzZiRzBna1JIRmdiVng?oc=5"
     },
     {
       "date": "02 Oct",
@@ -218,6 +206,18 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOMEVIWUw2aXFMWmtQTVJyLTVrWFZRbmM2cnRtRU5kQmVrTjBFbDFya1lRazZWVGtUWEtZcWxVMXJleFc2b0JiSEhrU1VKbjR0OXkxMGZHOFZ2RlB2WlBVaEtsQlNoMlNOcUY5NXlkZFFURU0wd1J4VmdyYUNia2hYbWdEOHZRb2hnNzJRak1qYmtCZ2Y5R2Y4SG94WkZybXhrVFBHaGhRNnZmN3NvdUhpbFdB?oc=5"
+    },
+    {
+      "date": "11 Sep",
+      "time": "15:00 HKT",
+      "publishedAt": "2026-09-11T15:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Bloomberg",
+      "eventId": "us-cpi-aug",
+      "title": "Treasuries End Bruising Week With Fed Hike Bets Firmed After CPI",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNdXlONzZ4VHRzenV1NDBKWG82U3QxbC1QcjFlZGFaY1llQ1E5SnpjMWp2cTluRnpabTNmS2oxc1AxSW94SnN3bWhlRlNqTUtJQ05FMC01Q2V0ZzVjQ016elAzSlBuWVpEQlVBbGdpaVFOYTBVQm5pUXRqcEZwQ21rTWRpZHE2aEt3MG1yUHhxWlpzYXFkeEFMS0pKenl2OFBPUmhXbXNKMHJZbUo0RjFRRHZaMFNKZw?oc=5"
     }
   ]
 }
