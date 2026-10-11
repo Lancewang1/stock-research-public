@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T19:45:36+00:00",
+  "generatedAt": "2026-10-11T23:13:40+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
@@ -40,9 +40,9 @@
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPdVpFbWJydEFBMkkyYXU1NFhqVUd0WFppVklNYldyQzR5M2wwZ3hyT2oxSXZ5dkN2VklKd0lVZUhjRFNxS0RQSWtBMW1kX3ZfR09oZ0RIUV8xR2g3T0VPYmNDMzZYU016QnBKUHREUHZWRmJCeEcwYnVYLTlxb1ZDUXhSQ0I?oc=5"
     },
     {
-      "date": "10 Oct",
-      "time": "05:04 HKT",
-      "publishedAt": "2026-10-10T05:04:49+08:00",
+      "date": "09 Oct",
+      "time": "18:02 HKT",
+      "publishedAt": "2026-10-09T18:02:00+08:00",
       "kind": "NEWS",
       "source": "Reuters",
       "eventId": "us-cpi-aug",
