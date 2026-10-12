@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T09:48:36+00:00",
+  "generatedAt": "2026-10-12T19:51:21+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
@@ -14,6 +14,18 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNMGVkYUNocG1SeDF2RUNPMGtnTHBrTG1VM09LMjVhMmNPRmxZY3BXamZqOXJFcVh4T2RjZG8xbkpSS1lFRm16QXlEWkR0ay04SVNYdGs3QVEwQWEzRGhWWExUa3lUNkFReENVX2s5ejdrZTFpM0U3TVZIWV9CS0w3WXBHQTdTSE9QLUZEQ1hlNkExeFlxbmxzTnZ3d3NNMGwtRHJSSG80RlNOdjZPQThlX1REZVZTS3dZTWhZRm1aSV8?oc=5"
+    },
+    {
+      "date": "12 Oct",
+      "time": "11:13 HKT",
+      "publishedAt": "2026-10-12T11:13:00+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-cpi-aug",
+      "title": "Gold eases on strong dollar, oil prices; US inflation data eyed",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOSTdfbFRJUWVBUW5ndjBGSlJ6aGRQYi1saWxfVU5haEdOVXJaNzFuRnlyZ1F6eGVPb2tGYVczeXlRWEI5WmVHeVFGMTVqd2I5dEZCVDNrNDBkS2N1Q2NWWlRQMzhSa3BPMlZnVElqaFhaQkRLWnJrMG1NUnlvYVE5OWZGTXZucUJoaTUzTmxJeS1mUHpRSVVNT2xlRUI5dmtoQmc?oc=5"
     },
     {
       "date": "12 Oct",
@@ -53,6 +65,18 @@
     },
     {
       "date": "09 Oct",
+      "time": "22:10 HKT",
+      "publishedAt": "2026-10-09T22:10:01+08:00",
+      "kind": "NEWS",
+      "source": "Financial Times",
+      "eventId": "us-fomc-sep",
+      "title": "Donald Trump launches committee to investigate Federal Reserve governor Lisa Cook",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNX3lrLUg5b2t0eHBlVjVncUxGMDlabmZvZFFhVkpvS0VlTnFveGpDZkpaY3E5Rjk3cnF4UV90SFgtVXZYbk9FeERqdnA0eTlVeTJ0eGNfMUZDVHYwYWhnem02a1FRcEV1WnBBS3FlZHNnanpuVEdJOE50dDdndDE1M0MwVUI?oc=5"
+    },
+    {
+      "date": "09 Oct",
       "time": "18:02 HKT",
       "publishedAt": "2026-10-09T18:02:00+08:00",
       "kind": "NEWS",
@@ -76,18 +100,6 @@
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNdlI1dlJUc2gtSWFsaGlCcV80Z0VDX1VfSHdnY1l3dGI1RTRETEtPRWZFdklieDNfQzluUC1CVW5nNVM0OWZsNlhuYW54eDRqNjNyUU9uUFBqOTB3N054QmFvOU5qdlBTTF9yZDNYWmNLU1kyQkg5X3VhNnFiemZCUnVfaEc?oc=5"
     },
     {
-      "date": "07 Oct",
-      "time": "08:34 HKT",
-      "publishedAt": "2026-10-07T08:34:47+08:00",
-      "kind": "NEWS",
-      "source": "Financial Times",
-      "eventId": "us-cpi-aug",
-      "title": "Letter: Bringing US inflation to heel needs more aggressive tightening",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBYX2pMNVRyTWtHcFJLY3pTUGdNX2VDSHRBSko5N00zQU90U0xlcXdLWDZwNlBZQVU4dkFFZmpOS3FqemVzNnRJdFdPVWZDVDk1RWNQM19Mc01zeEpBVms3Z3c4a3R4MloxNzVoWWVwY3I?oc=5"
-    },
-    {
       "date": "03 Oct",
       "time": "15:00 HKT",
       "publishedAt": "2026-10-03T15:00:00+08:00",
@@ -100,18 +112,6 @@
       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNOVRfM1dqWHpoenJab09IVXh3am1peVNMWFFPOFhOSjl1SkI5MklDUDl6VFpkSkZxUE8tU0Q4S3R3VXNxd0t5Mlc3NGxXNTBid1N4U0czdVA2b09hVmRyT0VtaEU3M243T09TQjVTSzVMYURvSkg5WjBSc2tjVnpzM29ZMHdTMC1hUGlRUzBJRXBQdWk3bG9heTJOQjQ3QQ?oc=5"
     },
     {
-      "date": "03 Oct",
-      "time": "06:44 HKT",
-      "publishedAt": "2026-10-03T06:44:50+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-payrolls-aug",
-      "title": "Equities close higher as softer jobs data quiets rate-hike expectations",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPeTVxVTNLX2pUZEc1U0xtNWdyYWRjY0NjSVcweXJNYk9PTDVKVnJaTzFNTUdnNW5LVEFxaHlELU9fVW9neE93Q0VDanlUbkJPcUhMaXNmNUJQX3pXd0JvcU1VSHh5Z1NEZnQzWGFsclpXZ08zRTVmY2ZaV1J4a2JBU3lPTEVNTUNBSVdVcWRydUlJOEY5ZU13NERhMFE3YUstSzB2RE5JV1gtZw?oc=5"
-    },
-    {
       "date": "02 Oct",
       "time": "15:00 HKT",
       "publishedAt": "2026-10-02T15:00:00+08:00",
@@ -122,18 +122,6 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQTkVCanhuNm9LTk9xbXE4RmNabmw1S0s0RXJEdVZzdTdqa1M1TXBxU1pBTm13LVRaZXNSeFY4UVNOa1ZaTEY5NFo0ejBmZnBxanVVM29nWll0S21yNWZzaXlJY0FJSXFMMFVvYy1QOXBxTlZiMXhRbTUwUktoVmg2ekxuNTBTVzRWWG1VVFB5S2k5Y0pnOTBpMjJ0SW45dw?oc=5"
-    },
-    {
-      "date": "02 Oct",
-      "time": "15:00 HKT",
-      "publishedAt": "2026-10-02T15:00:00+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-fomc-sep",
-      "title": "Gold heads for weekly drop as strong dollar, elevated Treasury yields weigh",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOcU0zNk9Vb0hCT2pmbmJmeVE2S0tGa3NIMEdscGhEamlzdUhTUFdfLTVUX3FCTHVWMFdySmktUmdvTFIwQnpsX192VzYxdnUyTTJOWXRETzh1Z2ZFYUJpYjM3MWJJdG1XSG1tQTZCMnhBRlAzaTZEdHJEREY5cEJla2VZU3ZaZGtVOFZQMzljR3JFdUtUUlJUbzk1NzZiRzBna1JIRmdiVng?oc=5"
     },
     {
       "date": "30 Sep",
@@ -218,6 +206,18 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQX1FlNm82dWhzNW1zVWg2YXU4bmtFeTVrcG90cGRXQXBFR3EzamFMOUpPMkpQUk1tM2VBTThrZWpRc0ZQcDljSjg1ZXo3anpHSjBFYlZzS0hGLVpzTUVhSkpPNzRRYWpqeW5DTmU3QnMzRmY5ZHJQS2JKS2pMR0lwT1c1ZEE?oc=5"
+    },
+    {
+      "date": "11 Sep",
+      "time": "15:00 HKT",
+      "publishedAt": "2026-09-11T15:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-fomc-sep",
+      "title": "US consumer prices accelerate in August, push Fed closer to rate hike",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOdW10dVZWcHQ3MkdPRy1fRGN2VVUzeV8tV2tRSnRfVHdBbllhS0hfTzlWUy1tM0pHZWxmTl84b3loTVFqRHdUX3I2REFQQ1h5ZTZIcHBJTy1Jcmd1VUpPdDRtdVhvbVpHMEVCQmJkbnNqYXBCUGZiTjVmcTM5NUpEbFgwb08wQU92TFE?oc=5"
     }
   ]
 }
