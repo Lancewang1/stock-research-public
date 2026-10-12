@@ -1,8 +1,20 @@
 {
-  "generatedAt": "2026-10-12T02:29:04+00:00",
+  "generatedAt": "2026-10-12T09:48:36+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
+    {
+      "date": "12 Oct",
+      "time": "14:51 HKT",
+      "publishedAt": "2026-10-12T14:51:00+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-cpi-aug",
+      "title": "South African rand steady as Middle East conflict, US inflation test sentiment",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNMGVkYUNocG1SeDF2RUNPMGtnTHBrTG1VM09LMjVhMmNPRmxZY3BXamZqOXJFcVh4T2RjZG8xbkpSS1lFRm16QXlEWkR0ay04SVNYdGs3QVEwQWEzRGhWWExUa3lUNkFReENVX2s5ejdrZTFpM0U3TVZIWV9CS0w3WXBHQTdTSE9QLUZEQ1hlNkExeFlxbmxzTnZ3d3NNMGwtRHJSSG80RlNOdjZPQThlX1REZVZTS3dZTWhZRm1aSV8?oc=5"
+    },
     {
       "date": "12 Oct",
       "time": "03:00 HKT",
@@ -17,18 +29,6 @@
     },
     {
       "date": "11 Oct",
-      "time": "23:35 HKT",
-      "publishedAt": "2026-10-11T23:35:58+08:00",
-      "kind": "NEWS",
-      "source": "Bloomberg",
-      "eventId": "us-cpi-aug",
-      "title": "US CPI to Show Overall Inflation Boosted by Higher Gasoline Prices",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPUHNUeWNTY1NneVFOYnBzR0xFeWs2eWs3UWJCODFyaEtnNDZtamJJY1pSNFpyZ2xmcmNoR3FIc1VEeVU5bXdHSktiQlVqbFZTUHlTMjlsbjZOOU9fMFVwSUZoNGxNV0toMU1Sc3VZTnRWTmtnTXNlSnVCaDNMREVnWUtOSFctdGlTZ01EU1hnRVVsd1VnaHJiNEF0d3AwQVZubko5RVNjVDlKZ3FkbnI2bHFTbWdrN2JY?oc=5"
-    },
-    {
-      "date": "11 Oct",
       "time": "19:00 HKT",
       "publishedAt": "2026-10-11T19:00:07+08:00",
       "kind": "NEWS",
@@ -38,6 +38,18 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPdVpFbWJydEFBMkkyYXU1NFhqVUd0WFppVklNYldyQzR5M2wwZ3hyT2oxSXZ5dkN2VklKd0lVZUhjRFNxS0RQSWtBMW1kX3ZfR09oZ0RIUV8xR2g3T0VPYmNDMzZYU016QnBKUHREUHZWRmJCeEcwYnVYLTlxb1ZDUXhSQ0I?oc=5"
+    },
+    {
+      "date": "11 Oct",
+      "time": "04:00 HKT",
+      "publishedAt": "2026-10-11T04:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Bloomberg",
+      "eventId": "us-cpi-aug",
+      "title": "US CPI to Show Overall Inflation Boosted by Higher Gasoline Prices",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPUHNUeWNTY1NneVFOYnBzR0xFeWs2eWs3UWJCODFyaEtnNDZtamJJY1pSNFpyZ2xmcmNoR3FIc1VEeVU5bXdHSktiQlVqbFZTUHlTMjlsbjZOOU9fMFVwSUZoNGxNV0toMU1Sc3VZTnRWTmtnTXNlSnVCaDNMREVnWUtOSFctdGlTZ01EU1hnRVVsd1VnaHJiNEF0d3AwQVZubko5RVNjVDlKZ3FkbnI2bHFTbWdrN2JY?oc=5"
     },
     {
       "date": "09 Oct",
@@ -101,8 +113,8 @@
     },
     {
       "date": "02 Oct",
-      "time": "21:33 HKT",
-      "publishedAt": "2026-10-02T21:33:10+08:00",
+      "time": "15:00 HKT",
+      "publishedAt": "2026-10-02T15:00:00+08:00",
       "kind": "NEWS",
       "source": "Reuters",
       "eventId": "us-payrolls-aug",
@@ -134,18 +146,6 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNSktrS2JqeGdwTmowTVBNV2lPbnZwcVdwSzJPVi1aRzZuVDVQU3RtRGZ1UExTOVJnWm9CcTNYbnFneF9wOWlCMU5MNXEwMDN4UmhVVkx2MFVWOC1EYVdyb3Y3WXNYYXhNUzZSUExKQzNZOWk4U1dRaVBMMUZBeklyT0VqNFVhbUV3RjJmbThsM3FOejFUV2lBV0ZtZjNTZjVqRFYwcGZqZWdKdjBRa3FvcmdKRTRWak0?oc=5"
-    },
-    {
-      "date": "30 Sep",
-      "time": "15:00 HKT",
-      "publishedAt": "2026-09-30T15:00:00+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-fomc-sep",
-      "title": "Goldman Sachs pushes Fed rate hike forecast to December",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPOXRTWE8yWkFyM2l6XzdNT3kzUTVZeFd3SEhmSjBYelk4WS1tU0Q1YnRVVUZOSklUcURKMU1XQzVfSUVRRGYxejlncXpwQ3ZWelVrTW9WNVZldHZ2bUxFUlozcmVObFQ1RzlKbEhsZFhFbzUzYjBqaWltQmRWSDRLUERCejNfczlyRTIwTkxPODB2XzdyX0FvM0JpWWpIUQ?oc=5"
     },
     {
       "date": "24 Sep",
@@ -196,6 +196,18 @@
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNYVdob3AzUDBiZzZLRzFyQnZSZVhuTUxaT0ptay10LWtILU10RVkwTFZpa3dpRlQ1SUxzTm9GX0w5R1JHTkJXQ0MyYWlRUG5rRlc4Q3I1VGlocVhfU2RWQ0Z5TUFSM3J6ZjJ1SXRDM1dBWVBZOXQ3YnlBUkFaUTZzRlNFUTQ?oc=5"
     },
     {
+      "date": "15 Sep",
+      "time": "15:00 HKT",
+      "publishedAt": "2026-09-15T15:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Financial Times",
+      "eventId": "us-cpi-aug",
+      "title": "US manufacturers hit by fresh burst of supply chain cost inflation",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPVlA3clhoZHZZTXBPTkpZMjNHRVhucm1nTUxYclV2UF9mRVowVkcwekVpSW1PUUFRUnNfSUxlaHRyYWNpYk1uOHpqS1RkdDh0NlZyNnZlR2RUWFNhbnJnNmhEMmw5ZTRQTzYtblRuVWtiSmRobGxJZnBQRXQ0Q1hpaFZZMGk?oc=5"
+    },
+    {
       "date": "13 Sep",
       "time": "15:00 HKT",
       "publishedAt": "2026-09-13T15:00:00+08:00",
@@ -206,18 +218,6 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQX1FlNm82dWhzNW1zVWg2YXU4bmtFeTVrcG90cGRXQXBFR3EzamFMOUpPMkpQUk1tM2VBTThrZWpRc0ZQcDljSjg1ZXo3anpHSjBFYlZzS0hGLVpzTUVhSkpPNzRRYWpqeW5DTmU3QnMzRmY5ZHJQS2JKS2pMR0lwT1c1ZEE?oc=5"
-    },
-    {
-      "date": "11 Sep",
-      "time": "15:00 HKT",
-      "publishedAt": "2026-09-11T15:00:00+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-fomc-sep",
-      "title": "US consumer prices accelerate in August, push Fed closer to rate hike",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOdW10dVZWcHQ3MkdPRy1fRGN2VVUzeV8tV2tRSnRfVHdBbllhS0hfTzlWUy1tM0pHZWxmTl84b3loTVFqRHdUX3I2REFQQ1h5ZTZIcHBJTy1Jcmd1VUpPdDRtdVhvbVpHMEVCQmJkbnNqYXBCUGZiTjVmcTM5NUpEbFgwb08wQU92TFE?oc=5"
     }
   ]
 }
