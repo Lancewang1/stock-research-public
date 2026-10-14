@@ -1,43 +1,43 @@
 {
-  "generatedAt": "2026-10-14T01:16:06+00:00",
+  "generatedAt": "2026-10-14T06:15:16+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
     {
       "date": "14 Oct",
-      "time": "04:08 HKT",
-      "publishedAt": "2026-10-14T04:08:52+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-fomc-sep",
-      "title": "Fed's Collins sees another rate hike on the table before end of 2026",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPQTNoWUtZWjdLcTc2ZmNycnptRmR1cmluWThZU2ZTYU5JUkdaazY1Z2hEdjIxNWZ3VU5RSVZvejc3VnlueGZoN0JyNlNmdkptQk9ZNEZqU1MyLTNUblpOaF9FMkdGbnZhX1hTVllLTzYxNFEwamlyazZKem00N1k1UFBablNQSVRCZTgySWNNR3pHemxzSEl1S0VBeE1DQlYyS0Ntdw?oc=5"
-    },
-    {
-      "date": "14 Oct",
-      "time": "03:23 HKT",
-      "publishedAt": "2026-10-14T03:23:55+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-fomc-sep",
-      "title": "Fed's Williams sees no need for rate hike in 2027, Bloomberg News reports",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOVlpnSjdVeERKaFdNRkxCTHhRNmY5Y0FFN3k0by1ndE9MYXIzN0pybnJzUFBqR1hOaHpUYjFjODI1ZGNSMjVLRF83S19ZNXB6eGU0YU5MUUVMWEFtSjN4UlRReUpsWFktZ2lfX1pQZDBNS1Qtbk02bXNGRVNQZUlSS2pKZ2wxRUtGZzBWYUxCdGJpbHZkOFlMYWhtb0lRNFZEMDd6ZnY2RjdDRXpVdWhsUVhwN3ZsZ1k?oc=5"
-    },
-    {
-      "date": "13 Oct",
-      "time": "19:21 HKT",
-      "publishedAt": "2026-10-13T19:21:33+08:00",
+      "time": "11:12 HKT",
+      "publishedAt": "2026-10-14T11:12:00+08:00",
       "kind": "NEWS",
       "source": "Reuters",
       "eventId": "us-cpi-aug",
-      "title": "US inflation expectations are well anchored, Fed's Waller says",
+      "title": "Gold prices hold firm ahead of US inflation data",
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQVFBFRTZLXzRkVnlnU0FveXV5eHd5NHpLdGZ6VjY5NFBJYVUzUWJCMnAzUTJjbTVNN19yYldxQUM0M1BEQUVPRUZscFB4dTJRNUo4UlJBVzF6VE9JTDdVU1NBYVBkYlpLNE0yU2QwRkVCR21YZW5wd3ZUejdyMUhmNW82OFdlZ0RaQVlSRl9ZengxNkU0YS1WMjR6cHhGcnJjZUk0RERFSlBtT0FKLUE?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNZkM3NGdUajlORC1ZZjBNcFZtNjYwa2JRaFczS1V4OVRORGhzZG1NUGxaY3ppRjdfQlFvUmREakJQM1RGaDNZZmZFMnJrY2Rtemc2Z1dBY1pPRy1ZbnBJVzNfTG1MMGJ5TXY5VzFpaDd6UENqd1pUOVdlTm1sS241QkFzNm1kdDJXTjl5emhLV200WUI1QVh4RQ?oc=5"
+    },
+    {
+      "date": "14 Oct",
+      "time": "09:53 HKT",
+      "publishedAt": "2026-10-14T09:53:00+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-cpi-aug",
+      "title": "Asia shares edge up as chip selloff eases; US CPI awaited",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNcE96RkhyZDBlQ2VWRERNYlZtdm5FaVdQSXF2M3ZtR3JIOU05UExLWnZ3dmFBY1NZcndTRlozR29sdmxWaExXUmIycmZPZGk3UXI1amRxTDR6WHpSQl82ckhxZ016SnZYdGtPdC14TnZVWlpjeHl4SW5pUnJKbjl2M0pzcw?oc=5"
+    },
+    {
+      "date": "14 Oct",
+      "time": "09:18 HKT",
+      "publishedAt": "2026-10-14T09:18:00+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-cpi-aug",
+      "title": "Dollar languishes as focus turns to CPI, Fed speakers",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPRTlXdFl1T0lRV3lDTk1HeDB5eEoyUkhIUERBWi02S1ZRU2tGX0hyQk9GdThWZUNUUFBKcUxqNEd1WkU4WFpyUHV6ZmU4VXl3MWRBSjN5UWM2WjVmbDl6RGhYYzV3SF8yTGwtTGJWTTR2OHN4LVVvVzlpTGs0RkFPX2dQWmNZTUF2MVFRMU5fWXZjbjlxd2NISDgyckdMQ3lYYTZv?oc=5"
     },
     {
       "date": "13 Oct",
@@ -53,15 +53,15 @@
     },
     {
       "date": "13 Oct",
-      "time": "09:44 HKT",
-      "publishedAt": "2026-10-13T09:44:00+08:00",
+      "time": "02:36 HKT",
+      "publishedAt": "2026-10-13T02:36:35+08:00",
       "kind": "NEWS",
       "source": "Reuters",
       "eventId": "us-cpi-aug",
-      "title": "Dollar retreats from 18-month high as oil prices fall, inflation data in focus",
+      "title": "Gold eases on strong dollar, oil prices; US inflation data eyed",
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPZ2lxTVVOV3pTUEkySWJNak9DU3lNdXR5bmRWWmxicmY0UVlFTFl3SmlERjl4LVFmTG1pSFAteVRpU2lPaXFhTTNROFlTWUgtaVRFdlliT3VYSkc1Z3REVEctSEZkSV9Sc3dabEFDb0pIcmNXdDR0MDJJMXNtNy1IUUNKS1BVWnNYd0xfM24yUFJmMkRXNUlYTmFnV2g3Z0VJWEE5Zk5MZw?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOSTdfbFRJUWVBUW5ndjBGSlJ6aGRQYi1saWxfVU5haEdOVXJaNzFuRnlyZ1F6eGVPb2tGYVczeXlRWEI5WmVHeVFGMTVqd2I5dEZCVDNrNDBkS2N1Q2NWWlRQMzhSa3BPMlZnVElqaFhaQkRLWnJrMG1NUnlvYVE5OWZGTXZucUJoaTUzTmxJeS1mUHpRSVVNT2xlRUI5dmtoQmc?oc=5"
     },
     {
       "date": "12 Oct",
@@ -74,18 +74,6 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNMGVkYUNocG1SeDF2RUNPMGtnTHBrTG1VM09LMjVhMmNPRmxZY3BXamZqOXJFcVh4T2RjZG8xbkpSS1lFRm16QXlEWkR0ay04SVNYdGs3QVEwQWEzRGhWWExUa3lUNkFReENVX2s5ejdrZTFpM0U3TVZIWV9CS0w3WXBHQTdTSE9QLUZEQ1hlNkExeFlxbmxzTnZ3d3NNMGwtRHJSSG80RlNOdjZPQThlX1REZVZTS3dZTWhZRm1aSV8?oc=5"
-    },
-    {
-      "date": "12 Oct",
-      "time": "11:13 HKT",
-      "publishedAt": "2026-10-12T11:13:00+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-cpi-aug",
-      "title": "Gold eases on strong dollar, oil prices; US inflation data eyed",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOSTdfbFRJUWVBUW5ndjBGSlJ6aGRQYi1saWxfVU5haEdOVXJaNzFuRnlyZ1F6eGVPb2tGYVczeXlRWEI5WmVHeVFGMTVqd2I5dEZCVDNrNDBkS2N1Q2NWWlRQMzhSa3BPMlZnVElqaFhaQkRLWnJrMG1NUnlvYVE5OWZGTXZucUJoaTUzTmxJeS1mUHpRSVVNT2xlRUI5dmtoQmc?oc=5"
     },
     {
       "date": "12 Oct",
@@ -218,6 +206,18 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPVlA3clhoZHZZTXBPTkpZMjNHRVhucm1nTUxYclV2UF9mRVowVkcwekVpSW1PUUFRUnNfSUxlaHRyYWNpYk1uOHpqS1RkdDh0NlZyNnZlR2RUWFNhbnJnNmhEMmw5ZTRQTzYtblRuVWtiSmRobGxJZnBQRXQ0Q1hpaFZZMGk?oc=5"
+    },
+    {
+      "date": "13 Sep",
+      "time": "15:00 HKT",
+      "publishedAt": "2026-09-13T15:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Financial Times",
+      "eventId": "us-fomc-sep",
+      "title": "Warsh and Trump on collision course as investors expect Fed to raise rates",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQX1FlNm82dWhzNW1zVWg2YXU4bmtFeTVrcG90cGRXQXBFR3EzamFMOUpPMkpQUk1tM2VBTThrZWpRc0ZQcDljSjg1ZXo3anpHSjBFYlZzS0hGLVpzTUVhSkpPNzRRYWpqeW5DTmU3QnMzRmY5ZHJQS2JKS2pMR0lwT1c1ZEE?oc=5"
     }
   ]
 }
