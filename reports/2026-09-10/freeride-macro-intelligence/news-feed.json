@@ -1,8 +1,20 @@
 {
-  "generatedAt": "2026-10-15T10:01:13+00:00",
+  "generatedAt": "2026-10-15T15:06:01+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
+    {
+      "date": "15 Oct",
+      "time": "21:00 HKT",
+      "publishedAt": "2026-10-15T21:00:02+08:00",
+      "kind": "NEWS",
+      "source": "Financial Times",
+      "eventId": "us-cpi-aug",
+      "title": "Rising inflation piles pressure on US voters ahead of midterm elections",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPcHRvWkgtazFPYWFZSHI5VDJpRnZLMWNBeWlQOEFKTlBpdVUwUFZObTNyUXhWNUQ0bFdZeHljQ1c0NmkyUVZ0aHN3cWNzOFNiTXFqTFRwQ2hndW96d3dyQzZEaVpxdXRxOWtpS3VWeEhoZG1lYTFNSmhQZTZXM2NGbEQ4VWQ?oc=5"
+    },
     {
       "date": "15 Oct",
       "time": "12:30 HKT",
@@ -22,7 +34,7 @@
       "kind": "NEWS",
       "source": "Reuters",
       "eventId": "us-fomc-sep",
-      "title": "Dollar pulls back from 18-month high as Treasury yields fall; Fed hike bets ease",
+      "title": "Dollar eases from 18-month high as Treasury yields fall; Fed hike bets ease",
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPbDE0ZWJRMm1PNWhpVzUwaDhHb2o1YkVXVExaeFVQWWFwcnJtemVfakY3WHV0aFFQWHR3dkR4eVN1OTZ3dXVqb0QzQ0ZuNkNhek1IbFRhVEtBXzNKcVpSQ1dHQm16ZGMxZHF1Z0txU2xHVUVsb0txUzhxLVljb0NXWWZzX2ZETk9QbHF1dm5XdmMybWFYRzl4d1VuS3J0NlU4enJvQVFuYTYydDNYUVVHM3pjandDUHdHbHhLT2otUU1HQk1PTVpReHpmTQ?oc=5"
@@ -110,18 +122,6 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPSzlnUlRIcHpyNkR3U0tfY0RXVEl0WGRuMTZuSTVvbnNhWXNTVjN3Yzhudmhqbjh1RU9mTzF2WHhkTGdhQU15UkZRTG5wSVFSNzZSN0dIQk5HaE55TTk5VGxtYmcxczM1aWk2S19NMVlpbzFQRHpvTm1SRk83N1l4Mng3Q2N0OGxvYWRpLXJNazR4V2xOcE9KdVRDU0pRSVBMY2pQWjdRMnRNWWZXV3ItaDhn?oc=5"
-    },
-    {
-      "date": "15 Oct",
-      "time": "03:34 HKT",
-      "publishedAt": "2026-10-15T03:34:17+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-fomc-sep",
-      "title": "Fed survey shows price pressures intensifying as fuel costs rise",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPcEdOeFlfWGYxQkFEMFV0MXNoZm5NdXpHRVRCUko5Mi1ONURfc0l6dXJSV253QzN4NFF2cjNmbFRvZ3NzaGt2MHV1MnZkTjMySDRJa2hyOTRyN0RHbjduT3FMWjhpQjBjZmdvTHQ3VVdqZUNTbzhKak0yTHd0Ymx4U00zcnlqNE9MQjdLUU5UejNIR2cxLVczQTh1SWdyLUY2SlZRUmhYMVBkR0NMc21PeA?oc=5"
     },
     {
       "date": "15 Oct",
