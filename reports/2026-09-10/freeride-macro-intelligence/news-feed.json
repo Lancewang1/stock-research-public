@@ -1,8 +1,44 @@
 {
-  "generatedAt": "2026-10-14T23:57:55+00:00",
+  "generatedAt": "2026-10-15T04:49:29+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
+    {
+      "date": "15 Oct",
+      "time": "12:41 HKT",
+      "publishedAt": "2026-10-15T12:41:15+08:00",
+      "kind": "NEWS",
+      "source": "Financial Times",
+      "eventId": "us-cpi-aug",
+      "title": "US inflation again set to be a crucial factor for the midterms",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBsNFpEd1ZkYTBpazVoMVM1X1V5Qng0T2JIWU5uWjI0aDdKX3Fqbkdja2RuNGc3MGlBNjBEQmRrMWhwRy1yVWJfNkx1Wk5Xck50MHYyMW1iZ0JrWEV2QTFiMFdWbHVta3VXRDM2bkZ0QTg?oc=5"
+    },
+    {
+      "date": "15 Oct",
+      "time": "09:49 HKT",
+      "publishedAt": "2026-10-15T09:49:00+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-cpi-aug",
+      "title": "Dollar retreats from 18-month high despite hot CPI as Fed officials temper hike bets",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPbDE0ZWJRMm1PNWhpVzUwaDhHb2o1YkVXVExaeFVQWWFwcnJtemVfakY3WHV0aFFQWHR3dkR4eVN1OTZ3dXVqb0QzQ0ZuNkNhek1IbFRhVEtBXzNKcVpSQ1dHQm16ZGMxZHF1Z0txU2xHVUVsb0txUzhxLVljb0NXWWZzX2ZETk9QbHF1dm5XdmMybWFYRzl4d1VuS3J0NlU4enJvQVFuYTYydDNYUVVHM3pjandDUHdHbHhLT2otUU1HQk1PTVpReHpmTQ?oc=5"
+    },
+    {
+      "date": "15 Oct",
+      "time": "08:51 HKT",
+      "publishedAt": "2026-10-15T08:51:00+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-cpi-aug",
+      "title": "Asian markets sell off as AI trades crumble after hot US CPI data",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE8zSHhMSkR3TXNQeHQwd0pHRXVZU3lzTjYzY2l0ZkVyMWVmbmczQWhqSzhGaEtBSWhKdW5lQ1VIeFI5Y0ZwUzE4dFFGWVRfUzE0Y0RaZlRkWEZSMUlleXp2OTBTd1FCU05vakU1QlA2X3hHcGl2UVk3SnhGUQ?oc=5"
+    },
     {
       "date": "15 Oct",
       "time": "07:33 HKT",
@@ -17,15 +53,15 @@
     },
     {
       "date": "15 Oct",
-      "time": "06:04 HKT",
-      "publishedAt": "2026-10-15T06:04:59+08:00",
+      "time": "07:09 HKT",
+      "publishedAt": "2026-10-15T07:09:09+08:00",
       "kind": "NEWS",
       "source": "Bloomberg",
       "eventId": "us-cpi-aug",
-      "title": "Asian Stocks to Fall as Hot CPI Sparks US Selloff: Markets Wrap",
+      "title": "Watch Hot September CPI Spurs Fed Rate Hike Fears",
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQYVhucmhFR3lJaktOV202ZDNObUVrTmJpZzcxVi1zYjVFckhBNUtkeHdzb2p5cHZGRi10cDVCYUpJT1l3QmpkTmRGeWlLV3ExSzBnRllBQThjN1cxenVQWVg5MnN1WHdNbHBpZG1rQmg3bjhwUWI4c3lPV21hUzRWZkRWcXR2QnpkTWZKTFZEemFmVTh5?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNV3NEeWNhT1RvUU1ZaUNFZF9lSlRndG5Rc1NseDNLR3NnXzlNMzBOeTlud0I4bGprcmVmMVFaUzV6OXVEUmo0N2t6VEt1TGZFZ0VMMEdZLW12Y1JXV08tNVFyaG11cU9tOWF0V0NwZVNXa1pmZG5fOGdrU2NpUm9lMW40VGtVZ1pPV3RvTzZXUjVlZ2FuTXYtUVNn?oc=5"
     },
     {
       "date": "15 Oct",
@@ -53,6 +89,18 @@
     },
     {
       "date": "15 Oct",
+      "time": "04:45 HKT",
+      "publishedAt": "2026-10-15T04:45:01+08:00",
+      "kind": "NEWS",
+      "source": "Bloomberg",
+      "eventId": "us-fomc-sep",
+      "title": "Gold Steady as Fed Official’s Remarks Temper Rate-Hike Bets",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQazViUHl2SmRiSUdDb0dNelo2Y2JjdkNLOG40Q0FpMnFBZ1JPNUNBc3pMeGlWbE5CQlUwcEVJWE93WmlJRkZTbzllQ1pfNV9HYXVHLUV2YVdkWW1TMWVJTElsNklvSzVYdTZPXzhIV0JHdHBCQzhhcklUSHhQaTFXUUNjNVlZTVZQNWd0UHM5LTlwRmpobUdiR1RiWDhTYUNTUGloY256S1l2blk0M0JZ?oc=5"
+    },
+    {
+      "date": "15 Oct",
       "time": "03:34 HKT",
       "publishedAt": "2026-10-15T03:34:53+08:00",
       "kind": "NEWS",
@@ -62,6 +110,18 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNNXZVX0VsdE85NGlqRkdpZXRvdk1fdmM4R04xWW5mRW91aGhGMXpBSjBPa01sc2laemlFTklJeTNkS3gxdk5LNlptQll5YUh3VGVhNzlnSUtPdTlDRmNyekZEZ3NFbGQ4SFVWRlpmeE1ONm9HbDRhLUkwWlRPUVlLcHdxSDBpTy1xWnVFenlGcFd4OFFEd3cyMmU5UlZhUGxNYVAxM3dkODhNUFEyR28zRURCTWhNZw?oc=5"
+    },
+    {
+      "date": "15 Oct",
+      "time": "03:33 HKT",
+      "publishedAt": "2026-10-15T03:33:09+08:00",
+      "kind": "NEWS",
+      "source": "Financial Times",
+      "eventId": "us-cpi-aug",
+      "title": "US chip stocks slide as inflation and AI debt fears unsettle investors",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNV010dndEUEEtbWpidDZDc3dSbk1wMnNqdmV6V1QxN3VqektkZ2dlY010cVhrOXgzQkJrRWhxdXk1WVg4VlBId2lTNVFMRXowVTlBZGJKeHhpWDhjOER6NlZmdGZFWnc1SmhVSTRvTzJpbmdfTmk1d2xYWHg1N0VFUXFTaUY?oc=5"
     },
     {
       "date": "14 Oct",
@@ -86,18 +146,6 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPVXp1eVNTSWNkc1FiNVdUMTd0NEY1SDlkR0FKTUlOd0s2SU9rZEJUVkJ1d3lQSXVCeEpIS25fTkF5UkFzZUdEMXp2SUkxVDVPREpIT2ZtbHh6aFB3NnlBR1BVSWpDbHY0UFBOclp1SFVZcTdMWENmVHp0NlJzVzNoeG4tTUJGOXBxTWdlRS14WkVpUGI2b0ZzY1pFdW4?oc=5"
-    },
-    {
-      "date": "14 Oct",
-      "time": "21:21 HKT",
-      "publishedAt": "2026-10-14T21:21:50+08:00",
-      "kind": "NEWS",
-      "source": "Bloomberg",
-      "eventId": "us-fomc-sep",
-      "title": "Gold Steady as Fed Official’s Remarks Temper Rate-Hike Bets",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQazViUHl2SmRiSUdDb0dNelo2Y2JjdkNLOG40Q0FpMnFBZ1JPNUNBc3pMeGlWbE5CQlUwcEVJWE93WmlJRkZTbzllQ1pfNV9HYXVHLUV2YVdkWW1TMWVJTElsNklvSzVYdTZPXzhIV0JHdHBCQzhhcklUSHhQaTFXUUNjNVlZTVZQNWd0UHM5LTlwRmpobUdiR1RiWDhTYUNTUGloY256S1l2blk0M0JZ?oc=5"
     },
     {
       "date": "14 Oct",
@@ -170,54 +218,6 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNcE96RkhyZDBlQ2VWRERNYlZtdm5FaVdQSXF2M3ZtR3JIOU05UExLWnZ3dmFBY1NZcndTRlozR29sdmxWaExXUmIycmZPZGk3UXI1amRxTDR6WHpSQl82ckhxZ016SnZYdGtPdC14TnZVWlpjeHl4SW5pUnJKbjl2M0pzcw?oc=5"
-    },
-    {
-      "date": "14 Oct",
-      "time": "09:18 HKT",
-      "publishedAt": "2026-10-14T09:18:00+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-fomc-sep",
-      "title": "Dollar hits 18-month high, then cools as investors await patient Fed",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPRTlXdFl1T0lRV3lDTk1HeDB5eEoyUkhIUERBWi02S1ZRU2tGX0hyQk9GdThWZUNUUFBKcUxqNEd1WkU4WFpyUHV6ZmU4VXl3MWRBSjN5UWM2WjVmbDl6RGhYYzV3SF8yTGwtTGJWTTR2OHN4LVVvVzlpTGs0RkFPX2dQWmNZTUF2MVFRMU5fWXZjbjlxd2NISDgyckdMQ3lYYTZv?oc=5"
-    },
-    {
-      "date": "13 Oct",
-      "time": "10:23 HKT",
-      "publishedAt": "2026-10-13T10:23:00+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-cpi-aug",
-      "title": "Gold subdued ahead of US inflation data, Warsh remarks",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNRnRSZTl3U0dwUkZRSkNlalhmeF94cE1aaGV4NjNZdll2aENMRDZTWGNTTnhjMS1BQ1hKUG9qc2hKS185eXpWTjFfUnBwN1cwdVNIUllaMnc0Tno2SnFBaXp4RGxMWkd1eFhXR1VTLV9qN25ETlIyeEVLNXNGX2NqZV80SUk5WG5IeEVDNGpRbTRfaVliMk9HVk5vQ0lyVnc?oc=5"
-    },
-    {
-      "date": "13 Oct",
-      "time": "09:44 HKT",
-      "publishedAt": "2026-10-13T09:44:00+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-cpi-aug",
-      "title": "Dollar retreats from 18-month high as oil prices fall, inflation data in focus",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPZ2lxTVVOV3pTUEkySWJNak9DU3lNdXR5bmRWWmxicmY0UVlFTFl3SmlERjl4LVFmTG1pSFAteVRpU2lPaXFhTTNROFlTWUgtaVRFdlliT3VYSkc1Z3REVEctSEZkSV9Sc3dabEFDb0pIcmNXdDR0MDJJMXNtNy1IUUNKS1BVWnNYd0xfM24yUFJmMkRXNUlYTmFnV2g3Z0VJWEE5Zk5MZw?oc=5"
-    },
-    {
-      "date": "13 Oct",
-      "time": "02:36 HKT",
-      "publishedAt": "2026-10-13T02:36:35+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-cpi-aug",
-      "title": "Gold eases on strong dollar, oil prices; US inflation data eyed",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOSTdfbFRJUWVBUW5ndjBGSlJ6aGRQYi1saWxfVU5haEdOVXJaNzFuRnlyZ1F6eGVPb2tGYVczeXlRWEI5WmVHeVFGMTVqd2I5dEZCVDNrNDBkS2N1Q2NWWlRQMzhSa3BPMlZnVElqaFhaQkRLWnJrMG1NUnlvYVE5OWZGTXZucUJoaTUzTmxJeS1mUHpRSVVNT2xlRUI5dmtoQmc?oc=5"
     }
   ]
 }
