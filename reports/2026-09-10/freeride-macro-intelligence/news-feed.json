@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T15:35:16+00:00",
+  "generatedAt": "2026-10-16T19:02:47+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
@@ -14,30 +14,6 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5qWldwNEZHeC1ieHp1ek8xSTBNemtEbTdYOFBvSW1MSnpjaS1nNkJ2QXZzdGdnN0xxQzFZWkI3SzVtZEotVGZhaWQyZDZJRlh1MXpNQXZncHIweG5WUm1pTDd3NEJGcVpfRWRZR2lHaTg?oc=5"
-    },
-    {
-      "date": "16 Oct",
-      "time": "22:39 HKT",
-      "publishedAt": "2026-10-16T22:39:32+08:00",
-      "kind": "NEWS",
-      "source": "Financial Times",
-      "eventId": "us-fomc-sep",
-      "title": "The hunt for Fed October",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1ESmo2YnBUYWs0Z215ckRmUlBVTG82Z00zYlYzQjdGYV9XQVlra2ZESlZDWm5HelRZcm5VRUxvM21Xbmg1cmt6NGFSaG95NU1ZSWZOVU5NcEpRbWZibVE2ZkI0TWJrUmxOQURNLXZueUE?oc=5"
-    },
-    {
-      "date": "16 Oct",
-      "time": "18:08 HKT",
-      "publishedAt": "2026-10-16T18:08:02+08:00",
-      "kind": "NEWS",
-      "source": "Financial Times",
-      "eventId": "us-fomc-sep",
-      "title": "Treasuries head for best week since February as AI jitters halt bond rout",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQeW9yUE1obkVWN1d0NzMtcm91X3BOSHNDQUxxemwweVdhdDZocXFKbEJqcHpORk5yaGpqNzNjUVpPeDJRaDdXSnYtQUZPRXp0cXhkX0c4V2tzVXg4Y2RSNXlhQ015a2lONUY0SFJocHdEdDQ3RGpyNWxvazhyQ3VaSEtpVXA?oc=5"
     },
     {
       "date": "16 Oct",
@@ -65,8 +41,8 @@
     },
     {
       "date": "15 Oct",
-      "time": "12:41 HKT",
-      "publishedAt": "2026-10-15T12:41:45+08:00",
+      "time": "12:30 HKT",
+      "publishedAt": "2026-10-15T12:30:08+08:00",
       "kind": "NEWS",
       "source": "Financial Times",
       "eventId": "us-cpi-aug",
@@ -218,6 +194,30 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNZkM3NGdUajlORC1ZZjBNcFZtNjYwa2JRaFczS1V4OVRORGhzZG1NUGxaY3ppRjdfQlFvUmREakJQM1RGaDNZZmZFMnJrY2Rtemc2Z1dBY1pPRy1ZbnBJVzNfTG1MMGJ5TXY5VzFpaDd6UENqd1pUOVdlTm1sS241QkFzNm1kdDJXTjl5emhLV200WUI1QVh4RQ?oc=5"
+    },
+    {
+      "date": "14 Oct",
+      "time": "22:22 HKT",
+      "publishedAt": "2026-10-14T22:22:26+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-cpi-aug",
+      "title": "Fed rate hike call seen tight as inflation heats up",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPMjl1ZWZGd2lIRXg1US1hUjNacTVDN2o5S2lIcXpCdnZ1VHBXcEpqOHV5SzJJZHJrT3RxYjdrRjRrRU03eHNGTTFRMnVCVEdZa0VfLU9BeFdSeTE1aFRrc3ZRampyOFVTczZRbWk0azFBakVndUJ1X0NjVmJmV1JmeXNXSlFkNzF0NUZKTUUyUnlHWi1sOXFpVHV5NnVvcDA?oc=5"
+    },
+    {
+      "date": "14 Oct",
+      "time": "21:32 HKT",
+      "publishedAt": "2026-10-14T21:32:08+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-cpi-aug",
+      "title": "VIEW Hot September CPI sends rate-hike bets soaring",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPVXp1eVNTSWNkc1FiNVdUMTd0NEY1SDlkR0FKTUlOd0s2SU9rZEJUVkJ1d3lQSXVCeEpIS25fTkF5UkFzZUdEMXp2SUkxVDVPREpIT2ZtbHh6aFB3NnlBR1BVSWpDbHY0UFBOclp1SFVZcTdMWENmVHp0NlJzVzNoeG4tTUJGOXBxTWdlRS14WkVpUGI2b0ZzY1pFdW4?oc=5"
     }
   ]
 }
