@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-10-17T00:32:52+00:00",
+  "generatedAt": "2026-10-17T05:02:49+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
     {
       "date": "16 Oct",
-      "time": "22:39 HKT",
-      "publishedAt": "2026-10-16T22:39:32+08:00",
+      "time": "22:58 HKT",
+      "publishedAt": "2026-10-16T22:58:28+08:00",
       "kind": "NEWS",
       "source": "Financial Times",
-      "eventId": "us-fomc-sep",
-      "title": "The hunt for Fed October",
+      "eventId": "us-cpi-aug",
+      "title": "Trump has failed to listen to voters on inflation",
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1ESmo2YnBUYWs0Z215ckRmUlBVTG82Z00zYlYzQjdGYV9XQVlra2ZESlZDWm5HelRZcm5VRUxvM21Xbmg1cmt6NGFSaG95NU1ZSWZOVU5NcEpRbWZibVE2ZkI0TWJrUmxOQURNLXZueUE?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5qWldwNEZHeC1ieHp1ek8xSTBNemtEbTdYOFBvSW1MSnpjaS1nNkJ2QXZzdGdnN0xxQzFZWkI3SzVtZEotVGZhaWQyZDZJRlh1MXpNQXZncHIweG5WUm1pTDd3NEJGcVpfRWRZR2lHaTg?oc=5"
     },
     {
       "date": "16 Oct",
@@ -41,6 +41,18 @@
     },
     {
       "date": "15 Oct",
+      "time": "21:13 HKT",
+      "publishedAt": "2026-10-15T21:13:17+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-fomc-sep",
+      "title": "Gold rebounds on weaker dollar, yield drop; October Fed hike bets subdued",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNUGo4bEV3TDlUV2I1Nkg3dzNpODBCZ0hBWXJtWHR2OWwxWGVGZlRVcDZINFJqdmQ5QXJRNk5aUVVtZDhZSUlzUEJNWmpUcm9oSmtrNldYLWZEWTl6NDNueFY4VlQyby1oYnBKcnFSaHBQR1BWZXZ1NVg5LXZReXc5UjlWTXFzd2pDSEpBVTljTjk?oc=5"
+    },
+    {
+      "date": "15 Oct",
       "time": "21:00 HKT",
       "publishedAt": "2026-10-15T21:00:02+08:00",
       "kind": "NEWS",
@@ -62,18 +74,6 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBsNFpEd1ZkYTBpazVoMVM1X1V5Qng0T2JIWU5uWjI0aDdKX3Fqbkdja2RuNGc3MGlBNjBEQmRrMWhwRy1yVWJfNkx1Wk5Xck50MHYyMW1iZ0JrWEV2QTFiMFdWbHVta3VXRDM2bkZ0QTg?oc=5"
-    },
-    {
-      "date": "15 Oct",
-      "time": "11:18 HKT",
-      "publishedAt": "2026-10-15T11:18:00+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-fomc-sep",
-      "title": "Gold rebounds on weaker dollar, yield drop; October Fed hike bets subdued",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNUGo4bEV3TDlUV2I1Nkg3dzNpODBCZ0hBWXJtWHR2OWwxWGVGZlRVcDZINFJqdmQ5QXJRNk5aUVVtZDhZSUlzUEJNWmpUcm9oSmtrNldYLWZEWTl6NDNueFY4VlQyby1oYnBKcnFSaHBQR1BWZXZ1NVg5LXZReXc5UjlWTXFzd2pDSEpBVTljTjk?oc=5"
     },
     {
       "date": "15 Oct",
@@ -134,6 +134,18 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQazViUHl2SmRiSUdDb0dNelo2Y2JjdkNLOG40Q0FpMnFBZ1JPNUNBc3pMeGlWbE5CQlUwcEVJWE93WmlJRkZTbzllQ1pfNV9HYXVHLUV2YVdkWW1TMWVJTElsNklvSzVYdTZPXzhIV0JHdHBCQzhhcklUSHhQaTFXUUNjNVlZTVZQNWd0UHM5LTlwRmpobUdiR1RiWDhTYUNTUGloY256S1l2blk0M0JZ?oc=5"
+    },
+    {
+      "date": "15 Oct",
+      "time": "04:42 HKT",
+      "publishedAt": "2026-10-15T04:42:13+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-cpi-aug",
+      "title": "TSX falls as miners take a hit, hot US inflation weighs",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPdnMtVzdwRndObjllX2FWOWk5LU9yVTlrdVR6c09xVTRJZlY4OXlCc3JhSlBiSktrcmhPdlhZMzFxYTlYWV9fSEUtVThrN253eUZCOXdzcVNFZ1NfOXM0SE9MU0hFcDVKUURfZFVGdk14RWc3OTN2WW1DajhHU3YwcDhYSUNGZjFJSU1TLWFQOFBJSXhXNk9EbXNaSlpNbkZJUktydldtT0Y?oc=5"
     },
     {
       "date": "15 Oct",
@@ -206,18 +218,6 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPMjl1ZWZGd2lIRXg1US1hUjNacTVDN2o5S2lIcXpCdnZ1VHBXcEpqOHV5SzJJZHJrT3RxYjdrRjRrRU03eHNGTTFRMnVCVEdZa0VfLU9BeFdSeTE1aFRrc3ZRampyOFVTczZRbWk0azFBakVndUJ1X0NjVmJmV1JmeXNXSlFkNzF0NUZKTUUyUnlHWi1sOXFpVHV5NnVvcDA?oc=5"
-    },
-    {
-      "date": "14 Oct",
-      "time": "21:32 HKT",
-      "publishedAt": "2026-10-14T21:32:08+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-cpi-aug",
-      "title": "VIEW Hot September CPI sends rate-hike bets soaring",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPVXp1eVNTSWNkc1FiNVdUMTd0NEY1SDlkR0FKTUlOd0s2SU9rZEJUVkJ1d3lQSXVCeEpIS25fTkF5UkFzZUdEMXp2SUkxVDVPREpIT2ZtbHh6aFB3NnlBR1BVSWpDbHY0UFBOclp1SFVZcTdMWENmVHp0NlJzVzNoeG4tTUJGOXBxTWdlRS14WkVpUGI2b0ZzY1pFdW4?oc=5"
     }
   ]
 }
