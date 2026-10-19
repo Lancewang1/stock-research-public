@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T20:51:53+00:00",
+  "generatedAt": "2026-10-19T01:49:14+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
@@ -41,8 +41,8 @@
     },
     {
       "date": "16 Oct",
-      "time": "04:49 HKT",
-      "publishedAt": "2026-10-16T04:49:23+08:00",
+      "time": "03:43 HKT",
+      "publishedAt": "2026-10-16T03:43:18+08:00",
       "kind": "NEWS",
       "source": "Reuters",
       "eventId": "us-cpi-aug",
