@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T10:08:32+00:00",
+  "generatedAt": "2026-10-20T15:09:33+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
@@ -125,18 +125,6 @@
     },
     {
       "date": "15 Oct",
-      "time": "04:51 HKT",
-      "publishedAt": "2026-10-15T04:51:56+08:00",
-      "kind": "NEWS",
-      "source": "Financial Times",
-      "eventId": "us-cpi-aug",
-      "title": "Fed’s October Beige Book points to higher inflation",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1MSlluMzh4SE8zOC1KaWtHR1QyRnUyV1VHNk5XMnNXa3ZyYUo3eGZaYVJUNklQYzFIUDM5d3lDc0luRmJoN1lEdC1PWnZHOXI0TDctem1hYzF4b2xWc21sakFGTXNidm5HN2s4M0ZyUFM?oc=5"
-    },
-    {
-      "date": "15 Oct",
       "time": "04:30 HKT",
       "publishedAt": "2026-10-15T04:30:59+08:00",
       "kind": "NEWS",
@@ -218,6 +206,18 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPVXp1eVNTSWNkc1FiNVdUMTd0NEY1SDlkR0FKTUlOd0s2SU9rZEJUVkJ1d3lQSXVCeEpIS25fTkF5UkFzZUdEMXp2SUkxVDVPREpIT2ZtbHh6aFB3NnlBR1BVSWpDbHY0UFBOclp1SFVZcTdMWENmVHp0NlJzVzNoeG4tTUJGOXBxTWdlRS14WkVpUGI2b0ZzY1pFdW4?oc=5"
+    },
+    {
+      "date": "14 Oct",
+      "time": "20:31 HKT",
+      "publishedAt": "2026-10-14T20:31:15+08:00",
+      "kind": "NEWS",
+      "source": "Financial Times",
+      "eventId": "us-cpi-aug",
+      "title": "US inflation jumps to 3.7% as Iran war drives up prices",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNaTVDMnlSRThVWkxaaEY1cnpwU3VJOFZTbjA0cXYxR0l1WEcyQks5X2tIeDRSSkpsV29RU0xLZFJsTnMwNE5SdC1oWXpHdGFVY0pUOVVxenlSbDNTRVMzTlNLeENwWEFIRFl2Uk1sb1hMdVYtWVVndEw1RGpyT0tVd0ZSOWQ?oc=5"
     }
   ]
 }
