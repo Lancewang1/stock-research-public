@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-21T01:02:45+00:00",
+  "generatedAt": "2026-10-21T11:59:27+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
@@ -86,18 +86,6 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNUGo4bEV3TDlUV2I1Nkg3dzNpODBCZ0hBWXJtWHR2OWwxWGVGZlRVcDZINFJqdmQ5QXJRNk5aUVVtZDhZSUlzUEJNWmpUcm9oSmtrNldYLWZEWTl6NDNueFY4VlQyby1oYnBKcnFSaHBQR1BWZXZ1NVg5LXZReXc5UjlWTXFzd2pDSEpBVTljTjk?oc=5"
-    },
-    {
-      "date": "15 Oct",
-      "time": "21:00 HKT",
-      "publishedAt": "2026-10-15T21:00:02+08:00",
-      "kind": "NEWS",
-      "source": "Financial Times",
-      "eventId": "us-cpi-aug",
-      "title": "Rising inflation piles pressure on US voters ahead of midterm elections",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPcHRvWkgtazFPYWFZSHI5VDJpRnZLMWNBeWlQOEFKTlBpdVUwUFZObTNyUXhWNUQ0bFdZeHljQ1c0NmkyUVZ0aHN3cWNzOFNiTXFqTFRwQ2hndW96d3dyQzZEaVpxdXRxOWtpS3VWeEhoZG1lYTFNSmhQZTZXM2NGbEQ4VWQ?oc=5"
     },
     {
       "date": "15 Oct",
@@ -218,6 +206,18 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNZkM3NGdUajlORC1ZZjBNcFZtNjYwa2JRaFczS1V4OVRORGhzZG1NUGxaY3ppRjdfQlFvUmREakJQM1RGaDNZZmZFMnJrY2Rtemc2Z1dBY1pPRy1ZbnBJVzNfTG1MMGJ5TXY5VzFpaDd6UENqd1pUOVdlTm1sS241QkFzNm1kdDJXTjl5emhLV200WUI1QVh4RQ?oc=5"
+    },
+    {
+      "date": "14 Oct",
+      "time": "22:22 HKT",
+      "publishedAt": "2026-10-14T22:22:26+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-cpi-aug",
+      "title": "Fed rate hike call seen tight as inflation heats up",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPMjl1ZWZGd2lIRXg1US1hUjNacTVDN2o5S2lIcXpCdnZ1VHBXcEpqOHV5SzJJZHJrT3RxYjdrRjRrRU03eHNGTTFRMnVCVEdZa0VfLU9BeFdSeTE1aFRrc3ZRampyOFVTczZRbWk0azFBakVndUJ1X0NjVmJmV1JmeXNXSlFkNzF0NUZKTUUyUnlHWi1sOXFpVHV5NnVvcDA?oc=5"
     }
   ]
 }
