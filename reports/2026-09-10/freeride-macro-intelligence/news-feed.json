@@ -1,31 +1,19 @@
 {
-  "generatedAt": "2026-10-23T06:33:04+00:00",
+  "generatedAt": "2026-10-23T12:11:48+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
     {
-      "date": "20 Oct",
-      "time": "21:27 HKT",
-      "publishedAt": "2026-10-20T21:27:27+08:00",
+      "date": "21 Oct",
+      "time": "18:00 HKT",
+      "publishedAt": "2026-10-21T18:00:10+08:00",
       "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-fomc-sep",
-      "title": "Fed to skip October but raise rates again in December, nearly all economists say",
+      "source": "Bloomberg",
+      "eventId": "us-cpi-aug",
+      "title": "Sticky Inflation Is Testing the Fed’s Resolve",
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOZUFYOUZFZXZ4UWJSN1J6RkRxM1lkdGJsUFZRZ2puQkFnRk9rczVQZF9iUS12amVsUl9ESnA4MmNlUmFuVnBVY3BoeVZoVWx1dmwtSWdCa2tGUUlXeXdWR0o0U2o5NHdUend5d2o3c1NoUlZTQUNyWFFEalBHY25QMVptcnFoRnZiSk1JVDFyb1VFYkg0NGRJaXhWemlUY3gxX3YxeVh0YkNMSHNQU21pWkc0OVQ?oc=5"
-    },
-    {
-      "date": "17 Oct",
-      "time": "02:20 HKT",
-      "publishedAt": "2026-10-17T02:20:09+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-fomc-sep",
-      "title": "Gold set for a weekly drop as traders assess Fed signals",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQUFdTSHVlWTdpZG0xRlc1U3Rka1I3Q3FLdVhKUVJjRWdlb040SXdMZktTT3k1WEgxSnB0QzdaQ2FSY05KTVVOSFg4aVpSRm01Z1hfdGNxY0JnYzJqeXBCcm1SU1FaVzlPUWljNFBxWDlYZmJxYU5ycmxyb1FNUEpTcVpoc3AwS25VUUgxMkFIOXZpQU5TZlVOTEVmVQ?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPQkUxWWNmVENYWHNyd3ZtSlV1SGVPSGpFdXl0dm5GWHpVVktsMi1wZ3RmdG4xdkV4SUpmaVMxLTFhQkpDLUs0VDdWOXZnVGZidXVZRGdkOUFNS0E4Tmd2Z3VLZ0wyUjY3SGptbjZnLWp5TUVJekdodHdId0trTWFWUTZQT09YVWluWkdCNFBIaFhfYjZRQkRfNEVRS21PV181TlQyaklJNVM1Qm8?oc=5"
     },
     {
       "date": "16 Oct",
@@ -190,22 +178,22 @@
       "kind": "NEWS",
       "source": "Bloomberg",
       "eventId": "us-cpi-aug",
-      "title": "US Bond Traders Await CPI, Warsh For Insight on Fed’s Rate Path",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPM3lYa092MnRSV0FXYUtRRjVRSHN2akl0ZzM3UWlJcjh6bXNpbVE4dHJQUDM0bS1iWklWekQ0aENwMDRCdWhZbUZMTHFOMmVrZzZzYmFIMG5BamMzSTFfTE0wVjZsWjFBZ2ZQTmFWM0h4NUZkZlVseDlCM05QSFNyczJfdk5BV1IzVmd1NXlnaTdVVnNyOXV0TmxjSW9IRFZWWkEtZlZ1c25jcXU4WXQ1QmRNbw?oc=5"
-    },
-    {
-      "date": "10 Oct",
-      "time": "15:00 HKT",
-      "publishedAt": "2026-10-10T15:00:00+08:00",
-      "kind": "NEWS",
-      "source": "Bloomberg",
-      "eventId": "us-cpi-aug",
       "title": "US CPI to Show Overall Inflation Boosted by Higher Gasoline Prices",
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPUHNUeWNTY1NneVFOYnBzR0xFeWs2eWs3UWJCODFyaEtnNDZtamJJY1pSNFpyZ2xmcmNoR3FIc1VEeVU5bXdHSktiQlVqbFZTUHlTMjlsbjZOOU9fMFVwSUZoNGxNV0toMU1Sc3VZTnRWTmtnTXNlSnVCaDNMREVnWUtOSFctdGlTZ01EU1hnRVVsd1VnaHJiNEF0d3AwQVZubko5RVNjVDlKZ3FkbnI2bHFTbWdrN2JY?oc=5"
+    },
+    {
+      "date": "11 Oct",
+      "time": "15:00 HKT",
+      "publishedAt": "2026-10-11T15:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Bloomberg",
+      "eventId": "us-cpi-aug",
+      "title": "US Bond Traders Await CPI, Warsh For Insight on Fed’s Rate Path",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPM3lYa092MnRSV0FXYUtRRjVRSHN2akl0ZzM3UWlJcjh6bXNpbVE4dHJQUDM0bS1iWklWekQ0aENwMDRCdWhZbUZMTHFOMmVrZzZzYmFIMG5BamMzSTFfTE0wVjZsWjFBZ2ZQTmFWM0h4NUZkZlVseDlCM05QSFNyczJfdk5BV1IzVmd1NXlnaTdVVnNyOXV0TmxjSW9IRFZWWkEtZlZ1c25jcXU4WXQ1QmRNbw?oc=5"
     },
     {
       "date": "03 Oct",
@@ -218,6 +206,18 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNOVRfM1dqWHpoenJab09IVXh3am1peVNMWFFPOFhOSjl1SkI5MklDUDl6VFpkSkZxUE8tU0Q4S3R3VXNxd0t5Mlc3NGxXNTBid1N4U0czdVA2b09hVmRyT0VtaEU3M243T09TQjVTSzVMYURvSkg5WjBSc2tjVnpzM29ZMHdTMC1hUGlRUzBJRXBQdWk3bG9heTJOQjQ3QQ?oc=5"
+    },
+    {
+      "date": "02 Oct",
+      "time": "15:00 HKT",
+      "publishedAt": "2026-10-02T15:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-payrolls-aug",
+      "title": "Equities close higher as softer jobs data quiets rate-hike expectations",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPeTVxVTNLX2pUZEc1U0xtNWdyYWRjY0NjSVcweXJNYk9PTDVKVnJaTzFNTUdnNW5LVEFxaHlELU9fVW9neE93Q0VDanlUbkJPcUhMaXNmNUJQX3pXd0JvcU1VSHh5Z1NEZnQzWGFsclpXZ08zRTVmY2ZaV1J4a2JBU3lPTEVNTUNBSVdVcWRydUlJOEY5ZU13NERhMFE3YUstSzB2RE5JV1gtZw?oc=5"
     }
   ]
 }
