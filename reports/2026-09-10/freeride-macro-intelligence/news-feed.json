@@ -1,20 +1,8 @@
 {
-  "generatedAt": "2026-10-23T01:35:41+00:00",
+  "generatedAt": "2026-10-23T06:33:04+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
-    {
-      "date": "21 Oct",
-      "time": "18:00 HKT",
-      "publishedAt": "2026-10-21T18:00:10+08:00",
-      "kind": "NEWS",
-      "source": "Bloomberg",
-      "eventId": "us-cpi-aug",
-      "title": "Sticky Inflation Is Testing the Fed’s Resolve",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPQkUxWWNmVENYWHNyd3ZtSlV1SGVPSGpFdXl0dm5GWHpVVktsMi1wZ3RmdG4xdkV4SUpmaVMxLTFhQkpDLUs0VDdWOXZnVGZidXVZRGdkOUFNS0E4Tmd2Z3VLZ0wyUjY3SGptbjZnLWp5TUVJekdodHdId0trTWFWUTZQT09YVWluWkdCNFBIaFhfYjZRQkRfNEVRS21PV181TlQyaklJNVM1Qm8?oc=5"
-    },
     {
       "date": "20 Oct",
       "time": "21:27 HKT",
@@ -38,18 +26,6 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQUFdTSHVlWTdpZG0xRlc1U3Rka1I3Q3FLdVhKUVJjRWdlb040SXdMZktTT3k1WEgxSnB0QzdaQ2FSY05KTVVOSFg4aVpSRm01Z1hfdGNxY0JnYzJqeXBCcm1SU1FaVzlPUWljNFBxWDlYZmJxYU5ycmxyb1FNUEpTcVpoc3AwS25VUUgxMkFIOXZpQU5TZlVOTEVmVQ?oc=5"
-    },
-    {
-      "date": "16 Oct",
-      "time": "23:05 HKT",
-      "publishedAt": "2026-10-16T23:05:09+08:00",
-      "kind": "NEWS",
-      "source": "Bloomberg",
-      "eventId": "us-fomc-sep",
-      "title": "Energy Shock Filtering Through US Economy Complicates Fed’s Job",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQVlZMQTJtaE5ZN0RQakhwSDI2MGJ1TWNGWDI3TXNNNHRjb0Qzd08zVDl6VHhHWklJek1nRzEyY0pfRExYUXRmWHZZaFFkNF8wZUJFbk4xMVExU3hWRW8ta0FMOFVNa3drblVtamlkMFE1SElBa28wOUQycUE4UHhJN0hMOC1xWmVIMmRQcU5Ydkh2LWdkMUI5MWFpVl9EN0tzUjZtRTcxalhRWGF5VThOVmxZNGE?oc=5"
     },
     {
       "date": "16 Oct",
@@ -218,6 +194,30 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPM3lYa092MnRSV0FXYUtRRjVRSHN2akl0ZzM3UWlJcjh6bXNpbVE4dHJQUDM0bS1iWklWekQ0aENwMDRCdWhZbUZMTHFOMmVrZzZzYmFIMG5BamMzSTFfTE0wVjZsWjFBZ2ZQTmFWM0h4NUZkZlVseDlCM05QSFNyczJfdk5BV1IzVmd1NXlnaTdVVnNyOXV0TmxjSW9IRFZWWkEtZlZ1c25jcXU4WXQ1QmRNbw?oc=5"
+    },
+    {
+      "date": "10 Oct",
+      "time": "15:00 HKT",
+      "publishedAt": "2026-10-10T15:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Bloomberg",
+      "eventId": "us-cpi-aug",
+      "title": "US CPI to Show Overall Inflation Boosted by Higher Gasoline Prices",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPUHNUeWNTY1NneVFOYnBzR0xFeWs2eWs3UWJCODFyaEtnNDZtamJJY1pSNFpyZ2xmcmNoR3FIc1VEeVU5bXdHSktiQlVqbFZTUHlTMjlsbjZOOU9fMFVwSUZoNGxNV0toMU1Sc3VZTnRWTmtnTXNlSnVCaDNMREVnWUtOSFctdGlTZ01EU1hnRVVsd1VnaHJiNEF0d3AwQVZubko5RVNjVDlKZ3FkbnI2bHFTbWdrN2JY?oc=5"
+    },
+    {
+      "date": "03 Oct",
+      "time": "15:00 HKT",
+      "publishedAt": "2026-10-03T15:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-fomc-sep",
+      "title": "Fed may skip October but pull rate hike trigger in December",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNOVRfM1dqWHpoenJab09IVXh3am1peVNMWFFPOFhOSjl1SkI5MklDUDl6VFpkSkZxUE8tU0Q4S3R3VXNxd0t5Mlc3NGxXNTBid1N4U0czdVA2b09hVmRyT0VtaEU3M243T09TQjVTSzVMYURvSkg5WjBSc2tjVnpzM29ZMHdTMC1hUGlRUzBJRXBQdWk3bG9heTJOQjQ3QQ?oc=5"
     }
   ]
 }
