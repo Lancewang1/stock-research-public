@@ -1,8 +1,20 @@
 {
-  "generatedAt": "2026-10-23T23:34:01+00:00",
+  "generatedAt": "2026-10-24T02:00:41+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
+    {
+      "date": "24 Oct",
+      "time": "01:15 HKT",
+      "publishedAt": "2026-10-24T01:15:41+08:00",
+      "kind": "NEWS",
+      "source": "Bloomberg",
+      "eventId": "us-cpi-aug",
+      "title": "Kalshi Courts Wall Street in Bid to Be the ‘Inflation Exchange’ With CPI Futures",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQazRCOHdwbnp4ZW5wZnNfUTJKaG0ybzVnblpka3lDb1ZjTno2X2hCRExkRnVoX2RncHV5SVFFWXZ1Q1lrR0hpdU05LWZnUTJaaEJ4VjFGT0toNk1QaFNUUjN0ODg2MWkxOW9tVFZzUDZaTF9ZU1RCYXUtbmNYMWRZWGYtR1FXa21zemg1c0hKdW9yb1NKa0t5OFpkN2d0UllWYTc0VXd1RUhYY0JSSUppbGxBTVFUd1VnTlpVUWNZN19qb1h0N1hyZw?oc=5"
+    },
     {
       "date": "22 Oct",
       "time": "12:00 HKT",
@@ -16,16 +28,16 @@
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNX2txX2JhRDEtN1hwUTJ2X1JKUDlQNmhLRmdxNFAyN2dTTkNkUVVtN3Mxd1RFd3Nla3lqMUw2c0ZfdHZzQTF6aHFockJMMzRoRVVpUmp2OUNFWUlpRXVXYktDTWZHTUlKVjNnVm95SzJkTjhWbjk3OVU0bGk5d2oyLVhoODc?oc=5"
     },
     {
-      "date": "16 Oct",
-      "time": "03:25 HKT",
-      "publishedAt": "2026-10-16T03:25:17+08:00",
+      "date": "17 Oct",
+      "time": "02:20 HKT",
+      "publishedAt": "2026-10-17T02:20:09+08:00",
       "kind": "NEWS",
-      "source": "Bloomberg",
-      "eventId": "us-cpi-aug",
-      "title": "Copper Falls for Third Day as Strong US Inflation Spurs Selloff",
+      "source": "Reuters",
+      "eventId": "us-fomc-sep",
+      "title": "Gold set for a weekly drop as traders assess Fed signals",
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOQ0psUFhiRzE0dTRhNF9VT09tUG9BWmw2QUxYOWE1Qy1aUURTTVBrRHpHVFAzRDNyLVdqV0ZfaUEzdXRYMDBGWnNHTzlkVzhJYUw3NWJTcHY3dUl5MDRlcGNNSVRDQnZFZ1N3QUJnRFhqUTAyei1aRzBxU3dIZm1QbFRWVjFoMDFsSVBQa01DR1JadUxXUk9XZzFqbTNwSXRIRExpeTk0R0hVUzVCckF3U1UzcWQ?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQUFdTSHVlWTdpZG0xRlc1U3Rka1I3Q3FLdVhKUVJjRWdlb040SXdMZktTT3k1WEgxSnB0QzdaQ2FSY05KTVVOSFg4aVpSRm01Z1hfdGNxY0JnYzJqeXBCcm1SU1FaVzlPUWljNFBxWDlYZmJxYU5ycmxyb1FNUEpTcVpoc3AwS25VUUgxMkFIOXZpQU5TZlVOTEVmVQ?oc=5"
     },
     {
       "date": "15 Oct",
@@ -130,18 +142,6 @@
       "kind": "NEWS",
       "source": "Reuters",
       "eventId": "us-cpi-aug",
-      "title": "High gasoline prices expected to boost US consumer inflation in September",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQWlRYZDhRQWpqTmlJcWxGcDR4RGNleVlZQ2pqYlVZaW8ya01TS1NCUFUyaElVNUdJR2x0VWRxdGtaWl9wekdEUGVHUnktVUstSXFOcHloUWtLcFlQU0EzSW4yTENYU1NYX09VMUVRU3hQZ2prRjA1dVBTdll0QjNZaXJVbE5LSVNMODNVSkxlR05IeVpydy1hRFpuWWp0OWM0TXhXclVQWHNwWlZHRGNNNmRR?oc=5"
-    },
-    {
-      "date": "14 Oct",
-      "time": "15:00 HKT",
-      "publishedAt": "2026-10-14T15:00:00+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-cpi-aug",
       "title": "Nasdaq ends sharply lower as hot inflation data stirs rate-hike worries",
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
@@ -160,16 +160,16 @@
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNaTVDMnlSRThVWkxaaEY1cnpwU3VJOFZTbjA0cXYxR0l1WEcyQks5X2tIeDRSSkpsV29RU0xLZFJsTnMwNE5SdC1oWXpHdGFVY0pUOVVxenlSbDNTRVMzTlNLeENwWEFIRFl2Uk1sb1hMdVYtWVVndEw1RGpyT0tVd0ZSOWQ?oc=5"
     },
     {
-      "date": "14 Oct",
+      "date": "11 Oct",
       "time": "15:00 HKT",
-      "publishedAt": "2026-10-14T15:00:00+08:00",
+      "publishedAt": "2026-10-11T15:00:00+08:00",
       "kind": "NEWS",
-      "source": "Bloomberg",
-      "eventId": "us-fomc-sep",
-      "title": "Gold Steady as Fed Official’s Remarks Temper Rate-Hike Bets",
+      "source": "Financial Times",
+      "eventId": "us-cpi-aug",
+      "title": "Will September inflation cement US interest rate policy for the rest of the year?",
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQazViUHl2SmRiSUdDb0dNelo2Y2JjdkNLOG40Q0FpMnFBZ1JPNUNBc3pMeGlWbE5CQlUwcEVJWE93WmlJRkZTbzllQ1pfNV9HYXVHLUV2YVdkWW1TMWVJTElsNklvSzVYdTZPXzhIV0JHdHBCQzhhcklUSHhQaTFXUUNjNVlZTVZQNWd0UHM5LTlwRmpobUdiR1RiWDhTYUNTUGloY256S1l2blk0M0JZ?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPdVpFbWJydEFBMkkyYXU1NFhqVUd0WFppVklNYldyQzR5M2wwZ3hyT2oxSXZ5dkN2VklKd0lVZUhjRFNxS0RQSWtBMW1kX3ZfR09oZ0RIUV8xR2g3T0VPYmNDMzZYU016QnBKUHREUHZWRmJCeEcwYnVYLTlxb1ZDUXhSQ0I?oc=5"
     },
     {
       "date": "11 Oct",
