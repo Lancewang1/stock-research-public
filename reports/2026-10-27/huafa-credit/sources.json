@@ -1,0 +1,142 @@
+{
+  "as_of": "2026-10-27",
+  "methodology": "债券结构化数据来自Wind；财务与近期回售、资金用途、担保、境外永续条款使用官方披露复核。",
+  "wind": {
+    "provider": "万得Wind",
+    "balance_date": "2026-10-27",
+    "retrieval_date": "2026-10-27",
+    "fields": [
+      "发行人",
+      "发行方式",
+      "债券余额",
+      "到期日",
+      "回售日",
+      "起息日",
+      "下一付息日",
+      "每年付息次数",
+      "永续分类",
+      "票面利率",
+      "发行金额",
+      "最近交易日及收益率"
+    ],
+    "coverage": {
+      "group_bonds_after_dedup": 72,
+      "property_bonds": 28,
+      "offshore_bonds": 5
+    }
+  },
+  "public_documents": [
+    {
+      "label": "统计局原文",
+      "url": "https://www.stats.gov.cn/sj/zxfb/202610/t20261019_1965615.html"
+    },
+    {
+      "label": "2025年报PDF19页",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-04-25/1225196269.PDF"
+    },
+    {
+      "label": "H1经营简报PDF1页",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225534609.PDF"
+    },
+    {
+      "label": "华发股份2026半年报",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225534768.PDF"
+    },
+    {
+      "label": "集团半年报PDF54、76—80页",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225538620.PDF"
+    },
+    {
+      "label": "回售结果",
+      "url": "https://www.shclearing.com.cn/xxpl/zxpz/bgpj/202610/t20261014_1882154.html"
+    },
+    {
+      "label": "兑付安排PDF1—2页",
+      "url": "https://www.shclearing.com.cn/xxpl/zxpz/bgpj/202610/t20261026_1891191.html"
+    },
+    {
+      "label": "公告PDF1—2页",
+      "url": "https://www.shclearing.com.cn/xxpl/zdsxjqt/202610/t20261027_1892002.html"
+    },
+    {
+      "label": "9月30日公告",
+      "url": "https://www.shclearing.com.cn/xxpl/zdsxjqt/202609/t20260930_1876722.html"
+    },
+    {
+      "label": "10月13日公告",
+      "url": "https://www.shclearing.com.cn/xxpl/zdsxjqt/202610/t20261013_1881450.html"
+    },
+    {
+      "label": "10月14日发行结果PDF1—2页",
+      "url": "https://www.shclearing.com.cn/xxpl/fxqkbg/scp01/202610/t20261014_1882572.html"
+    },
+    {
+      "label": "回售结果PDF1页",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-08-21/1225492084.PDF"
+    },
+    {
+      "label": "募集书p367",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-04-10/1225091958.PDF"
+    },
+    {
+      "label": "公告p1,2",
+      "url": "https://www.shclearing.com.cn/xxpl/zdsxjqt/202608/t20260826_1853122.html"
+    },
+    {
+      "label": "公告p1",
+      "url": "https://pdf.dfcfw.com/pdf/H2_AN202608181828104924_1.pdf"
+    },
+    {
+      "label": "原发行通函PDF5、109、113—120页",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2024/0731/2024073100217.pdf"
+    },
+    {
+      "label": "追加发行公告",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2024/0923/2024092300880.pdf"
+    },
+    {
+      "label": "关联支持额度",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-10-01/1225592180.PDF"
+    },
+    {
+      "label": "股东会决议",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-10-17/1225609478.PDF"
+    },
+    {
+      "label": "临时补流",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-09-25/1225583039.PDF"
+    },
+    {
+      "label": "定增修订说明书",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-09-11/1225558963.PDF"
+    },
+    {
+      "label": "资产转让",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-07-31/1225449356.PDF"
+    },
+    {
+      "label": "合作方和解",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-06-02/1225344282.PDF"
+    },
+    {
+      "label": "集团联合资信报告PDF27页",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-06-16/1225373875.PDF"
+    },
+    {
+      "label": "股份远东资信报告PDF17页",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-09-19/1225573322.PDF"
+    },
+    {
+      "label": "诉讼公告",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-10-22/1225614729.PDF"
+    },
+    {
+      "label": "募集说明书PDF573—579、600—601页",
+      "url": "https://www.shclearing.com.cn/xxpl/fxpl/scp/202610/t20261012_1880766.html"
+    },
+    {
+      "label": "回复PDF44—48页",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-09-11/1225558966.PDF"
+    }
+  ]
+}
