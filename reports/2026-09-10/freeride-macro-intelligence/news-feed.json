@@ -1,8 +1,20 @@
 {
-  "generatedAt": "2026-10-27T13:19:23+00:00",
+  "generatedAt": "2026-10-27T19:00:08+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
+    {
+      "date": "26 Oct",
+      "time": "18:22 HKT",
+      "publishedAt": "2026-10-26T18:22:43+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-fomc-sep",
+      "title": "Fed to hit pause on rate hikes, but maybe not for long",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQMFBxcEVKT0RxYVJKYWZGOUlGd0VJTE5vN2lNTnozcm92NTV5Vzg3aVdhT2p3eGpoVlZlZ19aaGtPa0s2VzBsS2xuamdkTnU4X2dhNGRzYjlaVTFpVzdLSkg4TDRlQThPdnZOandxOE1wV0o0WDFCcDgtbEZIQmR0a3BFOWdIM1dPZGdmQQ?oc=5"
+    },
     {
       "date": "26 Oct",
       "time": "13:34 HKT",
@@ -28,16 +40,16 @@
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNakZWTzB3NVNya0JlTHJlZlgwQjREeHRhWjFja0xROGtfdmxSZ2M1aE9fMkpUN0hJOFd2QktlYUw2LXpYQzZDZzNXLTI4ckJrbnhCNlZEY2pwZUl2d3U2LUxfUkxEMGh1bEotTlJNdWxQb3NjVFg4al8teTBaSUFid1hNQWE?oc=5"
     },
     {
-      "date": "22 Oct",
-      "time": "12:00 HKT",
-      "publishedAt": "2026-10-22T12:00:46+08:00",
+      "date": "15 Oct",
+      "time": "15:00 HKT",
+      "publishedAt": "2026-10-15T15:00:00+08:00",
       "kind": "NEWS",
-      "source": "Financial Times",
+      "source": "Reuters",
       "eventId": "us-cpi-aug",
-      "title": "No wars and no inflation: Has Trump delivered on his big promises?",
+      "title": "Dollar recedes from 18-month high as bond rally tempers impact of hot inflation data",
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNX2txX2JhRDEtN1hwUTJ2X1JKUDlQNmhLRmdxNFAyN2dTTkNkUVVtN3Mxd1RFd3Nla3lqMUw2c0ZfdHZzQTF6aHFockJMMzRoRVVpUmp2OUNFWUlpRXVXYktDTWZHTUlKVjNnVm95SzJkTjhWbjk3OVU0bGk5d2oyLVhoODc?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPbDE0ZWJRMm1PNWhpVzUwaDhHb2o1YkVXVExaeFVQWWFwcnJtemVfakY3WHV0aFFQWHR3dkR4eVN1OTZ3dXVqb0QzQ0ZuNkNhek1IbFRhVEtBXzNKcVpSQ1dHQm16ZGMxZHF1Z0txU2xHVUVsb0txUzhxLVljb0NXWWZzX2ZETk9QbHF1dm5XdmMybWFYRzl4d1VuS3J0NlU4enJvQVFuYTYydDNYUVVHM3pjandDUHdHbHhLT2otUU1HQk1PTVpReHpmTQ?oc=5"
     },
     {
       "date": "15 Oct",
@@ -86,18 +98,6 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNZkM3NGdUajlORC1ZZjBNcFZtNjYwa2JRaFczS1V4OVRORGhzZG1NUGxaY3ppRjdfQlFvUmREakJQM1RGaDNZZmZFMnJrY2Rtemc2Z1dBY1pPRy1ZbnBJVzNfTG1MMGJ5TXY5VzFpaDd6UENqd1pUOVdlTm1sS241QkFzNm1kdDJXTjl5emhLV200WUI1QVh4RQ?oc=5"
-    },
-    {
-      "date": "14 Oct",
-      "time": "15:00 HKT",
-      "publishedAt": "2026-10-14T15:00:00+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-cpi-aug",
-      "title": "Fed's Goolsbee says September CPI data was discouraging - Yahoo Finance",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNNXZVX0VsdE85NGlqRkdpZXRvdk1fdmM4R04xWW5mRW91aGhGMXpBSjBPa01sc2laemlFTklJeTNkS3gxdk5LNlptQll5YUh3VGVhNzlnSUtPdTlDRmNyekZEZ3NFbGQ4SFVWRlpmeE1ONm9HbDRhLUkwWlRPUVlLcHdxSDBpTy1xWnVFenlGcFd4OFFEd3cyMmU5UlZhUGxNYVAxM3dkODhNUFEyR28zRURCTWhNZw?oc=5"
     },
     {
       "date": "14 Oct",
