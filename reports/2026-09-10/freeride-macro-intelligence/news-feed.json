@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T16:50:09+00:00",
+  "generatedAt": "2026-11-01T21:14:17+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
@@ -41,18 +41,6 @@
     },
     {
       "date": "29 Oct",
-      "time": "14:31 HKT",
-      "publishedAt": "2026-10-29T14:31:25+08:00",
-      "kind": "NEWS",
-      "source": "Financial Times",
-      "eventId": "us-fomc-sep",
-      "title": "The Fed plays for time (but doesn’t have much)",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOZWRjWUFwZERNX1ZNbVFIZ2tNTEpvdFJwcU1FcXZiNnFnZWV0QTU3NVMzaURFMVJIc2V1U2FUS09MSFpDQi1tcVAxTEt2UzZhNW42S2owZmc2LVZNcnYtX1pDSlJXSUg4NC1uS0NOTDBQLXl6TC00S3BVbG5FbS1QZVRXYVA?oc=5"
-    },
-    {
-      "date": "29 Oct",
       "time": "05:32 HKT",
       "publishedAt": "2026-10-29T05:32:08+08:00",
       "kind": "NEWS",
@@ -62,18 +50,6 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOb01WZnNoVWtvSG5SMU1hTzNBQkF4V2JVTWY1ZVV2bFdiYjlMM3FXakV1UXJyU2l3a290U2VZU1hQMHZ4dHZrSlV4Z0x4c01Gc0pBZ3BHMzl2MUJGd0ZEdTNPUWJqUi13T2V5YVJURWNFa19GTS05dkJFVUJIUUZJTElreWQ?oc=5"
-    },
-    {
-      "date": "26 Oct",
-      "time": "13:34 HKT",
-      "publishedAt": "2026-10-26T13:34:07+08:00",
-      "kind": "NEWS",
-      "source": "Financial Times",
-      "eventId": "us-fomc-sep",
-      "title": "Fed to stick with quarterly rate rises as it removes 2025 insurance cuts",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE81WTdiVU84WjlfdnZiVnRBbEJMSkpWWVZjMC1WQTY5Vk1xanBfcUtjRUV2cGFPY2ZxdmVEQ0poRGxobzg2bWduYjBNWVcxWmxfXzhpOUNqQnFydVRhZ243T2xFZlB0Qm1HYjl0Z0VBeGY?oc=5"
     },
     {
       "date": "21 Oct",
@@ -218,6 +194,30 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPSzlnUlRIcHpyNkR3U0tfY0RXVEl0WGRuMTZuSTVvbnNhWXNTVjN3Yzhudmhqbjh1RU9mTzF2WHhkTGdhQU15UkZRTG5wSVFSNzZSN0dIQk5HaE55TTk5VGxtYmcxczM1aWk2S19NMVlpbzFQRHpvTm1SRk83N1l4Mng3Q2N0OGxvYWRpLXJNazR4V2xOcE9KdVRDU0pRSVBMY2pQWjdRMnRNWWZXV3ItaDhn?oc=5"
+    },
+    {
+      "date": "13 Oct",
+      "time": "15:00 HKT",
+      "publishedAt": "2026-10-13T15:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-cpi-aug",
+      "title": "Gold subdued ahead of US inflation data, Warsh remarks",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNRnRSZTl3U0dwUkZRSkNlalhmeF94cE1aaGV4NjNZdll2aENMRDZTWGNTTnhjMS1BQ1hKUG9qc2hKS185eXpWTjFfUnBwN1cwdVNIUllaMnc0Tno2SnFBaXp4RGxMWkd1eFhXR1VTLV9qN25ETlIyeEVLNXNGX2NqZV80SUk5WG5IeEVDNGpRbTRfaVliMk9HVk5vQ0lyVnc?oc=5"
+    },
+    {
+      "date": "12 Oct",
+      "time": "15:00 HKT",
+      "publishedAt": "2026-10-12T15:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-cpi-aug",
+      "title": "Gold eases on strong dollar, oil prices; US inflation data eyed",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOSTdfbFRJUWVBUW5ndjBGSlJ6aGRQYi1saWxfVU5haEdOVXJaNzFuRnlyZ1F6eGVPb2tGYVczeXlRWEI5WmVHeVFGMTVqd2I5dEZCVDNrNDBkS2N1Q2NWWlRQMzhSa3BPMlZnVElqaFhaQkRLWnJrMG1NUnlvYVE5OWZGTXZucUJoaTUzTmxJeS1mUHpRSVVNT2xlRUI5dmtoQmc?oc=5"
     }
   ]
 }
