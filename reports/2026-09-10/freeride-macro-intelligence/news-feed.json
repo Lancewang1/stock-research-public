@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T21:14:17+00:00",
+  "generatedAt": "2026-11-02T00:52:23+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
@@ -14,6 +14,18 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQYW1ub1o1bGIyaUNRcHY2OXhjd2Y5NVdMelBQZTNkcjI2dng4dWdYT3Vsak11Qm82OFc2Q3EwdWFHZ25oZWkyOHhLWW83ZC1XOURrd3dEZ2o2a0RndDRWVHM1TVZtLUVmZkplX3VrWFVKSDVjNDhyeU9BOTBxRzVBRUJZTnQ?oc=5"
+    },
+    {
+      "date": "30 Oct",
+      "time": "18:12 HKT",
+      "publishedAt": "2026-10-30T18:12:09+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-fomc-sep",
+      "title": "New economic data challenges Fed chief's not-too-hot perspective",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNNV9seWt5MjlGeDJNRkdKLWxjUHQyb2R4QmUtM0ZvOU5hUExsYmpuVkhyZ2RnSGtPajEzZEFFRUluX0xHdTlaQ1NKc0JKcXhQTXB6NGJ4VXJ5NVhNWkZzTTU2WFplQl9zWUFtT3hmWG9FQXhyYVBWN1V4MEhoaGVEd2pfQWRDakQxcExBc3VjQmNNSzhEUDZjMEMwQnpVV1NTMEhZb0Q2LWF1SUZi?oc=5"
     },
     {
       "date": "29 Oct",
@@ -206,18 +218,6 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNRnRSZTl3U0dwUkZRSkNlalhmeF94cE1aaGV4NjNZdll2aENMRDZTWGNTTnhjMS1BQ1hKUG9qc2hKS185eXpWTjFfUnBwN1cwdVNIUllaMnc0Tno2SnFBaXp4RGxMWkd1eFhXR1VTLV9qN25ETlIyeEVLNXNGX2NqZV80SUk5WG5IeEVDNGpRbTRfaVliMk9HVk5vQ0lyVnc?oc=5"
-    },
-    {
-      "date": "12 Oct",
-      "time": "15:00 HKT",
-      "publishedAt": "2026-10-12T15:00:00+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-cpi-aug",
-      "title": "Gold eases on strong dollar, oil prices; US inflation data eyed",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOSTdfbFRJUWVBUW5ndjBGSlJ6aGRQYi1saWxfVU5haEdOVXJaNzFuRnlyZ1F6eGVPb2tGYVczeXlRWEI5WmVHeVFGMTVqd2I5dEZCVDNrNDBkS2N1Q2NWWlRQMzhSa3BPMlZnVElqaFhaQkRLWnJrMG1NUnlvYVE5OWZGTXZucUJoaTUzTmxJeS1mUHpRSVVNT2xlRUI5dmtoQmc?oc=5"
     }
   ]
 }
