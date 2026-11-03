@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T17:28:06+00:00",
+  "generatedAt": "2026-11-03T00:03:18+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
@@ -62,18 +62,6 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOb01WZnNoVWtvSG5SMU1hTzNBQkF4V2JVTWY1ZVV2bFdiYjlMM3FXakV1UXJyU2l3a290U2VZU1hQMHZ4dHZrSlV4Z0x4c01Gc0pBZ3BHMzl2MUJGd0ZEdTNPUWJqUi13T2V5YVJURWNFa19GTS05dkJFVUJIUUZJTElreWQ?oc=5"
-    },
-    {
-      "date": "29 Oct",
-      "time": "02:20 HKT",
-      "publishedAt": "2026-10-29T02:20:15+08:00",
-      "kind": "NEWS",
-      "source": "Financial Times",
-      "eventId": "us-fomc-sep",
-      "title": "Fed holds interest rates as expected and upgrades view on economy",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1BVTloVEJXOGt6WDQ0dFVMV3JFS2VvNm5oMW1VM1lmeUw3NlRiWWYtSkt0Y0pJYmpfUTRiWFNtS0xDVW9HbGNCRnpaMDlSOXlLNnExSU5lN2lHeWZuNDZaUG1ueVIzdG1rRTBxMXk2Tm8?oc=5"
     },
     {
       "date": "21 Oct",
@@ -142,18 +130,6 @@
       "kind": "NEWS",
       "source": "Reuters",
       "eventId": "us-cpi-aug",
-      "title": "Fed rate hike call seen tight as inflation heats up",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPMjl1ZWZGd2lIRXg1US1hUjNacTVDN2o5S2lIcXpCdnZ1VHBXcEpqOHV5SzJJZHJrT3RxYjdrRjRrRU03eHNGTTFRMnVCVEdZa0VfLU9BeFdSeTE1aFRrc3ZRampyOFVTczZRbWk0azFBakVndUJ1X0NjVmJmV1JmeXNXSlFkNzF0NUZKTUUyUnlHWi1sOXFpVHV5NnVvcDA?oc=5"
-    },
-    {
-      "date": "14 Oct",
-      "time": "15:00 HKT",
-      "publishedAt": "2026-10-14T15:00:00+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-cpi-aug",
       "title": "Gold drops over 1% as hot US inflation data boosts Fed hike bets",
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
@@ -166,10 +142,10 @@
       "kind": "NEWS",
       "source": "Reuters",
       "eventId": "us-cpi-aug",
-      "title": "Fed's Goolsbee says September CPI data was discouraging - Yahoo Finance",
+      "title": "Fed rate hike call seen tight as inflation heats up",
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNNXZVX0VsdE85NGlqRkdpZXRvdk1fdmM4R04xWW5mRW91aGhGMXpBSjBPa01sc2laemlFTklJeTNkS3gxdk5LNlptQll5YUh3VGVhNzlnSUtPdTlDRmNyekZEZ3NFbGQ4SFVWRlpmeE1ONm9HbDRhLUkwWlRPUVlLcHdxSDBpTy1xWnVFenlGcFd4OFFEd3cyMmU5UlZhUGxNYVAxM3dkODhNUFEyR28zRURCTWhNZw?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPMjl1ZWZGd2lIRXg1US1hUjNacTVDN2o5S2lIcXpCdnZ1VHBXcEpqOHV5SzJJZHJrT3RxYjdrRjRrRU03eHNGTTFRMnVCVEdZa0VfLU9BeFdSeTE1aFRrc3ZRampyOFVTczZRbWk0azFBakVndUJ1X0NjVmJmV1JmeXNXSlFkNzF0NUZKTUUyUnlHWi1sOXFpVHV5NnVvcDA?oc=5"
     },
     {
       "date": "14 Oct",
@@ -218,6 +194,30 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNRnRSZTl3U0dwUkZRSkNlalhmeF94cE1aaGV4NjNZdll2aENMRDZTWGNTTnhjMS1BQ1hKUG9qc2hKS185eXpWTjFfUnBwN1cwdVNIUllaMnc0Tno2SnFBaXp4RGxMWkd1eFhXR1VTLV9qN25ETlIyeEVLNXNGX2NqZV80SUk5WG5IeEVDNGpRbTRfaVliMk9HVk5vQ0lyVnc?oc=5"
+    },
+    {
+      "date": "11 Oct",
+      "time": "15:00 HKT",
+      "publishedAt": "2026-10-11T15:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Financial Times",
+      "eventId": "us-cpi-aug",
+      "title": "Will September inflation cement US interest rate policy for the rest of the year?",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPdVpFbWJydEFBMkkyYXU1NFhqVUd0WFppVklNYldyQzR5M2wwZ3hyT2oxSXZ5dkN2VklKd0lVZUhjRFNxS0RQSWtBMW1kX3ZfR09oZ0RIUV8xR2g3T0VPYmNDMzZYU016QnBKUHREUHZWRmJCeEcwYnVYLTlxb1ZDUXhSQ0I?oc=5"
+    },
+    {
+      "date": "11 Oct",
+      "time": "15:00 HKT",
+      "publishedAt": "2026-10-11T15:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Bloomberg",
+      "eventId": "us-cpi-aug",
+      "title": "US Bond Traders Await CPI, Warsh For Insight on Fed’s Rate Path",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPM3lYa092MnRSV0FXYUtRRjVRSHN2akl0ZzM3UWlJcjh6bXNpbVE4dHJQUDM0bS1iWklWekQ0aENwMDRCdWhZbUZMTHFOMmVrZzZzYmFIMG5BamMzSTFfTE0wVjZsWjFBZ2ZQTmFWM0h4NUZkZlVseDlCM05QSFNyczJfdk5BV1IzVmd1NXlnaTdVVnNyOXV0TmxjSW9IRFZWWkEtZlZ1c25jcXU4WXQ1QmRNbw?oc=5"
     }
   ]
 }
