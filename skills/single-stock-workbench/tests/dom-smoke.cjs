@@ -87,5 +87,21 @@ try {
   for(const b of caseButtons){document.querySelector(`[data-wb-case="${b.dataset.wbCase}"]`).click();checkErrors();}
   const source=document.querySelector('[data-wb-source]');assert.ok(source);source.click();checkErrors();assert.equal(document.querySelector('#drawer').hidden,false);
   assert.ok(!/\?{5,}/.test(document.body.textContent),'Corrupted Chinese text');
+  assert.ok(document.querySelector('#reviewLab'),'Review lab absent');
+  const set=(selector,value)=>{const el=document.querySelector(selector);assert.ok(el,selector);el.value=value;el.dispatchEvent(new Event('change',{bubbles:true}));};
+  set('#rlRise','20');set('#rlFall','10');set('#rlWindow','252');click('#rlPivApply');checkErrors();
+  assert.equal(dom.window.eval('S.pivTh'),10);assert.match(document.querySelector('#rlPivots').textContent,/确认/);
+  set('#rlStart','2026-10-13');set('#rlEnd','2026-11-04');click('#rlRun');
+  assert.ok(dom.window.ReviewLab.getResult().valuation.available,'Dated MS bridge unavailable');
+  assert.ok(document.querySelectorAll('#rlTimeline article').length>0,'Dated evidence missing');
+  set('#rlStart','2020-01-02');set('#rlEnd','2020-02-03');click('#rlRun');
+  assert.equal(dom.window.ReviewLab.getResult().valuation.available,false,'Current EPS leaked into historical interval');
+  set('#rlStart','2026-11-04');set('#rlEnd','2026-10-13');click('#rlRun');assert.ok(document.querySelector('#rlError').textContent);
+  click('#rlReset');assert.equal(document.querySelector('#rlError').textContent,'');
+  set('#flWindow','120');click('#flRun');checkErrors();assert.match(document.querySelector('#flResults').textContent,/120/);assert.match(document.querySelector('#rlTechnical').textContent,/RSI14/);
+  const googleBefore=document.querySelector('#wbReconcile').textContent,amazonBefore=document.querySelector('#amznOutput').textContent;
+  set('[data-amzn-period="2027Q1"][data-amzn-key="awsRevenueChange"]','10');checkErrors();
+  assert.notEqual(document.querySelector('#amznOutput').textContent,amazonBefore);assert.equal(document.querySelector('#wbReconcile').textContent,googleBefore,'Amazon altered Google model');
+  click('#amznReset');assert.equal(document.querySelector('#amznOutput').textContent,amazonBefore);
   console.log(JSON.stringify({result:'pass',scope:'non-visual DOM integration; canvas mocked',modules:4,drawdownCases:caseButtons.length,scenarioEditReset:true,annual2028Editable:true,sourceDrawer:true,quarterEvidence:true,contractPreviewApplyReset:true,macroAndBrokerTables:true}));
 } finally {dom.window.close();}

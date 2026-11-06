@@ -9,6 +9,9 @@ import requests
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--source-dir', type=Path, required=True)
+    parser.add_argument('--start', default='2026-09-01')
+    parser.add_argument('--end', default='2026-11-04')
+    parser.add_argument('--output', type=Path)
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
     config = next(args.source_dir.glob('API *.txt')).read_text(encoding='utf-8-sig')
@@ -26,7 +29,7 @@ def main():
     for series_id, name, unit in [('DGS10', '美国10年期国债收益率', '%'), ('VIXCLS', 'VIX', 'index'), ('DTWEXBGS', '美联储广义贸易加权美元指数', 'index')]:
         entry = {'id': series_id, 'name': name, 'unit': unit, 'url': f'https://fred.stlouisfed.org/series/{series_id}'}
         try:
-            response = requests.get('https://api.stlouisfed.org/fred/series/observations', params={'series_id': series_id, 'api_key': api_key, 'file_type': 'json', 'observation_start': '2026-09-01', 'observation_end': '2026-11-04'}, timeout=35)
+            response = requests.get('https://api.stlouisfed.org/fred/series/observations', params={'series_id': series_id, 'api_key': api_key, 'file_type': 'json', 'observation_start': args.start, 'observation_end': args.end}, timeout=35)
             status = {'id': series_id, 'httpStatus': response.status_code}
             if response.ok:
                 data = response.json()
@@ -37,7 +40,7 @@ def main():
             result['log'].append(status)
         except (requests.RequestException, ValueError) as exc:
             result['log'].append({'id': series_id, 'errorType': type(exc).__name__})
-    (root / 'assets/macro-evidence.json').write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding='utf-8')
+    (args.output or root / 'assets/macro-evidence.json').write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding='utf-8')
     print(json.dumps(result['log']))
 
 

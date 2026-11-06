@@ -49,12 +49,22 @@ def main():
                     cloudDepShare=.4,workspaceDepShare=.05,traditionalDepShare=.25,
                     depreciationCogsShare=val(barc,'IS',bc+'272'),sbcMultiplier=1,
                     sbcTaxBenefitRate=val(ms,'Model',col+'80')/sbc,cloudSbcShare=cloud/q['revenue'],cloudUnallocatedCost=0)
+        ytref=ms['sheets']['Expense Drivers'][col+'69']['formula'].split('!')[1]
+        ytcol=ytref.rstrip('0123456789')
+        ytsubs=val(ms,'YouTube',ytcol+'33')
+        nflCell=ms['sheets']['YouTube'].get(ytcol+'47',{}).get('value')
+        nfl=nflCell if isinstance(nflCell,(int,float)) else max(0,val(ms,'YouTube',ytcol+'39')-.55*(q['segments']['youtube']+ytsubs))
+        contentRate=(val(ms,'YouTube',ytcol+'39')-nfl)/(q['segments']['youtube']+ytsubs)
+        params.update(searchTacRate=val(ms,'Expense Drivers',col+'25')/q['segments']['search'],
+                      networkTacRate=val(ms,'Expense Drivers',col+'45')/q['segments']['network'],
+                      youtubeContentRate=contentRate,youtubeSubsShare=ytsubs/q['segments']['subs'],nflContentCost=nfl)
         # Explicit baseline calibration, never re-fit after edits.
         direct=workspace*.15+gcp*.4*.25+gcp*.6*(.25*.75+.75*.25)+tpu*.70
         op=workspace*.30+gcp*.4*.20+gcp*.6*.12+tpu*.05
         target=out['historyAmendments'][q['period']]['cloudOperatingIncome']
         params['cloudUnallocatedCost']=cloud-direct-op-(dep+amort)*.4-sbc*params['cloudSbcShare']-target
         out['quarters'][q['period']]={'parameters':params,'cloudRevenue':cloud,'nonCloudRevenue':q['revenue']-cloud,
+            'segments':q['segments'],'hedge':q['hedge'],'nonCloudCostSource':f'MS 2026-10-29 Expense Drivers!{col}25,{col}45; YouTube!{ytcol}33,{ytcol}39,{ytcol}43,{ytcol}47; distribution TAC assigned to search per source denominator'+('；NFL单元格缺失：当前0仅为原模型总内容成本减55%分成后的隐含余额，非已核实无成本。' if nflCell is None else ''),
             'depreciation':dep,'amortization':amort,'sbc':sbc,'serverAssets':dep*serverWeight*life*4,
             'otherAssets':dep*(1-serverWeight)*otherLife*4,'sbcAllocation':alloc,'opexAllocation':opexAlloc,
             'cloudOperatingIncome':target,'groupCosts':{**{f:q[f] for f in ['cogs','rd','sm','ga']},'otherOpex':q['opex']-total},

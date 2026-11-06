@@ -50,3 +50,9 @@ API凭据、个人机器路径、原始API响应、受限研报及卖方工作�
 
 新增验证：`node tests/test_profit_model.mjs`。
 
+# 复盘与迁移更新
+
+新增：非Cloud可识别成本与集团利润变化桥；可调涨跌阈值/观察窗口/区间；同版本口径的EPS与PE拆分；按可获得日期分组的证据；FRED历史相关性与技术指标；研报驱动识别实验；Amazon分部模型迁移测试。方法、数据时效及边界见[review-lab-method.md](references/review-lab-method.md)。视觉验收已按用户要求取消，保留非视觉功能检查。
+
+验证入口增加 `node tests/test_review_analysis.mjs`。离线重建仍使用固定案例，无需原工作簿或API。
+

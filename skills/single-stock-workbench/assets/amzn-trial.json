@@ -1,0 +1,261 @@
+{
+  "ticker": "AMZN",
+  "schemaVersion": 1,
+  "asOf": "2026-07-30",
+  "units": "USD million except EPS",
+  "broker": "Barclays",
+  "sourceSHA256": "78ac3e40da06bd23c6ad5128508e3dab7e7c304ad8a11119a7f366af7080f33a",
+  "segments": [
+    {
+      "key": "northAmerica",
+      "label": "北美零售及服务"
+    },
+    {
+      "key": "international",
+      "label": "国际零售及服务"
+    },
+    {
+      "key": "aws",
+      "label": "AWS"
+    }
+  ],
+  "quarters": [
+    {
+      "period": "2027Q1",
+      "kind": "estimate",
+      "days": 90,
+      "segments": {
+        "northAmerica": {
+          "revenue": 114221.9547473281,
+          "operatingIncome": 9523.967698541095,
+          "sourceCells": [
+            "New Driver!EV528",
+            "New Driver!EV555"
+          ]
+        },
+        "international": {
+          "revenue": 43639.777588906,
+          "operatingIncome": 1638.5167784460027,
+          "sourceCells": [
+            "New Driver!EV581",
+            "New Driver!EV608"
+          ]
+        },
+        "aws": {
+          "revenue": 55997.62042860364,
+          "operatingIncome": 21041.251505318494,
+          "sourceCells": [
+            "New Driver!EV628",
+            "New Driver!EV659"
+          ]
+        }
+      },
+      "revenue": 213859.35276483773,
+      "operatingIncome": 32203.73598230559,
+      "unallocatedOperatingIncome": -3.637978807091713e-12,
+      "otherIncome": -269.0074822932206,
+      "taxRate": 0.21,
+      "equityMethodLoss": 0,
+      "accountingChange": 0,
+      "netIncome": 25228.43551500977,
+      "dilutedShares": 11067.364087874997,
+      "basicShares": 10931.344021124998,
+      "eps": 2.279534251760013,
+      "awsAIRevenue": 15693.220428603636,
+      "sourceCells": [
+        "IS!EV5",
+        "IS!EV10",
+        "IS!EV28",
+        "IS!EV36",
+        "IS!EV38",
+        "IS!EV41",
+        "IS!EV43",
+        "IS!EV44",
+        "IS!EV66",
+        "IS!EV69",
+        "IS!EV71",
+        "New Driver!EV686"
+      ]
+    },
+    {
+      "period": "2027Q2",
+      "kind": "estimate",
+      "days": 91,
+      "segments": {
+        "northAmerica": {
+          "revenue": 122210.8619455711,
+          "operatingIncome": 10085.66290025089,
+          "sourceCells": [
+            "New Driver!EW528",
+            "New Driver!EW555"
+          ]
+        },
+        "international": {
+          "revenue": 44388.57727017625,
+          "operatingIncome": 1149.757281352313,
+          "sourceCells": [
+            "New Driver!EW581",
+            "New Driver!EW608"
+          ]
+        },
+        "aws": {
+          "revenue": 61267.93562016064,
+          "operatingIncome": 23193.842254357613,
+          "sourceCells": [
+            "New Driver!EW628",
+            "New Driver!EW659"
+          ]
+        }
+      },
+      "revenue": 227867.374835908,
+      "operatingIncome": 34429.262435960816,
+      "unallocatedOperatingIncome": 0.0,
+      "otherIncome": -403.24530375247116,
+      "taxRate": 0.21,
+      "equityMethodLoss": 0,
+      "accountingChange": 0,
+      "netIncome": 26880.553534444596,
+      "dilutedShares": 11122.700908314371,
+      "basicShares": 10986.000741230622,
+      "eps": 2.416728972218521,
+      "awsAIRevenue": 18389.53562016064,
+      "sourceCells": [
+        "IS!EW5",
+        "IS!EW10",
+        "IS!EW28",
+        "IS!EW36",
+        "IS!EW38",
+        "IS!EW41",
+        "IS!EW43",
+        "IS!EW44",
+        "IS!EW66",
+        "IS!EW69",
+        "IS!EW71",
+        "New Driver!EW686"
+      ]
+    },
+    {
+      "period": "2027Q3",
+      "kind": "estimate",
+      "days": 92,
+      "segments": {
+        "northAmerica": {
+          "revenue": 125041.7125978666,
+          "operatingIncome": 9327.033690248853,
+          "sourceCells": [
+            "New Driver!EX528",
+            "New Driver!EX555"
+          ]
+        },
+        "international": {
+          "revenue": 53053.98497405485,
+          "operatingIncome": 1985.7393448715702,
+          "sourceCells": [
+            "New Driver!EX581",
+            "New Driver!EX608"
+          ]
+        },
+        "aws": {
+          "revenue": 67069.11654546253,
+          "operatingIncome": 25413.954570488808,
+          "sourceCells": [
+            "New Driver!EX628",
+            "New Driver!EX659"
+          ]
+        }
+      },
+      "revenue": 245164.814117384,
+      "operatingIncome": 36726.72760560922,
+      "unallocatedOperatingIncome": -7.275957614183426e-12,
+      "otherIncome": -570.487574656918,
+      "taxRate": 0.21,
+      "equityMethodLoss": 0,
+      "accountingChange": 0,
+      "netIncome": 28563.42962445232,
+      "dilutedShares": 11178.314412855942,
+      "basicShares": 11040.930744936773,
+      "eps": 2.5552537323160394,
+      "awsAIRevenue": 22866.35872292205,
+      "sourceCells": [
+        "IS!EX5",
+        "IS!EX10",
+        "IS!EX28",
+        "IS!EX36",
+        "IS!EX38",
+        "IS!EX41",
+        "IS!EX43",
+        "IS!EX44",
+        "IS!EX66",
+        "IS!EX69",
+        "IS!EX71",
+        "New Driver!EX686"
+      ]
+    },
+    {
+      "period": "2027Q4",
+      "kind": "estimate",
+      "days": 92,
+      "segments": {
+        "northAmerica": {
+          "revenue": 155962.72030753086,
+          "operatingIncome": 14390.947240289244,
+          "sourceCells": [
+            "New Driver!EY528",
+            "New Driver!EY555"
+          ]
+        },
+        "international": {
+          "revenue": 62251.07232973093,
+          "operatingIncome": 2063.2734385853855,
+          "sourceCells": [
+            "New Driver!EY581",
+            "New Driver!EY608"
+          ]
+        },
+        "aws": {
+          "revenue": 73353.07824191131,
+          "operatingIncome": 27899.63167622736,
+          "sourceCells": [
+            "New Driver!EY628",
+            "New Driver!EY659"
+          ]
+        }
+      },
+      "revenue": 291566.8708791731,
+      "operatingIncome": 44353.85235510199,
+      "unallocatedOperatingIncome": 0.0,
+      "otherIncome": -675.7907549663182,
+      "taxRate": 0.21,
+      "equityMethodLoss": 0,
+      "accountingChange": 0,
+      "netIncome": 34505.66866410718,
+      "dilutedShares": 11234.20598492022,
+      "basicShares": 11096.135398661456,
+      "eps": 3.0714826406445157,
+      "awsAIRevenue": 27897.454824041743,
+      "sourceCells": [
+        "IS!EY5",
+        "IS!EY10",
+        "IS!EY28",
+        "IS!EY36",
+        "IS!EY38",
+        "IS!EY41",
+        "IS!EY43",
+        "IS!EY44",
+        "IS!EY66",
+        "IS!EY69",
+        "IS!EY71",
+        "New Driver!EY686"
+      ]
+    }
+  ],
+  "scope": "迁移测试，旧版卖方预测，非当前投资判断；原件只读、无宏、无全表重算。",
+  "differences": [
+    "Amazon按北美/国际/AWS分部；广告、订阅已包含在零售服务中，不能再与分部相加。",
+    "AWS AI收入是原卖方拆分，不复用Google客户份额或外售TPU。",
+    "使用分部营业利润率（非毛利率）；本测试未迁移Google分类折旧和SBC模型。",
+    "不同信息日期的AMZN与GOOGL预测不能作为同日横向估值比较。",
+    "原表数值日期有异常日号；季度采用IS第5行明确的1Q27E等标签。"
+  ],
+  "caseId": "4224cdd74b6dd0bdc948b7a88cac240e2d6e35734eeef7e7e77160eef0326ba4"
+}

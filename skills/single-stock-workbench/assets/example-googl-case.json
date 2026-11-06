@@ -12,7 +12,7 @@
     "mode": "static",
     "lastActualPeriod": "2026Q3",
     "sourceNote": "MS季度模型与SEC公开事实按字段核对。季度公告EPS优先使用公司披露；原MS EPS保留对照。预测为可编辑假设。",
-    "caseId": "ddb201d2b365a452dba45f52ecf1a5184673e338fcff13c1a247b4311aacebea"
+    "caseId": "efa85a850ec6948eb2a8f306df83c84cc072ae6194910f0cce1fd18d760aa450"
   },
   "segments": [
     {
@@ -14357,10 +14357,25 @@
           "sbcMultiplier": 1,
           "sbcTaxBenefitRate": 0.2640818175173076,
           "cloudSbcShare": 0.2518721597646282,
-          "cloudUnallocatedCost": -2921.7752793507734
+          "cloudUnallocatedCost": -2921.7752793507734,
+          "searchTacRate": 0.18089416018439106,
+          "networkTacRate": 0.6838026472035023,
+          "youtubeContentRate": 0.5500000000000002,
+          "youtubeSubsShare": 0.525978497337746,
+          "nflContentCost": 1495.3660800000002
         },
         "cloudRevenue": 36246.528,
         "nonCloudRevenue": 107661.90568267455,
+        "segments": {
+          "search": 69271.70556941649,
+          "youtube": 12948.348221893568,
+          "network": 7670.6146529029575,
+          "cloud": 36246.528,
+          "subs": 17252.472,
+          "bets": 418.76523846153844
+        },
+        "hedge": 100.0,
+        "nonCloudCostSource": "MS 2026-10-29 Expense Drivers!DH25,DH45; YouTube!BQ33,BQ39,BQ43,BQ47; distribution TAC assigned to search per source denominator",
         "depreciation": 11167.319154017858,
         "amortization": 617.0481418918919,
         "sbc": 7914.9638525471,
@@ -14417,10 +14432,25 @@
           "sbcMultiplier": 1,
           "sbcTaxBenefitRate": 0.25885299753046487,
           "cloudSbcShare": 0.3066071644292856,
-          "cloudUnallocatedCost": -3000.5528047356365
+          "cloudUnallocatedCost": -3000.5528047356365,
+          "searchTacRate": 0.18492230324703215,
+          "networkTacRate": 0.6045900786354776,
+          "youtubeContentRate": 0.55,
+          "youtubeSubsShare": 0.6386255463586628,
+          "nflContentCost": 0
         },
         "cloudRevenue": 43600.956,
         "nonCloudRevenue": 98603.66626040355,
+        "segments": {
+          "search": 65058.92903274276,
+          "youtube": 11052.379997329816,
+          "network": 6844.499302125852,
+          "cloud": 43600.956,
+          "subs": 15098.044000000002,
+          "bets": 449.81392820512815
+        },
+        "hedge": 100.0,
+        "nonCloudCostSource": "MS 2026-10-29 Expense Drivers!DI25,DI45; YouTube!BR33,BR39,BR43,BR47; distribution TAC assigned to search per source denominator；NFL单元格缺失：当前0仅为原模型总内容成本减55%分成后的隐含余额，非已核实无成本。",
         "depreciation": 13582.282190360576,
         "amortization": 618.1038851351351,
         "sbc": 7536.844979801388,
@@ -14477,10 +14507,25 @@
           "sbcMultiplier": 1,
           "sbcTaxBenefitRate": 0.25372770817936163,
           "cloudSbcShare": 0.3423454901383984,
-          "cloudUnallocatedCost": -6341.431113752698
+          "cloudUnallocatedCost": -6341.431113752698,
+          "searchTacRate": 0.18292843290920563,
+          "networkTacRate": 0.6486856072547409,
+          "youtubeContentRate": 0.55,
+          "youtubeSubsShare": 0.7226706447468059,
+          "nflContentCost": 0
         },
         "cloudRevenue": 53077.82399999999,
         "nonCloudRevenue": 101963.86788424966,
+        "segments": {
+          "search": 68228.03216006733,
+          "youtube": 12044.740210703245,
+          "network": 7171.105585273957,
+          "cloud": 53077.82399999999,
+          "subs": 13921.176000000007,
+          "bets": 498.81392820512815
+        },
+        "hedge": 100.0,
+        "nonCloudCostSource": "MS 2026-10-29 Expense Drivers!DJ25,DJ45; YouTube!BS33,BS39,BS43,BS47; distribution TAC assigned to search per source denominator；NFL单元格缺失：当前0仅为原模型总内容成本减55%分成后的隐含余额，非已核实无成本。",
         "depreciation": 16021.31774319525,
         "amortization": 619.1596283783783,
         "sbc": 8527.293053633732,
@@ -14537,10 +14582,25 @@
           "sbcMultiplier": 1,
           "sbcTaxBenefitRate": 0.24870389955741024,
           "cloudSbcShare": 0.3997711017671497,
-          "cloudUnallocatedCost": -7546.640157949227
+          "cloudUnallocatedCost": -7546.640157949227,
+          "searchTacRate": 0.1798047790456782,
+          "networkTacRate": 0.6944842688880704,
+          "youtubeContentRate": 0.55,
+          "youtubeSubsShare": 0.7221969859502353,
+          "nflContentCost": 518.3935744
         },
         "cloudRevenue": 70354.319,
         "nonCloudRevenue": 105632.186,
+        "segments": {
+          "search": 70525.6393674526,
+          "youtube": 12496.24857022253,
+          "network": 7321.803134119753,
+          "cloud": 70354.319,
+          "subs": 14644.680999999997,
+          "bets": 543.8139282051281
+        },
+        "hedge": 100.0,
+        "nonCloudCostSource": "MS 2026-10-29 Expense Drivers!DK25,DK45; YouTube!BT33,BT39,BT43,BT47; distribution TAC assigned to search per source denominator",
         "depreciation": 19790.73865843837,
         "amortization": 620.2153716216216,
         "sbc": 10559.1903,
@@ -14597,10 +14657,25 @@
           "sbcMultiplier": 1,
           "sbcTaxBenefitRate": 0.24377956234617348,
           "cloudSbcShare": 0.3852628056922539,
-          "cloudUnallocatedCost": -10778.13415707269
+          "cloudUnallocatedCost": -10778.13415707269,
+          "searchTacRate": 0.18374538941881924,
+          "networkTacRate": 0.6614615880287625,
+          "youtubeContentRate": 0.55,
+          "youtubeSubsShare": 0.5140448564574185,
+          "nflContentCost": 1555.1807232
         },
         "cloudRevenue": 75610.257408,
         "nonCloudRevenue": 120646.05462331796,
+        "segments": {
+          "search": 77176.61405477201,
+          "youtube": 13856.842101009652,
+          "network": 7534.041947331173,
+          "cloud": 75610.257408,
+          "subs": 21388.742591999995,
+          "bets": 589.8139282051281
+        },
+        "hedge": 100.0,
+        "nonCloudCostSource": "MS 2026-10-29 Expense Drivers!DL25,DL45; YouTube!BU33,BU39,BU43,BU47; distribution TAC assigned to search per source denominator",
         "depreciation": 24044.220662913565,
         "amortization": 621.2711148648648,
         "sbc": 9812.815601565899,

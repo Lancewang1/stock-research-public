@@ -1,5 +1,5 @@
 /** Quarterly scenario arithmetic. All amounts are USD mn; rates are decimals. */
-import {validateProfitChanges,profitRevenueInputs,calculateProfitQuarter} from './profit-model.mjs';
+import {validateProfitChanges,profitRevenueInputs,calculateProfitQuarter,profitAttribution} from './profit-model.mjs';
 export const SCENARIO_LIMITS = Object.freeze({
   segmentGrowthYoY: [-1, 10], grossMargin: [0, 1], opexRatio: [0, 2],
   rdRatio: [0, 2], smRatio: [0, 2], gaRatio: [0, 2],
@@ -125,7 +125,7 @@ export function calculateCase(caseData, overrides = {}) {
       }
       const profitBase=caseData.profitModel?.quarters?.[period];
       let profitDetail=null;
-      if(profitBase){const p=profitRevenueInputs(profitBase,changes.profit||{},segments.cloud);segments.cloud=['workspace','traditional','ai','tpu'].reduce((s,k)=>s+p[k+'Revenue'],0);profitDetail=calculateProfitQuarter(profitBase,p,sum(Object.values(segments))+original.hedge-segments.cloud);drivers.segmentGrowthYoY.cloud=priorSimulated?.segments.cloud>0?segments.cloud/priorSimulated.segments.cloud-1:null;}
+      if(profitBase){const p=profitRevenueInputs(profitBase,changes.profit||{},segments.cloud);segments.cloud=['workspace','traditional','ai','tpu'].reduce((s,k)=>s+p[k+'Revenue'],0);profitDetail=calculateProfitQuarter(profitBase,p,sum(Object.values(segments))+original.hedge-segments.cloud,segments);drivers.segmentGrowthYoY.cloud=priorSimulated?.segments.cloud>0?segments.cloud/priorSimulated.segments.cloud-1:null;}
       const revenue = sum(Object.values(segments)) + original.hedge;
       if (!(revenue > 0)) throw new RangeError(`${period} 情景总收入须大于零`);
       let cogs=profitDetail&&!own(changes,'grossMargin')?profitDetail.group.cogs:revenue*(1-drivers.grossMargin);
@@ -134,6 +134,7 @@ export function calculateCase(caseData, overrides = {}) {
       if(profitDetail){
         if(!own(changes,'opexRatio')){for(const f of ['rd','sm','ga'])if(!own(changes,f+'Ratio'))expense[f]=profitDetail.group[f];expense.otherOpex=profitDetail.group.otherOpex;expense.opex=expense.rd+expense.sm+expense.ga+expense.otherOpex;}
         profitDetail.manualCostAdjustment=cogs+expense.opex-profitDetail.group.cogs-profitDetail.group.opex;
+        profitDetail.attribution=profitAttribution(profitBase,profitDetail.parameters,segments,original.hedge,cogs-profitDetail.group.cogs,expense.opex-profitDetail.group.opex);
         profitDetail.manualOverrides=['grossMargin','opexRatio','rdRatio','smRatio','gaRatio'].filter(k=>own(changes,k));
         drivers.grossMargin=grossProfit/revenue;drivers.opexRatio=expense.opex/revenue;for(const f of ['rd','sm','ga'])drivers[f+'Ratio']=expense[f]/revenue;
       }

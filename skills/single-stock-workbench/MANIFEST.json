@@ -1,13 +1,18 @@
 {
-  "release": "2026-11-06-cloud-profit-model",
+  "release": "2026-11-06-model-review-migration",
   "offlineRebuild": "byte-identical",
-  "browserVisualAcceptance": false,
+  "browserVisualAcceptance": "waived_by_user",
   "rawReportsIncluded": false,
   "files": [
     {
       "path": "agents/openai.yaml",
       "sha256": "60b0fa5dcb5e6da1d99e024cce84fa9ea022791216642ce531419b75ba3d3263",
       "bytes": 382
+    },
+    {
+      "path": "assets/amzn-trial.json",
+      "sha256": "2310b63baac0e26d5e3cead79e719f24c67e3cad7639e4f677a13dc5505fa317",
+      "bytes": 7174
     },
     {
       "path": "assets/cloud-inputs.json",
@@ -25,14 +30,19 @@
       "bytes": 27507
     },
     {
+      "path": "assets/company-trial.js",
+      "sha256": "b276e2ce56ca6969581fce1ea91059ccacec98256d78a0895aa54347ff7bcf62",
+      "bytes": 3505
+    },
+    {
       "path": "assets/dashboard.html",
-      "sha256": "869dead09ab5280cf9bde5d21c9db5dfadfb811299d92a07f85aa0f84dec2fe8",
-      "bytes": 103875
+      "sha256": "e9f4ef21ca04e57d036007aa428884a9404bfdc25e78b2b6a7ab54ff7d902a43",
+      "bytes": 103939
     },
     {
       "path": "assets/example-googl-case.json",
-      "sha256": "eb19a6e37b6f4a6ed5b210f6ed49e0a72b2dc281480ab1593b85bca514c412ba",
-      "bytes": 322021
+      "sha256": "9c9227d3f6211c0aa98d908cec68566535d239f88703fb38cb52ec2d6d7f0c12",
+      "bytes": 325601
     },
     {
       "path": "assets/financial-verification.json",
@@ -45,19 +55,24 @@
       "bytes": 11294
     },
     {
+      "path": "assets/macro-history.json",
+      "sha256": "9d06df9c2267526a65d92bf9fae358086c97c07292b8d67a83565a71f74e674d",
+      "bytes": 593599
+    },
+    {
       "path": "assets/market-update.json",
       "sha256": "4f58f54541f1f27ac36d36a27ff8d8fff59b7339c1cfdb16f29c3235420d9b0d",
       "bytes": 32139
     },
     {
       "path": "assets/profit-inputs.json",
-      "sha256": "e81c25c3d1006f2d2f82a41380540e5e1b7e59cc99fa4dc424b61dc700fe631d",
-      "bytes": 13224
+      "sha256": "749b7a82fb22794dc6787bd8a8d20d108c50c4f8e5607134ca780f713572c839",
+      "bytes": 16654
     },
     {
       "path": "assets/profit-ui.js",
-      "sha256": "f56799f9f221ce692cd065553fd53f890056decb3dcc64446154447f470143bb",
-      "bytes": 7961
+      "sha256": "1530e5f82654c8db9d3723c07f91681044baf686def72c989c849b882365148f",
+      "bytes": 10240
     },
     {
       "path": "assets/publication_dates.json",
@@ -110,6 +125,16 @@
       "bytes": 63574
     },
     {
+      "path": "assets/review-lab.js",
+      "sha256": "8fe304413d16d614d198482b6d4ca28468a74bcd798087eaa6203fffb107f60b",
+      "bytes": 12722
+    },
+    {
+      "path": "assets/review-lab.json",
+      "sha256": "998444fa1a1698160d2c8f449f621046e7eed65f5d107766ed3e3c5db0e2933a",
+      "bytes": 44840
+    },
+    {
       "path": "assets/review-v11.js",
       "sha256": "2d7952d9c7dad481aa840ae9663aa9a1e195312b05424fbd0299a9bbc11bedb5",
       "bytes": 19659
@@ -131,8 +156,8 @@
     },
     {
       "path": "outputs/googl-dashboard.html",
-      "sha256": "03c3acedf03b413f4cf8073bd751c557375ad3c76f6678471dfe9fa0af825ec7",
-      "bytes": 2133269
+      "sha256": "cf4e66c8ee144bba09167b4d7b77ce0f09ea747beb4929d179a2761ecc30ad6b",
+      "bytes": 2485135
     },
     {
       "path": "outputs/research/customer_evidence_20261106/historical-checks.json",
@@ -146,8 +171,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "8a033d28f81e3e659f65da33148196644d2fcdb7acdd36e1d7322b29416d5385",
-      "bytes": 3127
+      "sha256": "dc4944cc02b72f1f61d21ac9b66acf8b79a45baee978bba03c2e064175055401",
+      "bytes": 3706
     },
     {
       "path": "references/cloud-model-method.md",
@@ -196,8 +221,8 @@
     },
     {
       "path": "references/profit-model-method.md",
-      "sha256": "b49708d62da05673ac7174ccc6bb1e83a18a6a165b4ce143def963e130d4bbf0",
-      "bytes": 3756
+      "sha256": "ec59bb3dc8c40015a666eb65721901687b26a9fd173fbe8552d7d04fcd604a6d",
+      "bytes": 3805
     },
     {
       "path": "references/recent-review-method.md",
@@ -208,6 +233,11 @@
       "path": "references/research-method.md",
       "sha256": "1e14899f3682241e64cb43987fcd6d438cf95d9b1342c7cc520f9436f6325cf8",
       "bytes": 9862
+    },
+    {
+      "path": "references/review-lab-method.md",
+      "sha256": "b75c8786b448e5f2a2cf49d625108a4c05d95e4b6f5c7b0219f06d3200bf10c5",
+      "bytes": 6825
     },
     {
       "path": "references/source-workflow.md",
@@ -225,6 +255,11 @@
       "bytes": 2688
     },
     {
+      "path": "scripts/build_amzn_trial.py",
+      "sha256": "eaf2a5b07ec4439e45a0141fc70b5d9620e9489f96d9c141beb2f0e7642a5fbb",
+      "bytes": 3225
+    },
+    {
       "path": "scripts/build_case.py",
       "sha256": "e66d0e444c4ba636175668d55c545e5ac3ff0533b0686782543f56d9d45a352a",
       "bytes": 30494
@@ -236,13 +271,13 @@
     },
     {
       "path": "scripts/build_dashboard.py",
-      "sha256": "a6fb99c02a9f1eef889d81b8ff66b9f44b08cb6307a22d84ed72c5c37bd1906e",
-      "bytes": 14191
+      "sha256": "afc04d78f7023e96f464e793521fa252b1cea4ed74ea8d59f0d767aa22bb753f",
+      "bytes": 15097
     },
     {
       "path": "scripts/build_profit_inputs.py",
-      "sha256": "024ac01f94641f20dab3dc29935704291fa891171604e05a252de60e7cca7e42",
-      "bytes": 5670
+      "sha256": "e2e4277399eebb30eac13f952a22af6310cd5220151e60319466d8ada8f7cf6d",
+      "bytes": 6830
     },
     {
       "path": "scripts/build_research.py",
@@ -253,6 +288,11 @@
       "path": "scripts/build_review_events.py",
       "sha256": "9f4905c5c1b21fe6019e4a98e989710df922ec13976ec6801f55dd3d464d52a2",
       "bytes": 26232
+    },
+    {
+      "path": "scripts/build_review_lab.py",
+      "sha256": "d41e806e0f5fc3a8deff39aaa5e3626b3b6c3c035681eceaad3854f66a673da9",
+      "bytes": 8088
     },
     {
       "path": "scripts/check_customer_evidence.py",
@@ -276,23 +316,23 @@
     },
     {
       "path": "scripts/fetch_macro.py",
-      "sha256": "f744705be8593259ba6529db025609867d68edc72b4c7ecc34122a6a9ed4313d",
-      "bytes": 2428
+      "sha256": "e754782e7d26652e99d413c9cde94da2caeca23c6c1e8392dbe4a053e3a48877",
+      "bytes": 2596
     },
     {
       "path": "scripts/model.mjs",
-      "sha256": "856ffd0d696447bc0664323b8183bef49cd616161bbd4a154b9579f57fe3a682",
-      "bytes": 25133
+      "sha256": "d9c89a1dab0f4bf023a889af3b3980e8c5a384e7114918f3e382b533eb01128e",
+      "bytes": 25338
     },
     {
       "path": "scripts/package_public.py",
-      "sha256": "815eccaab33afe8ddf5bd760657612c52fede2c95a21d7ada39c78aa0e809d4c",
-      "bytes": 4258
+      "sha256": "0cbf6f18a72fb314b06ca8a8984965adaef8f03da634b3c3cde247a7a67563e5",
+      "bytes": 4273
     },
     {
       "path": "scripts/profit-model.mjs",
-      "sha256": "44421395b84d806c508c5c7e0d66723b164fdf0eb84a807bc1d54786a44b525a",
-      "bytes": 5356
+      "sha256": "a6e6244171349635c38f597e0b9dddcc03fa4f1f9c6465840e58bba969ab3546",
+      "bytes": 8390
     },
     {
       "path": "scripts/research_anthropic.py",
@@ -330,6 +370,16 @@
       "bytes": 48982
     },
     {
+      "path": "scripts/review-analysis.mjs",
+      "sha256": "54db7bad0a91dfbb6e0bf8098b37e607b1a54b2d7355e1cd837906510ef9c357",
+      "bytes": 6223
+    },
+    {
+      "path": "scripts/segment-model.mjs",
+      "sha256": "82ea138e681c898281324f39f2bd31cedbb2e9ee8fc67be4ea799c7bd6da704d",
+      "bytes": 2192
+    },
+    {
       "path": "scripts/update_v9_labels.py",
       "sha256": "6cbdf6ce4a479ee9b024a591602ca36909c071c3a01650b65f45832efe47d933",
       "bytes": 5493
@@ -346,8 +396,8 @@
     },
     {
       "path": "SKILL.md",
-      "sha256": "9fb874f5e8d7036cee4c7c92ea6611b9c81c72a7484ac7f065ea6b1b78407e4b",
-      "bytes": 14530
+      "sha256": "be05a04af31c837bfcc7f44129232ffea302fe81175f564eff63ad44c418e325",
+      "bytes": 15059
     },
     {
       "path": "tests/dom-cloud.cjs",
@@ -356,8 +406,8 @@
     },
     {
       "path": "tests/dom-smoke.cjs",
-      "sha256": "5a549187e870227214aab1b1eb6adbc4474f5dd6396cf604461a69a755fdd9cc",
-      "bytes": 8182
+      "sha256": "dbedf33e20e114344069b8b36b184383f2c0e9de17fa4cdfe78b6c88060f295a",
+      "bytes": 10039
     },
     {
       "path": "tests/test_cloud_model.mjs",
@@ -373,6 +423,11 @@
       "path": "tests/test_profit_model.mjs",
       "sha256": "89a68f168e55e87ce7e788e8e611796011120589db366b30e2f847a3bb75c648",
       "bytes": 3372
+    },
+    {
+      "path": "tests/test_review_analysis.mjs",
+      "sha256": "61db18a4a977107a9367a75c393ce10452912903e9df58e18525a146677cfd85",
+      "bytes": 4704
     }
   ]
 }

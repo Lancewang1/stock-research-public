@@ -792,6 +792,7 @@ function renderOut(){ if(fcBuilt) buildTable(); }
 
 __WORKBENCH_CODE__
 __V11_INTEGRATION__
+__REVIEW_LAB__
 /* ---------- orchestrate ---------- */
 function drawAll(){ drawMain(); renderVal(); if(S.tab===1){ drawRSI(); drawMACD(); } if(S.tab===2){ drawAttr(); fillTab2(); } if(S.tab===3){ fillTab3(); } }
 fillTab1(); buildCmp(); initSubs(); WB.init();
@@ -799,5 +800,7 @@ window.addEventListener('resize',()=>{ if(S.view==='forecast') renderOut(); else
 // initial state: select the latest earnings event so panels are populated at rest
 S.sel=D.events[D.events.length-1].i; S.month=D.d[S.sel].slice(0,7);
 initializeV11();
+initializeReviewLab();
+initializeCompanyTrial();
 drawAll();
 </script>

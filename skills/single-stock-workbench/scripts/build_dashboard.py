@@ -180,6 +180,10 @@ def build_dashboard(case_path: Path, output_path: Path, public: bool = False) ->
         return json.dumps(value,ensure_ascii=False,allow_nan=False,separators=(',',':')).replace('<','\\u003c').replace('\u2028','\\u2028').replace('\u2029','\\u2029')
     replacements={'__CASE_DATA__':payload(case_data),'__MODEL_CODE__':model,'__RESEARCH_DATA__':payload(research),'__WORKBENCH_CODE__':(root/'assets'/'workbench-v9.js').read_text(encoding='utf-8')}
     replacements['__WORKBENCH_CODE__']=replacements['__WORKBENCH_CODE__'].replace('/* __PROFIT_UI__ */',(root/'assets/profit-ui.js').read_text(encoding='utf-8'))
+    analysis_model=re.sub(r'^export\s+', '', (root/'scripts/review-analysis.mjs').read_text(encoding='utf-8'),flags=re.MULTILINE)
+    replacements['__REVIEW_LAB__']='const REVIEW_LAB_DATA='+payload(_json(root/'assets/review-lab.json'))+';\nconst MACRO_HISTORY='+payload(_json(root/'assets/macro-history.json'))+';\nconst RAL=(()=>{'+analysis_model+'\nreturn {reviewPivots,reviewInterval,earningsMultipleBridge,datedEvidence,pairedStats,rollingFactor,technicalSnapshot};})();\n'+(root/'assets/review-lab.js').read_text(encoding='utf-8')
+    segment_model=re.sub(r'^export\s+', '', (root/'scripts/segment-model.mjs').read_text(encoding='utf-8'),flags=re.MULTILINE)
+    replacements['__REVIEW_LAB__']+='\nconst AMZN_TRIAL='+payload(_json(root/'assets/amzn-trial.json'))+';\nconst SGM=(()=>{'+segment_model+'\nreturn {calculateSegmentCase};})();\n'+(root/'assets/company-trial.js').read_text(encoding='utf-8')
     cloud_model = re.sub(r'^export\s+', '', (root/'scripts/cloud-model.mjs').read_text(encoding='utf-8'), flags=re.MULTILINE)
     replacements.update({'__CLOUD_DATA__':payload(cloud_data), '__REVIEW_DATA__':payload(review_data),
                          '__CLOUD_MODEL__':cloud_model,
