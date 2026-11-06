@@ -1,0 +1,338 @@
+{
+  "release": "2026-11-06-cloud-two-lines",
+  "offlineRebuild": "byte-identical",
+  "browserVisualAcceptance": false,
+  "rawReportsIncluded": false,
+  "files": [
+    {
+      "path": "agents/openai.yaml",
+      "sha256": "60b0fa5dcb5e6da1d99e024cce84fa9ea022791216642ce531419b75ba3d3263",
+      "bytes": 382
+    },
+    {
+      "path": "assets/cloud-inputs.json",
+      "sha256": "a25a41fca892ef683eb65e80dcb30954fa00d1634f454c1101439a1bd1149b56",
+      "bytes": 190730
+    },
+    {
+      "path": "assets/cloud-lines.js",
+      "sha256": "7566de1011887b45d6f2f75054bb87455ae1af98d4ddf96035fe25f46d1f8603",
+      "bytes": 16476
+    },
+    {
+      "path": "assets/cloud-ui.js",
+      "sha256": "f911272014b55fba030e75c83400d788b883c17181753542c0a0bb6fc91c89e1",
+      "bytes": 27507
+    },
+    {
+      "path": "assets/dashboard.html",
+      "sha256": "869dead09ab5280cf9bde5d21c9db5dfadfb811299d92a07f85aa0f84dec2fe8",
+      "bytes": 103875
+    },
+    {
+      "path": "assets/example-googl-case.json",
+      "sha256": "7d9787697b71cb80caec821f2419c8ce832b4777ecc6ebb10a68b053009c7ab7",
+      "bytes": 306659
+    },
+    {
+      "path": "assets/financial-verification.json",
+      "sha256": "45f6ff3121fddeedf2b77c73294a700299a4f1de58fc5c0016315dcce25733cb",
+      "bytes": 43182
+    },
+    {
+      "path": "assets/macro-evidence.json",
+      "sha256": "5a3a2608228457a7e36a705688b764223cea77ccd16e59acd610f7e6e3ca9b35",
+      "bytes": 11294
+    },
+    {
+      "path": "assets/market-update.json",
+      "sha256": "4f58f54541f1f27ac36d36a27ff8d8fff59b7339c1cfdb16f29c3235420d9b0d",
+      "bytes": 32139
+    },
+    {
+      "path": "assets/publication_dates.json",
+      "sha256": "198d9efba26d99a7a6de5faa92224e37862193d3583f3a4102c97b067600638c",
+      "bytes": 20612
+    },
+    {
+      "path": "assets/research-anthropic.json",
+      "sha256": "3e3ebf847746af4161961b972d95d054cd0b83790e751ddab9fdd39b38688ba2",
+      "bytes": 18459
+    },
+    {
+      "path": "assets/research-chain.json",
+      "sha256": "65e9544aed7fb7cf2efc83e9973473ea242775bc1db7bb204d20627cb8f68428",
+      "bytes": 40950
+    },
+    {
+      "path": "assets/research-contracts.json",
+      "sha256": "a2eb179359e27950c5d96f0dac2bbb00f21af285672840afee871c6765d3e6f2",
+      "bytes": 47721
+    },
+    {
+      "path": "assets/research-local-models.json",
+      "sha256": "c9b21fa8f869bcb6a1f86ae806044eadf4771933bb8a50f69b76b313807ff270",
+      "bytes": 72806
+    },
+    {
+      "path": "assets/research-local-reports.json",
+      "sha256": "09014dac9c146f0c0977c57d687fe5609a75e85cdf50f6a889a101b8ee056bc1",
+      "bytes": 11774
+    },
+    {
+      "path": "assets/research-recent.json",
+      "sha256": "97949a51451149350f4a690eb64d1ba6b62fd13f7bbd14dae984f32d72a40f39",
+      "bytes": 54593
+    },
+    {
+      "path": "assets/research.json",
+      "sha256": "a05d8fd48cfbbbae21e8d5af1bf9e5d1f17656f647a55623ba1538e592b1d7b7",
+      "bytes": 277893
+    },
+    {
+      "path": "assets/review-case.json",
+      "sha256": "af7420f871f76a8b64ae26f08fbc0cb1fc46e82ef50a583cca96c82323a3a344",
+      "bytes": 7043
+    },
+    {
+      "path": "assets/review-events.json",
+      "sha256": "fea9cd36f800f08c05556a8bcced75108b29130253e0e2557cff7bf569adc8e5",
+      "bytes": 63574
+    },
+    {
+      "path": "assets/review-v11.js",
+      "sha256": "2d7952d9c7dad481aa840ae9663aa9a1e195312b05424fbd0299a9bbc11bedb5",
+      "bytes": 19659
+    },
+    {
+      "path": "assets/v11-integration.js",
+      "sha256": "61d439fffcb34c1d45d49cc4d2c534bed890458abebe774a12156d56352d36de",
+      "bytes": 2307
+    },
+    {
+      "path": "assets/v9-snapshot.json",
+      "sha256": "ce0c2f168650021ee2f92a22be5f08338d0e20511c4f59461a0e252bdfce7c3b",
+      "bytes": 2862846
+    },
+    {
+      "path": "assets/workbench-v9.js",
+      "sha256": "937b04cee65202756380783151b4eb07c96de8dd37f50791363326a938e0d37b",
+      "bytes": 46854
+    },
+    {
+      "path": "outputs/googl-dashboard.html",
+      "sha256": "3665c31ea205b9471e29a5f1fbd93ed6b98619d0679a5c0eaacb237bf6e23aba",
+      "bytes": 2105224
+    },
+    {
+      "path": "outputs/research/customer_evidence_20261106/historical-checks.json",
+      "sha256": "41d0b69ade9389c963a85660d3e2aa376e32aaf61a61aa74172b4d942e00c71c",
+      "bytes": 4446
+    },
+    {
+      "path": "outputs/research/report-distribution-audit.json",
+      "sha256": "271a94f81fb66b9517293443c2c43ba039f3a842c843a11cb4356ee1f57a78b5",
+      "bytes": 298823
+    },
+    {
+      "path": "README.md",
+      "sha256": "626cc44c64d22754a5edbec16b423a8541ee42ec94f9b617c69f4bff5e23898e",
+      "bytes": 2603
+    },
+    {
+      "path": "references/cloud-model-method.md",
+      "sha256": "23c2981ffbbe39a77e1b258dceb79b1833fe1a10a32a840f5f6dacf16eefab21",
+      "bytes": 11242
+    },
+    {
+      "path": "references/cloud-revenue-evidence-audit.md",
+      "sha256": "f9b50daf62e1fdcb279ecf3492bd372b42f98f9661b1b0612fbd5d0565de4ca3",
+      "bytes": 6029
+    },
+    {
+      "path": "references/cross-company-research.md",
+      "sha256": "b5c1d746a6b2193215285437a0f0d4e91e389b25a9e4e90b5442d50bb159b3e5",
+      "bytes": 4745
+    },
+    {
+      "path": "references/customer-cost-historical-evidence-20261106.md",
+      "sha256": "2ef699ca957db09a8a043454345644d9f17bc6edf427ac829f33b9ed7effb301",
+      "bytes": 10322
+    },
+    {
+      "path": "references/delivery-v11.md",
+      "sha256": "723c51ebf1763d2dc9468c19ca71fe08ccb3cefa1e3f17b898164c7eac007da4",
+      "bytes": 2833
+    },
+    {
+      "path": "references/example-review.md",
+      "sha256": "4adbe3d54c0487f542fbc08fdb6cde495794f39b781e0eaa85ef7b9c8be40db5",
+      "bytes": 2699
+    },
+    {
+      "path": "references/local-material-review.md",
+      "sha256": "f875f29cd53cf5f320f0e1e24729edc45b91b2a7e1a170fcf3f77101238efe61",
+      "bytes": 2865
+    },
+    {
+      "path": "references/model-mapping.md",
+      "sha256": "638f2b348a12f3cc7fba2a16428b2db0af1829e0b5b23a9a4dee7208a49791be",
+      "bytes": 5219
+    },
+    {
+      "path": "references/recent-review-method.md",
+      "sha256": "7ffd9840b2151c1234162106473a9f1c2024f5b1fc1e669870e17f1b06f4a9e5",
+      "bytes": 3933
+    },
+    {
+      "path": "references/research-method.md",
+      "sha256": "1e14899f3682241e64cb43987fcd6d438cf95d9b1342c7cc520f9436f6325cf8",
+      "bytes": 9862
+    },
+    {
+      "path": "references/source-workflow.md",
+      "sha256": "ecf60aa5ebaa3b82361bacd9f4e37350f2f49ce122086b2a4dc0df37972859ac",
+      "bytes": 4920
+    },
+    {
+      "path": "scripts/audit_report_distribution.py",
+      "sha256": "ebb3d22e2d84c0255c482f91d58b85de7220cbce1c0ca4a14eda6c5711117bcd",
+      "bytes": 2688
+    },
+    {
+      "path": "scripts/build_case.py",
+      "sha256": "bf61a53dd570896f6eaea3c265978f1fa25a983ea691ff3006ba18323020651f",
+      "bytes": 30291
+    },
+    {
+      "path": "scripts/build_cloud_inputs.py",
+      "sha256": "118700c7593f51460bf5807d63a9bcbaa70870b8f0a0b369207008a2abb388ce",
+      "bytes": 49750
+    },
+    {
+      "path": "scripts/build_dashboard.py",
+      "sha256": "6ec9d5558cd8574235af1377ed9f72782fe5317cdc9ccff77bd4f4761b35eea3",
+      "bytes": 13852
+    },
+    {
+      "path": "scripts/build_research.py",
+      "sha256": "e951208f06d4359007873328666fa779e8875133d72fa0f11c93c3c68c8488db",
+      "bytes": 5013
+    },
+    {
+      "path": "scripts/build_review_events.py",
+      "sha256": "9f4905c5c1b21fe6019e4a98e989710df922ec13976ec6801f55dd3d464d52a2",
+      "bytes": 26232
+    },
+    {
+      "path": "scripts/check_customer_evidence.py",
+      "sha256": "79a8878e0799833aeb606a97e63026786624647331429392fa74cbda0c7b08f3",
+      "bytes": 4375
+    },
+    {
+      "path": "scripts/cloud-model.mjs",
+      "sha256": "3ac6832bdedc5607383b4a5b3ebbfae156824f6223a27c1a9e3dd9a21b223de1",
+      "bytes": 31196
+    },
+    {
+      "path": "scripts/extract_nvidia_evidence.py",
+      "sha256": "3e008dff27a5767847894d0d0eafa9743c76a53d26b7d93267ea932ac9dcd13a",
+      "bytes": 6080
+    },
+    {
+      "path": "scripts/fetch_financials.py",
+      "sha256": "a0b4acd4cce4efa449e4c5598c1ee3549c298a5a3872a268a53ff3e884025689",
+      "bytes": 2496
+    },
+    {
+      "path": "scripts/fetch_macro.py",
+      "sha256": "f744705be8593259ba6529db025609867d68edc72b4c7ecc34122a6a9ed4313d",
+      "bytes": 2428
+    },
+    {
+      "path": "scripts/model.mjs",
+      "sha256": "e5155e3cef093fa9b6504a54e984f905d895b4f8a9eddcc55caf19c9d98d2560",
+      "bytes": 22548
+    },
+    {
+      "path": "scripts/package_public.py",
+      "sha256": "3832d2b5fc219e8a12c5ae335ddf7a1e6aa414587ec030c1bfb2c63c3a9d96fa",
+      "bytes": 4255
+    },
+    {
+      "path": "scripts/research_anthropic.py",
+      "sha256": "ac94718be49b136215c68658af779a7b8619a3e021c3d582f40148122201b0e9",
+      "bytes": 15816
+    },
+    {
+      "path": "scripts/research_chain.py",
+      "sha256": "12db17f683aab30494af0cbc5e2b2abf06248c443cd025a1c792e79199a562c0",
+      "bytes": 9476
+    },
+    {
+      "path": "scripts/research_contracts.py",
+      "sha256": "7c24d059e6c6e32900a6223d7d7fd8a6700c623eb242e4394ce963b815a129f6",
+      "bytes": 33003
+    },
+    {
+      "path": "scripts/research_customer_evidence.py",
+      "sha256": "696839da93ce3b4fd2ab8cc9f0a6a23ac3914f5bbfba33e26a9337701990414d",
+      "bytes": 6205
+    },
+    {
+      "path": "scripts/research_local_models.py",
+      "sha256": "3af15a624e5c01e02556775a4bdf42e3de2864ae072d9968c1dde56acc67c872",
+      "bytes": 24609
+    },
+    {
+      "path": "scripts/research_local_reports.py",
+      "sha256": "be4b0d81ca3c71876662c5eef64bb3190f802ca6940db080fdc0ac4e18fcd1a3",
+      "bytes": 17377
+    },
+    {
+      "path": "scripts/research_recent.py",
+      "sha256": "0a9ca3e48e6474172a15062d90477e077e471300909350107df5dc7082465279",
+      "bytes": 48982
+    },
+    {
+      "path": "scripts/update_v9_labels.py",
+      "sha256": "6cbdf6ce4a479ee9b024a591602ca36909c071c3a01650b65f45832efe47d933",
+      "bytes": 5493
+    },
+    {
+      "path": "scripts/v9_market.py",
+      "sha256": "d2f1b3396492b598602eea095b6458c1263797391654fb30726ce920c06451f7",
+      "bytes": 12223
+    },
+    {
+      "path": "scripts/verify_financials.py",
+      "sha256": "97f3da15baaebb8b686815751f781c98d20276f19b43f409b3cdf9ede591c0fd",
+      "bytes": 6627
+    },
+    {
+      "path": "SKILL.md",
+      "sha256": "7dfc0a2722859963c77019b63ab7d5264f5434fd9203869ee9f026b3f5d4037b",
+      "bytes": 14107
+    },
+    {
+      "path": "tests/dom-cloud.cjs",
+      "sha256": "41d1ba7acbaa7ed08d1379fe94c01e934227c450926d295dcfd53ef4ac95e396",
+      "bytes": 19261
+    },
+    {
+      "path": "tests/dom-smoke.cjs",
+      "sha256": "f48c656e0d0c5a3138684a1bd226dde93e0d1119b26f6b4d07cc4518005ce721",
+      "bytes": 7219
+    },
+    {
+      "path": "tests/test_cloud_model.mjs",
+      "sha256": "76e20abe74ebec0bba5af70458692629a42230cdfbd873382ad4ea279016bd01",
+      "bytes": 15029
+    },
+    {
+      "path": "tests/test_model.mjs",
+      "sha256": "f529d78a47c12aa6e45a704579f31f105e7ddb42ebd130cbd8d26c22d5717596",
+      "bytes": 9482
+    }
+  ]
+}

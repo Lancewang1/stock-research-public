@@ -1,0 +1,5095 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-11-05",
+  "forecastPeriods": [
+    "2026Q4",
+    "2027Q1",
+    "2027Q2",
+    "2027Q3",
+    "2027Q4"
+  ],
+  "units": {
+    "money": "USD bn",
+    "capacity": "GW"
+  },
+  "history": {
+    "quarters": [
+      {
+        "period": "2021Q1",
+        "periodEnd": "2021-03-31",
+        "publicationDate": "2022-04-26",
+        "availableAt": "2022-04-26",
+        "cloudRevenueBn": 4.047,
+        "cashCapexBn": 5.942,
+        "totalRevenueBn": 55.314,
+        "sourceRefs": [
+          "cloud-alphabet-2022q1"
+        ],
+        "status": "reported_actual",
+        "comparativeColumn": true,
+        "note": "现金购置固定资产；不是包括融资租赁新增额的广义资本投入。",
+        "secCashCapexBn": 5.942,
+        "secCashCapexMatch": true
+      },
+      {
+        "period": "2021Q2",
+        "periodEnd": "2021-06-30",
+        "publicationDate": "2022-07-26",
+        "availableAt": "2022-07-26",
+        "cloudRevenueBn": 4.628,
+        "cashCapexBn": 5.496,
+        "totalRevenueBn": 61.88,
+        "sourceRefs": [
+          "cloud-alphabet-2022q2"
+        ],
+        "status": "reported_actual",
+        "comparativeColumn": true,
+        "note": "现金购置固定资产；不是包括融资租赁新增额的广义资本投入。",
+        "secCashCapexBn": 5.496,
+        "secCashCapexMatch": true
+      },
+      {
+        "period": "2021Q3",
+        "periodEnd": "2021-09-30",
+        "publicationDate": "2022-10-25",
+        "availableAt": "2022-10-25",
+        "cloudRevenueBn": 4.99,
+        "cashCapexBn": 6.819,
+        "totalRevenueBn": 65.118,
+        "sourceRefs": [
+          "cloud-alphabet-2022q3"
+        ],
+        "status": "reported_actual",
+        "comparativeColumn": true,
+        "note": "现金购置固定资产；不是包括融资租赁新增额的广义资本投入。",
+        "secCashCapexBn": 6.819,
+        "secCashCapexMatch": true
+      },
+      {
+        "period": "2021Q4",
+        "periodEnd": "2021-12-31",
+        "publicationDate": "2023-02-02",
+        "availableAt": "2023-02-02",
+        "cloudRevenueBn": 5.541,
+        "cashCapexBn": 6.383,
+        "totalRevenueBn": 75.325,
+        "sourceRefs": [
+          "cloud-alphabet-2022q4"
+        ],
+        "status": "reported_actual",
+        "comparativeColumn": true,
+        "note": "现金购置固定资产；不是包括融资租赁新增额的广义资本投入。",
+        "secCashCapexBn": 6.383,
+        "secCashCapexMatch": true
+      },
+      {
+        "period": "2022Q1",
+        "periodEnd": "2022-03-31",
+        "publicationDate": "2022-04-26",
+        "availableAt": "2022-04-26",
+        "cloudRevenueBn": 5.821,
+        "cashCapexBn": 9.786,
+        "totalRevenueBn": 68.011,
+        "sourceRefs": [
+          "cloud-alphabet-2022q1"
+        ],
+        "status": "reported_actual",
+        "comparativeColumn": false,
+        "note": "现金购置固定资产；不是包括融资租赁新增额的广义资本投入。",
+        "secCashCapexBn": 9.786,
+        "secCashCapexMatch": true,
+        "cloudYoy": 0.4383493946132939
+      },
+      {
+        "period": "2022Q2",
+        "periodEnd": "2022-06-30",
+        "publicationDate": "2022-07-26",
+        "availableAt": "2022-07-26",
+        "cloudRevenueBn": 6.276,
+        "cashCapexBn": 6.828,
+        "totalRevenueBn": 69.685,
+        "sourceRefs": [
+          "cloud-alphabet-2022q2"
+        ],
+        "status": "reported_actual",
+        "comparativeColumn": false,
+        "note": "现金购置固定资产；不是包括融资租赁新增额的广义资本投入。",
+        "secCashCapexBn": 6.828,
+        "secCashCapexMatch": true,
+        "cloudYoy": 0.35609334485738975
+      },
+      {
+        "period": "2022Q3",
+        "periodEnd": "2022-09-30",
+        "publicationDate": "2022-10-25",
+        "availableAt": "2022-10-25",
+        "cloudRevenueBn": 6.868,
+        "cashCapexBn": 7.276,
+        "totalRevenueBn": 69.092,
+        "sourceRefs": [
+          "cloud-alphabet-2022q3"
+        ],
+        "status": "reported_actual",
+        "comparativeColumn": false,
+        "note": "现金购置固定资产；不是包括融资租赁新增额的广义资本投入。",
+        "secCashCapexBn": 7.276,
+        "secCashCapexMatch": true,
+        "cloudYoy": 0.37635270541082155
+      },
+      {
+        "period": "2022Q4",
+        "periodEnd": "2022-12-31",
+        "publicationDate": "2023-02-02",
+        "availableAt": "2023-02-02",
+        "cloudRevenueBn": 7.315,
+        "cashCapexBn": 7.595,
+        "totalRevenueBn": 76.048,
+        "sourceRefs": [
+          "cloud-alphabet-2022q4"
+        ],
+        "status": "reported_actual",
+        "comparativeColumn": false,
+        "note": "现金购置固定资产；不是包括融资租赁新增额的广义资本投入。",
+        "secCashCapexBn": 7.595,
+        "secCashCapexMatch": true,
+        "cloudYoy": 0.3201588160981772
+      },
+      {
+        "period": "2023Q1",
+        "periodEnd": "2023-03-31",
+        "publicationDate": "2023-04-25",
+        "availableAt": "2023-04-25",
+        "cloudRevenueBn": 7.454,
+        "cashCapexBn": 6.289,
+        "totalRevenueBn": 69.787,
+        "sourceRefs": [
+          "cloud-alphabet-2023q1"
+        ],
+        "status": "reported_actual",
+        "comparativeColumn": false,
+        "note": "现金购置固定资产；不是包括融资租赁新增额的广义资本投入。",
+        "secCashCapexBn": 6.289,
+        "secCashCapexMatch": true,
+        "cloudYoy": 0.2805359903796598
+      },
+      {
+        "period": "2023Q2",
+        "periodEnd": "2023-06-30",
+        "publicationDate": "2023-07-25",
+        "availableAt": "2023-07-25",
+        "cloudRevenueBn": 8.031,
+        "cashCapexBn": 6.888,
+        "totalRevenueBn": 74.604,
+        "sourceRefs": [
+          "cloud-alphabet-2023q2"
+        ],
+        "status": "reported_actual",
+        "comparativeColumn": false,
+        "note": "现金购置固定资产；不是包括融资租赁新增额的广义资本投入。",
+        "secCashCapexBn": 6.888,
+        "secCashCapexMatch": true,
+        "cloudYoy": 0.2796367112810709
+      },
+      {
+        "period": "2023Q3",
+        "periodEnd": "2023-09-30",
+        "publicationDate": "2023-10-24",
+        "availableAt": "2023-10-24",
+        "cloudRevenueBn": 8.411,
+        "cashCapexBn": 8.055,
+        "totalRevenueBn": 76.693,
+        "sourceRefs": [
+          "cloud-alphabet-2023q3"
+        ],
+        "status": "reported_actual",
+        "comparativeColumn": false,
+        "note": "现金购置固定资产；不是包括融资租赁新增额的广义资本投入。",
+        "secCashCapexBn": 8.055,
+        "secCashCapexMatch": true,
+        "cloudYoy": 0.22466511357018049
+      },
+      {
+        "period": "2023Q4",
+        "periodEnd": "2023-12-31",
+        "publicationDate": "2024-01-30",
+        "availableAt": "2024-01-30",
+        "cloudRevenueBn": 9.192,
+        "cashCapexBn": 11.019,
+        "totalRevenueBn": 86.31,
+        "sourceRefs": [
+          "cloud-alphabet-2023q4"
+        ],
+        "status": "reported_actual",
+        "comparativeColumn": false,
+        "note": "现金购置固定资产；不是包括融资租赁新增额的广义资本投入。",
+        "secCashCapexBn": 11.019,
+        "secCashCapexMatch": true,
+        "cloudYoy": 0.2565960355434038
+      },
+      {
+        "period": "2024Q1",
+        "periodEnd": "2024-03-31",
+        "publicationDate": "2024-04-25",
+        "availableAt": "2024-04-25",
+        "cloudRevenueBn": 9.574,
+        "cashCapexBn": 12.012,
+        "totalRevenueBn": 80.539,
+        "sourceRefs": [
+          "cloud-alphabet-2024q1"
+        ],
+        "status": "reported_actual",
+        "comparativeColumn": false,
+        "note": "现金购置固定资产；不是包括融资租赁新增额的广义资本投入。",
+        "secCashCapexBn": 12.012,
+        "secCashCapexMatch": true,
+        "cloudYoy": 0.2844110544674001
+      },
+      {
+        "period": "2024Q2",
+        "periodEnd": "2024-06-30",
+        "publicationDate": "2024-07-23",
+        "availableAt": "2024-07-23",
+        "cloudRevenueBn": 10.347,
+        "cashCapexBn": 13.186,
+        "totalRevenueBn": 84.742,
+        "sourceRefs": [
+          "cloud-alphabet-2024q2"
+        ],
+        "status": "reported_actual",
+        "comparativeColumn": false,
+        "note": "现金购置固定资产；不是包括融资租赁新增额的广义资本投入。",
+        "secCashCapexBn": 13.186,
+        "secCashCapexMatch": true,
+        "cloudYoy": 0.2883825177437429
+      },
+      {
+        "period": "2024Q3",
+        "periodEnd": "2024-09-30",
+        "publicationDate": "2024-10-29",
+        "availableAt": "2024-10-29",
+        "cloudRevenueBn": 11.353,
+        "cashCapexBn": 13.061,
+        "totalRevenueBn": 88.268,
+        "sourceRefs": [
+          "cloud-alphabet-2024q3"
+        ],
+        "status": "reported_actual",
+        "comparativeColumn": false,
+        "note": "现金购置固定资产；不是包括融资租赁新增额的广义资本投入。",
+        "secCashCapexBn": 13.061,
+        "secCashCapexMatch": true,
+        "cloudYoy": 0.34978004993460954
+      },
+      {
+        "period": "2024Q4",
+        "periodEnd": "2024-12-31",
+        "publicationDate": "2025-02-04",
+        "availableAt": "2025-02-04",
+        "cloudRevenueBn": 11.955,
+        "cashCapexBn": 14.276,
+        "totalRevenueBn": 96.469,
+        "sourceRefs": [
+          "cloud-alphabet-2024q4"
+        ],
+        "status": "reported_actual",
+        "comparativeColumn": false,
+        "note": "现金购置固定资产；不是包括融资租赁新增额的广义资本投入。",
+        "secCashCapexBn": 14.276,
+        "secCashCapexMatch": true,
+        "cloudYoy": 0.3005874673629243
+      },
+      {
+        "period": "2025Q1",
+        "periodEnd": "2025-03-31",
+        "publicationDate": "2025-04-24",
+        "availableAt": "2025-04-24",
+        "cloudRevenueBn": 12.26,
+        "cashCapexBn": 17.197,
+        "totalRevenueBn": 90.234,
+        "sourceRefs": [
+          "cloud-alphabet-2025q1"
+        ],
+        "status": "reported_actual",
+        "comparativeColumn": false,
+        "note": "现金购置固定资产；不是包括融资租赁新增额的广义资本投入。",
+        "secCashCapexBn": 17.197,
+        "secCashCapexMatch": true,
+        "cloudYoy": 0.28055149362857734
+      },
+      {
+        "period": "2025Q2",
+        "periodEnd": "2025-06-30",
+        "publicationDate": "2025-07-23",
+        "availableAt": "2025-07-23",
+        "cloudRevenueBn": 13.624,
+        "cashCapexBn": 22.446,
+        "totalRevenueBn": 96.428,
+        "sourceRefs": [
+          "cloud-alphabet-2025q2"
+        ],
+        "status": "reported_actual",
+        "comparativeColumn": false,
+        "note": "现金购置固定资产；不是包括融资租赁新增额的广义资本投入。",
+        "secCashCapexBn": 22.446,
+        "secCashCapexMatch": true,
+        "cloudYoy": 0.31671015753358467
+      },
+      {
+        "period": "2025Q3",
+        "periodEnd": "2025-09-30",
+        "publicationDate": "2025-10-29",
+        "availableAt": "2025-10-29",
+        "cloudRevenueBn": 15.157,
+        "cashCapexBn": 23.953,
+        "totalRevenueBn": 102.346,
+        "sourceRefs": [
+          "cloud-alphabet-2025q3"
+        ],
+        "status": "reported_actual",
+        "comparativeColumn": false,
+        "note": "现金购置固定资产；不是包括融资租赁新增额的广义资本投入。",
+        "secCashCapexBn": 23.953,
+        "secCashCapexMatch": true,
+        "cloudYoy": 0.33506562142165075
+      },
+      {
+        "period": "2025Q4",
+        "periodEnd": "2025-12-31",
+        "publicationDate": "2026-02-04",
+        "availableAt": "2026-02-04",
+        "cloudRevenueBn": 17.664,
+        "cashCapexBn": 27.851,
+        "totalRevenueBn": 113.828,
+        "sourceRefs": [
+          "cloud-alphabet-2025q4"
+        ],
+        "status": "reported_actual",
+        "comparativeColumn": false,
+        "note": "现金购置固定资产；不是包括融资租赁新增额的广义资本投入。",
+        "secCashCapexBn": 27.851,
+        "secCashCapexMatch": true,
+        "cloudYoy": 0.47754077791718963
+      },
+      {
+        "period": "2026Q1",
+        "periodEnd": "2026-03-31",
+        "publicationDate": "2026-04-29",
+        "availableAt": "2026-04-29",
+        "cloudRevenueBn": 20.028,
+        "cashCapexBn": 35.674,
+        "totalRevenueBn": 109.896,
+        "sourceRefs": [
+          "cloud-alphabet-2026q1"
+        ],
+        "status": "reported_actual",
+        "comparativeColumn": false,
+        "note": "现金购置固定资产；不是包括融资租赁新增额的广义资本投入。",
+        "secCashCapexBn": 35.674,
+        "secCashCapexMatch": true,
+        "cloudYoy": 0.6336052202283848
+      },
+      {
+        "period": "2026Q2",
+        "periodEnd": "2026-06-30",
+        "publicationDate": "2026-07-22",
+        "availableAt": "2026-07-22",
+        "cloudRevenueBn": 24.768,
+        "cashCapexBn": 44.924,
+        "totalRevenueBn": 119.796,
+        "sourceRefs": [
+          "cloud-alphabet-2026q2"
+        ],
+        "status": "reported_actual",
+        "comparativeColumn": false,
+        "note": "现金购置固定资产；不是包括融资租赁新增额的广义资本投入。",
+        "secCashCapexBn": 44.924,
+        "secCashCapexMatch": true,
+        "cloudYoy": 0.817968291250734
+      },
+      {
+        "period": "2026Q3",
+        "periodEnd": "2026-09-30",
+        "publicationDate": "2026-10-28",
+        "availableAt": "2026-10-28",
+        "cloudRevenueBn": 30.709,
+        "cashCapexBn": 51.355,
+        "totalRevenueBn": 127.577,
+        "sourceRefs": [
+          "cloud-alphabet-2026q3"
+        ],
+        "status": "reported_actual",
+        "comparativeColumn": false,
+        "note": "现金购置固定资产；不是包括融资租赁新增额的广义资本投入。",
+        "secCashCapexBn": 51.355,
+        "secCashCapexMatch": true,
+        "cloudYoy": 1.0260605660750808
+      }
+    ],
+    "supplierSignals": {
+      "nvidia": [
+        {
+          "company": "NVIDIA",
+          "periodEnd": "2019-01-27",
+          "periodStart": "2018-10-29",
+          "publicationDate": "2019-02-21",
+          "fiscalPeriod": "FY2019 FY",
+          "totalRevenueBn": 2.205,
+          "yoy": null,
+          "accession": "0001045810-19-000023",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "sourceRefs": [
+            "cloud-nvidia-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "NVIDIA",
+          "periodEnd": "2019-04-28",
+          "periodStart": "2019-01-28",
+          "publicationDate": "2019-05-16",
+          "fiscalPeriod": "FY2020 Q1",
+          "totalRevenueBn": 2.22,
+          "yoy": null,
+          "accession": "0001045810-19-000079",
+          "tag": "Revenues",
+          "sourceRefs": [
+            "cloud-nvidia-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "NVIDIA",
+          "periodEnd": "2019-07-28",
+          "periodStart": "2019-04-29",
+          "publicationDate": "2019-08-15",
+          "fiscalPeriod": "FY2020 Q2",
+          "totalRevenueBn": 2.579,
+          "yoy": null,
+          "accession": "0001045810-19-000144",
+          "tag": "Revenues",
+          "sourceRefs": [
+            "cloud-nvidia-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "NVIDIA",
+          "periodEnd": "2019-10-27",
+          "periodStart": "2019-07-29",
+          "publicationDate": "2019-11-14",
+          "fiscalPeriod": "FY2020 Q3",
+          "totalRevenueBn": 3.014,
+          "yoy": null,
+          "accession": "0001045810-19-000170",
+          "tag": "Revenues",
+          "sourceRefs": [
+            "cloud-nvidia-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "NVIDIA",
+          "periodEnd": "2020-01-26",
+          "periodStart": "2019-10-28",
+          "publicationDate": "2020-02-20",
+          "fiscalPeriod": "FY2020 FY",
+          "totalRevenueBn": 3.105,
+          "yoy": 0.40816326530612246,
+          "accession": "0001045810-20-000010",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "sourceRefs": [
+            "cloud-nvidia-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "NVIDIA",
+          "periodEnd": "2020-04-26",
+          "periodStart": "2020-01-27",
+          "publicationDate": "2020-05-21",
+          "fiscalPeriod": "FY2020 Q1",
+          "totalRevenueBn": 3.08,
+          "yoy": 0.3873873873873874,
+          "accession": "0001045810-20-000065",
+          "tag": "Revenues",
+          "sourceRefs": [
+            "cloud-nvidia-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "NVIDIA",
+          "periodEnd": "2020-07-26",
+          "periodStart": "2020-04-27",
+          "publicationDate": "2020-08-19",
+          "fiscalPeriod": "FY2020 Q2",
+          "totalRevenueBn": 3.866,
+          "yoy": 0.49903063202791786,
+          "accession": "0001045810-20-000147",
+          "tag": "Revenues",
+          "sourceRefs": [
+            "cloud-nvidia-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "NVIDIA",
+          "periodEnd": "2020-10-25",
+          "periodStart": "2020-07-27",
+          "publicationDate": "2020-11-18",
+          "fiscalPeriod": "FY2021 Q3",
+          "totalRevenueBn": 4.726,
+          "yoy": 0.5680159256801594,
+          "accession": "0001045810-20-000189",
+          "tag": "Revenues",
+          "sourceRefs": [
+            "cloud-nvidia-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "NVIDIA",
+          "periodEnd": "2021-05-02",
+          "periodStart": "2021-02-01",
+          "publicationDate": "2021-05-26",
+          "fiscalPeriod": "FY2022 Q1",
+          "totalRevenueBn": 5.661,
+          "yoy": 0.8379870129870131,
+          "accession": "0001045810-21-000064",
+          "tag": "Revenues",
+          "sourceRefs": [
+            "cloud-nvidia-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "NVIDIA",
+          "periodEnd": "2021-08-01",
+          "periodStart": "2021-05-03",
+          "publicationDate": "2021-08-20",
+          "fiscalPeriod": "FY2022 Q2",
+          "totalRevenueBn": 6.507,
+          "yoy": 0.6831350232798759,
+          "accession": "0001045810-21-000131",
+          "tag": "Revenues",
+          "sourceRefs": [
+            "cloud-nvidia-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "NVIDIA",
+          "periodEnd": "2021-10-31",
+          "periodStart": "2021-08-02",
+          "publicationDate": "2021-11-22",
+          "fiscalPeriod": "FY2022 Q3",
+          "totalRevenueBn": 7.103,
+          "yoy": 0.502962336013542,
+          "accession": "0001045810-21-000163",
+          "tag": "Revenues",
+          "sourceRefs": [
+            "cloud-nvidia-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "NVIDIA",
+          "periodEnd": "2022-05-01",
+          "periodStart": "2022-01-31",
+          "publicationDate": "2022-05-27",
+          "fiscalPeriod": "FY2023 Q1",
+          "totalRevenueBn": 8.288,
+          "yoy": 0.46405228758169925,
+          "accession": "0001045810-22-000079",
+          "tag": "Revenues",
+          "sourceRefs": [
+            "cloud-nvidia-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "NVIDIA",
+          "periodEnd": "2022-07-31",
+          "periodStart": "2022-05-02",
+          "publicationDate": "2022-08-31",
+          "fiscalPeriod": "FY2023 Q2",
+          "totalRevenueBn": 6.704,
+          "yoy": 0.030275088366374714,
+          "accession": "0001045810-22-000147",
+          "tag": "Revenues",
+          "sourceRefs": [
+            "cloud-nvidia-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "NVIDIA",
+          "periodEnd": "2022-10-30",
+          "periodStart": "2022-08-01",
+          "publicationDate": "2022-11-18",
+          "fiscalPeriod": "FY2023 Q3",
+          "totalRevenueBn": 5.931,
+          "yoy": -0.16500070392791777,
+          "accession": "0001045810-22-000166",
+          "tag": "Revenues",
+          "sourceRefs": [
+            "cloud-nvidia-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "NVIDIA",
+          "periodEnd": "2023-04-30",
+          "periodStart": "2023-01-30",
+          "publicationDate": "2023-05-26",
+          "fiscalPeriod": "FY2024 Q1",
+          "totalRevenueBn": 7.192,
+          "yoy": -0.13223938223938225,
+          "accession": "0001045810-23-000093",
+          "tag": "Revenues",
+          "sourceRefs": [
+            "cloud-nvidia-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "NVIDIA",
+          "periodEnd": "2023-07-30",
+          "periodStart": "2023-05-01",
+          "publicationDate": "2023-08-28",
+          "fiscalPeriod": "FY2024 Q2",
+          "totalRevenueBn": 13.507,
+          "yoy": 1.0147673031026252,
+          "accession": "0001045810-23-000175",
+          "tag": "Revenues",
+          "sourceRefs": [
+            "cloud-nvidia-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "NVIDIA",
+          "periodEnd": "2023-10-29",
+          "periodStart": "2023-07-31",
+          "publicationDate": "2023-11-21",
+          "fiscalPeriod": "FY2024 Q3",
+          "totalRevenueBn": 18.12,
+          "yoy": 2.055134041476985,
+          "accession": "0001045810-23-000227",
+          "tag": "Revenues",
+          "sourceRefs": [
+            "cloud-nvidia-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "NVIDIA",
+          "periodEnd": "2024-04-28",
+          "periodStart": "2024-01-29",
+          "publicationDate": "2024-05-29",
+          "fiscalPeriod": "FY2025 Q1",
+          "totalRevenueBn": 26.044,
+          "yoy": 2.621245828698554,
+          "accession": "0001045810-24-000124",
+          "tag": "Revenues",
+          "sourceRefs": [
+            "cloud-nvidia-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "NVIDIA",
+          "periodEnd": "2024-07-28",
+          "periodStart": "2024-04-29",
+          "publicationDate": "2024-08-28",
+          "fiscalPeriod": "FY2025 Q2",
+          "totalRevenueBn": 30.04,
+          "yoy": 1.2240319834160065,
+          "accession": "0001045810-24-000264",
+          "tag": "Revenues",
+          "sourceRefs": [
+            "cloud-nvidia-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "NVIDIA",
+          "periodEnd": "2024-10-27",
+          "periodStart": "2024-07-29",
+          "publicationDate": "2024-11-20",
+          "fiscalPeriod": "FY2025 Q3",
+          "totalRevenueBn": 35.082,
+          "yoy": 0.9360927152317882,
+          "accession": "0001045810-24-000316",
+          "tag": "Revenues",
+          "sourceRefs": [
+            "cloud-nvidia-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "NVIDIA",
+          "periodEnd": "2025-04-27",
+          "periodStart": "2025-01-27",
+          "publicationDate": "2025-05-28",
+          "fiscalPeriod": "FY2026 Q1",
+          "totalRevenueBn": 44.062,
+          "yoy": 0.6918292121025955,
+          "accession": "0001045810-25-000116",
+          "tag": "Revenues",
+          "sourceRefs": [
+            "cloud-nvidia-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "NVIDIA",
+          "periodEnd": "2025-07-27",
+          "periodStart": "2025-04-28",
+          "publicationDate": "2025-08-27",
+          "fiscalPeriod": "FY2026 Q2",
+          "totalRevenueBn": 46.743,
+          "yoy": 0.5560252996005326,
+          "accession": "0001045810-25-000209",
+          "tag": "Revenues",
+          "sourceRefs": [
+            "cloud-nvidia-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "NVIDIA",
+          "periodEnd": "2025-10-26",
+          "periodStart": "2025-07-28",
+          "publicationDate": "2025-11-19",
+          "fiscalPeriod": "FY2026 Q3",
+          "totalRevenueBn": 57.006,
+          "yoy": 0.6249358645459211,
+          "accession": "0001045810-25-000230",
+          "tag": "Revenues",
+          "sourceRefs": [
+            "cloud-nvidia-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "NVIDIA",
+          "periodEnd": "2026-04-26",
+          "periodStart": "2026-01-26",
+          "publicationDate": "2026-05-20",
+          "fiscalPeriod": "FY2027 Q1",
+          "totalRevenueBn": 81.615,
+          "yoy": 0.8522763378875222,
+          "accession": "0001045810-26-000052",
+          "tag": "Revenues",
+          "sourceRefs": [
+            "cloud-nvidia-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "NVIDIA",
+          "periodEnd": "2026-07-26",
+          "periodStart": "2026-04-27",
+          "publicationDate": "2026-08-26",
+          "fiscalPeriod": "FY2027 Q2",
+          "totalRevenueBn": 96.221,
+          "yoy": 1.0585114348672526,
+          "accession": "0001045810-26-000075",
+          "tag": "Revenues",
+          "sourceRefs": [
+            "cloud-nvidia-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        }
+      ],
+      "broadcom": [
+        {
+          "company": "Broadcom",
+          "periodEnd": "2019-02-03",
+          "periodStart": "2018-11-05",
+          "publicationDate": "2019-03-15",
+          "fiscalPeriod": "FY2019 Q1",
+          "totalRevenueBn": 5.789,
+          "yoy": null,
+          "accession": "0001730168-19-000036",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "sourceRefs": [
+            "cloud-broadcom-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "Broadcom",
+          "periodEnd": "2019-05-05",
+          "periodStart": "2019-02-04",
+          "publicationDate": "2019-06-14",
+          "fiscalPeriod": "FY2019 Q2",
+          "totalRevenueBn": 5.517,
+          "yoy": null,
+          "accession": "0001730168-19-000101",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "sourceRefs": [
+            "cloud-broadcom-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "Broadcom",
+          "periodEnd": "2019-08-04",
+          "periodStart": "2019-05-06",
+          "publicationDate": "2019-09-13",
+          "fiscalPeriod": "FY2019 Q3",
+          "totalRevenueBn": 5.515,
+          "yoy": null,
+          "accession": "0001730168-19-000118",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "sourceRefs": [
+            "cloud-broadcom-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "Broadcom",
+          "periodEnd": "2019-11-03",
+          "periodStart": "2019-08-05",
+          "publicationDate": "2019-12-20",
+          "fiscalPeriod": "FY2019 FY",
+          "totalRevenueBn": 5.776,
+          "yoy": null,
+          "accession": "0001730168-19-000144",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "sourceRefs": [
+            "cloud-broadcom-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "Broadcom",
+          "periodEnd": "2020-02-02",
+          "periodStart": "2019-11-04",
+          "publicationDate": "2020-03-13",
+          "fiscalPeriod": "FY2020 Q1",
+          "totalRevenueBn": 5.858,
+          "yoy": 0.011919157021938132,
+          "accession": "0001730168-20-000045",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "sourceRefs": [
+            "cloud-broadcom-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "Broadcom",
+          "periodEnd": "2020-05-03",
+          "periodStart": "2020-02-03",
+          "publicationDate": "2020-06-12",
+          "fiscalPeriod": "FY2020 Q2",
+          "totalRevenueBn": 5.742,
+          "yoy": 0.040783034257748874,
+          "accession": "0001730168-20-000109",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "sourceRefs": [
+            "cloud-broadcom-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "Broadcom",
+          "periodEnd": "2020-08-02",
+          "periodStart": "2020-05-04",
+          "publicationDate": "2020-09-11",
+          "fiscalPeriod": "FY2020 Q3",
+          "totalRevenueBn": 5.821,
+          "yoy": 0.055485040797824015,
+          "accession": "0001730168-20-000164",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "sourceRefs": [
+            "cloud-broadcom-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "Broadcom",
+          "periodEnd": "2020-11-01",
+          "periodStart": "2020-08-03",
+          "publicationDate": "2020-12-18",
+          "fiscalPeriod": "FY2020 FY",
+          "totalRevenueBn": 6.467,
+          "yoy": 0.11963296398891976,
+          "accession": "0001730168-20-000226",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "sourceRefs": [
+            "cloud-broadcom-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "Broadcom",
+          "periodEnd": "2021-01-31",
+          "periodStart": "2020-11-02",
+          "publicationDate": "2021-03-12",
+          "fiscalPeriod": "FY2021 Q1",
+          "totalRevenueBn": 6.655,
+          "yoy": 0.13605326049846367,
+          "accession": "0001730168-21-000045",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "sourceRefs": [
+            "cloud-broadcom-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "Broadcom",
+          "periodEnd": "2021-05-02",
+          "periodStart": "2021-02-01",
+          "publicationDate": "2021-06-11",
+          "fiscalPeriod": "FY2021 Q2",
+          "totalRevenueBn": 6.61,
+          "yoy": 0.15116684082201326,
+          "accession": "0001730168-21-000116",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "sourceRefs": [
+            "cloud-broadcom-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "Broadcom",
+          "periodEnd": "2021-08-01",
+          "periodStart": "2021-05-03",
+          "publicationDate": "2021-09-09",
+          "fiscalPeriod": "FY2021 Q3",
+          "totalRevenueBn": 6.778,
+          "yoy": 0.16440474145335848,
+          "accession": "0001730168-21-000123",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "sourceRefs": [
+            "cloud-broadcom-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "Broadcom",
+          "periodEnd": "2022-01-30",
+          "periodStart": "2021-11-01",
+          "publicationDate": "2022-03-10",
+          "fiscalPeriod": "FY2022 Q1",
+          "totalRevenueBn": 7.706,
+          "yoy": 0.15792637114951158,
+          "accession": "0001730168-22-000029",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "sourceRefs": [
+            "cloud-broadcom-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "Broadcom",
+          "periodEnd": "2022-05-01",
+          "periodStart": "2022-01-31",
+          "publicationDate": "2022-06-09",
+          "fiscalPeriod": "FY2022 Q2",
+          "totalRevenueBn": 8.103,
+          "yoy": 0.2258698940998487,
+          "accession": "0001730168-22-000081",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "sourceRefs": [
+            "cloud-broadcom-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "Broadcom",
+          "periodEnd": "2022-07-31",
+          "periodStart": "2022-05-02",
+          "publicationDate": "2022-09-08",
+          "fiscalPeriod": "FY2022 Q3",
+          "totalRevenueBn": 8.464,
+          "yoy": 0.24874594275597528,
+          "accession": "0001730168-22-000094",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "sourceRefs": [
+            "cloud-broadcom-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "Broadcom",
+          "periodEnd": "2023-01-29",
+          "periodStart": "2022-10-31",
+          "publicationDate": "2023-03-08",
+          "fiscalPeriod": "FY2023 Q1",
+          "totalRevenueBn": 8.915,
+          "yoy": 0.15689073449260316,
+          "accession": "0001730168-23-000008",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "sourceRefs": [
+            "cloud-broadcom-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "Broadcom",
+          "periodEnd": "2023-04-30",
+          "periodStart": "2023-01-30",
+          "publicationDate": "2023-06-07",
+          "fiscalPeriod": "FY2023 Q2",
+          "totalRevenueBn": 8.733,
+          "yoy": 0.07774898185857082,
+          "accession": "0001730168-23-000064",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "sourceRefs": [
+            "cloud-broadcom-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "Broadcom",
+          "periodEnd": "2023-07-30",
+          "periodStart": "2023-05-01",
+          "publicationDate": "2023-09-06",
+          "fiscalPeriod": "FY2023 Q3",
+          "totalRevenueBn": 8.876,
+          "yoy": 0.04867674858223059,
+          "accession": "0001730168-23-000077",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "sourceRefs": [
+            "cloud-broadcom-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "Broadcom",
+          "periodEnd": "2024-02-04",
+          "periodStart": "2023-10-30",
+          "publicationDate": "2024-03-14",
+          "fiscalPeriod": "FY2024 Q1",
+          "totalRevenueBn": 11.961,
+          "yoy": 0.34167134043746494,
+          "accession": "0001730168-24-000023",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "sourceRefs": [
+            "cloud-broadcom-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "Broadcom",
+          "periodEnd": "2024-05-05",
+          "periodStart": "2024-02-05",
+          "publicationDate": "2024-06-13",
+          "fiscalPeriod": "FY2024 Q2",
+          "totalRevenueBn": 12.487,
+          "yoy": 0.4298637352570709,
+          "accession": "0001730168-24-000080",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "sourceRefs": [
+            "cloud-broadcom-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "Broadcom",
+          "periodEnd": "2024-08-04",
+          "periodStart": "2024-05-06",
+          "publicationDate": "2024-09-11",
+          "fiscalPeriod": "FY2024 Q3",
+          "totalRevenueBn": 13.072,
+          "yoy": 0.47273546642631814,
+          "accession": "0001730168-24-000099",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "sourceRefs": [
+            "cloud-broadcom-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "Broadcom",
+          "periodEnd": "2025-02-02",
+          "periodStart": "2024-11-04",
+          "publicationDate": "2025-03-12",
+          "fiscalPeriod": "FY2025 Q1",
+          "totalRevenueBn": 14.916,
+          "yoy": 0.24705292199648854,
+          "accession": "0001730168-25-000021",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "sourceRefs": [
+            "cloud-broadcom-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "Broadcom",
+          "periodEnd": "2025-05-04",
+          "periodStart": "2025-02-03",
+          "publicationDate": "2025-06-11",
+          "fiscalPeriod": "FY2025 Q2",
+          "totalRevenueBn": 15.004,
+          "yoy": 0.20156963241771453,
+          "accession": "0001730168-25-000064",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "sourceRefs": [
+            "cloud-broadcom-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "Broadcom",
+          "periodEnd": "2025-08-03",
+          "periodStart": "2025-05-05",
+          "publicationDate": "2025-09-10",
+          "fiscalPeriod": "FY2025 Q3",
+          "totalRevenueBn": 15.952,
+          "yoy": 0.2203182374541004,
+          "accession": "0001730168-25-000098",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "sourceRefs": [
+            "cloud-broadcom-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "Broadcom",
+          "periodEnd": "2026-02-01",
+          "periodStart": "2025-11-03",
+          "publicationDate": "2026-03-11",
+          "fiscalPeriod": "FY2026 Q1",
+          "totalRevenueBn": 19.311,
+          "yoy": 0.2946500402252614,
+          "accession": "0001730168-26-000016",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "sourceRefs": [
+            "cloud-broadcom-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "Broadcom",
+          "periodEnd": "2026-05-03",
+          "periodStart": "2026-02-02",
+          "publicationDate": "2026-06-09",
+          "fiscalPeriod": "FY2026 Q2",
+          "totalRevenueBn": 22.187,
+          "yoy": 0.47873900293255134,
+          "accession": "0001730168-26-000054",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "sourceRefs": [
+            "cloud-broadcom-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        },
+        {
+          "company": "Broadcom",
+          "periodEnd": "2026-08-02",
+          "periodStart": "2026-05-04",
+          "publicationDate": "2026-09-10",
+          "fiscalPeriod": "FY2026 Q3",
+          "totalRevenueBn": 29.591,
+          "yoy": 0.8550025075225678,
+          "accession": "0001730168-26-000080",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "sourceRefs": [
+            "cloud-broadcom-sec"
+          ],
+          "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+        }
+      ]
+    },
+    "latestPeriod": "2026Q3"
+  },
+  "calibration": {
+    "cloudQuarterGrowth2023to2024": {
+      "min": 0.019002050580997798,
+      "p25": 0.04587695509535006,
+      "median": 0.06521686751173672,
+      "p75": 0.08376827590835034,
+      "max": 0.0972262491543443,
+      "n": 8
+    },
+    "cloudQuarterGrowthLast8": {
+      "min": 0.025512337933918827,
+      "p25": 0.09669849608924008,
+      "median": 0.12317677085194922,
+      "p75": 0.18321875929086234,
+      "max": 0.23986595607235128,
+      "n": 8
+    },
+    "quarterSeasonalGrowth": {
+      "1": 0.03027996349763551,
+      "2": 0.07907380292603361,
+      "3": 0.07227144857169332,
+      "4": 0.07294011358226593
+    },
+    "quarterSeasonalityMethod": "2023–2024每个季度的Cloud环比增长中位数；两年各两点，作为企业/Workspace成熟业务增长的尺度代理，非已披露细分增速。",
+    "cashCapexToTotalRevenueLast8": {
+      "min": 0.147985363173662,
+      "p25": 0.22222660052719373,
+      "median": 0.23935780647574476,
+      "p75": 0.3372130438772921,
+      "max": 0.40254121040626445,
+      "n": 8
+    },
+    "cashCapexToCloudRevenueLast8": {
+      "min": 1.1941447093266415,
+      "p25": 1.533205189086992,
+      "median": 1.6139298429811038,
+      "p75": 1.6995348644497268,
+      "max": 1.8137919896640826,
+      "n": 8
+    },
+    "cloudIncrementLast4Bn": 3.888,
+    "sourceRefs": [
+      "cloud-alphabet-2023q1",
+      "cloud-alphabet-2023q2",
+      "cloud-alphabet-2023q3",
+      "cloud-alphabet-2023q4",
+      "cloud-alphabet-2024q1",
+      "cloud-alphabet-2024q2",
+      "cloud-alphabet-2024q3",
+      "cloud-alphabet-2024q4",
+      "cloud-alphabet-2025q1",
+      "cloud-alphabet-2025q2",
+      "cloud-alphabet-2025q3",
+      "cloud-alphabet-2025q4",
+      "cloud-alphabet-2026q1",
+      "cloud-alphabet-2026q2",
+      "cloud-alphabet-2026q3"
+    ]
+  },
+  "backtest": {
+    "method": "逐季扩展训练；固定岭惩罚1，未按留出成绩选模型或参数；下一季预测起点为前季正式披露日。",
+    "testWindow": "2024Q1–2026Q3",
+    "rows": [
+      {
+        "period": "2024Q1",
+        "forecastOrigin": "2024-01-30",
+        "targetPublicationDate": "2024-04-25",
+        "trainingRows": 5,
+        "actualCloudBn": 9.574,
+        "cloudTrailingQuarterGrowthBn": 9.765234955692385,
+        "cloudSeasonalYoyBn": 9.452539447414818,
+        "cloudSupplierRidgeBn": null,
+        "actualCapexBn": 12.012,
+        "capexLastQuarterBn": 11.019,
+        "capexHistoricalIntensityBn": 8.930104882631692,
+        "supplierInputs": {
+          "nvidia": {
+            "company": "NVIDIA",
+            "periodEnd": "2023-10-29",
+            "periodStart": "2023-07-31",
+            "publicationDate": "2023-11-21",
+            "fiscalPeriod": "FY2024 Q3",
+            "totalRevenueBn": 18.12,
+            "yoy": 2.055134041476985,
+            "accession": "0001045810-23-000227",
+            "tag": "Revenues",
+            "sourceRefs": [
+              "cloud-nvidia-sec"
+            ],
+            "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+          },
+          "broadcom": {
+            "company": "Broadcom",
+            "periodEnd": "2023-07-30",
+            "periodStart": "2023-05-01",
+            "publicationDate": "2023-09-06",
+            "fiscalPeriod": "FY2023 Q3",
+            "totalRevenueBn": 8.876,
+            "yoy": 0.04867674858223059,
+            "accession": "0001730168-23-000077",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "sourceRefs": [
+              "cloud-broadcom-sec"
+            ],
+            "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+          }
+        }
+      },
+      {
+        "period": "2024Q2",
+        "forecastOrigin": "2024-04-25",
+        "targetPublicationDate": "2024-07-23",
+        "trainingRows": 6,
+        "actualCloudBn": 10.347,
+        "cloudTrailingQuarterGrowthBn": 10.171057383137391,
+        "cloudSeasonalYoyBn": 10.184242594873679,
+        "cloudSupplierRidgeBn": null,
+        "actualCapexBn": 13.186,
+        "capexLastQuarterBn": 12.012,
+        "capexHistoricalIntensityBn": 9.825178737452507,
+        "supplierInputs": {
+          "nvidia": {
+            "company": "NVIDIA",
+            "periodEnd": "2023-10-29",
+            "periodStart": "2023-07-31",
+            "publicationDate": "2023-11-21",
+            "fiscalPeriod": "FY2024 Q3",
+            "totalRevenueBn": 18.12,
+            "yoy": 2.055134041476985,
+            "accession": "0001045810-23-000227",
+            "tag": "Revenues",
+            "sourceRefs": [
+              "cloud-nvidia-sec"
+            ],
+            "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+          },
+          "broadcom": {
+            "company": "Broadcom",
+            "periodEnd": "2024-02-04",
+            "periodStart": "2023-10-30",
+            "publicationDate": "2024-03-14",
+            "fiscalPeriod": "FY2024 Q1",
+            "totalRevenueBn": 11.961,
+            "yoy": 0.34167134043746494,
+            "accession": "0001730168-24-000023",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "sourceRefs": [
+              "cloud-broadcom-sec"
+            ],
+            "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+          }
+        }
+      },
+      {
+        "period": "2024Q3",
+        "forecastOrigin": "2024-07-23",
+        "targetPublicationDate": "2024-10-29",
+        "trainingRows": 7,
+        "actualCloudBn": 11.353,
+        "cloudTrailingQuarterGrowthBn": 11.009498496211293,
+        "cloudSeasonalYoyBn": 10.686205317040434,
+        "cloudSupplierRidgeBn": 10.961596653813348,
+        "actualCapexBn": 13.061,
+        "capexLastQuarterBn": 13.186,
+        "capexHistoricalIntensityBn": 12.199087595217106,
+        "supplierInputs": {
+          "nvidia": {
+            "company": "NVIDIA",
+            "periodEnd": "2024-04-28",
+            "periodStart": "2024-01-29",
+            "publicationDate": "2024-05-29",
+            "fiscalPeriod": "FY2025 Q1",
+            "totalRevenueBn": 26.044,
+            "yoy": 2.621245828698554,
+            "accession": "0001045810-24-000124",
+            "tag": "Revenues",
+            "sourceRefs": [
+              "cloud-nvidia-sec"
+            ],
+            "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+          },
+          "broadcom": {
+            "company": "Broadcom",
+            "periodEnd": "2024-05-05",
+            "periodStart": "2024-02-05",
+            "publicationDate": "2024-06-13",
+            "fiscalPeriod": "FY2024 Q2",
+            "totalRevenueBn": 12.487,
+            "yoy": 0.4298637352570709,
+            "accession": "0001730168-24-000080",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "sourceRefs": [
+              "cloud-broadcom-sec"
+            ],
+            "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+          }
+        }
+      },
+      {
+        "period": "2024Q4",
+        "forecastOrigin": "2024-10-29",
+        "targetPublicationDate": "2025-02-04",
+        "trainingRows": 8,
+        "actualCloudBn": 11.955,
+        "cloudTrailingQuarterGrowthBn": 12.338406897257977,
+        "cloudSeasonalYoyBn": 11.824559257882415,
+        "cloudSupplierRidgeBn": 12.065618124661313,
+        "actualCapexBn": 14.276,
+        "capexLastQuarterBn": 13.061,
+        "capexHistoricalIntensityBn": 13.727829274509341,
+        "supplierInputs": {
+          "nvidia": {
+            "company": "NVIDIA",
+            "periodEnd": "2024-07-28",
+            "periodStart": "2024-04-29",
+            "publicationDate": "2024-08-28",
+            "fiscalPeriod": "FY2025 Q2",
+            "totalRevenueBn": 30.04,
+            "yoy": 1.2240319834160065,
+            "accession": "0001045810-24-000264",
+            "tag": "Revenues",
+            "sourceRefs": [
+              "cloud-nvidia-sec"
+            ],
+            "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+          },
+          "broadcom": {
+            "company": "Broadcom",
+            "periodEnd": "2024-08-04",
+            "periodStart": "2024-05-06",
+            "publicationDate": "2024-09-11",
+            "fiscalPeriod": "FY2024 Q3",
+            "totalRevenueBn": 13.072,
+            "yoy": 0.47273546642631814,
+            "accession": "0001730168-24-000099",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "sourceRefs": [
+              "cloud-broadcom-sec"
+            ],
+            "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+          }
+        }
+      },
+      {
+        "period": "2025Q1",
+        "forecastOrigin": "2025-02-04",
+        "targetPublicationDate": "2025-04-24",
+        "trainingRows": 9,
+        "actualCloudBn": 12.26,
+        "cloudTrailingQuarterGrowthBn": 12.75458109333683,
+        "cloudSeasonalYoyBn": 12.393399318705615,
+        "cloudSupplierRidgeBn": 12.839843681620275,
+        "actualCapexBn": 17.197,
+        "capexLastQuarterBn": 14.276,
+        "capexHistoricalIntensityBn": 15.004069939510185,
+        "supplierInputs": {
+          "nvidia": {
+            "company": "NVIDIA",
+            "periodEnd": "2024-10-27",
+            "periodStart": "2024-07-29",
+            "publicationDate": "2024-11-20",
+            "fiscalPeriod": "FY2025 Q3",
+            "totalRevenueBn": 35.082,
+            "yoy": 0.9360927152317882,
+            "accession": "0001045810-24-000316",
+            "tag": "Revenues",
+            "sourceRefs": [
+              "cloud-nvidia-sec"
+            ],
+            "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+          },
+          "broadcom": {
+            "company": "Broadcom",
+            "periodEnd": "2024-08-04",
+            "periodStart": "2024-05-06",
+            "publicationDate": "2024-09-11",
+            "fiscalPeriod": "FY2024 Q3",
+            "totalRevenueBn": 13.072,
+            "yoy": 0.47273546642631814,
+            "accession": "0001730168-24-000099",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "sourceRefs": [
+              "cloud-broadcom-sec"
+            ],
+            "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+          }
+        }
+      },
+      {
+        "period": "2025Q2",
+        "forecastOrigin": "2025-04-24",
+        "targetPublicationDate": "2025-07-23",
+        "trainingRows": 10,
+        "actualCloudBn": 13.624,
+        "cloudTrailingQuarterGrowthBn": 13.079980276395611,
+        "cloudSeasonalYoyBn": 13.39403621794934,
+        "cloudSupplierRidgeBn": 13.151650333290524,
+        "actualCapexBn": 22.446,
+        "capexLastQuarterBn": 17.197,
+        "capexHistoricalIntensityBn": 14.339286952189347,
+        "supplierInputs": {
+          "nvidia": {
+            "company": "NVIDIA",
+            "periodEnd": "2024-10-27",
+            "periodStart": "2024-07-29",
+            "publicationDate": "2024-11-20",
+            "fiscalPeriod": "FY2025 Q3",
+            "totalRevenueBn": 35.082,
+            "yoy": 0.9360927152317882,
+            "accession": "0001045810-24-000316",
+            "tag": "Revenues",
+            "sourceRefs": [
+              "cloud-nvidia-sec"
+            ],
+            "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+          },
+          "broadcom": {
+            "company": "Broadcom",
+            "periodEnd": "2025-02-02",
+            "periodStart": "2024-11-04",
+            "publicationDate": "2025-03-12",
+            "fiscalPeriod": "FY2025 Q1",
+            "totalRevenueBn": 14.916,
+            "yoy": 0.24705292199648854,
+            "accession": "0001730168-25-000021",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "sourceRefs": [
+              "cloud-broadcom-sec"
+            ],
+            "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+          }
+        }
+      },
+      {
+        "period": "2025Q3",
+        "forecastOrigin": "2025-07-23",
+        "targetPublicationDate": "2025-10-29",
+        "trainingRows": 11,
+        "actualCloudBn": 15.157,
+        "cloudTrailingQuarterGrowthBn": 14.647515814365795,
+        "cloudSeasonalYoyBn": 14.857089967725033,
+        "cloudSupplierRidgeBn": 14.162571666643265,
+        "actualCapexBn": 23.953,
+        "capexLastQuarterBn": 22.446,
+        "capexHistoricalIntensityBn": 17.223563065173792,
+        "supplierInputs": {
+          "nvidia": {
+            "company": "NVIDIA",
+            "periodEnd": "2025-04-27",
+            "periodStart": "2025-01-27",
+            "publicationDate": "2025-05-28",
+            "fiscalPeriod": "FY2026 Q1",
+            "totalRevenueBn": 44.062,
+            "yoy": 0.6918292121025955,
+            "accession": "0001045810-25-000116",
+            "tag": "Revenues",
+            "sourceRefs": [
+              "cloud-nvidia-sec"
+            ],
+            "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+          },
+          "broadcom": {
+            "company": "Broadcom",
+            "periodEnd": "2025-05-04",
+            "periodStart": "2025-02-03",
+            "publicationDate": "2025-06-11",
+            "fiscalPeriod": "FY2025 Q2",
+            "totalRevenueBn": 15.004,
+            "yoy": 0.20156963241771453,
+            "accession": "0001730168-25-000064",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "sourceRefs": [
+              "cloud-broadcom-sec"
+            ],
+            "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+          }
+        }
+      },
+      {
+        "period": "2025Q4",
+        "forecastOrigin": "2025-10-29",
+        "targetPublicationDate": "2026-02-04",
+        "trainingRows": 12,
+        "actualCloudBn": 17.664,
+        "cloudTrailingQuarterGrowthBn": 16.402009238181687,
+        "cloudSeasonalYoyBn": 15.644896552818883,
+        "cloudSupplierRidgeBn": 16.04163961558272,
+        "actualCapexBn": 27.851,
+        "capexLastQuarterBn": 23.953,
+        "capexHistoricalIntensityBn": 23.07280851763324,
+        "supplierInputs": {
+          "nvidia": {
+            "company": "NVIDIA",
+            "periodEnd": "2025-07-27",
+            "periodStart": "2025-04-28",
+            "publicationDate": "2025-08-27",
+            "fiscalPeriod": "FY2026 Q2",
+            "totalRevenueBn": 46.743,
+            "yoy": 0.5560252996005326,
+            "accession": "0001045810-25-000209",
+            "tag": "Revenues",
+            "sourceRefs": [
+              "cloud-nvidia-sec"
+            ],
+            "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+          },
+          "broadcom": {
+            "company": "Broadcom",
+            "periodEnd": "2025-08-03",
+            "periodStart": "2025-05-05",
+            "publicationDate": "2025-09-10",
+            "fiscalPeriod": "FY2025 Q3",
+            "totalRevenueBn": 15.952,
+            "yoy": 0.2203182374541004,
+            "accession": "0001730168-25-000098",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "sourceRefs": [
+              "cloud-broadcom-sec"
+            ],
+            "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+          }
+        }
+      },
+      {
+        "period": "2026Q1",
+        "forecastOrigin": "2026-02-04",
+        "targetPublicationDate": "2026-04-29",
+        "trainingRows": 13,
+        "actualCloudBn": 20.028,
+        "cloudTrailingQuarterGrowthBn": 19.64040850969262,
+        "cloudSeasonalYoyBn": 16.255385524995592,
+        "cloudSupplierRidgeBn": 19.331917057894817,
+        "actualCapexBn": 35.674,
+        "capexLastQuarterBn": 27.851,
+        "capexHistoricalIntensityBn": 28.295409390170434,
+        "supplierInputs": {
+          "nvidia": {
+            "company": "NVIDIA",
+            "periodEnd": "2025-10-26",
+            "periodStart": "2025-07-28",
+            "publicationDate": "2025-11-19",
+            "fiscalPeriod": "FY2026 Q3",
+            "totalRevenueBn": 57.006,
+            "yoy": 0.6249358645459211,
+            "accession": "0001045810-25-000230",
+            "tag": "Revenues",
+            "sourceRefs": [
+              "cloud-nvidia-sec"
+            ],
+            "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+          },
+          "broadcom": {
+            "company": "Broadcom",
+            "periodEnd": "2025-08-03",
+            "periodStart": "2025-05-05",
+            "publicationDate": "2025-09-10",
+            "fiscalPeriod": "FY2025 Q3",
+            "totalRevenueBn": 15.952,
+            "yoy": 0.2203182374541004,
+            "accession": "0001730168-25-000098",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "sourceRefs": [
+              "cloud-broadcom-sec"
+            ],
+            "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+          }
+        }
+      },
+      {
+        "period": "2026Q2",
+        "forecastOrigin": "2026-04-29",
+        "targetPublicationDate": "2026-07-22",
+        "trainingRows": 14,
+        "actualCloudBn": 24.768,
+        "cloudTrailingQuarterGrowthBn": 22.49498436662284,
+        "cloudSeasonalYoyBn": 19.15947479229618,
+        "cloudSupplierRidgeBn": 21.961985124260835,
+        "actualCapexBn": 44.924,
+        "capexLastQuarterBn": 35.674,
+        "capexHistoricalIntensityBn": 28.0144657204323,
+        "supplierInputs": {
+          "nvidia": {
+            "company": "NVIDIA",
+            "periodEnd": "2025-10-26",
+            "periodStart": "2025-07-28",
+            "publicationDate": "2025-11-19",
+            "fiscalPeriod": "FY2026 Q3",
+            "totalRevenueBn": 57.006,
+            "yoy": 0.6249358645459211,
+            "accession": "0001045810-25-000230",
+            "tag": "Revenues",
+            "sourceRefs": [
+              "cloud-nvidia-sec"
+            ],
+            "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+          },
+          "broadcom": {
+            "company": "Broadcom",
+            "periodEnd": "2026-02-01",
+            "periodStart": "2025-11-03",
+            "publicationDate": "2026-03-11",
+            "fiscalPeriod": "FY2026 Q1",
+            "totalRevenueBn": 19.311,
+            "yoy": 0.2946500402252614,
+            "accession": "0001730168-26-000016",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "sourceRefs": [
+              "cloud-broadcom-sec"
+            ],
+            "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+          }
+        }
+      },
+      {
+        "period": "2026Q3",
+        "forecastOrigin": "2026-07-22",
+        "targetPublicationDate": "2026-10-28",
+        "trainingRows": 15,
+        "actualCloudBn": 30.709,
+        "cloudTrailingQuarterGrowthBn": 28.473709474170352,
+        "cloudSeasonalYoyBn": 23.57781994694624,
+        "cloudSupplierRidgeBn": 29.420340715408795,
+        "actualCapexBn": 51.355,
+        "capexLastQuarterBn": 44.924,
+        "capexHistoricalIntensityBn": 36.681770693722996,
+        "supplierInputs": {
+          "nvidia": {
+            "company": "NVIDIA",
+            "periodEnd": "2026-04-26",
+            "periodStart": "2026-01-26",
+            "publicationDate": "2026-05-20",
+            "fiscalPeriod": "FY2027 Q1",
+            "totalRevenueBn": 81.615,
+            "yoy": 0.8522763378875222,
+            "accession": "0001045810-26-000052",
+            "tag": "Revenues",
+            "sourceRefs": [
+              "cloud-nvidia-sec"
+            ],
+            "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+          },
+          "broadcom": {
+            "company": "Broadcom",
+            "periodEnd": "2026-05-03",
+            "periodStart": "2026-02-02",
+            "publicationDate": "2026-06-09",
+            "fiscalPeriod": "FY2026 Q2",
+            "totalRevenueBn": 22.187,
+            "yoy": 0.47873900293255134,
+            "accession": "0001730168-26-000054",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "sourceRefs": [
+              "cloud-broadcom-sec"
+            ],
+            "signalRole": "行业总收入供给代理，非Google采购额或NVDA数据中心收入"
+          }
+        }
+      }
+    ],
+    "scores": {
+      "cloudTrailingQuarterGrowthBn": {
+        "n": 11,
+        "maeBn": 0.8000053988645093,
+        "mape": 0.042595465864138045,
+        "biasBn": -0.6056012268122924,
+        "periods": [
+          "2024Q1",
+          "2024Q2",
+          "2024Q3",
+          "2024Q4",
+          "2025Q1",
+          "2025Q2",
+          "2025Q3",
+          "2025Q4",
+          "2026Q1",
+          "2026Q2",
+          "2026Q3"
+        ]
+      },
+      "cloudSeasonalYoyBn": {
+        "n": 11,
+        "maeBn": 1.8432863362511822,
+        "mape": 0.08244916534028893,
+        "biasBn": -1.819031914668343,
+        "periods": [
+          "2024Q1",
+          "2024Q2",
+          "2024Q3",
+          "2024Q4",
+          "2025Q1",
+          "2025Q2",
+          "2025Q3",
+          "2025Q4",
+          "2026Q1",
+          "2026Q2",
+          "2026Q3"
+        ]
+      },
+      "cloudSupplierRidgeBn": {
+        "n": 9,
+        "maeBn": 0.9957511821541427,
+        "mape": 0.05257330287214241,
+        "biasBn": -0.8423152252026787,
+        "periods": [
+          "2024Q3",
+          "2024Q4",
+          "2025Q1",
+          "2025Q2",
+          "2025Q3",
+          "2025Q4",
+          "2026Q1",
+          "2026Q2",
+          "2026Q3"
+        ]
+      },
+      "capexLastQuarterBn": {
+        "n": 11,
+        "maeBn": 3.6896363636363634,
+        "mape": 0.1293981650578175,
+        "biasBn": -3.666909090909091,
+        "periods": [
+          "2024Q1",
+          "2024Q2",
+          "2024Q3",
+          "2024Q4",
+          "2025Q1",
+          "2025Q2",
+          "2025Q3",
+          "2025Q4",
+          "2026Q1",
+          "2026Q2",
+          "2026Q3"
+        ]
+      },
+      "capexHistoricalIntensityBn": {
+        "n": 11,
+        "maeBn": 6.2383113846688225,
+        "mape": 0.2205439332307468,
+        "biasBn": -6.2383113846688225,
+        "periods": [
+          "2024Q1",
+          "2024Q2",
+          "2024Q3",
+          "2024Q4",
+          "2025Q1",
+          "2025Q2",
+          "2025Q3",
+          "2025Q4",
+          "2026Q1",
+          "2026Q2",
+          "2026Q3"
+        ]
+      },
+      "cloudTrailingQuarterGrowthMatchedSupplier": {
+        "n": 9,
+        "maeBn": 0.9369868683282898,
+        "mape": 0.04795238931798989,
+        "biasBn": -0.7418784259738883,
+        "periods": [
+          "2024Q3",
+          "2024Q4",
+          "2025Q1",
+          "2025Q2",
+          "2025Q3",
+          "2025Q4",
+          "2026Q1",
+          "2026Q2",
+          "2026Q3"
+        ]
+      }
+    },
+    "noLookAheadChecks": {
+      "allTargetsPublishedAfterOrigin": true,
+      "allSupplierFactsAvailableAtOrigin": true
+    },
+    "interpretation": "这是整体Cloud/现金capex历史模型的真实滚动留出，不验证没有历史实绩的客户拆分、5GW兑现或新硬件收入；样本小且2026发生业务结构变化。",
+    "investmentReturnBacktest": false
+  },
+  "customerScenarios": {
+    "Anthropic": {
+      "relationshipVerified": true,
+      "verifiedPurchaseAmountBn": null,
+      "baseAllocationBn": 2.208,
+      "baseAllocationStatus": "research_allocation_not_disclosed",
+      "rationale": "2026>1GW计划与2027起新增5GW为容量和日期锚；仅假设部分逐季验收。算力预算及Google份额没有官方金额验证，不能由47bn运行率或融资65bn推出。",
+      "sourceRefs": [
+        "chain-anthropic-google-20251023",
+        "chain-anthropic-google-20260406",
+        "chain-anthropic-series-h-20260528"
+      ],
+      "scenarioIntervalMeaning": "用户可编辑压力测试范围，非统计置信区间。",
+      "demandBuild": {
+        "formula": "computeBudgetBn = quarterlyRevenueProxyBn × inferenceProcurementCostRate + trainingBudgetBn",
+        "quarterlyRevenueProxyBn": [
+          14.885306026622345,
+          17.118101930615694,
+          19.685817220208047,
+          22.638689803239256,
+          26.03449327372514
+        ],
+        "inferenceProcurementCostRate": 0.4,
+        "inferenceBudgetBn": [
+          5.954122410648939,
+          6.847240772246278,
+          7.874326888083219,
+          9.055475921295702,
+          10.413797309490057
+        ],
+        "trainingBudgetBn": [
+          8.931183615973408,
+          10.270861158369415,
+          11.811490332124826,
+          13.583213881943552,
+          15.620695964235084
+        ],
+        "trainingBudgetFormula": "推理预算 × trainingShare/(1-trainingShare)；训练占比是独立研究假设。",
+        "forwardQuarterGrowth": 0.15,
+        "status": "derived_research_scenario_not_recognized_revenue",
+        "anchor": "2026-05官方运行率47bn/4×研究年增长1.5倍^(7/12)，得到Q4运行率尺度代理；15%未来环比另为研究假设。",
+        "sourceRefs": [
+          "chain-anthropic-google-20251023",
+          "chain-anthropic-google-20260406",
+          "chain-anthropic-series-h-20260528",
+          "cloud-research-assumptions"
+        ],
+        "unidentified": [
+          "推理采购费用率",
+          "训练预算占比",
+          "Google训练/推理份额",
+          "未来增长",
+          "实际确认收入与运行率代理之差"
+        ]
+      },
+      "historicalAllocationBasis": "1GW计划尺度×92/90天×研究利用率80%×研究净价2.7；不是计划已经验收的断言。"
+    },
+    "OpenAI": {
+      "relationshipVerified": true,
+      "verifiedPurchaseAmountBn": null,
+      "baseAllocationBn": 0.8390400000000001,
+      "baseAllocationStatus": "research_allocation_not_disclosed",
+      "rationale": "官方确认GCP基础设施关系、2025全公司ARR20+bn和约1.9GW。2026规模外推2倍低于2023–2025每年约3倍历史，但仍是假设；Google份额和容量均未披露，金额可降至0。不把ChatGPT活跃度、Gemini流量直接转换成采购。",
+      "sourceRefs": [
+        "cloud-openai-subprocessors",
+        "cloud-openai-business-scale"
+      ],
+      "scenarioIntervalMeaning": "用户可编辑压力测试范围，非统计置信区间。",
+      "demandBuild": {
+        "formula": "computeBudgetBn = quarterlyRevenueProxyBn × inferenceProcurementCostRate + trainingBudgetBn",
+        "quarterlyRevenueProxyBn": [
+          10.0,
+          11.5,
+          13.224999999999998,
+          15.208749999999998,
+          17.490062499999993
+        ],
+        "inferenceProcurementCostRate": 0.45,
+        "inferenceBudgetBn": [
+          4.5,
+          5.175,
+          5.951249999999999,
+          6.843937499999999,
+          7.870528124999997
+        ],
+        "trainingBudgetBn": [
+          6.749999999999999,
+          7.762499999999999,
+          8.926874999999997,
+          10.265906249999999,
+          11.805792187499994
+        ],
+        "trainingBudgetFormula": "推理预算 × trainingShare/(1-trainingShare)；训练占比是独立研究假设。",
+        "forwardQuarterGrowth": 0.15,
+        "status": "derived_research_scenario_not_recognized_revenue",
+        "anchor": "2025官方ARR下界20bn/4×研究2026增长2倍，得到Q4收入尺度代理；15%未来环比另为研究假设。",
+        "sourceRefs": [
+          "cloud-openai-subprocessors",
+          "cloud-openai-business-scale",
+          "cloud-research-assumptions"
+        ],
+        "unidentified": [
+          "推理采购费用率",
+          "训练预算占比",
+          "Google训练/推理份额",
+          "未来增长",
+          "实际确认收入与运行率代理之差"
+        ]
+      },
+      "historicalAllocationBasis": "2025公司算力约1.9GW×研究2026增长2倍×研究GCP容量份额10%×92/90天×80%×2.7；关系不能验证这些份额。"
+    },
+    "otherAI": {
+      "relationshipVerified": true,
+      "verifiedPurchaseAmountBn": null,
+      "baseAllocationBn": 3.917498705318222,
+      "baseAllocationStatus": "research_allocation_not_disclosed",
+      "rationale": "汇总其他外部模型/应用客户的采购敏感性，不包含Google自身Search/Gemini消耗，也不包含Anthropic/OpenAI及对外TPU硬件。官方Cloud强劲增长只校准总规模，无法确定本组客户金额。",
+      "sourceRefs": [
+        "cloud-alphabet-2026q3"
+      ],
+      "scenarioIntervalMeaning": "用户可编辑压力测试范围，非统计置信区间。",
+      "demandBuild": {
+        "formula": "computeBudgetBn = quarterlyRevenueProxyBn × inferenceProcurementCostRate + trainingBudgetBn",
+        "quarterlyRevenueProxyBn": [
+          19.73099164766504,
+          22.1613914845312,
+          24.891160125181642,
+          27.957172852160323,
+          31.40084712623921
+        ],
+        "inferenceProcurementCostRate": 0.4,
+        "inferenceBudgetBn": [
+          7.892396659066016,
+          8.86455659381248,
+          9.956464050072658,
+          11.18286914086413,
+          12.560338850495684
+        ],
+        "trainingBudgetBn": [
+          6.45741544832674,
+          7.25281903130112,
+          8.146197859150355,
+          9.14962020616156,
+          10.276640877678286
+        ],
+        "trainingBudgetFormula": "推理预算 × trainingShare/(1-trainingShare)；训练占比是独立研究假设。",
+        "forwardQuarterGrowth": 0.12317677085194922,
+        "status": "derived_research_scenario_not_recognized_revenue",
+        "anchor": "从基期AI剩余分摊和研究Google份额反算预算尺度，再按近期总Cloud增长中位数外推；并非独立观察到的客户收入或预算。",
+        "sourceRefs": [
+          "cloud-alphabet-2026q3",
+          "cloud-research-assumptions"
+        ],
+        "unidentified": [
+          "推理采购费用率",
+          "训练预算占比",
+          "Google训练/推理份额",
+          "未来增长",
+          "实际确认收入与运行率代理之差"
+        ]
+      },
+      "historicalAllocationBasis": "官方Cloud总额扣除成熟增长反推企业基期、硬件加速分摊及两名客户情景后的残差，非客户实绩。"
+    }
+  },
+  "parameters": {
+    "enterprise": {
+      "baseRevenueBn": 18.672714325399827,
+      "sequentialGrowth": [
+        0.07294011358226593,
+        0.03027996349763551,
+        0.07907380292603361,
+        0.07227144857169332,
+        0.07294011358226593
+      ],
+      "googleOwnedAssetShare": 0.9,
+      "status": "historically_calibrated_research_proxy",
+      "baseRevenueReadonly": true,
+      "note": "基期余额含Workspace、普通企业GCP与未单列业务；它是官方总额减研究拆分的残差，不能称已披露企业收入。"
+    },
+    "customers": {
+      "Anthropic": {
+        "computeBudgetBn": [
+          14.885306026622347,
+          17.118101930615694,
+          19.685817220208044,
+          22.638689803239252,
+          26.03449327372514
+        ],
+        "trainingShare": 0.6,
+        "googleTrainingShare": 0.3,
+        "googleInferenceShare": 0.25,
+        "averageAcceptedCapacityGW": [
+          1.4,
+          1.8,
+          2.4,
+          3.0,
+          3.6
+        ],
+        "googleOwnedAssetShare": 0.8,
+        "baseRevenueBn": 2.208,
+        "utilization": 0.8,
+        "netServicePriceBnPerGWQuarter": 2.7,
+        "baseAverageAcceptedCapacityGW": 1.0,
+        "budgetMethod": "revenueAndTraining",
+        "commercialRevenueRunRateBn": [
+          59.54122410648938,
+          68.47240772246278,
+          78.74326888083219,
+          90.55475921295702,
+          104.13797309490056
+        ],
+        "inferenceCostRate": 0.4,
+        "trainingBudgetBn": [
+          8.931183615973408,
+          10.270861158369415,
+          11.811490332124826,
+          13.583213881943552,
+          15.620695964235084
+        ],
+        "serviceMethod": "contract",
+        "reservedBillingFraction": 0,
+        "status": "research_assumption",
+        "sourceRefs": [
+          "chain-anthropic-google-20251023",
+          "chain-anthropic-google-20260406",
+          "chain-anthropic-series-h-20260528",
+          "cloud-research-assumptions"
+        ],
+        "baseRevenueStatus": "estimated_allocation_not_disclosed",
+        "baseRevenueReadonly": true,
+        "baseAverageAcceptedCapacityReadonly": true,
+        "baseCapacityBasis": "基期拆分收入/(92天/90×研究利用率0.8×研究净价2.7)，仅是锁定尺度容量，不是已披露/已验收实绩。"
+      },
+      "OpenAI": {
+        "computeBudgetBn": [
+          11.25,
+          12.9375,
+          14.878124999999997,
+          17.109843749999996,
+          19.676320312499993
+        ],
+        "trainingShare": 0.6,
+        "googleTrainingShare": 0.06,
+        "googleInferenceShare": 0.11,
+        "averageAcceptedCapacityGW": [
+          0.55,
+          0.65,
+          0.75,
+          0.85,
+          1.0
+        ],
+        "googleOwnedAssetShare": 1.0,
+        "baseRevenueBn": 0.8390400000000001,
+        "utilization": 0.8,
+        "netServicePriceBnPerGWQuarter": 2.7,
+        "baseAverageAcceptedCapacityGW": 0.38,
+        "budgetMethod": "revenueAndTraining",
+        "commercialRevenueRunRateBn": [
+          40.0,
+          46.0,
+          52.89999999999999,
+          60.834999999999994,
+          69.96024999999997
+        ],
+        "inferenceCostRate": 0.45,
+        "trainingBudgetBn": [
+          6.749999999999999,
+          7.762499999999999,
+          8.926874999999997,
+          10.265906249999999,
+          11.805792187499994
+        ],
+        "serviceMethod": "contract",
+        "reservedBillingFraction": 0,
+        "status": "research_assumption",
+        "sourceRefs": [
+          "cloud-openai-subprocessors",
+          "cloud-openai-business-scale",
+          "cloud-research-assumptions"
+        ],
+        "baseRevenueStatus": "estimated_allocation_not_disclosed",
+        "baseRevenueReadonly": true,
+        "baseAverageAcceptedCapacityReadonly": true,
+        "baseCapacityBasis": "基期拆分收入/(92天/90×研究利用率0.8×研究净价2.7)，仅是锁定尺度容量，不是已披露/已验收实绩。"
+      },
+      "otherAI": {
+        "computeBudgetBn": [
+          14.349812107392756,
+          16.1173756251136,
+          18.102661909223013,
+          20.33248934702569,
+          22.836979728173972
+        ],
+        "trainingShare": 0.45,
+        "googleTrainingShare": 0.24,
+        "googleInferenceShare": 0.3,
+        "averageAcceptedCapacityGW": [
+          1.9,
+          2.3,
+          2.8,
+          3.3,
+          3.8
+        ],
+        "googleOwnedAssetShare": 0.8,
+        "baseRevenueBn": 3.917498705318222,
+        "utilization": 0.8,
+        "netServicePriceBnPerGWQuarter": 2.7,
+        "baseAverageAcceptedCapacityGW": 1.7742294861042671,
+        "budgetMethod": "revenueAndTraining",
+        "commercialRevenueRunRateBn": [
+          78.92396659066016,
+          88.6455659381248,
+          99.56464050072657,
+          111.82869140864129,
+          125.60338850495684
+        ],
+        "inferenceCostRate": 0.4,
+        "trainingBudgetBn": [
+          6.45741544832674,
+          7.25281903130112,
+          8.146197859150355,
+          9.14962020616156,
+          10.276640877678286
+        ],
+        "serviceMethod": "contract",
+        "reservedBillingFraction": 0,
+        "status": "research_assumption",
+        "sourceRefs": [
+          "cloud-alphabet-2026q3",
+          "cloud-research-assumptions"
+        ],
+        "baseRevenueStatus": "estimated_allocation_not_disclosed",
+        "baseRevenueReadonly": true,
+        "baseAverageAcceptedCapacityReadonly": true,
+        "baseCapacityBasis": "基期拆分收入/(92天/90×研究利用率0.8×研究净价2.7)，仅是锁定尺度容量，不是已披露/已验收实绩。"
+      }
+    },
+    "externalTPU": {
+      "baseRevenueBn": 5.07174696928195,
+      "recognitionFraction": 1,
+      "capacitySoldGW": [
+        0.5,
+        0.6,
+        0.75,
+        0.9,
+        1.05
+      ],
+      "netPriceBnPerGW": [
+        14.2857142857,
+        14.5,
+        15,
+        15.5,
+        16.0
+      ],
+      "status": "broker_anchored_research_assumption",
+      "baseRevenueReadonly": true,
+      "sourceRefs": [
+        "local-googl-barc-20260724",
+        "cloud-research-assumptions"
+      ],
+      "note": "只算Google对外TPU系统销售的收入情景，与TPU云服务分开；价格参考BARC外售行的GW×单价结构，原行名TPUaaS存在语义歧义，不是公司披露成交价。"
+    },
+    "capex": {
+      "baseCashCapexBn": 51.355,
+      "equipmentShare": 0.7,
+      "nonCloudShare": 0.4,
+      "equipmentIntensityBnPerIncrementalServiceRevenueBn": 1.7663929592882,
+      "facilityIntensityBnPerIncrementalServiceRevenueBn": 0.7570255539806573,
+      "enterpriseExpansionCalibrationShare": 0.4,
+      "aiEquipmentCostBnPerGW": 12.0,
+      "aiFacilityCostBnPerGW": 4.0,
+      "paymentLagQuarters": 0,
+      "equipmentPaymentLagQuarters": 0,
+      "facilityPaymentLagQuarters": 0,
+      "maintenanceRatio": 0.3,
+      "status": "historically_calibrated_research_proxy",
+      "baseCashCapexReadonly": true,
+      "calibrationFormula": "总扩容强度=最新现金capex×(1-非Cloud比例)×(1-维持比例)/(最近4季Cloud收入环比增量均值×基期服务自有资产比例)；其中40%作为企业增量收入强度，再按设备70%/设施30%拆分。AI客户独立使用自有验收GW增量×每GW设备/设施成本。",
+      "note": "非Cloud40%、维持30%、设备70%、企业强度分摊40%、自有资产比例及AI每GW设备12/设施4bn均为研究情景，不是分部或采购成本披露。集团历史只能校准规模，不能识别Cloud因果资本成本；AI预算/售价/利用率变化不直接改变投资；不含外售TPU库存成本。"
+    },
+    "global": {
+      "enterpriseGrowthAdjustment": 0,
+      "customerBudgetMultiplier": 1,
+      "googleShareMultiplier": 1,
+      "capacityMultiplier": 1,
+      "utilizationMultiplier": 1,
+      "netPriceMultiplier": 1,
+      "tpuVolumeMultiplier": 1,
+      "equipmentCostMultiplier": 1,
+      "facilityCostMultiplier": 1,
+      "nonCloudCapexMultiplier": 1
+    }
+  },
+  "parameterDefinitions": [
+    {
+      "path": "global.enterpriseGrowthAdjustment",
+      "label": "企业服务环比增速调整",
+      "value": 0,
+      "min": -0.25,
+      "max": 0.5,
+      "unit": "ratio",
+      "step": 0.005,
+      "group": "快捷调整",
+      "basis": "调整enterprise.sequentialGrowth，基准来自历史季节性尺度。",
+      "sourceRefs": [
+        "cloud-research-assumptions"
+      ],
+      "status": "scenario_control",
+      "readonly": false
+    },
+    {
+      "path": "global.customerBudgetMultiplier",
+      "label": "客户算力预算倍率",
+      "value": 1,
+      "min": 0,
+      "max": 10,
+      "unit": "multiple",
+      "step": 0.05,
+      "group": "快捷调整",
+      "basis": "共同缩放所有客户推理预算与训练预算，1保持明细参数。",
+      "sourceRefs": [
+        "cloud-research-assumptions"
+      ],
+      "status": "scenario_control",
+      "readonly": false
+    },
+    {
+      "path": "global.googleShareMultiplier",
+      "label": "Google采购份额倍率",
+      "value": 1,
+      "min": 0,
+      "max": 5,
+      "unit": "multiple",
+      "step": 0.05,
+      "group": "快捷调整",
+      "basis": "共同缩放各客户训练/推理Google采购比例，最终份额限制在0至100%。",
+      "sourceRefs": [
+        "cloud-research-assumptions"
+      ],
+      "status": "scenario_control",
+      "readonly": false
+    },
+    {
+      "path": "global.capacityMultiplier",
+      "label": "平均验收容量倍率",
+      "value": 1,
+      "min": 0,
+      "max": 10,
+      "unit": "multiple",
+      "step": 0.05,
+      "group": "快捷调整",
+      "basis": "缩放各客户未来平均验收容量，不改基期；由此影响服务上限及AI自有资产扩容。",
+      "sourceRefs": [
+        "cloud-research-assumptions"
+      ],
+      "status": "scenario_control",
+      "readonly": false
+    },
+    {
+      "path": "global.utilizationMultiplier",
+      "label": "利用率倍率",
+      "value": 1,
+      "min": 0,
+      "max": 2,
+      "unit": "multiple",
+      "step": 0.05,
+      "group": "快捷调整",
+      "basis": "缩放已验收容量利用率，有效利用率最高100%；默认 constrainedBudget 模式下，收入受需求与供给较小值限制。",
+      "sourceRefs": [
+        "cloud-research-assumptions"
+      ],
+      "status": "scenario_control",
+      "readonly": false
+    },
+    {
+      "path": "global.netPriceMultiplier",
+      "label": "服务净价倍率",
+      "value": 1,
+      "min": 0,
+      "max": 5,
+      "unit": "multiple",
+      "step": 0.05,
+      "group": "快捷调整",
+      "basis": "缩放服务情景净价，不改变自有GW设备投资。",
+      "sourceRefs": [
+        "cloud-research-assumptions"
+      ],
+      "status": "scenario_control",
+      "readonly": false
+    },
+    {
+      "path": "global.tpuVolumeMultiplier",
+      "label": "外售TPU交付倍率",
+      "value": 1,
+      "min": 0,
+      "max": 10,
+      "unit": "multiple",
+      "step": 0.05,
+      "group": "快捷调整",
+      "basis": "缩放外售硬件验收量，不与Google云服务容量重复计费。",
+      "sourceRefs": [
+        "cloud-research-assumptions"
+      ],
+      "status": "scenario_control",
+      "readonly": false
+    },
+    {
+      "path": "global.equipmentCostMultiplier",
+      "label": "自有设备成本倍率",
+      "value": 1,
+      "min": 0,
+      "max": 5,
+      "unit": "multiple",
+      "step": 0.05,
+      "group": "快捷调整",
+      "basis": "缩放 Cloud 维持投入设备部分、企业扩容设备投入及 AI 自有容量设备投入；不缩放非Cloud支出。",
+      "sourceRefs": [
+        "cloud-research-assumptions"
+      ],
+      "status": "scenario_control",
+      "readonly": false
+    },
+    {
+      "path": "global.facilityCostMultiplier",
+      "label": "自有设施成本倍率",
+      "value": 1,
+      "min": 0,
+      "max": 5,
+      "unit": "multiple",
+      "step": 0.05,
+      "group": "快捷调整",
+      "basis": "缩放 Cloud 维持投入设施部分、企业扩容设施投入及 AI 自有容量设施投入；不缩放非Cloud支出。",
+      "sourceRefs": [
+        "cloud-research-assumptions"
+      ],
+      "status": "scenario_control",
+      "readonly": false
+    },
+    {
+      "path": "global.nonCloudCapexMultiplier",
+      "label": "其他业务资本开支倍率",
+      "value": 1,
+      "min": 0,
+      "max": 5,
+      "unit": "multiple",
+      "step": 0.05,
+      "group": "快捷调整",
+      "basis": "缩放非Cloud现金capex基准，体现Search/Gemini等自用建设情景。",
+      "sourceRefs": [
+        "cloud-research-assumptions"
+      ],
+      "status": "scenario_control",
+      "readonly": false
+    },
+    {
+      "path": "enterprise.sequentialGrowth.0",
+      "label": "2026Q4企业/Workspace环比增速",
+      "value": 0.07294011358226593,
+      "min": -0.05,
+      "max": 0.3,
+      "unit": "ratio",
+      "step": 0.005,
+      "group": "企业与Workspace",
+      "basis": "2023–2024每个季度的Cloud环比增长中位数；两年各两点，作为企业/Workspace成熟业务增长的尺度代理，非已披露细分增速。",
+      "sourceRefs": [
+        "cloud-alphabet-2023q1",
+        "cloud-alphabet-2023q2",
+        "cloud-alphabet-2023q3",
+        "cloud-alphabet-2023q4",
+        "cloud-alphabet-2024q1",
+        "cloud-alphabet-2024q2",
+        "cloud-alphabet-2024q3",
+        "cloud-alphabet-2024q4",
+        "cloud-alphabet-2025q1",
+        "cloud-alphabet-2025q2",
+        "cloud-alphabet-2025q3",
+        "cloud-alphabet-2025q4",
+        "cloud-alphabet-2026q1",
+        "cloud-alphabet-2026q2",
+        "cloud-alphabet-2026q3"
+      ],
+      "status": "historically_calibrated_proxy",
+      "readonly": false
+    },
+    {
+      "path": "enterprise.sequentialGrowth.1",
+      "label": "2027Q1企业/Workspace环比增速",
+      "value": 0.03027996349763551,
+      "min": -0.05,
+      "max": 0.3,
+      "unit": "ratio",
+      "step": 0.005,
+      "group": "企业与Workspace",
+      "basis": "2023–2024每个季度的Cloud环比增长中位数；两年各两点，作为企业/Workspace成熟业务增长的尺度代理，非已披露细分增速。",
+      "sourceRefs": [
+        "cloud-alphabet-2023q1",
+        "cloud-alphabet-2023q2",
+        "cloud-alphabet-2023q3",
+        "cloud-alphabet-2023q4",
+        "cloud-alphabet-2024q1",
+        "cloud-alphabet-2024q2",
+        "cloud-alphabet-2024q3",
+        "cloud-alphabet-2024q4",
+        "cloud-alphabet-2025q1",
+        "cloud-alphabet-2025q2",
+        "cloud-alphabet-2025q3",
+        "cloud-alphabet-2025q4",
+        "cloud-alphabet-2026q1",
+        "cloud-alphabet-2026q2",
+        "cloud-alphabet-2026q3"
+      ],
+      "status": "historically_calibrated_proxy",
+      "readonly": false
+    },
+    {
+      "path": "enterprise.sequentialGrowth.2",
+      "label": "2027Q2企业/Workspace环比增速",
+      "value": 0.07907380292603361,
+      "min": -0.05,
+      "max": 0.3,
+      "unit": "ratio",
+      "step": 0.005,
+      "group": "企业与Workspace",
+      "basis": "2023–2024每个季度的Cloud环比增长中位数；两年各两点，作为企业/Workspace成熟业务增长的尺度代理，非已披露细分增速。",
+      "sourceRefs": [
+        "cloud-alphabet-2023q1",
+        "cloud-alphabet-2023q2",
+        "cloud-alphabet-2023q3",
+        "cloud-alphabet-2023q4",
+        "cloud-alphabet-2024q1",
+        "cloud-alphabet-2024q2",
+        "cloud-alphabet-2024q3",
+        "cloud-alphabet-2024q4",
+        "cloud-alphabet-2025q1",
+        "cloud-alphabet-2025q2",
+        "cloud-alphabet-2025q3",
+        "cloud-alphabet-2025q4",
+        "cloud-alphabet-2026q1",
+        "cloud-alphabet-2026q2",
+        "cloud-alphabet-2026q3"
+      ],
+      "status": "historically_calibrated_proxy",
+      "readonly": false
+    },
+    {
+      "path": "enterprise.sequentialGrowth.3",
+      "label": "2027Q3企业/Workspace环比增速",
+      "value": 0.07227144857169332,
+      "min": -0.05,
+      "max": 0.3,
+      "unit": "ratio",
+      "step": 0.005,
+      "group": "企业与Workspace",
+      "basis": "2023–2024每个季度的Cloud环比增长中位数；两年各两点，作为企业/Workspace成熟业务增长的尺度代理，非已披露细分增速。",
+      "sourceRefs": [
+        "cloud-alphabet-2023q1",
+        "cloud-alphabet-2023q2",
+        "cloud-alphabet-2023q3",
+        "cloud-alphabet-2023q4",
+        "cloud-alphabet-2024q1",
+        "cloud-alphabet-2024q2",
+        "cloud-alphabet-2024q3",
+        "cloud-alphabet-2024q4",
+        "cloud-alphabet-2025q1",
+        "cloud-alphabet-2025q2",
+        "cloud-alphabet-2025q3",
+        "cloud-alphabet-2025q4",
+        "cloud-alphabet-2026q1",
+        "cloud-alphabet-2026q2",
+        "cloud-alphabet-2026q3"
+      ],
+      "status": "historically_calibrated_proxy",
+      "readonly": false
+    },
+    {
+      "path": "enterprise.sequentialGrowth.4",
+      "label": "2027Q4企业/Workspace环比增速",
+      "value": 0.07294011358226593,
+      "min": -0.05,
+      "max": 0.3,
+      "unit": "ratio",
+      "step": 0.005,
+      "group": "企业与Workspace",
+      "basis": "2023–2024每个季度的Cloud环比增长中位数；两年各两点，作为企业/Workspace成熟业务增长的尺度代理，非已披露细分增速。",
+      "sourceRefs": [
+        "cloud-alphabet-2023q1",
+        "cloud-alphabet-2023q2",
+        "cloud-alphabet-2023q3",
+        "cloud-alphabet-2023q4",
+        "cloud-alphabet-2024q1",
+        "cloud-alphabet-2024q2",
+        "cloud-alphabet-2024q3",
+        "cloud-alphabet-2024q4",
+        "cloud-alphabet-2025q1",
+        "cloud-alphabet-2025q2",
+        "cloud-alphabet-2025q3",
+        "cloud-alphabet-2025q4",
+        "cloud-alphabet-2026q1",
+        "cloud-alphabet-2026q2",
+        "cloud-alphabet-2026q3"
+      ],
+      "status": "historically_calibrated_proxy",
+      "readonly": false
+    },
+    {
+      "path": "enterprise.googleOwnedAssetShare",
+      "label": "企业服务自有资产比例",
+      "value": 0.9,
+      "min": 0,
+      "max": 1,
+      "unit": "ratio",
+      "step": 0.05,
+      "group": "资本开支",
+      "basis": "研究假设；剩余部分代表第三方租用或非自有资产服务。",
+      "sourceRefs": [
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.Anthropic.reservedBillingFraction",
+      "label": "已验收容量最低计费比例",
+      "value": 0,
+      "min": 0,
+      "max": 1,
+      "unit": "ratio",
+      "step": 0.05,
+      "group": "Anthropic",
+      "basis": "合同条款未披露；初始0%仅表示本情景不计保底，并非确认没有最低承诺。按满额计费金额的比例设置，保底已包含对应使用量，不再重复计费。",
+      "sourceRefs": [
+        "chain-anthropic-google-20251023",
+        "chain-anthropic-google-20260406",
+        "chain-anthropic-series-h-20260528",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.Anthropic.computeBudgetBn.0",
+      "label": "2026Q4总算力采购预算（派生）",
+      "value": 14.885306026622347,
+      "min": 0,
+      "max": 29.770612053244694,
+      "unit": "USD bn",
+      "step": 0.5,
+      "group": "Anthropic",
+      "basis": "2026>1GW计划与2027起新增5GW为容量和日期锚；仅假设部分逐季验收。算力预算及Google份额没有官方金额验证，不能由47bn运行率或融资65bn推出。",
+      "sourceRefs": [
+        "chain-anthropic-google-20251023",
+        "chain-anthropic-google-20260406",
+        "chain-anthropic-series-h-20260528",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": true
+    },
+    {
+      "path": "customers.Anthropic.commercialRevenueRunRateBn.0",
+      "label": "2026Q4平均年化收入运行率情景",
+      "value": 59.54122410648938,
+      "min": 0,
+      "max": 178.62367231946814,
+      "unit": "USD bn annualized",
+      "step": 1,
+      "group": "Anthropic",
+      "basis": "2026-05官方运行率47bn/4×研究年增长1.5倍^(7/12)，得到Q4运行率尺度代理；15%未来环比另为研究假设。 这里是季度平均运行率情景，不是确认收入、当前真实ARR或Google订单。",
+      "sourceRefs": [
+        "chain-anthropic-google-20251023",
+        "chain-anthropic-google-20260406",
+        "chain-anthropic-series-h-20260528",
+        "cloud-research-assumptions"
+      ],
+      "status": "disclosure_anchored_research_proxy",
+      "readonly": false
+    },
+    {
+      "path": "customers.Anthropic.trainingBudgetBn.0",
+      "label": "2026Q4训练采购预算",
+      "value": 8.931183615973408,
+      "min": 0,
+      "max": 26.793550847920223,
+      "unit": "USD bn",
+      "step": 0.5,
+      "group": "Anthropic",
+      "basis": "初值按推理预算×训练占比/(1-训练占比)设置；可独立调整，训练预算没有公司原始财务表核验。",
+      "sourceRefs": [
+        "chain-anthropic-google-20251023",
+        "chain-anthropic-google-20260406",
+        "chain-anthropic-series-h-20260528",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.Anthropic.averageAcceptedCapacityGW.0",
+      "label": "2026Q4平均验收且可收费容量",
+      "value": 1.4,
+      "min": 0,
+      "max": 5,
+      "unit": "GW",
+      "step": 0.05,
+      "group": "Anthropic",
+      "basis": "Google服务容量的情景，不是芯片出货；季度平均值，不是季末容量。2026>1GW计划与2027起新增5GW为容量和日期锚；仅假设部分逐季验收。算力预算及Google份额没有官方金额验证，不能由47bn运行率或融资65bn推出。",
+      "sourceRefs": [
+        "chain-anthropic-google-20251023",
+        "chain-anthropic-google-20260406",
+        "chain-anthropic-series-h-20260528",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.Anthropic.computeBudgetBn.1",
+      "label": "2027Q1总算力采购预算（派生）",
+      "value": 17.118101930615694,
+      "min": 0,
+      "max": 34.23620386123139,
+      "unit": "USD bn",
+      "step": 0.5,
+      "group": "Anthropic",
+      "basis": "2026>1GW计划与2027起新增5GW为容量和日期锚；仅假设部分逐季验收。算力预算及Google份额没有官方金额验证，不能由47bn运行率或融资65bn推出。",
+      "sourceRefs": [
+        "chain-anthropic-google-20251023",
+        "chain-anthropic-google-20260406",
+        "chain-anthropic-series-h-20260528",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": true
+    },
+    {
+      "path": "customers.Anthropic.commercialRevenueRunRateBn.1",
+      "label": "2027Q1平均年化收入运行率情景",
+      "value": 68.47240772246278,
+      "min": 0,
+      "max": 205.41722316738833,
+      "unit": "USD bn annualized",
+      "step": 1,
+      "group": "Anthropic",
+      "basis": "2026-05官方运行率47bn/4×研究年增长1.5倍^(7/12)，得到Q4运行率尺度代理；15%未来环比另为研究假设。 这里是季度平均运行率情景，不是确认收入、当前真实ARR或Google订单。",
+      "sourceRefs": [
+        "chain-anthropic-google-20251023",
+        "chain-anthropic-google-20260406",
+        "chain-anthropic-series-h-20260528",
+        "cloud-research-assumptions"
+      ],
+      "status": "disclosure_anchored_research_proxy",
+      "readonly": false
+    },
+    {
+      "path": "customers.Anthropic.trainingBudgetBn.1",
+      "label": "2027Q1训练采购预算",
+      "value": 10.270861158369415,
+      "min": 0,
+      "max": 30.812583475108248,
+      "unit": "USD bn",
+      "step": 0.5,
+      "group": "Anthropic",
+      "basis": "初值按推理预算×训练占比/(1-训练占比)设置；可独立调整，训练预算没有公司原始财务表核验。",
+      "sourceRefs": [
+        "chain-anthropic-google-20251023",
+        "chain-anthropic-google-20260406",
+        "chain-anthropic-series-h-20260528",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.Anthropic.averageAcceptedCapacityGW.1",
+      "label": "2027Q1平均验收且可收费容量",
+      "value": 1.8,
+      "min": 0,
+      "max": 5,
+      "unit": "GW",
+      "step": 0.05,
+      "group": "Anthropic",
+      "basis": "Google服务容量的情景，不是芯片出货；季度平均值，不是季末容量。2026>1GW计划与2027起新增5GW为容量和日期锚；仅假设部分逐季验收。算力预算及Google份额没有官方金额验证，不能由47bn运行率或融资65bn推出。",
+      "sourceRefs": [
+        "chain-anthropic-google-20251023",
+        "chain-anthropic-google-20260406",
+        "chain-anthropic-series-h-20260528",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.Anthropic.computeBudgetBn.2",
+      "label": "2027Q2总算力采购预算（派生）",
+      "value": 19.685817220208044,
+      "min": 0,
+      "max": 39.37163444041609,
+      "unit": "USD bn",
+      "step": 0.5,
+      "group": "Anthropic",
+      "basis": "2026>1GW计划与2027起新增5GW为容量和日期锚；仅假设部分逐季验收。算力预算及Google份额没有官方金额验证，不能由47bn运行率或融资65bn推出。",
+      "sourceRefs": [
+        "chain-anthropic-google-20251023",
+        "chain-anthropic-google-20260406",
+        "chain-anthropic-series-h-20260528",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": true
+    },
+    {
+      "path": "customers.Anthropic.commercialRevenueRunRateBn.2",
+      "label": "2027Q2平均年化收入运行率情景",
+      "value": 78.74326888083219,
+      "min": 0,
+      "max": 236.22980664249656,
+      "unit": "USD bn annualized",
+      "step": 1,
+      "group": "Anthropic",
+      "basis": "2026-05官方运行率47bn/4×研究年增长1.5倍^(7/12)，得到Q4运行率尺度代理；15%未来环比另为研究假设。 这里是季度平均运行率情景，不是确认收入、当前真实ARR或Google订单。",
+      "sourceRefs": [
+        "chain-anthropic-google-20251023",
+        "chain-anthropic-google-20260406",
+        "chain-anthropic-series-h-20260528",
+        "cloud-research-assumptions"
+      ],
+      "status": "disclosure_anchored_research_proxy",
+      "readonly": false
+    },
+    {
+      "path": "customers.Anthropic.trainingBudgetBn.2",
+      "label": "2027Q2训练采购预算",
+      "value": 11.811490332124826,
+      "min": 0,
+      "max": 35.43447099637448,
+      "unit": "USD bn",
+      "step": 0.5,
+      "group": "Anthropic",
+      "basis": "初值按推理预算×训练占比/(1-训练占比)设置；可独立调整，训练预算没有公司原始财务表核验。",
+      "sourceRefs": [
+        "chain-anthropic-google-20251023",
+        "chain-anthropic-google-20260406",
+        "chain-anthropic-series-h-20260528",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.Anthropic.averageAcceptedCapacityGW.2",
+      "label": "2027Q2平均验收且可收费容量",
+      "value": 2.4,
+      "min": 0,
+      "max": 5,
+      "unit": "GW",
+      "step": 0.05,
+      "group": "Anthropic",
+      "basis": "Google服务容量的情景，不是芯片出货；季度平均值，不是季末容量。2026>1GW计划与2027起新增5GW为容量和日期锚；仅假设部分逐季验收。算力预算及Google份额没有官方金额验证，不能由47bn运行率或融资65bn推出。",
+      "sourceRefs": [
+        "chain-anthropic-google-20251023",
+        "chain-anthropic-google-20260406",
+        "chain-anthropic-series-h-20260528",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.Anthropic.computeBudgetBn.3",
+      "label": "2027Q3总算力采购预算（派生）",
+      "value": 22.638689803239252,
+      "min": 0,
+      "max": 45.277379606478505,
+      "unit": "USD bn",
+      "step": 0.5,
+      "group": "Anthropic",
+      "basis": "2026>1GW计划与2027起新增5GW为容量和日期锚；仅假设部分逐季验收。算力预算及Google份额没有官方金额验证，不能由47bn运行率或融资65bn推出。",
+      "sourceRefs": [
+        "chain-anthropic-google-20251023",
+        "chain-anthropic-google-20260406",
+        "chain-anthropic-series-h-20260528",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": true
+    },
+    {
+      "path": "customers.Anthropic.commercialRevenueRunRateBn.3",
+      "label": "2027Q3平均年化收入运行率情景",
+      "value": 90.55475921295702,
+      "min": 0,
+      "max": 271.66427763887106,
+      "unit": "USD bn annualized",
+      "step": 1,
+      "group": "Anthropic",
+      "basis": "2026-05官方运行率47bn/4×研究年增长1.5倍^(7/12)，得到Q4运行率尺度代理；15%未来环比另为研究假设。 这里是季度平均运行率情景，不是确认收入、当前真实ARR或Google订单。",
+      "sourceRefs": [
+        "chain-anthropic-google-20251023",
+        "chain-anthropic-google-20260406",
+        "chain-anthropic-series-h-20260528",
+        "cloud-research-assumptions"
+      ],
+      "status": "disclosure_anchored_research_proxy",
+      "readonly": false
+    },
+    {
+      "path": "customers.Anthropic.trainingBudgetBn.3",
+      "label": "2027Q3训练采购预算",
+      "value": 13.583213881943552,
+      "min": 0,
+      "max": 40.74964164583066,
+      "unit": "USD bn",
+      "step": 0.5,
+      "group": "Anthropic",
+      "basis": "初值按推理预算×训练占比/(1-训练占比)设置；可独立调整，训练预算没有公司原始财务表核验。",
+      "sourceRefs": [
+        "chain-anthropic-google-20251023",
+        "chain-anthropic-google-20260406",
+        "chain-anthropic-series-h-20260528",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.Anthropic.averageAcceptedCapacityGW.3",
+      "label": "2027Q3平均验收且可收费容量",
+      "value": 3.0,
+      "min": 0,
+      "max": 6.0,
+      "unit": "GW",
+      "step": 0.05,
+      "group": "Anthropic",
+      "basis": "Google服务容量的情景，不是芯片出货；季度平均值，不是季末容量。2026>1GW计划与2027起新增5GW为容量和日期锚；仅假设部分逐季验收。算力预算及Google份额没有官方金额验证，不能由47bn运行率或融资65bn推出。",
+      "sourceRefs": [
+        "chain-anthropic-google-20251023",
+        "chain-anthropic-google-20260406",
+        "chain-anthropic-series-h-20260528",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.Anthropic.computeBudgetBn.4",
+      "label": "2027Q4总算力采购预算（派生）",
+      "value": 26.03449327372514,
+      "min": 0,
+      "max": 52.06898654745028,
+      "unit": "USD bn",
+      "step": 0.5,
+      "group": "Anthropic",
+      "basis": "2026>1GW计划与2027起新增5GW为容量和日期锚；仅假设部分逐季验收。算力预算及Google份额没有官方金额验证，不能由47bn运行率或融资65bn推出。",
+      "sourceRefs": [
+        "chain-anthropic-google-20251023",
+        "chain-anthropic-google-20260406",
+        "chain-anthropic-series-h-20260528",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": true
+    },
+    {
+      "path": "customers.Anthropic.commercialRevenueRunRateBn.4",
+      "label": "2027Q4平均年化收入运行率情景",
+      "value": 104.13797309490056,
+      "min": 0,
+      "max": 312.4139192847017,
+      "unit": "USD bn annualized",
+      "step": 1,
+      "group": "Anthropic",
+      "basis": "2026-05官方运行率47bn/4×研究年增长1.5倍^(7/12)，得到Q4运行率尺度代理；15%未来环比另为研究假设。 这里是季度平均运行率情景，不是确认收入、当前真实ARR或Google订单。",
+      "sourceRefs": [
+        "chain-anthropic-google-20251023",
+        "chain-anthropic-google-20260406",
+        "chain-anthropic-series-h-20260528",
+        "cloud-research-assumptions"
+      ],
+      "status": "disclosure_anchored_research_proxy",
+      "readonly": false
+    },
+    {
+      "path": "customers.Anthropic.trainingBudgetBn.4",
+      "label": "2027Q4训练采购预算",
+      "value": 15.620695964235084,
+      "min": 0,
+      "max": 46.862087892705254,
+      "unit": "USD bn",
+      "step": 0.5,
+      "group": "Anthropic",
+      "basis": "初值按推理预算×训练占比/(1-训练占比)设置；可独立调整，训练预算没有公司原始财务表核验。",
+      "sourceRefs": [
+        "chain-anthropic-google-20251023",
+        "chain-anthropic-google-20260406",
+        "chain-anthropic-series-h-20260528",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.Anthropic.averageAcceptedCapacityGW.4",
+      "label": "2027Q4平均验收且可收费容量",
+      "value": 3.6,
+      "min": 0,
+      "max": 7.2,
+      "unit": "GW",
+      "step": 0.05,
+      "group": "Anthropic",
+      "basis": "Google服务容量的情景，不是芯片出货；季度平均值，不是季末容量。2026>1GW计划与2027起新增5GW为容量和日期锚；仅假设部分逐季验收。算力预算及Google份额没有官方金额验证，不能由47bn运行率或融资65bn推出。",
+      "sourceRefs": [
+        "chain-anthropic-google-20251023",
+        "chain-anthropic-google-20260406",
+        "chain-anthropic-series-h-20260528",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.Anthropic.googleTrainingShare",
+      "label": "训练采购Google比例",
+      "value": 0.3,
+      "min": 0,
+      "max": 1,
+      "unit": "ratio",
+      "step": 0.01,
+      "group": "Anthropic",
+      "basis": "未披露参数；可独立压力测试，不是由客户关系推算的实绩。",
+      "sourceRefs": [
+        "chain-anthropic-google-20251023",
+        "chain-anthropic-google-20260406",
+        "chain-anthropic-series-h-20260528",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.Anthropic.googleInferenceShare",
+      "label": "推理采购Google比例",
+      "value": 0.25,
+      "min": 0,
+      "max": 1,
+      "unit": "ratio",
+      "step": 0.01,
+      "group": "Anthropic",
+      "basis": "未披露参数；可独立压力测试，不是由客户关系推算的实绩。",
+      "sourceRefs": [
+        "chain-anthropic-google-20251023",
+        "chain-anthropic-google-20260406",
+        "chain-anthropic-series-h-20260528",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.Anthropic.utilization",
+      "label": "已上线容量利用率",
+      "value": 0.8,
+      "min": 0,
+      "max": 1,
+      "unit": "ratio",
+      "step": 0.01,
+      "group": "Anthropic",
+      "basis": "未披露参数；可独立压力测试，不是由客户关系推算的实绩。",
+      "sourceRefs": [
+        "chain-anthropic-google-20251023",
+        "chain-anthropic-google-20260406",
+        "chain-anthropic-series-h-20260528",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.Anthropic.googleOwnedAssetShare",
+      "label": "服务中Google自有资产比例",
+      "value": 0.8,
+      "min": 0,
+      "max": 1,
+      "unit": "ratio",
+      "step": 0.01,
+      "group": "Anthropic",
+      "basis": "未披露参数；可独立压力测试，不是由客户关系推算的实绩。",
+      "sourceRefs": [
+        "chain-anthropic-google-20251023",
+        "chain-anthropic-google-20260406",
+        "chain-anthropic-series-h-20260528",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.Anthropic.inferenceCostRate",
+      "label": "推理采购费用/收入代理",
+      "value": 0.4,
+      "min": 0,
+      "max": 3,
+      "unit": "ratio",
+      "step": 0.05,
+      "group": "Anthropic",
+      "basis": "推理采购费用率没有公司成本表核验；训练另列。该比率不可等同毛利率的补数，也不可由全口径compute费用率替代。",
+      "sourceRefs": [
+        "chain-anthropic-google-20251023",
+        "chain-anthropic-google-20260406",
+        "chain-anthropic-series-h-20260528",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.Anthropic.netServicePriceBnPerGWQuarter",
+      "label": "季度净服务单价",
+      "value": 2.7,
+      "min": 0.5,
+      "max": 5,
+      "unit": "USD bn/GW/quarter",
+      "step": 0.1,
+      "group": "Anthropic",
+      "basis": "引擎定义为90天、100%利用率的情景净价，再乘季度天数/90和利用率。BARC2.7是每平均GW的有效季度收入，原表未披露利用率；本模型再乘80%是额外实现折扣，并非复现BARC公式或公开满载费率。客户净价、GPU/TPU混合和折扣未披露。",
+      "sourceRefs": [
+        "local-googl-barc-20260724",
+        "cloud-research-assumptions"
+      ],
+      "status": "broker_anchored_research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.OpenAI.reservedBillingFraction",
+      "label": "已验收容量最低计费比例",
+      "value": 0,
+      "min": 0,
+      "max": 1,
+      "unit": "ratio",
+      "step": 0.05,
+      "group": "OpenAI",
+      "basis": "合同条款未披露；初始0%仅表示本情景不计保底，并非确认没有最低承诺。按满额计费金额的比例设置，保底已包含对应使用量，不再重复计费。",
+      "sourceRefs": [
+        "cloud-openai-subprocessors",
+        "cloud-openai-business-scale",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.OpenAI.computeBudgetBn.0",
+      "label": "2026Q4总算力采购预算（派生）",
+      "value": 11.25,
+      "min": 0,
+      "max": 22.5,
+      "unit": "USD bn",
+      "step": 0.5,
+      "group": "OpenAI",
+      "basis": "官方确认GCP基础设施关系、2025全公司ARR20+bn和约1.9GW。2026规模外推2倍低于2023–2025每年约3倍历史，但仍是假设；Google份额和容量均未披露，金额可降至0。不把ChatGPT活跃度、Gemini流量直接转换成采购。",
+      "sourceRefs": [
+        "cloud-openai-subprocessors",
+        "cloud-openai-business-scale",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": true
+    },
+    {
+      "path": "customers.OpenAI.commercialRevenueRunRateBn.0",
+      "label": "2026Q4平均年化收入运行率情景",
+      "value": 40.0,
+      "min": 0,
+      "max": 120.0,
+      "unit": "USD bn annualized",
+      "step": 1,
+      "group": "OpenAI",
+      "basis": "2025官方ARR下界20bn/4×研究2026增长2倍，得到Q4收入尺度代理；15%未来环比另为研究假设。 这里是季度平均运行率情景，不是确认收入、当前真实ARR或Google订单。",
+      "sourceRefs": [
+        "cloud-openai-subprocessors",
+        "cloud-openai-business-scale",
+        "cloud-research-assumptions"
+      ],
+      "status": "disclosure_anchored_research_proxy",
+      "readonly": false
+    },
+    {
+      "path": "customers.OpenAI.trainingBudgetBn.0",
+      "label": "2026Q4训练采购预算",
+      "value": 6.749999999999999,
+      "min": 0,
+      "max": 20.249999999999996,
+      "unit": "USD bn",
+      "step": 0.5,
+      "group": "OpenAI",
+      "basis": "初值按推理预算×训练占比/(1-训练占比)设置；可独立调整，训练预算没有公司原始财务表核验。",
+      "sourceRefs": [
+        "cloud-openai-subprocessors",
+        "cloud-openai-business-scale",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.OpenAI.averageAcceptedCapacityGW.0",
+      "label": "2026Q4平均验收且可收费容量",
+      "value": 0.55,
+      "min": 0,
+      "max": 5,
+      "unit": "GW",
+      "step": 0.05,
+      "group": "OpenAI",
+      "basis": "Google服务容量的情景，不是芯片出货；季度平均值，不是季末容量。官方确认GCP基础设施关系、2025全公司ARR20+bn和约1.9GW。2026规模外推2倍低于2023–2025每年约3倍历史，但仍是假设；Google份额和容量均未披露，金额可降至0。不把ChatGPT活跃度、Gemini流量直接转换成采购。",
+      "sourceRefs": [
+        "cloud-openai-subprocessors",
+        "cloud-openai-business-scale",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.OpenAI.computeBudgetBn.1",
+      "label": "2027Q1总算力采购预算（派生）",
+      "value": 12.9375,
+      "min": 0,
+      "max": 25.875,
+      "unit": "USD bn",
+      "step": 0.5,
+      "group": "OpenAI",
+      "basis": "官方确认GCP基础设施关系、2025全公司ARR20+bn和约1.9GW。2026规模外推2倍低于2023–2025每年约3倍历史，但仍是假设；Google份额和容量均未披露，金额可降至0。不把ChatGPT活跃度、Gemini流量直接转换成采购。",
+      "sourceRefs": [
+        "cloud-openai-subprocessors",
+        "cloud-openai-business-scale",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": true
+    },
+    {
+      "path": "customers.OpenAI.commercialRevenueRunRateBn.1",
+      "label": "2027Q1平均年化收入运行率情景",
+      "value": 46.0,
+      "min": 0,
+      "max": 138.0,
+      "unit": "USD bn annualized",
+      "step": 1,
+      "group": "OpenAI",
+      "basis": "2025官方ARR下界20bn/4×研究2026增长2倍，得到Q4收入尺度代理；15%未来环比另为研究假设。 这里是季度平均运行率情景，不是确认收入、当前真实ARR或Google订单。",
+      "sourceRefs": [
+        "cloud-openai-subprocessors",
+        "cloud-openai-business-scale",
+        "cloud-research-assumptions"
+      ],
+      "status": "disclosure_anchored_research_proxy",
+      "readonly": false
+    },
+    {
+      "path": "customers.OpenAI.trainingBudgetBn.1",
+      "label": "2027Q1训练采购预算",
+      "value": 7.762499999999999,
+      "min": 0,
+      "max": 23.287499999999998,
+      "unit": "USD bn",
+      "step": 0.5,
+      "group": "OpenAI",
+      "basis": "初值按推理预算×训练占比/(1-训练占比)设置；可独立调整，训练预算没有公司原始财务表核验。",
+      "sourceRefs": [
+        "cloud-openai-subprocessors",
+        "cloud-openai-business-scale",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.OpenAI.averageAcceptedCapacityGW.1",
+      "label": "2027Q1平均验收且可收费容量",
+      "value": 0.65,
+      "min": 0,
+      "max": 5,
+      "unit": "GW",
+      "step": 0.05,
+      "group": "OpenAI",
+      "basis": "Google服务容量的情景，不是芯片出货；季度平均值，不是季末容量。官方确认GCP基础设施关系、2025全公司ARR20+bn和约1.9GW。2026规模外推2倍低于2023–2025每年约3倍历史，但仍是假设；Google份额和容量均未披露，金额可降至0。不把ChatGPT活跃度、Gemini流量直接转换成采购。",
+      "sourceRefs": [
+        "cloud-openai-subprocessors",
+        "cloud-openai-business-scale",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.OpenAI.computeBudgetBn.2",
+      "label": "2027Q2总算力采购预算（派生）",
+      "value": 14.878124999999997,
+      "min": 0,
+      "max": 29.756249999999994,
+      "unit": "USD bn",
+      "step": 0.5,
+      "group": "OpenAI",
+      "basis": "官方确认GCP基础设施关系、2025全公司ARR20+bn和约1.9GW。2026规模外推2倍低于2023–2025每年约3倍历史，但仍是假设；Google份额和容量均未披露，金额可降至0。不把ChatGPT活跃度、Gemini流量直接转换成采购。",
+      "sourceRefs": [
+        "cloud-openai-subprocessors",
+        "cloud-openai-business-scale",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": true
+    },
+    {
+      "path": "customers.OpenAI.commercialRevenueRunRateBn.2",
+      "label": "2027Q2平均年化收入运行率情景",
+      "value": 52.89999999999999,
+      "min": 0,
+      "max": 158.7,
+      "unit": "USD bn annualized",
+      "step": 1,
+      "group": "OpenAI",
+      "basis": "2025官方ARR下界20bn/4×研究2026增长2倍，得到Q4收入尺度代理；15%未来环比另为研究假设。 这里是季度平均运行率情景，不是确认收入、当前真实ARR或Google订单。",
+      "sourceRefs": [
+        "cloud-openai-subprocessors",
+        "cloud-openai-business-scale",
+        "cloud-research-assumptions"
+      ],
+      "status": "disclosure_anchored_research_proxy",
+      "readonly": false
+    },
+    {
+      "path": "customers.OpenAI.trainingBudgetBn.2",
+      "label": "2027Q2训练采购预算",
+      "value": 8.926874999999997,
+      "min": 0,
+      "max": 26.780624999999993,
+      "unit": "USD bn",
+      "step": 0.5,
+      "group": "OpenAI",
+      "basis": "初值按推理预算×训练占比/(1-训练占比)设置；可独立调整，训练预算没有公司原始财务表核验。",
+      "sourceRefs": [
+        "cloud-openai-subprocessors",
+        "cloud-openai-business-scale",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.OpenAI.averageAcceptedCapacityGW.2",
+      "label": "2027Q2平均验收且可收费容量",
+      "value": 0.75,
+      "min": 0,
+      "max": 5,
+      "unit": "GW",
+      "step": 0.05,
+      "group": "OpenAI",
+      "basis": "Google服务容量的情景，不是芯片出货；季度平均值，不是季末容量。官方确认GCP基础设施关系、2025全公司ARR20+bn和约1.9GW。2026规模外推2倍低于2023–2025每年约3倍历史，但仍是假设；Google份额和容量均未披露，金额可降至0。不把ChatGPT活跃度、Gemini流量直接转换成采购。",
+      "sourceRefs": [
+        "cloud-openai-subprocessors",
+        "cloud-openai-business-scale",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.OpenAI.computeBudgetBn.3",
+      "label": "2027Q3总算力采购预算（派生）",
+      "value": 17.109843749999996,
+      "min": 0,
+      "max": 34.21968749999999,
+      "unit": "USD bn",
+      "step": 0.5,
+      "group": "OpenAI",
+      "basis": "官方确认GCP基础设施关系、2025全公司ARR20+bn和约1.9GW。2026规模外推2倍低于2023–2025每年约3倍历史，但仍是假设；Google份额和容量均未披露，金额可降至0。不把ChatGPT活跃度、Gemini流量直接转换成采购。",
+      "sourceRefs": [
+        "cloud-openai-subprocessors",
+        "cloud-openai-business-scale",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": true
+    },
+    {
+      "path": "customers.OpenAI.commercialRevenueRunRateBn.3",
+      "label": "2027Q3平均年化收入运行率情景",
+      "value": 60.834999999999994,
+      "min": 0,
+      "max": 182.505,
+      "unit": "USD bn annualized",
+      "step": 1,
+      "group": "OpenAI",
+      "basis": "2025官方ARR下界20bn/4×研究2026增长2倍，得到Q4收入尺度代理；15%未来环比另为研究假设。 这里是季度平均运行率情景，不是确认收入、当前真实ARR或Google订单。",
+      "sourceRefs": [
+        "cloud-openai-subprocessors",
+        "cloud-openai-business-scale",
+        "cloud-research-assumptions"
+      ],
+      "status": "disclosure_anchored_research_proxy",
+      "readonly": false
+    },
+    {
+      "path": "customers.OpenAI.trainingBudgetBn.3",
+      "label": "2027Q3训练采购预算",
+      "value": 10.265906249999999,
+      "min": 0,
+      "max": 30.797718749999994,
+      "unit": "USD bn",
+      "step": 0.5,
+      "group": "OpenAI",
+      "basis": "初值按推理预算×训练占比/(1-训练占比)设置；可独立调整，训练预算没有公司原始财务表核验。",
+      "sourceRefs": [
+        "cloud-openai-subprocessors",
+        "cloud-openai-business-scale",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.OpenAI.averageAcceptedCapacityGW.3",
+      "label": "2027Q3平均验收且可收费容量",
+      "value": 0.85,
+      "min": 0,
+      "max": 5,
+      "unit": "GW",
+      "step": 0.05,
+      "group": "OpenAI",
+      "basis": "Google服务容量的情景，不是芯片出货；季度平均值，不是季末容量。官方确认GCP基础设施关系、2025全公司ARR20+bn和约1.9GW。2026规模外推2倍低于2023–2025每年约3倍历史，但仍是假设；Google份额和容量均未披露，金额可降至0。不把ChatGPT活跃度、Gemini流量直接转换成采购。",
+      "sourceRefs": [
+        "cloud-openai-subprocessors",
+        "cloud-openai-business-scale",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.OpenAI.computeBudgetBn.4",
+      "label": "2027Q4总算力采购预算（派生）",
+      "value": 19.676320312499993,
+      "min": 0,
+      "max": 39.352640624999985,
+      "unit": "USD bn",
+      "step": 0.5,
+      "group": "OpenAI",
+      "basis": "官方确认GCP基础设施关系、2025全公司ARR20+bn和约1.9GW。2026规模外推2倍低于2023–2025每年约3倍历史，但仍是假设；Google份额和容量均未披露，金额可降至0。不把ChatGPT活跃度、Gemini流量直接转换成采购。",
+      "sourceRefs": [
+        "cloud-openai-subprocessors",
+        "cloud-openai-business-scale",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": true
+    },
+    {
+      "path": "customers.OpenAI.commercialRevenueRunRateBn.4",
+      "label": "2027Q4平均年化收入运行率情景",
+      "value": 69.96024999999997,
+      "min": 0,
+      "max": 209.88074999999992,
+      "unit": "USD bn annualized",
+      "step": 1,
+      "group": "OpenAI",
+      "basis": "2025官方ARR下界20bn/4×研究2026增长2倍，得到Q4收入尺度代理；15%未来环比另为研究假设。 这里是季度平均运行率情景，不是确认收入、当前真实ARR或Google订单。",
+      "sourceRefs": [
+        "cloud-openai-subprocessors",
+        "cloud-openai-business-scale",
+        "cloud-research-assumptions"
+      ],
+      "status": "disclosure_anchored_research_proxy",
+      "readonly": false
+    },
+    {
+      "path": "customers.OpenAI.trainingBudgetBn.4",
+      "label": "2027Q4训练采购预算",
+      "value": 11.805792187499994,
+      "min": 0,
+      "max": 35.41737656249998,
+      "unit": "USD bn",
+      "step": 0.5,
+      "group": "OpenAI",
+      "basis": "初值按推理预算×训练占比/(1-训练占比)设置；可独立调整，训练预算没有公司原始财务表核验。",
+      "sourceRefs": [
+        "cloud-openai-subprocessors",
+        "cloud-openai-business-scale",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.OpenAI.averageAcceptedCapacityGW.4",
+      "label": "2027Q4平均验收且可收费容量",
+      "value": 1.0,
+      "min": 0,
+      "max": 5,
+      "unit": "GW",
+      "step": 0.05,
+      "group": "OpenAI",
+      "basis": "Google服务容量的情景，不是芯片出货；季度平均值，不是季末容量。官方确认GCP基础设施关系、2025全公司ARR20+bn和约1.9GW。2026规模外推2倍低于2023–2025每年约3倍历史，但仍是假设；Google份额和容量均未披露，金额可降至0。不把ChatGPT活跃度、Gemini流量直接转换成采购。",
+      "sourceRefs": [
+        "cloud-openai-subprocessors",
+        "cloud-openai-business-scale",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.OpenAI.googleTrainingShare",
+      "label": "训练采购Google比例",
+      "value": 0.06,
+      "min": 0,
+      "max": 1,
+      "unit": "ratio",
+      "step": 0.01,
+      "group": "OpenAI",
+      "basis": "未披露参数；可独立压力测试，不是由客户关系推算的实绩。",
+      "sourceRefs": [
+        "cloud-openai-subprocessors",
+        "cloud-openai-business-scale",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.OpenAI.googleInferenceShare",
+      "label": "推理采购Google比例",
+      "value": 0.11,
+      "min": 0,
+      "max": 1,
+      "unit": "ratio",
+      "step": 0.01,
+      "group": "OpenAI",
+      "basis": "未披露参数；可独立压力测试，不是由客户关系推算的实绩。",
+      "sourceRefs": [
+        "cloud-openai-subprocessors",
+        "cloud-openai-business-scale",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.OpenAI.utilization",
+      "label": "已上线容量利用率",
+      "value": 0.8,
+      "min": 0,
+      "max": 1,
+      "unit": "ratio",
+      "step": 0.01,
+      "group": "OpenAI",
+      "basis": "未披露参数；可独立压力测试，不是由客户关系推算的实绩。",
+      "sourceRefs": [
+        "cloud-openai-subprocessors",
+        "cloud-openai-business-scale",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.OpenAI.googleOwnedAssetShare",
+      "label": "服务中Google自有资产比例",
+      "value": 1.0,
+      "min": 0,
+      "max": 1,
+      "unit": "ratio",
+      "step": 0.01,
+      "group": "OpenAI",
+      "basis": "未披露参数；可独立压力测试，不是由客户关系推算的实绩。",
+      "sourceRefs": [
+        "cloud-openai-subprocessors",
+        "cloud-openai-business-scale",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.OpenAI.inferenceCostRate",
+      "label": "推理采购费用/收入代理",
+      "value": 0.45,
+      "min": 0,
+      "max": 3,
+      "unit": "ratio",
+      "step": 0.05,
+      "group": "OpenAI",
+      "basis": "推理采购费用率没有公司成本表核验；训练另列。该比率不可等同毛利率的补数，也不可由全口径compute费用率替代。",
+      "sourceRefs": [
+        "cloud-openai-subprocessors",
+        "cloud-openai-business-scale",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.OpenAI.netServicePriceBnPerGWQuarter",
+      "label": "季度净服务单价",
+      "value": 2.7,
+      "min": 0.5,
+      "max": 5,
+      "unit": "USD bn/GW/quarter",
+      "step": 0.1,
+      "group": "OpenAI",
+      "basis": "引擎定义为90天、100%利用率的情景净价，再乘季度天数/90和利用率。BARC2.7是每平均GW的有效季度收入，原表未披露利用率；本模型再乘80%是额外实现折扣，并非复现BARC公式或公开满载费率。客户净价、GPU/TPU混合和折扣未披露。",
+      "sourceRefs": [
+        "local-googl-barc-20260724",
+        "cloud-research-assumptions"
+      ],
+      "status": "broker_anchored_research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.otherAI.reservedBillingFraction",
+      "label": "已验收容量最低计费比例",
+      "value": 0,
+      "min": 0,
+      "max": 1,
+      "unit": "ratio",
+      "step": 0.05,
+      "group": "其他外部AI客户",
+      "basis": "合同条款未披露；初始0%仅表示本情景不计保底，并非确认没有最低承诺。按满额计费金额的比例设置，保底已包含对应使用量，不再重复计费。",
+      "sourceRefs": [
+        "cloud-alphabet-2026q3",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.otherAI.computeBudgetBn.0",
+      "label": "2026Q4总算力采购预算（派生）",
+      "value": 14.349812107392756,
+      "min": 0,
+      "max": 28.699624214785512,
+      "unit": "USD bn",
+      "step": 0.5,
+      "group": "其他外部AI客户",
+      "basis": "汇总其他外部模型/应用客户的采购敏感性，不包含Google自身Search/Gemini消耗，也不包含Anthropic/OpenAI及对外TPU硬件。官方Cloud强劲增长只校准总规模，无法确定本组客户金额。",
+      "sourceRefs": [
+        "cloud-alphabet-2026q3",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": true
+    },
+    {
+      "path": "customers.otherAI.commercialRevenueRunRateBn.0",
+      "label": "2026Q4平均年化收入运行率情景",
+      "value": 78.92396659066016,
+      "min": 0,
+      "max": 236.7718997719805,
+      "unit": "USD bn annualized",
+      "step": 1,
+      "group": "其他外部AI客户",
+      "basis": "从基期AI剩余分摊和研究Google份额反算预算尺度，再按近期总Cloud增长中位数外推；并非独立观察到的客户收入或预算。 这里是季度平均运行率情景，不是确认收入、当前真实ARR或Google订单。",
+      "sourceRefs": [
+        "cloud-alphabet-2026q3",
+        "cloud-research-assumptions"
+      ],
+      "status": "residual_calibrated_research_proxy",
+      "readonly": false
+    },
+    {
+      "path": "customers.otherAI.trainingBudgetBn.0",
+      "label": "2026Q4训练采购预算",
+      "value": 6.45741544832674,
+      "min": 0,
+      "max": 19.37224634498022,
+      "unit": "USD bn",
+      "step": 0.5,
+      "group": "其他外部AI客户",
+      "basis": "初值按推理预算×训练占比/(1-训练占比)设置；可独立调整，训练预算没有公司原始财务表核验。",
+      "sourceRefs": [
+        "cloud-alphabet-2026q3",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.otherAI.averageAcceptedCapacityGW.0",
+      "label": "2026Q4平均验收且可收费容量",
+      "value": 1.9,
+      "min": 0,
+      "max": 5,
+      "unit": "GW",
+      "step": 0.05,
+      "group": "其他外部AI客户",
+      "basis": "Google服务容量的情景，不是芯片出货；季度平均值，不是季末容量。汇总其他外部模型/应用客户的采购敏感性，不包含Google自身Search/Gemini消耗，也不包含Anthropic/OpenAI及对外TPU硬件。官方Cloud强劲增长只校准总规模，无法确定本组客户金额。",
+      "sourceRefs": [
+        "cloud-alphabet-2026q3",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.otherAI.computeBudgetBn.1",
+      "label": "2027Q1总算力采购预算（派生）",
+      "value": 16.1173756251136,
+      "min": 0,
+      "max": 32.2347512502272,
+      "unit": "USD bn",
+      "step": 0.5,
+      "group": "其他外部AI客户",
+      "basis": "汇总其他外部模型/应用客户的采购敏感性，不包含Google自身Search/Gemini消耗，也不包含Anthropic/OpenAI及对外TPU硬件。官方Cloud强劲增长只校准总规模，无法确定本组客户金额。",
+      "sourceRefs": [
+        "cloud-alphabet-2026q3",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": true
+    },
+    {
+      "path": "customers.otherAI.commercialRevenueRunRateBn.1",
+      "label": "2027Q1平均年化收入运行率情景",
+      "value": 88.6455659381248,
+      "min": 0,
+      "max": 265.9366978143744,
+      "unit": "USD bn annualized",
+      "step": 1,
+      "group": "其他外部AI客户",
+      "basis": "从基期AI剩余分摊和研究Google份额反算预算尺度，再按近期总Cloud增长中位数外推；并非独立观察到的客户收入或预算。 这里是季度平均运行率情景，不是确认收入、当前真实ARR或Google订单。",
+      "sourceRefs": [
+        "cloud-alphabet-2026q3",
+        "cloud-research-assumptions"
+      ],
+      "status": "residual_calibrated_research_proxy",
+      "readonly": false
+    },
+    {
+      "path": "customers.otherAI.trainingBudgetBn.1",
+      "label": "2027Q1训练采购预算",
+      "value": 7.25281903130112,
+      "min": 0,
+      "max": 21.75845709390336,
+      "unit": "USD bn",
+      "step": 0.5,
+      "group": "其他外部AI客户",
+      "basis": "初值按推理预算×训练占比/(1-训练占比)设置；可独立调整，训练预算没有公司原始财务表核验。",
+      "sourceRefs": [
+        "cloud-alphabet-2026q3",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.otherAI.averageAcceptedCapacityGW.1",
+      "label": "2027Q1平均验收且可收费容量",
+      "value": 2.3,
+      "min": 0,
+      "max": 5,
+      "unit": "GW",
+      "step": 0.05,
+      "group": "其他外部AI客户",
+      "basis": "Google服务容量的情景，不是芯片出货；季度平均值，不是季末容量。汇总其他外部模型/应用客户的采购敏感性，不包含Google自身Search/Gemini消耗，也不包含Anthropic/OpenAI及对外TPU硬件。官方Cloud强劲增长只校准总规模，无法确定本组客户金额。",
+      "sourceRefs": [
+        "cloud-alphabet-2026q3",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.otherAI.computeBudgetBn.2",
+      "label": "2027Q2总算力采购预算（派生）",
+      "value": 18.102661909223013,
+      "min": 0,
+      "max": 36.205323818446026,
+      "unit": "USD bn",
+      "step": 0.5,
+      "group": "其他外部AI客户",
+      "basis": "汇总其他外部模型/应用客户的采购敏感性，不包含Google自身Search/Gemini消耗，也不包含Anthropic/OpenAI及对外TPU硬件。官方Cloud强劲增长只校准总规模，无法确定本组客户金额。",
+      "sourceRefs": [
+        "cloud-alphabet-2026q3",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": true
+    },
+    {
+      "path": "customers.otherAI.commercialRevenueRunRateBn.2",
+      "label": "2027Q2平均年化收入运行率情景",
+      "value": 99.56464050072657,
+      "min": 0,
+      "max": 298.6939215021797,
+      "unit": "USD bn annualized",
+      "step": 1,
+      "group": "其他外部AI客户",
+      "basis": "从基期AI剩余分摊和研究Google份额反算预算尺度，再按近期总Cloud增长中位数外推；并非独立观察到的客户收入或预算。 这里是季度平均运行率情景，不是确认收入、当前真实ARR或Google订单。",
+      "sourceRefs": [
+        "cloud-alphabet-2026q3",
+        "cloud-research-assumptions"
+      ],
+      "status": "residual_calibrated_research_proxy",
+      "readonly": false
+    },
+    {
+      "path": "customers.otherAI.trainingBudgetBn.2",
+      "label": "2027Q2训练采购预算",
+      "value": 8.146197859150355,
+      "min": 0,
+      "max": 24.438593577451066,
+      "unit": "USD bn",
+      "step": 0.5,
+      "group": "其他外部AI客户",
+      "basis": "初值按推理预算×训练占比/(1-训练占比)设置；可独立调整，训练预算没有公司原始财务表核验。",
+      "sourceRefs": [
+        "cloud-alphabet-2026q3",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.otherAI.averageAcceptedCapacityGW.2",
+      "label": "2027Q2平均验收且可收费容量",
+      "value": 2.8,
+      "min": 0,
+      "max": 5.6,
+      "unit": "GW",
+      "step": 0.05,
+      "group": "其他外部AI客户",
+      "basis": "Google服务容量的情景，不是芯片出货；季度平均值，不是季末容量。汇总其他外部模型/应用客户的采购敏感性，不包含Google自身Search/Gemini消耗，也不包含Anthropic/OpenAI及对外TPU硬件。官方Cloud强劲增长只校准总规模，无法确定本组客户金额。",
+      "sourceRefs": [
+        "cloud-alphabet-2026q3",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.otherAI.computeBudgetBn.3",
+      "label": "2027Q3总算力采购预算（派生）",
+      "value": 20.33248934702569,
+      "min": 0,
+      "max": 40.66497869405138,
+      "unit": "USD bn",
+      "step": 0.5,
+      "group": "其他外部AI客户",
+      "basis": "汇总其他外部模型/应用客户的采购敏感性，不包含Google自身Search/Gemini消耗，也不包含Anthropic/OpenAI及对外TPU硬件。官方Cloud强劲增长只校准总规模，无法确定本组客户金额。",
+      "sourceRefs": [
+        "cloud-alphabet-2026q3",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": true
+    },
+    {
+      "path": "customers.otherAI.commercialRevenueRunRateBn.3",
+      "label": "2027Q3平均年化收入运行率情景",
+      "value": 111.82869140864129,
+      "min": 0,
+      "max": 335.48607422592386,
+      "unit": "USD bn annualized",
+      "step": 1,
+      "group": "其他外部AI客户",
+      "basis": "从基期AI剩余分摊和研究Google份额反算预算尺度，再按近期总Cloud增长中位数外推；并非独立观察到的客户收入或预算。 这里是季度平均运行率情景，不是确认收入、当前真实ARR或Google订单。",
+      "sourceRefs": [
+        "cloud-alphabet-2026q3",
+        "cloud-research-assumptions"
+      ],
+      "status": "residual_calibrated_research_proxy",
+      "readonly": false
+    },
+    {
+      "path": "customers.otherAI.trainingBudgetBn.3",
+      "label": "2027Q3训练采购预算",
+      "value": 9.14962020616156,
+      "min": 0,
+      "max": 27.44886061848468,
+      "unit": "USD bn",
+      "step": 0.5,
+      "group": "其他外部AI客户",
+      "basis": "初值按推理预算×训练占比/(1-训练占比)设置；可独立调整，训练预算没有公司原始财务表核验。",
+      "sourceRefs": [
+        "cloud-alphabet-2026q3",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.otherAI.averageAcceptedCapacityGW.3",
+      "label": "2027Q3平均验收且可收费容量",
+      "value": 3.3,
+      "min": 0,
+      "max": 6.6,
+      "unit": "GW",
+      "step": 0.05,
+      "group": "其他外部AI客户",
+      "basis": "Google服务容量的情景，不是芯片出货；季度平均值，不是季末容量。汇总其他外部模型/应用客户的采购敏感性，不包含Google自身Search/Gemini消耗，也不包含Anthropic/OpenAI及对外TPU硬件。官方Cloud强劲增长只校准总规模，无法确定本组客户金额。",
+      "sourceRefs": [
+        "cloud-alphabet-2026q3",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.otherAI.computeBudgetBn.4",
+      "label": "2027Q4总算力采购预算（派生）",
+      "value": 22.836979728173972,
+      "min": 0,
+      "max": 45.673959456347944,
+      "unit": "USD bn",
+      "step": 0.5,
+      "group": "其他外部AI客户",
+      "basis": "汇总其他外部模型/应用客户的采购敏感性，不包含Google自身Search/Gemini消耗，也不包含Anthropic/OpenAI及对外TPU硬件。官方Cloud强劲增长只校准总规模，无法确定本组客户金额。",
+      "sourceRefs": [
+        "cloud-alphabet-2026q3",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": true
+    },
+    {
+      "path": "customers.otherAI.commercialRevenueRunRateBn.4",
+      "label": "2027Q4平均年化收入运行率情景",
+      "value": 125.60338850495684,
+      "min": 0,
+      "max": 376.8101655148705,
+      "unit": "USD bn annualized",
+      "step": 1,
+      "group": "其他外部AI客户",
+      "basis": "从基期AI剩余分摊和研究Google份额反算预算尺度，再按近期总Cloud增长中位数外推；并非独立观察到的客户收入或预算。 这里是季度平均运行率情景，不是确认收入、当前真实ARR或Google订单。",
+      "sourceRefs": [
+        "cloud-alphabet-2026q3",
+        "cloud-research-assumptions"
+      ],
+      "status": "residual_calibrated_research_proxy",
+      "readonly": false
+    },
+    {
+      "path": "customers.otherAI.trainingBudgetBn.4",
+      "label": "2027Q4训练采购预算",
+      "value": 10.276640877678286,
+      "min": 0,
+      "max": 30.829922633034858,
+      "unit": "USD bn",
+      "step": 0.5,
+      "group": "其他外部AI客户",
+      "basis": "初值按推理预算×训练占比/(1-训练占比)设置；可独立调整，训练预算没有公司原始财务表核验。",
+      "sourceRefs": [
+        "cloud-alphabet-2026q3",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.otherAI.averageAcceptedCapacityGW.4",
+      "label": "2027Q4平均验收且可收费容量",
+      "value": 3.8,
+      "min": 0,
+      "max": 7.6,
+      "unit": "GW",
+      "step": 0.05,
+      "group": "其他外部AI客户",
+      "basis": "Google服务容量的情景，不是芯片出货；季度平均值，不是季末容量。汇总其他外部模型/应用客户的采购敏感性，不包含Google自身Search/Gemini消耗，也不包含Anthropic/OpenAI及对外TPU硬件。官方Cloud强劲增长只校准总规模，无法确定本组客户金额。",
+      "sourceRefs": [
+        "cloud-alphabet-2026q3",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.otherAI.googleTrainingShare",
+      "label": "训练采购Google比例",
+      "value": 0.24,
+      "min": 0,
+      "max": 1,
+      "unit": "ratio",
+      "step": 0.01,
+      "group": "其他外部AI客户",
+      "basis": "未披露参数；可独立压力测试，不是由客户关系推算的实绩。",
+      "sourceRefs": [
+        "cloud-alphabet-2026q3",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.otherAI.googleInferenceShare",
+      "label": "推理采购Google比例",
+      "value": 0.3,
+      "min": 0,
+      "max": 1,
+      "unit": "ratio",
+      "step": 0.01,
+      "group": "其他外部AI客户",
+      "basis": "未披露参数；可独立压力测试，不是由客户关系推算的实绩。",
+      "sourceRefs": [
+        "cloud-alphabet-2026q3",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.otherAI.utilization",
+      "label": "已上线容量利用率",
+      "value": 0.8,
+      "min": 0,
+      "max": 1,
+      "unit": "ratio",
+      "step": 0.01,
+      "group": "其他外部AI客户",
+      "basis": "未披露参数；可独立压力测试，不是由客户关系推算的实绩。",
+      "sourceRefs": [
+        "cloud-alphabet-2026q3",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.otherAI.googleOwnedAssetShare",
+      "label": "服务中Google自有资产比例",
+      "value": 0.8,
+      "min": 0,
+      "max": 1,
+      "unit": "ratio",
+      "step": 0.01,
+      "group": "其他外部AI客户",
+      "basis": "未披露参数；可独立压力测试，不是由客户关系推算的实绩。",
+      "sourceRefs": [
+        "cloud-alphabet-2026q3",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.otherAI.inferenceCostRate",
+      "label": "推理采购费用/收入代理",
+      "value": 0.4,
+      "min": 0,
+      "max": 3,
+      "unit": "ratio",
+      "step": 0.05,
+      "group": "其他外部AI客户",
+      "basis": "推理采购费用率没有公司成本表核验；训练另列。该比率不可等同毛利率的补数，也不可由全口径compute费用率替代。",
+      "sourceRefs": [
+        "cloud-alphabet-2026q3",
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "customers.otherAI.netServicePriceBnPerGWQuarter",
+      "label": "季度净服务单价",
+      "value": 2.7,
+      "min": 0.5,
+      "max": 5,
+      "unit": "USD bn/GW/quarter",
+      "step": 0.1,
+      "group": "其他外部AI客户",
+      "basis": "引擎定义为90天、100%利用率的情景净价，再乘季度天数/90和利用率。BARC2.7是每平均GW的有效季度收入，原表未披露利用率；本模型再乘80%是额外实现折扣，并非复现BARC公式或公开满载费率。客户净价、GPU/TPU混合和折扣未披露。",
+      "sourceRefs": [
+        "local-googl-barc-20260724",
+        "cloud-research-assumptions"
+      ],
+      "status": "broker_anchored_research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "externalTPU.capacitySoldGW.0",
+      "label": "2026Q4对外TPU验收销售容量",
+      "value": 0.5,
+      "min": 0,
+      "max": 2,
+      "unit": "GW",
+      "step": 0.05,
+      "group": "外售TPU",
+      "basis": "2027全年基准3.3GW，低于BARC 2027预测3.7GW；不是公司销量实绩。",
+      "sourceRefs": [
+        "local-googl-barc-20260724",
+        "cloud-research-assumptions"
+      ],
+      "status": "broker_anchored_research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "externalTPU.netPriceBnPerGW.0",
+      "label": "2026Q4对外硬件净收入/GW",
+      "value": 14.2857142857,
+      "min": 5,
+      "max": 25,
+      "unit": "USD bn/GW",
+      "step": 0.5,
+      "group": "外售TPU",
+      "basis": "BARC季度/年度假设14.29/18.31bn每GW仅为尺度参考，实际毛额/净额需遵循合同及会计口径。",
+      "sourceRefs": [
+        "local-googl-barc-20260724",
+        "cloud-research-assumptions"
+      ],
+      "status": "broker_anchored_research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "externalTPU.capacitySoldGW.1",
+      "label": "2027Q1对外TPU验收销售容量",
+      "value": 0.6,
+      "min": 0,
+      "max": 2,
+      "unit": "GW",
+      "step": 0.05,
+      "group": "外售TPU",
+      "basis": "2027全年基准3.3GW，低于BARC 2027预测3.7GW；不是公司销量实绩。",
+      "sourceRefs": [
+        "local-googl-barc-20260724",
+        "cloud-research-assumptions"
+      ],
+      "status": "broker_anchored_research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "externalTPU.netPriceBnPerGW.1",
+      "label": "2027Q1对外硬件净收入/GW",
+      "value": 14.5,
+      "min": 5,
+      "max": 25,
+      "unit": "USD bn/GW",
+      "step": 0.5,
+      "group": "外售TPU",
+      "basis": "BARC季度/年度假设14.29/18.31bn每GW仅为尺度参考，实际毛额/净额需遵循合同及会计口径。",
+      "sourceRefs": [
+        "local-googl-barc-20260724",
+        "cloud-research-assumptions"
+      ],
+      "status": "broker_anchored_research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "externalTPU.capacitySoldGW.2",
+      "label": "2027Q2对外TPU验收销售容量",
+      "value": 0.75,
+      "min": 0,
+      "max": 2,
+      "unit": "GW",
+      "step": 0.05,
+      "group": "外售TPU",
+      "basis": "2027全年基准3.3GW，低于BARC 2027预测3.7GW；不是公司销量实绩。",
+      "sourceRefs": [
+        "local-googl-barc-20260724",
+        "cloud-research-assumptions"
+      ],
+      "status": "broker_anchored_research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "externalTPU.netPriceBnPerGW.2",
+      "label": "2027Q2对外硬件净收入/GW",
+      "value": 15,
+      "min": 5,
+      "max": 25,
+      "unit": "USD bn/GW",
+      "step": 0.5,
+      "group": "外售TPU",
+      "basis": "BARC季度/年度假设14.29/18.31bn每GW仅为尺度参考，实际毛额/净额需遵循合同及会计口径。",
+      "sourceRefs": [
+        "local-googl-barc-20260724",
+        "cloud-research-assumptions"
+      ],
+      "status": "broker_anchored_research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "externalTPU.capacitySoldGW.3",
+      "label": "2027Q3对外TPU验收销售容量",
+      "value": 0.9,
+      "min": 0,
+      "max": 2,
+      "unit": "GW",
+      "step": 0.05,
+      "group": "外售TPU",
+      "basis": "2027全年基准3.3GW，低于BARC 2027预测3.7GW；不是公司销量实绩。",
+      "sourceRefs": [
+        "local-googl-barc-20260724",
+        "cloud-research-assumptions"
+      ],
+      "status": "broker_anchored_research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "externalTPU.netPriceBnPerGW.3",
+      "label": "2027Q3对外硬件净收入/GW",
+      "value": 15.5,
+      "min": 5,
+      "max": 25,
+      "unit": "USD bn/GW",
+      "step": 0.5,
+      "group": "外售TPU",
+      "basis": "BARC季度/年度假设14.29/18.31bn每GW仅为尺度参考，实际毛额/净额需遵循合同及会计口径。",
+      "sourceRefs": [
+        "local-googl-barc-20260724",
+        "cloud-research-assumptions"
+      ],
+      "status": "broker_anchored_research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "externalTPU.capacitySoldGW.4",
+      "label": "2027Q4对外TPU验收销售容量",
+      "value": 1.05,
+      "min": 0,
+      "max": 2,
+      "unit": "GW",
+      "step": 0.05,
+      "group": "外售TPU",
+      "basis": "2027全年基准3.3GW，低于BARC 2027预测3.7GW；不是公司销量实绩。",
+      "sourceRefs": [
+        "local-googl-barc-20260724",
+        "cloud-research-assumptions"
+      ],
+      "status": "broker_anchored_research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "externalTPU.netPriceBnPerGW.4",
+      "label": "2027Q4对外硬件净收入/GW",
+      "value": 16.0,
+      "min": 5,
+      "max": 25,
+      "unit": "USD bn/GW",
+      "step": 0.5,
+      "group": "外售TPU",
+      "basis": "BARC季度/年度假设14.29/18.31bn每GW仅为尺度参考，实际毛额/净额需遵循合同及会计口径。",
+      "sourceRefs": [
+        "local-googl-barc-20260724",
+        "cloud-research-assumptions"
+      ],
+      "status": "broker_anchored_research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "externalTPU.recognitionFraction",
+      "label": "交付批次当期确认比例",
+      "value": 1,
+      "min": 0,
+      "max": 1,
+      "unit": "ratio",
+      "step": 0.05,
+      "group": "外售TPU",
+      "basis": "100%是旧情景初值，未核实控制权转移与硬件/服务划分；可调低检验当期确认收入，不自动将未确认余额递延至后期。",
+      "sourceRefs": [
+        "cloud-research-assumptions"
+      ],
+      "status": "research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "capex.nonCloudShare",
+      "label": "现金capex中非Cloud比例",
+      "value": 0.4,
+      "min": 0,
+      "max": 1,
+      "unit": "ratio",
+      "step": 0.05,
+      "group": "资本开支",
+      "basis": "总扩容强度=最新现金capex×(1-非Cloud比例)×(1-维持比例)/(最近4季Cloud收入环比增量均值×基期服务自有资产比例)；其中40%作为企业增量收入强度，再按设备70%/设施30%拆分。AI客户独立使用自有验收GW增量×每GW设备/设施成本。 非Cloud40%、维持30%、设备70%、企业强度分摊40%、自有资产比例及AI每GW设备12/设施4bn均为研究情景，不是分部或采购成本披露。集团历史只能校准规模，不能识别Cloud因果资本成本；AI预算/售价/利用率变化不直接改变投资；不含外售TPU库存成本。",
+      "sourceRefs": [
+        "cloud-alphabet-2026q3",
+        "cloud-research-assumptions"
+      ],
+      "status": "historically_calibrated_research_proxy",
+      "readonly": false
+    },
+    {
+      "path": "capex.equipmentShare",
+      "label": "设备占扩容及维持支出比例",
+      "value": 0.7,
+      "min": 0,
+      "max": 1,
+      "unit": "ratio",
+      "step": 0.05,
+      "group": "资本开支",
+      "basis": "总扩容强度=最新现金capex×(1-非Cloud比例)×(1-维持比例)/(最近4季Cloud收入环比增量均值×基期服务自有资产比例)；其中40%作为企业增量收入强度，再按设备70%/设施30%拆分。AI客户独立使用自有验收GW增量×每GW设备/设施成本。 非Cloud40%、维持30%、设备70%、企业强度分摊40%、自有资产比例及AI每GW设备12/设施4bn均为研究情景，不是分部或采购成本披露。集团历史只能校准规模，不能识别Cloud因果资本成本；AI预算/售价/利用率变化不直接改变投资；不含外售TPU库存成本。",
+      "sourceRefs": [
+        "cloud-alphabet-2026q3",
+        "cloud-research-assumptions"
+      ],
+      "status": "historically_calibrated_research_proxy",
+      "readonly": false
+    },
+    {
+      "path": "capex.maintenanceRatio",
+      "label": "Cloud维持支出比例",
+      "value": 0.3,
+      "min": 0,
+      "max": 1,
+      "unit": "ratio",
+      "step": 0.05,
+      "group": "资本开支",
+      "basis": "总扩容强度=最新现金capex×(1-非Cloud比例)×(1-维持比例)/(最近4季Cloud收入环比增量均值×基期服务自有资产比例)；其中40%作为企业增量收入强度，再按设备70%/设施30%拆分。AI客户独立使用自有验收GW增量×每GW设备/设施成本。 非Cloud40%、维持30%、设备70%、企业强度分摊40%、自有资产比例及AI每GW设备12/设施4bn均为研究情景，不是分部或采购成本披露。集团历史只能校准规模，不能识别Cloud因果资本成本；AI预算/售价/利用率变化不直接改变投资；不含外售TPU库存成本。",
+      "sourceRefs": [
+        "cloud-alphabet-2026q3",
+        "cloud-research-assumptions"
+      ],
+      "status": "historically_calibrated_research_proxy",
+      "readonly": false
+    },
+    {
+      "path": "capex.equipmentIntensityBnPerIncrementalServiceRevenueBn",
+      "label": "设备资本强度",
+      "value": 1.7663929592882,
+      "min": 0,
+      "max": 15,
+      "unit": "USD bn / USD bn",
+      "step": 0.25,
+      "group": "资本开支",
+      "basis": "总扩容强度=最新现金capex×(1-非Cloud比例)×(1-维持比例)/(最近4季Cloud收入环比增量均值×基期服务自有资产比例)；其中40%作为企业增量收入强度，再按设备70%/设施30%拆分。AI客户独立使用自有验收GW增量×每GW设备/设施成本。 非Cloud40%、维持30%、设备70%、企业强度分摊40%、自有资产比例及AI每GW设备12/设施4bn均为研究情景，不是分部或采购成本披露。集团历史只能校准规模，不能识别Cloud因果资本成本；AI预算/售价/利用率变化不直接改变投资；不含外售TPU库存成本。",
+      "sourceRefs": [
+        "cloud-alphabet-2026q3",
+        "cloud-research-assumptions"
+      ],
+      "status": "historically_calibrated_research_proxy",
+      "readonly": false
+    },
+    {
+      "path": "capex.facilityIntensityBnPerIncrementalServiceRevenueBn",
+      "label": "机房资本强度",
+      "value": 0.7570255539806573,
+      "min": 0,
+      "max": 10,
+      "unit": "USD bn / USD bn",
+      "step": 0.25,
+      "group": "资本开支",
+      "basis": "总扩容强度=最新现金capex×(1-非Cloud比例)×(1-维持比例)/(最近4季Cloud收入环比增量均值×基期服务自有资产比例)；其中40%作为企业增量收入强度，再按设备70%/设施30%拆分。AI客户独立使用自有验收GW增量×每GW设备/设施成本。 非Cloud40%、维持30%、设备70%、企业强度分摊40%、自有资产比例及AI每GW设备12/设施4bn均为研究情景，不是分部或采购成本披露。集团历史只能校准规模，不能识别Cloud因果资本成本；AI预算/售价/利用率变化不直接改变投资；不含外售TPU库存成本。",
+      "sourceRefs": [
+        "cloud-alphabet-2026q3",
+        "cloud-research-assumptions"
+      ],
+      "status": "historically_calibrated_research_proxy",
+      "readonly": false
+    },
+    {
+      "path": "capex.aiEquipmentCostBnPerGW",
+      "label": "AI自有设备采购成本/GW",
+      "value": 12.0,
+      "min": 4,
+      "max": 24,
+      "unit": "USD bn/GW",
+      "step": 0.5,
+      "group": "资本开支",
+      "basis": "12bn/GW是研究成本代理：BARC外售TPU经营费用/销售GW在2026Q4为10.714bn、2027为13.732bn，二者均值12.223取整为12。该费用可能含非设备项目，且外售方费用不同于Google自有设备现金购置；因此不是已识别历史单位成本。Broadcom首批35bn/1GW是融资交易范围对照，不是Google成本上限。",
+      "sourceRefs": [
+        "local-googl-barc-20260724",
+        "chain-broadcom-q3-20260902",
+        "cloud-research-assumptions"
+      ],
+      "status": "broker_scale_proxy_not_historical_unit_cost",
+      "readonly": false
+    },
+    {
+      "path": "capex.aiFacilityCostBnPerGW",
+      "label": "AI自有机房及配套成本/GW",
+      "value": 4.0,
+      "min": 1,
+      "max": 10,
+      "unit": "USD bn/GW",
+      "step": 0.5,
+      "group": "资本开支",
+      "basis": "4bn/GW是取设备研究成本12bn/GW的三分之一作为设施配套情景；现有资料不能识别设施/设备拆分，没有历史实绩校准。设置1–10bn/GW压力范围，不能把XPV融资或TPU售价当设施成本。",
+      "sourceRefs": [
+        "cloud-research-assumptions"
+      ],
+      "status": "unidentified_research_assumption",
+      "readonly": false
+    },
+    {
+      "path": "capex.paymentLagQuarters",
+      "label": "付款滞后季度",
+      "value": 0,
+      "min": 0,
+      "max": 4,
+      "unit": "quarters",
+      "step": 1,
+      "group": "资本开支",
+      "basis": "总扩容强度=最新现金capex×(1-非Cloud比例)×(1-维持比例)/(最近4季Cloud收入环比增量均值×基期服务自有资产比例)；其中40%作为企业增量收入强度，再按设备70%/设施30%拆分。AI客户独立使用自有验收GW增量×每GW设备/设施成本。 非Cloud40%、维持30%、设备70%、企业强度分摊40%、自有资产比例及AI每GW设备12/设施4bn均为研究情景，不是分部或采购成本披露。集团历史只能校准规模，不能识别Cloud因果资本成本；AI预算/售价/利用率变化不直接改变投资；不含外售TPU库存成本。",
+      "sourceRefs": [
+        "cloud-alphabet-2026q3",
+        "cloud-research-assumptions"
+      ],
+      "status": "historically_calibrated_research_proxy",
+      "readonly": false
+    }
+  ],
+  "comparisons": {
+    "ms": {
+      "asOf": "2026-10-29",
+      "publicationDate": "2026-10-29",
+      "dateBasis": "IndexInformation!B2 / ModPubIndex!A2",
+      "quarters": [
+        {
+          "period": "2026Q4",
+          "cloudRevenueBn": 36.246528,
+          "cashCapexBn": 64.105,
+          "sourceRefs": [
+            "cloud-ms-model"
+          ]
+        },
+        {
+          "period": "2027Q1",
+          "cloudRevenueBn": 43.600956,
+          "cashCapexBn": 75.355,
+          "sourceRefs": [
+            "cloud-ms-model"
+          ]
+        },
+        {
+          "period": "2027Q2",
+          "cloudRevenueBn": 53.07782399999999,
+          "cashCapexBn": 87.605,
+          "sourceRefs": [
+            "cloud-ms-model"
+          ]
+        },
+        {
+          "period": "2027Q3",
+          "cloudRevenueBn": 70.354319,
+          "cashCapexBn": 100.105,
+          "sourceRefs": [
+            "cloud-ms-model"
+          ]
+        },
+        {
+          "period": "2027Q4",
+          "cloudRevenueBn": 75.61025740800001,
+          "cashCapexBn": 112.105,
+          "sourceRefs": [
+            "cloud-ms-model"
+          ]
+        }
+      ],
+      "sourceRefs": [
+        "cloud-ms-model"
+      ],
+      "role": "预测完成后比较，不作为自主预测输入或拟合目标。"
+    },
+    "barclays": {
+      "asOf": "2026-07-24",
+      "publicationDate": "2026-07-24",
+      "quarters": [
+        {
+          "period": "2026Q4",
+          "cloudRevenueBn": 41.57946842276875,
+          "cashCapexBn": null,
+          "sourceRefs": [
+            "local-googl-barc-20260724"
+          ],
+          "cell": "New Driver!EE102"
+        },
+        {
+          "period": "2027Q1",
+          "cloudRevenueBn": 47.23522120660083,
+          "cashCapexBn": null,
+          "sourceRefs": [
+            "local-googl-barc-20260724"
+          ],
+          "cell": "New Driver!EG102"
+        },
+        {
+          "period": "2027Q2",
+          "cloudRevenueBn": 53.1518249672501,
+          "cashCapexBn": null,
+          "sourceRefs": [
+            "local-googl-barc-20260724"
+          ],
+          "cell": "New Driver!EH102"
+        },
+        {
+          "period": "2027Q3",
+          "cloudRevenueBn": 57.97205374403581,
+          "cashCapexBn": null,
+          "sourceRefs": [
+            "local-googl-barc-20260724"
+          ],
+          "cell": "New Driver!EI102"
+        },
+        {
+          "period": "2027Q4",
+          "cloudRevenueBn": 63.78799132228421,
+          "cashCapexBn": null,
+          "sourceRefs": [
+            "local-googl-barc-20260724"
+          ],
+          "cell": "New Driver!EJ102"
+        }
+      ],
+      "annual": [
+        {
+          "period": "2027",
+          "cloudRevenueBn": 222.14709124017097,
+          "components": {
+            "gcpExExternalTPUAndWorkspaceBn": 131.9248931449329,
+            "workspaceBn": 22.47695999999998,
+            "externalTPURevenueBn": 67.74523809523808
+          },
+          "sourceRefs": [
+            "local-googl-barc-20260724"
+          ],
+          "cells": [
+            "New Driver!EK102",
+            "New Driver!EK114",
+            "New Driver!EK120",
+            "New Driver!EK127"
+          ]
+        }
+      ],
+      "sourceRefs": [
+        "local-googl-barc-20260724"
+      ]
+    },
+    "goldmanSachs": {
+      "asOf": "2026-08-04",
+      "publicationDate": "2026-08-04",
+      "annual": [
+        {
+          "period": "2026",
+          "cashCapexBn": 203.14525,
+          "sourceRefs": [
+            "cloud-gs-model"
+          ],
+          "cell": "Cash Flow Statement!DC25"
+        },
+        {
+          "period": "2027",
+          "cashCapexBn": 349.89603500000004,
+          "sourceRefs": [
+            "cloud-gs-model"
+          ],
+          "cell": "Cash Flow Statement!DD25"
+        }
+      ],
+      "sourceRefs": [
+        "cloud-gs-model"
+      ]
+    },
+    "jpmorgan": {
+      "asOf": "2026-07",
+      "publicationDate": "2026-07",
+      "datePrecision": "month",
+      "annual": [
+        {
+          "period": "2026",
+          "cashCapexBn": 190.024,
+          "sourceRefs": [
+            "local-jpm-us-internet-202607"
+          ],
+          "page": 5
+        },
+        {
+          "period": "2027",
+          "cashCapexBn": 293.443,
+          "sourceRefs": [
+            "local-jpm-us-internet-202607"
+          ],
+          "page": 5
+        }
+      ],
+      "sourceRefs": [
+        "local-jpm-us-internet-202607"
+      ]
+    }
+  },
+  "comparisonsNote": "机构模型日期不同；BARC部分驱动提供尺度锚，但其Cloud结果未用于拟合。MS、GS和JPM只在独立预测后比较。",
+  "capexCostCrossChecks": {
+    "barclays2026Q4ExpensePerSoldGWBn": 10.714285714285715,
+    "barclays2027ExpensePerSoldGWBn": 13.732142857142854,
+    "roundedEquipmentScenarioBnPerGW": 12,
+    "facilityToEquipmentResearchRatio": 0.3333333333333333,
+    "broadcomFirstXPVTrancheBn": 35,
+    "broadcomFirstXPVDeploymentGW": 1,
+    "sourceRefs": [
+      "local-googl-barc-20260724",
+      "chain-broadcom-q3-20260902"
+    ],
+    "scopeWarning": "BARC外售经营费用/GW是券商单位经济代理，不是自有固定资产现金支出；XPV35bn/1GW是打包融资范围，不是设备成本，更不是Google承担额。设施4bn/GW无法由这些资料识别，明确为研究情景而非历史校准。"
+  },
+  "historicalAllocationCalibration": {
+    "matureCloudYoy": 0.28247352242352997,
+    "enterpriseProxyBaseBn": 18.672714325399827,
+    "enterpriseFormula": "2024Q3总Cloud×(1+2023–2024总Cloud同比中位数)^2；它是成熟增长基线代理，含历史AI，非已披露企业分部。",
+    "cloudGrowthAboveMatureBaselineBn": 11.270548820626555,
+    "hardwareShareOfExcessAssumption": 0.45,
+    "externalHardwareBaseBn": 5.07174696928195,
+    "hardwareFormula": "2026Q3 Cloud减2025Q3×成熟同比基线，其超额增长的45%作为硬件分摊情景；45%未披露。",
+    "warning": "总额勾稽只保证算术一致，不能验证客户拆分。所有基期拆分锁定只读，供敏感性备选另列。"
+  },
+  "allocationSensitivityAlternatives": [
+    {
+      "id": "low-named-customer-allocation",
+      "Anthropic": 1.104,
+      "OpenAI": 0,
+      "otherAI": 3,
+      "externalTPU": 3,
+      "enterprise": 23.605,
+      "basis": "已知客户/硬件分摊偏低，更多归于企业残差；不改官方总额。"
+    },
+    {
+      "id": "central-allocation",
+      "Anthropic": 2.208,
+      "OpenAI": 0.8390400000000001,
+      "otherAI": 3.917498705318222,
+      "externalTPU": 5.07174696928195,
+      "enterprise": 18.672714325399827,
+      "basis": "有公式与来源尺度锚的研究基准。"
+    },
+    {
+      "id": "high-named-customer-allocation",
+      "Anthropic": 3.312,
+      "OpenAI": 1.25856,
+      "otherAI": 5,
+      "externalTPU": 7,
+      "enterprise": 14.13844,
+      "basis": "Anthropic取1.5GW计划尺度、OpenAI取15%容量份额、硬件分摊提高；均为研究压力测试。"
+    }
+  ],
+  "sources": [
+    {
+      "id": "cloud-alphabet-2022q1",
+      "title": "Alphabet 2022 Q1 official earnings release",
+      "date": "2022-04-26",
+      "kind": "official_results",
+      "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2022/q1/2022q1-alphabet-earnings-release.pdf",
+      "page": "Cloud/revenue p1; cash purchases of property and equipment p6",
+      "retrievedAt": "2026-11-05T16:06:27.391700+00:00"
+    },
+    {
+      "id": "cloud-alphabet-2022q2",
+      "title": "Alphabet 2022 Q2 official earnings release",
+      "date": "2022-07-26",
+      "kind": "official_results",
+      "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2022/q2/2022q2-alphabet-earnings-release.pdf",
+      "page": "Cloud/revenue p2; cash purchases of property and equipment p6",
+      "retrievedAt": "2026-11-05T16:06:27.391766+00:00"
+    },
+    {
+      "id": "cloud-alphabet-2022q3",
+      "title": "Alphabet 2022 Q3 official earnings release",
+      "date": "2022-10-25",
+      "kind": "official_results",
+      "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2022/q3/2022q3-alphabet-earnings-release.pdf",
+      "page": "Cloud/revenue p2; cash purchases of property and equipment p6",
+      "retrievedAt": "2026-11-05T16:06:27.391056+00:00"
+    },
+    {
+      "id": "cloud-alphabet-2022q4",
+      "title": "Alphabet 2022 Q4 official earnings release",
+      "date": "2023-02-02",
+      "kind": "official_results",
+      "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2022/q4/2022q4-alphabet-earnings-release.pdf",
+      "page": "Cloud/revenue p2; cash purchases of property and equipment p6",
+      "retrievedAt": "2026-11-05T16:06:27.390562+00:00"
+    },
+    {
+      "id": "cloud-alphabet-2023q1",
+      "title": "Alphabet 2023 Q1 official earnings release",
+      "date": "2023-04-25",
+      "kind": "official_results",
+      "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2023/q1/goog-exhibit-99-1-q1-2023-19.pdf",
+      "page": "Cloud/revenue p2; cash purchases of property and equipment p7",
+      "retrievedAt": "2026-11-05T16:06:28.270726+00:00"
+    },
+    {
+      "id": "cloud-alphabet-2023q2",
+      "title": "Alphabet 2023 Q2 official earnings release",
+      "date": "2023-07-25",
+      "kind": "official_results",
+      "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2023/q2/2023q2-alphabet-earnings-release.pdf",
+      "page": "Cloud/revenue p2; cash purchases of property and equipment p7",
+      "retrievedAt": "2026-11-05T16:06:27.859047+00:00"
+    },
+    {
+      "id": "cloud-alphabet-2023q3",
+      "title": "Alphabet 2023 Q3 official earnings release",
+      "date": "2023-10-24",
+      "kind": "official_results",
+      "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2023/q3/2023q3-alphabet-earnings-release.pdf",
+      "page": "Cloud/revenue p2; cash purchases of property and equipment p7",
+      "retrievedAt": "2026-11-05T16:06:27.858960+00:00"
+    },
+    {
+      "id": "cloud-alphabet-2023q4",
+      "title": "Alphabet 2023 Q4 official earnings release",
+      "date": "2024-01-30",
+      "kind": "official_results",
+      "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2023/q4/2023q4-alphabet-earnings-release.pdf",
+      "page": "Cloud/revenue p2; cash purchases of property and equipment p7",
+      "retrievedAt": "2026-11-05T16:06:27.846467+00:00"
+    },
+    {
+      "id": "cloud-alphabet-2024q1",
+      "title": "Alphabet 2024 Q1 official earnings release",
+      "date": "2024-04-25",
+      "kind": "official_results",
+      "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2024/q1/2024q1-alphabet-earnings-release-pdf.pdf",
+      "page": "Cloud/revenue p2; cash purchases of property and equipment p7",
+      "retrievedAt": "2026-11-05T16:06:28.672394+00:00"
+    },
+    {
+      "id": "cloud-alphabet-2024q2",
+      "title": "Alphabet 2024 Q2 official earnings release",
+      "date": "2024-07-23",
+      "kind": "official_results",
+      "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2024/q2/2024q2-alphabet-earnings-release.pdf",
+      "page": "Cloud/revenue p2; cash purchases of property and equipment p6",
+      "retrievedAt": "2026-11-05T16:06:28.538167+00:00"
+    },
+    {
+      "id": "cloud-alphabet-2024q3",
+      "title": "Alphabet 2024 Q3 official earnings release",
+      "date": "2024-10-29",
+      "kind": "official_results",
+      "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2024/q3/2024q3-alphabet-earnings-release.pdf",
+      "page": "Cloud/revenue p2; cash purchases of property and equipment p6",
+      "retrievedAt": "2026-11-05T16:06:28.284263+00:00"
+    },
+    {
+      "id": "cloud-alphabet-2024q4",
+      "title": "Alphabet 2024 Q4 official earnings release",
+      "date": "2025-02-04",
+      "kind": "official_results",
+      "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2024/q4/2024q4-alphabet-earnings-release.pdf",
+      "page": "Cloud/revenue p2; cash purchases of property and equipment p6",
+      "retrievedAt": "2026-11-05T16:06:28.281062+00:00"
+    },
+    {
+      "id": "cloud-alphabet-2025q1",
+      "title": "Alphabet 2025 Q1 official earnings release",
+      "date": "2025-04-24",
+      "kind": "official_results",
+      "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2025/q1/2025q1-alphabet-earnings-release.pdf",
+      "page": "Cloud/revenue p2; cash purchases of property and equipment p6",
+      "retrievedAt": "2026-11-05T16:06:29.023864+00:00"
+    },
+    {
+      "id": "cloud-alphabet-2025q2",
+      "title": "Alphabet 2025 Q2 official earnings release",
+      "date": "2025-07-23",
+      "kind": "official_results",
+      "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2025/q2/2025q2-alphabet-earnings-release.pdf",
+      "page": "Cloud/revenue p2; cash purchases of property and equipment p6",
+      "retrievedAt": "2026-11-05T16:06:29.014761+00:00"
+    },
+    {
+      "id": "cloud-alphabet-2025q3",
+      "title": "Alphabet 2025 Q3 official earnings release",
+      "date": "2025-10-29",
+      "kind": "official_results",
+      "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2025/q3/2025q3-alphabet-earnings-release.pdf",
+      "page": "Cloud/revenue p2; cash purchases of property and equipment p6",
+      "retrievedAt": "2026-11-05T16:06:28.795775+00:00"
+    },
+    {
+      "id": "cloud-alphabet-2025q4",
+      "title": "Alphabet 2025 Q4 official earnings release",
+      "date": "2026-02-04",
+      "kind": "official_results",
+      "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2025/q4/2025q4-alphabet-earnings-release.pdf",
+      "page": "Cloud/revenue p2; cash purchases of property and equipment p6",
+      "retrievedAt": "2026-11-05T16:06:28.672549+00:00"
+    },
+    {
+      "id": "cloud-alphabet-2026q1",
+      "title": "Alphabet 2026 Q1 official earnings release",
+      "date": "2026-04-29",
+      "kind": "official_results",
+      "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q1/2026q1-alphabet-earnings-release.pdf",
+      "page": "Cloud/revenue p2; cash purchases of property and equipment p6",
+      "retrievedAt": "2026-11-05T16:06:29.330291+00:00"
+    },
+    {
+      "id": "cloud-alphabet-2026q2",
+      "title": "Alphabet 2026 Q2 official earnings release",
+      "date": "2026-07-22",
+      "kind": "official_results",
+      "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q2/2026q2-alphabet-earnings-release.pdf",
+      "page": "Cloud/revenue p2; cash purchases of property and equipment p7",
+      "retrievedAt": "2026-11-05T16:06:29.315629+00:00"
+    },
+    {
+      "id": "cloud-alphabet-2026q3",
+      "title": "Alphabet 2026 Q3 official earnings release",
+      "date": "2026-10-28",
+      "kind": "official_results",
+      "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q3/2026q3-alphabet-earnings-release.pdf",
+      "page": "Cloud/revenue p2; cash purchases of property and equipment p6",
+      "retrievedAt": "2026-11-05T16:06:29.117235+00:00"
+    },
+    {
+      "id": "cloud-nvidia-sec",
+      "title": "NVIDIA SEC companyfacts, earliest filed quarterly total revenue",
+      "date": "2026-11-05",
+      "kind": "regulatory_api",
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001045810.json",
+      "note": "只用filed<=预测起点的事实；总收入代理不等于GPU/ASIC/数据中心收入。部分Q4没有直接季度标签，未强造记录。"
+    },
+    {
+      "id": "cloud-broadcom-sec",
+      "title": "Broadcom SEC companyfacts, earliest filed quarterly total revenue",
+      "date": "2026-11-05",
+      "kind": "regulatory_api",
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001730168.json",
+      "note": "只用filed<=预测起点的事实；总收入代理不等于GPU/ASIC/数据中心收入。部分Q4没有直接季度标签，未强造记录。"
+    },
+    {
+      "id": "chain-anthropic-google-20251023",
+      "title": "Anthropic：Expanding our use of Google Cloud TPUs and Services",
+      "date": "2025-10-23",
+      "page": "正文：第一段、multi-platform approach 段",
+      "url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
+      "kind": "company_disclosure",
+      "note": "直接取得公司原文。计划最多一百万TPU、2026年上线超过1GW，并非已经验收。",
+      "retrievedAt": "2026-11-05T13:37:39.522737+00:00"
+    },
+    {
+      "id": "chain-anthropic-google-20260406",
+      "title": "Anthropic expands partnership with Google and Broadcom for multiple gigawatts of next-generation compute",
+      "date": "2026-04-06",
+      "page": "正文第一段及run-rate revenue段",
+      "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute",
+      "kind": "company_disclosure",
+      "note": "直接取得公司原文。新增多GW TPU预计从2027年开始上线；该次公告没有给出逐季交付或Google收入份额。",
+      "retrievedAt": "2026-11-05T13:37:40.975946+00:00"
+    },
+    {
+      "id": "chain-anthropic-series-h-20260528",
+      "title": "Anthropic raises $65B in Series H funding at $965B post-money valuation",
+      "date": "2026-05-28",
+      "page": "融资首段、run-rate revenue段、compute capacity段",
+      "url": "https://www.anthropic.com/news/series-h",
+      "kind": "company_disclosure",
+      "note": "直接取得公司原文。年化收入运行率47bn、融资65bn和Google/Broadcom五GW容量是不同指标；65bn包含此前15bn承诺投资。",
+      "retrievedAt": "2026-11-05T13:37:41.014250+00:00"
+    },
+    {
+      "id": "chain-broadcom-q3-20260902",
+      "title": "Broadcom Q3 2026 Earnings Call（Wind转录）",
+      "date": "2026-09-02",
+      "page": "解析content[0].text后的data.items[0]：Hock Tan prepared及CFO financing段",
+      "url": "https://m.wind.com.cn/mobwftweb/M/?code=9DA8A027E656&lan=zh&device=pc&terminaltype=COM.WINDRAG&version=26.5.0.39845&gateway=na#/NA/653258077EECF7F541A0E6170EB5127A",
+      "kind": "wind_transcript",
+      "note": "转录声称已大批交付Ironwood并开始Google下一代TPU生产出货；公司IR列表抓取403。出货不等于机房上线验收。数据来源于万得 Wind 金融数据服务。",
+      "providerTitle": "Transcript 博通(BROADCOM) : Q3 2026 Earnings Call",
+      "retrievedAt": "2026-11-05T13:36:45.897004+00:00"
+    },
+    {
+      "id": "cloud-openai-subprocessors",
+      "title": "OpenAI Sub-processor list",
+      "date": "2026-10-14",
+      "kind": "company_disclosure",
+      "url": "https://openai.com/policies/sub-processor-list/",
+      "page": "Third Party Sub-processors → Google Cloud Platform row",
+      "note": "GCP为API、ChatGPT Enterprise/Edu/Business提供Cloud infrastructure。只证明供应关系，没有金额、GPU/TPU构成、训练用途或Google份额。"
+    },
+    {
+      "id": "cloud-openai-business-scale",
+      "title": "OpenAI CFO: A business that scales with the value of intelligence",
+      "date": "2026-01-18",
+      "kind": "company_disclosure",
+      "url": "https://openai.com/index/a-business-that-scales-with-the-value-of-intelligence/",
+      "page": "Sarah Friar: Compute grew / revenue followed the same curve paragraphs",
+      "note": "官方2023/2024/2025 ARR约2/6/20+bn、可用算力0.2/0.6/约1.9GW。ARR与算力是全公司口径，不是Google份额或确认收入；2026–2027外推另标假设。"
+    },
+    {
+      "id": "local-googl-barc-20260724",
+      "title": "Barclays Alphabet model",
+      "date": "2026-07-24",
+      "dateBasis": "ModelCover!F2 的研究发布日期；文件名辅助核对。",
+      "sha256": "32c072f65fb7bbaca082f6138c2eb8906b1561f726e8bf57486324226bd0950a",
+      "kind": "user_supplied_sell_side_model",
+      "cells": [
+        "ModelCover!F2"
+      ],
+      "note": "读取原档副本的公式和已保存缓存；未执行宏、刷新外部链接或重新计算。日期早于 2026-11-05，属于历史卖方预测，不是最新实际或公司指引。"
+    },
+    {
+      "id": "cloud-research-assumptions",
+      "title": "可编辑客户与资产归属情景假设",
+      "date": "2026-11-05",
+      "kind": "research_assumption",
+      "page": "parameters / parameterDefinitions / customerScenarios",
+      "note": "预算、客户拆分、Google采购份额及验收路径未由公开披露唯一识别。它们是受规模和已知时间约束的敏感性情景，非实绩或统计置信区间。"
+    },
+    {
+      "id": "cloud-ms-model",
+      "title": "Morgan Stanley Alphabet模型快照",
+      "date": "2026-10-29",
+      "kind": "broker_model",
+      "page": "Model / Rev Roll-up；日期IndexInformation!B2 / ModPubIndex!A2",
+      "note": "日期来自模型索引；与较旧机构版本不构成同期一致预期。只作结果比较，不作为自主模型输入。"
+    },
+    {
+      "id": "cloud-gs-model",
+      "title": "Goldman Sachs Alphabet模型快照",
+      "date": "2026-08-04",
+      "kind": "broker_model",
+      "page": "Cash Flow Statement!DC25 / DD25",
+      "note": "原工作簿缓存中购置固定资产现金流为负，比较展示支出绝对值；旧日期预测不是11月一致预期。"
+    },
+    {
+      "id": "local-jpm-us-internet-202607",
+      "title": "J.P. Morgan: US Internet: 2Q 2026 Preview",
+      "broker": "J.P. Morgan",
+      "date": "2026-07",
+      "datePrecision": "month",
+      "page": "PDF页码 1, 4, 5, 7, 8",
+      "pages": [
+        1,
+        4,
+        5,
+        7,
+        8
+      ],
+      "kind": "broker_report_original",
+      "note": "封面只写July 2026，没有可确认的具体发布日期；保持月度精度。p5单位USD million；p7/8分别列Mgmt Guide、Consensus、JPMe、Buyside Bar，不能混为同一来源。p1说明买方情绪源自JPM访谈/产业调研；p5来源Company reports/Bloomberg/JPM estimates，p7/8来源JPM estimates/Bloomberg。p7在2Q业绩预览内同时写end of 2Q backlog，应视为原件内部时点提示，不据此认定每条数据的具体公开日。",
+      "sha256": "1656c599b80a37bc5157856d706733c5b2eab3db85210f5282a4c2e7bdfa48ae",
+      "reviewedAt": "2026-11-05",
+      "useScope": "用户提供的内部研究材料；卖方原件，不等同公司事实"
+    }
+  ],
+  "scenarioPresets": {
+    "low": {
+      "label": "需求及交付偏弱",
+      "budgetMultiplier": 0.75,
+      "googleShareMultiplier": 0.8,
+      "capacityMultiplier": 0.75,
+      "servicePriceMultiplier": 0.9,
+      "externalTPUVolumeMultiplier": 0.7,
+      "externalTPUPriceMultiplier": 0.9,
+      "enterpriseGrowthAdjustment": -0.025
+    },
+    "base": {
+      "label": "研究基准",
+      "budgetMultiplier": 1,
+      "googleShareMultiplier": 1,
+      "capacityMultiplier": 1,
+      "servicePriceMultiplier": 1,
+      "externalTPUVolumeMultiplier": 1,
+      "externalTPUPriceMultiplier": 1,
+      "enterpriseGrowthAdjustment": 0
+    },
+    "high": {
+      "label": "需求及交付偏强",
+      "budgetMultiplier": 1.25,
+      "googleShareMultiplier": 1.2,
+      "capacityMultiplier": 1.25,
+      "servicePriceMultiplier": 1.1,
+      "externalTPUVolumeMultiplier": 1.3,
+      "externalTPUPriceMultiplier": 1.1,
+      "enterpriseGrowthAdjustment": 0.025
+    }
+  },
+  "accountingRules": [
+    "预算法与容量法取较小值，不将二者相加。",
+    "Google外部客户服务与硬件销售分栏；Google自用Search/Gemini不产生外部Cloud收入。",
+    "NVIDIA/Broadcom总收入只作历史信号；没有Google专属数量时不直乘Google份额。",
+    "Anthropic公开TPU数量、2027新容量、融资及采购新闻不可叠加为Google收入。",
+    "企业自有扩容按相邻季度新增服务收入强度代理；AI客户按相邻季度自有验收GW增量×设备/设施成本；第三方租赁不全额映射Google自有capex。"
+  ],
+  "limitations": [
+    "历史总额已由官方release核验且现金capex与SEC对账；客户及服务/硬件历史拆分不是披露事实。",
+    "企业成熟增速只用2023–2024总Cloud作尺度代理，2026产品销售及AI增长使其不能当作真实同口径企业历史。",
+    "客户预算、采购份额、净价和验收容量不可被现有材料唯一识别；情景范围不是置信区间，也不是订单承诺。",
+    "供应商回归历史样本有限，未证明增加信号能改善预测；整体Cloud回测不验证客户拆分或TPU项目收入。",
+    "现金capex强度有集团自用AI与提前建设的混合影响；非Cloud基准固定，未自动预测Google自身AI扩张，且季度付款有波动；没有拟合MS来消除差异。",
+    "Broadcom总收入在2023年收购VMware后口径变化；供应商总收入并非同质AI供给指标，回归只做探索性留出对照。",
+    "2021比较值来自2022官方发布，availability严格使用取得该值的发布日，未伪装为2021实时数据。"
+  ],
+  "generatedAt": "2026-11-06T03:53:41.649682+00:00",
+  "allocationSensitivity": {
+    "method": "官方基期Cloud总额固定，仅替换未披露的客户/硬件分摊并重算基期容量；未来各客户预算、交付、价格保持不变。不是概率区间或历史验证。",
+    "runs": [
+      {
+        "id": "low-named-customer-allocation",
+        "baseCloudTotalBn": 30.709,
+        "quarters": [
+          {
+            "period": "2026Q4",
+            "cloudRevenueBn": 40.3783072292776,
+            "cashCapexBn": 60.94482503147779
+          },
+          {
+            "period": "2027Q1",
+            "cloudRevenueBn": 44.116688034099084,
+            "cashCapexBn": 43.3675730382697
+          },
+          {
+            "period": "2027Q2",
+            "cloudRevenueBn": 50.78084489156208,
+            "cashCapexBn": 50.151866305419375
+          },
+          {
+            "period": "2027Q3",
+            "cloudRevenueBn": 57.40030330549247,
+            "cashCapexBn": 50.08741582190711
+          },
+          {
+            "period": "2027Q4",
+            "cloudRevenueBn": 64.29237384478962,
+            "cashCapexBn": 51.26726858712968
+          }
+        ],
+        "annual": [
+          {
+            "period": "2026",
+            "cloudRevenueBn": 115.88330722927759,
+            "cashCapexBn": 192.8978250314778
+          },
+          {
+            "period": "2027",
+            "cloudRevenueBn": 216.59021007594328,
+            "cashCapexBn": 194.87412375272586
+          }
+        ]
+      },
+      {
+        "id": "central-allocation",
+        "baseCloudTotalBn": 30.709,
+        "quarters": [
+          {
+            "period": "2026Q4",
+            "cloudRevenueBn": 35.086260077351916,
+            "cashCapexBn": 42.328946062149505
+          },
+          {
+            "period": "2027Q1",
+            "cloudRevenueBn": 38.66439788758531,
+            "cashCapexBn": 43.00364891302102
+          },
+          {
+            "period": "2027Q2",
+            "cloudRevenueBn": 44.89742142850733,
+            "cashCapexBn": 49.172729492037504
+          },
+          {
+            "period": "2027Q3",
+            "cloudRevenueBn": 51.09167630620206,
+            "cashCapexBn": 49.121745994187116
+          },
+          {
+            "period": "2027Q4",
+            "cloudRevenueBn": 57.523594875622834,
+            "cashCapexBn": 50.22222818739678
+          }
+        ],
+        "annual": [
+          {
+            "period": "2026",
+            "cloudRevenueBn": 110.5912600773519,
+            "cashCapexBn": 174.2819460621495
+          },
+          {
+            "period": "2027",
+            "cloudRevenueBn": 192.17709049791756,
+            "cashCapexBn": 191.52035258664242
+          }
+        ]
+      },
+      {
+        "id": "high-named-customer-allocation",
+        "baseCloudTotalBn": 30.709,
+        "quarters": [
+          {
+            "period": "2026Q4",
+            "cloudRevenueBn": 30.221255267644274,
+            "cashCapexBn": 32.12796919997989
+          },
+          {
+            "period": "2027Q1",
+            "cloudRevenueBn": 33.6520809098239,
+            "cashCapexBn": 36.403584439757225
+          },
+          {
+            "period": "2027Q2",
+            "cloudRevenueBn": 39.4887614858436,
+            "cashCapexBn": 48.272604234322955
+          },
+          {
+            "period": "2027Q3",
+            "cloudRevenueBn": 45.29212467465033,
+            "cashCapexBn": 48.2340010022065
+          },
+          {
+            "period": "2027Q4",
+            "cloudRevenueBn": 51.3010232893395,
+            "cashCapexBn": 49.2615174406701
+          }
+        ],
+        "annual": [
+          {
+            "period": "2026",
+            "cloudRevenueBn": 105.72625526764426,
+            "cashCapexBn": 164.0809691999799
+          },
+          {
+            "period": "2027",
+            "cloudRevenueBn": 169.73399035965733,
+            "cashCapexBn": 182.17170711695678
+          }
+        ]
+      }
+    ]
+  }
+}

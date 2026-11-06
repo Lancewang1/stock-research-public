@@ -1,0 +1,397 @@
+{
+  "asOf": "2026-11-05",
+  "scope": "Anthropic客户收入、现金与多云采购的公开资料核验；非可执行预测输入",
+  "sources": [
+    {
+      "id": "chain-anthropic-series-h-20260528",
+      "title": "Anthropic raises $65B in Series H funding at $965B post-money valuation",
+      "date": "2026-05-28",
+      "page": "融资首段、run-rate revenue段、compute capacity段",
+      "url": "https://www.anthropic.com/news/series-h",
+      "kind": "company_disclosure",
+      "note": "直接取得公司原文。年化收入运行率47bn、融资65bn和Google/Broadcom五GW容量是不同指标；65bn包含此前15bn承诺投资。",
+      "retrievedAt": "2026-11-05T13:37:41.014250+00:00"
+    },
+    {
+      "id": "chain-anthropic-financial-news-20261103",
+      "title": "Wind新闻：Anthropic 2026年第三季度营收169.6亿美元",
+      "date": "2026-11-03",
+      "page": "解析content[0].text后的data.items[1]；另有同稿data.items[2]，不算独立验证",
+      "url": "http://www.199it.com/archives/1861090.html",
+      "kind": "wind_news",
+      "note": "来源称Q3确认收入16.96bn、前九个月33.24bn；完整S-1/A正文未取得，仅作为待验证财务线索。数据来源于万得 Wind 金融数据服务。",
+      "providerTitle": "Anthropic：2026年第三季度营收169.6亿美元，同比增长1127%",
+      "retrievedAt": "2026-11-05T13:36:35.144560+00:00"
+    },
+    {
+      "id": "chain-sec-anthropic-20261102",
+      "title": "SEC检索：Anthropic S-1/A，0001628280-26-068676",
+      "date": "2026-11-02",
+      "page": "hits.hits中主文件anthropicpbc-sx1ax1.htm；CIK2130357",
+      "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026068676/anthropicpbc-sx1ax1.htm",
+      "kind": "regulatory_index",
+      "note": "SEC检索接口成功，确认申请日期与文件名；SEC正文请求返回403，不能称已审阅完整招股书。最初存档的Wind补充查询只返回封面，亦不补足财务验证。",
+      "retrievedAt": "2026-11-05T13:37:41.385421+00:00"
+    },
+    {
+      "id": "chain-anthropic-google-20251023",
+      "title": "Anthropic：Expanding our use of Google Cloud TPUs and Services",
+      "date": "2025-10-23",
+      "page": "正文：第一段、multi-platform approach 段",
+      "url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
+      "kind": "company_disclosure",
+      "note": "直接取得公司原文。计划最多一百万TPU、2026年上线超过1GW，并非已经验收。",
+      "retrievedAt": "2026-11-05T13:37:39.522737+00:00"
+    },
+    {
+      "id": "chain-anthropic-google-20260406",
+      "title": "Anthropic expands partnership with Google and Broadcom for multiple gigawatts of next-generation compute",
+      "date": "2026-04-06",
+      "page": "正文第一段及run-rate revenue段",
+      "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute",
+      "kind": "company_disclosure",
+      "note": "直接取得公司原文。新增多GW TPU预计从2027年开始上线；该次公告没有给出逐季交付或Google收入份额。",
+      "retrievedAt": "2026-11-05T13:37:40.975946+00:00"
+    },
+    {
+      "id": "chain-anthropic-aws-20260420",
+      "title": "Anthropic and Amazon expand collaboration for up to 5 gigawatts of new compute",
+      "date": "2026-04-20",
+      "page": "Infrastructure at scale；Continued investment；Meeting record demand",
+      "url": "https://www.anthropic.com/news/anthropic-amazon-compute",
+      "kind": "company_disclosure",
+      "note": "直接取得公司原文；2026-04-21补充更新。超过100bn是十年AWS技术采购承诺，Amazon当次5bn及未来最多20bn投资另列。",
+      "retrievedAt": "2026-11-05T13:37:40.066505+00:00"
+    },
+    {
+      "id": "chain-anthropic-ms-nv-20251118",
+      "title": "Microsoft, NVIDIA, and Anthropic announce strategic partnerships",
+      "date": "2025-11-18",
+      "page": "Azure采购、NVIDIA技术合作、投资段",
+      "url": "https://www.anthropic.com/news/microsoft-nvidia-anthropic-announce-strategic-partnerships",
+      "kind": "company_disclosure",
+      "note": "直接取得公司原文。30bn Azure采购与NVIDIA最多10bn、Microsoft最多5bn股权投资不同，不相加为Google收入。",
+      "retrievedAt": "2026-11-05T13:37:40.971181+00:00"
+    },
+    {
+      "id": "anthropic-submissions",
+      "title": "SEC Anthropic submissions：S-1及S-1/A提交记录",
+      "date": "2026-11-05",
+      "page": "filings.recent，accession 0001628280-26-067168 / 0001628280-26-068676",
+      "url": "https://data.sec.gov/submissions/CIK0002130357.json",
+      "kind": "regulatory_api",
+      "retrievedAt": "2026-11-05T14:40:01.776781+00:00",
+      "note": "直接取得SEC JSON；其可验证范围不包括完整招股书正文。"
+    },
+    {
+      "id": "anthropic-companyfacts",
+      "title": "SEC Anthropic companyfacts：本次快照只有发行费标签",
+      "date": "2026-11-05",
+      "page": "facts.ffd；未返回收入、成本、现金或现金流财务标签",
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0002130357.json",
+      "kind": "regulatory_api",
+      "retrievedAt": "2026-11-05T14:40:01.776984+00:00",
+      "note": "直接取得SEC JSON；其可验证范围不包括完整招股书正文。"
+    },
+    {
+      "id": "anthropic-wind-s1a-statement",
+      "title": "Form S-1 ANTHROPIC : General form for registration of securities under the Securities Act of 1933（Wind摘录）",
+      "date": "2026-10-26",
+      "page": "data.items[0]：S-1 p133 Our Financial Model；F-14 Note 1费用重分类；F-7及现金流表为摘要",
+      "url": "https://m.wind.com.cn/mobwftweb/M/?code=885B502A5698&lan=zh&device=pc&terminaltype=COM.WINDRAG&version=26.5.0.39845&gateway=na#/NA/1AEB9390141B830B16DBFF1C7F0B6322",
+      "kind": "wind_filing_excerpt",
+      "originalBodyVerified": false,
+      "note": "数据来源于万得Wind金融数据服务。返回文本混合英文摘录和中文表格摘要；只保留可定位的英文叙述，不把摘要当原始财表，也不将10-26版本当11-02修订版。"
+    },
+    {
+      "id": "anthropic-wind-s1-commitment-note13",
+      "title": "Form S-1 ANTHROPIC : General form for registration of securities under the Securities Act of 1933（Wind摘录）",
+      "date": "2026-10-26",
+      "page": "data.items[0]：S-1 p137–138 Compute Investments / Anthropic Direct；合同义务表数值未取得",
+      "url": "https://m.wind.com.cn/mobwftweb/M/?code=885B502A5698&lan=zh&device=pc&terminaltype=COM.WINDRAG&version=26.5.0.39845&gateway=na#/NA/1AEB9390141B830B16DBFF1C7F0B6322",
+      "kind": "wind_filing_excerpt",
+      "originalBodyVerified": false,
+      "note": "数据来源于万得Wind金融数据服务。返回文本混合英文摘录和中文表格摘要；只保留可定位的英文叙述，不把摘要当原始财表，也不将10-26版本当11-02修订版。"
+    }
+  ],
+  "crossCompanyEvidence": [
+    {
+      "company": "Anthropic",
+      "relationship": "客户商业化、融资与信用质量",
+      "claim": "2026-05-28公司公告称当月年化收入运行率超过47bn美元，Series H融资65bn美元，其中包括此前15bn已承诺投资。SEC记录确认10-26提交S-1、11-02提交S-1/A；本轮仍未取得修订版确认收入、现金和现金流原始表。",
+      "implication": "把客户需求增长、融资公告与可用于支付算力的现金分开研究。尚不能据此计算现金跑道、Google采购覆盖率或可归属Cloud收入。",
+      "sourceRefs": [
+        "chain-anthropic-series-h-20260528",
+        "chain-anthropic-financial-news-20261103",
+        "anthropic-submissions",
+        "anthropic-companyfacts",
+        "anthropic-wind-s1a-statement"
+      ],
+      "limitations": [
+        "47bn是2026年5月run-rate revenue，不是11月ARR或全年确认收入；官方未将其定义为经常性订阅ARR。",
+        "65bn融资包含15bn先前承诺，公告金额不等同于期末可用现金；不能与投资方公告再次相加。",
+        "Wind新闻所报Q3收入16.96bn、前九个月33.24bn未获原始表核验，value继续为空，不能进入自动预测。",
+        "SEC companyfacts仅返回五个ffd发行费标签；其中TtlOfferingAmt的1bn不是融资到账或财务报表数据。",
+        "Wind取得的是10-26 S-1摘录，表格多被摘要替代；11-02 S-1/A原始表仍缺，不能由旧版或摘要补齐。"
+      ],
+      "strength": "5月官方运行率与融资：强；当期确认收入、现金及成本：未核验",
+      "factors": [
+        "客户需求",
+        "回款与信用",
+        "多云采购预算"
+      ],
+      "publicationDate": "2026-11-03"
+    },
+    {
+      "company": "Anthropic",
+      "relationship": "客户算力成本、现金消耗与采购结构",
+      "claim": "Wind转录的10-26 S-1叙述称算力先承诺、上线后计入可供研究、模型开发、客户服务和内部使用的资源池；费用表改按compute and infrastructure等性质分类。p137–138另描述Anthropic Direct把芯片租赁与机房托管分别采购。",
+      "implication": "支付能力需同时检查客户确认收入、全口径算力费用、现金流、已支付预付款及未来承诺；向Google、Broadcom与托管商的支付要按合同范围去重。",
+      "sourceRefs": [
+        "anthropic-wind-s1a-statement",
+        "anthropic-wind-s1-commitment-note13"
+      ],
+      "limitations": [
+        "这是有页码的Wind英文摘录，未取得或目视核对SEC原始正文；中文表格摘要未作为数值来源。",
+        "compute and infrastructure覆盖多种工作负载，不等于cost of revenue，也不能据此直接计算推理毛利率。",
+        "芯片租赁、数据中心托管、云服务、资本开支、费用确认和现金付款是不同口径；114.5bn与161.2bn仍未完成原始合同范围及重叠核验。",
+        "摘录中的总承诺、现金、授信余额金额缺失；不能通过run-rate、融资公告或个别应付款反推。",
+        "合同期限、容量、实际验收、Google可归属份额、季度履约和基准已含继续为空；2027承诺不前移至2026Q4。"
+      ],
+      "strength": "费用分类与采购结构：Wind披露摘录；金额与季度桥接：缺证据",
+      "factors": [
+        "回款与信用",
+        "算力成本",
+        "Cloud收入增速",
+        "收入确认节奏"
+      ],
+      "publicationDate": "2026-10-26"
+    }
+  ],
+  "evidenceMetrics": [
+    {
+      "id": "anthropic-recognized-revenue-q3",
+      "company": "Anthropic",
+      "metric": "GAAP确认收入",
+      "period": "2026Q3",
+      "value": null,
+      "unit": "USD bn",
+      "status": "secondary_report_unverified",
+      "sourceRefs": [
+        "chain-anthropic-financial-news-20261103"
+      ],
+      "note": "新闻线索未获11-02修订版原始财表核验。",
+      "automaticForecastEligible": false,
+      "reportedValue": 16.96
+    },
+    {
+      "id": "anthropic-recognized-revenue-9m",
+      "company": "Anthropic",
+      "metric": "GAAP确认收入",
+      "period": "2026前九个月",
+      "value": null,
+      "unit": "USD bn",
+      "status": "secondary_report_unverified",
+      "sourceRefs": [
+        "chain-anthropic-financial-news-20261103"
+      ],
+      "note": "新闻线索未获原始财表核验；不与5月run-rate直接比较。",
+      "automaticForecastEligible": false,
+      "reportedValue": 33.24
+    },
+    {
+      "id": "anthropic-compute-infrastructure-expense",
+      "company": "Anthropic",
+      "metric": "Compute and infrastructure费用",
+      "period": "2026当期",
+      "value": null,
+      "unit": "USD bn",
+      "status": "pending_original_financials",
+      "sourceRefs": [
+        "anthropic-wind-s1a-statement"
+      ],
+      "note": "费用表按性质分类；覆盖研究、训练、推理等，不直接等同于cost of revenue。",
+      "automaticForecastEligible": false
+    },
+    {
+      "id": "anthropic-cost-of-revenue",
+      "company": "Anthropic",
+      "metric": "收入成本",
+      "period": "2026当期",
+      "value": null,
+      "unit": "USD bn",
+      "status": "pending_original_financials",
+      "sourceRefs": [
+        "anthropic-wind-s1a-statement"
+      ],
+      "note": "主表不再单列；需核对补充按功能分类附注原表，不能用算力费用替代。",
+      "automaticForecastEligible": false
+    },
+    {
+      "id": "anthropic-cash-equivalents",
+      "company": "Anthropic",
+      "metric": "现金及现金等价物",
+      "period": "2026-09-30",
+      "value": null,
+      "unit": "USD bn",
+      "status": "pending_original_financials",
+      "sourceRefs": [
+        "anthropic-wind-s1-commitment-note13"
+      ],
+      "note": "现金余额原始表未取得；融资65bn与注册费基数1bn均不得代入。",
+      "automaticForecastEligible": false
+    },
+    {
+      "id": "anthropic-operating-cash-flow",
+      "company": "Anthropic",
+      "metric": "经营现金流净额",
+      "period": "2026前九个月",
+      "value": null,
+      "unit": "USD bn",
+      "status": "pending_original_financials",
+      "sourceRefs": [
+        "anthropic-wind-s1a-statement"
+      ],
+      "note": "现金流原始表未取得，无法核验现金消耗或预付算力现金流分类。",
+      "automaticForecastEligible": false
+    },
+    {
+      "id": "anthropic-actual-cloud-payments",
+      "company": "Anthropic",
+      "metric": "已支付云服务/算力采购现金",
+      "period": "2026当期",
+      "value": null,
+      "unit": "USD bn",
+      "status": "pending_original_financials",
+      "sourceRefs": [
+        "anthropic-wind-s1-commitment-note13"
+      ],
+      "note": "年度/多年度采购承诺不是当期现金付款；供应商分拆、账期和预付款不足。",
+      "automaticForecastEligible": false
+    },
+    {
+      "id": "anthropic-available-liquidity",
+      "company": "Anthropic",
+      "metric": "可用流动性",
+      "period": "2026-09-30",
+      "value": null,
+      "unit": "USD bn",
+      "status": "pending_original_financials",
+      "sourceRefs": [
+        "anthropic-wind-s1-commitment-note13"
+      ],
+      "note": "需分别核验非受限现金、短期投资、可提款授信、条件融资和近期到期付款。",
+      "automaticForecastEligible": false
+    }
+  ],
+  "supersedesEvidence": [
+    {
+      "company": "Anthropic",
+      "claim": "2026-05-28官方称当月年化收入运行率已超过47bn美元，Series H融资65bn美元，其中包含此前15bn已承诺投资。Wind 11-03新闻另称Q3确认收入16.96bn、前九个月33.24bn，但招股书对应财务表本轮未直接取得。",
+      "replacementCompany": "Anthropic",
+      "replacementClaim": "2026-05-28公司公告称当月年化收入运行率超过47bn美元，Series H融资65bn美元，其中包括此前15bn已承诺投资。SEC记录确认10-26提交S-1、11-02提交S-1/A；本轮仍未取得修订版确认收入、现金和现金流原始表。",
+      "reason": "更新检索状态与费用口径，未将任何待核数字升级为原文已核验。"
+    }
+  ],
+  "materialGaps": [
+    {
+      "name": "Anthropic最新确认收入、成本、现金及现金流",
+      "value": null,
+      "reason": "11-02 S-1/A原始财务表及MD&A；10-26摘录不能代替修订版数值。"
+    },
+    {
+      "name": "Google 114.5bn与Broadcom 161.2bn合同范围及重叠",
+      "value": null,
+      "reason": "需原始服务采购/设备租赁条款、期限、付款表、已含金额及相互关系；二手新闻数字不进入量化。"
+    },
+    {
+      "name": "算力交付与收入确认季度安排",
+      "value": null,
+      "reason": "2026既有扩容与2027新5GW分开；需实际交付、验收和计费条件，不以合同总额除年数平均分配。"
+    },
+    {
+      "name": "多云采购中的Google可归属份额",
+      "value": null,
+      "reason": "AWS、Azure、Google/Broadcom及Anthropic Direct口径不同；可能更新同一承诺，不能按公告数字简单累加。"
+    },
+    {
+      "name": "客户短期付款能力与现金跑道",
+      "value": null,
+      "reason": "需到期付款与现金余额、现金流、授信可提款额及条件融资逐项对应，融资公告不足以证明。"
+    },
+    {
+      "name": "现有Google预测基准已含收入",
+      "value": null,
+      "reason": "对照MS/GS季度Cloud模型假设；新增证据不代表净新增，基准已含不得默认0。"
+    }
+  ],
+  "audit": {
+    "publicSourcesOnly": true,
+    "secSubmissionsVerified": [
+      {
+        "form": "S-1/A",
+        "filingDate": "2026-11-02",
+        "accessionNumber": "0001628280-26-068676",
+        "primaryDocument": "anthropicpbc-sx1ax1.htm",
+        "isXBRL": 0
+      },
+      {
+        "form": "S-1",
+        "filingDate": "2026-10-26",
+        "accessionNumber": "0001628280-26-067168",
+        "primaryDocument": "anthropicpbc-sx1.htm",
+        "isXBRL": 1
+      }
+    ],
+    "companyfactsTaxonomies": [
+      "ffd"
+    ],
+    "companyfactsTags": {
+      "ffd": [
+        "NetFeeAmt",
+        "TtlFeeAmt",
+        "TtlOfferingAmt",
+        "TtlOffsetAmt",
+        "TtlPrevslyPdAmt"
+      ]
+    },
+    "financialFactsPresent": false,
+    "originalS1aBodyVerified": false,
+    "blockedOriginal": "已存档SEC Archives S-1/A请求403；本轮未重试该被拒正文，也未绕过访问限制。",
+    "browserOrVisualToolsUsed": false,
+    "windQueries": [
+      {
+        "returnedItems": 5,
+        "anthropicItems": 2,
+        "originalFinancialTablesVerified": false
+      },
+      {
+        "returnedItems": 0,
+        "anthropicItems": 0,
+        "originalFinancialTablesVerified": false
+      },
+      {
+        "returnedItems": 1,
+        "anthropicItems": 1,
+        "originalFinancialTablesVerified": false
+      },
+      {
+        "returnedItems": 0,
+        "anthropicItems": 0,
+        "originalFinancialTablesVerified": false
+      },
+      {
+        "returnedItems": 0,
+        "anthropicItems": 0,
+        "originalFinancialTablesVerified": false
+      },
+      {
+        "returnedItems": 4,
+        "anthropicItems": 4,
+        "originalFinancialTablesVerified": false
+      }
+    ],
+    "quantitativePendingClaimsUpgraded": 0
+  },
+  "generatedAt": "2026-11-05T14:57:41.232699+00:00"
+}

@@ -1,0 +1,128 @@
+{
+  "asOf": "2026-11-06",
+  "status": "provisional_source_transcription_not_out_of_sample_validation",
+  "source": {
+    "date": "2026-10-26",
+    "title": "Form S-1 ANTHROPIC : General form for registration of securities under the Securities Act of 1933",
+    "url": "https://m.wind.com.cn/mobwftweb/M/?code=885B502A5698&lan=zh&device=pc&terminaltype=COM.WINDRAG&version=26.5.0.39845&gateway=na#/NA/1AEB9390141B830B16DBFF1C7F0B6322"
+  },
+  "sourceSHA256": "3391e6c0dc26383a4aa26d904799ea5679607ec14e2f9ab3da4387f3c1d56559",
+  "limitations": [
+    "SEC original unavailable (HTTP 403); Wind transcription only.",
+    "Expense is not cash procurement, and 2026 compute includes leases/depreciation.",
+    "Cost of revenue is a serving-cost proxy, not exact inference procurement.",
+    "Research and development is not pure training.",
+    "Annual and first-half observations overlap; no regression or statistical validation.",
+    "These are retrospective compatibility checks of a forward scenario, not historical forecasts."
+  ],
+  "anthropic": [
+    {
+      "period": "2023",
+      "unit": "USD million",
+      "revenue": 41,
+      "computeInfrastructureExpense": 433,
+      "costOfRevenue": 26,
+      "researchDevelopmentExpense": 422,
+      "interimUnaudited": false,
+      "computeRevenuePct": 1056.0975609756097,
+      "costOfRevenuePct": 63.41463414634146,
+      "originalScenarioTotalComputeProxy": 41.0,
+      "proxyMinusReportedComputePct": -90.5311778290993,
+      "nonServingComputeLowerBoundPct": 93.99538106235565
+    },
+    {
+      "period": "2024",
+      "unit": "USD million",
+      "revenue": 386,
+      "computeInfrastructureExpense": 2522,
+      "costOfRevenue": 752,
+      "researchDevelopmentExpense": 2275,
+      "interimUnaudited": false,
+      "computeRevenuePct": 653.3678756476684,
+      "costOfRevenuePct": 194.81865284974094,
+      "originalScenarioTotalComputeProxy": 386.0,
+      "proxyMinusReportedComputePct": -84.69468675654242,
+      "nonServingComputeLowerBoundPct": 70.18239492466296
+    },
+    {
+      "period": "2025",
+      "unit": "USD million",
+      "revenue": 4585,
+      "computeInfrastructureExpense": 7326,
+      "costOfRevenue": 2773,
+      "researchDevelopmentExpense": 6338,
+      "interimUnaudited": false,
+      "computeRevenuePct": 159.78189749182116,
+      "costOfRevenuePct": 60.479825517993454,
+      "originalScenarioTotalComputeProxy": 4585.0,
+      "proxyMinusReportedComputePct": -37.41468741468742,
+      "nonServingComputeLowerBoundPct": 62.14851214851215
+    },
+    {
+      "period": "2025H1",
+      "unit": "USD million",
+      "revenue": 1163,
+      "computeInfrastructureExpense": 2334,
+      "costOfRevenue": 1019,
+      "researchDevelopmentExpense": 1850,
+      "interimUnaudited": true,
+      "computeRevenuePct": 200.6878761822872,
+      "costOfRevenuePct": 87.61822871883062,
+      "originalScenarioTotalComputeProxy": 1163.0,
+      "proxyMinusReportedComputePct": -50.17137960582691,
+      "nonServingComputeLowerBoundPct": 56.341045415595545
+    },
+    {
+      "period": "2026H1",
+      "unit": "USD million",
+      "revenue": 16286,
+      "computeInfrastructureExpense": 8945,
+      "costOfRevenue": 2380,
+      "researchDevelopmentExpense": 9741,
+      "interimUnaudited": true,
+      "computeRevenuePct": 54.92447500921036,
+      "costOfRevenuePct": 14.613778705636744,
+      "originalScenarioTotalComputeProxy": 16286.0,
+      "proxyMinusReportedComputePct": 82.06819452207937,
+      "nonServingComputeLowerBoundPct": 73.39295695919508
+    }
+  ],
+  "openaiSecondaryOnly": [
+    {
+      "period": "2024",
+      "revenue": 3700,
+      "costOfRevenue": 2650,
+      "costOfRevenuePct": 71.62162162162163
+    },
+    {
+      "period": "2025",
+      "revenue": 13070,
+      "costOfRevenue": 7500,
+      "costOfRevenuePct": 57.38332058148432
+    }
+  ],
+  "nonIdentifiabilityExample": [
+    {
+      "inferenceExpenseRevenue": 0.4,
+      "trainingShare": 0.6,
+      "googleInferenceShare": 0.25,
+      "googleTrainingShare": 0.3,
+      "googleDemandRevenue": 0.28
+    },
+    {
+      "inferenceExpenseRevenue": 0.8,
+      "trainingShare": 0.6,
+      "googleInferenceShare": 0.125,
+      "googleTrainingShare": 0.15,
+      "googleDemandRevenue": 0.28
+    },
+    {
+      "inferenceExpenseRevenue": 0.2,
+      "trainingShare": 0.6,
+      "googleInferenceShare": 0.5,
+      "googleTrainingShare": 0.6,
+      "googleDemandRevenue": 0.28
+    }
+  ],
+  "productionInputsChanged": false
+}

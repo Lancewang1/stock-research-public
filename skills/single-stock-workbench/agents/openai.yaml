@@ -1,0 +1,6 @@
+interface:
+  display_name: "个股研究工作台"
+  short_description: "用研究证据解释基本面变化，计算季度盈利情景，并生成本地交互看板"
+  default_prompt: "使用 $single-stock-workbench 读取我提供的模型与研究材料，完成可追溯的基本面复盘、季度盈利情景和本地静态看板。"
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,81 @@
+/* Non-visual integration checks. Canvas calls are mocked, not rendered. */
+const fs = require('node:fs');
+const path = require('node:path');
+const os = require('node:os');
+const assert = require('node:assert/strict');
+const {JSDOM, VirtualConsole} = require(path.join(process.env.STOCK_DASHBOARD_QA_MODULES || path.join(os.tmpdir(), 'stock-dashboard-qa', 'node_modules'), 'jsdom'));
+const html = fs.readFileSync(process.argv[2] || path.join(__dirname, '../outputs/googl-dashboard.html'), 'utf8');
+const errors = [];
+const virtualConsole = new VirtualConsole();
+virtualConsole.on('jsdomError', error => errors.push(error.stack || String(error)));
+const context = new Proxy({measureText:t=>({width:String(t).length*7}),createLinearGradient:()=>({addColorStop(){}}),createRadialGradient:()=>({addColorStop(){}}),setLineDash(){},getLineDash:()=>[],getTransform:()=>({})},{get:(o,k)=>k in o?o[k]:()=>{},set:(o,k,v)=>(o[k]=v,true)});
+const dom = new JSDOM(html, {runScripts:'dangerously',url:'http://localhost/dashboard-test',pretendToBeVisual:true,virtualConsole,beforeParse(window){
+  window.structuredClone=global.structuredClone;
+  window.matchMedia=()=>({matches:false,addListener(){},removeListener(){},addEventListener(){},removeEventListener(){}});
+  window.HTMLCanvasElement.prototype.getContext=()=>context;
+  window.scrollTo=()=>{};window.HTMLElement.prototype.scrollIntoView=()=>{};
+  window.HTMLElement.prototype.getBoundingClientRect=function(){return {x:0,y:0,left:0,top:0,right:1100,bottom:440,width:1100,height:440};};
+  Object.defineProperty(window.HTMLElement.prototype,'clientWidth',{get(){return 1100;}});
+  Object.defineProperty(window.HTMLElement.prototype,'clientHeight',{get(){return 440;}});
+  window.URL.createObjectURL=()=> 'blob:local-test';window.URL.revokeObjectURL=()=>{};
+  window.fetch=()=>{throw new Error('Static dashboard attempted network request');};
+}});
+const {document, Event} = dom.window;
+const click = selector=>{const el=document.querySelector(selector);assert.ok(el,'Missing '+selector);el.click();};
+const checkErrors=()=>assert.equal(errors.length,0,errors.join('\n'));
+try {
+  checkErrors();
+  assert.match(document.querySelector('#px').textContent,/288\.93/);
+  for(const tab of [1,2,3]){click(`#tabs [data-tab="${tab}"]`);checkErrors();}
+  for(const sub of ['piv','val','cmp']){click(`#t3sub [data-s="${sub}"]`);checkErrors();}
+  click('[data-view="forecast"]');checkErrors();
+  assert.ok(document.querySelectorAll('#ft input').length>50,'Forecast inputs absent');
+  assert.equal(document.querySelectorAll('#ft input[data-period="2026Q3"]').length,0,'Actual period editable');
+  const before=document.querySelector('#wbReconcile').textContent;
+  const input=document.querySelector('#ft input[data-period="2026Q4"][data-field="grossMargin"]');
+  assert.ok(input);input.value=String(Number(input.value)-1);input.dispatchEvent(new Event('change',{bubbles:true}));checkErrors();
+  assert.notEqual(document.querySelector('#wbReconcile').textContent,before,'Model change did not update bridge');
+  assert.ok(dom.window.localStorage.length>0,'Scenario not saved');
+  click('#wbReset');assert.equal(document.querySelector('#wbReconcile').textContent,before,'Reset not reversible');
+  click('#hfreq [data-f="a"]');checkErrors();
+  const yearInput=document.querySelector('#ft input[data-period="2028"][data-field="grossMargin"]');
+  assert.ok(yearInput,'2028 annual input removed');yearInput.value=String(Number(yearInput.value)-1);yearInput.dispatchEvent(new Event('change',{bubbles:true}));checkErrors();
+  assert.equal(document.querySelector('#wbError').textContent,'','Annual edit rejected');
+  click('#wbReset');click('#wbExample');checkErrors();
+  assert.equal(document.querySelector('#wbScenarioNote').hidden,false,'Example not labelled');
+  click('#wbReset');
+  click('#hfreq [data-f="q"]');
+  click('[data-wb-factor="cloud"][data-period="2027Q2"]');checkErrors();
+  assert.match(document.querySelector('#drBody').textContent,/2027Q2/,'Evidence lost selected quarter');
+  assert.match(document.querySelector('#drBody').textContent,/Anthropic/,'Customer evidence absent');
+  assert.match(document.querySelector('#drBody').textContent,/NVIDIA/,'Supplier evidence absent');
+  click('#wbContractPreview');
+  assert.ok(document.querySelector('#wbError').textContent,'Unknown contract inputs silently treated as zero');
+  click('#wbContractExample');checkErrors();
+  assert.match(document.querySelector('#wbContractResult').textContent,/150\.00/,'Contract bridge arithmetic wrong');
+  assert.equal(document.querySelector('#wbReconcile').textContent,before,'Preview changed the forecast');
+  click('#wbContractApply');checkErrors();
+  assert.notEqual(document.querySelector('#wbReconcile').textContent,before,'Contract did not update forecast');
+  click('#wbReset');assert.equal(document.querySelector('#wbReconcile').textContent,before,'Contract reset did not restore baseline');
+  assert.match(document.querySelector('#p2').textContent,/FRED/,'Macro observations not rendered');
+  assert.ok(document.querySelectorAll('#wbBrokers tbody tr').length>=3,'Broker comparisons not rendered');
+  const metricTable=document.querySelector('#wbEvidenceMetrics');
+  assert.ok(metricTable,'Cross-company numeric evidence absent');
+  assert.match(metricTable.textContent,/NVIDIA/,'Supplier numeric evidence absent');
+  assert.match(metricTable.textContent,/Goldman Sachs/,'Broker identity missing from model values');
+  const contracts=document.querySelector('#wbContracts');
+  assert.ok(contracts,'Contract comparison absent');
+  assert.equal(contracts.querySelectorAll('tbody tr').length,6,'Contract arrangements missing or duplicated');
+  const googleContract=contracts.querySelector('[data-contract-id="anthropic-google-services"]');
+  assert.match(googleContract.textContent,/正式数值：待核/,'Unverified Google contract amount treated as verified');
+  assert.match(contracts.querySelector('[data-contract-id="anthropic-aws-expansion-2026"]').textContent,/> 100,000/,'AWS lower bound lost');
+  assert.ok(document.querySelectorAll('#wbResearchGaps .wb-stage').length>=10,'Financial and contractual gaps absent');
+  googleContract.querySelector('[data-wb-source]').click();checkErrors();
+  assert.match(document.querySelector('#drBody').textContent,/114\.5|1145|Anthropic/,'Contract source drawer unresolved');
+  click('#tabs [data-tab="3"]');click('#t3sub [data-s="piv"]');
+  const caseButtons=[...document.querySelectorAll('[data-wb-case]')];assert.ok(caseButtons.length>=2,'Missing research cases');
+  for(const b of caseButtons){document.querySelector(`[data-wb-case="${b.dataset.wbCase}"]`).click();checkErrors();}
+  const source=document.querySelector('[data-wb-source]');assert.ok(source);source.click();checkErrors();assert.equal(document.querySelector('#drawer').hidden,false);
+  assert.ok(!/\?{5,}/.test(document.body.textContent),'Corrupted Chinese text');
+  console.log(JSON.stringify({result:'pass',scope:'non-visual DOM integration; canvas mocked',modules:4,drawdownCases:caseButtons.length,scenarioEditReset:true,annual2028Editable:true,sourceDrawer:true,quarterEvidence:true,contractPreviewApplyReset:true,macroAndBrokerTables:true}));
+} finally {dom.window.close();}

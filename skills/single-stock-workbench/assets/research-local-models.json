@@ -1,0 +1,2000 @@
+{
+  "asOf": "2026-11-05",
+  "scope": "用户 Fundamental Models 本地归档；不调用API、不执行宏、原件只读。优先验证Alphabet容量/费用桥、Broadcom与NVIDIA旧预测。",
+  "sources": [
+    {
+      "id": "local-amzn-barc-20260730",
+      "title": "Barclays Amazon model",
+      "date": "2026-07-30",
+      "dateBasis": "ModelCover!F2 的研究发布日期；文件名辅助核对。",
+      "sha256": "78ac3e40da06bd23c6ad5128508e3dab7e7c304ad8a11119a7f366af7080f33a",
+      "kind": "user_supplied_sell_side_model",
+      "cells": [
+        "ModelCover!F2"
+      ],
+      "note": "读取原档副本的公式和已保存缓存；未执行宏、刷新外部链接或重新计算。日期早于 2026-11-05，属于历史卖方预测，不是最新实际或公司指引。"
+    },
+    {
+      "id": "local-avgo-barc-20260604",
+      "title": "Barclays Broadcom model",
+      "date": "2026-06-04",
+      "dateBasis": "ModelCover!F2 的研究发布日期；文件名辅助核对。",
+      "sha256": "55ec00a1705cda89b09e109da05285a513b31d3f81b1447d1f61f5aeb6d8d4f0",
+      "kind": "user_supplied_sell_side_model",
+      "cells": [
+        "ModelCover!F2"
+      ],
+      "note": "读取原档副本的公式和已保存缓存；未执行宏、刷新外部链接或重新计算。日期早于 2026-11-05，属于历史卖方预测，不是最新实际或公司指引。"
+    },
+    {
+      "id": "local-googl-barc-20260724",
+      "title": "Barclays Alphabet model",
+      "date": "2026-07-24",
+      "dateBasis": "ModelCover!F2 的研究发布日期；文件名辅助核对。",
+      "sha256": "32c072f65fb7bbaca082f6138c2eb8906b1561f726e8bf57486324226bd0950a",
+      "kind": "user_supplied_sell_side_model",
+      "cells": [
+        "ModelCover!F2"
+      ],
+      "note": "读取原档副本的公式和已保存缓存；未执行宏、刷新外部链接或重新计算。日期早于 2026-11-05，属于历史卖方预测，不是最新实际或公司指引。"
+    },
+    {
+      "id": "local-msft-barc-20260730",
+      "title": "Barclays Microsoft model",
+      "date": "2026-07-30",
+      "dateBasis": "ModelCover!F2 的研究发布日期；文件名辅助核对。",
+      "sha256": "187ffe3b16f6b79e411cce09af0f2a1bb04ba457a77faf7922f2fcb2775e8c3e",
+      "kind": "user_supplied_sell_side_model",
+      "cells": [
+        "ModelCover!F2"
+      ],
+      "note": "读取原档副本的公式和已保存缓存；未执行宏、刷新外部链接或重新计算。日期早于 2026-11-05，属于历史卖方预测，不是最新实际或公司指引。"
+    },
+    {
+      "id": "local-nvda-barc-20260827",
+      "title": "Barclays NVIDIA model",
+      "date": "2026-08-27",
+      "dateBasis": "ModelCover!F2 的研究发布日期；文件名辅助核对。",
+      "sha256": "6d48b6f79c731bc4f76579f6d588d2bb51a5db7b0fb858569e2d7537084e85f2",
+      "kind": "user_supplied_sell_side_model",
+      "cells": [
+        "ModelCover!F2"
+      ],
+      "note": "读取原档副本的公式和已保存缓存；未执行宏、刷新外部链接或重新计算。日期早于 2026-11-05，属于历史卖方预测，不是最新实际或公司指引。"
+    },
+    {
+      "id": "local-nvda-gs-20260827",
+      "title": "Goldman Sachs NVIDIA model",
+      "date": "2026-08-27",
+      "dateBasis": "文件名日期，与 docProps/core.xml modified 的日期一致；未独立取得随附发布邮件。",
+      "sha256": "a673f3557c90f9588adc4e8f515bed23cb61212f2db69deef38485229ebf3413",
+      "kind": "user_supplied_sell_side_model",
+      "cells": [],
+      "note": "读取原档副本的公式和已保存缓存；未执行宏、刷新外部链接或重新计算。日期早于 2026-11-05，属于历史卖方预测，不是最新实际或公司指引。"
+    },
+    {
+      "id": "local-avgo-gs-20260604",
+      "title": "Goldman Sachs Broadcom model",
+      "date": "2026-06-04",
+      "dateBasis": "文件名日期，与 docProps/core.xml modified 的日期一致；未独立取得随附发布邮件。",
+      "sha256": "1c9f611edef30b966764ff4597332ddc0b0cac123ecad1c276d3e4f4bcbca4c1",
+      "kind": "user_supplied_sell_side_model",
+      "cells": [],
+      "note": "读取原档副本的公式和已保存缓存；未执行宏、刷新外部链接或重新计算。日期早于 2026-11-05，属于历史卖方预测，不是最新实际或公司指引。"
+    },
+    {
+      "id": "local-msft-gs-20260730",
+      "title": "Goldman Sachs Microsoft model",
+      "date": "2026-07-30",
+      "dateBasis": "文件名日期，与 docProps/core.xml modified 的日期一致；未独立取得随附发布邮件。",
+      "sha256": "d0af6d4737ad033803fb73555e3eb3619e13b7cacb6a5fbce16d5209185533d4",
+      "kind": "user_supplied_sell_side_model",
+      "cells": [],
+      "note": "读取原档副本的公式和已保存缓存；未执行宏、刷新外部链接或重新计算。日期早于 2026-11-05，属于历史卖方预测，不是最新实际或公司指引。"
+    },
+    {
+      "id": "local-googl-gs-20260804",
+      "title": "Goldman Sachs Alphabet model",
+      "date": "2026-08-04",
+      "dateBasis": "文件名日期，与 docProps/core.xml modified 的日期一致；未独立取得随附发布邮件。",
+      "sha256": "15a590acd79f1e43dd303df85e8070d142388db4c820b4d7ffac15d1d7ef4b2e",
+      "kind": "user_supplied_sell_side_model",
+      "cells": [],
+      "note": "读取原档副本的公式和已保存缓存；未执行宏、刷新外部链接或重新计算。日期早于 2026-11-05，属于历史卖方预测，不是最新实际或公司指引。"
+    },
+    {
+      "id": "local-amzn-gs-20260731",
+      "title": "Goldman Sachs Amazon model",
+      "date": "2026-07-31",
+      "dateBasis": "文件名日期，与 docProps/core.xml modified 的日期一致；未独立取得随附发布邮件。",
+      "sha256": "0dffc10acdaf6cdcfbbbb066db62aa1cee5164a00d34bf3a357572613eba1a08",
+      "kind": "user_supplied_sell_side_model",
+      "cells": [],
+      "note": "读取原档副本的公式和已保存缓存；未执行宏、刷新外部链接或重新计算。日期早于 2026-11-05，属于历史卖方预测，不是最新实际或公司指引。"
+    },
+    {
+      "id": "local-msft-ms-20260809",
+      "title": "Morgan Stanley Microsoft model",
+      "date": "2026-08-09",
+      "dateBasis": "ImportantDisclosures!A8、IndexInformation!B2、ModPubIndex!A2 三处内部发布记录核对；不是 ZIP 修改时间。",
+      "sha256": "6fb3d31950d7473242b66f795ae8d5853fbe4371583aaa98b1ae290b6bda7baa",
+      "kind": "user_supplied_sell_side_model",
+      "cells": [
+        "ImportantDisclosures!A8",
+        "IndexInformation!B2",
+        "ModPubIndex!A2"
+      ],
+      "note": "读取原档副本的公式和已保存缓存；未执行宏、刷新外部链接或重新计算。日期早于 2026-11-05，属于历史卖方预测，不是最新实际或公司指引。"
+    },
+    {
+      "id": "local-amzn-ms-20260731",
+      "title": "Morgan Stanley Amazon model",
+      "date": "2026-07-31",
+      "dateBasis": "ImportantDisclosures!A8、IndexInformation!B2、ModPubIndex!A2 三处内部发布记录核对；不是 ZIP 修改时间。",
+      "sha256": "50e7cfd53dc5f955b7f3951352faa80b8f10b7f8451109c92cc93ab870b85a55",
+      "kind": "user_supplied_sell_side_model",
+      "cells": [
+        "ImportantDisclosures!A8",
+        "IndexInformation!B2",
+        "ModPubIndex!A2"
+      ],
+      "note": "读取原档副本的公式和已保存缓存；未执行宏、刷新外部链接或重新计算。日期早于 2026-11-05，属于历史卖方预测，不是最新实际或公司指引。"
+    },
+    {
+      "id": "local-googl-ms-20260824",
+      "title": "Morgan Stanley Alphabet model",
+      "date": "2026-08-24",
+      "dateBasis": "ImportantDisclosures!A8、IndexInformation!B2、ModPubIndex!A2 三处内部发布记录核对；不是 ZIP 修改时间。",
+      "sha256": "d77a5ea6e3e2dd6115ad129954511d3e4b5ee5e12318104ab40217513ef21894",
+      "kind": "user_supplied_sell_side_model",
+      "cells": [
+        "ImportantDisclosures!A8",
+        "IndexInformation!B2",
+        "ModPubIndex!A2"
+      ],
+      "note": "读取原档副本的公式和已保存缓存；未执行宏、刷新外部链接或重新计算。日期早于 2026-11-05，属于历史卖方预测，不是最新实际或公司指引。 归档文件名写 C3.ai，但内部 IndexInformation!B7=Alphabet Inc.、A10=GOOGL.O，已按内部身份确认。"
+    },
+    {
+      "id": "local-nvda-ms-20260827",
+      "title": "Morgan Stanley NVIDIA model",
+      "date": "2026-08-27",
+      "dateBasis": "ImportantDisclosures!A8、IndexInformation!B2、ModPubIndex!A2 三处内部发布记录核对；不是 ZIP 修改时间。",
+      "sha256": "a2303dd118916794875a980976890de74fc72049f47e4294c49a1414bc7743cb",
+      "kind": "user_supplied_sell_side_model",
+      "cells": [
+        "ImportantDisclosures!A8",
+        "IndexInformation!B2",
+        "ModPubIndex!A2"
+      ],
+      "note": "读取原档副本的公式和已保存缓存；未执行宏、刷新外部链接或重新计算。日期早于 2026-11-05，属于历史卖方预测，不是最新实际或公司指引。"
+    },
+    {
+      "id": "local-avgo-ms-20260603",
+      "title": "Morgan Stanley Broadcom model",
+      "date": "2026-06-03",
+      "dateBasis": "ImportantDisclosures!A8、IndexInformation!B2、ModPubIndex!A2 三处内部发布记录核对；不是 ZIP 修改时间。",
+      "sha256": "cc4cb14e30de555571b2b76a318ab71cf5522ae707012a9835382ee3b22a929e",
+      "kind": "user_supplied_sell_side_model",
+      "cells": [
+        "ImportantDisclosures!A8",
+        "IndexInformation!B2",
+        "ModPubIndex!A2"
+      ],
+      "note": "读取原档副本的公式和已保存缓存；未执行宏、刷新外部链接或重新计算。日期早于 2026-11-05，属于历史卖方预测，不是最新实际或公司指引。 内部发布日期为 6 月 3 日，core modified 为 6 月 4 日，不互相替代。"
+    },
+    {
+      "id": "local-models-inventory",
+      "title": "Fundamental Models 全归档目录盘点及去重",
+      "date": "2026-11-05",
+      "page": "archives / entries / matches；去重后的catalog.json",
+      "kind": "local_archive_inventory",
+      "note": "31 ZIP、1373条目、0嵌套ZIP、0读取错误；24文件名命中中7个是macOS资源叉，17个有效文件按SHA256去重为15独立模型。原档只读。"
+    }
+  ],
+  "crossCompanyEvidence": [
+    {
+      "company": "NVIDIA · MS模型",
+      "relationship": "GPU供给与产品组合参考",
+      "claim": "8月27日MS模型预计FY2027Q3/Q4收入108.128/120.004bn，Data Center收入101.110/113.228bn；Rubin系列占DC GPU收入21%/35%是模型硬编码假设，带动混合ASP由40.735k升至43.243k美元。",
+      "implication": "可用来拆GPU代际、量价及供给节奏，并与Google的GPU/TPU成本和容量假设交叉检查。没有Google客户分配，不能把NVIDIA增长率直接填入Cloud收入增长。",
+      "sourceRefs": [
+        "local-nvda-ms-20260827"
+      ],
+      "publicationDate": "2026-08-27",
+      "applicablePeriods": [
+        "FY2027Q3",
+        "FY2027Q4",
+        "FY2028"
+      ],
+      "factors": [
+        "Cloud收入增速",
+        "可交付容量",
+        "算力成本",
+        "毛利率"
+      ],
+      "strength": "原始卖方模型可见；客户归属和实际交付未确认",
+      "limitations": [
+        "NVIDIA财年截至次年1月，FY2027Q3不等于2027自然Q3；按Fiscal Year行识别期间。",
+        "IS的FactSet Year行与Fiscal Year行相差一年；日历日期存在近似标签，未据此生成官方季度截止日。",
+        "MS份额及ASP属于预测假设；分产品单位由收入/ASP反推，不是独立已确认出货量。",
+        "模型含更远期错误及陈旧辅助标题，本次仅引用已核对单元格；未将整本模型认证为正确。"
+      ]
+    },
+    {
+      "company": "NVIDIA · GS与MS对照",
+      "relationship": "同一公司两套卖方预测",
+      "claim": "8月27日GS模型对FY2027Q3/Q4收入预测为110.081/124.814bn，MS为108.128/120.004bn；FY2028分别718.299/690.168bn。",
+      "implication": "显示供给与产品组合假设的分歧，用作情景范围的参考；两份模型不能自动代表全市场共识，也不是Google采购预算。",
+      "sourceRefs": [
+        "local-nvda-gs-20260827",
+        "local-nvda-ms-20260827"
+      ],
+      "publicationDate": "2026-08-27",
+      "applicablePeriods": [
+        "FY2027Q3",
+        "FY2027Q4",
+        "FY2028"
+      ],
+      "factors": [
+        "Cloud收入增速",
+        "可交付容量"
+      ],
+      "strength": "直接模型预测对照；对GOOGL的映射仍缺客户份额",
+      "limitations": [
+        "保留8月版本时点，未冒充11月更新。",
+        "GS部分远期季度标题和Datacenter标签陈旧；这里仅用主NVDA表已核对Fiscal Year期间。"
+      ]
+    },
+    {
+      "company": "Alphabet / Google Cloud",
+      "relationship": "同公司历史卖方模型：收入与成本拆分",
+      "claim": "Barclays 2026-07-24 模型把 2026Q4 Cloud 收入 41.579bn 拆为 GCP 23.436bn、Workspace 5.279bn、External TPU Sales 12.865bn；FY2027 分别为 131.925bn、22.477bn、67.745bn，合计 222.147bn。外售 TPU 已在这份 Barclays 基准内。",
+      "implication": "可用作同口径基准的收入桥和防重复计入检查。它不证明当前 Morgan Stanley 基准已包含相同外售 TPU；切换机构或加入新合同前必须先对齐已有收入组成。",
+      "sourceRefs": [
+        "local-googl-barc-20260724"
+      ],
+      "limitations": [
+        "这是 7 月旧预测，Q3 财报后不能自动视为最新预期。",
+        "GCP 明确排除 External TPU Sales 与 Workspace；三个组成不能再次与总 Cloud 收入相加。",
+        "未找到 Anthropic 客户名或客户分配；不能把全部外售 TPU 归给 Anthropic。"
+      ],
+      "strength": "模型结构、公式及缓存：强；当前预测有效性与客户归属：待验证",
+      "factors": [
+        "Cloud收入增速",
+        "收入确认节奏",
+        "基准已含收入"
+      ],
+      "publicationDate": "2026-07-24",
+      "applicablePeriods": [
+        "2026Q4",
+        "2027FY"
+      ],
+      "sheet": "New Driver",
+      "cells": [
+        "EE102",
+        "EE114",
+        "EE120",
+        "EE127",
+        "EK102",
+        "EK114",
+        "EK120",
+        "EK127"
+      ]
+    },
+    {
+      "company": "Alphabet / Google Cloud",
+      "relationship": "历史模型的容量、单价与外售 TPU 盈利假设",
+      "claim": "2026Q4 外售 TPU 收入=0.90055GW×14,285.714m/GW=12,865m；FY2027 外售容量合计 3.7GW、逐季单价 18,309.524m/GW，收入 67,745.238m。模型对外售 TPU 设 25%营业利润率，因此 Q4 外售营业利润 3,216.25m、费用 9,648.75m。GCP 单独以平均容量 8.6799GW×2,700m/GW/季计算 Q4 收入。",
+      "implication": "可为另行构建 Barclays 口径容量情景提供候选假设；本看板仍以 MS 为计算基准，未自动套用这些值，并保持卖方假设标签。应先核合同归属、计费/确认方式和交付批次，再把新增量减去这份基准已含量。",
+      "sourceRefs": [
+        "local-googl-barc-20260724"
+      ],
+      "limitations": [
+        "行127叫 External TPU Sales，行131叫 TPUaaS Revenue per GW；公式是在当季用GW乘完整单价，未展示月度服务摊销，不能仅凭标签判定真实合同按硬件交付还是持续服务确认。",
+        "这些是硬编码或公式驱动的卖方假设，非公司公布的价格、已验收GW或客户采购。",
+        "25%是营业利润率，不能当集团毛利率或现金回收率；不能把 GCP 每GW季度收入与外售 TPU 每GW销售额互换。"
+      ],
+      "strength": "单元格公式和现金单位明确；现实合同映射仍缺",
+      "factors": [
+        "可交付容量",
+        "净单位价格",
+        "Cloud营业利润率",
+        "收入确认节奏"
+      ],
+      "publicationDate": "2026-07-24",
+      "applicablePeriods": [
+        "2026Q4",
+        "2027FY"
+      ],
+      "sheet": "New Driver",
+      "cells": [
+        "EE117",
+        "EE118",
+        "EE127",
+        "EE130",
+        "EE131",
+        "EE166",
+        "EE170",
+        "EK127",
+        "EK130",
+        "EK131"
+      ]
+    },
+    {
+      "company": "Alphabet / Google Cloud",
+      "relationship": "外售硬件与第三方算力成本进入集团损益的路径",
+      "claim": "2026Q4 Cloud 总费用 31.051bn = GCP/Workspace费用18.642bn + 第三方算力2.760bn + 外售TPU费用9.649bn。New Driver!EE148=920×3，IS!EE39引用它；IS!EE40引用外售TPU费用。Cloud营业利润10.529bn、利润率25.32%。FY2027 Cloud营业利润67.486bn、利润率30.38%。",
+      "implication": "在该机构模型内，新增收入必须同时检查第三方算力、外售成本及核心云费用，不能只增加Cloud收入。可将3P Compute单独设为用户输入，避免把缺失月份默认为已确认成本节约。",
+      "sourceRefs": [
+        "local-googl-barc-20260724"
+      ],
+      "limitations": [
+        "2027Q2-Q4 New Driver!EH148/EI148/EJ148为空，FY2027只计Q1的2.760bn；这是该版本的空白/假设边界，不是公司确认以后成本为零。",
+        "成本行跨Cloud分部和集团IS需保持同一版本；不能把本BARC成本桥直接嫁接到MS收入基准。",
+        "缓存验证不等于用Excel重算，也未刷新外部链接。"
+      ],
+      "strength": "模型中的成本传导已追到集团IS；未来费用完整性需复核",
+      "factors": [
+        "Cloud营业利润率",
+        "集团营业成本",
+        "第三方算力费用"
+      ],
+      "publicationDate": "2026-07-24",
+      "applicablePeriods": [
+        "2026Q4",
+        "2027FY"
+      ],
+      "sheet": "New Driver / IS",
+      "cells": [
+        "New Driver!EE134",
+        "New Driver!EE141",
+        "New Driver!EE148",
+        "New Driver!EE149",
+        "New Driver!EE152",
+        "New Driver!EK152",
+        "IS!EE39",
+        "IS!EE40"
+      ]
+    },
+    {
+      "company": "Broadcom",
+      "relationship": "Google TPU/ASIC上游供应商：旧预测与供应结构",
+      "claim": "2026-06-04 Barclays 模型预计 FY2026Q3/Q4 AI半导体收入16.124bn/22.207bn，FY2027为126.326bn；同日Goldman Sachs年度AI预测为FY2026 57.052bn、FY2027 133.045bn。BARC的AI收入明确由Custom Silicon与AI Networking相加。",
+      "implication": "可以比较当时供给侧增长预期与后续交付兑现，但不能把Broadcom全部AI收入当成Google采购，更不能等额转成Cloud收入。两家对FY2027的差异应保留为模型分歧。",
+      "sourceRefs": [
+        "local-avgo-barc-20260604",
+        "local-avgo-gs-20260604"
+      ],
+      "limitations": [
+        "日期较研究截止日早五个月，属于历史卖方预测，非11月最新指引。",
+        "BARC Rev!A77:A90虽有GOOGL units/ASP/v4-v6结构，但v6单位最后非空为CD80（Jan-2026列），后续预测列缺失，不能用该旧拆分生成2026Q4或2027 Google采购量。",
+        "GS worksheet的季度行存在冲突：BW3=Jul Q3而BW4=2Q26E；本卡只使用明确年度FY标签进行跨机构比较。",
+        "芯片出货、客户采购、机房投产验收、按合同计费和Google收入确认不是同一时点。"
+      ],
+      "strength": "聚合AI预测与结构：可追溯；当前Google客户出货：不足",
+      "factors": [
+        "可交付容量",
+        "供应侧收入",
+        "Google份额"
+      ],
+      "publicationDate": "2026-06-04",
+      "applicablePeriods": [
+        "FY2026Q3",
+        "FY2026Q4",
+        "FY2027"
+      ],
+      "sheet": "Rev / worksheet",
+      "cells": [
+        "Rev!CF42",
+        "Rev!CG42",
+        "Rev!DI42",
+        "Rev!CD80",
+        "Rev!CF80",
+        "worksheet!EA90",
+        "worksheet!EB90"
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "relationship": "客户需求证据缺口：本地模型目录检查",
+      "claim": "完整盘点31个ZIP、1,373个条目，未发现Anthropic命名模型；五家相关公司的15份独立模型共享字符串中也未检出Anthropic或Claude。现有本地文件不能提供Anthropic分季度采购、费用或供应商分配预测。",
+      "implication": "继续使用已单独核验的客户公开披露作为需求线索；不将Google或Broadcom聚合预测伪装为Anthropic采购计划。若要量化该客户，仍需客户原始财务/采购模型或明确合同分配。",
+      "sourceRefs": [
+        "local-models-inventory"
+      ],
+      "limitations": [
+        "本次完整盘点的是归档条目，内容扫描聚焦匹配的五家公司的15个独立模型；不能证明其余所有公司工作簿从未提及Anthropic。",
+        "未检出名称也不等于相关客户贡献未计入匿名/聚合假设。"
+      ],
+      "strength": "目录覆盖与匹配模型名称扫描：明确；客户采购量化：缺失",
+      "factors": [
+        "客户采购",
+        "合同归属",
+        "基准已含收入"
+      ],
+      "publicationDate": "2026-11-05",
+      "applicablePeriods": [
+        "2026Q4",
+        "2027FY"
+      ]
+    }
+  ],
+  "evidenceMetrics": [
+    {
+      "company": "NVIDIA",
+      "broker": "Morgan Stanley",
+      "metric": "Revenue",
+      "period": "FY2027Q3",
+      "fiscalPeriod": "FY2027Q3",
+      "value": 108128.35263668414,
+      "unit": "USD mn",
+      "status": "卖方预测缓存",
+      "publicationDate": "2026-08-27",
+      "sheet": "IS",
+      "cell": "CK7",
+      "cachedValue": 108128.35263668414,
+      "formula": "='BU-New'!BA11",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-nvda-ms-20260827"
+      ]
+    },
+    {
+      "company": "NVIDIA",
+      "broker": "Morgan Stanley",
+      "metric": "Revenue",
+      "period": "FY2027Q4",
+      "fiscalPeriod": "FY2027Q4",
+      "value": 120003.97507326043,
+      "unit": "USD mn",
+      "status": "卖方预测缓存",
+      "publicationDate": "2026-08-27",
+      "sheet": "IS",
+      "cell": "CL7",
+      "cachedValue": 120003.97507326043,
+      "formula": "='BU-New'!BB11",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-nvda-ms-20260827"
+      ]
+    },
+    {
+      "company": "NVIDIA",
+      "broker": "Morgan Stanley",
+      "metric": "Revenue",
+      "period": "FY2028",
+      "fiscalPeriod": "FY2028",
+      "value": 690168.0853594874,
+      "unit": "USD mn",
+      "status": "卖方预测缓存",
+      "publicationDate": "2026-08-27",
+      "sheet": "IS",
+      "cell": "DR7",
+      "cachedValue": 690168.0853594874,
+      "formula": "=SUM(CM7:CP7)",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-nvda-ms-20260827"
+      ]
+    },
+    {
+      "company": "NVIDIA",
+      "broker": "Morgan Stanley",
+      "metric": "Data Center revenue",
+      "period": "FY2027Q3",
+      "fiscalPeriod": "FY2027Q3",
+      "value": 101110.04572000002,
+      "unit": "USD mn",
+      "status": "卖方预测缓存",
+      "publicationDate": "2026-08-27",
+      "sheet": "BU-New",
+      "cell": "BA72",
+      "cachedValue": 101110.04572000002,
+      "formula": "=SUM(BA66,BA61,BA52)",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-nvda-ms-20260827"
+      ]
+    },
+    {
+      "company": "NVIDIA",
+      "broker": "Morgan Stanley",
+      "metric": "Data Center revenue",
+      "period": "FY2027Q4",
+      "fiscalPeriod": "FY2027Q4",
+      "value": 113228.45935240004,
+      "unit": "USD mn",
+      "status": "卖方预测缓存",
+      "publicationDate": "2026-08-27",
+      "sheet": "BU-New",
+      "cell": "BB72",
+      "cachedValue": 113228.45935240004,
+      "formula": "=SUM(BB66,BB61,BB52)",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-nvda-ms-20260827"
+      ]
+    },
+    {
+      "company": "NVIDIA",
+      "broker": "Morgan Stanley",
+      "metric": "Rubin / Rubin Ultra share of DC GPU revenue",
+      "period": "FY2027Q3",
+      "fiscalPeriod": "FY2027Q3",
+      "value": 0.21,
+      "unit": "ratio",
+      "status": "卖方预测缓存",
+      "publicationDate": "2026-08-27",
+      "sheet": "DC GPU Breakdown",
+      "cell": "X28",
+      "cachedValue": 0.21,
+      "formula": null,
+      "inputKind": "hardcoded_assumption",
+      "sourceRefs": [
+        "local-nvda-ms-20260827"
+      ]
+    },
+    {
+      "company": "NVIDIA",
+      "broker": "Morgan Stanley",
+      "metric": "Rubin / Rubin Ultra share of DC GPU revenue",
+      "period": "FY2027Q4",
+      "fiscalPeriod": "FY2027Q4",
+      "value": 0.35,
+      "unit": "ratio",
+      "status": "卖方预测缓存",
+      "publicationDate": "2026-08-27",
+      "sheet": "DC GPU Breakdown",
+      "cell": "Y28",
+      "cachedValue": 0.35,
+      "formula": null,
+      "inputKind": "hardcoded_assumption",
+      "sourceRefs": [
+        "local-nvda-ms-20260827"
+      ]
+    },
+    {
+      "company": "NVIDIA",
+      "broker": "Morgan Stanley",
+      "metric": "Blended GPU ASP",
+      "period": "FY2027Q3",
+      "fiscalPeriod": "FY2027Q3",
+      "value": 40.73497533850649,
+      "unit": "USD thousands",
+      "status": "卖方预测缓存",
+      "publicationDate": "2026-08-27",
+      "sheet": "DC GPU Breakdown",
+      "cell": "X53",
+      "cachedValue": 40.73497533850649,
+      "formula": "=X3/X52",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-nvda-ms-20260827"
+      ]
+    },
+    {
+      "company": "NVIDIA",
+      "broker": "Morgan Stanley",
+      "metric": "Blended GPU ASP",
+      "period": "FY2027Q4",
+      "fiscalPeriod": "FY2027Q4",
+      "value": 43.242788060697,
+      "unit": "USD thousands",
+      "status": "卖方预测缓存",
+      "publicationDate": "2026-08-27",
+      "sheet": "DC GPU Breakdown",
+      "cell": "Y53",
+      "cachedValue": 43.242788060697,
+      "formula": "=Y3/Y52",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-nvda-ms-20260827"
+      ]
+    },
+    {
+      "company": "NVIDIA",
+      "broker": "Morgan Stanley",
+      "metric": "GAAP gross margin",
+      "period": "FY2027Q3",
+      "fiscalPeriod": "FY2027Q3",
+      "value": 0.7403612290343085,
+      "unit": "ratio",
+      "status": "卖方预测缓存",
+      "publicationDate": "2026-08-27",
+      "sheet": "IS",
+      "cell": "CK13",
+      "cachedValue": 0.7403612290343085,
+      "formula": "=CK12/CK7",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-nvda-ms-20260827"
+      ]
+    },
+    {
+      "company": "NVIDIA",
+      "broker": "Morgan Stanley",
+      "metric": "GAAP gross margin",
+      "period": "FY2027Q4",
+      "fiscalPeriod": "FY2027Q4",
+      "value": 0.7150444728460725,
+      "unit": "ratio",
+      "status": "卖方预测缓存",
+      "publicationDate": "2026-08-27",
+      "sheet": "IS",
+      "cell": "CL13",
+      "cachedValue": 0.7150444728460725,
+      "formula": "=CL12/CL7",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-nvda-ms-20260827"
+      ]
+    },
+    {
+      "company": "NVIDIA",
+      "broker": "Goldman Sachs",
+      "metric": "Revenue",
+      "period": "FY2027Q3",
+      "fiscalPeriod": "FY2027Q3",
+      "value": 110080.8118233417,
+      "unit": "USD mn",
+      "status": "卖方预测缓存",
+      "publicationDate": "2026-08-27",
+      "sheet": "NVDA",
+      "cell": "ES7",
+      "cachedValue": 110080.8118233417,
+      "formula": "=Worksheet!CZ5",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-nvda-gs-20260827"
+      ]
+    },
+    {
+      "company": "NVIDIA",
+      "broker": "Goldman Sachs",
+      "metric": "Revenue",
+      "period": "FY2027Q4",
+      "fiscalPeriod": "FY2027Q4",
+      "value": 124814.09351513229,
+      "unit": "USD mn",
+      "status": "卖方预测缓存",
+      "publicationDate": "2026-08-27",
+      "sheet": "NVDA",
+      "cell": "ET7",
+      "cachedValue": 124814.09351513229,
+      "formula": "=Worksheet!DA5",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-nvda-gs-20260827"
+      ]
+    },
+    {
+      "company": "NVIDIA",
+      "broker": "Goldman Sachs",
+      "metric": "Revenue",
+      "period": "FY2028",
+      "fiscalPeriod": "FY2028",
+      "value": 718299.4788355915,
+      "unit": "USD mn",
+      "status": "卖方预测缓存",
+      "publicationDate": "2026-08-27",
+      "sheet": "NVDA",
+      "cell": "EZ7",
+      "cachedValue": 718299.4788355915,
+      "formula": "=SUM(EV7:EY7)",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-nvda-gs-20260827"
+      ]
+    },
+    {
+      "id": "local-googl-barc-20260724-new-driver-ee102",
+      "company": "Alphabet",
+      "broker": "Barclays",
+      "metric": "Google Cloud revenue",
+      "period": "2026Q4",
+      "fiscalPeriod": "2026Q4",
+      "value": 41579.46842276875,
+      "unit": "USD mn",
+      "status": "sell_side_forecast",
+      "publicationDate": "2026-07-24",
+      "sheet": "New Driver",
+      "cell": "EE102",
+      "cachedValue": 41579.46842276875,
+      "formula": "=+EE114+EE127+EE120",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-googl-barc-20260724"
+      ],
+      "periodEnd": "2026-12-31",
+      "periodHeaderCells": [
+        "EE5"
+      ],
+      "unitBasis": "IS!A4 为 $ in Millions；GW/单位价/利润率依 New Driver 行标签及公式。",
+      "notEquivalentTo": "company actuals, Anthropic-specific contract allocation, or current Morgan Stanley baseline"
+    },
+    {
+      "id": "local-googl-barc-20260724-new-driver-ee114",
+      "company": "Alphabet",
+      "broker": "Barclays",
+      "metric": "GCP revenue excluding External TPU Sales and Workspace",
+      "period": "2026Q4",
+      "fiscalPeriod": "2026Q4",
+      "value": 23435.788422768754,
+      "unit": "USD mn",
+      "status": "sell_side_forecast",
+      "publicationDate": "2026-07-24",
+      "sheet": "New Driver",
+      "cell": "EE114",
+      "cachedValue": 23435.788422768754,
+      "formula": "=+EE117*EE118",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-googl-barc-20260724"
+      ],
+      "periodEnd": "2026-12-31",
+      "periodHeaderCells": [
+        "EE5"
+      ],
+      "unitBasis": "IS!A4 为 $ in Millions；GW/单位价/利润率依 New Driver 行标签及公式。",
+      "notEquivalentTo": "company actuals, Anthropic-specific contract allocation, or current Morgan Stanley baseline"
+    },
+    {
+      "id": "local-googl-barc-20260724-new-driver-ee120",
+      "company": "Alphabet",
+      "broker": "Barclays",
+      "metric": "Workspace revenue",
+      "period": "2026Q4",
+      "fiscalPeriod": "2026Q4",
+      "value": 5278.679999999996,
+      "unit": "USD mn",
+      "status": "sell_side_forecast",
+      "publicationDate": "2026-07-24",
+      "sheet": "New Driver",
+      "cell": "EE120",
+      "cachedValue": 5278.679999999996,
+      "formula": "=EE123*EE124*EE125*3",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-googl-barc-20260724"
+      ],
+      "periodEnd": "2026-12-31",
+      "periodHeaderCells": [
+        "EE5"
+      ],
+      "unitBasis": "IS!A4 为 $ in Millions；GW/单位价/利润率依 New Driver 行标签及公式。",
+      "notEquivalentTo": "company actuals, Anthropic-specific contract allocation, or current Morgan Stanley baseline",
+      "sharedFormulaMaster": "EB120",
+      "formulaExpandedFromSharedMaster": true
+    },
+    {
+      "id": "local-googl-barc-20260724-new-driver-ee127",
+      "company": "Alphabet",
+      "broker": "Barclays",
+      "metric": "External TPU Sales (model label)",
+      "period": "2026Q4",
+      "fiscalPeriod": "2026Q4",
+      "value": 12865,
+      "unit": "USD mn",
+      "status": "sell_side_forecast",
+      "publicationDate": "2026-07-24",
+      "sheet": "New Driver",
+      "cell": "EE127",
+      "cachedValue": 12865,
+      "formula": "=+EE130*EE131",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-googl-barc-20260724"
+      ],
+      "periodEnd": "2026-12-31",
+      "periodHeaderCells": [
+        "EE5"
+      ],
+      "unitBasis": "IS!A4 为 $ in Millions；GW/单位价/利润率依 New Driver 行标签及公式。",
+      "notEquivalentTo": "company actuals, Anthropic-specific contract allocation, or current Morgan Stanley baseline",
+      "sharedFormulaMaster": "ED127",
+      "formulaExpandedFromSharedMaster": true
+    },
+    {
+      "id": "local-googl-barc-20260724-new-driver-ee130",
+      "company": "Alphabet",
+      "broker": "Barclays",
+      "metric": "External TPU capacity sold assumption",
+      "period": "2026Q4",
+      "fiscalPeriod": "2026Q4",
+      "value": 0.90055,
+      "unit": "GW",
+      "status": "sell_side_forecast",
+      "publicationDate": "2026-07-24",
+      "sheet": "New Driver",
+      "cell": "EE130",
+      "cachedValue": 0.90055,
+      "formula": null,
+      "inputKind": "hardcoded_model_input",
+      "sourceRefs": [
+        "local-googl-barc-20260724"
+      ],
+      "periodEnd": "2026-12-31",
+      "periodHeaderCells": [
+        "EE5"
+      ],
+      "unitBasis": "IS!A4 为 $ in Millions；GW/单位价/利润率依 New Driver 行标签及公式。",
+      "notEquivalentTo": "company actuals, Anthropic-specific contract allocation, or current Morgan Stanley baseline"
+    },
+    {
+      "id": "local-googl-barc-20260724-new-driver-ee131",
+      "company": "Alphabet",
+      "broker": "Barclays",
+      "metric": "TPUaaS revenue per GW (model label)",
+      "period": "2026Q4",
+      "fiscalPeriod": "2026Q4",
+      "value": 14285.714285714286,
+      "unit": "USD mn/GW",
+      "status": "sell_side_forecast",
+      "publicationDate": "2026-07-24",
+      "sheet": "New Driver",
+      "cell": "EE131",
+      "cachedValue": 14285.714285714286,
+      "formula": null,
+      "inputKind": "hardcoded_model_input",
+      "sourceRefs": [
+        "local-googl-barc-20260724"
+      ],
+      "periodEnd": "2026-12-31",
+      "periodHeaderCells": [
+        "EE5"
+      ],
+      "unitBasis": "IS!A4 为 $ in Millions；GW/单位价/利润率依 New Driver 行标签及公式。",
+      "notEquivalentTo": "company actuals, Anthropic-specific contract allocation, or current Morgan Stanley baseline"
+    },
+    {
+      "id": "local-googl-barc-20260724-new-driver-ee148",
+      "company": "Alphabet",
+      "broker": "Barclays",
+      "metric": "Third-party compute cost",
+      "period": "2026Q4",
+      "fiscalPeriod": "2026Q4",
+      "value": 2760,
+      "unit": "USD mn",
+      "status": "sell_side_forecast",
+      "publicationDate": "2026-07-24",
+      "sheet": "New Driver",
+      "cell": "EE148",
+      "cachedValue": 2760,
+      "formula": "=920*3",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-googl-barc-20260724"
+      ],
+      "periodEnd": "2026-12-31",
+      "periodHeaderCells": [
+        "EE5"
+      ],
+      "unitBasis": "IS!A4 为 $ in Millions；GW/单位价/利润率依 New Driver 行标签及公式。",
+      "notEquivalentTo": "company actuals, Anthropic-specific contract allocation, or current Morgan Stanley baseline"
+    },
+    {
+      "id": "local-googl-barc-20260724-new-driver-ee149",
+      "company": "Alphabet",
+      "broker": "Barclays",
+      "metric": "External TPU sales operating expenses",
+      "period": "2026Q4",
+      "fiscalPeriod": "2026Q4",
+      "value": 9648.75,
+      "unit": "USD mn",
+      "status": "sell_side_forecast",
+      "publicationDate": "2026-07-24",
+      "sheet": "New Driver",
+      "cell": "EE149",
+      "cachedValue": 9648.75,
+      "formula": "=+EE127-EE166",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-googl-barc-20260724"
+      ],
+      "periodEnd": "2026-12-31",
+      "periodHeaderCells": [
+        "EE5"
+      ],
+      "unitBasis": "IS!A4 为 $ in Millions；GW/单位价/利润率依 New Driver 行标签及公式。",
+      "notEquivalentTo": "company actuals, Anthropic-specific contract allocation, or current Morgan Stanley baseline"
+    },
+    {
+      "id": "local-googl-barc-20260724-new-driver-ee152",
+      "company": "Alphabet",
+      "broker": "Barclays",
+      "metric": "Google Cloud operating income",
+      "period": "2026Q4",
+      "fiscalPeriod": "2026Q4",
+      "value": 10528.747126424347,
+      "unit": "USD mn",
+      "status": "sell_side_forecast",
+      "publicationDate": "2026-07-24",
+      "sheet": "New Driver",
+      "cell": "EE152",
+      "cachedValue": 10528.747126424347,
+      "formula": "=EE102-EE134",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-googl-barc-20260724"
+      ],
+      "periodEnd": "2026-12-31",
+      "periodHeaderCells": [
+        "EE5"
+      ],
+      "unitBasis": "IS!A4 为 $ in Millions；GW/单位价/利润率依 New Driver 行标签及公式。",
+      "notEquivalentTo": "company actuals, Anthropic-specific contract allocation, or current Morgan Stanley baseline"
+    },
+    {
+      "id": "local-googl-barc-20260724-new-driver-ee156",
+      "company": "Alphabet",
+      "broker": "Barclays",
+      "metric": "Google Cloud operating margin",
+      "period": "2026Q4",
+      "fiscalPeriod": "2026Q4",
+      "value": 0.25321985888253556,
+      "unit": "fraction",
+      "status": "sell_side_forecast",
+      "publicationDate": "2026-07-24",
+      "sheet": "New Driver",
+      "cell": "EE156",
+      "cachedValue": 0.25321985888253556,
+      "formula": "=EE152/EE102",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-googl-barc-20260724"
+      ],
+      "periodEnd": "2026-12-31",
+      "periodHeaderCells": [
+        "EE5"
+      ],
+      "unitBasis": "IS!A4 为 $ in Millions；GW/单位价/利润率依 New Driver 行标签及公式。",
+      "notEquivalentTo": "company actuals, Anthropic-specific contract allocation, or current Morgan Stanley baseline",
+      "sharedFormulaMaster": "DX156",
+      "formulaExpandedFromSharedMaster": true
+    },
+    {
+      "id": "local-googl-barc-20260724-new-driver-ee166",
+      "company": "Alphabet",
+      "broker": "Barclays",
+      "metric": "External TPU sales operating income",
+      "period": "2026Q4",
+      "fiscalPeriod": "2026Q4",
+      "value": 3216.25,
+      "unit": "USD mn",
+      "status": "sell_side_forecast",
+      "publicationDate": "2026-07-24",
+      "sheet": "New Driver",
+      "cell": "EE166",
+      "cachedValue": 3216.25,
+      "formula": "=+EE127*EE170",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-googl-barc-20260724"
+      ],
+      "periodEnd": "2026-12-31",
+      "periodHeaderCells": [
+        "EE5"
+      ],
+      "unitBasis": "IS!A4 为 $ in Millions；GW/单位价/利润率依 New Driver 行标签及公式。",
+      "notEquivalentTo": "company actuals, Anthropic-specific contract allocation, or current Morgan Stanley baseline"
+    },
+    {
+      "id": "local-googl-barc-20260724-new-driver-ee170",
+      "company": "Alphabet",
+      "broker": "Barclays",
+      "metric": "External TPU sales operating margin",
+      "period": "2026Q4",
+      "fiscalPeriod": "2026Q4",
+      "value": 0.25,
+      "unit": "fraction",
+      "status": "sell_side_forecast",
+      "publicationDate": "2026-07-24",
+      "sheet": "New Driver",
+      "cell": "EE170",
+      "cachedValue": 0.25,
+      "formula": null,
+      "inputKind": "hardcoded_model_input",
+      "sourceRefs": [
+        "local-googl-barc-20260724"
+      ],
+      "periodEnd": "2026-12-31",
+      "periodHeaderCells": [
+        "EE5"
+      ],
+      "unitBasis": "IS!A4 为 $ in Millions；GW/单位价/利润率依 New Driver 行标签及公式。",
+      "notEquivalentTo": "company actuals, Anthropic-specific contract allocation, or current Morgan Stanley baseline"
+    },
+    {
+      "id": "local-googl-barc-20260724-new-driver-ek102",
+      "company": "Alphabet",
+      "broker": "Barclays",
+      "metric": "Google Cloud revenue",
+      "period": "2027FY",
+      "fiscalPeriod": "2027FY",
+      "value": 222147.09124017096,
+      "unit": "USD mn",
+      "status": "sell_side_forecast",
+      "publicationDate": "2026-07-24",
+      "sheet": "New Driver",
+      "cell": "EK102",
+      "cachedValue": 222147.09124017096,
+      "formula": "=+SUM(EG102:EJ102)",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-googl-barc-20260724"
+      ],
+      "periodEnd": "2027-12-31",
+      "periodHeaderCells": [
+        "EK5"
+      ],
+      "unitBasis": "IS!A4 为 $ in Millions；GW/单位价/利润率依 New Driver 行标签及公式。",
+      "notEquivalentTo": "company actuals, Anthropic-specific contract allocation, or current Morgan Stanley baseline"
+    },
+    {
+      "id": "local-googl-barc-20260724-new-driver-ek114",
+      "company": "Alphabet",
+      "broker": "Barclays",
+      "metric": "GCP revenue excluding External TPU Sales and Workspace",
+      "period": "2027FY",
+      "fiscalPeriod": "2027FY",
+      "value": 131924.8931449329,
+      "unit": "USD mn",
+      "status": "sell_side_forecast",
+      "publicationDate": "2026-07-24",
+      "sheet": "New Driver",
+      "cell": "EK114",
+      "cachedValue": 131924.8931449329,
+      "formula": "=SUM(EG114:EJ114)",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-googl-barc-20260724"
+      ],
+      "periodEnd": "2027-12-31",
+      "periodHeaderCells": [
+        "EK5"
+      ],
+      "unitBasis": "IS!A4 为 $ in Millions；GW/单位价/利润率依 New Driver 行标签及公式。",
+      "notEquivalentTo": "company actuals, Anthropic-specific contract allocation, or current Morgan Stanley baseline"
+    },
+    {
+      "id": "local-googl-barc-20260724-new-driver-ek120",
+      "company": "Alphabet",
+      "broker": "Barclays",
+      "metric": "Workspace revenue",
+      "period": "2027FY",
+      "fiscalPeriod": "2027FY",
+      "value": 22476.95999999998,
+      "unit": "USD mn",
+      "status": "sell_side_forecast",
+      "publicationDate": "2026-07-24",
+      "sheet": "New Driver",
+      "cell": "EK120",
+      "cachedValue": 22476.95999999998,
+      "formula": "=SUM(EG120:EJ120)",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-googl-barc-20260724"
+      ],
+      "periodEnd": "2027-12-31",
+      "periodHeaderCells": [
+        "EK5"
+      ],
+      "unitBasis": "IS!A4 为 $ in Millions；GW/单位价/利润率依 New Driver 行标签及公式。",
+      "notEquivalentTo": "company actuals, Anthropic-specific contract allocation, or current Morgan Stanley baseline"
+    },
+    {
+      "id": "local-googl-barc-20260724-new-driver-ek127",
+      "company": "Alphabet",
+      "broker": "Barclays",
+      "metric": "External TPU Sales (model label)",
+      "period": "2027FY",
+      "fiscalPeriod": "2027FY",
+      "value": 67745.23809523808,
+      "unit": "USD mn",
+      "status": "sell_side_forecast",
+      "publicationDate": "2026-07-24",
+      "sheet": "New Driver",
+      "cell": "EK127",
+      "cachedValue": 67745.23809523808,
+      "formula": "=SUM(EG127:EJ127)",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-googl-barc-20260724"
+      ],
+      "periodEnd": "2027-12-31",
+      "periodHeaderCells": [
+        "EK5"
+      ],
+      "unitBasis": "IS!A4 为 $ in Millions；GW/单位价/利润率依 New Driver 行标签及公式。",
+      "notEquivalentTo": "company actuals, Anthropic-specific contract allocation, or current Morgan Stanley baseline"
+    },
+    {
+      "id": "local-googl-barc-20260724-new-driver-ek130",
+      "company": "Alphabet",
+      "broker": "Barclays",
+      "metric": "External TPU capacity sold assumption",
+      "period": "2027FY",
+      "fiscalPeriod": "2027FY",
+      "value": 3.7,
+      "unit": "GW",
+      "status": "sell_side_forecast",
+      "publicationDate": "2026-07-24",
+      "sheet": "New Driver",
+      "cell": "EK130",
+      "cachedValue": 3.7,
+      "formula": "=+SUM(EG130:EJ130)",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-googl-barc-20260724"
+      ],
+      "periodEnd": "2027-12-31",
+      "periodHeaderCells": [
+        "EK5"
+      ],
+      "unitBasis": "IS!A4 为 $ in Millions；GW/单位价/利润率依 New Driver 行标签及公式。",
+      "notEquivalentTo": "company actuals, Anthropic-specific contract allocation, or current Morgan Stanley baseline"
+    },
+    {
+      "id": "local-googl-barc-20260724-new-driver-ek131",
+      "company": "Alphabet",
+      "broker": "Barclays",
+      "metric": "TPUaaS revenue per GW (model label)",
+      "period": "2027FY",
+      "fiscalPeriod": "2027FY",
+      "value": 18309.523809523806,
+      "unit": "USD mn/GW",
+      "status": "sell_side_forecast",
+      "publicationDate": "2026-07-24",
+      "sheet": "New Driver",
+      "cell": "EK131",
+      "cachedValue": 18309.523809523806,
+      "formula": null,
+      "inputKind": "hardcoded_model_input",
+      "sourceRefs": [
+        "local-googl-barc-20260724"
+      ],
+      "periodEnd": "2027-12-31",
+      "periodHeaderCells": [
+        "EK5"
+      ],
+      "unitBasis": "IS!A4 为 $ in Millions；GW/单位价/利润率依 New Driver 行标签及公式。",
+      "notEquivalentTo": "company actuals, Anthropic-specific contract allocation, or current Morgan Stanley baseline"
+    },
+    {
+      "id": "local-googl-barc-20260724-new-driver-ek148",
+      "company": "Alphabet",
+      "broker": "Barclays",
+      "metric": "Third-party compute cost",
+      "period": "2027FY",
+      "fiscalPeriod": "2027FY",
+      "value": 2760,
+      "unit": "USD mn",
+      "status": "sell_side_forecast",
+      "publicationDate": "2026-07-24",
+      "sheet": "New Driver",
+      "cell": "EK148",
+      "cachedValue": 2760,
+      "formula": "=+SUM(EG148:EJ148)",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-googl-barc-20260724"
+      ],
+      "periodEnd": "2027-12-31",
+      "periodHeaderCells": [
+        "EK5"
+      ],
+      "unitBasis": "IS!A4 为 $ in Millions；GW/单位价/利润率依 New Driver 行标签及公式。",
+      "notEquivalentTo": "company actuals, Anthropic-specific contract allocation, or current Morgan Stanley baseline"
+    },
+    {
+      "id": "local-googl-barc-20260724-new-driver-ek149",
+      "company": "Alphabet",
+      "broker": "Barclays",
+      "metric": "External TPU sales operating expenses",
+      "period": "2027FY",
+      "fiscalPeriod": "2027FY",
+      "value": 50808.92857142856,
+      "unit": "USD mn",
+      "status": "sell_side_forecast",
+      "publicationDate": "2026-07-24",
+      "sheet": "New Driver",
+      "cell": "EK149",
+      "cachedValue": 50808.92857142856,
+      "formula": "=+SUM(EG149:EJ149)",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-googl-barc-20260724"
+      ],
+      "periodEnd": "2027-12-31",
+      "periodHeaderCells": [
+        "EK5"
+      ],
+      "unitBasis": "IS!A4 为 $ in Millions；GW/单位价/利润率依 New Driver 行标签及公式。",
+      "notEquivalentTo": "company actuals, Anthropic-specific contract allocation, or current Morgan Stanley baseline"
+    },
+    {
+      "id": "local-googl-barc-20260724-new-driver-ek152",
+      "company": "Alphabet",
+      "broker": "Barclays",
+      "metric": "Google Cloud operating income",
+      "period": "2027FY",
+      "fiscalPeriod": "2027FY",
+      "value": 67486.29378715949,
+      "unit": "USD mn",
+      "status": "sell_side_forecast",
+      "publicationDate": "2026-07-24",
+      "sheet": "New Driver",
+      "cell": "EK152",
+      "cachedValue": 67486.29378715949,
+      "formula": "=+SUM(EG152:EJ152)",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-googl-barc-20260724"
+      ],
+      "periodEnd": "2027-12-31",
+      "periodHeaderCells": [
+        "EK5"
+      ],
+      "unitBasis": "IS!A4 为 $ in Millions；GW/单位价/利润率依 New Driver 行标签及公式。",
+      "notEquivalentTo": "company actuals, Anthropic-specific contract allocation, or current Morgan Stanley baseline"
+    },
+    {
+      "id": "local-googl-barc-20260724-new-driver-ek156",
+      "company": "Alphabet",
+      "broker": "Barclays",
+      "metric": "Google Cloud operating margin",
+      "period": "2027FY",
+      "fiscalPeriod": "2027FY",
+      "value": 0.3037910305753124,
+      "unit": "fraction",
+      "status": "sell_side_forecast",
+      "publicationDate": "2026-07-24",
+      "sheet": "New Driver",
+      "cell": "EK156",
+      "cachedValue": 0.3037910305753124,
+      "formula": "=EK152/EK102",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-googl-barc-20260724"
+      ],
+      "periodEnd": "2027-12-31",
+      "periodHeaderCells": [
+        "EK5"
+      ],
+      "unitBasis": "IS!A4 为 $ in Millions；GW/单位价/利润率依 New Driver 行标签及公式。",
+      "notEquivalentTo": "company actuals, Anthropic-specific contract allocation, or current Morgan Stanley baseline",
+      "sharedFormulaMaster": "DX156",
+      "formulaExpandedFromSharedMaster": true
+    },
+    {
+      "id": "local-googl-barc-20260724-new-driver-ek166",
+      "company": "Alphabet",
+      "broker": "Barclays",
+      "metric": "External TPU sales operating income",
+      "period": "2027FY",
+      "fiscalPeriod": "2027FY",
+      "value": 16936.30952380952,
+      "unit": "USD mn",
+      "status": "sell_side_forecast",
+      "publicationDate": "2026-07-24",
+      "sheet": "New Driver",
+      "cell": "EK166",
+      "cachedValue": 16936.30952380952,
+      "formula": "=+SUM(EG166:EJ166)",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-googl-barc-20260724"
+      ],
+      "periodEnd": "2027-12-31",
+      "periodHeaderCells": [
+        "EK5"
+      ],
+      "unitBasis": "IS!A4 为 $ in Millions；GW/单位价/利润率依 New Driver 行标签及公式。",
+      "notEquivalentTo": "company actuals, Anthropic-specific contract allocation, or current Morgan Stanley baseline"
+    },
+    {
+      "id": "local-googl-barc-20260724-new-driver-ek170",
+      "company": "Alphabet",
+      "broker": "Barclays",
+      "metric": "External TPU sales operating margin",
+      "period": "2027FY",
+      "fiscalPeriod": "2027FY",
+      "value": 0.25,
+      "unit": "fraction",
+      "status": "sell_side_forecast",
+      "publicationDate": "2026-07-24",
+      "sheet": "New Driver",
+      "cell": "EK170",
+      "cachedValue": 0.25,
+      "formula": "=EK166/EK127",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-googl-barc-20260724"
+      ],
+      "periodEnd": "2027-12-31",
+      "periodHeaderCells": [
+        "EK5"
+      ],
+      "unitBasis": "IS!A4 为 $ in Millions；GW/单位价/利润率依 New Driver 行标签及公式。",
+      "notEquivalentTo": "company actuals, Anthropic-specific contract allocation, or current Morgan Stanley baseline"
+    },
+    {
+      "id": "local-googl-barc-20260724-new-driver-ee117",
+      "company": "Alphabet",
+      "broker": "Barclays",
+      "metric": "Average GCP capacity assumption",
+      "period": "2026Q4",
+      "fiscalPeriod": "2026Q4",
+      "value": 8.6799216380625,
+      "unit": "GW",
+      "status": "sell_side_forecast",
+      "publicationDate": "2026-07-24",
+      "sheet": "New Driver",
+      "cell": "EE117",
+      "cachedValue": 8.6799216380625,
+      "formula": "=+AVERAGE('Q PP&E'!EE131,'Q PP&E'!EE127)",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-googl-barc-20260724"
+      ],
+      "unitBasis": "平均季初与季末模型容量，New Driver!EE117 引用 Q PP&E!EE127/EE131。"
+    },
+    {
+      "id": "local-googl-barc-20260724-new-driver-ee118",
+      "company": "Alphabet",
+      "broker": "Barclays",
+      "metric": "GCP quarterly revenue per average GW assumption",
+      "period": "2026Q4",
+      "fiscalPeriod": "2026Q4",
+      "value": 2700,
+      "unit": "USD mn/GW/quarter",
+      "status": "sell_side_forecast",
+      "publicationDate": "2026-07-24",
+      "sheet": "New Driver",
+      "cell": "EE118",
+      "cachedValue": 2700,
+      "formula": null,
+      "inputKind": "hardcoded_model_input",
+      "sourceRefs": [
+        "local-googl-barc-20260724"
+      ],
+      "unitBasis": "New Driver!EE114=EE117*EE118；单位由季度收入和GW桥确定。"
+    },
+    {
+      "id": "local-googl-barc-20260724-is-ee39",
+      "company": "Alphabet",
+      "broker": "Barclays",
+      "metric": "Third-party compute cost linked to consolidated IS",
+      "period": "2026Q4",
+      "fiscalPeriod": "2026Q4",
+      "value": 2760,
+      "unit": "USD mn",
+      "status": "sell_side_forecast",
+      "publicationDate": "2026-07-24",
+      "sheet": "IS",
+      "cell": "EE39",
+      "cachedValue": 2760,
+      "formula": "=+'New Driver'!EE148",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-googl-barc-20260724"
+      ],
+      "unitBasis": "IS!A4 USD mn；链接 New Driver!EE148。"
+    },
+    {
+      "id": "local-googl-barc-20260724-is-ee40",
+      "company": "Alphabet",
+      "broker": "Barclays",
+      "metric": "External TPU cost linked to consolidated IS",
+      "period": "2026Q4",
+      "fiscalPeriod": "2026Q4",
+      "value": 9648.75,
+      "unit": "USD mn",
+      "status": "sell_side_forecast",
+      "publicationDate": "2026-07-24",
+      "sheet": "IS",
+      "cell": "EE40",
+      "cachedValue": 9648.75,
+      "formula": "=+'New Driver'!EE149",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-googl-barc-20260724"
+      ],
+      "unitBasis": "IS!A4 USD mn；链接 New Driver!EE149。"
+    },
+    {
+      "id": "local-avgo-barc-20260604-rev-cf42",
+      "company": "Broadcom",
+      "broker": "Barclays",
+      "metric": "AI semiconductor revenue",
+      "period": "FY2026Q3",
+      "fiscalPeriod": "FY2026Q3",
+      "value": 16124.400000000001,
+      "unit": "USD mn",
+      "status": "sell_side_forecast",
+      "publicationDate": "2026-06-04",
+      "sheet": "Rev",
+      "cell": "CF42",
+      "cachedValue": 16124.400000000001,
+      "formula": "=SUM(CF40:CF41)",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-avgo-barc-20260604"
+      ],
+      "unitBasis": "Rev!A3 $ in millions；季度按 Rev!row2 月份与 row3 财季，年度按 row2/row3 FYE。",
+      "periodEnd": null,
+      "modelPeriodLabel": "Jul-2026 3QE",
+      "notEquivalentTo": "GOOGL-specific purchases, Anthropic consumption, or commissioned cloud capacity"
+    },
+    {
+      "id": "local-avgo-barc-20260604-rev-cg42",
+      "company": "Broadcom",
+      "broker": "Barclays",
+      "metric": "AI semiconductor revenue",
+      "period": "FY2026Q4",
+      "fiscalPeriod": "FY2026Q4",
+      "value": 22207.176,
+      "unit": "USD mn",
+      "status": "sell_side_forecast",
+      "publicationDate": "2026-06-04",
+      "sheet": "Rev",
+      "cell": "CG42",
+      "cachedValue": 22207.176,
+      "formula": "=SUM(CG40:CG41)",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-avgo-barc-20260604"
+      ],
+      "unitBasis": "Rev!A3 $ in millions；季度按 Rev!row2 月份与 row3 财季，年度按 row2/row3 FYE。",
+      "periodEnd": null,
+      "modelPeriodLabel": "Oct-2026 4QE",
+      "notEquivalentTo": "GOOGL-specific purchases, Anthropic consumption, or commissioned cloud capacity",
+      "sharedFormulaMaster": "CF42",
+      "formulaExpandedFromSharedMaster": true
+    },
+    {
+      "id": "local-avgo-barc-20260604-rev-dh42",
+      "company": "Broadcom",
+      "broker": "Barclays",
+      "metric": "AI semiconductor revenue",
+      "period": "FY2026",
+      "fiscalPeriod": "FY2026",
+      "value": 57576.576,
+      "unit": "USD mn",
+      "status": "sell_side_forecast",
+      "publicationDate": "2026-06-04",
+      "sheet": "Rev",
+      "cell": "DH42",
+      "cachedValue": 57576.576,
+      "formula": "=SUM(CD42:CG42)",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-avgo-barc-20260604"
+      ],
+      "unitBasis": "Rev!A3 $ in millions；季度按 Rev!row2 月份与 row3 财季，年度按 row2/row3 FYE。",
+      "periodEnd": null,
+      "modelPeriodLabel": "2026 FYE",
+      "notEquivalentTo": "GOOGL-specific purchases, Anthropic consumption, or commissioned cloud capacity"
+    },
+    {
+      "id": "local-avgo-barc-20260604-rev-di42",
+      "company": "Broadcom",
+      "broker": "Barclays",
+      "metric": "AI semiconductor revenue",
+      "period": "FY2027",
+      "fiscalPeriod": "FY2027",
+      "value": 126326.27981609998,
+      "unit": "USD mn",
+      "status": "sell_side_forecast",
+      "publicationDate": "2026-06-04",
+      "sheet": "Rev",
+      "cell": "DI42",
+      "cachedValue": 126326.27981609998,
+      "formula": "=SUM(CH42:CK42)",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-avgo-barc-20260604"
+      ],
+      "unitBasis": "Rev!A3 $ in millions；季度按 Rev!row2 月份与 row3 财季，年度按 row2/row3 FYE。",
+      "periodEnd": null,
+      "modelPeriodLabel": "2027 FYE",
+      "notEquivalentTo": "GOOGL-specific purchases, Anthropic consumption, or commissioned cloud capacity"
+    },
+    {
+      "id": "local-avgo-gs-20260604-worksheet-ea90",
+      "company": "Broadcom",
+      "broker": "Goldman Sachs",
+      "metric": "AI semiconductor revenue",
+      "period": "FY2026",
+      "fiscalPeriod": "FY2026",
+      "value": 57051.951959072074,
+      "unit": "USD mn",
+      "status": "sell_side_forecast",
+      "publicationDate": "2026-06-04",
+      "sheet": "worksheet",
+      "cell": "EA90",
+      "cachedValue": 57051.951959072074,
+      "formula": "=SUM(BU90:BX90)",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-avgo-gs-20260604"
+      ],
+      "unitBasis": "worksheet 行210/223 标 $mn；年度标签 row4 FY26E/FY27E。",
+      "periodEnd": null,
+      "periodHeaderCells": [
+        "EA4"
+      ],
+      "notEquivalentTo": "Google Cloud revenue"
+    },
+    {
+      "id": "local-avgo-gs-20260604-worksheet-eb90",
+      "company": "Broadcom",
+      "broker": "Goldman Sachs",
+      "metric": "AI semiconductor revenue",
+      "period": "FY2027",
+      "fiscalPeriod": "FY2027",
+      "value": 133044.99264860013,
+      "unit": "USD mn",
+      "status": "sell_side_forecast",
+      "publicationDate": "2026-06-04",
+      "sheet": "worksheet",
+      "cell": "EB90",
+      "cachedValue": 133044.99264860013,
+      "formula": "=SUM(BY90:CB90)",
+      "inputKind": "formula",
+      "sourceRefs": [
+        "local-avgo-gs-20260604"
+      ],
+      "unitBasis": "worksheet 行210/223 标 $mn；年度标签 row4 FY26E/FY27E。",
+      "periodEnd": null,
+      "periodHeaderCells": [
+        "EB4"
+      ],
+      "notEquivalentTo": "Google Cloud revenue"
+    },
+    {
+      "id": "local-avgo-gs-20260604-worksheet-bw211",
+      "company": "Broadcom",
+      "broker": "Goldman Sachs",
+      "metric": "Custom silicon gross margin assumption",
+      "period": "model Jul-2026 forecast",
+      "fiscalPeriod": "model Jul-2026 forecast",
+      "value": 0.6,
+      "unit": "fraction",
+      "status": "sell_side_forecast",
+      "publicationDate": "2026-06-04",
+      "sheet": "worksheet",
+      "cell": "BW211",
+      "cachedValue": 0.6,
+      "formula": null,
+      "inputKind": "hardcoded_model_input",
+      "sourceRefs": [
+        "local-avgo-gs-20260604"
+      ],
+      "periodHeaderCells": [
+        "BW3",
+        "BW4"
+      ],
+      "periodLabelConflict": "BW3=Jul Q3 而 BW4=2Q26E；此处保留月份而不把矛盾季度标签当正式财季。"
+    }
+  ],
+  "modelInventory": {
+    "archiveCount": 31,
+    "nestedArchiveCount": 0,
+    "entryCount": 1373,
+    "filenameMatches": 24,
+    "macOSResourceForksExcluded": 7,
+    "validMatchedModelFiles": 17,
+    "uniqueMatchedModels": 15,
+    "anthropicNamedModels": 0,
+    "archiveErrors": [],
+    "inventoryFile": "outputs/research/local_models/inventory.json",
+    "catalogFile": "outputs/research/local_models/catalog.json"
+  },
+  "models": [
+    {
+      "company": "Amazon",
+      "broker": "Barclays",
+      "publicationDate": "2026-07-30",
+      "sourceRef": "local-amzn-barc-20260730",
+      "sha256": "78ac3e40da06bd23c6ad5128508e3dab7e7c304ad8a11119a7f366af7080f33a",
+      "sheets": [
+        "ModelCover",
+        "New Driver",
+        "IS",
+        "BS",
+        "CF",
+        "Valuation SOTP",
+        "PP&E",
+        "AWS vs. Peers",
+        "Publishing IS",
+        "Old Driver",
+        "Disclosures"
+      ],
+      "exactDuplicateCount": 0,
+      "dateBasis": "ModelCover!F2 的研究发布日期；文件名辅助核对。",
+      "identityNote": null
+    },
+    {
+      "company": "Broadcom",
+      "broker": "Barclays",
+      "publicationDate": "2026-06-04",
+      "sourceRef": "local-avgo-barc-20260604",
+      "sha256": "55ec00a1705cda89b09e109da05285a513b31d3f81b1447d1f61f5aeb6d8d4f0",
+      "sheets": [
+        "ModelCover",
+        "Inc",
+        "Bal",
+        "__FDSCACHE__",
+        "CF",
+        "Rev",
+        "Disclosures"
+      ],
+      "exactDuplicateCount": 0,
+      "dateBasis": "ModelCover!F2 的研究发布日期；文件名辅助核对。",
+      "identityNote": null
+    },
+    {
+      "company": "Alphabet",
+      "broker": "Barclays",
+      "publicationDate": "2026-07-24",
+      "sourceRef": "local-googl-barc-20260724",
+      "sha256": "32c072f65fb7bbaca082f6138c2eb8906b1561f726e8bf57486324226bd0950a",
+      "sheets": [
+        "ModelCover",
+        "Publishing IS",
+        "IS",
+        "New Driver",
+        "BS",
+        "CF",
+        "Q PP&E",
+        "Search Unit Economics",
+        "Search Flow Chart",
+        "FX Driver",
+        "Geos",
+        "Valuation Worksheet",
+        "YouTube",
+        "Old Driver",
+        "Disclosures"
+      ],
+      "exactDuplicateCount": 0,
+      "dateBasis": "ModelCover!F2 的研究发布日期；文件名辅助核对。",
+      "identityNote": null
+    },
+    {
+      "company": "Microsoft",
+      "broker": "Barclays",
+      "publicationDate": "2026-07-30",
+      "sourceRef": "local-msft-barc-20260730",
+      "sha256": "187ffe3b16f6b79e411cce09af0f2a1bb04ba457a77faf7922f2fcb2775e8c3e",
+      "sheets": [
+        "ModelCover",
+        "RPO",
+        "Revenue",
+        "Gross Margins",
+        "Segment",
+        "P&L",
+        "BS",
+        "CF",
+        "Disclosures"
+      ],
+      "exactDuplicateCount": 0,
+      "dateBasis": "ModelCover!F2 的研究发布日期；文件名辅助核对。",
+      "identityNote": null
+    },
+    {
+      "company": "NVIDIA",
+      "broker": "Barclays",
+      "publicationDate": "2026-08-27",
+      "sourceRef": "local-nvda-barc-20260827",
+      "sha256": "6d48b6f79c731bc4f76579f6d588d2bb51a5db7b0fb858569e2d7537084e85f2",
+      "sheets": [
+        "ModelCover",
+        "Inc",
+        "Bal",
+        "CF",
+        "Rev",
+        "Disclosures"
+      ],
+      "exactDuplicateCount": 0,
+      "dateBasis": "ModelCover!F2 的研究发布日期；文件名辅助核对。",
+      "identityNote": null
+    },
+    {
+      "company": "NVIDIA",
+      "broker": "Goldman Sachs",
+      "publicationDate": "2026-08-27",
+      "sourceRef": "local-nvda-gs-20260827",
+      "sha256": "a673f3557c90f9588adc4e8f515bed23cb61212f2db69deef38485229ebf3413",
+      "sheets": [
+        "Cover",
+        "Worksheet",
+        "NVDA",
+        "Datacenter",
+        "Gaming",
+        "Automotive"
+      ],
+      "exactDuplicateCount": 0,
+      "dateBasis": "文件名日期，与 docProps/core.xml modified 的日期一致；未独立取得随附发布邮件。",
+      "identityNote": null
+    },
+    {
+      "company": "Broadcom",
+      "broker": "Goldman Sachs",
+      "publicationDate": "2026-06-04",
+      "sourceRef": "local-avgo-gs-20260604",
+      "sha256": "1c9f611edef30b966764ff4597332ddc0b0cac123ecad1c276d3e4f4bcbca4c1",
+      "sheets": [
+        "Cover",
+        "worksheet",
+        "AVGO"
+      ],
+      "exactDuplicateCount": 0,
+      "dateBasis": "文件名日期，与 docProps/core.xml modified 的日期一致；未独立取得随附发布邮件。",
+      "identityNote": null
+    },
+    {
+      "company": "Microsoft",
+      "broker": "Goldman Sachs",
+      "publicationDate": "2026-07-30",
+      "sourceRef": "local-msft-gs-20260730",
+      "sha256": "d0af6d4737ad033803fb73555e3eb3619e13b7cacb6a5fbce16d5209185533d4",
+      "sheets": [
+        "__FDSCACHE__",
+        "Cover",
+        "IS",
+        "BS",
+        "CF",
+        "Drivers",
+        "PBP",
+        "IC",
+        "MPC",
+        "Cloud",
+        "Capex",
+        "Shares"
+      ],
+      "exactDuplicateCount": 0,
+      "dateBasis": "文件名日期，与 docProps/core.xml modified 的日期一致；未独立取得随附发布邮件。",
+      "identityNote": null
+    },
+    {
+      "company": "Alphabet",
+      "broker": "Goldman Sachs",
+      "publicationDate": "2026-08-04",
+      "sourceRef": "local-googl-gs-20260804",
+      "sha256": "15a590acd79f1e43dd303df85e8070d142388db4c820b4d7ffac15d1d7ef4b2e",
+      "sheets": [
+        "Cover",
+        "P&L Summary",
+        "Revenue Summary",
+        "NTM Valuation",
+        "Valuation",
+        "Income Statement",
+        "Cash Flow Statement",
+        "Balance Sheet",
+        "Capex & Depreciation",
+        "Working Capital",
+        "Debt & Interest",
+        "Shares Outstanding & Corporate"
+      ],
+      "exactDuplicateCount": 0,
+      "dateBasis": "文件名日期，与 docProps/core.xml modified 的日期一致；未独立取得随附发布邮件。",
+      "identityNote": null
+    },
+    {
+      "company": "Amazon",
+      "broker": "Goldman Sachs",
+      "publicationDate": "2026-07-31",
+      "sourceRef": "local-amzn-gs-20260731",
+      "sha256": "0dffc10acdaf6cdcfbbbb066db62aa1cee5164a00d34bf3a357572613eba1a08",
+      "sheets": [
+        "__FDSCACHE__",
+        "Cover",
+        "P&L Summary",
+        "Revenue Summary",
+        "XLinkMeta",
+        "Valuation",
+        "NTM Valuation",
+        "Income Statement",
+        "Cash Flow Statement",
+        "Balance Sheet",
+        "Capex & Depreciation",
+        "Debt & Interest",
+        "Working Capital",
+        "Shares Outstanding & Corporate",
+        "Segment Analysis",
+        "GMV Analysis",
+        "__APW_ACTIVE_FIELD_RESTORE__"
+      ],
+      "exactDuplicateCount": 0,
+      "dateBasis": "文件名日期，与 docProps/core.xml modified 的日期一致；未独立取得随附发布邮件。",
+      "identityNote": null
+    },
+    {
+      "company": "Microsoft",
+      "broker": "Morgan Stanley",
+      "publicationDate": "2026-08-09",
+      "sourceRef": "local-msft-ms-20260809",
+      "sha256": "6fb3d31950d7473242b66f795ae8d5853fbe4371583aaa98b1ae290b6bda7baa",
+      "sheets": [
+        "ImportantDisclosures",
+        "New Revenue Detail",
+        "IS",
+        "BS",
+        "CF",
+        "Overview",
+        "Scenario Analysis",
+        "Gross Margin Details",
+        "Cloud Margins",
+        "DEPR",
+        "IndexInformation",
+        "ModPubIndex"
+      ],
+      "exactDuplicateCount": 0,
+      "dateBasis": "ImportantDisclosures!A8、IndexInformation!B2、ModPubIndex!A2 三处内部发布记录核对；不是 ZIP 修改时间。",
+      "identityNote": null,
+      "reviewFields": {
+        "cells": [
+          "New Revenue Detail!CY159",
+          "New Revenue Detail!CY166",
+          "New Revenue Detail!CY170",
+          "New Revenue Detail!DB159"
+        ],
+        "note": "字段定位：Azure and other Cloud Services 在行159，Azure AI 在行166且按行159减Core Azure行170计算，属于模型残差估计。旧Azure行152口径不同，不能混用；CY3为Dec-26E，DB3为2027E且按微软六月财年，不能直接当自然年。未完成全口径深审，不输出新增量化结论。",
+        "status": "field_location_only"
+      }
+    },
+    {
+      "company": "Amazon",
+      "broker": "Morgan Stanley",
+      "publicationDate": "2026-07-31",
+      "sourceRef": "local-amzn-ms-20260731",
+      "sha256": "50e7cfd53dc5f955b7f3951352faa80b8f10b7f8451109c92cc93ab870b85a55",
+      "sheets": [
+        "ImportantDisclosures",
+        "Valuation",
+        "MS v Con",
+        "Model",
+        "Drivers and Detail",
+        "WFM",
+        "WFM Prime Now",
+        "US Apparel, Grocery marketshare",
+        "Retail vs AWS",
+        "FX",
+        "Outlinks",
+        "US Marketshare",
+        "Intl Marketshare",
+        "Multiple Valuation (Current)",
+        "Base Case PT Calculation (SoTP)",
+        "Bull Case SotP",
+        "DCF Bear",
+        "DCF",
+        "DCF Bull",
+        "US Apparel Market Model",
+        "FBA Pricing",
+        "IndexInformation",
+        "ModPubIndex"
+      ],
+      "exactDuplicateCount": 0,
+      "dateBasis": "ImportantDisclosures!A8、IndexInformation!B2、ModPubIndex!A2 三处内部发布记录核对；不是 ZIP 修改时间。",
+      "identityNote": null,
+      "reviewFields": {
+        "cells": [
+          "Model!EU34",
+          "Model!EU261",
+          "Model!EU401",
+          "Retail vs AWS!EE258",
+          "Retail vs AWS!EE415"
+        ],
+        "note": "字段定位：主Model AWS收入行34引用Retail vs AWS行258；AWS折旧摊销在Model行261、资本开支在行401并引用Retail vs AWS行415。Drivers and Detail行882是旧的Revenue and Gross Profit合并行，不直接当当前AWS收入。期间和单位尚需完整核对，不输出新增量化结论。",
+        "status": "field_location_only"
+      }
+    },
+    {
+      "company": "Alphabet",
+      "broker": "Morgan Stanley",
+      "publicationDate": "2026-08-24",
+      "sourceRef": "local-googl-ms-20260824",
+      "sha256": "d77a5ea6e3e2dd6115ad129954511d3e4b5ee5e12318104ab40217513ef21894",
+      "sheets": [
+        "ImportantDisclosures",
+        "Model",
+        "Rev Roll-up",
+        "Expense Drivers",
+        "Ad Revenue Breakdown",
+        "Non-Core Losses",
+        "Search",
+        "US Search",
+        "YouTube",
+        "Other Drivers",
+        "Other Display (GDN)",
+        "FX Calc",
+        "Bear DCF",
+        "Core DCF",
+        "Bull DCF",
+        "Outlinks",
+        "IndexInformation",
+        "ModPubIndex"
+      ],
+      "exactDuplicateCount": 0,
+      "dateBasis": "ImportantDisclosures!A8、IndexInformation!B2、ModPubIndex!A2 三处内部发布记录核对；不是 ZIP 修改时间。",
+      "identityNote": "文件名误标 C3.ai，内部为 Alphabet"
+    },
+    {
+      "company": "NVIDIA",
+      "broker": "Morgan Stanley",
+      "publicationDate": "2026-08-27",
+      "sourceRef": "local-nvda-ms-20260827",
+      "sha256": "a2303dd118916794875a980976890de74fc72049f47e4294c49a1414bc7743cb",
+      "sheets": [
+        "ImportantDisclosures",
+        "BS",
+        "IS",
+        "CF",
+        "BU-New",
+        "DC GPU Breakdown",
+        "IndexInformation",
+        "ModPubIndex"
+      ],
+      "exactDuplicateCount": 1,
+      "dateBasis": "ImportantDisclosures!A8、IndexInformation!B2、ModPubIndex!A2 三处内部发布记录核对；不是 ZIP 修改时间。",
+      "identityNote": null
+    },
+    {
+      "company": "Broadcom",
+      "broker": "Morgan Stanley",
+      "publicationDate": "2026-06-03",
+      "sourceRef": "local-avgo-ms-20260603",
+      "sha256": "cc4cb14e30de555571b2b76a318ab71cf5522ae707012a9835382ee3b22a929e",
+      "sheets": [
+        "ImportantDisclosures",
+        "AVGO IS",
+        "BS ",
+        "CFS ",
+        "BU Segment AVGO NEW",
+        "IndexInformation",
+        "ModPubIndex"
+      ],
+      "exactDuplicateCount": 1,
+      "dateBasis": "ImportantDisclosures!A8、IndexInformation!B2、ModPubIndex!A2 三处内部发布记录核对；不是 ZIP 修改时间。",
+      "identityNote": null
+    }
+  ],
+  "verification": {
+    "formulaRecalculated": false,
+    "values": "original saved formula caches / hardcoded assumptions",
+    "formulas": "OOXML formulas; shared formulas expanded from explicit master without evaluation",
+    "macrosExecuted": false,
+    "externalLinksRefreshed": false,
+    "originalsModified": false,
+    "checks": [
+      {
+        "check": "Cloud revenue components 2026Q4",
+        "differenceUSDmn": -7.275957614183426e-12,
+        "passed": true
+      },
+      {
+        "check": "Cloud revenue less cost 2026Q4",
+        "differenceUSDmn": 0.0,
+        "passed": true
+      },
+      {
+        "check": "Cloud revenue components 2027FY",
+        "differenceUSDmn": 0.0,
+        "passed": true
+      },
+      {
+        "check": "Cloud revenue less cost 2027FY",
+        "differenceUSDmn": 0.0,
+        "passed": true
+      }
+    ]
+  },
+  "limitations": [
+    "目录最新版本日期为2026年6月至8月，均早于11月5日；不能替代财报后的最新预测。",
+    "FY/CY、季度末、月份标签和财务报表单位按具体模型核对，不因文件名或FactSet辅助行自动映射。",
+    "未做全部1373条目逐单元格深审；完整目录清单已保留，深读集中相关15个去重模型及核心业务。",
+    "公司内同名或旧残留行可能有不同口径；只提取已核对期间与公式依赖的具体行。",
+    "新增参数仅提供可审查的历史机构假设，不自动覆盖当前MS基准。"
+  ]
+}

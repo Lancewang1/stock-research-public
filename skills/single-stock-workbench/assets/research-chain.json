@@ -1,0 +1,841 @@
+{
+  "asOf": "2026-11-05",
+  "scope": "用客户、供给商和竞争云的真实披露交叉检验 Google Cloud 假设；不是按新闻自动调整盈利的模型。",
+  "sources": [
+    {
+      "id": "chain-anthropic-google-20251023",
+      "title": "Anthropic：Expanding our use of Google Cloud TPUs and Services",
+      "date": "2025-10-23",
+      "page": "正文：第一段、multi-platform approach 段",
+      "url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
+      "kind": "company_disclosure",
+      "note": "直接取得公司原文。计划最多一百万TPU、2026年上线超过1GW，并非已经验收。",
+      "retrievedAt": "2026-11-05T13:37:39.522737+00:00"
+    },
+    {
+      "id": "chain-anthropic-google-20260406",
+      "title": "Anthropic expands partnership with Google and Broadcom for multiple gigawatts of next-generation compute",
+      "date": "2026-04-06",
+      "page": "正文第一段及run-rate revenue段",
+      "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute",
+      "kind": "company_disclosure",
+      "note": "直接取得公司原文。新增多GW TPU预计从2027年开始上线；该次公告没有给出逐季交付或Google收入份额。",
+      "retrievedAt": "2026-11-05T13:37:40.975946+00:00"
+    },
+    {
+      "id": "chain-anthropic-series-h-20260528",
+      "title": "Anthropic raises $65B in Series H funding at $965B post-money valuation",
+      "date": "2026-05-28",
+      "page": "融资首段、run-rate revenue段、compute capacity段",
+      "url": "https://www.anthropic.com/news/series-h",
+      "kind": "company_disclosure",
+      "note": "直接取得公司原文。年化收入运行率47bn、融资65bn和Google/Broadcom五GW容量是不同指标；65bn包含此前15bn承诺投资。",
+      "retrievedAt": "2026-11-05T13:37:41.014250+00:00"
+    },
+    {
+      "id": "chain-anthropic-aws-20260420",
+      "title": "Anthropic and Amazon expand collaboration for up to 5 gigawatts of new compute",
+      "date": "2026-04-20",
+      "page": "Infrastructure at scale；Continued investment；Meeting record demand",
+      "url": "https://www.anthropic.com/news/anthropic-amazon-compute",
+      "kind": "company_disclosure",
+      "note": "直接取得公司原文；2026-04-21补充更新。超过100bn是十年AWS技术采购承诺，Amazon当次5bn及未来最多20bn投资另列。",
+      "retrievedAt": "2026-11-05T13:37:40.066505+00:00"
+    },
+    {
+      "id": "chain-anthropic-ms-nv-20251118",
+      "title": "Microsoft, NVIDIA, and Anthropic announce strategic partnerships",
+      "date": "2025-11-18",
+      "page": "Azure采购、NVIDIA技术合作、投资段",
+      "url": "https://www.anthropic.com/news/microsoft-nvidia-anthropic-announce-strategic-partnerships",
+      "kind": "company_disclosure",
+      "note": "直接取得公司原文。30bn Azure采购与NVIDIA最多10bn、Microsoft最多5bn股权投资不同，不相加为Google收入。",
+      "retrievedAt": "2026-11-05T13:37:40.971181+00:00"
+    },
+    {
+      "id": "chain-anthropic-s1-20261026",
+      "title": "Anthropic files S-1 with the SEC for proposed initial public offering",
+      "date": "2026-10-26",
+      "page": "公司公告正文",
+      "url": "https://www.anthropic.com/news/s1-sec",
+      "kind": "company_disclosure",
+      "note": "直接取得公司公告，只确认提交注册申请，不包含可核对的财务表和合同明细。",
+      "retrievedAt": "2026-11-05T13:37:11.369684+00:00"
+    },
+    {
+      "id": "chain-sec-anthropic-20261102",
+      "title": "SEC检索：Anthropic S-1/A，0001628280-26-068676",
+      "date": "2026-11-02",
+      "page": "hits.hits中主文件anthropicpbc-sx1ax1.htm；CIK2130357",
+      "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026068676/anthropicpbc-sx1ax1.htm",
+      "kind": "regulatory_index",
+      "note": "SEC检索接口成功，确认申请日期与文件名；SEC正文请求返回403，不能称已审阅完整招股书。最初存档的Wind补充查询只返回封面，亦不补足财务验证。",
+      "retrievedAt": "2026-11-05T13:37:41.385421+00:00"
+    },
+    {
+      "id": "chain-anthropic-contracts-news-20261026",
+      "title": "Wind新闻：Anthropic披露巨额算力采购承诺",
+      "date": "2026-10-26",
+      "page": "解析content[0].text后的data.items[0]及data.items[3]",
+      "url": "https://t.wind.com.cn/mobwftweb/M/news.html?share=wechat&show=wft&code=E199907FF9E6&newsopenstyle=&lan=cn&device=pc&gateway=news&related=true&terminaltype=COM.WINDRAG&version=&useless=0.200204#/A0D41773BACE24509C0F97F10F1F0B2E",
+      "kind": "wind_news",
+      "note": "新闻摘要；原始合同正文未取得，数字待核，不进入自动预测。数据来源于万得 Wind 金融数据服务。",
+      "providerTitle": "Anthropic披露巨额算力采购承诺：拟向谷歌采购至少1145亿美元服务",
+      "retrievedAt": "2026-11-05T13:36:35.144560+00:00"
+    },
+    {
+      "id": "chain-anthropic-financial-news-20261103",
+      "title": "Wind新闻：Anthropic 2026年第三季度营收169.6亿美元",
+      "date": "2026-11-03",
+      "page": "解析content[0].text后的data.items[1]；另有同稿data.items[2]，不算独立验证",
+      "url": "http://www.199it.com/archives/1861090.html",
+      "kind": "wind_news",
+      "note": "来源称Q3确认收入16.96bn、前九个月33.24bn；完整S-1/A正文未取得，仅作为待验证财务线索。数据来源于万得 Wind 金融数据服务。",
+      "providerTitle": "Anthropic：2026年第三季度营收169.6亿美元，同比增长1127%",
+      "retrievedAt": "2026-11-05T13:36:35.144560+00:00"
+    },
+    {
+      "id": "chain-nvidia-fy27q2-20260826",
+      "title": "NVIDIA Announces Financial Results for Second Quarter Fiscal 2027",
+      "date": "2026-08-26",
+      "page": "开头、Q2 Fiscal 2027 Summary、Outlook、Data Center",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027",
+      "kind": "official_results",
+      "note": "直接取得公司原文。季度截至2026-07-26，FY27Q2不是日历2027Q2；指引属于FY27Q3。",
+      "retrievedAt": "2026-11-05T13:37:12.397371+00:00"
+    },
+    {
+      "id": "chain-nvidia-call-20261028",
+      "title": "NVIDIA Sets Conference Call for Third-Quarter Financial Results",
+      "date": "2026-10-28",
+      "page": "公告首两段",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-sets-conference-call-for-third-quarter-financial-results-6928873",
+      "kind": "company_disclosure",
+      "note": "FY27Q3截至2026-10-25，计划2026-11-17公布。研究截至11-05，不能把该季指引称已公布实际。",
+      "retrievedAt": "2026-11-05T13:38:27.544640+00:00"
+    },
+    {
+      "id": "chain-msft-fy27q1-20261028",
+      "title": "Microsoft FY27 Q1 Earnings Release",
+      "date": "2026-10-28",
+      "page": "Business Highlights及Selected Product and Service Information",
+      "url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2027-Q1/press-release-webcast",
+      "kind": "official_results",
+      "note": "直接取得公司原文。FY27Q1截至2026-09-30；Azure增速48%，不可混作全部Microsoft Cloud收入增速30%。",
+      "retrievedAt": "2026-11-05T13:36:28.049324+00:00"
+    },
+    {
+      "id": "chain-amazon-q3-20261029",
+      "title": "Amazon Q3 2026 Earnings Call（Wind转录）",
+      "date": "2026-10-29",
+      "page": "解析content[0].text后的data.items[0]：CEO prepared、CFO AWS段及利润率问答",
+      "url": "https://m.wind.com.cn/mobwftweb/M/?code=BEAA0538D280&lan=zh&device=pc&terminaltype=COM.WINDRAG&version=26.5.0.39845&gateway=na#/NA/2F6DFE6FBBCEDE22E3A4245FD4526637",
+      "kind": "wind_transcript",
+      "note": "转录给出AWS Q3收入46bn、同比39.3%、营业利润17.8bn。未声称取得官方音频全文；数据来源于万得 Wind 金融数据服务。",
+      "providerTitle": "Transcript 亚马逊(AMAZON) : Q3 2026 Earnings Call",
+      "retrievedAt": "2026-11-05T13:39:23.150053+00:00"
+    },
+    {
+      "id": "chain-amazon-10q-20261030",
+      "title": "Amazon Form 10-Q，季度截至2026-09-30（Wind摘录）",
+      "date": "2026-10-30",
+      "page": "解析content[0].text后的data.items[0]：Unearned Revenue，原文p9；折旧表p26",
+      "url": "https://m.wind.com.cn/mobwftweb/M/?code=1C468E4E463A&lan=zh&device=pc&terminaltype=COM.WINDRAG&version=26.5.0.39845&gateway=na#/NA/DF003F93BAAB2CADC54706EB3EBE1434",
+      "kind": "wind_filing_excerpt",
+      "note": "原公告URL以同文件data.items[0].url为准；使用摘录中的履约确认定义，不将未履约承诺当当期收入。数据来源于万得 Wind 金融数据服务。",
+      "providerTitle": "Form 10-Q 亚马逊(AMAZON) : Quarterly report-20260930",
+      "retrievedAt": "2026-11-05T13:36:40.361427+00:00"
+    },
+    {
+      "id": "chain-broadcom-q3-20260902",
+      "title": "Broadcom Q3 2026 Earnings Call（Wind转录）",
+      "date": "2026-09-02",
+      "page": "解析content[0].text后的data.items[0]：Hock Tan prepared及CFO financing段",
+      "url": "https://m.wind.com.cn/mobwftweb/M/?code=9DA8A027E656&lan=zh&device=pc&terminaltype=COM.WINDRAG&version=26.5.0.39845&gateway=na#/NA/653258077EECF7F541A0E6170EB5127A",
+      "kind": "wind_transcript",
+      "note": "转录声称已大批交付Ironwood并开始Google下一代TPU生产出货；公司IR列表抓取403。出货不等于机房上线验收。数据来源于万得 Wind 金融数据服务。",
+      "providerTitle": "Transcript 博通(BROADCOM) : Q3 2026 Earnings Call",
+      "retrievedAt": "2026-11-05T13:36:45.897004+00:00"
+    }
+  ],
+  "relationships": [
+    {
+      "from": "Anthropic",
+      "to": "Google Cloud",
+      "type": "compute_customer",
+      "description": "非独家算力客户；Google TPU/GCP与AWS Trainium、NVIDIA GPU并存。",
+      "sourceRefs": [
+        "chain-anthropic-google-20251023",
+        "chain-anthropic-google-20260406"
+      ]
+    },
+    {
+      "from": "Google / Broadcom",
+      "to": "Anthropic",
+      "type": "tpu_capacity_partnership",
+      "description": "共同容量承诺涉及设备、融资和服务；未披露Google Cloud可确认收入的完整分配。",
+      "sourceRefs": [
+        "chain-anthropic-google-20260406",
+        "chain-anthropic-series-h-20260528"
+      ]
+    },
+    {
+      "from": "NVIDIA",
+      "to": "Google Cloud",
+      "type": "compute_supplier_and_ecosystem_partner",
+      "description": "提供GPU平台、网络及生态；Google是其平台部署伙伴。NVIDIA不是Google Cloud的简单下游需求客户。",
+      "sourceRefs": [
+        "chain-nvidia-fy27q2-20260826"
+      ]
+    },
+    {
+      "from": "NVIDIA",
+      "to": "Anthropic",
+      "type": "technology_partner_and_proposed_investor",
+      "description": "优化Claude与NVIDIA架构，并承诺最多10bn投资；投资不等于NVIDIA芯片订单或Google收入。",
+      "sourceRefs": [
+        "chain-anthropic-ms-nv-20251118"
+      ]
+    },
+    {
+      "from": "AWS",
+      "to": "Anthropic",
+      "type": "primary_cloud_supplier_investor_distribution",
+      "description": "主要云及训练伙伴、投资方和Bedrock分发渠道；与Google既验证终端需求也竞争客户算力份额。",
+      "sourceRefs": [
+        "chain-anthropic-aws-20260420"
+      ]
+    },
+    {
+      "from": "Microsoft Azure",
+      "to": "Anthropic",
+      "type": "alternative_cloud_supplier_investor_distribution",
+      "description": "提供Azure容量和Foundry渠道，另有股权投资安排；不能把其采购重复计入Google。",
+      "sourceRefs": [
+        "chain-anthropic-ms-nv-20251118"
+      ]
+    },
+    {
+      "from": "Broadcom",
+      "to": "Google / Anthropic",
+      "type": "custom_accelerator_supply_and_financing_ecosystem",
+      "description": "验证TPU供给与设备融资推进，不能据其全部AI收入推算Google Cloud收入。",
+      "sourceRefs": [
+        "chain-broadcom-q3-20260902",
+        "chain-anthropic-google-20260406"
+      ]
+    }
+  ],
+  "crossCompanyEvidence": [
+    {
+      "company": "Anthropic",
+      "relationship": "Google Cloud客户；非独家、多云采购",
+      "claim": "2025-10-23公司宣布计划使用最多100万颗Google TPU，预期2026年上线超过1GW。2026-04-06新增Google/Broadcom多GW容量预计从2027年开始上线；05-28官方更新称这笔合作为5GW。",
+      "implication": "把2026既有扩容与2027新批次分开。支持跟踪Cloud交付和长期需求；2027容量不得前移成2026Q4已实现收入。",
+      "sourceRefs": [
+        "chain-anthropic-google-20251023",
+        "chain-anthropic-google-20260406",
+        "chain-anthropic-series-h-20260528"
+      ],
+      "limitations": [
+        "最多TPU数和GW承诺不是已投产验收数量。",
+        "三个公告可能描述同一扩容计划的演进，不能简单累加。",
+        "设备租赁、芯片采购、云服务的合同价值分配及逐季确认未完整披露。"
+      ],
+      "strength": "客户需求与计划日期：强；具体季度收入量化：弱",
+      "factors": [
+        "Cloud收入增速",
+        "可交付容量",
+        "收入确认节奏"
+      ],
+      "publicationDate": "2026-05-28"
+    },
+    {
+      "company": "Anthropic",
+      "relationship": "客户商业化、融资与信用质量",
+      "claim": "2026-05-28官方称当月年化收入运行率已超过47bn美元，Series H融资65bn美元，其中包含此前15bn已承诺投资。Wind 11-03新闻另称Q3确认收入16.96bn、前九个月33.24bn，但招股书对应财务表本轮未直接取得。",
+      "implication": "运行率支持需求验证，融资支持短期支付能力研究；应分别跟踪确认收入、现金消耗、融资到账和算力付款，不把运行率或融资额直接填入Cloud收入。",
+      "sourceRefs": [
+        "chain-anthropic-series-h-20260528",
+        "chain-anthropic-financial-news-20261103",
+        "chain-sec-anthropic-20261102"
+      ],
+      "limitations": [
+        "47bn是2026年5月的run-rate，不是截至11月的最新ARR，也不是2026全年确认收入。",
+        "官方原文使用run-rate revenue；不自动等同于经常性订阅ARR。",
+        "Q3财务数字来自二手新闻，同稿重复不算独立佐证，暂不用于自动量化。",
+        "融资不是订单；含此前承诺的金额不得二次计算。"
+      ],
+      "strength": "5月官方运行率与融资：强；Q3财务细节：待核",
+      "factors": [
+        "客户需求",
+        "回款与信用",
+        "多云采购预算"
+      ],
+      "publicationDate": "2026-11-03"
+    },
+    {
+      "company": "Anthropic / Google / Broadcom",
+      "relationship": "多年采购和设备租赁链条",
+      "claim": "Wind 2026-10-26新闻摘要称Anthropic对Google于2026年4月至2033年7月最低支出约114.5bn美元，另有Broadcom五年设备租赁161.2bn美元等安排。SEC检索确认11-02 S-1/A已提交，但本轮SEC正文请求403、Wind定向查询只得到封面。",
+      "implication": "将Google专属合同范围、设备融资和追加TPU合同列为优先核验项。即便114.5bn核实，也需按合同履约及服务/设备范围建季度桥，不能除以年数或整笔加进Cloud。",
+      "sourceRefs": [
+        "chain-anthropic-contracts-news-20261026",
+        "chain-sec-anthropic-20261102"
+      ],
+      "limitations": [
+        "合同原文及重叠范围尚未核实，新闻金额仅作待核线索，不进入自动预测。",
+        "多年总额、最低付款、可取消条款和交付条件不同。",
+        "Broadcom设备租赁可能与Google TPU容量链条相连，不得重复计为Google云服务订单。"
+      ],
+      "strength": "合同金额：二手待核；季度可量化程度：低",
+      "factors": [
+        "Cloud合同质量",
+        "收入确认",
+        "客户支付义务"
+      ],
+      "publicationDate": "2026-11-02",
+      "dateBasis": "10月26日新闻线索；11月2日SEC申报索引为本卡最新证据日期，各原文日期分别保留。"
+    },
+    {
+      "company": "Amazon AWS",
+      "relationship": "竞争云、Anthropic主要训练伙伴及投资方",
+      "claim": "Anthropic 2026-04-20官方协议：未来十年向AWS技术投入超过100bn美元、最多5GW新增容量，预期2026年底近1GW Trainium2/3上线；当次Amazon投资5bn、未来最多20bn是另外的融资安排。",
+      "implication": "客户总算力需求不能全部归属Google；Google份额需独立估计。AWS交付进度可验证需求强弱，同时可能分走训练和推理负载。",
+      "sourceRefs": [
+        "chain-anthropic-aws-20260420"
+      ],
+      "limitations": [
+        "十年承诺不是当季采购。",
+        "最多5GW与2026年底近1GW是总计划和当年交付层次，不相加。",
+        "投资与服务采购互不等价；客户仍保持多芯片策略。"
+      ],
+      "strength": "合同计划与合作关系：强；Google份额：未知",
+      "factors": [
+        "Google份额",
+        "客户交付分配",
+        "竞争价格"
+      ],
+      "publicationDate": "2026-04-20"
+    },
+    {
+      "company": "Amazon AWS",
+      "relationship": "行业需求、供给利用率与利润交叉验证",
+      "claim": "Wind转录10-29业绩会：日历2026Q3 AWS收入46bn美元、同比39.3%，营业利润17.8bn、营业利润率38.7%；管理层称AI业务利润率仍低于核心云，AI占比提升和组件成本会压制混合利润率。",
+      "implication": "行业需求与算力上线利用形成相互印证，但同时提示增长加速未必提升混合利润率。Cloud情景须同时调整收入、成本和投产时点。",
+      "sourceRefs": [
+        "chain-amazon-q3-20261029",
+        "chain-amazon-10q-20261030"
+      ],
+      "limitations": [
+        "这是AWS数据，不能作为Google Cloud增长率或利润率输入。",
+        "AWS营业利润率不是Google集团毛利率。",
+        "Wind为公司电话会/公告转录，未以官方音频独立复核全部表述。"
+      ],
+      "strength": "需求与成本机制交叉验证：中强；跨公司数值映射：不支持",
+      "factors": [
+        "Cloud增速",
+        "利用率",
+        "毛利率与费用率"
+      ],
+      "publicationDate": "2026-10-29"
+    },
+    {
+      "company": "NVIDIA",
+      "relationship": "算力供应商和生态伙伴，非简单下游",
+      "claim": "2026-08-26官方披露FY2027Q2（季度截至2026-07-26）收入96.221bn美元、数据中心收入约89.0bn；FY2027Q3收入指引108bn±2%。公司列出Google Cloud为Vera Rubin部署伙伴。10-28公告称FY27Q3截至10-25，业绩将在11-17公布。",
+      "implication": "用芯片/网络供给、平台部署和后续交付时间验证Google的可交付容量。NVIDIA收入增长同时可能来自其他云和模型厂，不能线性映射Google Cloud。",
+      "sourceRefs": [
+        "chain-nvidia-fy27q2-20260826",
+        "chain-nvidia-call-20261028"
+      ],
+      "limitations": [
+        "研究截至11-05，FY27Q3指引不能标为已公布实际。",
+        "FY27Q2不等于日历2026Q2或2027Q2，必须记录实际截止日。",
+        "GPU出货、机架交付、机房供电、验收和开始计费之间有时滞。",
+        "TPU与GPU可能替代或互补，行业GPU增速不是Google份额。"
+      ],
+      "strength": "官方财务与日期：强；Google单独归属：弱",
+      "factors": [
+        "GPU供给",
+        "上架交付",
+        "资本开支与折旧"
+      ],
+      "publicationDate": "2026-10-28"
+    },
+    {
+      "company": "Microsoft Azure",
+      "relationship": "竞争云与Anthropic替代算力、分发渠道",
+      "claim": "微软10-28官方FY2027Q1（截至2026-09-30）披露Azure收入同比增长48%，Microsoft Cloud收入63.9bn美元、同比30%。Anthropic 2025-11-18另公告30bn Azure容量采购及最多1GW扩展安排。",
+      "implication": "支持AI云需求强的行业观察，也提示客户可转向Azure。需要考察Google份额和定价，不能直接用Azure48%替代Cloud模型增速。",
+      "sourceRefs": [
+        "chain-msft-fy27q1-20261028",
+        "chain-anthropic-ms-nv-20251118"
+      ],
+      "limitations": [
+        "Azure与Microsoft Cloud范围不同；不得混用收入分母。",
+        "旧采购公告可能已被后续合同更新，需与招股书去重，而非累计。",
+        "FY27Q1等于截至2026年9月的季度；不是日历2027Q1。"
+      ],
+      "strength": "官方披露：强；Google份额推导：弱",
+      "factors": [
+        "行业需求",
+        "客户算力分配",
+        "净价格"
+      ],
+      "publicationDate": "2026-10-28"
+    },
+    {
+      "company": "Broadcom",
+      "relationship": "TPU定制芯片供给与设备融资生态",
+      "claim": "Wind转录09-02 FY2026Q3业绩会：AI半导体收入16.7bn美元；称Ironwood TPU v7向Anthropic和Google大批出货，并开始向Google生产出货TPU v8i；下一财季AI收入指引21.7bn。",
+      "implication": "供应链从承诺进入出货阶段可提高对交付可行性的信心；仍需机房、电力、联网和客户验收，才能转为Cloud可计费容量。",
+      "sourceRefs": [
+        "chain-broadcom-q3-20260902",
+        "chain-anthropic-google-20260406"
+      ],
+      "limitations": [
+        "Wind转录，官方IR页面此次403，具体产品表述应继续对照公司原文。",
+        "Broadcom全部AI收入含多客户及网络，不等于Google采购，更不是Google Cloud服务收入。",
+        "芯片出货不代表TPU容量已经上线；财季与日历季不可机械对应。",
+        "设备融资、租赁与云服务必须检查是否同一批容量，避免重复计数。"
+      ],
+      "strength": "出货方向验证：中；Google Cloud金额推导：不支持",
+      "factors": [
+        "TPU供给",
+        "交付进度",
+        "设备成本及融资"
+      ],
+      "publicationDate": "2026-09-02"
+    }
+  ],
+  "cloudBridge": {
+    "title": "把客户需求与供应链证据接到 Cloud 季度假设",
+    "summary": "先区分客户需求、Google可归属份额、可上线容量和履约确认。跨公司信息用于提出和验证假设；确认期间、合同范围及基准已计入金额后，才计算增量收入，再将成本传导到利润。当前证据支持需求和分年交付方向，不能直接给出精确的季度增速上调点数。",
+    "drivers": [
+      {
+        "driver": "客户商业化与支付能力",
+        "observation": "Anthropic 5月官方run-rate超过47bn；65bn融资包含此前承诺。最新Q3确认收入仍待原始财务表核验。",
+        "forecastImplication": "分别输入需求量与可持续算力预算；运行率、融资不直接乘系数变成Google收入。",
+        "sourceRefs": [
+          "chain-anthropic-series-h-20260528",
+          "chain-anthropic-financial-news-20261103"
+        ]
+      },
+      {
+        "driver": "Google份额与合同口径",
+        "observation": "Anthropic同时承诺Google/Broadcom、AWS、Azure容量；Google专属采购、设备租赁、渠道销售分成并非同一口径。",
+        "forecastImplication": "总客户预算需乘Google可归属份额；Google专属合同不再重复乘份额。剔除设备融资与重复承诺。",
+        "sourceRefs": [
+          "chain-anthropic-aws-20260420",
+          "chain-anthropic-ms-nv-20251118",
+          "chain-anthropic-google-20260406"
+        ]
+      },
+      {
+        "driver": "投产验收与季度节奏",
+        "observation": "旧Google计划在2026年扩容，新Google/Broadcom计划从2027年开始；NVIDIA/Broadcom出货仅是上游步骤。",
+        "forecastImplication": "2026Q4只评估既有扩容是否验收计费；2027按批次安排交付，不把五GW平均分到四个季度。",
+        "sourceRefs": [
+          "chain-anthropic-google-20251023",
+          "chain-anthropic-google-20260406",
+          "chain-broadcom-q3-20260902",
+          "chain-nvidia-fy27q2-20260826"
+        ]
+      },
+      {
+        "driver": "利用率、净单价与收入确认",
+        "observation": "AWS公告摘录明确合同承诺的收入确认由使用量和履约驱动；预付不是当期收入。Google具体条款尚缺。",
+        "forecastImplication": "按量合同用可计费容量×时数×利用率×净价格；最低承诺合同另按履约条款，避免机械对所有合同乘利用率。",
+        "sourceRefs": [
+          "chain-amazon-10q-20261030",
+          "chain-anthropic-contracts-news-20261026"
+        ]
+      },
+      {
+        "driver": "利润率与现金流",
+        "observation": "AWS管理层称AI利润率仍低于核心业务；芯片、电力、折旧及上线成本会影响利润，资本开支支付与损益确认不同步。",
+        "forecastImplication": "分别估计增量贡献利润和固定成本/折旧；Cloud营业利润率不能直接写入集团毛利率。经营现金流和capex另算。",
+        "sourceRefs": [
+          "chain-amazon-q3-20261029",
+          "chain-amazon-10q-20261030",
+          "chain-broadcom-q3-20260902"
+        ]
+      }
+    ],
+    "formulas": [
+      {
+        "id": "contract",
+        "title": "合同金额到季度服务收入",
+        "formula": "候选Google季度服务收入 = 经核验且未重复的合同范围金额 × Google可归属比例 × 本季度服务履约权重；增量Cloud收入 = 候选收入 − 当前基准已包含的同一合同收入",
+        "units": "金额统一为USD million；份额与权重为0–1",
+        "conditions": [
+          "Google专属合同的Google比例取1；仅客户总预算需要另估Google份额。",
+          "季度权重覆盖合同整个履约期，其合计不超过1；付款日、设备交付日不自动等于服务确认日。",
+          "先剔除设备租赁本金、股权融资及非Google服务部分。",
+          "与容量法是同一收入的交叉验证，不能相加。"
+        ],
+        "unknownInputs": [
+          "核验后的合同服务范围金额",
+          "Google收入归属及主理人/代理人净额口径",
+          "季度履约确认权重",
+          "当前基准已包含收入"
+        ]
+      },
+      {
+        "id": "capacity",
+        "title": "交付容量到季度服务收入",
+        "formula": "按量合同候选收入 = 已投产且客户验收的可计费容量 × 当季可用小时 × 可计费利用率 × 单位小时净价格；增量Cloud收入 = 候选收入 − 当前基准已包含收入",
+        "units": "可计费容量可用同代TPU/GPU数量或统一算力单位；不能直接把GW当芯片数",
+        "conditions": [
+          "需考虑上线时间、停机、训练/推理分配、折扣和代际性能；不同芯片不能裸数相加。",
+          "take-or-pay及专属租赁按条款确定可确认收入，不默认等于利用率乘积。",
+          "数量承诺不替代投产验收，出货与上线之间保留时滞。",
+          "用该方法时不得再叠加同一合同法计算额。"
+        ],
+        "unknownInputs": [
+          "每批验收日期与Google可计费容量",
+          "有效时数",
+          "合同计费方式及利用率",
+          "净单价",
+          "既有基准收入"
+        ]
+      },
+      {
+        "id": "growth",
+        "title": "接回 Cloud 同比预测",
+        "formula": "情景Cloud同比增速 = (MS原季度Cloud收入 + 经去重的增量收入) / 当前情景的上年同季Cloud收入 − 1；仅当同比基数未变时，相对MS增速变化(百分点) = 增量收入 / 上年同季Cloud收入 × 100",
+        "conditions": [
+          "当前计算入口使用MS原季度收入作金额基准，上年同季收入保留用户已输入的情景传导；其他券商仅供比较，不是可切换的计算基准。",
+          "金额换算到同一币种/单位；增量可以为负。",
+          "应用会替换所选季度Cloud增速，后续季度仍按同比引擎传导。本入口是单季度情景，没有跨季度合同分配台账；同一合同不能在多个季度重复按全额确认。"
+        ],
+        "unknownInputs": [
+          "已核对的同比基数",
+          "经合同或容量桥计算的净增量"
+        ]
+      },
+      {
+        "id": "profit",
+        "title": "收入到利润与集团口径",
+        "formula": "增量Cloud营业利润 = 增量Cloud收入 × 增量贡献利润率 − 未包含在贡献利润率中的新增固定成本/折旧/上线费用；情景Cloud营业利润率 = (基准营业利润 + 增量营业利润) / (基准收入 + 增量收入)",
+        "conditions": [
+          "不得重复扣除已计入贡献利润率的成本。",
+          "Cloud营业利润率不同于集团毛利率；要改集团毛利率，需另建新增营业成本的桥。",
+          "capex在现金流侧反映，投产折旧在利润侧反映，不直接将capex全额扣当期利润。"
+        ],
+        "unknownInputs": [
+          "增量贡献利润率及费用边界",
+          "新增固定成本、折旧和上线费用",
+          "Cloud营业利润基准",
+          "集团营业成本映射"
+        ]
+      }
+    ],
+    "unknownInputs": [
+      {
+        "name": "Google服务可归属合同金额",
+        "value": null,
+        "reason": "新闻合同额未经完整原文核验，且需分离设备租赁与云服务。"
+      },
+      {
+        "name": "季度验收与履约权重",
+        "value": null,
+        "reason": "披露只到分年或阶段上线，未给逐季验收表。"
+      },
+      {
+        "name": "Google份额",
+        "value": null,
+        "reason": "客户多云采购；总容量或总compute承诺无法分配。"
+      },
+      {
+        "name": "净单位价格及可计费利用率",
+        "value": null,
+        "reason": "TPU代际、计费形式与客户折扣未公开。"
+      },
+      {
+        "name": "当前基准已计入的相关收入",
+        "value": null,
+        "reason": "当前合同桥须从MS原季度假设中核对已含金额，不能把新闻整额重复加上；其他券商模型仅作对照。"
+      },
+      {
+        "name": "增量成本及折旧节奏",
+        "value": null,
+        "reason": "供应商收入、AWS利润率不足以量化Google的增量成本。"
+      }
+    ],
+    "scenarios": [
+      {
+        "id": "delivery-base",
+        "name": "按已确认交付保持当前模型",
+        "period": "2026Q4及2027各季",
+        "assumptions": [
+          "仅保留已有模型中明确的服务收入，逐项说明它已包含哪些客户或容量。",
+          "用最新交付证据复核，不因融资或上游业绩强而自动上调。"
+        ],
+        "cloudGrowthImpact": "基准待合同/容量桥核对；没有新增可量化证据时不自动加点。",
+        "marginImpact": "保留用户现有成本假设，同时列出AI收入占比和折旧风险。",
+        "applyMode": "用户核对后使用；不自动覆盖",
+        "numericGrowthOverride": null,
+        "sourceRefs": [
+          "chain-anthropic-google-20260406",
+          "chain-nvidia-call-20261028"
+        ]
+      },
+      {
+        "id": "delivery-accelerates",
+        "name": "2027容量按期验收且商业化改善",
+        "period": "2027Q1–2027Q4，按实际批次",
+        "assumptions": [
+          "用户输入各批验收容量、计费开始日、净价格及Google服务归属。",
+          "新容量用于收入已经可见的需求；按合同或容量桥择一计算。",
+          "从计算额中扣掉基准已含同一容量的收入。"
+        ],
+        "cloudGrowthImpact": "桥接出净增量后，按增量/去年同季收入换算个百分点；不预设+5或+10个百分点。",
+        "marginImpact": "利用率提升可能摊薄固定成本，但AI组合和新增折旧可能压低利润率；需要独立成本输入。",
+        "applyMode": "参数完整后计算，再由用户采用",
+        "numericGrowthOverride": null,
+        "sourceRefs": [
+          "chain-anthropic-google-20260406",
+          "chain-anthropic-series-h-20260528",
+          "chain-broadcom-q3-20260902"
+        ]
+      },
+      {
+        "id": "delivery-slips",
+        "name": "投产验收推迟一个季度",
+        "period": "用户选择的2026Q4或2027季度",
+        "assumptions": [
+          "输入本季基准中依赖新交付的收入，以及其中推迟比例d。",
+          "本季增量=-d×该批收入；下一季只有在验收和需求仍成立时补回。",
+          "若跨年，年度收入随之调整；不将延期默认当永久取消。"
+        ],
+        "cloudGrowthImpact": "由被推迟收入占上年同季Cloud收入换算下调点数。",
+        "marginImpact": "新增折旧/租赁若已开始而计费延迟，短期利润率可能承压；支出是否同步推迟需另设。",
+        "applyMode": "明确标为用户压力情景，d由用户输入",
+        "numericGrowthOverride": null,
+        "sourceRefs": [
+          "chain-anthropic-google-20260406",
+          "chain-nvidia-fy27q2-20260826"
+        ]
+      },
+      {
+        "id": "share-price-pressure",
+        "name": "需求增长但Google份额或净单价受压",
+        "period": "2027各季",
+        "assumptions": [
+          "总客户需求不变或增长，用户单独降低Google分配比例或净价格。",
+          "AWS/ Azure容量增加只证明替代选项，不自动给出Google份额损失幅度。",
+          "考虑TPU效率改善使相同token需求消耗更少算力的可能性。"
+        ],
+        "cloudGrowthImpact": "通过份额/价格输入重算收入，不能把客户ARR增长直接等同于Cloud增速。",
+        "marginImpact": "价格降幅、利用率与成本效率需同时评估；高收入增长仍可能有利润率稀释。",
+        "applyMode": "用户设定份额/价格范围并比较",
+        "numericGrowthOverride": null,
+        "sourceRefs": [
+          "chain-anthropic-aws-20260420",
+          "chain-anthropic-ms-nv-20251118",
+          "chain-msft-fy27q1-20261028",
+          "chain-amazon-q3-20261029"
+        ]
+      }
+    ],
+    "limitations": [
+      "本次没有足够公开输入给出Google Cloud某季度应上调多少个百分点的研究结论；情景参数应由用户输入并明确标为假设。",
+      "客户run-rate revenue不等于已确认收入，也不保证等比例compute成本；融资不等于采购，采购不等于供应商当期确认收入。",
+      "客户总compute承诺、多GW容量、最多TPU数、芯片出货、投产验收和计费收入是不同阶段。",
+      "客户与供应商披露可能讲同一批容量；合同法和容量法、Google/Broadcom公告、前后修订公告均应去重。",
+      "NVIDIA通常位于供应链上游并提供生态，不是Google Cloud简单下游。其财年季度必须用实际截止日对齐。",
+      "SEC检索成功仅证明文件存在；正文403、Wind返回封面或无关命中，不能把新闻财务数据升级为已核验招股书事实。",
+      "行业参考不替代Google具体合同及成本；Cloud营业利润率、集团毛利率和现金流分别建模。"
+    ]
+  },
+  "generatedAt": "2026-11-05T13:47:02.958416+00:00",
+  "evidenceMetrics": [
+    {
+      "id": "anthropic-run-rate-april",
+      "company": "Anthropic",
+      "metric": "run-rate revenue",
+      "value": 30,
+      "comparison": ">",
+      "unit": "USD bn annualized",
+      "status": "management_reported_run_rate",
+      "observationDate": "2026-04-06",
+      "sourceRefs": [
+        "chain-anthropic-google-20260406"
+      ],
+      "notEquivalentTo": "annual recognized revenue or recurring subscription ARR"
+    },
+    {
+      "id": "anthropic-run-rate-may",
+      "company": "Anthropic",
+      "metric": "run-rate revenue",
+      "value": 47,
+      "comparison": ">",
+      "unit": "USD bn annualized",
+      "status": "management_reported_run_rate",
+      "observationDate": "2026-05",
+      "sourceRefs": [
+        "chain-anthropic-series-h-20260528"
+      ],
+      "notEquivalentTo": "annual recognized revenue or November run rate"
+    },
+    {
+      "id": "anthropic-series-h",
+      "company": "Anthropic",
+      "metric": "Series H financing",
+      "value": 65,
+      "unit": "USD bn",
+      "status": "financing_announcement",
+      "observationDate": "2026-05-28",
+      "includesPreviouslyCommitted": 15,
+      "sourceRefs": [
+        "chain-anthropic-series-h-20260528"
+      ],
+      "notEquivalentTo": "compute purchase or Google Cloud revenue"
+    },
+    {
+      "id": "anthropic-google-capacity",
+      "company": "Anthropic / Google / Broadcom",
+      "metric": "next-generation TPU capacity agreement",
+      "value": 5,
+      "unit": "GW",
+      "status": "capacity_commitment",
+      "serviceStart": "2027 onwards",
+      "sourceRefs": [
+        "chain-anthropic-google-20260406",
+        "chain-anthropic-series-h-20260528"
+      ],
+      "notEquivalentTo": "commissioned capacity at announcement or Google-recognized revenue"
+    },
+    {
+      "id": "anthropic-aws-budget",
+      "company": "Anthropic / AWS",
+      "metric": "AWS technology commitment",
+      "value": 100,
+      "comparison": ">",
+      "unit": "USD bn over ten years",
+      "status": "purchase_commitment",
+      "publicationDate": "2026-04-20",
+      "sourceRefs": [
+        "chain-anthropic-aws-20260420"
+      ],
+      "notEquivalentTo": "quarterly compute consumption or financing"
+    },
+    {
+      "id": "nvidia-fy27q2-revenue",
+      "company": "NVIDIA",
+      "metric": "total revenue",
+      "value": 96.221,
+      "unit": "USD bn",
+      "status": "reported_actual",
+      "fiscalPeriod": "FY2027Q2",
+      "periodEnd": "2026-07-26",
+      "publicationDate": "2026-08-26",
+      "sourceRefs": [
+        "chain-nvidia-fy27q2-20260826"
+      ]
+    },
+    {
+      "id": "nvidia-fy27q2-dc",
+      "company": "NVIDIA",
+      "metric": "Data Center revenue",
+      "value": 89.0,
+      "unit": "USD bn rounded",
+      "status": "reported_actual",
+      "fiscalPeriod": "FY2027Q2",
+      "periodEnd": "2026-07-26",
+      "publicationDate": "2026-08-26",
+      "sourceRefs": [
+        "chain-nvidia-fy27q2-20260826"
+      ]
+    },
+    {
+      "id": "nvidia-fy27q3-guide",
+      "company": "NVIDIA",
+      "metric": "total revenue guidance",
+      "value": 108,
+      "toleranceRelative": 0.02,
+      "unit": "USD bn",
+      "status": "guidance_not_actual",
+      "fiscalPeriod": "FY2027Q3",
+      "periodEnd": "2026-10-25",
+      "publicationDate": "2026-08-26",
+      "scheduledResultsDate": "2026-11-17",
+      "sourceRefs": [
+        "chain-nvidia-fy27q2-20260826",
+        "chain-nvidia-call-20261028"
+      ]
+    },
+    {
+      "id": "azure-fy27q1-growth",
+      "company": "Microsoft Azure",
+      "metric": "revenue YoY growth",
+      "value": 0.48,
+      "unit": "fraction",
+      "status": "reported_actual",
+      "fiscalPeriod": "FY2027Q1",
+      "periodEnd": "2026-09-30",
+      "publicationDate": "2026-10-28",
+      "sourceRefs": [
+        "chain-msft-fy27q1-20261028"
+      ]
+    },
+    {
+      "id": "aws-cy26q3-growth",
+      "company": "AWS",
+      "metric": "revenue YoY growth",
+      "value": 0.393,
+      "unit": "fraction",
+      "status": "management_reported_via_wind_transcript",
+      "period": "2026Q3",
+      "periodEnd": "2026-09-30",
+      "publicationDate": "2026-10-29",
+      "sourceRefs": [
+        "chain-amazon-q3-20261029"
+      ]
+    },
+    {
+      "id": "aws-cy26q3-revenue",
+      "company": "AWS",
+      "metric": "revenue",
+      "value": 46,
+      "unit": "USD bn rounded",
+      "status": "management_reported_via_wind_transcript",
+      "period": "2026Q3",
+      "periodEnd": "2026-09-30",
+      "publicationDate": "2026-10-29",
+      "sourceRefs": [
+        "chain-amazon-q3-20261029"
+      ]
+    },
+    {
+      "id": "broadcom-fy26q3-ai",
+      "company": "Broadcom",
+      "metric": "AI semiconductor revenue",
+      "value": 16.7,
+      "unit": "USD bn rounded",
+      "status": "management_reported_via_wind_transcript",
+      "fiscalPeriod": "FY2026Q3",
+      "periodEnd": null,
+      "publicationDate": "2026-09-02",
+      "sourceRefs": [
+        "chain-broadcom-q3-20260902"
+      ]
+    },
+    {
+      "id": "broadcom-fy26q4-ai-guide",
+      "company": "Broadcom",
+      "metric": "AI semiconductor revenue guidance",
+      "value": 21.7,
+      "unit": "USD bn rounded",
+      "status": "guidance_via_wind_transcript",
+      "fiscalPeriod": "FY2026Q4",
+      "periodEnd": null,
+      "publicationDate": "2026-09-02",
+      "sourceRefs": [
+        "chain-broadcom-q3-20260902"
+      ]
+    }
+  ]
+}

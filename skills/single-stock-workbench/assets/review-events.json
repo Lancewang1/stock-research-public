@@ -1,0 +1,1440 @@
+{
+  "schemaVersion": 1,
+  "id": "googl-2026-q3-drawdown",
+  "asOf": "2026-11-05",
+  "marketAsOf": "2026-11-04",
+  "supplementRetrievedOn": "2026-11-06",
+  "title": "近期回撤：从财报前分歧，到财报后的现金与估值重估",
+  "summary": "这轮回撤分两段：财报前GOOGL已跌8.17%，与XLC接近，已知搜索竞争、Cloud交付和投资回报分歧，尚无证据把全部跌幅归于单一催化。10/28盘后搜索低于事前媒体样本、Cloud高增却伴随负FCF，次日放量跌12.64%，机构随后重估搜索变现与现金回报。11/02触及低点后反弹，经营争议仍待数据验证。",
+  "controversies": [
+    {
+      "title": "搜索：周期放缓，还是AI改变变现？",
+      "evidence": "Search仍增12%，但低于10/23样本2.52%；查询增长不等于高价值商业查询增长。",
+      "test": "跟踪商业意图、渠道、付费点击/CPC和AI Mode收入；无拆分时保留结构性解释的不确定性。"
+    },
+    {
+      "title": "Cloud：高增速能否变成持续现金？",
+      "evidence": "收入+103%超预期，TPU硬件外售是贡献；2027 OCI扩张不等于当季已实现订单。",
+      "test": "区分硬件交付与服务消费，验证客户分配、持续用量、应收、存货及回款。"
+    },
+    {
+      "title": "估值：盈利下修，还是现金和倍数重估？",
+      "evidence": "OI同比+29.93%，FCF为负；CMBI短年下修、远年上修，目标价仍下降。",
+      "test": "统一预测年份/股类，拆经营利润、投资损益、Capex与折旧；取得同版模型再分解目标价。"
+    }
+  ],
+  "events": [
+    {
+      "id": "oct13-baseline",
+      "date": "2026-10-13",
+      "session": "起点",
+      "title": "股价仍在十月高位，旧模型已含AI增长预期",
+      "publishedAt": null,
+      "newInformation": "10/13收盘353.78美元，是本次十月观察窗的事后局部高点。7–9月本地研报和模型可重建投资背景，但不能代表10/13实时一致预期。",
+      "expectationChange": "应追问搜索变现、TPU交付和资本回报能否兑现。尚未识别能解释随后每一天跌幅的单一负面催化。",
+      "priceObservation": {
+        "label": "",
+        "startDate": "2026-10-12",
+        "endDate": "2026-10-13",
+        "returns": {
+          "GOOGL": 0.0030052166024039373,
+          "QQQ": -0.0033108144335423084,
+          "XLC": 0.007447285778375834
+        },
+        "startClose": 352.72,
+        "endClose": 353.78,
+        "excessVsQQQPctPoints": 0.6316031035946246,
+        "excessVsXLCPctPoints": -0.44420691759718967,
+        "basis": "同日未复权收盘价，不含分红；相对收益为简单百分点差，不是alpha或事件贡献。",
+        "volume": {
+          "date": "2026-10-13",
+          "shares": 23207700,
+          "multiple": 0.9116556970379056,
+          "baselineAverage": 25456650.0,
+          "baselineStart": "2026-09-15",
+          "baselineEnd": "2026-10-12",
+          "baselineSessions": 20,
+          "note": "终点交易日成交量 / 此前20个交易日均量；没有使用事件之后的量作为基线。"
+        }
+      },
+      "priceNote": "",
+      "brokerResponses": [
+        "7月JPM原件把管理层指引、Consensus、JPMe和Buyside Bar分列；只作旧预期结构。8月MS和7月Barclays模型也不是10月更新版。"
+      ],
+      "details": [
+        "GS 9/17原件p13讨论滚动12月增量Cloud收入相对滞后Capex；用于提出回报问题，不能直接推导GOOGL季度增速。"
+      ],
+      "sourceRefs": [
+        "local-jpm-us-internet-202607",
+        "local-gs-cloud-conversion-20260917",
+        "local-googl-barc-20260724",
+        "local-googl-ms-20260824"
+      ],
+      "verificationRefs": [],
+      "supplementalRefs": []
+    },
+    {
+      "id": "oct19-supply",
+      "date": "2026-10-19",
+      "session": "盘中",
+      "title": "供应链延迟报道提供风险线索，尚非公司确认",
+      "publishedAt": "2026-10-19T13:38:54+00:00",
+      "newInformation": "09:38美东，媒体转述GF对下一代TPU部分设计延迟的判断，同时称需求仍强。未取得原始供应链报告。",
+      "expectationChange": "需要区分需求和交付：若量产延迟，收入确认可能后移；报道没有可核对的Google收入影响，不据此下调模型。",
+      "priceObservation": {
+        "label": "",
+        "startDate": "2026-10-16",
+        "endDate": "2026-10-19",
+        "returns": {
+          "GOOGL": 0.010540532605185282,
+          "QQQ": 0.012059735136658256,
+          "XLC": -0.002084844089920157
+        },
+        "startClose": 340.59,
+        "endClose": 344.18,
+        "excessVsQQQPctPoints": -0.1519202531472974,
+        "excessVsXLCPctPoints": 1.262537669510544,
+        "basis": "同日未复权收盘价，不含分红；相对收益为简单百分点差，不是alpha或事件贡献。",
+        "volume": {
+          "date": "2026-10-19",
+          "shares": 19808300,
+          "multiple": 0.7882306781355253,
+          "baselineAverage": 25130080.0,
+          "baselineStart": "2026-09-21",
+          "baselineEnd": "2026-10-16",
+          "baselineSessions": 20,
+          "note": "终点交易日成交量 / 此前20个交易日均量；没有使用事件之后的量作为基线。"
+        }
+      },
+      "priceNote": "报道在开盘后；收盘收益包含消息发布前行情，且当日GOOGL上涨，不能把报道直接写成下跌原因。",
+      "brokerResponses": [
+        "GF观点经二手转述；没有已验证的GOOGL EPS或目标价修订。"
+      ],
+      "details": [],
+      "sourceRefs": [
+        "review-tpu-delay"
+      ],
+      "verificationRefs": [],
+      "supplementalRefs": []
+    },
+    {
+      "id": "oct20-outage",
+      "date": "2026-10-20",
+      "session": "盘中",
+      "title": "伦敦Cloud故障把服务可靠性带入讨论",
+      "publishedAt": "2026-10-20T18:28:10+00:00",
+      "newInformation": "14:28美东报道：伦敦电力事件影响Cloud及多家英国银行；英国监管机构与Google接触，Google称问题已解决。",
+      "expectationChange": "新增服务中断、赔付与监管成本的可能性；尚无可量化的收入流失、罚款或全年盈利修订。",
+      "priceObservation": {
+        "label": "",
+        "startDate": "2026-10-19",
+        "endDate": "2026-10-20",
+        "returns": {
+          "GOOGL": -0.011331280144110778,
+          "QQQ": -0.00101620357480936,
+          "XLC": 0.0009083477155054087
+        },
+        "startClose": 344.18,
+        "endClose": 340.28,
+        "excessVsQQQPctPoints": -1.0315076569301418,
+        "excessVsXLCPctPoints": -1.2239627859616187,
+        "basis": "同日未复权收盘价，不含分红；相对收益为简单百分点差，不是alpha或事件贡献。",
+        "volume": {
+          "date": "2026-10-20",
+          "shares": 18316900,
+          "multiple": 0.7446582966514179,
+          "baselineAverage": 24597725.0,
+          "baselineStart": "2026-09-22",
+          "baselineEnd": "2026-10-19",
+          "baselineSessions": 20,
+          "note": "终点交易日成交量 / 此前20个交易日均量；没有使用事件之后的量作为基线。"
+        }
+      },
+      "priceNote": "报道在14:28才发布，日收益不是纯事件窗口；不能倒推当天全部跌幅来自故障。",
+      "brokerResponses": [
+        "本次归档未找到将故障量化为GOOGL利润下修的完整卖方模型。"
+      ],
+      "details": [],
+      "sourceRefs": [
+        "review-cloud-outage"
+      ],
+      "verificationRefs": [],
+      "supplementalRefs": []
+    },
+    {
+      "id": "oct23-preview",
+      "date": "2026-10-23",
+      "session": "盘前",
+      "title": "财报前预期样本已可定位：Cloud高增，搜索仍有门槛",
+      "publishedAt": "2026-10-23T12:15:07+00:00",
+      "newInformation": "08:15美东，Zacks列Q3预期：Search64.99bn、YouTube11.34bn、Cloud29.16bn；报道还称近30天EPS样本上修1.4%。",
+      "expectationChange": "截至这份样本，市场并非一致下修盈利；真正待验的是搜索和Cloud能否越过预期。总收入及EPS口径不明，保留不比较。",
+      "priceObservation": {
+        "label": "",
+        "startDate": "2026-10-22",
+        "endDate": "2026-10-23",
+        "returns": {
+          "GOOGL": -0.012368145086669724,
+          "QQQ": -9.936548043221194e-05,
+          "XLC": -0.017780673989945983
+        },
+        "startClose": 324.22,
+        "endClose": 320.21,
+        "excessVsQQQPctPoints": -1.2268779606237512,
+        "excessVsXLCPctPoints": 0.5412528903276259,
+        "basis": "同日未复权收盘价，不含分红；相对收益为简单百分点差，不是alpha或事件贡献。",
+        "volume": {
+          "date": "2026-10-23",
+          "shares": 17569600,
+          "multiple": 0.7350635821463759,
+          "baselineAverage": 23902150.0,
+          "baselineStart": "2026-09-25",
+          "baselineEnd": "2026-10-22",
+          "baselineSessions": 20,
+          "note": "终点交易日成交量 / 此前20个交易日均量；没有使用事件之后的量作为基线。"
+        }
+      },
+      "priceNote": "",
+      "brokerResponses": [
+        "这是有发布时间的媒体预期样本，不是完整券商预测分布，也不是10/13起点预期。"
+      ],
+      "details": [
+        "Zacks总收入111.64bn与公司含TAC收入不可直接比较；EPS2.94未说明GAAP/调整后。业务段名称相同的预期单列在下方对照。"
+      ],
+      "sourceRefs": [
+        "review-zacks-preview"
+      ],
+      "verificationRefs": [],
+      "supplementalRefs": []
+    },
+    {
+      "id": "oct26-customer",
+      "date": "2026-10-26",
+      "session": "盘中 / 盘后",
+      "title": "客户算力采购更复杂，资本回报分歧提前出现",
+      "publishedAt": "2026-10-26T17:38:43+00:00",
+      "newInformation": "13:38美东，Yahoo引述Anthropic招股书：云租赁之外增加自采加速器与专属数据中心。17:03的D.A. Davidson报道则认为Google已预告资本开支上升，关注Anthropic带动的Cloud增长。",
+      "expectationChange": "客户需求旺盛与自建并存：硬件销量、持续服务收入、渠道收费及投资关系不能当作同一项收入。此前已知的2027投入上升也不全是本次财报的新消息。",
+      "priceObservation": {
+        "label": "",
+        "startDate": "2026-10-23",
+        "endDate": "2026-10-26",
+        "returns": {
+          "GOOGL": -0.01064926142219158,
+          "QQQ": 0.011073253833049579,
+          "XLC": -0.01573310586674259
+        },
+        "startClose": 320.21,
+        "endClose": 316.8,
+        "excessVsQQQPctPoints": -2.172251525524116,
+        "excessVsXLCPctPoints": 0.5083844444551011,
+        "basis": "同日未复权收盘价，不含分红；相对收益为简单百分点差，不是alpha或事件贡献。",
+        "volume": {
+          "date": "2026-10-26",
+          "shares": 23991800,
+          "multiple": 1.0128853498962915,
+          "baselineAverage": 23686590.0,
+          "baselineStart": "2026-09-28",
+          "baselineEnd": "2026-10-23",
+          "baselineSessions": 20,
+          "note": "终点交易日成交量 / 此前20个交易日均量；没有使用事件之后的量作为基线。"
+        }
+      },
+      "priceNote": "主窗口仅观察盘中客户消息所在交易日；盘后卖方评论对应次日，两个时点分开。",
+      "brokerResponses": [
+        "D.A. Davidson的盘后观点属于后续解读；对应首个日线观察窗为10/26→10/27，不能解释10/26收盘前走势。"
+      ],
+      "details": [
+        "没有客户侧向Google分配的新增采购量、付款时间和确认节奏，因此不计算Google营收增量。"
+      ],
+      "sourceRefs": [
+        "review-anthropic-direct",
+        "review-anthropic-channels",
+        "review-da-preview"
+      ],
+      "verificationRefs": [],
+      "supplementalRefs": []
+    },
+    {
+      "id": "oct27-tpu-preview",
+      "date": "2026-10-27",
+      "session": "盘中",
+      "title": "TPU扩张与搜索变现担忧同时进入财报预期",
+      "publishedAt": "2026-10-27T16:07:00+00:00",
+      "newInformation": "12:07美东，Oracle/Google新闻稿称TPU于2027年进入OCI并多年爬坡。15:16 Yahoo财报预览列总收入127.8bn、Cloud28.9bn，并讨论Meta Muse对搜索商业化的潜在竞争。",
+      "expectationChange": "Cloud硬件外售存在上行机会，但不能把2027可用写成Q3已确认收入。搜索需要兼顾查询增长与单位变现；这项担忧在财报前已有公开记录。",
+      "priceObservation": {
+        "label": "",
+        "startDate": "2026-10-26",
+        "endDate": "2026-10-27",
+        "returns": {
+          "GOOGL": 0.011931818181817988,
+          "QQQ": 0.012707104745857789,
+          "XLC": -0.002599903707270035
+        },
+        "startClose": 316.8,
+        "endClose": 320.58,
+        "excessVsQQQPctPoints": -0.0775286564039801,
+        "excessVsXLCPctPoints": 1.4531721889088023,
+        "basis": "同日未复权收盘价，不含分红；相对收益为简单百分点差，不是alpha或事件贡献。",
+        "volume": {
+          "date": "2026-10-27",
+          "shares": 28633100,
+          "multiple": 1.1970226918472684,
+          "baselineAverage": 23920265.0,
+          "baselineStart": "2026-09-29",
+          "baselineEnd": "2026-10-26",
+          "baselineSessions": 20,
+          "note": "终点交易日成交量 / 此前20个交易日均量；没有使用事件之后的量作为基线。"
+        }
+      },
+      "priceNote": "两条消息均在盘中；只有日线，不能分离Oracle发布与晚些时候预览的各自价格贡献。",
+      "brokerResponses": [
+        "Yahoo转述BofA看好TPU、Gemini催化，同时关注搜索迁移；TD Cowen的TPU销售预测属于机构情景，非公司指引。"
+      ],
+      "details": [],
+      "sourceRefs": [
+        "review-oracle-tpu",
+        "review-yahoo-preview"
+      ],
+      "verificationRefs": [],
+      "supplementalRefs": []
+    },
+    {
+      "id": "oct28-before",
+      "date": "2026-10-28",
+      "session": "盘前",
+      "title": "最后一个财报前交易日：现金回报仍是明确问题",
+      "publishedAt": "2026-10-28T13:27:09+00:00",
+      "newInformation": "09:27美东，Yahoo预览关注上一季FCF转负后的投资回报，列YouTube预期11.34bn。当天收盘324.89，较10/13已跌8.17%。",
+      "expectationChange": "财报前跌幅与XLC的−8.14%接近、弱于QQQ；说明背景不同，不能证明公司因素不存在，也不能用晚间Q3结果解释此前下跌。",
+      "priceObservation": {
+        "label": "",
+        "startDate": "2026-10-27",
+        "endDate": "2026-10-28",
+        "returns": {
+          "GOOGL": 0.013444382057520743,
+          "QQQ": 0.006045060658578905,
+          "XLC": -0.004247924309712325
+        },
+        "startClose": 320.58,
+        "endClose": 324.89,
+        "excessVsQQQPctPoints": 0.7399321398941838,
+        "excessVsXLCPctPoints": 1.7692306367233068,
+        "basis": "同日未复权收盘价，不含分红；相对收益为简单百分点差，不是alpha或事件贡献。",
+        "volume": {
+          "date": "2026-10-28",
+          "shares": 63109000,
+          "multiple": 2.5972304960270303,
+          "baselineAverage": 24298575.0,
+          "baselineStart": "2026-09-30",
+          "baselineEnd": "2026-10-27",
+          "baselineSessions": 20,
+          "note": "终点交易日成交量 / 此前20个交易日均量；没有使用事件之后的量作为基线。"
+        }
+      },
+      "priceNote": "",
+      "brokerResponses": [
+        "已有10/23与10/27媒体预期样本，仍缺10/13当日完整卖方版本和逐日修订路径。"
+      ],
+      "details": [
+        "10/13→10/28区间比较见下方；起点选择是事后观察，不是当时的交易信号。"
+      ],
+      "sourceRefs": [
+        "recent-pre-earnings"
+      ],
+      "verificationRefs": [],
+      "supplementalRefs": []
+    },
+    {
+      "id": "oct28-release",
+      "date": "2026-10-28",
+      "session": "盘后",
+      "title": "增长结构和现金回报成为财报冲击的中心",
+      "publishedAt": "2026-10-28T20:44:37+00:00",
+      "newInformation": "16:44美东AFP已报道：搜索约+12%、YouTube约+9%、Cloud约+103%；季度Capex约51.4bn，FCF约−9.1bn。云高增长含TPU贡献，广告增速放缓与现金消耗并存。",
+      "expectationChange": "相较财报前Zacks业务样本，Search低约2.52%、YouTube低约1.17%、Cloud高约5.31%。这支持讨论增长组合，不能只看收入总量或把GAAP EPS下降等同经营崩塌。",
+      "priceObservation": {
+        "label": "",
+        "startDate": "2026-10-28",
+        "endDate": "2026-10-29",
+        "returns": {
+          "GOOGL": -0.12641201637477295,
+          "QQQ": -0.01415360868786264,
+          "XLC": -0.018712429707194222
+        },
+        "startClose": 324.89,
+        "endClose": 283.82,
+        "excessVsQQQPctPoints": -11.22584076869103,
+        "excessVsXLCPctPoints": -10.769958666757873,
+        "basis": "同日未复权收盘价，不含分红；相对收益为简单百分点差，不是alpha或事件贡献。",
+        "volume": {
+          "date": "2026-10-29",
+          "shares": 139738300,
+          "multiple": 5.461654994618011,
+          "baselineAverage": 25585340.0,
+          "baselineStart": "2026-10-01",
+          "baselineEnd": "2026-10-28",
+          "baselineSessions": 20,
+          "note": "终点交易日成交量 / 此前20个交易日均量；没有使用事件之后的量作为基线。"
+        }
+      },
+      "priceNote": "下列10/29收盘结果是后续观察，不是10/28发布时已知。10-Q于10/29提交，只用来核对数值。",
+      "brokerResponses": [
+        "10/29的目标价和模型修订放在下一节点；没有原件可证明这些更新在10/28收盘前已知。"
+      ],
+      "details": [
+        "10-Q核实：收入127.577bn、营业利润40.576bn同比+29.93%；投资损益波动拖累净利，普通股摊薄EPS为2.12。",
+        "电话会旧摘录：00:31:01汇率与基数；00:31:28第三方算力及TPU爬坡；00:31:59折旧与Capex。完整转录/音频未核实，摘录不单独构成事实。",
+        "2026 Capex 195–205bn维持；2027显著增加无数值指引。350.4bn是之后高盛估计。"
+      ],
+      "sourceRefs": [
+        "recent-afp-results",
+        "recent-earnings-8k",
+        "review-zacks-preview",
+        "review-yahoo-preview"
+      ],
+      "verificationRefs": [
+        "recent-10q-income",
+        "recent-10q-business",
+        "recent-10q-cash",
+        "recent-10q-investments"
+      ],
+      "supplementalRefs": [
+        "review-demo-call"
+      ]
+    },
+    {
+      "id": "oct29-reprice",
+      "date": "2026-10-29",
+      "session": "财报后首日",
+      "title": "放量下跌，机构转向搜索变现、现金和估值质量",
+      "publishedAt": null,
+      "newInformation": "首个完整交易日收盘283.82，较前收跌12.64%；相对QQQ/XLC分别少11.23/10.77个百分点，成交量为此前20日均量5.46倍。",
+      "expectationChange": "机构分歧由‘Cloud能长多快’延伸到‘收入来自持续服务还是硬件、搜索增量能否变现、现金何时回收’。价格表现显示重估显著，但不是对每个解释的因果证明。",
+      "priceObservation": {
+        "label": "",
+        "startDate": "2026-10-28",
+        "endDate": "2026-10-29",
+        "returns": {
+          "GOOGL": -0.12641201637477295,
+          "QQQ": -0.01415360868786264,
+          "XLC": -0.018712429707194222
+        },
+        "startClose": 324.89,
+        "endClose": 283.82,
+        "excessVsQQQPctPoints": -11.22584076869103,
+        "excessVsXLCPctPoints": -10.769958666757873,
+        "basis": "同日未复权收盘价，不含分红；相对收益为简单百分点差，不是alpha或事件贡献。",
+        "volume": {
+          "date": "2026-10-29",
+          "shares": 139738300,
+          "multiple": 5.461654994618011,
+          "baselineAverage": 25585340.0,
+          "baselineStart": "2026-10-01",
+          "baselineEnd": "2026-10-28",
+          "baselineSessions": 20,
+          "note": "终点交易日成交量 / 此前20个交易日均量；没有使用事件之后的量作为基线。"
+        }
+      },
+      "priceNote": "隔夜财报、盘中机构点评与市场波动重叠；无盘中事件回归，不拆分贡献。",
+      "brokerResponses": [
+        "GS目标价435→385；JPM425→375。缺同版完整盈利及估值表，不能把目标价跌幅全部算成EPS下修。",
+        "Citizens下调至Market Perform，10:16美东报道已在开盘之后；MS仍Overweight/375，讨论TPU组合及2028 EPS倍数；Citi初评保留447。"
+      ],
+      "details": [
+        "付费点击+8%、CPC+4%并不支持‘所有广告单价都下降’。高价值查询流失仍是待证伪的机构解释。",
+        "高盛媒体文中2027 FCF前后数字重复，不能量化其下修幅度。MS所述16倍使用2028 EPS，不与2026/2027 PE直接相比。"
+      ],
+      "sourceRefs": [
+        "recent-citizens",
+        "recent-gs-jpm",
+        "recent-ms-view",
+        "recent-citi-first",
+        "recent-10q-business"
+      ],
+      "verificationRefs": [],
+      "supplementalRefs": []
+    },
+    {
+      "id": "oct30-revisions",
+      "date": "2026-10-30",
+      "session": "后续修订",
+      "title": "目标价下调不等于所有年份盈利一起下修",
+      "publishedAt": null,
+      "newInformation": "Citi把前一日保留的447目标价更新为375，仍Buy；招银国际GOOG目标价428→421，2026净利预测−5%，2027–2028反而+2%至+4%。",
+      "expectationChange": "盈利年份、现金和倍数变化必须分开。两天Citi版本有先后；招银的跨年方向不同，不能写成‘卖方全面下修盈利’。",
+      "priceObservation": {
+        "label": "",
+        "startDate": "2026-10-29",
+        "endDate": "2026-10-30",
+        "returns": {
+          "GOOGL": -0.01402297230639149,
+          "QQQ": -0.03473872564095393,
+          "XLC": -0.012943385041003785
+        },
+        "startClose": 283.82,
+        "endClose": 279.84,
+        "excessVsQQQPctPoints": 2.0715753334562437,
+        "excessVsXLCPctPoints": -0.10795872653877048,
+        "basis": "同日未复权收盘价，不含分红；相对收益为简单百分点差，不是alpha或事件贡献。",
+        "volume": {
+          "date": "2026-10-30",
+          "shares": 65695000,
+          "multiple": 2.125447162441493,
+          "baselineAverage": 30908790.0,
+          "baselineStart": "2026-10-02",
+          "baselineEnd": "2026-10-29",
+          "baselineSessions": 20,
+          "note": "终点交易日成交量 / 此前20个交易日均量；没有使用事件之后的量作为基线。"
+        }
+      },
+      "priceNote": "两条来源只有可核对日期，没有统一美东发布时间；当日日线仅作相邻观察，不假定都在开盘前发布。",
+      "brokerResponses": [
+        "Citi：搜索变现不确定性盖过Cloud超预期的部分利好。招银：Cloud长期贡献仍上修，TPU存货拖累现金；其目标是GOOG C类股。"
+      ],
+      "details": [
+        "C类GOOG目标价不能直接混入A类GOOGL目标价平均值；没有同版原始模型仍不拆分目标价的盈利和倍数贡献。"
+      ],
+      "sourceRefs": [
+        "recent-citi-revision",
+        "recent-cmbi-view"
+      ],
+      "verificationRefs": [],
+      "supplementalRefs": []
+    },
+    {
+      "id": "nov02-low",
+      "date": "2026-11-02",
+      "session": "收盘低点",
+      "title": "回撤到达观察窗低点，后续公司与市场表现已分化",
+      "publishedAt": null,
+      "newInformation": "收盘278.99，较10/13跌21.14%。但10/29→11/02仅再跌1.70%，同期QQQ跌4.79%、XLC跌0.94%。本次归档未识别解释11/02低点的新增公司披露。",
+      "expectationChange": "财报首日冲击最集中，后段不能照搬同样的单因子叙事。买入评级尚在、长期Cloud上修与短期现金担忧可以同时存在。",
+      "priceObservation": {
+        "label": "",
+        "startDate": "2026-10-29",
+        "endDate": "2026-11-02",
+        "returns": {
+          "GOOGL": -0.017017828200972418,
+          "QQQ": -0.047879330108759444,
+          "XLC": -0.009386424266376703
+        },
+        "startClose": 283.82,
+        "endClose": 278.99,
+        "excessVsQQQPctPoints": 3.0861501907787026,
+        "excessVsXLCPctPoints": -0.7631403934595715,
+        "basis": "同日未复权收盘价，不含分红；相对收益为简单百分点差，不是alpha或事件贡献。",
+        "volume": {
+          "date": "2026-11-02",
+          "shares": 48512300,
+          "multiple": 1.4698498876001422,
+          "baselineAverage": 33004935.0,
+          "baselineStart": "2026-10-05",
+          "baselineEnd": "2026-10-30",
+          "baselineSessions": 20,
+          "note": "终点交易日成交量 / 此前20个交易日均量；没有使用事件之后的量作为基线。"
+        }
+      },
+      "priceNote": "11/02是截至11/04事后识别的收盘低点；不代表当日已可确认底部。",
+      "brokerResponses": [
+        "观察窗内可定位的主要修订仍是10/29–30；11/02未取得新同口径原始盈利模型。"
+      ],
+      "details": [
+        "同期10年美债收益率从5.21%降到4.91%，VIX从15.27升到21.15；不能写成‘利率上升解释整段下跌’。宏观为共同背景，不是贡献归因。"
+      ],
+      "sourceRefs": [],
+      "verificationRefs": [
+        "recent-fred"
+      ],
+      "supplementalRefs": []
+    },
+    {
+      "id": "nov04-rebound",
+      "date": "2026-11-04",
+      "session": "窗口后",
+      "title": "反弹出现，经营争议尚未被新季度数据解决",
+      "publishedAt": null,
+      "newInformation": "11/02→11/04反弹3.56%至288.93，QQQ同期+1.59%、XLC+4.69%。这是价格修复，未取得新的季度实际值来确认搜索和现金问题逆转。",
+      "expectationChange": "下一步验证搜索商业化、剔除硬件后的Cloud消费、应收存货及FCF；不能仅凭两天反弹上调经营预测。",
+      "priceObservation": {
+        "label": "",
+        "startDate": "2026-11-02",
+        "endDate": "2026-11-04",
+        "returns": {
+          "GOOGL": 0.03562851715115234,
+          "QQQ": 0.015945029291283053,
+          "XLC": 0.04687811689607013
+        },
+        "startClose": 278.99,
+        "endClose": 288.93,
+        "excessVsQQQPctPoints": 1.9683487859869286,
+        "excessVsXLCPctPoints": -1.1249599744917793,
+        "basis": "同日未复权收盘价，不含分红；相对收益为简单百分点差，不是alpha或事件贡献。",
+        "volume": {
+          "date": "2026-11-04",
+          "shares": 51550327,
+          "multiple": 1.4744688120361655,
+          "baselineAverage": 34961965.0,
+          "baselineStart": "2026-10-07",
+          "baselineEnd": "2026-11-03",
+          "baselineSessions": 20,
+          "note": "终点交易日成交量 / 此前20个交易日均量；没有使用事件之后的量作为基线。"
+        }
+      },
+      "priceNote": "",
+      "brokerResponses": [
+        "截至本版资料，没有新的完整卖方修订链可把这两日反弹拆成盈利或估值改善。"
+      ],
+      "details": [],
+      "sourceRefs": [],
+      "verificationRefs": [],
+      "supplementalRefs": []
+    }
+  ],
+  "windows": [
+    {
+      "label": "财报前调整",
+      "startDate": "2026-10-13",
+      "endDate": "2026-10-28",
+      "returns": {
+        "GOOGL": -0.08166091921533158,
+        "QQQ": -0.024153744771843955,
+        "XLC": -0.08140363377271109
+      },
+      "startClose": 353.78,
+      "endClose": 324.89,
+      "excessVsQQQPctPoints": -5.750717444348763,
+      "excessVsXLCPctPoints": -0.02572854426204918,
+      "basis": "同日未复权收盘价，不含分红；相对收益为简单百分点差，不是alpha或事件贡献。"
+    },
+    {
+      "label": "财报后首个完整交易日",
+      "startDate": "2026-10-28",
+      "endDate": "2026-10-29",
+      "returns": {
+        "GOOGL": -0.12641201637477295,
+        "QQQ": -0.01415360868786264,
+        "XLC": -0.018712429707194222
+      },
+      "startClose": 324.89,
+      "endClose": 283.82,
+      "excessVsQQQPctPoints": -11.22584076869103,
+      "excessVsXLCPctPoints": -10.769958666757873,
+      "basis": "同日未复权收盘价，不含分红；相对收益为简单百分点差，不是alpha或事件贡献。"
+    },
+    {
+      "label": "后续调整",
+      "startDate": "2026-10-29",
+      "endDate": "2026-11-02",
+      "returns": {
+        "GOOGL": -0.017017828200972418,
+        "QQQ": -0.047879330108759444,
+        "XLC": -0.009386424266376703
+      },
+      "startClose": 283.82,
+      "endClose": 278.99,
+      "excessVsQQQPctPoints": 3.0861501907787026,
+      "excessVsXLCPctPoints": -0.7631403934595715,
+      "basis": "同日未复权收盘价，不含分红；相对收益为简单百分点差，不是alpha或事件贡献。"
+    },
+    {
+      "label": "10 月局部高点至收盘低点",
+      "startDate": "2026-10-13",
+      "endDate": "2026-11-02",
+      "returns": {
+        "GOOGL": -0.2114025665667928,
+        "QQQ": -0.08402705864948834,
+        "XLC": -0.10705379408621296
+      },
+      "startClose": 353.78,
+      "endClose": 278.99,
+      "excessVsQQQPctPoints": -12.737550791730445,
+      "excessVsXLCPctPoints": -10.434877248057983,
+      "basis": "同日未复权收盘价，不含分红；相对收益为简单百分点差，不是alpha或事件贡献。"
+    },
+    {
+      "label": "低点之后反弹",
+      "startDate": "2026-11-02",
+      "endDate": "2026-11-04",
+      "returns": {
+        "GOOGL": 0.03562851715115234,
+        "QQQ": 0.015945029291283053,
+        "XLC": 0.04687811689607013
+      },
+      "startClose": 278.99,
+      "endClose": 288.93,
+      "excessVsQQQPctPoints": 1.9683487859869286,
+      "excessVsXLCPctPoints": -1.1249599744917793,
+      "basis": "同日未复权收盘价，不含分红；相对收益为简单百分点差，不是alpha或事件贡献。"
+    }
+  ],
+  "expectationComparisons": [
+    {
+      "metric": "Search收入",
+      "unit": "USD mn",
+      "expectation": 64990,
+      "actual": 63350,
+      "surprisePct": -2.523465148484383,
+      "forecastPublishedAt": "2026-10-23T12:15:07+00:00",
+      "sourceRefs": [
+        "review-zacks-preview"
+      ],
+      "verificationRefs": [
+        "recent-10q-business"
+      ]
+    },
+    {
+      "metric": "YouTube广告收入",
+      "unit": "USD mn",
+      "expectation": 11340,
+      "actual": 11207,
+      "surprisePct": -1.1728395061728403,
+      "forecastPublishedAt": "2026-10-23T12:15:07+00:00",
+      "sourceRefs": [
+        "review-zacks-preview"
+      ],
+      "verificationRefs": [
+        "recent-10q-business"
+      ]
+    },
+    {
+      "metric": "Cloud收入",
+      "unit": "USD mn",
+      "expectation": 29160,
+      "actual": 30709,
+      "surprisePct": 5.31207133058984,
+      "forecastPublishedAt": "2026-10-23T12:15:07+00:00",
+      "sourceRefs": [
+        "review-zacks-preview"
+      ],
+      "verificationRefs": [
+        "recent-10q-business"
+      ]
+    },
+    {
+      "metric": "总收入（含TAC）",
+      "unit": "USD mn",
+      "expectation": 127800,
+      "actual": 127577,
+      "surprisePct": -0.17449139280125703,
+      "forecastPublishedAt": "2026-10-27T19:16:24+00:00",
+      "sourceRefs": [
+        "review-yahoo-preview"
+      ],
+      "verificationRefs": [
+        "recent-10q-income"
+      ]
+    },
+    {
+      "metric": "Cloud收入",
+      "unit": "USD mn",
+      "expectation": 28900,
+      "actual": 30709,
+      "surprisePct": 6.259515570934249,
+      "forecastPublishedAt": "2026-10-27T19:16:24+00:00",
+      "sourceRefs": [
+        "review-yahoo-preview"
+      ],
+      "verificationRefs": [
+        "recent-10q-business"
+      ]
+    }
+  ],
+  "brokerComparisons": [
+    {
+      "broker": "Goldman Sachs",
+      "date": "2026-10-29",
+      "security": "Alphabet，报道未明确股类",
+      "rating": "Buy",
+      "oldTarget": 435,
+      "newTarget": 385,
+      "unit": "USD/share",
+      "view": "搜索收入低于该行及媒体所列一致预期；2027 年资本开支与折旧上升压制自由现金流。",
+      "earningsRevision": "媒体给出 2027 Capex 350.4bn、D&A 75.017bn；属于该行估计，不是公司指引。",
+      "caveat": "报道的 2027 FCF 前后值重复为 −40.567bn，存在文本错误，不能据此计算下修幅度。",
+      "sourceRefs": [
+        "recent-gs-jpm"
+      ]
+    },
+    {
+      "broker": "J.P. Morgan",
+      "date": "2026-10-29",
+      "security": "Alphabet，报道未明确股类",
+      "rating": "原文摘录未列评级",
+      "oldTarget": 425,
+      "newTarget": 375,
+      "unit": "USD/share",
+      "view": "报道记录财报后的目标价下调。",
+      "earningsRevision": "未取得同版本原始模型。",
+      "caveat": "目标价变化不能分解成盈利与估值变化。",
+      "sourceRefs": [
+        "recent-gs-jpm"
+      ]
+    },
+    {
+      "broker": "Citi",
+      "date": "2026-10-30",
+      "security": "GOOGL / Class A",
+      "rating": "Buy",
+      "oldTarget": 447,
+      "newTarget": 375,
+      "unit": "USD/share",
+      "view": "10 月 29 日初评保留 447 美元，10 月 30 日更新为 375 美元；搜索变现不确定性超过 Cloud 超预期的正面作用。",
+      "earningsRevision": "总营业利润约低于其所列一致预期 6%；关注 2027 Capex 和 FCF。",
+      "caveat": "两天的目标价是先后版本，不能并列为同日冲突；买入评级不代表短期见底。",
+      "sourceRefs": [
+        "recent-citi-first",
+        "recent-citi-revision"
+      ]
+    },
+    {
+      "broker": "Morgan Stanley / Brian Nowak",
+      "date": "2026-10-29",
+      "security": "Alphabet，报道同时列 GOOG/GOOGL",
+      "rating": "Overweight",
+      "oldTarget": null,
+      "newTarget": 375,
+      "unit": "USD/share",
+      "view": "仍看好 AI 与 Cloud；第三方 TPU 硬件收入占比上升可能压低整体估值倍数，搜索创新和代理产品变现决定重估。",
+      "earningsRevision": "报道引用盘后价格约为其 2028 EPS 预测的 16 倍；原始预测表未在这条新闻中披露。",
+      "caveat": "不能把 2028 分母的 16 倍直接与 2026 或 2027 PE 比较，也不能倒推并冒充原始 EPS。",
+      "sourceRefs": [
+        "recent-ms-view"
+      ]
+    },
+    {
+      "broker": "Citizens / Andrew Boone",
+      "date": "2026-10-29",
+      "security": "Alphabet，报道未明确股类",
+      "rating": "Market Outperform → Market Perform",
+      "oldTarget": null,
+      "newTarget": null,
+      "unit": "USD/share",
+      "view": "查询量增长与搜索货币化背离；担心 AI 代理分流高价值查询、AI Mode 变现偏低；认为搜索比算力密集和部分非经常性 TPU 销售更能支撑估值。",
+      "earningsRevision": "未取得原始盈利预测；承认成本压缩可能支持 EPS。",
+      "caveat": "高价值查询迁移是该分析师的解释，现有材料没有按查询意图/渠道拆分的数据来证明。",
+      "sourceRefs": [
+        "recent-citizens"
+      ]
+    },
+    {
+      "broker": "CMB International",
+      "date": "2026-10-30",
+      "security": "GOOG / Class C",
+      "rating": "Buy",
+      "oldTarget": 428,
+      "newTarget": 421,
+      "unit": "USD/share",
+      "view": "2026 年净利润预测下调 5%，2027–2028 上调 2%–4%，反映 Cloud 长期贡献；TPU 存货占用压制现金。",
+      "earningsRevision": "跨年度方向不同，不能概括为全期盈利下修。",
+      "caveat": "C 类股目标价，不能直接当作 GOOGL A 类目标价或并入同口径平均目标价。",
+      "sourceRefs": [
+        "recent-cmbi-view"
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "label": "本地卖方原件与模型",
+      "status": "可作历史背景",
+      "body": "JPM 7月预览p1/5/7/8、GS 9/17 p13及7–8月Alphabet模型均早于窗口；提供预期结构与资本回报框架。不是本轮财报后机构修订，也不是10月实时一致预期。",
+      "sourceRefs": [
+        "local-jpm-us-internet-202607",
+        "local-gs-cloud-conversion-20260917",
+        "local-googl-barc-20260724",
+        "local-googl-ms-20260824"
+      ]
+    },
+    {
+      "label": "公司电话会",
+      "status": "有摘录，缺完整原文核验",
+      "body": "旧包保留10/28电话会摘要与回听位置。已把它关联到财报节点，但精确表述仍需完整转录/录音；已披露财务数字优先按10-Q核对。",
+      "sourceRefs": [
+        "review-demo-call"
+      ]
+    },
+    {
+      "label": "专家交流与产业访谈",
+      "status": "没有可直接验证本次争议的专家原文",
+      "body": "10/18匿名广告专家只有国内行业摘要，未提供Google专属样本；JPM买方情绪访谈与GS 2025年供应链调研是卖方研究，不能冒充本次独立专家纪要。",
+      "sourceRefs": [
+        "review-demo-expert",
+        "local-gs-tpu-supply-20251216"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "local-googl-barc-20260724",
+      "title": "Barclays Alphabet model",
+      "date": "2026-07-24",
+      "dateBasis": "ModelCover!F2 的研究发布日期；文件名辅助核对。",
+      "sha256": "32c072f65fb7bbaca082f6138c2eb8906b1561f726e8bf57486324226bd0950a",
+      "kind": "user_supplied_sell_side_model",
+      "cells": [
+        "ModelCover!F2"
+      ],
+      "note": "读取原档副本的公式和已保存缓存；未执行宏、刷新外部链接或重新计算。日期早于 2026-11-05，属于历史卖方预测，不是最新实际或公司指引。"
+    },
+    {
+      "id": "local-googl-ms-20260824",
+      "title": "Morgan Stanley Alphabet model",
+      "date": "2026-08-24",
+      "dateBasis": "ImportantDisclosures!A8、IndexInformation!B2、ModPubIndex!A2 三处内部发布记录核对；不是 ZIP 修改时间。",
+      "sha256": "d77a5ea6e3e2dd6115ad129954511d3e4b5ee5e12318104ab40217513ef21894",
+      "kind": "user_supplied_sell_side_model",
+      "cells": [
+        "ImportantDisclosures!A8",
+        "IndexInformation!B2",
+        "ModPubIndex!A2"
+      ],
+      "note": "读取原档副本的公式和已保存缓存；未执行宏、刷新外部链接或重新计算。日期早于 2026-11-05，属于历史卖方预测，不是最新实际或公司指引。 归档文件名写 C3.ai，但内部 IndexInformation!B7=Alphabet Inc.、A10=GOOGL.O，已按内部身份确认。"
+    },
+    {
+      "id": "local-gs-cloud-conversion-20260917",
+      "title": "Goldman Sachs: Navigating China Internet & AI models: What to do from here; key themes & refreshed ideas into year-end",
+      "broker": "Goldman Sachs",
+      "date": "2026-09-17",
+      "datePrecision": "day",
+      "page": "PDF页码 1, 13",
+      "pages": [
+        1,
+        13
+      ],
+      "kind": "broker_report_original",
+      "note": "原件印刷日17 September 2026，封面1:18AM HKT；ZIP文件名20260916不是最终采用日期。p13 Exhibit19定义滚动12月增量Cloud收入/滞后一季的滚动12月capex，脚注称Alibaba external cloud与Google/Amazon以约2年错位作比较。图形柱无逐柱精确标签，不据截图强读精确数值；不是Google专属合同或容量模型。",
+      "sha256": "7012f09b0c54507280fb70ef268f66656514ca1cffa766fc5dcc768c845f4dd4",
+      "reviewedAt": "2026-11-05",
+      "useScope": "用户提供的内部研究材料；卖方原件，不等同公司事实",
+      "publishedAt": "2026-09-17T01:18:00+08:00"
+    },
+    {
+      "id": "local-gs-tpu-supply-20251216",
+      "title": "Goldman Sachs: The 720: US Semis 2026 Outlook, Asia Tech Tour",
+      "broker": "Goldman Sachs",
+      "date": "2025-12-16",
+      "datePrecision": "day",
+      "page": "PDF页码 1",
+      "pages": [
+        1
+      ],
+      "kind": "broker_report_original",
+      "note": "原件封面16 December 2025 7:18AM HKT，文件名20251215需与印刷日期区分。p1为GS自家研究摘要：亚洲科技调研覆盖25家台湾/韩国/日本供应链公司；其中TPU反馈是供应链方向观点，不是Google订单或验收数量。",
+      "sha256": "01a50507bf698b17478d328ba1029ac210daede02b71f83b8ef8326f17310a78",
+      "reviewedAt": "2026-11-05",
+      "useScope": "用户提供的内部研究材料；卖方原件，不等同公司事实",
+      "publishedAt": "2025-12-16T07:18:00+08:00"
+    },
+    {
+      "id": "local-jpm-us-internet-202607",
+      "title": "J.P. Morgan: US Internet: 2Q 2026 Preview",
+      "broker": "J.P. Morgan",
+      "date": "2026-07",
+      "datePrecision": "month",
+      "page": "PDF页码 1, 4, 5, 7, 8",
+      "pages": [
+        1,
+        4,
+        5,
+        7,
+        8
+      ],
+      "kind": "broker_report_original",
+      "note": "封面只写July 2026，没有可确认的具体发布日期；保持月度精度。p5单位USD million；p7/8分别列Mgmt Guide、Consensus、JPMe、Buyside Bar，不能混为同一来源。p1说明买方情绪源自JPM访谈/产业调研；p5来源Company reports/Bloomberg/JPM estimates，p7/8来源JPM estimates/Bloomberg。p7在2Q业绩预览内同时写end of 2Q backlog，应视为原件内部时点提示，不据此认定每条数据的具体公开日。",
+      "sha256": "1656c599b80a37bc5157856d706733c5b2eab3db85210f5282a4c2e7bdfa48ae",
+      "reviewedAt": "2026-11-05",
+      "useScope": "用户提供的内部研究材料；卖方原件，不等同公司事实"
+    },
+    {
+      "id": "recent-10q-business",
+      "title": "Alphabet 2026Q3 10-Q：业务收入、广告变现及分部利润",
+      "date": "2026-10-29",
+      "page": "data.content[0].text → data.items[0].content；MD&A，Revenues / Monetization Metrics；p.52–53，Segment Operating Results",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+      "kind": "company_filing",
+      "note": "原始公司披露；全文由 Wind 返回，已与 SEC companyfacts 的收入、营业利润、净利润及 EPS 交叉核对。数据来源于万得 Wind 金融数据服务。"
+    },
+    {
+      "id": "recent-10q-cash",
+      "title": "Alphabet 2026Q3 10-Q：现金流与融资",
+      "date": "2026-10-29",
+      "page": "data.content[0].text → data.items[0].content；p.9，Consolidated Statements of Cash Flows；p.48，季度 CFO/Capex",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+      "kind": "company_filing",
+      "note": "原始公司披露；全文由 Wind 返回，已与 SEC companyfacts 的收入、营业利润、净利润及 EPS 交叉核对。数据来源于万得 Wind 金融数据服务。"
+    },
+    {
+      "id": "recent-10q-income",
+      "title": "Alphabet 2026Q3 10-Q：合并损益表",
+      "date": "2026-10-29",
+      "page": "data.content[0].text → data.items[0].content；p.5，Consolidated Statements of Income",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+      "kind": "company_filing",
+      "note": "原始公司披露；全文由 Wind 返回，已与 SEC companyfacts 的收入、营业利润、净利润及 EPS 交叉核对。数据来源于万得 Wind 金融数据服务。"
+    },
+    {
+      "id": "recent-10q-investments",
+      "title": "Alphabet 2026Q3 10-Q：投资损益波动",
+      "date": "2026-10-29",
+      "page": "data.content[0].text → data.items[0].content；p.53，Other Income (Expense), Net；Note 3 Investments",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+      "kind": "company_filing",
+      "note": "原始公司披露；全文由 Wind 返回，已与 SEC companyfacts 的收入、营业利润、净利润及 EPS 交叉核对。数据来源于万得 Wind 金融数据服务。"
+    },
+    {
+      "id": "recent-afp-results",
+      "title": "Shares in Google owner Alphabet sink on profit miss, ad slowdown",
+      "date": "2026-10-28T20:44:37+00:00",
+      "page": "data[18]",
+      "url": "https://finance.yahoo.com/technology/ai/articles/shares-google-owner-alphabet-sink-204437200.html",
+      "kind": "media_report",
+      "note": "EODHD 新闻接口保存全文及原始链接；媒体估计、卖方判断与公司披露分开标注，同源转载不计为独立证据。"
+    },
+    {
+      "id": "recent-citi-first",
+      "title": "《大行》花旗：Alphabet(GOOGL.US)云业务收入按年增长加速至102.6% 重申“买入”评级",
+      "date": "2026-10-29",
+      "page": "data.content[0].text → data.items[8]",
+      "url": "https://hk.finance.yahoo.com/news/%E5%A4%A7%E8%A1%8C-%E8%8A%B1%E6%97%97-alphabet-googl-us-075543010.html",
+      "kind": "media_reported_analyst",
+      "note": "媒体转述卖方观点，非原始研报或逐项模型；数据来源于万得 Wind 金融数据服务。"
+    },
+    {
+      "id": "recent-citi-revision",
+      "title": "《大行》花旗降Alphabet(GOOGL.US)目标价至375美元 第三季业绩略逊市场预期",
+      "date": "2026-10-30",
+      "page": "data.content[0].text → data.items[10]",
+      "url": "https://hk.finance.yahoo.com/news/%E5%A4%A7%E8%A1%8C-%E8%8A%B1%E6%97%97%E9%99%8Dalphabet-googl-us-%E7%9B%AE%E6%A8%99%E5%83%B9%E8%87%B3375%E7%BE%8E%E5%85%83-094156576.html",
+      "kind": "media_reported_analyst",
+      "note": "媒体转述卖方观点，非原始研报或逐项模型；数据来源于万得 Wind 金融数据服务。"
+    },
+    {
+      "id": "recent-citizens",
+      "title": "Citizens cuts Alphabet rating as search monetization trails query growth",
+      "date": "2026-10-29T14:16:12+00:00",
+      "page": "data[77]",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/citizens-cuts-alphabet-rating-search-141612858.html",
+      "kind": "media_reported_analyst",
+      "note": "EODHD 新闻接口保存全文及原始链接；媒体估计、卖方判断与公司披露分开标注，同源转载不计为独立证据。"
+    },
+    {
+      "id": "recent-cmbi-view",
+      "title": "《大行》招银国际微降Alphabet(GOOG.US)目标价至421美元 云业务仍强劲",
+      "date": "2026-10-30",
+      "page": "data.content[0].text → data.items[2]",
+      "url": "https://t.wind.com.cn/mobwftweb/M/news.html?share=wechat&show=wft&code=7DA038622343&newsopenstyle=&lan=cn&device=pc&gateway=news&related=true&terminaltype=COM.WINDRAG&version=&useless=0.187415#/7AAAC394D25085FE93AEC5709DF9F402",
+      "kind": "media_reported_analyst",
+      "note": "媒体转述卖方观点，非原始研报或逐项模型；数据来源于万得 Wind 金融数据服务。"
+    },
+    {
+      "id": "recent-earnings-8k",
+      "title": "Alphabet 2026Q3 earnings 8-K",
+      "date": "2026-10-28",
+      "page": "SEC submissions 中 2026-10-28 的 8-K 记录",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000080/goog-20261028.htm",
+      "kind": "filing_index",
+      "note": "用于核对财报发布日；本研究实际财务数值以 10-Q/SEC companyfacts 为据，不把次日 10-Q 提交日当作业绩发布时间。"
+    },
+    {
+      "id": "recent-eod-googl",
+      "title": "EODHD GOOGL 日线",
+      "date": "2026-11-04",
+      "page": "data[]，date/open/high/low/close/adjusted_close/volume",
+      "url": "https://eodhd.com/financial-apis/api-for-historical-data-and-volumes",
+      "kind": "market_api",
+      "note": "直接 API 返回，未复权原始 OHLC。"
+    },
+    {
+      "id": "recent-eod-qqq",
+      "title": "EODHD QQQ 日线",
+      "date": "2026-11-04",
+      "page": "data[]，date/open/high/low/close/adjusted_close/volume",
+      "url": "https://eodhd.com/financial-apis/api-for-historical-data-and-volumes",
+      "kind": "market_api",
+      "note": "直接 API 返回，未复权原始 OHLC。"
+    },
+    {
+      "id": "recent-eod-xlc",
+      "title": "EODHD XLC 日线",
+      "date": "2026-11-04",
+      "page": "data[]，date/open/high/low/close/adjusted_close/volume",
+      "url": "https://eodhd.com/financial-apis/api-for-historical-data-and-volumes",
+      "kind": "market_api",
+      "note": "直接 API 返回，未复权原始 OHLC。"
+    },
+    {
+      "id": "recent-fred",
+      "title": "FRED：DGS10 / VIXCLS / DTWEXBGS",
+      "date": "2026-11-05",
+      "page": "series[].observations，按各序列实际日期匹配",
+      "url": "https://fred.stlouisfed.org/",
+      "kind": "official_macro",
+      "note": "DGS10、VIX 截止 11 月 3 日，广义美元指数截止 10 月 30 日；不填补不存在的观察值。"
+    },
+    {
+      "id": "recent-gs-jpm",
+      "title": "看了财报后，高盛、摩根大通双双下调谷歌目标价",
+      "date": "2026-10-29",
+      "page": "data.content[0].text → data.items[5]",
+      "url": "https://wallstreetcn.com/articles/3784771",
+      "kind": "media_reported_analyst",
+      "note": "媒体转述卖方观点，非原始研报或逐项模型；数据来源于万得 Wind 金融数据服务。"
+    },
+    {
+      "id": "recent-ms-view",
+      "title": "Alphabet(GOOGL.US)绩后股价重挫 分析师仍看多：AI与云业务是长期底气",
+      "date": "2026-10-29",
+      "page": "data.content[0].text → data.items[13]",
+      "url": "https://t.wind.com.cn/mobwftweb/M/news.html?share=wechat&show=wft&code=75E88E546819&newsopenstyle=&lan=cn&device=pc&gateway=news&related=true&terminaltype=COM.WINDRAG&version=&useless=0.933507#/0656F3977D1124BE12DAF54496F3742F",
+      "kind": "media_reported_analyst",
+      "note": "媒体转述卖方观点，非原始研报或逐项模型；数据来源于万得 Wind 金融数据服务。"
+    },
+    {
+      "id": "recent-pre-earnings",
+      "title": "Microsoft vs. Alphabet earnings: The key metrics investors will be watching",
+      "date": "2026-10-28T13:27:09+00:00",
+      "page": "data[71]",
+      "url": "https://finance.yahoo.com/video/microsoft-vs-alphabet-earnings-the-key-metrics-investors-will-be-watching-132709130.html",
+      "kind": "media_report",
+      "note": "EODHD 新闻接口保存全文及原始链接；媒体估计、卖方判断与公司披露分开标注，同源转载不计为独立证据。"
+    },
+    {
+      "id": "review-anthropic-channels",
+      "title": "Anthropic relies on Google, Amazon and Microsoft for nearly half its revenue",
+      "date": "2026-10-26T17:51:39+00:00",
+      "publishedAt": "2026-10-26T17:51:39+00:00",
+      "retrievedAt": "2026-11-05T16:09:10+00:00",
+      "page": "data[17]",
+      "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-relies-google-amazon-microsoft-175139044.html",
+      "kind": "media_report",
+      "note": "EODHD 保存的有时间戳媒体全文；非机构原始模型或一致预期数据库。"
+    },
+    {
+      "id": "review-anthropic-direct",
+      "title": "Anthropic is leasing data centers to reduce reliance on Amazon, Google, others",
+      "date": "2026-10-26T17:38:43+00:00",
+      "publishedAt": "2026-10-26T17:38:43+00:00",
+      "retrievedAt": "2026-11-05T16:09:10+00:00",
+      "page": "data[19]",
+      "url": "https://finance.yahoo.com/technology/article/anthropic-is-leasing-data-centers-to-reduce-reliance-on-amazon-google-others-173843933.html",
+      "kind": "media_report",
+      "note": "Yahoo 引述 Anthropic S-1 的混合算力采购；此条为媒体转述，不能从自建模式推导 Google 订单流失比例。"
+    },
+    {
+      "id": "review-cloud-outage",
+      "title": "Bank of England investigates Google outage",
+      "date": "2026-10-20T18:28:10+00:00",
+      "publishedAt": "2026-10-20T18:28:10+00:00",
+      "retrievedAt": "2026-11-05T16:09:06+00:00",
+      "page": "data[9]",
+      "url": "https://uk.finance.yahoo.com/news/bank-england-investigates-google-outage-182810666.html",
+      "kind": "media_report",
+      "note": "EODHD 保存的有时间戳媒体全文；非机构原始模型或一致预期数据库。"
+    },
+    {
+      "id": "review-da-preview",
+      "title": "Why Google might avoid an earnings 'reckoning' this week",
+      "date": "2026-10-26T21:03:50+00:00",
+      "publishedAt": "2026-10-26T21:03:50+00:00",
+      "retrievedAt": "2026-11-05T16:09:10+00:00",
+      "page": "data[2]",
+      "url": "https://finance.yahoo.com/markets/stocks/article/why-google-might-avoid-an-earnings-reckoning-this-week-210350868.html",
+      "kind": "media_reported_analyst",
+      "note": "EODHD 保存的有时间戳媒体全文；非机构原始模型或一致预期数据库。"
+    },
+    {
+      "id": "review-demo-call",
+      "title": "旧 Demo：Alphabet Q3 2026 业绩会摘录",
+      "date": "2026-10-28",
+      "page": "FC.gd.call / FC.gd.factors",
+      "kind": "unverified_transcript_excerpt",
+      "publicationVerified": false,
+      "note": "旧包标注进门路演 docId 7951075485432821，并附00:31:01等回听位置；本地未找到完整转录、音频或可核验发布时间。只展示为待核对摘录，不提升为已验证的当时公开证据。"
+    },
+    {
+      "id": "review-demo-expert",
+      "title": "旧 Demo：10/18 广告行业专家交流摘录",
+      "date": "2026-10-18",
+      "page": "FC.gd.views[type=专家交流]",
+      "kind": "unverified_expert_excerpt",
+      "publicationVerified": false,
+      "note": "只有匿名专家的国内广告行业摘要，没有完整纪要/录音、样本、提问背景或Google专属经营数据。不能用作GOOGL本轮下跌或精确收入预测的证据。"
+    },
+    {
+      "id": "review-oracle-tpu",
+      "title": "Oracle Brings Google TPUs to Oracle Cloud Infrastructure",
+      "date": "2026-10-27T16:07:00+00:00",
+      "publishedAt": "2026-10-27T16:07:00+00:00",
+      "retrievedAt": "2026-11-05T16:08:35+00:00",
+      "page": "data[25]",
+      "url": "https://finance.yahoo.com/technology/ai/articles/oracle-brings-google-tpus-oracle-160700105.html",
+      "kind": "company_release_republished",
+      "note": "Oracle / Google 联合新闻稿，经 PR Newswire / Yahoo 分发；原文明确2027年可用、多年爬坡，无交付数量、价格或Google收入确认额。"
+    },
+    {
+      "id": "review-tpu-delay",
+      "title": "Google’s Next AI Chip Is Running Late. Why Marvell May Be Fine",
+      "date": "2026-10-19T13:38:54+00:00",
+      "publishedAt": "2026-10-19T13:38:54+00:00",
+      "retrievedAt": "2026-11-05T16:09:06+00:00",
+      "page": "data[22]",
+      "url": "https://finance.yahoo.com/technology/ai/articles/google-next-ai-chip-running-133854381.html",
+      "kind": "media_reported_analyst",
+      "note": "Insider Monkey 转述 GF Securities；未取得供应链报告原件，报道内部时间线也不能替代公司交付计划。只作待验证风险线索。"
+    },
+    {
+      "id": "review-yahoo-preview",
+      "title": "Google to report Q3 results as investors focus on AI growth, weigh Meta Muse AI risk ",
+      "date": "2026-10-27T19:16:24+00:00",
+      "publishedAt": "2026-10-27T19:16:24+00:00",
+      "retrievedAt": "2026-11-05T16:08:35+00:00",
+      "page": "data[11]",
+      "url": "https://finance.yahoo.com/technology/article/google-to-report-q3-results-as-investors-focus-on-ai-growth-weigh-meta-muse-ai-risk-191624324.html",
+      "kind": "media_report",
+      "note": "EODHD 保存的有时间戳媒体全文；非机构原始模型或一致预期数据库。"
+    },
+    {
+      "id": "review-zacks-preview",
+      "title": "Countdown to Alphabet (GOOGL) Q3 Earnings: Wall Street Forecasts for Key Metrics",
+      "date": "2026-10-23T12:15:07+00:00",
+      "publishedAt": "2026-10-23T12:15:07+00:00",
+      "retrievedAt": "2026-11-05T16:09:08+00:00",
+      "page": "data[28]",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/countdown-alphabet-googl-q3-earnings-121507781.html",
+      "kind": "media_report",
+      "note": "Zacks 10/23 盘前预期样本。业务收入可逐项对比；总收入111.64bn疑似扣TAC口径，EPS2.94未明GAAP/调整后，二者不计算预期差。"
+    }
+  ],
+  "newsArchive": [
+    {
+      "sha256": "199261de26f7bade7388eaf2c1ac32fa18ab81b041810685645f469a0ffaa93d",
+      "retrievedAt": "2026-11-05T16:09:04+00:00",
+      "request": {
+        "provider": "EODHD",
+        "endpoint": "/api/news",
+        "symbol": "GOOGL.US",
+        "from": "2026-10-13",
+        "to": "2026-10-13",
+        "limit": 100
+      },
+      "rows": 50,
+      "responseCapped": false
+    },
+    {
+      "sha256": "c9c89b8d568983da1f8997b9360f788027a731b9007e49914c1ec05975422c4b",
+      "retrievedAt": "2026-11-05T16:09:04+00:00",
+      "request": {
+        "provider": "EODHD",
+        "endpoint": "/api/news",
+        "symbol": "GOOGL.US",
+        "from": "2026-10-14",
+        "to": "2026-10-14",
+        "limit": 100
+      },
+      "rows": 38,
+      "responseCapped": false
+    },
+    {
+      "sha256": "450bf04e91410eec57713e66ef445df99a451b870027400edf2598ea27c40c8e",
+      "retrievedAt": "2026-11-05T16:09:04+00:00",
+      "request": {
+        "provider": "EODHD",
+        "endpoint": "/api/news",
+        "symbol": "GOOGL.US",
+        "from": "2026-10-15",
+        "to": "2026-10-15",
+        "limit": 100
+      },
+      "rows": 25,
+      "responseCapped": false
+    },
+    {
+      "sha256": "967c9a155202a405edabecff3eaafdf16ed9139861bf5496b9c1d313de397a70",
+      "retrievedAt": "2026-11-05T16:09:04+00:00",
+      "request": {
+        "provider": "EODHD",
+        "endpoint": "/api/news",
+        "symbol": "GOOGL.US",
+        "from": "2026-10-16",
+        "to": "2026-10-16",
+        "limit": 100
+      },
+      "rows": 35,
+      "responseCapped": false
+    },
+    {
+      "sha256": "810500c4bdc01723274753136415d92dc90ca9634175a09c3982848de45aa60c",
+      "retrievedAt": "2026-11-05T16:09:06+00:00",
+      "request": {
+        "provider": "EODHD",
+        "endpoint": "/api/news",
+        "symbol": "GOOGL.US",
+        "from": "2026-10-17",
+        "to": "2026-10-17",
+        "limit": 100
+      },
+      "rows": 6,
+      "responseCapped": false
+    },
+    {
+      "sha256": "eeb403cc6e13e959a020d1c559f20368eddb6bbbad8198a4f883b66477b539fb",
+      "retrievedAt": "2026-11-05T16:09:06+00:00",
+      "request": {
+        "provider": "EODHD",
+        "endpoint": "/api/news",
+        "symbol": "GOOGL.US",
+        "from": "2026-10-18",
+        "to": "2026-10-18",
+        "limit": 100
+      },
+      "rows": 12,
+      "responseCapped": false
+    },
+    {
+      "sha256": "f4e68365df981dc9b945fca00a2007a4a17c4891b4ce55e741954adaa89c7de2",
+      "retrievedAt": "2026-11-05T16:09:06+00:00",
+      "request": {
+        "provider": "EODHD",
+        "endpoint": "/api/news",
+        "symbol": "GOOGL.US",
+        "from": "2026-10-19",
+        "to": "2026-10-19",
+        "limit": 100
+      },
+      "rows": 48,
+      "responseCapped": false
+    },
+    {
+      "sha256": "f61bea3eb8cef7d5e4e0dfd56643bff0c047ecdf80ea0ccd87b9764f68cf5e07",
+      "retrievedAt": "2026-11-05T16:09:06+00:00",
+      "request": {
+        "provider": "EODHD",
+        "endpoint": "/api/news",
+        "symbol": "GOOGL.US",
+        "from": "2026-10-20",
+        "to": "2026-10-20",
+        "limit": 100
+      },
+      "rows": 55,
+      "responseCapped": false
+    },
+    {
+      "sha256": "15309b5a216653148a680bb78ad1fc816e4a5d44989893aa735913354f7e545c",
+      "retrievedAt": "2026-11-05T16:09:07+00:00",
+      "request": {
+        "provider": "EODHD",
+        "endpoint": "/api/news",
+        "symbol": "GOOGL.US",
+        "from": "2026-10-21",
+        "to": "2026-10-21",
+        "limit": 100
+      },
+      "rows": 49,
+      "responseCapped": false
+    },
+    {
+      "sha256": "d8ee78d2340868fb4e78ba31144ffd95bfb074d9547e4aac22784c54b433a902",
+      "retrievedAt": "2026-11-05T16:09:07+00:00",
+      "request": {
+        "provider": "EODHD",
+        "endpoint": "/api/news",
+        "symbol": "GOOGL.US",
+        "from": "2026-10-22",
+        "to": "2026-10-22",
+        "limit": 100
+      },
+      "rows": 41,
+      "responseCapped": false
+    },
+    {
+      "sha256": "80d8b9b73b31191f42a9992235bd5cf9d162718c6e10381fc0bdd61c396b7dbf",
+      "retrievedAt": "2026-11-05T16:09:08+00:00",
+      "request": {
+        "provider": "EODHD",
+        "endpoint": "/api/news",
+        "symbol": "GOOGL.US",
+        "from": "2026-10-23",
+        "to": "2026-10-23",
+        "limit": 100
+      },
+      "rows": 41,
+      "responseCapped": false
+    },
+    {
+      "sha256": "828bd8eec32eda70a4078675566dafdeee0e641b939c7f887e38db0789fe0b45",
+      "retrievedAt": "2026-11-05T16:09:10+00:00",
+      "request": {
+        "provider": "EODHD",
+        "endpoint": "/api/news",
+        "symbol": "GOOGL.US",
+        "from": "2026-10-24",
+        "to": "2026-10-24",
+        "limit": 100
+      },
+      "rows": 5,
+      "responseCapped": false
+    },
+    {
+      "sha256": "17e93e1ff46538948a2e1d1d7525e907aab4b46b22b2c0db89295bdee41e2ea4",
+      "retrievedAt": "2026-11-05T16:09:10+00:00",
+      "request": {
+        "provider": "EODHD",
+        "endpoint": "/api/news",
+        "symbol": "GOOGL.US",
+        "from": "2026-10-25",
+        "to": "2026-10-25",
+        "limit": 100
+      },
+      "rows": 19,
+      "responseCapped": false
+    },
+    {
+      "sha256": "124c85e9c4df002ec221a2a83f2d6071d68d2e8492f2c2bdafa8089ede2d844c",
+      "retrievedAt": "2026-11-05T16:09:10+00:00",
+      "request": {
+        "provider": "EODHD",
+        "endpoint": "/api/news",
+        "symbol": "GOOGL.US",
+        "from": "2026-10-26",
+        "to": "2026-10-26",
+        "limit": 100
+      },
+      "rows": 71,
+      "responseCapped": false
+    },
+    {
+      "sha256": "c9bbb92b7558b7c4ccd139aead3f5a70e35631c2d78718568bd3e55bf392fe02",
+      "retrievedAt": "2026-11-05T16:08:35+00:00",
+      "request": {
+        "provider": "EODHD",
+        "endpoint": "/api/news",
+        "symbol": "GOOGL.US",
+        "from": "2026-10-13",
+        "to": "2026-10-27",
+        "limit": 100
+      },
+      "rows": 100,
+      "responseCapped": true
+    }
+  ],
+  "limitations": [
+    "财报前补查覆盖10/13–27公开新闻；此后取得的档案只用其原始发布时间定位，不假定当天投资者已阅读全部材料。信息记录不等于价格因果证明。",
+    "10/23及10/27事前样本已有证据，10/13完整一致预期和逐日机构修订仍缺；不把新样本倒填到起点。",
+    "日线只能显示相邻交易窗口；盘中消息前的价格也在当天收益中。日期不含时分的研报不默认盘前已知。",
+    "10/28盘后发布与10/29价格反应分开；次日10-Q只核对数值。媒体转述与本地卖方原件分列，完整电话会及相关专家原文仍缺。",
+    "新闻补查日期晚于研究截至日，原始文章发布日期均不晚于被分析节点；截至日期仍为2026-11-05，行情仅至11/04。"
+  ],
+  "priceBasis": "未复权收盘价、不含现金分红；成交量倍数采用终点此前20个交易日均量。",
+  "expandedWindow": {
+    "from": "2026-09-01",
+    "to": "2026-11-04",
+    "maximumCloseDrawdown": {
+      "return": -0.21404625743020544,
+      "startDate": "2026-09-21",
+      "endDate": "2026-11-02",
+      "startPrice": 354.97,
+      "endPrice": 278.99
+    }
+  }
+}

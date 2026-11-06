@@ -1,0 +1,253 @@
+{
+  "asOf": "2026-11-05",
+  "scope": "全部研报ZIP目录盘点；互联网全文关键词检索；选定原件关键页人工阅读及视觉核对。不是708份研报逐页深读。",
+  "reportInventory": {
+    "archives": 46,
+    "leafEntries": 708,
+    "nestedArchives": 0,
+    "pdfs": 708,
+    "scannedPDFs": 316,
+    "scannedPages": 6282,
+    "errors": [],
+    "uniquePDFs": 686,
+    "categories": {
+      "互联网": {
+        "archives": 21,
+        "pdfEntries": 316
+      },
+      "消费": {
+        "archives": 15,
+        "pdfEntries": 237
+      },
+      "有色": {
+        "archives": 10,
+        "pdfEntries": 155
+      }
+    },
+    "inventoryFile": "outputs/research/local_reports/inventory.json",
+    "searchIndexFile": "outputs/research/local_reports/text-index.json",
+    "method": "ZIP目录含嵌套检查；互联网316份PDF共6282页文本检索，消费/有色只按文件名筛交叉主题；相关表格用PNG复核。关键词包括Google/Alphabet/GCP、Anthropic/Claude、TPU、Broadcom/AVGO、NVIDIA/NVDA、AWS、Azure与capex。",
+    "deepReadScope": "保留来源3份：JPM p1/4/5/7/8；GS 2026-09-17 p1/13；GS 2025-12-16 p1。另阅读全部7份TPU命中报告的相关页作排除检查，未把弱关联中国互联网材料补成Google数字。"
+  },
+  "sources": [
+    {
+      "id": "local-jpm-us-internet-202607",
+      "title": "J.P. Morgan: US Internet: 2Q 2026 Preview",
+      "broker": "J.P. Morgan",
+      "date": "2026-07",
+      "datePrecision": "month",
+      "page": "PDF页码 1, 4, 5, 7, 8",
+      "pages": [
+        1,
+        4,
+        5,
+        7,
+        8
+      ],
+      "kind": "broker_report_original",
+      "note": "封面只写July 2026，没有可确认的具体发布日期；保持月度精度。p5单位USD million；p7/8分别列Mgmt Guide、Consensus、JPMe、Buyside Bar，不能混为同一来源。p1说明买方情绪源自JPM访谈/产业调研；p5来源Company reports/Bloomberg/JPM estimates，p7/8来源JPM estimates/Bloomberg。p7在2Q业绩预览内同时写end of 2Q backlog，应视为原件内部时点提示，不据此认定每条数据的具体公开日。",
+      "sha256": "1656c599b80a37bc5157856d706733c5b2eab3db85210f5282a4c2e7bdfa48ae",
+      "reviewedAt": "2026-11-05",
+      "useScope": "用户提供的内部研究材料；卖方原件，不等同公司事实"
+    },
+    {
+      "id": "local-gs-cloud-conversion-20260917",
+      "title": "Goldman Sachs: Navigating China Internet & AI models: What to do from here; key themes & refreshed ideas into year-end",
+      "broker": "Goldman Sachs",
+      "date": "2026-09-17",
+      "datePrecision": "day",
+      "page": "PDF页码 1, 13",
+      "pages": [
+        1,
+        13
+      ],
+      "kind": "broker_report_original",
+      "note": "原件印刷日17 September 2026，封面1:18AM HKT；ZIP文件名20260916不是最终采用日期。p13 Exhibit19定义滚动12月增量Cloud收入/滞后一季的滚动12月capex，脚注称Alibaba external cloud与Google/Amazon以约2年错位作比较。图形柱无逐柱精确标签，不据截图强读精确数值；不是Google专属合同或容量模型。",
+      "sha256": "7012f09b0c54507280fb70ef268f66656514ca1cffa766fc5dcc768c845f4dd4",
+      "reviewedAt": "2026-11-05",
+      "useScope": "用户提供的内部研究材料；卖方原件，不等同公司事实",
+      "publishedAt": "2026-09-17T01:18:00+08:00"
+    },
+    {
+      "id": "local-gs-tpu-supply-20251216",
+      "title": "Goldman Sachs: The 720: US Semis 2026 Outlook, Asia Tech Tour",
+      "broker": "Goldman Sachs",
+      "date": "2025-12-16",
+      "datePrecision": "day",
+      "page": "PDF页码 1",
+      "pages": [
+        1
+      ],
+      "kind": "broker_report_original",
+      "note": "原件封面16 December 2025 7:18AM HKT，文件名20251215需与印刷日期区分。p1为GS自家研究摘要：亚洲科技调研覆盖25家台湾/韩国/日本供应链公司；其中TPU反馈是供应链方向观点，不是Google订单或验收数量。",
+      "sha256": "01a50507bf698b17478d328ba1029ac210daede02b71f83b8ef8326f17310a78",
+      "reviewedAt": "2026-11-05",
+      "useScope": "用户提供的内部研究材料；卖方原件，不等同公司事实",
+      "publishedAt": "2025-12-16T07:18:00+08:00"
+    }
+  ],
+  "crossCompanyEvidence": [
+    {
+      "company": "Alphabet / Google Cloud",
+      "relationship": "JPM原始研报：旧时点Cloud、资本开支与资金回报假设",
+      "claim": "JPM July 2026原件p7预计TPU sales在2H26开始贡献；p5预计Google 2027 capex为293.443bn美元、FCF为−16.691bn；p7的2027 GAAP EPS预测为14.34美元。其当时展示的Consensus、JPMe和Buyside Bar分列，不能改称11月同日共识。",
+      "implication": "把外售TPU系统与持续云服务分开研究，并将资本开支、折旧与现金回收列为约束。它是可追溯的历史机构假设，不能据此自动改写当前季度Cloud增长或判定本轮下跌原因。",
+      "publicationDate": "2026-07",
+      "applicablePeriod": "2H2026与2027E；报告仅有月度发布日期",
+      "factors": [
+        "cloud",
+        "capex",
+        "profit"
+      ],
+      "sourceRefs": [
+        "local-jpm-us-internet-202607"
+      ],
+      "strength": "卖方原件与表格可核；时点较早，非公司指引",
+      "limitations": [
+        "封面没有具体发布日期；不用于日级历史可得性或预测准确率计算。",
+        "TPU sales没有逐季台数、Google/Anthropic分配或收入金额。",
+        "p5资金与利润预测为券商估计；FCF、GAAP EPS口径仍需与当前模型桥接。",
+        "p7把2Q预览与end of 2Q backlog写在同页，不能从该页推定所有数字都在同一精确时点可得。"
+      ],
+      "numericGrowthOverride": null
+    },
+    {
+      "company": "Alibaba / Amazon / Google",
+      "relationship": "GS跨云比较方法：资本开支到增量收入的时滞",
+      "claim": "GS 2026-09-17原件p13 Exhibit19定义capex-to-revenue conversion为滚动12月Cloud收入增量除以滞后一季的滚动12月capex；脚注用Alibaba外部云收入与Google、Amazon约错位2年比较。",
+      "implication": "可增加资本开支转化的观察指标，并显式保留收入范围、窗口与时滞。该图用于跨公司方法检验，不直接提供Google未来季度收入或Anthropic份额。",
+      "publicationDate": "2026-09-17",
+      "applicablePeriod": "图表滚动窗口；跨公司对比带约2年错位，不能读成同日2027共识",
+      "factors": [
+        "cloud",
+        "capex",
+        "gm",
+        "ox"
+      ],
+      "sourceRefs": [
+        "local-gs-cloud-conversion-20260917"
+      ],
+      "strength": "公式及脚注原件已核；Google数量预测不支持",
+      "limitations": [
+        "Capex并非仅Cloud投入，跨公司资产用途与融资租赁范围可能不同。",
+        "图中的Google/Amazon历史比较有约2年错位，不得将横轴年份直接视为Google对应年度预测。",
+        "未由图形提取缺少精确标注的柱值；未将中国云增长率套入Google。",
+        "硬件/服务收入组合及设备确认可能改变比率，不能据该比率机械外推。"
+      ],
+      "numericGrowthOverride": null
+    },
+    {
+      "company": "Broadcom / NVIDIA / Google",
+      "relationship": "GS供应链调研摘要：TPU与GPU供给方向",
+      "claim": "GS 2025-12-16原件p1的亚洲科技调研摘要覆盖25家供应链公司，称Broadcom向Google的TPU动能很强；预计2026机架出货可翻倍以上、ASIC出货增速可能更快，并称Rubin当时预计2026年中生产、下半年放量。",
+      "implication": "提供此前供应链景气的方向证据，可与后来实际交付核对；不能把机架总增速或半导体出货直接转成Google Cloud可计费收入。",
+      "publicationDate": "2025-12-16",
+      "applicablePeriod": "报告当时对2026年的预期；不包含2027逐季验收",
+      "factors": [
+        "cloud",
+        "capex",
+        "gm"
+      ],
+      "sourceRefs": [
+        "local-gs-tpu-supply-20251216"
+      ],
+      "strength": "原件可核，供应链样本25家；属于旧时点方向性观点",
+      "limitations": [
+        "25家是总调研样本，不代表25家独立确认Google TPU订单。",
+        "未披露Google/Anthropic数量、价格、2027批次或电力验收表。",
+        "该报告早于2026实际交付披露，不替代最新公司原文。",
+        "全机架出货可能翻倍不是Google专属数量预测。"
+      ],
+      "numericGrowthOverride": null
+    }
+  ],
+  "evidenceMetrics": [
+    {
+      "id": "local-jpm-google-capex-2026",
+      "company": "Alphabet",
+      "metric": "JPM Google capex forecast",
+      "value": 190024,
+      "unit": "USD mn",
+      "period": "2026E",
+      "status": "broker_forecast_original",
+      "observationDate": "2026-07",
+      "sourceRefs": [
+        "local-jpm-us-internet-202607"
+      ],
+      "page": 5,
+      "notEquivalentTo": "company guidance, November consensus, or an executable forecast override"
+    },
+    {
+      "id": "local-jpm-google-capex-2027",
+      "company": "Alphabet",
+      "metric": "JPM Google capex forecast",
+      "value": 293443,
+      "unit": "USD mn",
+      "period": "2027E",
+      "status": "broker_forecast_original",
+      "observationDate": "2026-07",
+      "sourceRefs": [
+        "local-jpm-us-internet-202607"
+      ],
+      "page": 5,
+      "notEquivalentTo": "company guidance, November consensus, or an executable forecast override"
+    },
+    {
+      "id": "local-jpm-google-fcf-2027",
+      "company": "Alphabet",
+      "metric": "JPM Google FCF forecast",
+      "value": -16691,
+      "unit": "USD mn",
+      "period": "2027E",
+      "status": "broker_forecast_original",
+      "observationDate": "2026-07",
+      "sourceRefs": [
+        "local-jpm-us-internet-202607"
+      ],
+      "page": 5,
+      "notEquivalentTo": "company guidance, November consensus, or an executable forecast override"
+    },
+    {
+      "id": "local-jpm-google-eps-2027",
+      "company": "Alphabet",
+      "metric": "JPM Alphabet GAAP EPS forecast",
+      "value": 14.34,
+      "unit": "USD/share",
+      "period": "2027E",
+      "status": "broker_forecast_original",
+      "observationDate": "2026-07",
+      "sourceRefs": [
+        "local-jpm-us-internet-202607"
+      ],
+      "page": 7,
+      "notEquivalentTo": "company guidance, November consensus, or an executable forecast override"
+    }
+  ],
+  "materialGaps": [
+    {
+      "name": "Anthropic算力采购中Google可归属份额",
+      "value": null,
+      "reason": "本轮研报没有可核实分配比例或逐季Google服务采购额；需合同/招股书及对应模型假设。"
+    },
+    {
+      "name": "2027 TPU逐季交付、验收和计费数量",
+      "value": null,
+      "reason": "TPU命中页仅有方向、较早放量预期或产业链进展，没有可转季度收入的数量表。"
+    },
+    {
+      "name": "Google净单价与服务/设备合同拆分",
+      "value": null,
+      "reason": "不能将第三方芯片出货或客户总融资转换为Google收入。"
+    },
+    {
+      "name": "现有Google基准已含相关收入",
+      "value": null,
+      "reason": "需对照已有MS/GS等具体假设，防止重复加上已纳入的订单。"
+    }
+  ],
+  "limitations": [
+    "文档检索不等于全部资料逐项事实核验；图像内关键词或不可提取内容可能遗漏。",
+    "没有发现可量化Google/Anthropic分配与2027季度交付的证据，并不代表该信息从未公开。",
+    "所有新增数值都是注明月份的券商预测，不自动覆盖当前模型；未知桥接输入继续为空。"
+  ]
+}

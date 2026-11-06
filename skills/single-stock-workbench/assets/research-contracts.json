@@ -1,0 +1,1079 @@
+{
+  "asOf": "2026-11-05",
+  "scope": "Anthropic客户与Google/Broadcom/AWS/Azure合同、容量、收入确认和资金边界；新增原文优先，Wind保留转录级别。",
+  "sources": [
+    {
+      "id": "chain-anthropic-google-20251023",
+      "title": "Anthropic：Expanding our use of Google Cloud TPUs and Services",
+      "date": "2025-10-23",
+      "page": "正文：第一段、multi-platform approach 段",
+      "url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
+      "kind": "company_disclosure",
+      "note": "直接取得公司原文。计划最多一百万TPU、2026年上线超过1GW，并非已经验收。",
+      "retrievedAt": "2026-11-05T13:37:39.522737+00:00",
+      "sourceStrength": "primary_company_disclosure"
+    },
+    {
+      "id": "chain-anthropic-google-20260406",
+      "title": "Anthropic expands partnership with Google and Broadcom for multiple gigawatts of next-generation compute",
+      "date": "2026-04-06",
+      "page": "正文第一段及run-rate revenue段",
+      "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute",
+      "kind": "company_disclosure",
+      "note": "直接取得公司原文。新增多GW TPU预计从2027年开始上线；该次公告没有给出逐季交付或Google收入份额。",
+      "retrievedAt": "2026-11-05T13:37:40.975946+00:00",
+      "sourceStrength": "primary_company_disclosure"
+    },
+    {
+      "id": "chain-anthropic-series-h-20260528",
+      "title": "Anthropic raises $65B in Series H funding at $965B post-money valuation",
+      "date": "2026-05-28",
+      "page": "融资首段、run-rate revenue段、compute capacity段",
+      "url": "https://www.anthropic.com/news/series-h",
+      "kind": "company_disclosure",
+      "note": "直接取得公司原文。年化收入运行率47bn、融资65bn和Google/Broadcom五GW容量是不同指标；65bn包含此前15bn承诺投资。",
+      "retrievedAt": "2026-11-05T13:37:41.014250+00:00",
+      "sourceStrength": "primary_company_disclosure"
+    },
+    {
+      "id": "chain-anthropic-aws-20260420",
+      "title": "Anthropic and Amazon expand collaboration for up to 5 gigawatts of new compute",
+      "date": "2026-04-20",
+      "page": "Infrastructure at scale；Continued investment；Meeting record demand",
+      "url": "https://www.anthropic.com/news/anthropic-amazon-compute",
+      "kind": "company_disclosure",
+      "note": "直接取得公司原文；2026-04-21补充更新。超过100bn是十年AWS技术采购承诺，Amazon当次5bn及未来最多20bn投资另列。",
+      "retrievedAt": "2026-11-05T13:37:40.066505+00:00",
+      "sourceStrength": "primary_company_disclosure"
+    },
+    {
+      "id": "chain-anthropic-ms-nv-20251118",
+      "title": "Microsoft, NVIDIA, and Anthropic announce strategic partnerships",
+      "date": "2025-11-18",
+      "page": "Azure采购、NVIDIA技术合作、投资段",
+      "url": "https://www.anthropic.com/news/microsoft-nvidia-anthropic-announce-strategic-partnerships",
+      "kind": "company_disclosure",
+      "note": "直接取得公司原文。30bn Azure采购与NVIDIA最多10bn、Microsoft最多5bn股权投资不同，不相加为Google收入。",
+      "retrievedAt": "2026-11-05T13:37:40.971181+00:00",
+      "sourceStrength": "primary_company_disclosure"
+    },
+    {
+      "id": "chain-broadcom-q3-20260902",
+      "title": "Broadcom Q3 2026 Earnings Call（Wind转录）",
+      "date": "2026-09-02",
+      "page": "解析content[0].text后的data.items[0]：Hock Tan prepared及CFO financing段",
+      "url": "https://m.wind.com.cn/mobwftweb/M/?code=9DA8A027E656&lan=zh&device=pc&terminaltype=COM.WINDRAG&version=26.5.0.39845&gateway=na#/NA/653258077EECF7F541A0E6170EB5127A",
+      "kind": "wind_transcript",
+      "note": "转录声称已大批交付Ironwood并开始Google下一代TPU生产出货；公司IR列表抓取403。出货不等于机房上线验收。数据来源于万得 Wind 金融数据服务。",
+      "providerTitle": "Transcript 博通(BROADCOM) : Q3 2026 Earnings Call",
+      "retrievedAt": "2026-11-05T13:36:45.897004+00:00",
+      "sourceStrength": "vendor_transcript"
+    },
+    {
+      "id": "chain-amazon-10q-20261030",
+      "title": "Amazon Form 10-Q，季度截至2026-09-30（Wind摘录）",
+      "date": "2026-10-30",
+      "page": "解析content[0].text后的data.items[0]：Unearned Revenue，原文p9；折旧表p26",
+      "url": "https://m.wind.com.cn/mobwftweb/M/?code=1C468E4E463A&lan=zh&device=pc&terminaltype=COM.WINDRAG&version=26.5.0.39845&gateway=na#/NA/DF003F93BAAB2CADC54706EB3EBE1434",
+      "kind": "wind_filing_excerpt",
+      "note": "原公告URL以同文件data.items[0].url为准；使用摘录中的履约确认定义，不将未履约承诺当当期收入。数据来源于万得 Wind 金融数据服务。",
+      "providerTitle": "Form 10-Q 亚马逊(AMAZON) : Quarterly report-20260930",
+      "retrievedAt": "2026-11-05T13:36:40.361427+00:00",
+      "sourceStrength": "vendor_filing_excerpt"
+    },
+    {
+      "id": "chain-msft-fy27q1-20261028",
+      "title": "Microsoft FY27 Q1 Earnings Release",
+      "date": "2026-10-28",
+      "page": "Business Highlights及Selected Product and Service Information",
+      "url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2027-Q1/press-release-webcast",
+      "kind": "official_results",
+      "note": "直接取得公司原文。FY27Q1截至2026-09-30；Azure增速48%，不可混作全部Microsoft Cloud收入增速30%。",
+      "retrievedAt": "2026-11-05T13:36:28.049324+00:00",
+      "sourceStrength": "primary_company_disclosure"
+    },
+    {
+      "id": "chain-anthropic-contracts-news-20261026",
+      "title": "Wind新闻：Anthropic披露巨额算力采购承诺",
+      "date": "2026-10-26",
+      "page": "解析content[0].text后的data.items[0]及data.items[3]",
+      "url": "https://t.wind.com.cn/mobwftweb/M/news.html?share=wechat&show=wft&code=E199907FF9E6&newsopenstyle=&lan=cn&device=pc&gateway=news&related=true&terminaltype=COM.WINDRAG&version=&useless=0.200204#/A0D41773BACE24509C0F97F10F1F0B2E",
+      "kind": "wind_news",
+      "note": "新闻摘要；原始合同正文未取得，数字待核，不进入自动预测。数据来源于万得 Wind 金融数据服务。",
+      "providerTitle": "Anthropic披露巨额算力采购承诺：拟向谷歌采购至少1145亿美元服务",
+      "retrievedAt": "2026-11-05T13:36:35.144560+00:00",
+      "sourceStrength": "secondary_news_unverified_contract"
+    },
+    {
+      "id": "contracts-avgo-10q-20260910",
+      "title": "Broadcom FY2026Q3 10-Q：设备融资、担保与集中度（Wind原文段落）",
+      "date": "2026-09-10",
+      "textFile": "outputs/research/raw_contracts/wind_avgo_contracts.item0.txt",
+      "url": "https://m.wind.com.cn/mobwftweb/M/?code=CD0323097CE2&lan=zh&device=pc&terminaltype=COM.WINDRAG&version=26.5.0.39845&gateway=na#/NA/D58D277E012ECC4A2469E3D15259117A",
+      "primaryUrl": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/avgo-20260802.htm",
+      "page": "item0；p21 Financial Guarantee / Convertible Notes；p27客户集中度；AI XPV平台段",
+      "kind": "wind_filing_excerpt",
+      "sourceStrength": "vendor_filing_excerpt",
+      "retrievedAt": "2026-11-05T14:43:20.363405+00:00",
+      "note": "SEC目录确认申报日期与文件名；SEC正文HTTP403。此处使用Wind返回的英文披露段落，保留为转录证据，不声称独立核对完整原件。数据来源于万得Wind金融数据服务。"
+    },
+    {
+      "id": "contracts-googl-revenue-10q-20261029",
+      "title": "Alphabet 2026Q3 10-Q：TPU产品销售、服务确认与收入积压（Wind原文段落）",
+      "date": "2026-10-29",
+      "textFile": "outputs/research/raw_contracts/wind_googl_revenue.item0.txt",
+      "url": "https://m.wind.com.cn/mobwftweb/M/?code=6BC820D78457&lan=zh&device=pc&terminaltype=COM.WINDRAG&version=26.5.0.39845&gateway=na#/NA/142F2770DF660FD2553E0EB025AA591E",
+      "primaryUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+      "page": "item0；p11 Google Cloud及Multiple Performance Obligations；p13–14 Revenue Backlog / Deferred Revenues",
+      "kind": "wind_filing_excerpt",
+      "sourceStrength": "vendor_filing_excerpt",
+      "retrievedAt": "2026-11-05T14:45:26.992945+00:00",
+      "note": "SEC目录确认申报日期与文件名；SEC正文HTTP403。此处使用Wind返回的英文披露段落，保留为转录证据，不声称独立核对完整原件。数据来源于万得Wind金融数据服务。"
+    },
+    {
+      "id": "contracts-googl-guarantees-10q-20261029",
+      "title": "Alphabet 2026Q3 10-Q：TPU回购保证及租赁预付款（Wind原文段落）",
+      "date": "2026-10-29",
+      "textFile": "outputs/research/raw_contracts/wind_googl_anthropic.item0.txt",
+      "url": "https://m.wind.com.cn/mobwftweb/M/?code=6BC820D78457&lan=zh&device=pc&terminaltype=COM.WINDRAG&version=26.5.0.39845&gateway=na#/NA/142F2770DF660FD2553E0EB025AA591E",
+      "primaryUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+      "page": "item0；p24–25 Leases；p32–33 Financial Guarantees",
+      "kind": "wind_filing_excerpt",
+      "sourceStrength": "vendor_filing_excerpt",
+      "retrievedAt": "2026-11-05T14:45:26.196184+00:00",
+      "note": "SEC目录确认申报日期与文件名；SEC正文HTTP403。此处使用Wind返回的英文披露段落，保留为转录证据，不声称独立核对完整原件。数据来源于万得Wind金融数据服务。"
+    },
+    {
+      "id": "contracts-msft-10q-20261028",
+      "title": "Microsoft FY2027Q1 10-Q：RPO、递延收入及确认口径（Wind原文段落）",
+      "date": "2026-10-28",
+      "textFile": "outputs/research/raw_contracts/wind_msft_contracts.item0.txt",
+      "url": "https://m.wind.com.cn/mobwftweb/M/?code=9BCFCA4E265D&lan=zh&device=pc&terminaltype=COM.WINDRAG&version=26.5.0.39845&gateway=na#/NA/D44702D3BC79463F0BC0C07C29F63F0C",
+      "primaryUrl": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436133/msft-20260930.htm",
+      "page": "item0；Changes in unearned revenue及紧随其后的RPO段；p39收入判断；p44–45 AI投资风险",
+      "kind": "wind_filing_excerpt",
+      "sourceStrength": "vendor_filing_excerpt",
+      "retrievedAt": "2026-11-05T14:43:26.216580+00:00",
+      "note": "SEC目录确认申报日期与文件名；SEC正文HTTP403。此处使用Wind返回的英文披露段落，保留为转录证据，不声称独立核对完整原件。数据来源于万得Wind金融数据服务。"
+    },
+    {
+      "id": "contracts-msft-partnership-20251118",
+      "title": "Microsoft官方：Microsoft, NVIDIA and Anthropic announce strategic partnerships",
+      "date": "2025-11-18",
+      "url": "https://blogs.microsoft.com/blog/2025/11/18/microsoft-nvidia-and-anthropic-announce-strategic-partnerships/",
+      "page": "正文Azure采购、1GW容量及投资段",
+      "kind": "company_disclosure",
+      "sourceStrength": "primary_company_disclosure",
+      "retrievedAt": "2026-11-05T14:45:12.690564+00:00",
+      "note": "供应商官方原文，独立复核Anthropic公告所述30bn Azure采购承诺；未披露逐季履约及付款表。"
+    }
+  ],
+  "crossCompanyEvidence": [
+    {
+      "id": "contracts-tpu-accounting",
+      "company": "Alphabet / Google Cloud",
+      "relationship": "TPU硬件与云服务的收入确认边界",
+      "claim": "Alphabet Q3 10-Q的Wind英文段落明确：Cloud包括TPU系统销售。按用量云服务随客户消耗确认，订阅服务按合同期确认；TPU硬件/软件通常在控制权转移时确认并扣预期退货，安装、支持与延保按服务期或履约确认。部分回购权按退货权处理，转让设备后仍保留回购要求的安排按金融担保处理。",
+      "implication": "外售TPU不能统一当作按GW按月收费的云服务，也不能把多年合同全额落入交付季度。先按合同分配硬件、软件及服务履约义务，再验证控制权、验收和回购条款；这为核对Barclays External TPU Sales行提供会计边界。",
+      "sourceRefs": [
+        "contracts-googl-revenue-10q-20261029",
+        "contracts-googl-guarantees-10q-20261029"
+      ],
+      "limitations": [
+        "已取得的是Wind监管披露转录；SEC正文访问403。",
+        "政策适用于Alphabet相关业务，未披露Anthropic每份合同的履约义务分摊和单价。",
+        "截至9月末TPU回购担保最大潜在付款6.6bn，非已付款、收入冲减或Anthropic专属金额。"
+      ],
+      "factors": [
+        "收入确认节奏",
+        "Cloud收入增速",
+        "基准已含收入",
+        "付款与融资"
+      ],
+      "strength": "Wind监管披露英文摘录；SEC完整原件未核对",
+      "publicationDate": "2026-10-29",
+      "applicablePeriods": [
+        "2026Q4",
+        "2027FY"
+      ],
+      "contractIds": [
+        "anthropic-google-broadcom-tpu-2026",
+        "anthropic-google-services",
+        "anthropic-broadcom-equipment-lease"
+      ],
+      "contractId": null
+    },
+    {
+      "id": "contracts-tpu-capacity-dedup",
+      "company": "Anthropic / Google / Broadcom",
+      "relationship": "统一容量台账与交付边界",
+      "claim": "Anthropic 4月公告称新增多GW TPU容量从2027年开始上线；5月公告将Google与Broadcom联合协议明确为5GW。这是一组联合容量，Google与Broadcom不能各计5GW。2025年10月另有2026年上线超过1GW的计划，但截至研究日未取得对应逐季验收表。",
+      "implication": "台账以统一contractId记录5GW；设备融资、芯片交付与Google服务采购作为不同金额口径附属记录。2026Q4及2027各季可计费容量仍为null，不把宣布容量全部转换为收入。",
+      "sourceRefs": [
+        "chain-anthropic-google-20251023",
+        "chain-anthropic-google-20260406",
+        "chain-anthropic-series-h-20260528"
+      ],
+      "limitations": [
+        "多次公告为同一协议的更新，不构成多个订单。",
+        "缺少2025扩容与2026联合协议逐批对应表，暂不合计为6GW或更高。",
+        "芯片生产出货不证明数据中心已通电、验收或开始计费。"
+      ],
+      "factors": [
+        "可交付容量",
+        "Google份额",
+        "收入确认节奏",
+        "基准已含收入"
+      ],
+      "strength": "直接取得公司公告原文；具体合同及逐季交付仍待核",
+      "publicationDate": "2026-05-28",
+      "applicablePeriods": [
+        "2026Q4",
+        "2027FY"
+      ],
+      "contractIds": [
+        "anthropic-google-broadcom-tpu-2026"
+      ],
+      "contractId": "anthropic-google-broadcom-tpu-2026"
+    },
+    {
+      "id": "contracts-avgo-financing",
+      "company": "Broadcom / Anthropic",
+      "relationship": "第三方设备融资及Broadcom或有支持",
+      "claim": "Broadcom截至8月2日10-Q转录披露：首批XPV融资35bn、超过1GW、五年租期；交付扩大租赁Backstop，付款使其下降。客户违约时责任按85%未偿担保租赁金额减设备处置回收值计，全部设备部署后最大潜在责任约29bn。另允许客户在条件满足且需要时向Broadcom发行最多42bn可转票据，仅用于客户租赁义务，并非Broadcom发行债务；截至8月2日没有发行票据或支付Backstop。",
+      "implication": "第三方融资能缓解客户前期现金压力，但不能把融资额或担保上限当作芯片收入、Google Cloud收入或已到账现金。应同时监控设备交付、客户租金付款、残值和或有负债；“第三方出资”不等于Broadcom没有信用敞口。",
+      "sourceRefs": [
+        "contracts-avgo-10q-20260910",
+        "chain-broadcom-q3-20260902"
+      ],
+      "limitations": [
+        "10-Q相关段落称匿名customer；9月2日电话会转录才将35bn首批/1GW部署指向Anthropic，身份映射强于单一匿名段但仍应取得完整协议核对。",
+        "不能把29bn与42bn相加成已发生损失；两者触发条件和抵偿关系未完整展开。",
+        "新闻所称161.2bn五年租赁总额未取得客户原文，不以35bn首批替代或相加。"
+      ],
+      "factors": [
+        "付款与融资",
+        "可交付容量",
+        "客户支付能力",
+        "收入确认节奏"
+      ],
+      "strength": "Wind监管披露摘录及电话会转录；完整原件未核对",
+      "publicationDate": "2026-09-10",
+      "applicablePeriods": [
+        "2026Q4",
+        "2027FY"
+      ],
+      "contractIds": [
+        "broadcom-xpv-initial-tranche-2026",
+        "anthropic-broadcom-equipment-lease",
+        "anthropic-google-broadcom-tpu-2026"
+      ],
+      "contractId": null
+    },
+    {
+      "id": "contracts-avgo-concentration",
+      "company": "Broadcom",
+      "relationship": "分销商与终端客户集中度分开",
+      "claim": "Broadcom FY2026Q3 10-Q转录披露：单一直接分销商占季度公司收入50%，前三财季46%；前五终端客户经全部渠道合计占季度公司收入约55%、前三财季50%。",
+      "implication": "集中度增加交付节奏、信用和需求波动敏感性，但分销商不是最终客户。不能把50%写成Google/Anthropic采购占比，也不能据前五客户合计反推单一客户份额。",
+      "sourceRefs": [
+        "contracts-avgo-10q-20260910"
+      ],
+      "limitations": [
+        "分母为Broadcom公司净收入，非AI收入或Google Cloud收入。",
+        "没有披露本段各终端客户名称与份额；Google、Anthropic单独份额保持null。"
+      ],
+      "factors": [
+        "Google份额",
+        "客户采购",
+        "客户支付能力"
+      ],
+      "strength": "Wind监管披露英文摘录；SEC完整原件未核对",
+      "publicationDate": "2026-09-10",
+      "applicablePeriods": [
+        "2026Q4",
+        "2027FY"
+      ],
+      "contractIds": [],
+      "contractId": null
+    },
+    {
+      "id": "contracts-aws-recognition",
+      "company": "Amazon / AWS / Anthropic",
+      "relationship": "AWS十年承诺与履约、付款区分",
+      "claim": "Anthropic官方公告为十年超过100bn的AWS技术采购承诺及最多5GW新增容量，2026年末接近1GW是交付计划。Amazon Q3 10-Q转录再次确认该扩展，并说明长期承诺收入取决于客户使用与AWS履约。预收款先记unearned revenue，在服务期间确认。",
+      "implication": "AWS承诺是客户多云分配约束；不能拿其金额计算Google份额，也不能均摊为每年10bn或每季2.5bn实际收入。客户应付/预付计划与芯片性能义务需要单独核对。",
+      "sourceRefs": [
+        "chain-anthropic-aws-20260420",
+        "chain-amazon-10q-20261030"
+      ],
+      "limitations": [
+        "5GW与此前扩展的精确重叠和逐批上线缺少完整表。",
+        "Amazon新增5bn及未来最多20bn股权投资与客户采购不同，不相互抵销成净采购。",
+        "AWS聚合RPO578bn及总预收款不能归给Anthropic。"
+      ],
+      "factors": [
+        "Google份额",
+        "付款与融资",
+        "可交付容量",
+        "收入确认节奏"
+      ],
+      "strength": "公司公告原文与Wind监管披露摘录交叉对照；完整合同未核对",
+      "publicationDate": "2026-10-30",
+      "applicablePeriods": [
+        "2026Q4",
+        "2027FY"
+      ],
+      "contractIds": [
+        "anthropic-aws-expansion-2026"
+      ],
+      "contractId": "anthropic-aws-expansion-2026"
+    },
+    {
+      "id": "contracts-azure-recognition",
+      "company": "Microsoft / Anthropic",
+      "relationship": "Azure采购与聚合RPO边界",
+      "claim": "Microsoft供应商官方公告直接确认Anthropic采购30bn Azure算力并另签最多1GW容量；微软最多5bn股权投资另列。FY27Q1官方业绩披露商业RPO677bn；10-Q转录称公司总RPO683bn、商业平均期限约2.3年，约30%在随后12个月确认。",
+      "implication": "Azure是Anthropic算力替代来源，但商业RPO包含Microsoft 365等多项业务，不能当Azure或Anthropic订单。30%也不能直接作为单一客户或单季兑现率。",
+      "sourceRefs": [
+        "contracts-msft-partnership-20251118",
+        "chain-msft-fy27q1-20261028",
+        "contracts-msft-10q-20261028"
+      ],
+      "limitations": [
+        "公开合作公告未给付款、取消、逐季交付或验收计划。",
+        "新闻所称44.9bn与2025公告30bn可能是后续变化，未取得原合同前不互相替代、不叠加。",
+        "最多1GW不能全部映射Google或再计为NVIDIA另一份云容量订单。"
+      ],
+      "factors": [
+        "Google份额",
+        "可交付容量",
+        "收入确认节奏",
+        "付款与融资"
+      ],
+      "strength": "公司公告原文与Wind监管披露摘录交叉对照；完整合同未核对",
+      "publicationDate": "2026-10-28",
+      "applicablePeriods": [
+        "2026Q4",
+        "2027FY"
+      ],
+      "contractIds": [
+        "anthropic-azure-2025"
+      ],
+      "contractId": "anthropic-azure-2025"
+    },
+    {
+      "id": "contracts-google-backlog",
+      "company": "Alphabet / Google Cloud",
+      "relationship": "收入积压、预收与公司自身租赁付款",
+      "claim": "Q3 10-Q转录披露Google Cloud RPO560.8bn，公司总RPO567.7bn；预计总额略高于55%在未来24个月确认。2026Q1起RPO纳入原期限不超过一年的合同。公司Q3另付159m未起租预付款、前九月994m，属于Alphabet自身设施租赁支出。",
+      "implication": "Google、AWS和微软RPO定义及期限不同，不能直接比较数字大小推导客户份额。Google自身付给设施出租方的预付款，与Anthropic向Google支付的服务预付款是相反现金方向；后者尚无可核实金额。",
+      "sourceRefs": [
+        "contracts-googl-revenue-10q-20261029",
+        "contracts-googl-guarantees-10q-20261029"
+      ],
+      "limitations": [
+        "上述RPO及租赁金额均非Anthropic专属。",
+        "55%以上是全公司24个月确认预期，不能乘Anthropic合同或均摊到季度。",
+        "新旧RPO同比比较需检查一年以下合同纳入的口径改变。"
+      ],
+      "factors": [
+        "收入确认节奏",
+        "付款与融资",
+        "基准已含收入",
+        "客户支付能力"
+      ],
+      "strength": "Wind监管披露英文摘录；SEC完整原件未核对",
+      "publicationDate": "2026-10-29",
+      "applicablePeriods": [
+        "2026Q4",
+        "2027FY"
+      ],
+      "contractIds": [
+        "anthropic-google-services"
+      ],
+      "contractId": "anthropic-google-services"
+    }
+  ],
+  "evidenceMetrics": [
+    {
+      "id": "contract-google-broadcom-gw",
+      "company": "Anthropic / Google / Broadcom",
+      "metric": "Next-generation TPU capacity agreement",
+      "value": 5,
+      "unit": "GW",
+      "period": "2027 onward",
+      "status": "announced_capacity_not_accepted",
+      "publicationDate": "2026-05-28",
+      "sourceRefs": [
+        "chain-anthropic-series-h-20260528"
+      ],
+      "sourceStrength": "primary_company_disclosure",
+      "quote": "with Google and Broadcom for five gigawatts of next-generation TPU capacity",
+      "contractId": "anthropic-google-broadcom-tpu-2026",
+      "inputEligible": false
+    },
+    {
+      "id": "contract-aws-gw",
+      "company": "Anthropic / AWS",
+      "metric": "New capacity upper bound",
+      "value": 5,
+      "unit": "GW",
+      "period": "delivery schedule incomplete",
+      "status": "announced_capacity_not_accepted",
+      "publicationDate": "2026-04-20",
+      "sourceRefs": [
+        "chain-anthropic-aws-20260420"
+      ],
+      "sourceStrength": "primary_company_disclosure",
+      "quote": "up to 5 gigawatts (GW) of capacity",
+      "contractId": "anthropic-aws-expansion-2026",
+      "inputEligible": false,
+      "bound": "up_to",
+      "comparison": "≤"
+    },
+    {
+      "id": "contract-aws-spend",
+      "company": "Anthropic / AWS",
+      "metric": "AWS technology commitment lower bound",
+      "value": 100000,
+      "unit": "USD mn",
+      "period": "ten years from 2026 agreement",
+      "status": "multi_year_commitment",
+      "publicationDate": "2026-04-20",
+      "sourceRefs": [
+        "chain-anthropic-aws-20260420"
+      ],
+      "sourceStrength": "primary_company_disclosure",
+      "quote": "more than $100 billion over the next ten years",
+      "contractId": "anthropic-aws-expansion-2026",
+      "inputEligible": false,
+      "bound": "greater_than",
+      "comparison": ">"
+    },
+    {
+      "id": "contract-azure-spend",
+      "company": "Anthropic / Microsoft",
+      "metric": "Azure compute purchase commitment",
+      "value": 30000,
+      "unit": "USD mn",
+      "period": "duration not specified in announcement",
+      "status": "multi_year_commitment",
+      "publicationDate": "2025-11-18",
+      "sourceRefs": [
+        "contracts-msft-partnership-20251118"
+      ],
+      "sourceStrength": "primary_company_disclosure",
+      "quote": "$30 billion of Azure compute capacity",
+      "contractId": "anthropic-azure-2025",
+      "inputEligible": false
+    },
+    {
+      "id": "contract-azure-gw",
+      "company": "Anthropic / Microsoft",
+      "metric": "Additional capacity upper bound",
+      "value": 1,
+      "unit": "GW",
+      "period": "delivery schedule not disclosed",
+      "status": "announced_capacity_not_accepted",
+      "publicationDate": "2025-11-18",
+      "sourceRefs": [
+        "contracts-msft-partnership-20251118"
+      ],
+      "sourceStrength": "primary_company_disclosure",
+      "quote": "additional compute capacity up to one gigawatt",
+      "contractId": "anthropic-azure-2025",
+      "inputEligible": false,
+      "bound": "up_to",
+      "comparison": "≤"
+    },
+    {
+      "id": "contract-avgo-backstop-max",
+      "company": "Broadcom",
+      "metric": "Maximum potential Backstop after full deployment",
+      "value": 29000,
+      "unit": "USD mn",
+      "period": "as of 2026-08-02; full deployment exposure",
+      "status": "contingent_maximum_not_cash_paid",
+      "publicationDate": "2026-09-10",
+      "sourceRefs": [
+        "contracts-avgo-10q-20260910"
+      ],
+      "sourceStrength": "vendor_filing_excerpt",
+      "quote": "approximately $29 billion",
+      "contractId": "broadcom-xpv-initial-tranche-2026",
+      "inputEligible": false,
+      "bound": "approximately",
+      "comparison": "约"
+    },
+    {
+      "id": "contract-avgo-backstop-factor",
+      "company": "Broadcom",
+      "metric": "Outstanding lease amount factor before asset recoveries",
+      "value": 0.85,
+      "unit": "fraction",
+      "period": "five-year lease terms",
+      "status": "contractual_contingent_formula",
+      "publicationDate": "2026-09-10",
+      "sourceRefs": [
+        "contracts-avgo-10q-20260910"
+      ],
+      "sourceStrength": "vendor_filing_excerpt",
+      "quote": "85% of the outstanding amounts owed",
+      "contractId": "broadcom-xpv-initial-tranche-2026",
+      "inputEligible": false
+    },
+    {
+      "id": "contract-avgo-note-max",
+      "company": "Broadcom",
+      "metric": "Conditional convertible note principal upper bound",
+      "value": 42000,
+      "unit": "USD mn",
+      "period": "as of 2026-08-02",
+      "status": "conditional_facility_not_issued",
+      "publicationDate": "2026-09-10",
+      "sourceRefs": [
+        "contracts-avgo-10q-20260910"
+      ],
+      "sourceStrength": "vendor_filing_excerpt",
+      "quote": "aggregate principal amount of $42 billion",
+      "contractId": "broadcom-xpv-initial-tranche-2026",
+      "inputEligible": false,
+      "bound": "up_to",
+      "note": "客户可在条件满足且需要时向Broadcom发行可转票据，由客户融资，仅用于租赁义务；不是Broadcom发行42bn负债，截至8月2日未发行。",
+      "comparison": "≤"
+    },
+    {
+      "id": "contract-avgo-notes-issued",
+      "company": "Broadcom",
+      "metric": "Convertible notes issued under disclosed arrangement",
+      "value": 0,
+      "unit": "USD mn",
+      "period": "2026-08-02",
+      "status": "disclosed_actual",
+      "publicationDate": "2026-09-10",
+      "sourceRefs": [
+        "contracts-avgo-10q-20260910"
+      ],
+      "sourceStrength": "vendor_filing_excerpt",
+      "quote": "As of August 2, 2026, no notes have been issued to us.",
+      "contractId": "broadcom-xpv-initial-tranche-2026",
+      "inputEligible": false
+    },
+    {
+      "id": "contract-avgo-backstop-paid",
+      "company": "Broadcom",
+      "metric": "Payments under Backstop",
+      "value": 0,
+      "unit": "USD mn",
+      "period": "2026-08-02",
+      "status": "disclosed_actual",
+      "publicationDate": "2026-09-10",
+      "sourceRefs": [
+        "contracts-avgo-10q-20260910"
+      ],
+      "sourceStrength": "vendor_filing_excerpt",
+      "quote": "No amounts have been paid under the Backstop.",
+      "contractId": "broadcom-xpv-initial-tranche-2026",
+      "inputEligible": false
+    },
+    {
+      "id": "contract-avgo-xpv-tranche",
+      "company": "Broadcom",
+      "metric": "Initial third-party financed XPV tranche",
+      "value": 35000,
+      "unit": "USD mn",
+      "period": "June 2026",
+      "status": "financing_tranche_not_broadcom_revenue",
+      "publicationDate": "2026-09-10",
+      "sourceRefs": [
+        "contracts-avgo-10q-20260910"
+      ],
+      "sourceStrength": "vendor_filing_excerpt",
+      "quote": "an initial tranche of $35 billion",
+      "contractId": "broadcom-xpv-initial-tranche-2026",
+      "inputEligible": false
+    },
+    {
+      "id": "contract-avgo-distributor-concentration",
+      "company": "Broadcom",
+      "metric": "One direct distributor share of company revenue",
+      "value": 0.5,
+      "unit": "fraction",
+      "period": "FY2026Q3 ending 2026-08-02",
+      "status": "disclosed_aggregate",
+      "publicationDate": "2026-09-10",
+      "sourceRefs": [
+        "contracts-avgo-10q-20260910"
+      ],
+      "sourceStrength": "vendor_filing_excerpt",
+      "quote": "accounted for 50% and 46% of our net revenue",
+      "contractId": null,
+      "inputEligible": false,
+      "scope": "single unnamed distributor, not end customer",
+      "note": "single unnamed distributor, not end customer"
+    },
+    {
+      "id": "contract-avgo-topfive-concentration",
+      "company": "Broadcom",
+      "metric": "Top five end customers share of company revenue",
+      "value": 0.55,
+      "unit": "fraction",
+      "period": "FY2026Q3 ending 2026-08-02",
+      "status": "disclosed_aggregate",
+      "publicationDate": "2026-09-10",
+      "sourceRefs": [
+        "contracts-avgo-10q-20260910"
+      ],
+      "sourceStrength": "vendor_filing_excerpt",
+      "quote": "approximately 55% and 50% of our net revenue",
+      "contractId": null,
+      "inputEligible": false,
+      "bound": "approximately",
+      "scope": "five unnamed end customers across all channels",
+      "comparison": "约",
+      "note": "five unnamed end customers across all channels"
+    },
+    {
+      "id": "contract-googl-tpu-repurchase-guarantee",
+      "company": "Alphabet",
+      "metric": "Maximum potential TPU repurchase guarantee payments",
+      "value": 6600,
+      "unit": "USD mn",
+      "period": "2026-09-30",
+      "status": "contingent_maximum_not_cash_paid",
+      "publicationDate": "2026-10-29",
+      "sourceRefs": [
+        "contracts-googl-guarantees-10q-20261029"
+      ],
+      "sourceStrength": "vendor_filing_excerpt",
+      "quote": "maximum potential future payments under these guarantees were $6.6 billion",
+      "contractId": null,
+      "inputEligible": false,
+      "customerAttribution": null,
+      "note": "公司聚合披露；未能单独归属于Anthropic。"
+    },
+    {
+      "id": "contract-googl-cloud-rpo",
+      "company": "Alphabet / Google Cloud",
+      "metric": "Google Cloud remaining performance obligations",
+      "value": 560800,
+      "unit": "USD mn",
+      "period": "2026-09-30",
+      "status": "disclosed_aggregate",
+      "publicationDate": "2026-10-29",
+      "sourceRefs": [
+        "contracts-googl-revenue-10q-20261029"
+      ],
+      "sourceStrength": "vendor_filing_excerpt",
+      "quote": "$560.8 billion related to Google Cloud",
+      "contractId": null,
+      "inputEligible": false,
+      "customerAttribution": null,
+      "note": "公司聚合披露；未能单独归属于Anthropic。"
+    },
+    {
+      "id": "contract-googl-total-rpo",
+      "company": "Alphabet",
+      "metric": "Company remaining performance obligations",
+      "value": 567700,
+      "unit": "USD mn",
+      "period": "2026-09-30",
+      "status": "disclosed_aggregate",
+      "publicationDate": "2026-10-29",
+      "sourceRefs": [
+        "contracts-googl-revenue-10q-20261029"
+      ],
+      "sourceStrength": "vendor_filing_excerpt",
+      "quote": "$567.7 billion of remaining performance obligations",
+      "contractId": null,
+      "inputEligible": false
+    },
+    {
+      "id": "contract-googl-total-rpo-24m",
+      "company": "Alphabet",
+      "metric": "Company RPO expected recognition fraction over next 24 months",
+      "value": 0.55,
+      "unit": "fraction",
+      "period": "24 months after 2026-09-30",
+      "status": "company_expectation_aggregate",
+      "publicationDate": "2026-10-29",
+      "sourceRefs": [
+        "contracts-googl-revenue-10q-20261029"
+      ],
+      "sourceStrength": "vendor_filing_excerpt",
+      "quote": "just over 55% of the revenue backlog as revenues over the next 24 months",
+      "contractId": null,
+      "inputEligible": false,
+      "bound": "just_over",
+      "notApplicableTo": "Anthropic-specific schedule or any single quarter",
+      "comparison": "略高于",
+      "notEquivalentTo": "Anthropic-specific schedule or any single quarter",
+      "note": "不可视为：Anthropic-specific schedule or any single quarter"
+    },
+    {
+      "id": "contract-googl-uncommenced-lease-prepay-q3",
+      "company": "Alphabet",
+      "metric": "Prepayments for leases not yet commenced",
+      "value": 159,
+      "unit": "USD mn",
+      "period": "2026Q3",
+      "status": "disclosed_aggregate",
+      "publicationDate": "2026-10-29",
+      "sourceRefs": [
+        "contracts-googl-guarantees-10q-20261029"
+      ],
+      "sourceStrength": "vendor_filing_excerpt",
+      "quote": "$159 million and $994 million of lease prepayments for leases not yet commenced",
+      "contractId": null,
+      "inputEligible": false,
+      "customerAttribution": null,
+      "note": "公司聚合披露；未能单独归属于Anthropic。"
+    },
+    {
+      "id": "contract-googl-uncommenced-lease-prepay-ytd",
+      "company": "Alphabet",
+      "metric": "Prepayments for leases not yet commenced",
+      "value": 994,
+      "unit": "USD mn",
+      "period": "2026 nine months",
+      "status": "disclosed_aggregate",
+      "publicationDate": "2026-10-29",
+      "sourceRefs": [
+        "contracts-googl-guarantees-10q-20261029"
+      ],
+      "sourceStrength": "vendor_filing_excerpt",
+      "quote": "$159 million and $994 million of lease prepayments for leases not yet commenced",
+      "contractId": null,
+      "inputEligible": false,
+      "customerAttribution": null,
+      "note": "公司聚合披露；未能单独归属于Anthropic。"
+    },
+    {
+      "id": "contract-aws-rpo",
+      "company": "Amazon / AWS",
+      "metric": "Long-term customer commitments primarily related to AWS",
+      "value": 578000,
+      "unit": "USD mn",
+      "period": "2026-09-30",
+      "status": "disclosed_aggregate",
+      "publicationDate": "2026-10-30",
+      "sourceRefs": [
+        "chain-amazon-10q-20261030"
+      ],
+      "sourceStrength": "vendor_filing_excerpt",
+      "quote": "approximately $578 billion as of September 30, 2026",
+      "contractId": null,
+      "inputEligible": false,
+      "customerAttribution": null,
+      "originalTermFilter": "exceeds one year",
+      "note": "公司聚合披露；未能单独归属于Anthropic。"
+    },
+    {
+      "id": "contract-msft-commercial-rpo",
+      "company": "Microsoft",
+      "metric": "Commercial remaining performance obligations",
+      "value": 677000,
+      "unit": "USD mn",
+      "period": "2026-09-30",
+      "status": "disclosed_aggregate",
+      "publicationDate": "2026-10-28",
+      "sourceRefs": [
+        "chain-msft-fy27q1-20261028"
+      ],
+      "sourceStrength": "primary_company_disclosure",
+      "quote": "Commercial remaining performance obligation increased 73% to $677 billion",
+      "contractId": null,
+      "inputEligible": false,
+      "notEquivalentTo": "Azure-only or Anthropic-only RPO",
+      "note": "不可视为：Azure-only or Anthropic-only RPO"
+    },
+    {
+      "id": "contract-msft-total-rpo",
+      "company": "Microsoft",
+      "metric": "Total company remaining performance obligations",
+      "value": 683000,
+      "unit": "USD mn",
+      "period": "2026-09-30",
+      "status": "disclosed_aggregate",
+      "publicationDate": "2026-10-28",
+      "sourceRefs": [
+        "contracts-msft-10q-20261028"
+      ],
+      "sourceStrength": "vendor_filing_excerpt",
+      "quote": "was $683billion as of September 30, 2026",
+      "contractId": null,
+      "inputEligible": false
+    },
+    {
+      "id": "contract-msft-rpo-12m",
+      "company": "Microsoft",
+      "metric": "Total and commercial RPO expected recognition fraction in next 12 months",
+      "value": 0.3,
+      "unit": "fraction",
+      "period": "12 months after 2026-09-30",
+      "status": "company_expectation_aggregate",
+      "publicationDate": "2026-10-28",
+      "sourceRefs": [
+        "contracts-msft-10q-20261028"
+      ],
+      "sourceStrength": "vendor_filing_excerpt",
+      "quote": "approximately30% of both our total company remaining performance obligation revenue and commercial remaining performance obligation revenue over the next12months",
+      "contractId": null,
+      "inputEligible": false,
+      "bound": "approximately",
+      "notApplicableTo": "Anthropic-specific schedule or any single quarter",
+      "comparison": "约",
+      "notEquivalentTo": "Anthropic-specific schedule or any single quarter",
+      "note": "不可视为：Anthropic-specific schedule or any single quarter"
+    }
+  ],
+  "contracts": [
+    {
+      "id": "anthropic-google-broadcom-tpu-2026",
+      "title": "Google / Broadcom联合TPU容量",
+      "parties": [
+        "Anthropic",
+        "Google",
+        "Broadcom"
+      ],
+      "scope": "joint_capacity",
+      "value": 5,
+      "amount": null,
+      "unit": "GW",
+      "delivery": "2027年起上线；逐季验收与计费容量待核",
+      "recognition": "容量本身不是收入；按硬件/服务合同分别确认",
+      "payment": "联合容量公告没有付款表",
+      "overlap": "同一5GW仅记一次；2025年超过1GW计划与本批对应关系未取得",
+      "sourceRefs": [
+        "chain-anthropic-google-20260406",
+        "chain-anthropic-series-h-20260528"
+      ],
+      "quarterlyAcceptedGW": null,
+      "googleRecognizedRevenue": null
+    },
+    {
+      "id": "anthropic-google-services",
+      "title": "Anthropic向Google采购服务",
+      "parties": [
+        "Anthropic",
+        "Google"
+      ],
+      "scope": "cloud_services",
+      "value": null,
+      "amount": null,
+      "reportedAmount": 114500,
+      "unit": "USD mn",
+      "reportedPeriod": "2026-04至2033-07",
+      "delivery": "缺季度服务履约表",
+      "recognition": "按使用量或订阅期间；实际合同分拆未核实",
+      "payment": "新闻称最低采购及补差；原合同付款/预付/终止条款未核实",
+      "overlap": "与联合TPU容量有关联可能；不叠加成另一份容量，不能等同Broadcom设备租赁",
+      "sourceRefs": [
+        "chain-anthropic-contracts-news-20261026",
+        "contracts-googl-revenue-10q-20261029"
+      ],
+      "sourceStrength": "secondary_news_amount_unverified",
+      "quarterlyPayment": null,
+      "prepayment": null,
+      "cancelability": null
+    },
+    {
+      "id": "anthropic-broadcom-equipment-lease",
+      "title": "Anthropic TPU设备融资租赁",
+      "parties": [
+        "Anthropic",
+        "Broadcom",
+        "financing counterparties"
+      ],
+      "scope": "equipment_finance_lease",
+      "value": null,
+      "amount": null,
+      "reportedAmount": 161200,
+      "unit": "USD mn",
+      "reportedPeriod": "五年；新闻金额不含利息",
+      "delivery": "新闻称部分2026上线、更多2027起；逐批对应未核实",
+      "recognition": "租赁付款不是Google云服务收入；供应链各层确认另核",
+      "payment": "客户租金与第三方设备融资分开；总额原文待核",
+      "overlap": "与联合5GW及XPV融资可能重叠；35bn首批不再与总租金合计",
+      "sourceRefs": [
+        "chain-anthropic-contracts-news-20261026",
+        "contracts-avgo-10q-20260910",
+        "chain-broadcom-q3-20260902"
+      ],
+      "sourceStrength": "secondary_news_amount_unverified",
+      "quarterlyPayment": null
+    },
+    {
+      "id": "broadcom-xpv-initial-tranche-2026",
+      "title": "Broadcom XPV首批设备融资与Backstop",
+      "parties": [
+        "Broadcom",
+        "third-party financial partner",
+        "unnamed customer in 10-Q"
+      ],
+      "scope": "third_party_financing_and_contingent_support",
+      "value": 35000,
+      "amount": 35000,
+      "unit": "USD mn",
+      "delivery": "2026年6月首批，覆盖超过1GW；担保随交付增加",
+      "recognition": "融资额、最大潜在担保与设备营业收入分别记录",
+      "payment": "五年客户租赁；最高29bn潜在Backstop；客户可有条件向Broadcom发行最多42bn票据，8月2日未支付Backstop亦未发行票据",
+      "overlap": "与设备租赁关联；电话会转录命名Anthropic，不能新增一份1GW总容量",
+      "sourceRefs": [
+        "contracts-avgo-10q-20260910",
+        "chain-broadcom-q3-20260902"
+      ],
+      "maxBackstopUSDmn": 29000,
+      "conditionalNoteUSDmn": 42000
+    },
+    {
+      "id": "anthropic-aws-expansion-2026",
+      "title": "Anthropic AWS技术采购扩展",
+      "parties": [
+        "Anthropic",
+        "AWS"
+      ],
+      "scope": "cloud_technology_services",
+      "value": 100000,
+      "amount": 100000,
+      "bound": "greater_than",
+      "unit": "USD mn",
+      "delivery": "最多5GW，接近1GW计划2026年底上线；验收表未取得",
+      "recognition": "按使用及AWS履约，不能等额分摊十年",
+      "payment": "十年采购承诺；预付款与实际支付未披露",
+      "overlap": "官方>100bn与新闻110bn可能同一扩展不同版本，不相加",
+      "sourceRefs": [
+        "chain-anthropic-aws-20260420",
+        "chain-amazon-10q-20261030"
+      ],
+      "quarterlyPayment": null,
+      "prepayment": null
+    },
+    {
+      "id": "anthropic-azure-2025",
+      "title": "Anthropic Azure采购与额外容量",
+      "parties": [
+        "Anthropic",
+        "Microsoft Azure"
+      ],
+      "scope": "cloud_compute_services",
+      "value": 30000,
+      "amount": 30000,
+      "unit": "USD mn",
+      "delivery": "额外最多1GW；逐季时间表未披露",
+      "recognition": "收入须服务履约；不能套全公司RPO确认比例",
+      "payment": "公告未披露支付期或预付款",
+      "overlap": "2025公告30bn与新闻后续44.9bn不相加；NVIDIA硬件/投资另列但不新增重复GW",
+      "sourceRefs": [
+        "contracts-msft-partnership-20251118",
+        "chain-anthropic-ms-nv-20251118"
+      ],
+      "quarterlyPayment": null,
+      "prepayment": null
+    }
+  ],
+  "materialGaps": [
+    {
+      "id": "contracts-gap-quarterly-acceptance",
+      "company": "Anthropic / Google / Broadcom",
+      "field": "accepted_billable_capacity_by_quarter",
+      "value": null,
+      "needed": "2026Q4及2027逐季交付、通电验收、计费开始日、容量重叠表",
+      "why": "公告容量及芯片出货不能直接转收入",
+      "contractIds": [
+        "anthropic-google-broadcom-tpu-2026",
+        "anthropic-broadcom-equipment-lease"
+      ],
+      "sourceRefs": [
+        "chain-anthropic-google-20260406",
+        "chain-anthropic-series-h-20260528"
+      ]
+    },
+    {
+      "id": "contracts-gap-payment",
+      "company": "Anthropic / Google",
+      "field": "payment_prepayment_and_minimum_spend_schedule",
+      "value": null,
+      "needed": "Google服务合同全文、预付款/应付/最低消费/补差/终止和履约条件",
+      "why": "114.5bn仍只有新闻线索；财务模型不得把null当零",
+      "contractIds": [
+        "anthropic-google-services"
+      ],
+      "sourceRefs": [
+        "chain-anthropic-contracts-news-20261026"
+      ]
+    },
+    {
+      "id": "contracts-gap-attribution",
+      "company": "Google / Broadcom",
+      "field": "customer_contract_split_and_baseline_inclusion",
+      "value": null,
+      "needed": "同一TPU批次的设备租赁、Google硬件销售、云服务金额分配及MS基准已含收入",
+      "why": "防止同一经济活动跨供应链重复计入Google收入",
+      "contractIds": [
+        "anthropic-google-broadcom-tpu-2026",
+        "anthropic-google-services",
+        "anthropic-broadcom-equipment-lease",
+        "broadcom-xpv-initial-tranche-2026"
+      ],
+      "sourceRefs": [
+        "contracts-googl-revenue-10q-20261029",
+        "contracts-avgo-10q-20260910"
+      ]
+    },
+    {
+      "id": "contracts-gap-customer-share",
+      "company": "Alphabet / Broadcom / Amazon / Microsoft",
+      "field": "anthropic_specific_customer_revenue_or_rpo_share",
+      "value": null,
+      "needed": "供应商按Anthropic实名披露的收入、RPO、应收/预收和客户份额",
+      "why": "聚合RPO、匿名终端客户与分销商集中度不能替代单一客户数据",
+      "sourceRefs": [
+        "contracts-googl-revenue-10q-20261029",
+        "contracts-avgo-10q-20260910",
+        "contracts-msft-10q-20261028",
+        "chain-amazon-10q-20261030"
+      ]
+    },
+    {
+      "id": "contracts-gap-primary-filing",
+      "company": "Alphabet / Broadcom / Amazon / Microsoft",
+      "field": "full_original_contract_or_regulatory_filing",
+      "value": null,
+      "needed": "可合法取得的完整原始10-Q及相关合同附件；现有SEC目录成功、正文403",
+      "why": "Wind英文转录可检查原句，但不是已核对完整原件",
+      "sourceRefs": [
+        "contracts-googl-revenue-10q-20261029",
+        "contracts-avgo-10q-20260910",
+        "contracts-msft-10q-20261028",
+        "chain-amazon-10q-20261030"
+      ]
+    }
+  ],
+  "supersedesMetrics": [
+    {
+      "id": "anthropic-google-capacity",
+      "replacementId": "contract-google-broadcom-gw"
+    },
+    {
+      "id": "anthropic-aws-budget",
+      "replacementId": "contract-aws-spend"
+    }
+  ],
+  "verification": {
+    "metricQuoteAssertions": 23,
+    "sourceIdsResolve": true,
+    "joint5GWCount": 1,
+    "sourceDatesWithinCutoff": true,
+    "missingQuarterlyInputsAreNull": true,
+    "secIndexRequests": "4成功",
+    "secBodyRequests": "5次403，未绕过",
+    "sameFilingDifferentQueriesNotIndependentEvidence": true
+  },
+  "limitations": [
+    "多次官方公告可能为同一合同版本更新，不能按新闻条数累加采购。",
+    "Google/Broadcom联合5GW、设备租赁、XPV融资和Google服务合同不能在同一口径相加。",
+    "本次未执行交易，未将任何合同金额自动应用到EPS；金额、容量、现金流和确认收入分别保留。"
+  ]
+}
