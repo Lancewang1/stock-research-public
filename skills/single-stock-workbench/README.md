@@ -56,3 +56,7 @@ API凭据、个人机器路径、原始API响应、受限研报及卖方工作�
 
 验证入口增加 `node tests/test_review_analysis.mjs`。离线重建仍使用固定案例，无需原工作簿或API。
 
+# MS 隐含假设基准更新（2026-11-06）
+
+默认以MS收入及Cloud营业利润反推企业增长和现金成本倍率，保留全部用户假设编辑、保存和恢复入口。原研究输入保留；修改后不会自动对齐MS。方法、局限和重建顺序见 [MS隐含假设基准](references/ms-implied-baseline.md)。额外Cloud校准收益默认0；集团非Cloud共享成本仍有未识别分配。
+

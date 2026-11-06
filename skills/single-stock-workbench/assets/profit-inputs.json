@@ -5,10 +5,10 @@
   "quarters": {
     "2026Q4": {
       "parameters": {
-        "workspaceRevenue": 4601.641860295314,
-        "traditionalRevenue": 8171.975193437533,
-        "aiRevenue": 12257.962790156298,
-        "tpuRevenue": 11214.948156110857,
+        "workspaceRevenue": 7635.3996421992915,
+        "traditionalRevenue": 13559.572509632486,
+        "aiRevenue": 7908.698705318223,
+        "tpuRevenue": 7142.85714285,
         "workspaceDirectRate": 0.15,
         "traditionalDirectRate": 0.25,
         "tpuDirectRate": 0.7,
@@ -30,15 +30,25 @@
         "sbcMultiplier": 1,
         "sbcTaxBenefitRate": 0.2640818175173076,
         "cloudSbcShare": 0.2518721597646282,
-        "cloudUnallocatedCost": -2921.7752793507734,
+        "cloudUnallocatedCost": 0,
         "searchTacRate": 0.18089416018439106,
         "networkTacRate": 0.6838026472035023,
         "youtubeContentRate": 0.5500000000000002,
         "youtubeSubsShare": 0.525978497337746,
-        "nflContentCost": 1495.3660800000002
+        "nflContentCost": 1495.3660800000002,
+        "cloudCashCostMultiplier": 0.9200182779877012
       },
       "cloudRevenue": 36246.528,
       "nonCloudRevenue": 107661.90568267455,
+      "msImplied": {
+        "method": "uniform_cash_cost_multiplier",
+        "cashCostAtSeed": 18809.68618459432,
+        "allowedCashCost": 17305.25509303952,
+        "multiplier": 0.9200182779877012,
+        "unallocatedCost": 0,
+        "enterpriseGrowth": 0.135077192446575,
+        "fixed": "客户/TPU种子假设、Workspace/传统比例、D&A与SBC分配固定；统一缩放所有Cloud直接现金成本和经营费用，非MS原始费率。"
+      },
       "segments": {
         "search": 69271.70556941649,
         "youtube": 12948.348221893568,
@@ -80,10 +90,10 @@
     },
     "2027Q1": {
       "parameters": {
-        "workspaceRevenue": 5066.271670808184,
-        "traditionalRevenue": 10019.816326455672,
-        "aiRevenue": 15029.724489683504,
-        "tpuRevenue": 13485.143513052639,
+        "workspaceRevenue": 8589.679000238984,
+        "traditionalRevenue": 16988.233454104997,
+        "aiRevenue": 9323.043545656014,
+        "tpuRevenue": 8700.0,
         "workspaceDirectRate": 0.15,
         "traditionalDirectRate": 0.25,
         "tpuDirectRate": 0.7,
@@ -105,15 +115,25 @@
         "sbcMultiplier": 1,
         "sbcTaxBenefitRate": 0.25885299753046487,
         "cloudSbcShare": 0.3066071644292856,
-        "cloudUnallocatedCost": -3000.5528047356365,
+        "cloudUnallocatedCost": 0,
         "searchTacRate": 0.18492230324703215,
         "networkTacRate": 0.6045900786354776,
         "youtubeContentRate": 0.55,
         "youtubeSubsShare": 0.6386255463586628,
-        "nflContentCost": 0
+        "nflContentCost": 0,
+        "cloudCashCostMultiplier": 0.9422423397295407
       },
       "cloudRevenue": 43600.956,
       "nonCloudRevenue": 98603.66626040355,
+      "msImplied": {
+        "method": "uniform_cash_cost_multiplier",
+        "cashCostAtSeed": 22649.96715955452,
+        "allowedCashCost": 21341.75805121591,
+        "multiplier": 0.9422423397295407,
+        "unallocatedCost": 0,
+        "enterpriseGrowth": 0.20679151032210297,
+        "fixed": "客户/TPU种子假设、Workspace/传统比例、D&A与SBC分配固定；统一缩放所有Cloud直接现金成本和经营费用，非MS原始费率。"
+      },
       "segments": {
         "search": 65058.92903274276,
         "youtube": 11052.379997329816,
@@ -155,10 +175,10 @@
     },
     "2027Q2": {
       "parameters": {
-        "workspaceRevenue": 5567.917223964906,
-        "traditionalRevenue": 12249.10983292855,
-        "aiRevenue": 18373.664749392825,
-        "tpuRevenue": 16887.132193713715,
+        "workspaceRevenue": 9517.02307916759,
+        "traditionalRevenue": 20936.92421961452,
+        "aiRevenue": 11373.876701217883,
+        "tpuRevenue": 11250.0,
         "workspaceDirectRate": 0.15,
         "traditionalDirectRate": 0.25,
         "tpuDirectRate": 0.7,
@@ -180,15 +200,25 @@
         "sbcMultiplier": 1,
         "sbcTaxBenefitRate": 0.25372770817936163,
         "cloudSbcShare": 0.3423454901383984,
-        "cloudUnallocatedCost": -6341.431113752698,
+        "cloudUnallocatedCost": 0,
         "searchTacRate": 0.18292843290920563,
         "networkTacRate": 0.6486856072547409,
         "youtubeContentRate": 0.55,
         "youtubeSubsShare": 0.7226706447468059,
-        "nflContentCost": 0
+        "nflContentCost": 0,
+        "cloudCashCostMultiplier": 0.8438958249190158
       },
       "cloudRevenue": 53077.82399999999,
       "nonCloudRevenue": 101963.86788424966,
+      "msImplied": {
+        "method": "uniform_cash_cost_multiplier",
+        "cashCostAtSeed": 27771.845251554798,
+        "allowedCashCost": 23436.54425808409,
+        "multiplier": 0.8438958249190158,
+        "unallocatedCost": 0,
+        "enterpriseGrowth": 0.1906345896343864,
+        "fixed": "客户/TPU种子假设、Workspace/传统比例、D&A与SBC分配固定；统一缩放所有Cloud直接现金成本和经营费用，非MS原始费率。"
+      },
       "segments": {
         "search": 68228.03216006733,
         "youtube": 12044.740210703245,
@@ -230,10 +260,10 @@
     },
     "2027Q3": {
       "parameters": {
-        "workspaceRevenue": 6872.318848531176,
-        "traditionalRevenue": 16861.10921705361,
-        "aiRevenue": 25291.663825580417,
-        "tpuRevenue": 21329.2271088348,
+        "workspaceRevenue": 12493.457694287032,
+        "traditionalRevenue": 30652.471069067975,
+        "aiRevenue": 13258.390236645002,
+        "tpuRevenue": 13950.000000000002,
         "workspaceDirectRate": 0.15,
         "traditionalDirectRate": 0.25,
         "tpuDirectRate": 0.7,
@@ -255,15 +285,25 @@
         "sbcMultiplier": 1,
         "sbcTaxBenefitRate": 0.24870389955741024,
         "cloudSbcShare": 0.3997711017671497,
-        "cloudUnallocatedCost": -7546.640157949227,
+        "cloudUnallocatedCost": 0,
         "searchTacRate": 0.1798047790456782,
         "networkTacRate": 0.6944842688880704,
         "youtubeContentRate": 0.55,
         "youtubeSubsShare": 0.7221969859502353,
-        "nflContentCost": 518.3935744
+        "nflContentCost": 518.3935744,
+        "cloudCashCostMultiplier": 0.868517182185775
       },
       "cloudRevenue": 70354.319,
       "nonCloudRevenue": 105632.186,
+      "msImplied": {
+        "method": "uniform_cash_cost_multiplier",
+        "cashCostAtSeed": 36441.07111064903,
+        "allowedCashCost": 31649.69639685234,
+        "multiplier": 0.868517182185775,
+        "unallocatedCost": 0,
+        "enterpriseGrowth": 0.4167598157326704,
+        "fixed": "客户/TPU种子假设、Workspace/传统比例、D&A与SBC分配固定；统一缩放所有Cloud直接现金成本和经营费用，非MS原始费率。"
+      },
       "segments": {
         "search": 70525.6393674526,
         "youtube": 12496.24857022253,
@@ -305,10 +345,10 @@
     },
     "2027Q4": {
       "parameters": {
-        "workspaceRevenue": 6815.592124211111,
-        "traditionalRevenue": 18675.21474758717,
-        "aiRevenue": 28012.82212138076,
-        "tpuRevenue": 22106.628414820963,
+        "workspaceRevenue": 11687.474318394809,
+        "traditionalRevenue": 32024.523882170666,
+        "aiRevenue": 15098.259207434532,
+        "tpuRevenue": 16800.0,
         "workspaceDirectRate": 0.15,
         "traditionalDirectRate": 0.25,
         "tpuDirectRate": 0.7,
@@ -330,15 +370,25 @@
         "sbcMultiplier": 1,
         "sbcTaxBenefitRate": 0.24377956234617348,
         "cloudSbcShare": 0.3852628056922539,
-        "cloudUnallocatedCost": -10778.13415707269,
+        "cloudUnallocatedCost": 0,
         "searchTacRate": 0.18374538941881924,
         "networkTacRate": 0.6614615880287625,
         "youtubeContentRate": 0.55,
         "youtubeSubsShare": 0.5140448564574185,
-        "nflContentCost": 1555.1807232
+        "nflContentCost": 1555.1807232,
+        "cloudCashCostMultiplier": 0.7834897800218203
       },
       "cloudRevenue": 75610.257408,
       "nonCloudRevenue": 120646.05462331796,
+      "msImplied": {
+        "method": "uniform_cash_cost_multiplier",
+        "cashCostAtSeed": 39744.03749793456,
+        "allowedCashCost": 31139.047196435728,
+        "multiplier": 0.7834897800218203,
+        "unallocatedCost": 0,
+        "enterpriseGrowth": 0.013119880680173335,
+        "fixed": "客户/TPU种子假设、Workspace/传统比例、D&A与SBC分配固定；统一缩放所有Cloud直接现金成本和经营费用，非MS原始费率。"
+      },
       "segments": {
         "search": 77176.61405477201,
         "youtube": 13856.842101009652,
@@ -461,10 +511,10 @@
   ],
   "limitations": [
     "四块Cloud历史拆分未披露；仅未来情景拆分，历史总额锁定。",
-    "GCP内部AI初始占比60%为研究假设。",
-    "Barclays旧版Workspace/TPU收入份额用于拆分MS总额，不代表更新后的卖方预测。",
+    "AI和TPU收入来自客户/交付种子参数；企业服务增长按MS总额反推。",
+    "Workspace/传统GCP内部比例沿旧结构代理，不由MS唯一识别。",
     "分类资产原值由MS折旧与Barclays折旧构成反推，为尺度代理，非已核实资产台账。",
-    "未分配Cloud成本在起始时与MS利润勾稽，之后固定，不随情景自动倒算。",
+    "默认反推统一Cloud现金成本倍率对齐MS利润，额外未分配项为0；修改后不自动拟合。",
     "2028保留年度延展，未建立逐业务成本与折旧明细。"
   ]
 }

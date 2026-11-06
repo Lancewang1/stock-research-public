@@ -16,6 +16,9 @@ def main():
     ms=json.loads((audit/'MS_20261029.json').read_text(encoding='utf-8'))
     barc=json.loads((audit/'BARC_20260724.json').read_text(encoding='utf-8'))
     case=json.loads((ROOT/'outputs/googl-case.json').read_text(encoding='utf-8'))
+    cloudInput=json.loads((ROOT/'assets/cloud-inputs.json').read_text(encoding='utf-8'))
+    if not cloudInput.get('msBaseline'):raise ValueError('Run build_ms_baseline.mjs first')
+    cloudRows={x['period']:x for x in cloudInput['msBaseline']['rows']}
     def val(book,sheet,cell):
         x=book['sheets'][sheet].get(cell,{}).get('value')
         if not isinstance(x,(float,int)):raise ValueError(f'Missing source {sheet}!{cell}')
@@ -23,7 +26,7 @@ def main():
     out={'version':1,'asOf':'2026-11-06','units':'USD million','quarters':{},'historyAmendments':{},
          'sources':[{'broker':'MS','date':'2026-10-29','sha256':ms['sha256'],'use':'集团基准、Cloud营业利润、SBC与税效应'},
                     {'broker':'Barclays','date':'2026-07-24','sha256':barc['sha256'],'use':'Cloud收入结构、分类折旧与年限；仅作结构参考'}],
-         'limitations':['四块Cloud历史拆分未披露；仅未来情景拆分，历史总额锁定。','GCP内部AI初始占比60%为研究假设。','Barclays旧版Workspace/TPU收入份额用于拆分MS总额，不代表更新后的卖方预测。','分类资产原值由MS折旧与Barclays折旧构成反推，为尺度代理，非已核实资产台账。','未分配Cloud成本在起始时与MS利润勾稽，之后固定，不随情景自动倒算。','2028保留年度延展，未建立逐业务成本与折旧明细。']}
+         'limitations':['四块Cloud历史拆分未披露；仅未来情景拆分，历史总额锁定。','AI和TPU收入来自客户/交付种子参数；企业服务增长按MS总额反推。','Workspace/传统GCP内部比例沿旧结构代理，不由MS唯一识别。','分类资产原值由MS折旧与Barclays折旧构成反推，为尺度代理，非已核实资产台账。','默认反推统一Cloud现金成本倍率对齐MS利润，额外未分配项为0；修改后不自动拟合。','2028保留年度延展，未建立逐业务成本与折旧明细。']}
     # Model quarter columns are individually checked via existing source refs.
     for q in case['quarters']:
         refs=q.get('sourceRefs',[])
@@ -36,12 +39,18 @@ def main():
         workspace=cloud*val(barc,'New Driver',bc+'120')/barcTotal
         tpu=cloud*val(barc,'New Driver',bc+'127')/barcTotal
         gcp=cloud-workspace-tpu
+        enterpriseWorkspaceRatio=workspace/(workspace+gcp*.4)
+        anchor=cloudRows[q['period']]
+        workspace=anchor['enterpriseRevenueBn']*1000*enterpriseWorkspaceRatio
+        traditional=anchor['enterpriseRevenueBn']*1000*(1-enterpriseWorkspaceRatio)
+        ai=anchor['aiRevenueBn']*1000;tpu=anchor['tpuRevenueBn']*1000
+        if abs(workspace+traditional+ai+tpu-cloud)>1e-5:raise ValueError('Cloud baseline not reconciled')
         dep=q['depreciation'];amort=q['amortization'];sbc=q['sbc']
         serverWeight=val(barc,'Q PP&E',bc+'110')/val(barc,'Q PP&E',bc+'105')
         life=val(barc,'Q PP&E',bc+'113');otherLife=val(barc,'Q PP&E',bc+'117')
         alloc={f:val(ms,'Expense Drivers',col+str(row))/sbc for f,row in [('cogs',173),('rd',175),('sm',176),('ga',177)]}
         total=sum(q[f] for f in ['rd','sm','ga']);opexAlloc={f:q[f]/total for f in ['rd','sm','ga']}
-        params=dict(workspaceRevenue=workspace,traditionalRevenue=gcp*.4,aiRevenue=gcp*.6,tpuRevenue=tpu,
+        params=dict(workspaceRevenue=workspace,traditionalRevenue=traditional,aiRevenue=ai,tpuRevenue=tpu,
                     workspaceDirectRate=.15,traditionalDirectRate=.25,tpuDirectRate=.70,
                     workspaceOpexRate=.30,traditionalOpexRate=.20,aiOpexRate=.12,tpuOpexRate=.05,
                     aiThirdPartyShare=.25,aiThirdPartyCostRate=.75,aiOwnOperatingRate=.25,
@@ -59,11 +68,15 @@ def main():
                       networkTacRate=val(ms,'Expense Drivers',col+'45')/q['segments']['network'],
                       youtubeContentRate=contentRate,youtubeSubsShare=ytsubs/q['segments']['subs'],nflContentCost=nfl)
         # Explicit baseline calibration, never re-fit after edits.
-        direct=workspace*.15+gcp*.4*.25+gcp*.6*(.25*.75+.75*.25)+tpu*.70
-        op=workspace*.30+gcp*.4*.20+gcp*.6*.12+tpu*.05
+        direct=workspace*.15+traditional*.25+ai*(.25*.75+.75*.25)+tpu*.70
+        op=workspace*.30+traditional*.20+ai*.12+tpu*.05
         target=out['historyAmendments'][q['period']]['cloudOperatingIncome']
-        params['cloudUnallocatedCost']=cloud-direct-op-(dep+amort)*.4-sbc*params['cloudSbcShare']-target
+        allowance=cloud-target-(dep+amort)*.4-sbc*params['cloudSbcShare']
+        params['cloudCashCostMultiplier']=allowance/(direct+op)
+        if not 0<=params['cloudCashCostMultiplier']<=3:raise ValueError('MS cost multiplier outside declared range')
+        params['cloudUnallocatedCost']=0
         out['quarters'][q['period']]={'parameters':params,'cloudRevenue':cloud,'nonCloudRevenue':q['revenue']-cloud,
+            'msImplied':{'method':'uniform_cash_cost_multiplier','cashCostAtSeed':direct+op,'allowedCashCost':allowance,'multiplier':params['cloudCashCostMultiplier'],'unallocatedCost':0,'enterpriseGrowth':anchor['value'],'fixed':'客户/TPU种子假设、Workspace/传统比例、D&A与SBC分配固定；统一缩放所有Cloud直接现金成本和经营费用，非MS原始费率。'},
             'segments':q['segments'],'hedge':q['hedge'],'nonCloudCostSource':f'MS 2026-10-29 Expense Drivers!{col}25,{col}45; YouTube!{ytcol}33,{ytcol}39,{ytcol}43,{ytcol}47; distribution TAC assigned to search per source denominator'+('；NFL单元格缺失：当前0仅为原模型总内容成本减55%分成后的隐含余额，非已核实无成本。' if nflCell is None else ''),
             'depreciation':dep,'amortization':amort,'sbc':sbc,'serverAssets':dep*serverWeight*life*4,
             'otherAssets':dep*(1-serverWeight)*otherLife*4,'sbcAllocation':alloc,'opexAllocation':opexAlloc,

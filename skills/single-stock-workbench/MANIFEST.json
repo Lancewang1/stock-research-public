@@ -1,5 +1,5 @@
 {
-  "release": "2026-11-06-model-review-migration",
+  "release": "2026-11-06-ms-implied-baseline",
   "offlineRebuild": "byte-identical",
   "browserVisualAcceptance": "waived_by_user",
   "rawReportsIncluded": false,
@@ -16,18 +16,18 @@
     },
     {
       "path": "assets/cloud-inputs.json",
-      "sha256": "a25a41fca892ef683eb65e80dcb30954fa00d1634f454c1101439a1bd1149b56",
-      "bytes": 190730
+      "sha256": "cd74f514ad4d44b6aae23ab5be8cc5a285ca951068a1c658b9db24481b0af95a",
+      "bytes": 200696
     },
     {
       "path": "assets/cloud-lines.js",
-      "sha256": "7566de1011887b45d6f2f75054bb87455ae1af98d4ddf96035fe25f46d1f8603",
-      "bytes": 16476
+      "sha256": "04a388ab3a3331a6d2e030fdd373d1df242101edb408ae1cc6e7c46a7175ebba",
+      "bytes": 19038
     },
     {
       "path": "assets/cloud-ui.js",
-      "sha256": "f911272014b55fba030e75c83400d788b883c17181753542c0a0bb6fc91c89e1",
-      "bytes": 27507
+      "sha256": "20529acc6aab6a97f04404e943a2bc3a8d52ae5df5e7b79f2743aa9572ae8f1b",
+      "bytes": 27557
     },
     {
       "path": "assets/company-trial.js",
@@ -36,13 +36,13 @@
     },
     {
       "path": "assets/dashboard.html",
-      "sha256": "e9f4ef21ca04e57d036007aa428884a9404bfdc25e78b2b6a7ab54ff7d902a43",
-      "bytes": 103939
+      "sha256": "8cb8eefdb1e1e1105b697aef5d27af922f260e8058e90c5aae1e4e37f15168fb",
+      "bytes": 103973
     },
     {
       "path": "assets/example-googl-case.json",
-      "sha256": "9c9227d3f6211c0aa98d908cec68566535d239f88703fb38cb52ec2d6d7f0c12",
-      "bytes": 325601
+      "sha256": "3e003b41e6cf8dba4b3c11136ae07ae4785d12d8dbdfc300f94be1e97b9e9bdb",
+      "bytes": 328213
     },
     {
       "path": "assets/financial-verification.json",
@@ -66,13 +66,13 @@
     },
     {
       "path": "assets/profit-inputs.json",
-      "sha256": "749b7a82fb22794dc6787bd8a8d20d108c50c4f8e5607134ca780f713572c839",
-      "bytes": 16654
+      "sha256": "9cb86c0c9900c16f2fb8822532fee35011475e53202be0ac322d96cdeba1a7d7",
+      "bytes": 19166
     },
     {
       "path": "assets/profit-ui.js",
-      "sha256": "1530e5f82654c8db9d3723c07f91681044baf686def72c989c849b882365148f",
-      "bytes": 10240
+      "sha256": "e5213b36cc2d8771510d7f1dd616cd5f81c7ebf16361d8ad12b12d1e00f84f59",
+      "bytes": 12497
     },
     {
       "path": "assets/publication_dates.json",
@@ -141,8 +141,8 @@
     },
     {
       "path": "assets/v11-integration.js",
-      "sha256": "61d439fffcb34c1d45d49cc4d2c534bed890458abebe774a12156d56352d36de",
-      "bytes": 2307
+      "sha256": "ba8f28f50c3b3c8c35f1d36a6bab060de53d749f511d8958d5bc73994fdd555a",
+      "bytes": 2318
     },
     {
       "path": "assets/v9-snapshot.json",
@@ -151,13 +151,13 @@
     },
     {
       "path": "assets/workbench-v9.js",
-      "sha256": "eaf36d179d422db07c187fe6b106252f8bc63380d722b76e504b2cfd5d3350fb",
-      "bytes": 48181
+      "sha256": "86d23a9e1c6dcd0407abd45852ede59541b4254ab6fa948259be5cb2c2f6154c",
+      "bytes": 48198
     },
     {
       "path": "outputs/googl-dashboard.html",
-      "sha256": "cf4e66c8ee144bba09167b4d7b77ce0f09ea747beb4929d179a2761ecc30ad6b",
-      "bytes": 2485135
+      "sha256": "a5f950a63f94195589cd160b0a238aa525e906253bcb45734fd5edc1d297a725",
+      "bytes": 2502723
     },
     {
       "path": "outputs/research/customer_evidence_20261106/historical-checks.json",
@@ -171,8 +171,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "dc4944cc02b72f1f61d21ac9b66acf8b79a45baee978bba03c2e064175055401",
-      "bytes": 3706
+      "sha256": "37cce73d14c934c25fbb9c44a10f1074bc38bd6d2ae62ed1d89c4bb83ffe8916",
+      "bytes": 4124
     },
     {
       "path": "references/cloud-model-method.md",
@@ -213,6 +213,11 @@
       "path": "references/model-mapping.md",
       "sha256": "638f2b348a12f3cc7fba2a16428b2db0af1829e0b5b23a9a4dee7208a49791be",
       "bytes": 5219
+    },
+    {
+      "path": "references/ms-implied-baseline.md",
+      "sha256": "39a99c47ea572096728d3107fec3a9b5df123525b9e63a2771dd27c45953a85a",
+      "bytes": 1967
     },
     {
       "path": "references/profit-model-gap-audit-20261106.md",
@@ -266,8 +271,8 @@
     },
     {
       "path": "scripts/build_cloud_inputs.py",
-      "sha256": "118700c7593f51460bf5807d63a9bcbaa70870b8f0a0b369207008a2abb388ce",
-      "bytes": 49750
+      "sha256": "6175c1edef52c5ad45b76a765ad92a1fa8aefdf6925958a5462f56569325a48c",
+      "bytes": 49845
     },
     {
       "path": "scripts/build_dashboard.py",
@@ -275,9 +280,14 @@
       "bytes": 15097
     },
     {
+      "path": "scripts/build_ms_baseline.mjs",
+      "sha256": "72ad10fe64941d85c892fa5d3c7e7684c60e6e01c9f9dfef3dc74d668c8c0be5",
+      "bytes": 3836
+    },
+    {
       "path": "scripts/build_profit_inputs.py",
-      "sha256": "e2e4277399eebb30eac13f952a22af6310cd5220151e60319466d8ada8f7cf6d",
-      "bytes": 6830
+      "sha256": "b027852a7e21dcfa4bf43fefec2bb14ae4698e5c300b872d6bd2608a0cc5eac1",
+      "bytes": 8138
     },
     {
       "path": "scripts/build_research.py",
@@ -301,8 +311,8 @@
     },
     {
       "path": "scripts/cloud-model.mjs",
-      "sha256": "3ac6832bdedc5607383b4a5b3ebbfae156824f6223a27c1a9e3dd9a21b223de1",
-      "bytes": 31196
+      "sha256": "cd8bcd7c06e1dc6fd5b74c0a50d539bf67d4a6d3a91092119509f08f94bd9814",
+      "bytes": 33621
     },
     {
       "path": "scripts/extract_nvidia_evidence.py",
@@ -326,13 +336,13 @@
     },
     {
       "path": "scripts/package_public.py",
-      "sha256": "0cbf6f18a72fb314b06ca8a8984965adaef8f03da634b3c3cde247a7a67563e5",
-      "bytes": 4273
+      "sha256": "c38a8652af6380b75ed4060b737be86ac851d64d0db093f62478939a3d9f8240",
+      "bytes": 4270
     },
     {
       "path": "scripts/profit-model.mjs",
-      "sha256": "a6e6244171349635c38f597e0b9dddcc03fa4f1f9c6465840e58bba969ab3546",
-      "bytes": 8390
+      "sha256": "b0f3f42fd6072988062a4a1c0c35c6201231c811432e822d79198df736d5afe2",
+      "bytes": 9402
     },
     {
       "path": "scripts/research_anthropic.py",
@@ -396,13 +406,13 @@
     },
     {
       "path": "SKILL.md",
-      "sha256": "be05a04af31c837bfcc7f44129232ffea302fe81175f564eff63ad44c418e325",
-      "bytes": 15059
+      "sha256": "228e1802c2dacc0c7cce01cd322dd3a7d6cf8faad88ab9f6ba7bffdef4dd26d2",
+      "bytes": 15516
     },
     {
       "path": "tests/dom-cloud.cjs",
-      "sha256": "e6f7035c4b17886573c15017762fe77f0c2868cb0febe270aedde6342a06b5dc",
-      "bytes": 19448
+      "sha256": "e6c89b526b571ada2c3f12901ad1401386f0af7849b103922deaf41dc6e47339",
+      "bytes": 20439
     },
     {
       "path": "tests/dom-smoke.cjs",
@@ -420,9 +430,14 @@
       "bytes": 9482
     },
     {
+      "path": "tests/test_ms_baseline.mjs",
+      "sha256": "bb8782f4d0f0389afcf31532adf59d6e36209899e2a3ec325d78e3962f06d5e8",
+      "bytes": 2184
+    },
+    {
       "path": "tests/test_profit_model.mjs",
-      "sha256": "89a68f168e55e87ce7e788e8e611796011120589db366b30e2f847a3bb75c648",
-      "bytes": 3372
+      "sha256": "26b55ce1f2572ec1d87eed51ca35c721dc2548db1cb3e22e399f5966417327c4",
+      "bytes": 3398
     },
     {
       "path": "tests/test_review_analysis.mjs",

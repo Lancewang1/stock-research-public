@@ -1947,7 +1947,7 @@
       "demandBuild": {
         "formula": "computeBudgetBn = quarterlyRevenueProxyBn × inferenceProcurementCostRate + trainingBudgetBn",
         "quarterlyRevenueProxyBn": [
-          10.0,
+          10,
           11.5,
           13.224999999999998,
           15.208749999999998,
@@ -2042,21 +2042,25 @@
   },
   "parameters": {
     "enterprise": {
+      "googleOwnedAssetShare": 0.9,
       "baseRevenueBn": 18.672714325399827,
       "sequentialGrowth": [
-        0.07294011358226593,
-        0.03027996349763551,
-        0.07907380292603361,
-        0.07227144857169332,
-        0.07294011358226593
+        0.135077192446575,
+        0.20679151032210297,
+        0.1906345896343864,
+        0.4167598157326704,
+        0.013119880680173335
       ],
-      "googleOwnedAssetShare": 0.9,
-      "status": "historically_calibrated_research_proxy",
+      "status": "ms_implied_assumption",
       "baseRevenueReadonly": true,
       "note": "基期余额含Workspace、普通企业GCP与未单列业务；它是官方总额减研究拆分的残差，不能称已披露企业收入。"
     },
     "customers": {
       "Anthropic": {
+        "googleOwnedAssetShare": 0.8,
+        "reservedBillingFraction": 0,
+        "serviceMethod": "contract",
+        "budgetMethod": "revenueAndTraining",
         "computeBudgetBn": [
           14.885306026622347,
           17.118101930615694,
@@ -2071,15 +2075,13 @@
           1.4,
           1.8,
           2.4,
-          3.0,
+          3,
           3.6
         ],
-        "googleOwnedAssetShare": 0.8,
         "baseRevenueBn": 2.208,
         "utilization": 0.8,
         "netServicePriceBnPerGWQuarter": 2.7,
-        "baseAverageAcceptedCapacityGW": 1.0,
-        "budgetMethod": "revenueAndTraining",
+        "baseAverageAcceptedCapacityGW": 1,
         "commercialRevenueRunRateBn": [
           59.54122410648938,
           68.47240772246278,
@@ -2095,8 +2097,6 @@
           13.583213881943552,
           15.620695964235084
         ],
-        "serviceMethod": "contract",
-        "reservedBillingFraction": 0,
         "status": "research_assumption",
         "sourceRefs": [
           "chain-anthropic-google-20251023",
@@ -2110,6 +2110,10 @@
         "baseCapacityBasis": "基期拆分收入/(92天/90×研究利用率0.8×研究净价2.7)，仅是锁定尺度容量，不是已披露/已验收实绩。"
       },
       "OpenAI": {
+        "googleOwnedAssetShare": 1,
+        "reservedBillingFraction": 0,
+        "serviceMethod": "contract",
+        "budgetMethod": "revenueAndTraining",
         "computeBudgetBn": [
           11.25,
           12.9375,
@@ -2125,17 +2129,15 @@
           0.65,
           0.75,
           0.85,
-          1.0
+          1
         ],
-        "googleOwnedAssetShare": 1.0,
         "baseRevenueBn": 0.8390400000000001,
         "utilization": 0.8,
         "netServicePriceBnPerGWQuarter": 2.7,
         "baseAverageAcceptedCapacityGW": 0.38,
-        "budgetMethod": "revenueAndTraining",
         "commercialRevenueRunRateBn": [
-          40.0,
-          46.0,
+          40,
+          46,
           52.89999999999999,
           60.834999999999994,
           69.96024999999997
@@ -2148,8 +2150,6 @@
           10.265906249999999,
           11.805792187499994
         ],
-        "serviceMethod": "contract",
-        "reservedBillingFraction": 0,
         "status": "research_assumption",
         "sourceRefs": [
           "cloud-openai-subprocessors",
@@ -2162,6 +2162,10 @@
         "baseCapacityBasis": "基期拆分收入/(92天/90×研究利用率0.8×研究净价2.7)，仅是锁定尺度容量，不是已披露/已验收实绩。"
       },
       "otherAI": {
+        "googleOwnedAssetShare": 0.8,
+        "reservedBillingFraction": 0,
+        "serviceMethod": "contract",
+        "budgetMethod": "revenueAndTraining",
         "computeBudgetBn": [
           14.349812107392756,
           16.1173756251136,
@@ -2179,12 +2183,10 @@
           3.3,
           3.8
         ],
-        "googleOwnedAssetShare": 0.8,
         "baseRevenueBn": 3.917498705318222,
         "utilization": 0.8,
         "netServicePriceBnPerGWQuarter": 2.7,
         "baseAverageAcceptedCapacityGW": 1.7742294861042671,
-        "budgetMethod": "revenueAndTraining",
         "commercialRevenueRunRateBn": [
           78.92396659066016,
           88.6455659381248,
@@ -2200,8 +2202,6 @@
           9.14962020616156,
           10.276640877678286
         ],
-        "serviceMethod": "contract",
-        "reservedBillingFraction": 0,
         "status": "research_assumption",
         "sourceRefs": [
           "cloud-alphabet-2026q3",
@@ -2214,8 +2214,8 @@
       }
     },
     "externalTPU": {
-      "baseRevenueBn": 5.07174696928195,
       "recognitionFraction": 1,
+      "baseRevenueBn": 5.07174696928195,
       "capacitySoldGW": [
         0.5,
         0.6,
@@ -2228,7 +2228,7 @@
         14.5,
         15,
         15.5,
-        16.0
+        16
       ],
       "status": "broker_anchored_research_assumption",
       "baseRevenueReadonly": true,
@@ -2239,15 +2239,16 @@
       "note": "只算Google对外TPU系统销售的收入情景，与TPU云服务分开；价格参考BARC外售行的GW×单价结构，原行名TPUaaS存在语义歧义，不是公司披露成交价。"
     },
     "capex": {
+      "paymentLagQuarters": 0,
+      "nonCloudSequentialGrowth": 0,
       "baseCashCapexBn": 51.355,
       "equipmentShare": 0.7,
       "nonCloudShare": 0.4,
       "equipmentIntensityBnPerIncrementalServiceRevenueBn": 1.7663929592882,
       "facilityIntensityBnPerIncrementalServiceRevenueBn": 0.7570255539806573,
       "enterpriseExpansionCalibrationShare": 0.4,
-      "aiEquipmentCostBnPerGW": 12.0,
-      "aiFacilityCostBnPerGW": 4.0,
-      "paymentLagQuarters": 0,
+      "aiEquipmentCostBnPerGW": 12,
+      "aiFacilityCostBnPerGW": 4,
       "equipmentPaymentLagQuarters": 0,
       "facilityPaymentLagQuarters": 0,
       "maintenanceRatio": 0.3,
@@ -2279,7 +2280,7 @@
       "unit": "ratio",
       "step": 0.005,
       "group": "快捷调整",
-      "basis": "调整enterprise.sequentialGrowth，基准来自历史季节性尺度。",
+      "basis": "相对MS隐含的逐季企业增长加减；修改后不自动对齐MS。",
       "sourceRefs": [
         "cloud-research-assumptions"
       ],
@@ -2433,151 +2434,81 @@
     {
       "path": "enterprise.sequentialGrowth.0",
       "label": "2026Q4企业/Workspace环比增速",
-      "value": 0.07294011358226593,
-      "min": -0.05,
-      "max": 0.3,
+      "value": 0.135077192446575,
+      "min": -0.99,
+      "max": 2,
       "unit": "ratio",
       "step": 0.005,
       "group": "企业与Workspace",
-      "basis": "2023–2024每个季度的Cloud环比增长中位数；两年各两点，作为企业/Workspace成熟业务增长的尺度代理，非已披露细分增速。",
+      "basis": "其他企业服务环比增速逐季反推，使Cloud收入等于MS；Workspace/传统GCP内部比例仍是结构假设。",
       "sourceRefs": [
-        "cloud-alphabet-2023q1",
-        "cloud-alphabet-2023q2",
-        "cloud-alphabet-2023q3",
-        "cloud-alphabet-2023q4",
-        "cloud-alphabet-2024q1",
-        "cloud-alphabet-2024q2",
-        "cloud-alphabet-2024q3",
-        "cloud-alphabet-2024q4",
-        "cloud-alphabet-2025q1",
-        "cloud-alphabet-2025q2",
-        "cloud-alphabet-2025q3",
-        "cloud-alphabet-2025q4",
-        "cloud-alphabet-2026q1",
-        "cloud-alphabet-2026q2",
-        "cloud-alphabet-2026q3"
+        "cloud-ms-implied-baseline"
       ],
-      "status": "historically_calibrated_proxy",
+      "status": "ms_implied_assumption",
       "readonly": false
     },
     {
       "path": "enterprise.sequentialGrowth.1",
       "label": "2027Q1企业/Workspace环比增速",
-      "value": 0.03027996349763551,
-      "min": -0.05,
-      "max": 0.3,
+      "value": 0.20679151032210297,
+      "min": -0.99,
+      "max": 2,
       "unit": "ratio",
       "step": 0.005,
       "group": "企业与Workspace",
-      "basis": "2023–2024每个季度的Cloud环比增长中位数；两年各两点，作为企业/Workspace成熟业务增长的尺度代理，非已披露细分增速。",
+      "basis": "其他企业服务环比增速逐季反推，使Cloud收入等于MS；Workspace/传统GCP内部比例仍是结构假设。",
       "sourceRefs": [
-        "cloud-alphabet-2023q1",
-        "cloud-alphabet-2023q2",
-        "cloud-alphabet-2023q3",
-        "cloud-alphabet-2023q4",
-        "cloud-alphabet-2024q1",
-        "cloud-alphabet-2024q2",
-        "cloud-alphabet-2024q3",
-        "cloud-alphabet-2024q4",
-        "cloud-alphabet-2025q1",
-        "cloud-alphabet-2025q2",
-        "cloud-alphabet-2025q3",
-        "cloud-alphabet-2025q4",
-        "cloud-alphabet-2026q1",
-        "cloud-alphabet-2026q2",
-        "cloud-alphabet-2026q3"
+        "cloud-ms-implied-baseline"
       ],
-      "status": "historically_calibrated_proxy",
+      "status": "ms_implied_assumption",
       "readonly": false
     },
     {
       "path": "enterprise.sequentialGrowth.2",
       "label": "2027Q2企业/Workspace环比增速",
-      "value": 0.07907380292603361,
-      "min": -0.05,
-      "max": 0.3,
+      "value": 0.1906345896343864,
+      "min": -0.99,
+      "max": 2,
       "unit": "ratio",
       "step": 0.005,
       "group": "企业与Workspace",
-      "basis": "2023–2024每个季度的Cloud环比增长中位数；两年各两点，作为企业/Workspace成熟业务增长的尺度代理，非已披露细分增速。",
+      "basis": "其他企业服务环比增速逐季反推，使Cloud收入等于MS；Workspace/传统GCP内部比例仍是结构假设。",
       "sourceRefs": [
-        "cloud-alphabet-2023q1",
-        "cloud-alphabet-2023q2",
-        "cloud-alphabet-2023q3",
-        "cloud-alphabet-2023q4",
-        "cloud-alphabet-2024q1",
-        "cloud-alphabet-2024q2",
-        "cloud-alphabet-2024q3",
-        "cloud-alphabet-2024q4",
-        "cloud-alphabet-2025q1",
-        "cloud-alphabet-2025q2",
-        "cloud-alphabet-2025q3",
-        "cloud-alphabet-2025q4",
-        "cloud-alphabet-2026q1",
-        "cloud-alphabet-2026q2",
-        "cloud-alphabet-2026q3"
+        "cloud-ms-implied-baseline"
       ],
-      "status": "historically_calibrated_proxy",
+      "status": "ms_implied_assumption",
       "readonly": false
     },
     {
       "path": "enterprise.sequentialGrowth.3",
       "label": "2027Q3企业/Workspace环比增速",
-      "value": 0.07227144857169332,
-      "min": -0.05,
-      "max": 0.3,
+      "value": 0.4167598157326704,
+      "min": -0.99,
+      "max": 2,
       "unit": "ratio",
       "step": 0.005,
       "group": "企业与Workspace",
-      "basis": "2023–2024每个季度的Cloud环比增长中位数；两年各两点，作为企业/Workspace成熟业务增长的尺度代理，非已披露细分增速。",
+      "basis": "其他企业服务环比增速逐季反推，使Cloud收入等于MS；Workspace/传统GCP内部比例仍是结构假设。",
       "sourceRefs": [
-        "cloud-alphabet-2023q1",
-        "cloud-alphabet-2023q2",
-        "cloud-alphabet-2023q3",
-        "cloud-alphabet-2023q4",
-        "cloud-alphabet-2024q1",
-        "cloud-alphabet-2024q2",
-        "cloud-alphabet-2024q3",
-        "cloud-alphabet-2024q4",
-        "cloud-alphabet-2025q1",
-        "cloud-alphabet-2025q2",
-        "cloud-alphabet-2025q3",
-        "cloud-alphabet-2025q4",
-        "cloud-alphabet-2026q1",
-        "cloud-alphabet-2026q2",
-        "cloud-alphabet-2026q3"
+        "cloud-ms-implied-baseline"
       ],
-      "status": "historically_calibrated_proxy",
+      "status": "ms_implied_assumption",
       "readonly": false
     },
     {
       "path": "enterprise.sequentialGrowth.4",
       "label": "2027Q4企业/Workspace环比增速",
-      "value": 0.07294011358226593,
-      "min": -0.05,
-      "max": 0.3,
+      "value": 0.013119880680173335,
+      "min": -0.99,
+      "max": 2,
       "unit": "ratio",
       "step": 0.005,
       "group": "企业与Workspace",
-      "basis": "2023–2024每个季度的Cloud环比增长中位数；两年各两点，作为企业/Workspace成熟业务增长的尺度代理，非已披露细分增速。",
+      "basis": "其他企业服务环比增速逐季反推，使Cloud收入等于MS；Workspace/传统GCP内部比例仍是结构假设。",
       "sourceRefs": [
-        "cloud-alphabet-2023q1",
-        "cloud-alphabet-2023q2",
-        "cloud-alphabet-2023q3",
-        "cloud-alphabet-2023q4",
-        "cloud-alphabet-2024q1",
-        "cloud-alphabet-2024q2",
-        "cloud-alphabet-2024q3",
-        "cloud-alphabet-2024q4",
-        "cloud-alphabet-2025q1",
-        "cloud-alphabet-2025q2",
-        "cloud-alphabet-2025q3",
-        "cloud-alphabet-2025q4",
-        "cloud-alphabet-2026q1",
-        "cloud-alphabet-2026q2",
-        "cloud-alphabet-2026q3"
+        "cloud-ms-implied-baseline"
       ],
-      "status": "historically_calibrated_proxy",
+      "status": "ms_implied_assumption",
       "readonly": false
     },
     {
@@ -2903,9 +2834,9 @@
     {
       "path": "customers.Anthropic.averageAcceptedCapacityGW.3",
       "label": "2027Q3平均验收且可收费容量",
-      "value": 3.0,
+      "value": 3,
       "min": 0,
-      "max": 6.0,
+      "max": 6,
       "unit": "GW",
       "step": 0.05,
       "group": "Anthropic",
@@ -3146,9 +3077,9 @@
     {
       "path": "customers.OpenAI.commercialRevenueRunRateBn.0",
       "label": "2026Q4平均年化收入运行率情景",
-      "value": 40.0,
+      "value": 40,
       "min": 0,
-      "max": 120.0,
+      "max": 120,
       "unit": "USD bn annualized",
       "step": 1,
       "group": "OpenAI",
@@ -3218,9 +3149,9 @@
     {
       "path": "customers.OpenAI.commercialRevenueRunRateBn.1",
       "label": "2027Q1平均年化收入运行率情景",
-      "value": 46.0,
+      "value": 46,
       "min": 0,
-      "max": 138.0,
+      "max": 138,
       "unit": "USD bn annualized",
       "step": 1,
       "group": "OpenAI",
@@ -3470,7 +3401,7 @@
     {
       "path": "customers.OpenAI.averageAcceptedCapacityGW.4",
       "label": "2027Q4平均验收且可收费容量",
-      "value": 1.0,
+      "value": 1,
       "min": 0,
       "max": 5,
       "unit": "GW",
@@ -3542,7 +3473,7 @@
     {
       "path": "customers.OpenAI.googleOwnedAssetShare",
       "label": "服务中Google自有资产比例",
-      "value": 1.0,
+      "value": 1,
       "min": 0,
       "max": 1,
       "unit": "ratio",
@@ -4207,7 +4138,7 @@
     {
       "path": "externalTPU.netPriceBnPerGW.4",
       "label": "2027Q4对外硬件净收入/GW",
-      "value": 16.0,
+      "value": 16,
       "min": 5,
       "max": 25,
       "unit": "USD bn/GW",
@@ -4325,7 +4256,7 @@
     {
       "path": "capex.aiEquipmentCostBnPerGW",
       "label": "AI自有设备采购成本/GW",
-      "value": 12.0,
+      "value": 12,
       "min": 4,
       "max": 24,
       "unit": "USD bn/GW",
@@ -4343,7 +4274,7 @@
     {
       "path": "capex.aiFacilityCostBnPerGW",
       "label": "AI自有机房及配套成本/GW",
-      "value": 4.0,
+      "value": 4,
       "min": 1,
       "max": 10,
       "unit": "USD bn/GW",
@@ -4424,7 +4355,8 @@
       "sourceRefs": [
         "cloud-ms-model"
       ],
-      "role": "预测完成后比较，不作为自主预测输入或拟合目标。"
+      "role": "预测完成后比较，不作为自主预测输入或拟合目标。",
+      "note": "MS作为条件反推目标，不代表其披露客户经营假设。"
     },
     "barclays": {
       "asOf": "2026-07-24",
@@ -4552,7 +4484,7 @@
       ]
     }
   },
-  "comparisonsNote": "机构模型日期不同；BARC部分驱动提供尺度锚，但其Cloud结果未用于拟合。MS、GS和JPM只在独立预测后比较。",
+  "comparisonsNote": "MS作为收入目标反推企业增长；GS/JPM用于对照。客户预算、份额和TPU输入仍为研究参数。",
   "capexCostCrossChecks": {
     "barclays2026Q4ExpensePerSoldGWBn": 10.714285714285715,
     "barclays2027ExpensePerSoldGWBn": 13.732142857142854,
@@ -4907,6 +4839,13 @@
       "sha256": "1656c599b80a37bc5157856d706733c5b2eab3db85210f5282a4c2e7bdfa48ae",
       "reviewedAt": "2026-11-05",
       "useScope": "用户提供的内部研究材料；卖方原件，不等同公司事实"
+    },
+    {
+      "id": "cloud-ms-implied-baseline",
+      "title": "MS目标反推的企业服务增长基准",
+      "date": "2026-10-29",
+      "kind": "conditional_inverse_calculation",
+      "note": "这是在固定条件下反推的可行解，不是MS披露的经营假设，也不是独立预测；用户修改后不自动重拟合。"
     }
   ],
   "scenarioPresets": {
@@ -4955,11 +4894,12 @@
     "供应商回归历史样本有限，未证明增加信号能改善预测；整体Cloud回测不验证客户拆分或TPU项目收入。",
     "现金capex强度有集团自用AI与提前建设的混合影响；非Cloud基准固定，未自动预测Google自身AI扩张，且季度付款有波动；没有拟合MS来消除差异。",
     "Broadcom总收入在2023年收购VMware后口径变化；供应商总收入并非同质AI供给指标，回归只做探索性留出对照。",
-    "2021比较值来自2022官方发布，availability严格使用取得该值的发布日，未伪装为2021实时数据。"
+    "2021比较值来自2022官方发布，availability严格使用取得该值的发布日，未伪装为2021实时数据。",
+    "当前默认以MS为收入基准；AI/TPU固定假设不由MS唯一识别，企业增长承担剩余差额。"
   ],
   "generatedAt": "2026-11-06T03:53:41.649682+00:00",
   "allocationSensitivity": {
-    "method": "官方基期Cloud总额固定，仅替换未披露的客户/硬件分摊并重算基期容量；未来各客户预算、交付、价格保持不变。不是概率区间或历史验证。",
+    "method": "以下为切换MS基准前保存的原研究情景分摊测试，不代表当前MS基准结果。",
     "runs": [
       {
         "id": "low-named-customer-allocation",
@@ -5091,5 +5031,362 @@
         ]
       }
     ]
+  },
+  "researchParameters": {
+    "enterprise": {
+      "baseRevenueBn": 18.672714325399827,
+      "sequentialGrowth": [
+        0.07294011358226593,
+        0.03027996349763551,
+        0.07907380292603361,
+        0.07227144857169332,
+        0.07294011358226593
+      ],
+      "googleOwnedAssetShare": 0.9,
+      "status": "historically_calibrated_research_proxy",
+      "baseRevenueReadonly": true,
+      "note": "基期余额含Workspace、普通企业GCP与未单列业务；它是官方总额减研究拆分的残差，不能称已披露企业收入。"
+    },
+    "customers": {
+      "Anthropic": {
+        "computeBudgetBn": [
+          14.885306026622347,
+          17.118101930615694,
+          19.685817220208044,
+          22.638689803239252,
+          26.03449327372514
+        ],
+        "trainingShare": 0.6,
+        "googleTrainingShare": 0.3,
+        "googleInferenceShare": 0.25,
+        "averageAcceptedCapacityGW": [
+          1.4,
+          1.8,
+          2.4,
+          3,
+          3.6
+        ],
+        "googleOwnedAssetShare": 0.8,
+        "baseRevenueBn": 2.208,
+        "utilization": 0.8,
+        "netServicePriceBnPerGWQuarter": 2.7,
+        "baseAverageAcceptedCapacityGW": 1,
+        "budgetMethod": "revenueAndTraining",
+        "commercialRevenueRunRateBn": [
+          59.54122410648938,
+          68.47240772246278,
+          78.74326888083219,
+          90.55475921295702,
+          104.13797309490056
+        ],
+        "inferenceCostRate": 0.4,
+        "trainingBudgetBn": [
+          8.931183615973408,
+          10.270861158369415,
+          11.811490332124826,
+          13.583213881943552,
+          15.620695964235084
+        ],
+        "serviceMethod": "contract",
+        "reservedBillingFraction": 0,
+        "status": "research_assumption",
+        "sourceRefs": [
+          "chain-anthropic-google-20251023",
+          "chain-anthropic-google-20260406",
+          "chain-anthropic-series-h-20260528",
+          "cloud-research-assumptions"
+        ],
+        "baseRevenueStatus": "estimated_allocation_not_disclosed",
+        "baseRevenueReadonly": true,
+        "baseAverageAcceptedCapacityReadonly": true,
+        "baseCapacityBasis": "基期拆分收入/(92天/90×研究利用率0.8×研究净价2.7)，仅是锁定尺度容量，不是已披露/已验收实绩。"
+      },
+      "OpenAI": {
+        "computeBudgetBn": [
+          11.25,
+          12.9375,
+          14.878124999999997,
+          17.109843749999996,
+          19.676320312499993
+        ],
+        "trainingShare": 0.6,
+        "googleTrainingShare": 0.06,
+        "googleInferenceShare": 0.11,
+        "averageAcceptedCapacityGW": [
+          0.55,
+          0.65,
+          0.75,
+          0.85,
+          1
+        ],
+        "googleOwnedAssetShare": 1,
+        "baseRevenueBn": 0.8390400000000001,
+        "utilization": 0.8,
+        "netServicePriceBnPerGWQuarter": 2.7,
+        "baseAverageAcceptedCapacityGW": 0.38,
+        "budgetMethod": "revenueAndTraining",
+        "commercialRevenueRunRateBn": [
+          40,
+          46,
+          52.89999999999999,
+          60.834999999999994,
+          69.96024999999997
+        ],
+        "inferenceCostRate": 0.45,
+        "trainingBudgetBn": [
+          6.749999999999999,
+          7.762499999999999,
+          8.926874999999997,
+          10.265906249999999,
+          11.805792187499994
+        ],
+        "serviceMethod": "contract",
+        "reservedBillingFraction": 0,
+        "status": "research_assumption",
+        "sourceRefs": [
+          "cloud-openai-subprocessors",
+          "cloud-openai-business-scale",
+          "cloud-research-assumptions"
+        ],
+        "baseRevenueStatus": "estimated_allocation_not_disclosed",
+        "baseRevenueReadonly": true,
+        "baseAverageAcceptedCapacityReadonly": true,
+        "baseCapacityBasis": "基期拆分收入/(92天/90×研究利用率0.8×研究净价2.7)，仅是锁定尺度容量，不是已披露/已验收实绩。"
+      },
+      "otherAI": {
+        "computeBudgetBn": [
+          14.349812107392756,
+          16.1173756251136,
+          18.102661909223013,
+          20.33248934702569,
+          22.836979728173972
+        ],
+        "trainingShare": 0.45,
+        "googleTrainingShare": 0.24,
+        "googleInferenceShare": 0.3,
+        "averageAcceptedCapacityGW": [
+          1.9,
+          2.3,
+          2.8,
+          3.3,
+          3.8
+        ],
+        "googleOwnedAssetShare": 0.8,
+        "baseRevenueBn": 3.917498705318222,
+        "utilization": 0.8,
+        "netServicePriceBnPerGWQuarter": 2.7,
+        "baseAverageAcceptedCapacityGW": 1.7742294861042671,
+        "budgetMethod": "revenueAndTraining",
+        "commercialRevenueRunRateBn": [
+          78.92396659066016,
+          88.6455659381248,
+          99.56464050072657,
+          111.82869140864129,
+          125.60338850495684
+        ],
+        "inferenceCostRate": 0.4,
+        "trainingBudgetBn": [
+          6.45741544832674,
+          7.25281903130112,
+          8.146197859150355,
+          9.14962020616156,
+          10.276640877678286
+        ],
+        "serviceMethod": "contract",
+        "reservedBillingFraction": 0,
+        "status": "research_assumption",
+        "sourceRefs": [
+          "cloud-alphabet-2026q3",
+          "cloud-research-assumptions"
+        ],
+        "baseRevenueStatus": "estimated_allocation_not_disclosed",
+        "baseRevenueReadonly": true,
+        "baseAverageAcceptedCapacityReadonly": true,
+        "baseCapacityBasis": "基期拆分收入/(92天/90×研究利用率0.8×研究净价2.7)，仅是锁定尺度容量，不是已披露/已验收实绩。"
+      }
+    },
+    "externalTPU": {
+      "baseRevenueBn": 5.07174696928195,
+      "recognitionFraction": 1,
+      "capacitySoldGW": [
+        0.5,
+        0.6,
+        0.75,
+        0.9,
+        1.05
+      ],
+      "netPriceBnPerGW": [
+        14.2857142857,
+        14.5,
+        15,
+        15.5,
+        16
+      ],
+      "status": "broker_anchored_research_assumption",
+      "baseRevenueReadonly": true,
+      "sourceRefs": [
+        "local-googl-barc-20260724",
+        "cloud-research-assumptions"
+      ],
+      "note": "只算Google对外TPU系统销售的收入情景，与TPU云服务分开；价格参考BARC外售行的GW×单价结构，原行名TPUaaS存在语义歧义，不是公司披露成交价。"
+    },
+    "capex": {
+      "baseCashCapexBn": 51.355,
+      "equipmentShare": 0.7,
+      "nonCloudShare": 0.4,
+      "equipmentIntensityBnPerIncrementalServiceRevenueBn": 1.7663929592882,
+      "facilityIntensityBnPerIncrementalServiceRevenueBn": 0.7570255539806573,
+      "enterpriseExpansionCalibrationShare": 0.4,
+      "aiEquipmentCostBnPerGW": 12,
+      "aiFacilityCostBnPerGW": 4,
+      "paymentLagQuarters": 0,
+      "equipmentPaymentLagQuarters": 0,
+      "facilityPaymentLagQuarters": 0,
+      "maintenanceRatio": 0.3,
+      "status": "historically_calibrated_research_proxy",
+      "baseCashCapexReadonly": true,
+      "calibrationFormula": "总扩容强度=最新现金capex×(1-非Cloud比例)×(1-维持比例)/(最近4季Cloud收入环比增量均值×基期服务自有资产比例)；其中40%作为企业增量收入强度，再按设备70%/设施30%拆分。AI客户独立使用自有验收GW增量×每GW设备/设施成本。",
+      "note": "非Cloud40%、维持30%、设备70%、企业强度分摊40%、自有资产比例及AI每GW设备12/设施4bn均为研究情景，不是分部或采购成本披露。集团历史只能校准规模，不能识别Cloud因果资本成本；AI预算/售价/利用率变化不直接改变投资；不含外售TPU库存成本。"
+    },
+    "global": {
+      "enterpriseGrowthAdjustment": 0,
+      "customerBudgetMultiplier": 1,
+      "googleShareMultiplier": 1,
+      "capacityMultiplier": 1,
+      "utilizationMultiplier": 1,
+      "netPriceMultiplier": 1,
+      "tpuVolumeMultiplier": 1,
+      "equipmentCostMultiplier": 1,
+      "facilityCostMultiplier": 1,
+      "nonCloudCapexMultiplier": 1
+    }
+  },
+  "msBaseline": {
+    "version": 1,
+    "broker": "Morgan Stanley",
+    "publicationDate": "2026-10-29",
+    "method": "enterprise_residual",
+    "fixed": "AI客户预算、Google份额、容量、单价及独立TPU交付沿原研究输入；它们未被MS总额唯一识别。",
+    "solved": "其他企业服务环比增速逐季反推，使Cloud收入等于MS；Workspace/传统GCP内部比例仍是结构假设。",
+    "originalResearchRows": [
+      {
+        "period": "2026Q4",
+        "cloudRevenueBn": 35.086260077351916,
+        "enterpriseRevenueBn": 20.034704229183692
+      },
+      {
+        "period": "2027Q1",
+        "cloudRevenueBn": 38.66439788758531,
+        "enterpriseRevenueBn": 20.6413543419293
+      },
+      {
+        "period": "2027Q2",
+        "cloudRevenueBn": 44.89742142850733,
+        "enterpriseRevenueBn": 22.273544727289448
+      },
+      {
+        "period": "2027Q3",
+        "cloudRevenueBn": 51.09167630620206,
+        "enterpriseRevenueBn": 23.88328606955706
+      },
+      {
+        "period": "2027Q4",
+        "cloudRevenueBn": 57.523594875622834,
+        "enterpriseRevenueBn": 25.6253356681883
+      }
+    ],
+    "rows": [
+      {
+        "period": "2026Q4",
+        "targetRevenueBn": 36.246528,
+        "beforeRevenueBn": 35.086260077351916,
+        "path": "enterprise.sequentialGrowth.0",
+        "value": 0.135077192446575,
+        "bounds": [
+          -0.99,
+          2
+        ],
+        "feasible": true,
+        "status": "feasible",
+        "achievedRevenueBn": 36.246528,
+        "seedGrowth": 0.07294011358226593,
+        "enterpriseRevenueBn": 21.194972151831777,
+        "aiRevenueBn": 7.908698705318223,
+        "tpuRevenueBn": 7.14285714285
+      },
+      {
+        "period": "2027Q1",
+        "targetRevenueBn": 43.600956,
+        "beforeRevenueBn": 39.85979868057866,
+        "path": "enterprise.sequentialGrowth.1",
+        "value": 0.20679151032210297,
+        "bounds": [
+          -0.99,
+          2
+        ],
+        "feasible": true,
+        "status": "feasible",
+        "achievedRevenueBn": 43.600956,
+        "seedGrowth": 0.03027996349763551,
+        "enterpriseRevenueBn": 25.577912454343984,
+        "aiRevenueBn": 9.323043545656013,
+        "tpuRevenueBn": 8.7
+      },
+      {
+        "period": "2027Q2",
+        "targetRevenueBn": 53.07782399999999,
+        "beforeRevenueBn": 50.224331964236,
+        "path": "enterprise.sequentialGrowth.2",
+        "value": 0.1906345896343864,
+        "bounds": [
+          -0.99,
+          2
+        ],
+        "feasible": true,
+        "status": "feasible",
+        "achievedRevenueBn": 53.07782399999999,
+        "seedGrowth": 0.07907380292603361,
+        "enterpriseRevenueBn": 30.45394729878211,
+        "aiRevenueBn": 11.373876701217883,
+        "tpuRevenueBn": 11.25
+      },
+      {
+        "period": "2027Q3",
+        "targetRevenueBn": 70.354319,
+        "beforeRevenueBn": 59.86328842143611,
+        "path": "enterprise.sequentialGrowth.3",
+        "value": 0.4167598157326704,
+        "bounds": [
+          -0.99,
+          2
+        ],
+        "feasible": true,
+        "status": "feasible",
+        "achievedRevenueBn": 70.354319,
+        "seedGrowth": 0.07227144857169332,
+        "enterpriseRevenueBn": 43.145928763355,
+        "aiRevenueBn": 13.258390236645003,
+        "tpuRevenueBn": 13.950000000000001
+      },
+      {
+        "period": "2027Q4",
+        "targetRevenueBn": 75.61025740800001,
+        "beforeRevenueBn": 78.191256915401,
+        "path": "enterprise.sequentialGrowth.4",
+        "value": 0.013119880680173335,
+        "bounds": [
+          -0.99,
+          2
+        ],
+        "feasible": true,
+        "status": "feasible",
+        "achievedRevenueBn": 75.61025740800001,
+        "seedGrowth": 0.07294011358226593,
+        "enterpriseRevenueBn": 43.711998200565475,
+        "aiRevenueBn": 15.098259207434532,
+        "tpuRevenueBn": 16.8
+      }
+    ],
+    "note": "这是在固定条件下反推的可行解，不是MS披露的经营假设，也不是独立预测；用户修改后不自动重拟合。"
   }
 }

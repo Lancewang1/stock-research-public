@@ -4,20 +4,27 @@ function renderProfitPanel(){
   let host=$('#wbProfit');if(!host){host=document.createElement('div');host.id='wbProfit';host.className='wb-extra';$('#tblwrap').insertAdjacentElement('afterend',host);}
   const q=result.quarters.find(q=>q.period===profitPeriod),d=q?.profitDetail,b=CASE.profitModel?.quarters?.[profitPeriod];if(!d)return;
   const p=d.parameters;
+  const implied=WBM.solveMSProfit(b,p);
   const opened=[...host.querySelectorAll('details')].map(x=>x.open);
   const input=(key,label,ratio=false)=>`<label style="display:inline-flex;flex-direction:column;gap:5px;margin:6px;min-width:170px">${esc(label)}<input aria-label="${esc(label)}" type="number" step="any" data-profit="${key}" data-scale="${ratio?100:1}" value="${+(p[key]*(ratio?100:1)).toFixed(6)}" style="width:160px;padding:7px"></label>`;
   const names={workspace:'Workspace',traditional:'传统 GCP',ai:'AI 云服务',tpu:'独立 TPU 交付'};
   const row=(name,x)=>`<tr><td>${name}</td>${['revenue','cogs','grossProfit','rd','sm','ga','operatingIncome'].map(f=>`<td>${bn(x[f],2)}</td>`).join('')}<td>${pf(x.revenue?x.grossProfit/x.revenue:null)}</td><td>${pf(x.revenue?x.operatingIncome/x.revenue:null)}</td></tr>`;
   host.innerHTML=`<h3>Cloud 业务 → 成本 / 折旧 → 集团 EPS</h3><p>选择预测季度 <select id="wbProfitPeriod" aria-label="利润模型季度">${Object.keys(CASE.profitModel.quarters).map(t=>`<option ${t===profitPeriod?'selected':''}>${t}</option>`).join('')}</select>　金额 USD bn；输入金额 USD mn。修改后自动更新上方主表及保存的情景。</p>
-  <p class="note">这是与 MS 基准校准的研究情景，不是独立盈利预测。历史仅保留 Cloud 总额；四块拆分、业务成本率及资产分配尚无直接披露。2028 仅年度延展。</p>
+  <p class="note">默认是 MS 目标反推的条件基准，非独立预测或MS原始经营假设。四块收入与下方MS收入基准一致；额外校准收益为零。固定收入结构、折旧和SBC后，反推统一现金成本倍率。修改任何参数后不自动对齐MS。2028仅年度延展。</p>
+  <div id="wbMSImplied"><h3>MS 基准 → 隐含假设 → 用户情景</h3><p>本季 MS Cloud收入 ${bn(b.cloudRevenue,3)} bn / 营业利润 ${bn(b.cloudOperatingIncome,3)} bn；当前收入 ${bn(q.segments.cloud,3)} bn / 营业利润 ${bn(q.cloudOperatingIncome,3)} bn，利润偏离 ${bn(q.cloudOperatingIncome-b.cloudOperatingIncome,3)} bn。</p>
+  ${input('cloudCashCostMultiplier','Cloud现金成本倍率')}
+  <p>初始反推倍率 <b>${nf(b.parameters.cloudCashCostMultiplier,4)}×</b>。有效直接成本率和经营费用率 = 下方参考费率 × 此倍率；D&A、SBC不乘此倍率。</p>
+  <div class="wb-scroll"><table class="wb-table"><thead><tr><th>业务</th><th>当前有效直接成本率</th><th>当前有效经营费用率</th></tr></thead><tbody>${Object.entries(d.parts).map(([k,x])=>`<tr><td>${names[k]}</td><td>${pf(x.effectiveDirectRate)}</td><td>${pf(x.effectiveOpexRate)}</td></tr>`).join('')}</tbody></table></div>
+  <p>在当前其他假设下，对齐MS Cloud利润所需倍率：<b>${implied.feasible?nf(implied.value,4)+'×':'无可行解'}</b>。公式：（当前Cloud收入 − MS目标利润 − Cloud D&A − Cloud SBC）÷ 倍率为1时的Cloud现金成本。范围0–3×，范围内不代表经济上合理。</p>
+  <button id="wbProfitFitMS" ${implied.feasible?'':'disabled'}>按当前其他假设反推并应用本季成本倍率</button> <button id="wbProfitRestoreMS">本季全部恢复MS基准</button><p class="note">重新反推是明确操作，仅对齐Cloud营业利润，不保证集团EPS回到MS；若主表仍有手动费用覆盖，请查看下方差额。MS Cloud利润本身是分部残差，反推也不能验证其真实性。</p></div>
   <div class="wb-scroll"><table class="wb-table"><thead><tr><th>业务</th><th>收入</th><th>营业成本</th><th>毛利</th><th>研发</th><th>销售</th><th>管理</th><th>营业利润</th><th>毛利率</th><th>营业利润率</th></tr></thead><tbody>${Object.entries(d.parts).map(([k,x])=>row(names[k],x)).join('')}
   <tr><td>未分配成本 / 负值为收益</td><td>—</td><td>—</td><td>—</td><td>${bn(d.cloudUnallocatedCost,2)}</td><td>—</td><td>—</td><td>${bn(-d.cloudUnallocatedCost,2)}</td><td>—</td><td>—</td></tr>${row('Cloud 合计',d.totals)}</tbody></table></div>
-  <p><b>校准依赖：</b>固定未分配项对 Cloud 营业利润贡献 ${bn(-d.cloudUnallocatedCost,2)} bn（${pf(d.totals.operatingIncome?-d.cloudUnallocatedCost/d.totals.operatingIncome:null)}）。此项仅为对齐 MS 的差额，不是已识别的收益来源；为勾稽暂列研发调整。<button id="wbProfitNoResidual">将本季校准项归零测试</button></p>
+  <p>额外未分配项对Cloud利润贡献 ${bn(-d.cloudUnallocatedCost,2)} bn；MS隐含基准默认是0。若手动填入，暂列研发调整，不能当作已识别收益。<button id="wbProfitNoResidual">将本季额外未分配项归零</button></p>
   <p>主表手动费用覆盖：${d.manualOverrides.length?esc(d.manualOverrides.join(' / ')):'无'}；相对业务成本模型的额外成本 ${bn(d.manualCostAdjustment,2)} bn。<button id="wbProfitClearMargins">本季恢复业务成本驱动</button></p>
-  <details open><summary>四块收入与成本假设 · 可编辑</summary><p class="note">Workspace/TPU初始份额来自 Barclays 2026-07-24，按 MS 最新 Cloud 总额缩放；剩余 GCP 按 AI 60% / 传统 40% 起步，仅为研究假设。TPU 的销售与服务边界仍需核实；此处限定独立交付，不能再计云服务收入。所有直接成本率、经营费用率均为研究参数，不是卖方披露毛利率。直接成本和经营费用率不含下方另行分配的折旧摊销与SBC。</p>
+  <details open><summary>四块收入与参考费率 · 可编辑</summary><p class="note">AI客户和TPU沿下方种子假设，其他企业收入反推至MS总额；Workspace/传统GCP的内部比例沿旧结构代理，不由MS总额唯一识别。参考费率是倍率调整前的研究假设，不是MS披露费率；实际生效费率见上表。不含另分配的D&A与SBC。TPU交付与云服务不重复。</p>
   ${Object.keys(names).map(k=>input(k+'Revenue',names[k]+'收入（mn）')+(k==='ai'?'':input(k+'DirectRate',names[k]+'直接成本率 %',true))+input(k+'OpexRate',names[k]+'经营费用率 %',true)).join('')}
-  ${input('aiThirdPartyShare','AI第三方算力收入份额 %',true)}${input('aiThirdPartyCostRate','第三方算力采购成本率 %',true)}${input('aiOwnOperatingRate','自有算力运营成本率 %',true)}${input('cloudUnallocatedCost','固定未分配成本（mn）')}
-  <p class="note">AI直接成本 = AI收入 × [第三方份额 × 采购成本率 + 自有份额 × 自有运营成本率]。采购成本率以第三方业务收入为分母。Barclays第三方采购仅Q1有值，其后空白不当作零。</p></details>
+  ${input('aiThirdPartyShare','AI第三方算力收入份额 %',true)}${input('aiThirdPartyCostRate','第三方算力采购成本率 %',true)}${input('aiOwnOperatingRate','自有算力运营成本率 %',true)}${input('cloudUnallocatedCost','额外未分配成本（默认0，mn）')}
+  <p class="note">AI直接成本 = AI收入 × [第三方份额 × 采购成本率 + 自有份额 × 自有运营成本率] × Cloud现金成本倍率。采购成本率以第三方业务收入为分母。Barclays第三方采购仅Q1有值，其后空白不当作零。</p></details>
   <details><summary>分类资产 / 年限 → 折旧 → COGS与研发</summary><p>服务器基准资产代理 ${bn(b.serverAssets,2)} bn；其他资产代理 ${bn(b.otherAssets,2)} bn。由 MS 折旧与 Barclays 分类构成反推，非已披露资产原值；按固定资产尺度做年限敏感性，非完整新增/退役资产滚动模型。</p>
   ${input('serverLife','服务器年限（年）')}${input('otherLife','其他资产年限（年）')}${input('serverAssetMultiplier','服务器资产倍率')}${input('otherAssetMultiplier','其他资产倍率')}${input('cloudDepShare','集团D&A分配Cloud %',true)}${input('workspaceDepShare','Cloud D&A分配Workspace %',true)}${input('traditionalDepShare','Cloud D&A分配传统GCP %',true)}${input('depreciationCogsShare','D&A分配营业成本 %',true)}
   <p>季度折旧 = 服务器资产×倍率÷年限÷4 + 其他资产×倍率÷年限÷4 = ${bn(d.depreciation,2)} bn；另含摊销 ${bn(d.amortization,2)} bn。Cloud D&A余量分配AI；独立TPU交付不分配自有云折旧。COGS之外的D&A计研发。年限与分配参照Barclays旧模型，Cloud分配为研究假设。已计入成本，不重复扣减。</p></details>
@@ -36,6 +43,9 @@ document.addEventListener('change',event=>{
   try{if(!el.value.trim())throw new Error('参数不可留空');const next=clone(overrides);next[profitPeriod]??={};next[profitPeriod].profit??={};next[profitPeriod].profit[el.dataset.profit]=Number(el.value)/Number(el.dataset.scale);commit(next,'Cloud分业务盈利情景');}catch(e){error(e.message);renderProfitPanel();}
 });
 document.addEventListener('click',event=>{
+  if(['wbProfitFitMS','wbProfitRestoreMS'].includes(event.target.id)){
+    try{const next=clone(overrides);if(event.target.id==='wbProfitRestoreMS')delete next[profitPeriod];else{const q=result.quarters.find(x=>x.period===profitPeriod),solution=WBM.solveMSProfit(CASE.profitModel.quarters[profitPeriod],q.profitDetail.parameters);if(!solution.feasible)throw new Error('当前条件下无可行成本倍率');next[profitPeriod]??={};next[profitPeriod].profit={...next[profitPeriod].profit,...solution.changes};}commit(next,'MS隐含假设 · 用户情景');}catch(e){error(e.message);}return;
+  }
   if(!['wbProfitNoResidual','wbProfitClearMargins'].includes(event.target.id))return;
   try{const next=clone(overrides);next[profitPeriod]??={};if(event.target.id==='wbProfitNoResidual'){next[profitPeriod].profit??={};next[profitPeriod].profit.cloudUnallocatedCost=0;}else for(const k of ['grossMargin','opexRatio','rdRatio','smRatio','gaRatio'])delete next[profitPeriod][k];commit(next,'Cloud盈利敏感性');}catch(e){error(e.message);}
 });

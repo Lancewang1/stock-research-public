@@ -582,7 +582,9 @@ def main():
     if args.wind_query:
         key=read_wind_key(ROOT.parent/'API 整合.txt')
         print(json.dumps(fetch_wind(OUT,args.wind_name,'get_financial_news',args.wind_query,key),ensure_ascii=False))
-    if args.build:print(json.dumps(make_inputs(),ensure_ascii=False))
+    if args.build:
+        print(json.dumps(make_inputs(),ensure_ascii=False))
+        subprocess.run(["node",str(ROOT/"scripts/build_ms_baseline.mjs")],check=True)
 
 
 if __name__=='__main__':main()

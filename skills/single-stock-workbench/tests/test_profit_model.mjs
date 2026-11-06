@@ -8,7 +8,7 @@ const get=(o={})=>calculateCase(c,o).quarters.find(q=>q.period===period);
 const change=p=>get({[period]:{profit:p}}),q=get(),p=q.profitDetail.parameters;
 for(const a of base.quarters){const o=c.quarters.find(x=>x.period===a.period);for(const f of ['revenue','cogs','opex','operatingIncome','netIncome'])near(a[f],o[f]);if(a.profitDetail){const d=a.profitDetail;near(Object.values(d.parts).reduce((s,x)=>s+x.revenue,0),a.segments.cloud);near(Object.values(d.parts).reduce((s,x)=>s+x.operatingIncome,0)-d.cloudUnallocatedCost,a.cloudOperatingIncome);near(d.group.cogs+d.group.opex,a.cogs+a.opex);near(a.cloudOperatingIncome,o.cloudOperatingIncome);}}
 const longer=change({serverLife:8});assert.ok(longer.eps>q.eps);near(longer.operatingIncome-q.operatingIncome,q.depreciation-longer.depreciation);
-const expensive=change({aiThirdPartyCostRate:p.aiThirdPartyCostRate+.1});assert.ok(expensive.eps<q.eps);near(q.operatingIncome-expensive.operatingIncome,p.aiRevenue*p.aiThirdPartyShare*.1);
+const expensive=change({aiThirdPartyCostRate:p.aiThirdPartyCostRate+.1});assert.ok(expensive.eps<q.eps);near(q.operatingIncome-expensive.operatingIncome,p.aiRevenue*p.aiThirdPartyShare*.1*p.cloudCashCostMultiplier);
 const mix=change({workspaceRevenue:p.workspaceRevenue+1000,aiRevenue:p.aiRevenue-1000});near(mix.revenue,q.revenue);assert.notEqual(mix.eps,q.eps);
 const stock=change({sbcMultiplier:1.1});near(q.operatingIncome-stock.operatingIncome,q.sbc*.1);near(stock.adjustedNetIncome,stock.netIncome+stock.sbc-stock.sbcTaxBenefit);
 near(expensive.profitDetail.cloudUnallocatedCost,q.profitDetail.cloudUnallocatedCost);

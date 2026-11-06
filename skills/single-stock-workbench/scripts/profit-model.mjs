@@ -1,6 +1,7 @@
 /** Detailed Cloud profit bridge. USD million. Frozen calibration, no residual refit. */
 export const PROFIT_BUSINESSES=['workspace','traditional','ai','tpu'];
 export const PROFIT_LIMITS={
+  cloudCashCostMultiplier:[0,3],
   searchTacRate:[0,2],networkTacRate:[0,2],youtubeContentRate:[0,2],youtubeSubsShare:[0,1],nflContentCost:[0,1e7],
   workspaceRevenue:[0,1e7],traditionalRevenue:[0,1e7],aiRevenue:[0,1e7],tpuRevenue:[0,1e7],
   workspaceDirectRate:[0,2],traditionalDirectRate:[0,2],tpuDirectRate:[0,2],
@@ -33,18 +34,27 @@ export function cloudProfitBuild(p,base){
   const parts={};
   for(const k of PROFIT_BUSINESSES){
     const r=p[k+'Revenue'],directRate=k==='ai'?p.aiThirdPartyShare*p.aiThirdPartyCostRate+(1-p.aiThirdPartyShare)*p.aiOwnOperatingRate:p[k+'DirectRate'];
-    const direct=r*directRate,opex=r*p[k+'OpexRate'],d=cloudDA*depWeights[k],stock=cloudSbc*(revenue>0?r/revenue:base.parameters[k+'Revenue']/base.cloudRevenue);
+    const cashMultiplier=p.cloudCashCostMultiplier??1;
+    const direct=r*directRate*cashMultiplier,opex=r*p[k+'OpexRate']*cashMultiplier,d=cloudDA*depWeights[k],stock=cloudSbc*(revenue>0?r/revenue:base.parameters[k+'Revenue']/base.cloudRevenue);
     const cogs=direct+d*p.depreciationCogsShare+stock*base.sbcAllocation.cogs;
     const expense={};for(const f of ['rd','sm','ga'])expense[f]=opex*base.opexAllocation[f]+stock*base.sbcAllocation[f]+(f==='rd'?d*(1-p.depreciationCogsShare):0);
     const gp=r-cogs,op=gp-expense.rd-expense.sm-expense.ga;
-    parts[k]={revenue:r,directCost:direct,thirdPartyCost:k==='ai'?r*p.aiThirdPartyShare*p.aiThirdPartyCostRate:0,
-      ownOperatingCost:k==='ai'?r*(1-p.aiThirdPartyShare)*p.aiOwnOperatingRate:0,da:d,sbc:stock,cogs,...expense,grossProfit:gp,operatingIncome:op,
+    parts[k]={revenue:r,directCost:direct,cashOpex:opex,effectiveDirectRate:directRate*cashMultiplier,effectiveOpexRate:p[k+'OpexRate']*cashMultiplier,thirdPartyCost:k==='ai'?r*p.aiThirdPartyShare*p.aiThirdPartyCostRate*cashMultiplier:0,
+      ownOperatingCost:k==='ai'?r*(1-p.aiThirdPartyShare)*p.aiOwnOperatingRate*cashMultiplier:0,da:d,sbc:stock,cogs,...expense,grossProfit:gp,operatingIncome:op,
       grossMargin:r>0?gp/r:null,operatingMargin:r>0?op/r:null};
   }
   const totals={};for(const f of ['revenue','cogs','rd','sm','ga','grossProfit','operatingIncome'])totals[f]=Object.values(parts).reduce((s,x)=>s+x[f],0);
   // Unallocated adjustment stays visible. It is a cost, negative means benefit.
   totals.rd+=p.cloudUnallocatedCost;totals.operatingIncome-=p.cloudUnallocatedCost;
   return {parts,totals,depreciation,amortization,sbc,cloudDA,cloudSbc,parameters:p};
+}
+
+/** One free cost parameter, all other current assumptions fixed; no residual benefit. */
+export function solveMSProfit(base,p){
+  const clean={...p,cloudUnallocatedCost:0,cloudCashCostMultiplier:1},d=cloudProfitBuild(clean,base);
+  const cash=Object.values(d.parts).reduce((s,x)=>s+x.directCost+x.cashOpex,0),allowance=d.totals.revenue-base.cloudOperatingIncome-d.cloudDA-d.cloudSbc;
+  const value=cash>0?allowance/cash:null,feasible=value!==null&&value>=0&&value<=3;
+  return {target:base.cloudOperatingIncome,revenue:d.totals.revenue,cashAtOne:cash,cashAllowance:allowance,value,feasible,bounds:[0,3],status:cash<=0?'non_identifiable':feasible?'feasible':'out_of_range',changes:feasible?{cloudCashCostMultiplier:value,cloudUnallocatedCost:0}:null};
 }
 export function nonCloudDirect(p,segments){
   if(!segments||!Number.isFinite(p.searchTacRate))return null;

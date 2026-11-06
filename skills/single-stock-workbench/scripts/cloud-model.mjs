@@ -257,7 +257,7 @@ function run(data,overrides={}) {
       baseEnterpriseRevenueBn:baseEnterprise,baseCustomerRevenueBn:Object.fromEntries(CLOUD_CUSTOMERS.map(c=>[c,p.customers[c].baseRevenueBn])),
       baseExternalTPURevenueBn:p.externalTPU.baseRevenueBn,baseCashCapexBn:cap.baseCashCapexBn,
       historicalReconciliationDifferenceBn:baseEnterprise+sum(CLOUD_CUSTOMERS.map(c=>p.customers[c].baseRevenueBn))+p.externalTPU.baseRevenueBn-base.cloudRevenueBn},
-    validation:{historicalTotalsLocked:true,msInputsUsedForForecast:false,budgetAndCapacityAdded:false,externalTPUAddedToCapex:false,finiteForecasts:true}};
+    validation:{historicalTotalsLocked:true,msInputsUsedForForecast:!!data.msBaseline,budgetAndCapacityAdded:false,externalTPUAddedToCapex:false,finiteForecasts:true}};
 }
 function referenceSets(data) {
   const raw=data.comparisons||data.benchmarks||{};
@@ -281,6 +281,34 @@ function comparisons(data,result) {
   });
 }
 export function resetCloudOverrides() {return {};}
+/** Re-anchor all mapped quarters explicitly; future edits are never auto-fitted. */
+export function solveMSCloudRevenue(data,overrides={},method='enterprise') {
+  if(!['enterprise','tpu'].includes(method))throw new TypeError('未知MS收入反推方法');
+  const initial=run(data,overrides),ref=referenceSets(data).find(r=>/^(ms|morgan stanley)$/i.test(r.broker||r.name||''));
+  if(!ref)throw new TypeError('缺少MS目标');
+  const next={...initial.overrides},rows=[];
+  for(let i=0;i<data.forecastPeriods.length;i++){
+    const current=run(data,next),q=current.quarters[i],target=ref.quarters?.find(r=>r.period===q.period)?.cloudRevenueBn;
+    if(!Number.isFinite(target)){rows.push({period:q.period,feasible:false,status:'missing_target'});break;}
+    let value,path,bounds;
+    if(method==='enterprise'){
+      const previous=i?current.quarters[i-1].enterpriseRevenueBn:current.calibration.baseEnterpriseRevenueBn;
+      path=`enterprise.sequentialGrowth.${i}`;bounds=[-.99,2];value=previous>0?(target-Object.values(q.customerRevenueBn).reduce((a,b)=>a+b,0)-q.externalTPURevenueBn)/previous-1-current.parameters.global.enterpriseGrowthAdjustment:null;
+    }else{
+      const x=q.externalTPU,den=x.netPriceBnPerGW*x.recognitionFraction*current.parameters.global.tpuVolumeMultiplier;
+      path=`externalTPU.capacitySoldGW.${i}`;bounds=[0,1e5];value=den>0?(target-q.servicesRevenueBn)/den:null;
+    }
+    const feasible=Number.isFinite(value)&&value>=bounds[0]&&value<=bounds[1];
+    rows.push({period:q.period,targetRevenueBn:target,beforeRevenueBn:q.cloudRevenueBn,path,value,bounds,feasible,status:value==null?'non_identifiable':feasible?'feasible':'out_of_range'});
+    if(!feasible)break;
+    // Replace whole-array overrides with indexed values before solving one slot.
+    const root=path.slice(0,path.lastIndexOf('.'));if(own(next,root)){const arr=next[root];delete next[root];for(let j=0;j<data.forecastPeriods.length;j++)next[root+'.'+j]=Array.isArray(arr)?arr[j]:arr;}
+    next[path]=value;
+  }
+  const feasible=rows.length===data.forecastPeriods.length&&rows.every(x=>x.feasible);
+  if(feasible){const fitted=run(data,next);for(let i=0;i<rows.length;i++){rows[i].achievedRevenueBn=fitted.quarters[i].cloudRevenueBn;if(Math.abs(rows[i].achievedRevenueBn-rows[i].targetRevenueBn)>1e-6)throw new Error('MS收入反推校验失败');}}
+  return {method,feasible,rows,overrides:feasible?next:null};
+}
 export function cloudPresets() {
   return [{id:'base',label:'研究基准',overrides:{}},
     {id:'lower_delivery',label:'交付与需求偏弱',overrides:{'global.customerBudgetMultiplier':.85,'global.capacityMultiplier':.8,'global.enterpriseGrowthAdjustment':-.02,'global.tpuVolumeMultiplier':.8}},

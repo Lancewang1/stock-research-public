@@ -219,6 +219,17 @@ try {
   click('[data-cl-preset="base"]');check();
   assert.deepEqual(plain(win.CloudApp.getResult().annual),baseline.annual,'Cloud reset did not restore baseline');
 
+  const msBefore=plain(win.CloudApp.getResult().quarters);
+  click('#clMSPreview');check();assert.deepEqual(plain(win.CloudApp.getResult().quarters),msBefore);
+  assert.ok(query('#clMSSolution').textContent.includes('2027Q1'));
+  click('#clMSFit');check();
+  plain(win.CloudApp.getResult().quarters).forEach((q,i)=>assert.ok(Math.abs(q.cloudRevenueBn-msBefore[i].cloudRevenueBn)<1e-6));
+  const cost=query('[data-profit="cloudCashCostMultiplier"]'),originalCost=Number(cost.value);
+  cost.value=originalCost*.9;cost.dispatchEvent(new win.Event('change',{bubbles:true}));check();
+  assert.ok(Number(query('[data-profit="cloudCashCostMultiplier"]').value)<originalCost);
+  click('#wbProfitFitMS');check();assert.ok(Math.abs(Number(query('[data-profit="cloudCashCostMultiplier"]').value)-originalCost)<1e-5);
+  click('#wbProfitRestoreMS');check();assert.ok(Math.abs(Number(query('[data-profit="cloudCashCostMultiplier"]').value)-originalCost)<1e-5);
+  click('[data-cl-preset="base"]');check();
   click('[data-view="chart"]');click('#tabs [data-tab="3"]');
   click('[data-wb-case="googl-2026-q3-drawdown"]');
   click('#recentEventReview [data-focus="oct28-release"]');check();
