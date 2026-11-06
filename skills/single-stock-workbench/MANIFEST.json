@@ -1,5 +1,5 @@
 {
-  "release": "2026-11-06-cloud-two-lines",
+  "release": "2026-11-06-cloud-profit-model",
   "offlineRebuild": "byte-identical",
   "browserVisualAcceptance": false,
   "rawReportsIncluded": false,
@@ -31,8 +31,8 @@
     },
     {
       "path": "assets/example-googl-case.json",
-      "sha256": "7d9787697b71cb80caec821f2419c8ce832b4777ecc6ebb10a68b053009c7ab7",
-      "bytes": 306659
+      "sha256": "eb19a6e37b6f4a6ed5b210f6ed49e0a72b2dc281480ab1593b85bca514c412ba",
+      "bytes": 322021
     },
     {
       "path": "assets/financial-verification.json",
@@ -48,6 +48,16 @@
       "path": "assets/market-update.json",
       "sha256": "4f58f54541f1f27ac36d36a27ff8d8fff59b7339c1cfdb16f29c3235420d9b0d",
       "bytes": 32139
+    },
+    {
+      "path": "assets/profit-inputs.json",
+      "sha256": "e81c25c3d1006f2d2f82a41380540e5e1b7e59cc99fa4dc424b61dc700fe631d",
+      "bytes": 13224
+    },
+    {
+      "path": "assets/profit-ui.js",
+      "sha256": "f56799f9f221ce692cd065553fd53f890056decb3dcc64446154447f470143bb",
+      "bytes": 7961
     },
     {
       "path": "assets/publication_dates.json",
@@ -116,13 +126,13 @@
     },
     {
       "path": "assets/workbench-v9.js",
-      "sha256": "937b04cee65202756380783151b4eb07c96de8dd37f50791363326a938e0d37b",
-      "bytes": 46854
+      "sha256": "eaf36d179d422db07c187fe6b106252f8bc63380d722b76e504b2cfd5d3350fb",
+      "bytes": 48181
     },
     {
       "path": "outputs/googl-dashboard.html",
-      "sha256": "3665c31ea205b9471e29a5f1fbd93ed6b98619d0679a5c0eaacb237bf6e23aba",
-      "bytes": 2105224
+      "sha256": "03c3acedf03b413f4cf8073bd751c557375ad3c76f6678471dfe9fa0af825ec7",
+      "bytes": 2133269
     },
     {
       "path": "outputs/research/customer_evidence_20261106/historical-checks.json",
@@ -136,8 +146,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "626cc44c64d22754a5edbec16b423a8541ee42ec94f9b617c69f4bff5e23898e",
-      "bytes": 2603
+      "sha256": "8a033d28f81e3e659f65da33148196644d2fcdb7acdd36e1d7322b29416d5385",
+      "bytes": 3127
     },
     {
       "path": "references/cloud-model-method.md",
@@ -180,6 +190,16 @@
       "bytes": 5219
     },
     {
+      "path": "references/profit-model-gap-audit-20261106.md",
+      "sha256": "5849aca2b5a649ec0c4e092269d3c1c0750c126eb6fd8a289ecba4503d5ca4dd",
+      "bytes": 8045
+    },
+    {
+      "path": "references/profit-model-method.md",
+      "sha256": "b49708d62da05673ac7174ccc6bb1e83a18a6a165b4ce143def963e130d4bbf0",
+      "bytes": 3756
+    },
+    {
       "path": "references/recent-review-method.md",
       "sha256": "7ffd9840b2151c1234162106473a9f1c2024f5b1fc1e669870e17f1b06f4a9e5",
       "bytes": 3933
@@ -195,14 +215,19 @@
       "bytes": 4920
     },
     {
+      "path": "scripts/audit_profit_drivers.py",
+      "sha256": "a23b142b0d93ec8d41288a315945b90ab69b7529daa73c005de8a4e0ebfc239e",
+      "bytes": 2133
+    },
+    {
       "path": "scripts/audit_report_distribution.py",
       "sha256": "ebb3d22e2d84c0255c482f91d58b85de7220cbce1c0ca4a14eda6c5711117bcd",
       "bytes": 2688
     },
     {
       "path": "scripts/build_case.py",
-      "sha256": "bf61a53dd570896f6eaea3c265978f1fa25a983ea691ff3006ba18323020651f",
-      "bytes": 30291
+      "sha256": "e66d0e444c4ba636175668d55c545e5ac3ff0533b0686782543f56d9d45a352a",
+      "bytes": 30494
     },
     {
       "path": "scripts/build_cloud_inputs.py",
@@ -211,8 +236,13 @@
     },
     {
       "path": "scripts/build_dashboard.py",
-      "sha256": "6ec9d5558cd8574235af1377ed9f72782fe5317cdc9ccff77bd4f4761b35eea3",
-      "bytes": 13852
+      "sha256": "a6fb99c02a9f1eef889d81b8ff66b9f44b08cb6307a22d84ed72c5c37bd1906e",
+      "bytes": 14191
+    },
+    {
+      "path": "scripts/build_profit_inputs.py",
+      "sha256": "024ac01f94641f20dab3dc29935704291fa891171604e05a252de60e7cca7e42",
+      "bytes": 5670
     },
     {
       "path": "scripts/build_research.py",
@@ -251,13 +281,18 @@
     },
     {
       "path": "scripts/model.mjs",
-      "sha256": "e5155e3cef093fa9b6504a54e984f905d895b4f8a9eddcc55caf19c9d98d2560",
-      "bytes": 22548
+      "sha256": "856ffd0d696447bc0664323b8183bef49cd616161bbd4a154b9579f57fe3a682",
+      "bytes": 25133
     },
     {
       "path": "scripts/package_public.py",
-      "sha256": "3832d2b5fc219e8a12c5ae335ddf7a1e6aa414587ec030c1bfb2c63c3a9d96fa",
-      "bytes": 4255
+      "sha256": "815eccaab33afe8ddf5bd760657612c52fede2c95a21d7ada39c78aa0e809d4c",
+      "bytes": 4258
+    },
+    {
+      "path": "scripts/profit-model.mjs",
+      "sha256": "44421395b84d806c508c5c7e0d66723b164fdf0eb84a807bc1d54786a44b525a",
+      "bytes": 5356
     },
     {
       "path": "scripts/research_anthropic.py",
@@ -311,18 +346,18 @@
     },
     {
       "path": "SKILL.md",
-      "sha256": "7dfc0a2722859963c77019b63ab7d5264f5434fd9203869ee9f026b3f5d4037b",
-      "bytes": 14107
+      "sha256": "9fb874f5e8d7036cee4c7c92ea6611b9c81c72a7484ac7f065ea6b1b78407e4b",
+      "bytes": 14530
     },
     {
       "path": "tests/dom-cloud.cjs",
-      "sha256": "41d1ba7acbaa7ed08d1379fe94c01e934227c450926d295dcfd53ef4ac95e396",
-      "bytes": 19261
+      "sha256": "e6f7035c4b17886573c15017762fe77f0c2868cb0febe270aedde6342a06b5dc",
+      "bytes": 19448
     },
     {
       "path": "tests/dom-smoke.cjs",
-      "sha256": "f48c656e0d0c5a3138684a1bd226dde93e0d1119b26f6b4d07cc4518005ce721",
-      "bytes": 7219
+      "sha256": "5a549187e870227214aab1b1eb6adbc4474f5dd6396cf604461a69a755fdd9cc",
+      "bytes": 8182
     },
     {
       "path": "tests/test_cloud_model.mjs",
@@ -333,6 +368,11 @@
       "path": "tests/test_model.mjs",
       "sha256": "f529d78a47c12aa6e45a704579f31f105e7ddb42ebd130cbd8d26c22d5717596",
       "bytes": 9482
+    },
+    {
+      "path": "tests/test_profit_model.mjs",
+      "sha256": "89a68f168e55e87ce7e788e8e611796011120589db366b30e2f847a3bb75c648",
+      "bytes": 3372
     }
   ]
 }

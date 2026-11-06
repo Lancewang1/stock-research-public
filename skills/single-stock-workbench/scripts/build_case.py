@@ -484,6 +484,10 @@ def build(source_dir):
     case["meta"]["caseId"] = hashlib.sha256(
         json.dumps(identity, ensure_ascii=False, sort_keys=True, allow_nan=False).encode("utf-8")
     ).hexdigest()
+    profit_path = ROOT / "assets/profit-inputs.json"
+    if profit_path.exists():
+        from build_profit_inputs import attach
+        attach(case, json.loads(profit_path.read_text(encoding="utf-8")))
     return case
 
 

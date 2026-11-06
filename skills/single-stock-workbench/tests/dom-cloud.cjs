@@ -200,7 +200,7 @@ try {
   assert.equal(query('#clError').hidden,true,'Valid import did not clear prior rejection');
 
   const originalQuarter=plain(win.eval('WBM.calculateCase(CASE,{}).quarters.find(q=>q.period==="2026Q3")'));
-  const originalOperatingAssumptions=plain(win.eval('WBM.calculateCase(CASE,{}).quarters.filter(q=>q.kind==="estimate").map(q=>({period:q.period,grossMargin:q.drivers.grossMargin,opexRatio:q.drivers.opexRatio,taxRate:q.taxRate,dilutedShares:q.dilutedShares}))'));
+  const originalOperatingAssumptions=plain(win.eval('WBM.calculateCase(CASE,{}).quarters.filter(q=>q.kind==="estimate").map(q=>({period:q.period,taxRate:q.taxRate,dilutedShares:q.dilutedShares}))'));
   click('#clApply');check();
   assert.equal(query('#clError').hidden,true,query('#clError').textContent);
   assert.ok(query('#fullForecast').open,'Applying Cloud did not open forecast table');
@@ -213,7 +213,8 @@ try {
   delete win.__cloudTestOverrides;
   for(const row of changed.quarters){const actual=applied.quarters.find(q=>q.period===row.period);assert.ok(Math.abs(actual.segments.cloud-row.cloudRevenueBn*1000)<1e-7,`Cloud revenue not applied in ${row.period}`);}
   assert.deepEqual(applied.quarters.find(q=>q.period==='2026Q3'),originalQuarter,'Cloud application modified a reported quarter');
-  assert.deepEqual(applied.quarters.filter(q=>q.kind==='estimate').map(q=>({period:q.period,grossMargin:q.drivers.grossMargin,opexRatio:q.drivers.opexRatio,taxRate:q.taxRate,dilutedShares:q.dilutedShares})),originalOperatingAssumptions,'Cloud application changed non-revenue assumptions');
+  assert.deepEqual(applied.quarters.filter(q=>q.kind==='estimate').map(q=>({period:q.period,taxRate:q.taxRate,dilutedShares:q.dilutedShares})),originalOperatingAssumptions,'Cloud application changed tax or shares');
+  for(const row of changed.quarters){const detail=applied.quarters.find(q=>q.period===row.period).profitDetail;assert.ok(detail);assert.ok(Math.abs(detail.parts.ai.revenue-Object.values(row.customerRevenueBn).reduce((a,b)=>a+b,0)*1000)<1e-6);assert.ok(Math.abs(detail.parts.tpu.revenue-row.externalTPURevenueBn*1000)<1e-6);}
   click('#wbReset');check();
   click('[data-cl-preset="base"]');check();
   assert.deepEqual(plain(win.CloudApp.getResult().annual),baseline.annual,'Cloud reset did not restore baseline');

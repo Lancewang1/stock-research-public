@@ -1,0 +1,22 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {calculateCase,createScenario,parseScenario,setAnnualDriver} from '../scripts/model.mjs';
+const c=JSON.parse(readFileSync(new URL('../assets/example-googl-case.json',import.meta.url),'utf8'));
+const before=JSON.stringify(c),base=calculateCase(c),period='2027Q1';
+const near=(a,b)=>assert.ok(Math.abs(a-b)<1e-6,`${a} != ${b}`);
+const get=(o={})=>calculateCase(c,o).quarters.find(q=>q.period===period);
+const change=p=>get({[period]:{profit:p}}),q=get(),p=q.profitDetail.parameters;
+for(const a of base.quarters){const o=c.quarters.find(x=>x.period===a.period);for(const f of ['revenue','cogs','opex','operatingIncome','netIncome'])near(a[f],o[f]);if(a.profitDetail){const d=a.profitDetail;near(Object.values(d.parts).reduce((s,x)=>s+x.revenue,0),a.segments.cloud);near(Object.values(d.parts).reduce((s,x)=>s+x.operatingIncome,0)-d.cloudUnallocatedCost,a.cloudOperatingIncome);near(d.group.cogs+d.group.opex,a.cogs+a.opex);near(a.cloudOperatingIncome,o.cloudOperatingIncome);}}
+const longer=change({serverLife:8});assert.ok(longer.eps>q.eps);near(longer.operatingIncome-q.operatingIncome,q.depreciation-longer.depreciation);
+const expensive=change({aiThirdPartyCostRate:p.aiThirdPartyCostRate+.1});assert.ok(expensive.eps<q.eps);near(q.operatingIncome-expensive.operatingIncome,p.aiRevenue*p.aiThirdPartyShare*.1);
+const mix=change({workspaceRevenue:p.workspaceRevenue+1000,aiRevenue:p.aiRevenue-1000});near(mix.revenue,q.revenue);assert.notEqual(mix.eps,q.eps);
+const stock=change({sbcMultiplier:1.1});near(q.operatingIncome-stock.operatingIncome,q.sbc*.1);near(stock.adjustedNetIncome,stock.netIncome+stock.sbc-stock.sbcTaxBenefit);
+near(expensive.profitDetail.cloudUnallocatedCost,q.profitDetail.cloudUnallocatedCost);
+const zero=change({workspaceRevenue:0,traditionalRevenue:0,aiRevenue:0,tpuRevenue:0});near(zero.segments.cloud,0);near(Object.values(zero.profitDetail.parts).reduce((s,x)=>s+x.sbc,0),zero.profitDetail.cloudSbc);assert.ok(zero.profitDetail.cloudDA>0);
+assert.throws(()=>change({workspaceDepShare:.8,traditionalDepShare:.8}));assert.throws(()=>change({serverLife:0}));assert.throws(()=>calculateCase(c,{'2026Q3':{profit:{serverLife:8}}}));assert.throws(()=>calculateCase(c,{'2028':{profit:{serverLife:8}}}));
+const manual=get({[period]:{grossMargin:.7,profit:{serverLife:8}}});near(manual.grossProfit/manual.revenue,.7);assert.ok(manual.profitDetail.manualOverrides.includes('grossMargin'));
+const o={[period]:{profit:{serverLife:8,aiRevenue:p.aiRevenue+1000}}};const saved=parseScenario(c,createScenario(c,o));assert.deepEqual(saved.overrides,o);
+const annual=calculateCase(c,o).annual.find(x=>x.period==='2027'),qs=calculateCase(c,o).quarters.filter(x=>x.period.startsWith('2027'));near(annual.adjustedEps,qs.reduce((s,x)=>s+x.adjustedEarnings,0)/annual.dilutedShares);
+const annualEdit=setAnnualDriver(c,o,'2027','segmentGrowthYoY',.5,'cloud');const annualResult=calculateCase(c,annualEdit);near(annualResult.annual.find(x=>x.period==='2027').segments.cloud,annualResult.annual.find(x=>x.period==='2026').segments.cloud*1.5);
+assert.equal(JSON.stringify(c),before);
+console.log('PASS: MS reconciliation, business mix, depreciation and SBC transmission, fixed calibration, zero revenue capacity costs, manual overrides, annual EPS, persistence, historical locks.');

@@ -55,7 +55,7 @@ def main():
     expected = {str(p.relative_to(ROOT)).replace('\\', '/') for p in selected} | {'outputs/googl-dashboard.html', 'MANIFEST.json'}
     if any(p.relative_to(target).as_posix() not in expected for p in files):
         raise RuntimeError('Unexpected files in public skill staging directory')
-    manifest = {'release': '2026-11-06-cloud-two-lines', 'offlineRebuild': 'byte-identical',
+    manifest = {'release': '2026-11-06-cloud-profit-model', 'offlineRebuild': 'byte-identical',
                 'browserVisualAcceptance': False, 'rawReportsIncluded': False,
                 'files': [{'path': p.relative_to(target).as_posix(), 'sha256': hashlib.sha256(p.read_bytes()).hexdigest(),
                            'bytes': p.stat().st_size} for p in files if p.name != 'MANIFEST.json']}

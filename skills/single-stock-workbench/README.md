@@ -44,3 +44,9 @@ node tests/dom-smoke.cjs outputs/googl-dashboard.html
 API凭据、个人机器路径、原始API响应、受限研报及卖方工作簿未分发。取数与重新校准脚本需要用户自己的数据权限、原始资料及本地配置；本包不声称能在没有这些资料时重新获取或验证原件。`check_customer_evidence.py`的逐行来源复核也需要本地保存的Wind原始响应，公开包只附计算结果与来源说明。
 
 研报分发清单只检查各PDF首2页和末5页可提取文字；未发现限制不等于获得许可。公司公告与外部材料通过来源链接访问。已有结构化数字、摘要和情景分别标明来源，不把研报原件改名后混入技能包。
+# 2026-11-06 盈利模型更新
+
+主表接入Workspace/传统GCP/AI云服务/独立TPU交付的成本、毛利、营业利润，分类资产年限驱动折旧，并提供税后SBC调整与EPS桥。明细参数可编辑并随情景保存。方法和限制见[profit-model-method.md](references/profit-model-method.md)：初始与MS校准，存在显著未分配收益；非Cloud仍为合并成本残余；2028不提供业务明细。浏览器视觉验收尚未完成。
+
+新增验证：`node tests/test_profit_model.mjs`。
+

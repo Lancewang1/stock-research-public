@@ -1,0 +1,395 @@
+{
+  "version": 1,
+  "asOf": "2026-11-06",
+  "units": "USD million",
+  "quarters": {
+    "2026Q4": {
+      "parameters": {
+        "workspaceRevenue": 4601.641860295314,
+        "traditionalRevenue": 8171.975193437533,
+        "aiRevenue": 12257.962790156298,
+        "tpuRevenue": 11214.948156110857,
+        "workspaceDirectRate": 0.15,
+        "traditionalDirectRate": 0.25,
+        "tpuDirectRate": 0.7,
+        "workspaceOpexRate": 0.3,
+        "traditionalOpexRate": 0.2,
+        "aiOpexRate": 0.12,
+        "tpuOpexRate": 0.05,
+        "aiThirdPartyShare": 0.25,
+        "aiThirdPartyCostRate": 0.75,
+        "aiOwnOperatingRate": 0.25,
+        "serverLife": 6,
+        "otherLife": 24.670545338330562,
+        "serverAssetMultiplier": 1,
+        "otherAssetMultiplier": 1,
+        "cloudDepShare": 0.4,
+        "workspaceDepShare": 0.05,
+        "traditionalDepShare": 0.25,
+        "depreciationCogsShare": 0.49546369579804894,
+        "sbcMultiplier": 1,
+        "sbcTaxBenefitRate": 0.2640818175173076,
+        "cloudSbcShare": 0.2518721597646282,
+        "cloudUnallocatedCost": -2921.7752793507734
+      },
+      "cloudRevenue": 36246.528,
+      "nonCloudRevenue": 107661.90568267455,
+      "depreciation": 11167.319154017858,
+      "amortization": 617.0481418918919,
+      "sbc": 7914.9638525471,
+      "serverAssets": 219597.40290099868,
+      "otherAssets": 199084.1332457642,
+      "sbcAllocation": {
+        "cogs": 0.18201516793066094,
+        "rd": 0.49133261105092085,
+        "sm": 0.1630552546045504,
+        "ga": 0.16359696641386784
+      },
+      "opexAllocation": {
+        "rd": 0.616257284423666,
+        "sm": 0.23922353418148423,
+        "ga": 0.14451918139484962
+      },
+      "cloudOperatingIncome": 12233.96694859658,
+      "groupCosts": {
+        "cogs": 58784.05078733968,
+        "rd": 22213.080262566087,
+        "sm": 8622.845846662356,
+        "ga": 5209.214165811264,
+        "otherOpex": -1.4551915228366852e-11
+      },
+      "sourceCells": {
+        "ms": "Model!DH44,DH46,DH47,DH80; Non-Core Losses!DH90; Expense Drivers!DH173:DH177",
+        "barclays": "New Driver!EE102,EE120,EE127; Q PP&E!EE110:EE117; IS!EE272"
+      }
+    },
+    "2027Q1": {
+      "parameters": {
+        "workspaceRevenue": 5066.271670808184,
+        "traditionalRevenue": 10019.816326455672,
+        "aiRevenue": 15029.724489683504,
+        "tpuRevenue": 13485.143513052639,
+        "workspaceDirectRate": 0.15,
+        "traditionalDirectRate": 0.25,
+        "tpuDirectRate": 0.7,
+        "workspaceOpexRate": 0.3,
+        "traditionalOpexRate": 0.2,
+        "aiOpexRate": 0.12,
+        "tpuOpexRate": 0.05,
+        "aiThirdPartyShare": 0.25,
+        "aiThirdPartyCostRate": 0.75,
+        "aiOwnOperatingRate": 0.25,
+        "serverLife": 6,
+        "otherLife": 24.670545338330562,
+        "serverAssetMultiplier": 1,
+        "otherAssetMultiplier": 1,
+        "cloudDepShare": 0.4,
+        "workspaceDepShare": 0.05,
+        "traditionalDepShare": 0.25,
+        "depreciationCogsShare": 0.49546369579804894,
+        "sbcMultiplier": 1,
+        "sbcTaxBenefitRate": 0.25885299753046487,
+        "cloudSbcShare": 0.3066071644292856,
+        "cloudUnallocatedCost": -3000.5528047356365
+      },
+      "cloudRevenue": 43600.956,
+      "nonCloudRevenue": 98603.66626040355,
+      "depreciation": 13582.282190360576,
+      "amortization": 618.1038851351351,
+      "sbc": 7536.844979801388,
+      "serverAssets": 268904.9691338859,
+      "otherAssets": 234657.19551450925,
+      "sbcAllocation": {
+        "cogs": 0.16131191432396255,
+        "rd": 0.49464524765729584,
+        "sm": 0.1619812583668005,
+        "ga": 0.1820615796519411
+      },
+      "opexAllocation": {
+        "rd": 0.6438018721197111,
+        "sm": 0.2249831066937826,
+        "ga": 0.13121502118650633
+      },
+      "cloudOperatingIncome": 14268.192850585803,
+      "groupCosts": {
+        "cogs": 57496.27278723984,
+        "rd": 22713.903681346717,
+        "sm": 7937.604466025086,
+        "ga": 4629.382861163823,
+        "otherOpex": 7.275957614183426e-12
+      },
+      "sourceCells": {
+        "ms": "Model!DI44,DI46,DI47,DI80; Non-Core Losses!DI90; Expense Drivers!DI173:DI177",
+        "barclays": "New Driver!EG102,EG120,EG127; Q PP&E!EG110:EG117; IS!EG272"
+      }
+    },
+    "2027Q2": {
+      "parameters": {
+        "workspaceRevenue": 5567.917223964906,
+        "traditionalRevenue": 12249.10983292855,
+        "aiRevenue": 18373.664749392825,
+        "tpuRevenue": 16887.132193713715,
+        "workspaceDirectRate": 0.15,
+        "traditionalDirectRate": 0.25,
+        "tpuDirectRate": 0.7,
+        "workspaceOpexRate": 0.3,
+        "traditionalOpexRate": 0.2,
+        "aiOpexRate": 0.12,
+        "tpuOpexRate": 0.05,
+        "aiThirdPartyShare": 0.25,
+        "aiThirdPartyCostRate": 0.75,
+        "aiOwnOperatingRate": 0.25,
+        "serverLife": 6,
+        "otherLife": 24.670545338330562,
+        "serverAssetMultiplier": 1,
+        "otherAssetMultiplier": 1,
+        "cloudDepShare": 0.4,
+        "workspaceDepShare": 0.05,
+        "traditionalDepShare": 0.25,
+        "depreciationCogsShare": 0.49546369579804894,
+        "sbcMultiplier": 1,
+        "sbcTaxBenefitRate": 0.25372770817936163,
+        "cloudSbcShare": 0.3423454901383984,
+        "cloudUnallocatedCost": -6341.431113752698
+      },
+      "cloudRevenue": 53077.82399999999,
+      "nonCloudRevenue": 101963.86788424966,
+      "depreciation": 16021.31774319525,
+      "amortization": 619.1596283783783,
+      "sbc": 8527.293053633732,
+      "serverAssets": 319522.06820725754,
+      "otherAssets": 267221.30466914375,
+      "sbcAllocation": {
+        "cogs": 0.16966067864271459,
+        "rd": 0.4916833000665337,
+        "sm": 0.15834996673320026,
+        "ga": 0.18030605455755155
+      },
+      "opexAllocation": {
+        "rd": 0.6151859049235892,
+        "sm": 0.22174787220915623,
+        "ga": 0.16306622286725453
+      },
+      "cloudOperatingIncome": 20065.808473286448,
+      "groupCosts": {
+        "cogs": 67679.01780928698,
+        "rd": 23234.198780493323,
+        "sm": 8374.922280930514,
+        "ga": 6158.6473392179,
+        "otherOpex": 0.0
+      },
+      "sourceCells": {
+        "ms": "Model!DJ44,DJ46,DJ47,DJ80; Non-Core Losses!DJ90; Expense Drivers!DJ173:DJ177",
+        "barclays": "New Driver!EH102,EH120,EH127; Q PP&E!EH110:EH117; IS!EH272"
+      }
+    },
+    "2027Q3": {
+      "parameters": {
+        "workspaceRevenue": 6872.318848531176,
+        "traditionalRevenue": 16861.10921705361,
+        "aiRevenue": 25291.663825580417,
+        "tpuRevenue": 21329.2271088348,
+        "workspaceDirectRate": 0.15,
+        "traditionalDirectRate": 0.25,
+        "tpuDirectRate": 0.7,
+        "workspaceOpexRate": 0.3,
+        "traditionalOpexRate": 0.2,
+        "aiOpexRate": 0.12,
+        "tpuOpexRate": 0.05,
+        "aiThirdPartyShare": 0.25,
+        "aiThirdPartyCostRate": 0.75,
+        "aiOwnOperatingRate": 0.25,
+        "serverLife": 6,
+        "otherLife": 24.670545338330562,
+        "serverAssetMultiplier": 1,
+        "otherAssetMultiplier": 1,
+        "cloudDepShare": 0.4,
+        "workspaceDepShare": 0.05,
+        "traditionalDepShare": 0.25,
+        "depreciationCogsShare": 0.49546369579804894,
+        "sbcMultiplier": 1,
+        "sbcTaxBenefitRate": 0.24870389955741024,
+        "cloudSbcShare": 0.3997711017671497,
+        "cloudUnallocatedCost": -7546.640157949227
+      },
+      "cloudRevenue": 70354.319,
+      "nonCloudRevenue": 105632.186,
+      "depreciation": 19790.73865843837,
+      "amortization": 620.2153716216216,
+      "sbc": 10559.1903,
+      "serverAssets": 394967.40284073865,
+      "otherAssets": 328983.0582507019,
+      "sbcAllocation": {
+        "cogs": 0.17473118279569896,
+        "rd": 0.4956989247311828,
+        "sm": 0.15967741935483873,
+        "ga": 0.16989247311827954
+      },
+      "opexAllocation": {
+        "rd": 0.5911161438461641,
+        "sm": 0.23589870781008834,
+        "ga": 0.1729851483437475
+      },
+      "cloudOperatingIncome": 26318.98185112367,
+      "groupCosts": {
+        "cogs": 77323.72182194084,
+        "rd": 26139.38435997984,
+        "sm": 10431.532039286041,
+        "ga": 7649.470122240663,
+        "otherOpex": 0.0
+      },
+      "sourceCells": {
+        "ms": "Model!DK44,DK46,DK47,DK80; Non-Core Losses!DK90; Expense Drivers!DK173:DK177",
+        "barclays": "New Driver!EI102,EI120,EI127; Q PP&E!EI110:EI117; IS!EI272"
+      }
+    },
+    "2027Q4": {
+      "parameters": {
+        "workspaceRevenue": 6815.592124211111,
+        "traditionalRevenue": 18675.21474758717,
+        "aiRevenue": 28012.82212138076,
+        "tpuRevenue": 22106.628414820963,
+        "workspaceDirectRate": 0.15,
+        "traditionalDirectRate": 0.25,
+        "tpuDirectRate": 0.7,
+        "workspaceOpexRate": 0.3,
+        "traditionalOpexRate": 0.2,
+        "aiOpexRate": 0.12,
+        "tpuOpexRate": 0.05,
+        "aiThirdPartyShare": 0.25,
+        "aiThirdPartyCostRate": 0.75,
+        "aiOwnOperatingRate": 0.25,
+        "serverLife": 6,
+        "otherLife": 24.670545338330562,
+        "serverAssetMultiplier": 1,
+        "otherAssetMultiplier": 1,
+        "cloudDepShare": 0.4,
+        "workspaceDepShare": 0.05,
+        "traditionalDepShare": 0.25,
+        "depreciationCogsShare": 0.49546369579804894,
+        "sbcMultiplier": 1,
+        "sbcTaxBenefitRate": 0.24377956234617348,
+        "cloudSbcShare": 0.3852628056922539,
+        "cloudUnallocatedCost": -10778.13415707269
+      },
+      "cloudRevenue": 75610.257408,
+      "nonCloudRevenue": 120646.05462331796,
+      "depreciation": 24044.220662913565,
+      "amortization": 621.2711148648648,
+      "sbc": 9812.815601565899,
+      "serverAssets": 483254.96782670554,
+      "otherAssets": 385708.87833323184,
+      "sbcAllocation": {
+        "cogs": 0.18201516793066094,
+        "rd": 0.4913326110509209,
+        "sm": 0.1630552546045504,
+        "ga": 0.16359696641386784
+      },
+      "opexAllocation": {
+        "rd": 0.6330578087228877,
+        "sm": 0.22266215005443837,
+        "ga": 0.14428004122267396
+      },
+      "cloudOperatingIncome": 30824.500630052902,
+      "groupCosts": {
+        "cogs": 82760.99198125878,
+        "rd": 27272.636444793916,
+        "sm": 9592.463412940913,
+        "ga": 6215.699508460392,
+        "otherOpex": 0.0
+      },
+      "sourceCells": {
+        "ms": "Model!DL44,DL46,DL47,DL80; Non-Core Losses!DL90; Expense Drivers!DL173:DL177",
+        "barclays": "New Driver!EJ102,EJ120,EJ127; Q PP&E!EJ110:EJ117; IS!EJ272"
+      }
+    }
+  },
+  "historyAmendments": {
+    "2024Q1": {
+      "sbcTaxBenefit": 1732.1787281439917,
+      "cloudOperatingIncome": 900
+    },
+    "2024Q2": {
+      "sbcTaxBenefit": 1891.7316719987339,
+      "cloudOperatingIncome": 1172
+    },
+    "2024Q3": {
+      "sbcTaxBenefit": 1848.2683546607684,
+      "cloudOperatingIncome": 1947
+    },
+    "2024Q4": {
+      "sbcTaxBenefit": 1800.5162582270952,
+      "cloudOperatingIncome": 2093
+    },
+    "2025Q1": {
+      "sbcTaxBenefit": 1675.5595621874559,
+      "cloudOperatingIncome": 2177
+    },
+    "2025Q2": {
+      "sbcTaxBenefit": 1785.8985007561919,
+      "cloudOperatingIncome": 2826
+    },
+    "2025Q3": {
+      "sbcTaxBenefit": 1858.5235311920117,
+      "cloudOperatingIncome": 3594
+    },
+    "2025Q4": {
+      "sbcTaxBenefit": 2022.8353981242697,
+      "cloudOperatingIncome": 5313
+    },
+    "2026Q1": {
+      "sbcTaxBenefit": 1893.0518695568876,
+      "cloudOperatingIncome": 6598
+    },
+    "2026Q2": {
+      "sbcTaxBenefit": 2187.0487415624475,
+      "cloudOperatingIncome": 8814
+    },
+    "2026Q3": {
+      "sbcTaxBenefit": 2325.0623190923943,
+      "cloudOperatingIncome": 11121
+    },
+    "2026Q4": {
+      "sbcTaxBenefit": 2090.1980397644293,
+      "cloudOperatingIncome": 12233.96694859658
+    },
+    "2027Q1": {
+      "sbcTaxBenefit": 1950.9349149440254,
+      "cloudOperatingIncome": 14268.192850585803
+    },
+    "2027Q2": {
+      "sbcTaxBenefit": 2163.6105234722772,
+      "cloudOperatingIncome": 20065.808473286448
+    },
+    "2027Q3": {
+      "sbcTaxBenefit": 2626.1118037787805,
+      "cloudOperatingIncome": 26318.98185112367
+    },
+    "2027Q4": {
+      "sbcTaxBenefit": 2392.163892733438,
+      "cloudOperatingIncome": 30824.500630052902
+    }
+  },
+  "sources": [
+    {
+      "broker": "MS",
+      "date": "2026-10-29",
+      "sha256": "0919c3b9eef2644e37d67069a75497f583897373136fd908a5d61ef2cd73a323",
+      "use": "集团基准、Cloud营业利润、SBC与税效应"
+    },
+    {
+      "broker": "Barclays",
+      "date": "2026-07-24",
+      "sha256": "32c072f65fb7bbaca082f6138c2eb8906b1561f726e8bf57486324226bd0950a",
+      "use": "Cloud收入结构、分类折旧与年限；仅作结构参考"
+    }
+  ],
+  "limitations": [
+    "四块Cloud历史拆分未披露；仅未来情景拆分，历史总额锁定。",
+    "GCP内部AI初始占比60%为研究假设。",
+    "Barclays旧版Workspace/TPU收入份额用于拆分MS总额，不代表更新后的卖方预测。",
+    "分类资产原值由MS折旧与Barclays折旧构成反推，为尺度代理，非已核实资产台账。",
+    "未分配Cloud成本在起始时与MS利润勾稽，之后固定，不随情景自动倒算。",
+    "2028保留年度延展，未建立逐业务成本与折旧明细。"
+  ]
+}

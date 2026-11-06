@@ -32,6 +32,16 @@ try {
   assert.ok(document.querySelectorAll('#ft input').length>50,'Forecast inputs absent');
   assert.equal(document.querySelectorAll('#ft input[data-period="2026Q3"]').length,0,'Actual period editable');
   const before=document.querySelector('#wbReconcile').textContent;
+  assert.ok(document.querySelector('#wbProfit'),'Detailed profit panel missing');
+  const life=document.querySelector('[data-profit="serverLife"]');
+  life.closest('details').open=true;life.value='8';life.dispatchEvent(new Event('change',{bubbles:true}));checkErrors();
+  assert.notEqual(document.querySelector('#wbReconcile').textContent,before,'Useful life did not reach EPS');
+  assert.ok(document.querySelector('[data-profit="serverLife"]').closest('details').open,'Editor collapsed on edit');
+  const saved=JSON.parse(dom.window.localStorage.getItem(dom.window.eval("'single-stock-v9:'+CASE.meta.ticker+':'+CASE.meta.caseId")));
+  assert.equal(saved.overrides['2027Q1'].profit.serverLife,8,'Nested profit parameters not saved');
+  click('#wbProfitNoResidual');checkErrors();
+  assert.equal(document.querySelector('[data-profit="cloudUnallocatedCost"]').value,'0');
+  click('#wbReset');assert.equal(document.querySelector('#wbReconcile').textContent,before);
   const input=document.querySelector('#ft input[data-period="2026Q4"][data-field="grossMargin"]');
   assert.ok(input);input.value=String(Number(input.value)-1);input.dispatchEvent(new Event('change',{bubbles:true}));checkErrors();
   assert.notEqual(document.querySelector('#wbReconcile').textContent,before,'Model change did not update bridge');

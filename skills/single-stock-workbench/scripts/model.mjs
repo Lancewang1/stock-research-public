@@ -1,4 +1,5 @@
 /** Quarterly scenario arithmetic. All amounts are USD mn; rates are decimals. */
+import {validateProfitChanges,profitRevenueInputs,calculateProfitQuarter} from './profit-model.mjs';
 export const SCENARIO_LIMITS = Object.freeze({
   segmentGrowthYoY: [-1, 10], grossMargin: [0, 1], opexRatio: [0, 2],
   rdRatio: [0, 2], smRatio: [0, 2], gaRatio: [0, 2],
@@ -32,6 +33,7 @@ export function validateOverrides(caseData, overrides = {}) {
     if (!record(changes)) throw new TypeError(`${period} 参数必须是对象`);
     if (own(changes,'opexRatio') && ['rdRatio','smRatio','gaRatio'].some(key=>own(changes,key))) throw new TypeError(`${period} 不可同时覆盖总费用率与分项费用率`);
     for (const [key, value] of Object.entries(changes)) {
+      if(key==='profit') {if(!caseData.profitModel?.quarters?.[period])throw new TypeError('该期间没有明细利润模型');validateProfitChanges(value);continue;}
       if (!own(SCENARIO_LIMITS, key)) throw new TypeError(`不支持的情景字段：${period}.${key}`);
       if (key === 'segmentGrowthYoY') {
         if (!record(value)) throw new TypeError(`${period}.segmentGrowthYoY 必须是对象`);
@@ -121,13 +123,25 @@ export function calculateCase(caseData, overrides = {}) {
           segments[key] = priorSimulated.segments[key] * (1 + growth);
         }
       }
+      const profitBase=caseData.profitModel?.quarters?.[period];
+      let profitDetail=null;
+      if(profitBase){const p=profitRevenueInputs(profitBase,changes.profit||{},segments.cloud);segments.cloud=['workspace','traditional','ai','tpu'].reduce((s,k)=>s+p[k+'Revenue'],0);profitDetail=calculateProfitQuarter(profitBase,p,sum(Object.values(segments))+original.hedge-segments.cloud);drivers.segmentGrowthYoY.cloud=priorSimulated?.segments.cloud>0?segments.cloud/priorSimulated.segments.cloud-1:null;}
       const revenue = sum(Object.values(segments)) + original.hedge;
       if (!(revenue > 0)) throw new RangeError(`${period} 情景总收入须大于零`);
-      const grossProfit = revenue * drivers.grossMargin, cogs = revenue - grossProfit;
-      const expense = calculateExpenses(original,revenue,drivers,changes), opex=expense.opex, operatingIncome = grossProfit - opex;
+      let cogs=profitDetail&&!own(changes,'grossMargin')?profitDetail.group.cogs:revenue*(1-drivers.grossMargin);
+      const grossProfit=revenue-cogs;
+      let expense=calculateExpenses(original,revenue,drivers,changes);
+      if(profitDetail){
+        if(!own(changes,'opexRatio')){for(const f of ['rd','sm','ga'])if(!own(changes,f+'Ratio'))expense[f]=profitDetail.group[f];expense.otherOpex=profitDetail.group.otherOpex;expense.opex=expense.rd+expense.sm+expense.ga+expense.otherOpex;}
+        profitDetail.manualCostAdjustment=cogs+expense.opex-profitDetail.group.cogs-profitDetail.group.opex;
+        profitDetail.manualOverrides=['grossMargin','opexRatio','rdRatio','smRatio','gaRatio'].filter(k=>own(changes,k));
+        drivers.grossMargin=grossProfit/revenue;drivers.opexRatio=expense.opex/revenue;for(const f of ['rd','sm','ga'])drivers[f+'Ratio']=expense[f]/revenue;
+      }
+      const opex=expense.opex,operatingIncome=grossProfit-opex;
       const pretaxIncome = operatingIncome + drivers.otherIncome;
       const netIncome = pretaxIncome * (1 - drivers.taxRate), dilutedEarnings=netIncome-drivers.preferredDividends,eps = dilutedEarnings / drivers.dilutedShares;
       result = {...result, segments, revenue, cogs, ...expense, grossProfit, operatingIncome, otherIncome: drivers.otherIncome, taxRate: drivers.taxRate, dilutedShares: drivers.dilutedShares,preferredDividends:drivers.preferredDividends,dilutedEarnings,netIncomeAvailableToCommon:dilutedEarnings, pretaxIncome, netIncome, eps};
+      if(profitDetail){result.profitDetail=profitDetail;for(const f of ['sbc','depreciation','amortization','sbcTaxBenefit','cloudOperatingIncome'])result[f]=profitDetail[f];}
       if (![revenue, cogs, opex, operatingIncome, netIncome, eps].every(Number.isFinite)) throw new RangeError(`${period} 计算结果不是有限数值`);
       if (pretaxIncome < 0) warnings.push(`${period} 税前利润为负，仍按有效税率代数计算；未单独模拟递延税项或亏损抵扣限制`);
       result.changed = Object.keys(changes).length > 0 || keys.some(key => Math.abs(segments[key] - original.segments[key]) > 1e-7);
@@ -138,6 +152,7 @@ export function calculateCase(caseData, overrides = {}) {
       result.dilutedEarnings=original.dilutedEarnings??original.netIncomeAvailableToCommon??(original.netIncome-result.preferredDividends);
       result.netIncomeAvailableToCommon=original.netIncomeAvailableToCommon??result.dilutedEarnings;
     }
+    if(Number.isFinite(result.sbc)&&Number.isFinite(result.sbcTaxBenefit)){result.adjustedOperatingIncome=result.operatingIncome+result.sbc;result.adjustedNetIncome=result.netIncome+result.sbc-result.sbcTaxBenefit;result.adjustedEarnings=result.dilutedEarnings+result.sbc-result.sbcTaxBenefit;result.adjustedEps=result.adjustedEarnings/result.dilutedShares;}
     simulated.set(period, result);
     return result;
   });
@@ -157,6 +172,8 @@ export function calculateCase(caseData, overrides = {}) {
     for (const field of ['revenue', 'hedge', 'cogs', 'opex', 'grossProfit', 'operatingIncome', 'otherIncome', 'pretaxIncome', 'netIncome','preferredDividends','dilutedEarnings','netIncomeAvailableToCommon']) row[field] = sum(group.map(quarter => quarter[field]));
     for (const field of ['capex', 'cfo','rd','sm','ga','otherOpex','sbc','depreciation','amortization']) row[field] = group.every(quarter => typeof quarter[field] === 'number' && Number.isFinite(quarter[field])) ? sum(group.map(quarter => quarter[field])) : null;
     row.eps = row.dilutedEarnings / dilutedShares;
+    for(const f of ['sbcTaxBenefit','cloudOperatingIncome','adjustedOperatingIncome','adjustedNetIncome','adjustedEarnings'])row[f]=group.every(q=>Number.isFinite(q[f]))?sum(group.map(q=>q[f])):null;
+    row.adjustedEps=row.adjustedEarnings==null?null:row.adjustedEarnings/dilutedShares;
     row.grossMargin = row.grossProfit / row.revenue;
     row.opexRatio = row.opex / row.revenue;
     row.taxRate = row.pretaxIncome === 0 ? null : (row.pretaxIncome - row.netIncome) / row.pretaxIncome;
@@ -187,7 +204,7 @@ export function setAnnualDriver(caseData, overrides, year, field, value, segment
   if(!future.length)throw new TypeError(`${year} 全年为实际期，不能修改`);
   const put=(q,key,v)=>{next[q.period]??={};if(key==='opexRatio')for(const k of ['rdRatio','smRatio','gaRatio'])delete next[q.period][k];else if(['rdRatio','smRatio','gaRatio'].includes(key))delete next[q.period].opexRatio;next[q.period][key]=v;};
   const futureRevenue=sum(future.map(q=>q.revenue));
-  if(segment){const previous=current.annual.find(row=>row.period===String(Number(year)-1));if(!previous)throw new TypeError('缺少前一年全年收入');const remaining=previous.segments[segment]*(1+value)-sum(actual.map(q=>q.segments[segment])),weights=sum(future.map(q=>q.segments[segment]));if(remaining<0||weights<=0)throw new RangeError('年度收入目标低于已实现收入或缺少季节性基数');for(const q of future){const prior=current.quarters.find(p=>p.period===priorPeriod(q.period));if(!(prior?.segments[segment]>0))throw new RangeError('缺少去年同季收入');next[q.period]??={};next[q.period].segmentGrowthYoY??={};next[q.period].segmentGrowthYoY[segment]=remaining*q.segments[segment]/weights/prior.segments[segment]-1;}}
+  if(segment){const previous=current.annual.find(row=>row.period===String(Number(year)-1));if(!previous)throw new TypeError('缺少前一年全年收入');const remaining=previous.segments[segment]*(1+value)-sum(actual.map(q=>q.segments[segment])),weights=sum(future.map(q=>q.segments[segment]));if(remaining<0||weights<=0)throw new RangeError('年度收入目标低于已实现收入或缺少季节性基数');for(const q of future){const prior=current.quarters.find(p=>p.period===priorPeriod(q.period));if(!(prior?.segments[segment]>0))throw new RangeError('缺少去年同季收入');next[q.period]??={};next[q.period].segmentGrowthYoY??={};if(segment==='cloud'&&next[q.period].profit)for(const k of ['workspace','traditional','ai','tpu'])delete next[q.period].profit[k+'Revenue'];next[q.period].segmentGrowthYoY[segment]=remaining*q.segments[segment]/weights/prior.segments[segment]-1;}}
   else if(field==='grossMargin'){const target=(annual.revenue*value-sum(actual.map(q=>q.grossProfit)))/futureRevenue;future.forEach(q=>put(q,field,target));}
   else if(['opexRatio','rdRatio','smRatio','gaRatio'].includes(field)){const amount={opexRatio:'opex',rdRatio:'rd',smRatio:'sm',gaRatio:'ga'}[field];if(actual.some(q=>!Number.isFinite(q[amount])))throw new TypeError('实际期缺少分项费用');const target=(annual.revenue*value-sum(actual.map(q=>q[amount])))/futureRevenue;future.forEach(q=>put(q,field,target));}
   else if(field==='otherIncome'){const remaining=value-sum(actual.map(q=>q.otherIncome)),days=sum(future.map(q=>q.days));future.forEach(q=>put(q,field,remaining*q.days/days));}
@@ -207,7 +224,7 @@ export function contractCloudScenario(caseData, overrides, period, contractAmoun
   if(!(prior?.segments.cloud>0))throw new TypeError('缺少Cloud去年同季收入');
   const increment=contractAmount*fulfillmentRatio-includedAmount,targetRevenue=original.segments.cloud+increment;
   if(targetRevenue<0)throw new RangeError('扣除基准已含金额后Cloud收入不能为负');
-  const growth=targetRevenue/prior.segments.cloud-1,next=JSON.parse(JSON.stringify(overrides||{}));next[period]??={};next[period].segmentGrowthYoY??={};next[period].segmentGrowthYoY.cloud=growth;
+  const growth=targetRevenue/prior.segments.cloud-1,next=JSON.parse(JSON.stringify(overrides||{}));next[period]??={};next[period].segmentGrowthYoY??={};next[period].segmentGrowthYoY.cloud=growth;if(next[period].profit)for(const k of ['workspace','traditional','ai','tpu'])delete next[period].profit[k+'Revenue'];
   calculateCase(caseData,next);
   return {overrides:next,increment,baselineRevenue:original.segments.cloud,targetRevenue,baselineGrowth:original.drivers.segmentGrowthYoY.cloud,scenarioGrowth:growth};
 }
