@@ -1,8 +1,44 @@
 {
-  "generatedAt": "2026-11-05T23:41:07+00:00",
+  "generatedAt": "2026-11-06T03:42:19+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
+    {
+      "date": "06 Nov",
+      "time": "09:24 HKT",
+      "publishedAt": "2026-11-06T09:24:00+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-payrolls-aug",
+      "title": "Dollar holds, yen gains as equity rout saps risk appetite ahead of payrolls",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQcTZYNGtkV0pONThjTHhjTkdYS0JYX1YtSlJISko4bVRPZDlUSzZaTmhRU0ZtQmtnZWFRQUkxRDhUWHR2akFsSkhSZmQxdVE4dURkRlJ4ekEtc1lFSTlTT3VaU1VRa0VKRjZFZkdZUWVpR3NNT1hfR1JhLVkxWHlLUDVZT04wMnJYTFMyX0haakxHcWdIdWg2SFVpNGF4eWFwNXV0eGZ3Q2ZDeTYzbGtyZXpGM05XNDVBb0U2dUtScEM?oc=5"
+    },
+    {
+      "date": "05 Nov",
+      "time": "20:44 HKT",
+      "publishedAt": "2026-11-05T20:44:44+08:00",
+      "kind": "NEWS",
+      "source": "Financial Times",
+      "eventId": "us-cpi-aug",
+      "title": "Bank of England raises rates to 4 per cent alongside hawkish inflation forecasts",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1WRTRfLU55cW9fUHZORGlKNThWb2p6dDFHNGIzYk5UZHBhUFM0cW1GMmh4Q1dkWUptbjExVktuOUpKZXlKRG5aeFdqcWt5TXV4RkVQcmRpZTR2SElfOU9PSjliMHo2amJhV0p6cE1MMHk?oc=5"
+    },
+    {
+      "date": "05 Nov",
+      "time": "19:00 HKT",
+      "publishedAt": "2026-11-05T19:00:07+08:00",
+      "kind": "NEWS",
+      "source": "Financial Times",
+      "eventId": "us-fomc-sep",
+      "title": "Wall Street bets Democratic sweep will empower moderates in Washington",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOZFVCcU5lMGJzcDUwaEVMSUFHdkRZVlpJT29CVmVWREkyemJFRHBkUlZ3STh4T0NKRXhRbWZzVXNwVlJUWXBEdTZnbTM2QUJxcmdSa0dXNVJiNHE1STVaaWc3ZlNFQ24tU2s5N1FsclhpWmdGdFNMdzU2VGJ6cDRGR0J2Wmg?oc=5"
+    },
     {
       "date": "05 Nov",
       "time": "11:46 HKT",
@@ -26,6 +62,54 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOS3ZvRzF1aTlTZE9WT0NxYkU4TWFHTi04YnhEVXd1VTJRTXdibGtPdGZtTWkwZEVBLU0xNmtZaEc4R2lWZWVSdGJtY1FSdzhIazR5a2YwdDJoRzFFTHN1Z2FNb2l5b2x5SllyTE9sTTZTNkxFODFJVkhxOGhlblRTXzNiLTZpc3FKcXBqRzZUMjYtY3VXOHlnR0hPOFFYTldZaXpzSGNTbzlPNlhUdHF1amJTcFp1dw?oc=5"
+    },
+    {
+      "date": "03 Nov",
+      "time": "15:37 HKT",
+      "publishedAt": "2026-11-03T15:37:56+08:00",
+      "kind": "NEWS",
+      "source": "Financial Times",
+      "eventId": "us-fomc-sep",
+      "title": "Australia raises rates to highest level since 2008 financial crisis",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQMmRqTHNRNlFOOE4zdGltWEpObG9VemlVY3dKdy1YZ2hwZmRHVVRZTXFvSlRna3dvVHZQM1hnX2lkbDhwOGJfcmg0d1hkUjV4QTd6WHJSR3pPb3RyYlU1X0RZYmxiQ0pqbXVVeS1SOHRaX29DdWx0Z21Ra3BuWHBudkd2NUM?oc=5"
+    },
+    {
+      "date": "03 Nov",
+      "time": "06:00 HKT",
+      "publishedAt": "2026-11-03T06:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Bloomberg",
+      "eventId": "us-cpi-aug",
+      "title": "What Millions of Data Points Reveal About US Inflation",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5SRkFGWDRuQ2hKTGFVUTdUYVpLOXRUUmYwWEJqZjRsd2lIMFBzUFRzR2N4SHNXd2lmTTVlcVFOWHZFMXlBLWwtUnhwOTQwVGhTWkJhT2lVN3BwTkJ6Q240emF3YXd5NHdjczlLNFhHdw?oc=5"
+    },
+    {
+      "date": "02 Nov",
+      "time": "13:01 HKT",
+      "publishedAt": "2026-11-02T13:01:35+08:00",
+      "kind": "NEWS",
+      "source": "Financial Times",
+      "eventId": "us-cpi-aug",
+      "title": "Bank of England set to raise rates to 4% in push to quell inflation",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQV1dtRFFpVXU3ZkM4b1RrUU10VDM0R0VjcWY1b09pZ0ZWUzE2Ym9OZVIxT2hBMDRLU0k0S0tsSVlwU3FIX2NMODNlWENHbHpvZ1pEWUJMQS1FSVRJeGFwakt2UEVVanhIU3NqTktnS1BhWDlTMVdraDJLaU5LLW03dnlRbHk?oc=5"
+    },
+    {
+      "date": "02 Nov",
+      "time": "13:01 HKT",
+      "publishedAt": "2026-11-02T13:01:19+08:00",
+      "kind": "NEWS",
+      "source": "Financial Times",
+      "eventId": "us-fomc-sep",
+      "title": "AI mania can’t survive higher interest rates",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQc1VMQlF3OWRsamI3RF84QmNzTmNBa1FLbkQ1ckttMWxpRlFPeGZOdFotSnBDR0tTcnFEbHRkSW0walJKUHlfMEpfUFVrdjFVeXJpWHFuOWprYnlhUjhDVGR3bjZqSjJ0eDI3XzFWSm9UbmNrM0ZHaUZHR1NhM2FPUnplYUY?oc=5"
     },
     {
       "date": "01 Nov",
@@ -106,6 +190,18 @@
       "kind": "NEWS",
       "source": "Reuters",
       "eventId": "us-cpi-aug",
+      "title": "Gold drops over 1% as hot US inflation data boosts Fed hike bets",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNZkM3NGdUajlORC1ZZjBNcFZtNjYwa2JRaFczS1V4OVRORGhzZG1NUGxaY3ppRjdfQlFvUmREakJQM1RGaDNZZmZFMnJrY2Rtemc2Z1dBY1pPRy1ZbnBJVzNfTG1MMGJ5TXY5VzFpaDd6UENqd1pUOVdlTm1sS241QkFzNm1kdDJXTjl5emhLV200WUI1QVh4RQ?oc=5"
+    },
+    {
+      "date": "14 Oct",
+      "time": "15:00 HKT",
+      "publishedAt": "2026-10-14T15:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-cpi-aug",
       "title": "Fed's Goolsbee says September CPI data was discouraging - Yahoo Finance",
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
@@ -122,102 +218,6 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPMjl1ZWZGd2lIRXg1US1hUjNacTVDN2o5S2lIcXpCdnZ1VHBXcEpqOHV5SzJJZHJrT3RxYjdrRjRrRU03eHNGTTFRMnVCVEdZa0VfLU9BeFdSeTE1aFRrc3ZRampyOFVTczZRbWk0azFBakVndUJ1X0NjVmJmV1JmeXNXSlFkNzF0NUZKTUUyUnlHWi1sOXFpVHV5NnVvcDA?oc=5"
-    },
-    {
-      "date": "14 Oct",
-      "time": "15:00 HKT",
-      "publishedAt": "2026-10-14T15:00:00+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-cpi-aug",
-      "title": "Gold drops over 1% as hot US inflation data boosts Fed hike bets",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNZkM3NGdUajlORC1ZZjBNcFZtNjYwa2JRaFczS1V4OVRORGhzZG1NUGxaY3ppRjdfQlFvUmREakJQM1RGaDNZZmZFMnJrY2Rtemc2Z1dBY1pPRy1ZbnBJVzNfTG1MMGJ5TXY5VzFpaDd6UENqd1pUOVdlTm1sS241QkFzNm1kdDJXTjl5emhLV200WUI1QVh4RQ?oc=5"
-    },
-    {
-      "date": "14 Oct",
-      "time": "15:00 HKT",
-      "publishedAt": "2026-10-14T15:00:00+08:00",
-      "kind": "NEWS",
-      "source": "Financial Times",
-      "eventId": "us-cpi-aug",
-      "title": "US inflation jumps to 3.7% as Iran war drives up prices",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNaTVDMnlSRThVWkxaaEY1cnpwU3VJOFZTbjA0cXYxR0l1WEcyQks5X2tIeDRSSkpsV29RU0xLZFJsTnMwNE5SdC1oWXpHdGFVY0pUOVVxenlSbDNTRVMzTlNLeENwWEFIRFl2Uk1sb1hMdVYtWVVndEw1RGpyT0tVd0ZSOWQ?oc=5"
-    },
-    {
-      "date": "14 Oct",
-      "time": "15:00 HKT",
-      "publishedAt": "2026-10-14T15:00:00+08:00",
-      "kind": "NEWS",
-      "source": "Bloomberg",
-      "eventId": "us-fomc-sep",
-      "title": "Gold Steady as Fed Official’s Remarks Temper Rate-Hike Bets",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQazViUHl2SmRiSUdDb0dNelo2Y2JjdkNLOG40Q0FpMnFBZ1JPNUNBc3pMeGlWbE5CQlUwcEVJWE93WmlJRkZTbzllQ1pfNV9HYXVHLUV2YVdkWW1TMWVJTElsNklvSzVYdTZPXzhIV0JHdHBCQzhhcklUSHhQaTFXUUNjNVlZTVZQNWd0UHM5LTlwRmpobUdiR1RiWDhTYUNTUGloY256S1l2blk0M0JZ?oc=5"
-    },
-    {
-      "date": "11 Oct",
-      "time": "15:00 HKT",
-      "publishedAt": "2026-10-11T15:00:00+08:00",
-      "kind": "NEWS",
-      "source": "Financial Times",
-      "eventId": "us-cpi-aug",
-      "title": "Will September inflation cement US interest rate policy for the rest of the year?",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPdVpFbWJydEFBMkkyYXU1NFhqVUd0WFppVklNYldyQzR5M2wwZ3hyT2oxSXZ5dkN2VklKd0lVZUhjRFNxS0RQSWtBMW1kX3ZfR09oZ0RIUV8xR2g3T0VPYmNDMzZYU016QnBKUHREUHZWRmJCeEcwYnVYLTlxb1ZDUXhSQ0I?oc=5"
-    },
-    {
-      "date": "10 Oct",
-      "time": "15:00 HKT",
-      "publishedAt": "2026-10-10T15:00:00+08:00",
-      "kind": "NEWS",
-      "source": "Bloomberg",
-      "eventId": "us-cpi-aug",
-      "title": "US CPI to Show Overall Inflation Boosted by Higher Gasoline Prices",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPUHNUeWNTY1NneVFOYnBzR0xFeWs2eWs3UWJCODFyaEtnNDZtamJJY1pSNFpyZ2xmcmNoR3FIc1VEeVU5bXdHSktiQlVqbFZTUHlTMjlsbjZOOU9fMFVwSUZoNGxNV0toMU1Sc3VZTnRWTmtnTXNlSnVCaDNMREVnWUtOSFctdGlTZ01EU1hnRVVsd1VnaHJiNEF0d3AwQVZubko5RVNjVDlKZ3FkbnI2bHFTbWdrN2JY?oc=5"
-    },
-    {
-      "date": "03 Oct",
-      "time": "15:00 HKT",
-      "publishedAt": "2026-10-03T15:00:00+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-fomc-sep",
-      "title": "Fed may skip October but pull rate hike trigger in December",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNOVRfM1dqWHpoenJab09IVXh3am1peVNMWFFPOFhOSjl1SkI5MklDUDl6VFpkSkZxUE8tU0Q4S3R3VXNxd0t5Mlc3NGxXNTBid1N4U0czdVA2b09hVmRyT0VtaEU3M243T09TQjVTSzVMYURvSkg5WjBSc2tjVnpzM29ZMHdTMC1hUGlRUzBJRXBQdWk3bG9heTJOQjQ3QQ?oc=5"
-    },
-    {
-      "date": "27 Sep",
-      "time": "15:00 HKT",
-      "publishedAt": "2026-09-27T15:00:00+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-payrolls-aug",
-      "title": "Wall St Week Ahead Jobs report, inflation data to test US rate path, economic strength",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOMVdISllUQW1vOGc5UzVfeWVGbVloWmh0U3A3X0N2LU9TQnBfQ0RhU0JfbEZVQlA3MUJhOVBacWg4QkJrdTVQaE50RkpsaGJqOEhWZDU5WDNQTVp0dWtzc3J6ZVlFR3VnZmNnLTlwbEpWZW9yMXh2NThFQnpyd3lNX3JZUUZfQ05vTndubkpBaVgzY2d4b05DOEJUSGZ6RGNuWVlDcU4ybm9IVUQwbWtMUU5Ic2pEdDQ3?oc=5"
-    },
-    {
-      "date": "21 Sep",
-      "time": "15:00 HKT",
-      "publishedAt": "2026-09-21T15:00:00+08:00",
-      "kind": "NEWS",
-      "source": "Financial Times",
-      "eventId": "us-cpi-aug",
-      "title": "Federal Reserve will need to be ‘aggressive’ on inflation, says top official",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQTmdmb192UXVHb3NNUmJxNDRyWHp0aVU0ZTc3R19vTGNhZFlSSm9ZVnhoSTBrbURqcnFOSERTdlVfbHlNWGZmbk1zSTc0WHRaY2pqUVlWZGlhUXNyVkpIWXRjOHpyTjh3SnhOM2M2TU1NR2Mzcm9WWnJXeloyME0wUDM0dmc?oc=5"
     }
   ]
 }
