@@ -385,8 +385,7 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline
 
     <!-- Forecast view -->
     <section class="card" id="fcCard" hidden>
-      <div id="cloudLab"></div>
-      <details id="fullForecast" style="border-top:1px solid var(--line)"><summary style="padding:16px;font-weight:650;cursor:pointer">GOOGL完整盈利表 · MS基准与用户情景</summary>
+      <details id="fullForecast" open style="border-top:1px solid var(--line)"><summary style="padding:16px;font-weight:650;cursor:pointer">GOOGL完整盈利表 · MS基准与用户情景</summary>
       <div class="fc-hdr">
         <h2>盈利预测</h2>
         <div class="seg" id="hfreq"><button data-f="q" class="on">逐季</button><button data-f="a">逐年</button></div>
@@ -404,7 +403,9 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline
           <p class="note" id="gdSrc" style="margin:8px 0 0"></p>
         </aside>
       </div>
-      <p class="note" style="padding:0 14px 12px;margin:0" id="fcFoot"></p></details><div class="wb-extra"><details><summary>年度季度勾稽 · 分部 / 费用 / 普通股盈利桥</summary><div id="wbReconcile"></div></details><details><summary>机构原始模型 · 版本与会计口径</summary><div id="wbBrokers"></div></details><details><summary>客户、合同与供应链研究资料 · 展开查看</summary><div id="wbCloud"></div></details><details><summary>来源台账与计算边界</summary><div id="wbSources"></div></details></div>
+      <p class="note" style="padding:0 14px 12px;margin:0" id="fcFoot"></p></details>
+      <div id="cloudLab"></div>
+      <div class="wb-extra"><details><summary>年度季度勾稽 · 分部 / 费用 / 普通股盈利桥</summary><div id="wbReconcile"></div></details><details><summary>机构原始模型 · 版本与会计口径</summary><div id="wbBrokers"></div></details><details><summary>客户、合同与供应链研究资料 · 展开查看</summary><div id="wbCloud"></div></details><details><summary>来源台账与计算边界</summary><div id="wbSources"></div></details></div>
     </section>
     <div class="overlay" id="dim" hidden></div>
     <div class="drawer" id="drawer" hidden>
@@ -1595,7 +1596,7 @@ const WB=(()=>{
   compute=function(d){if(d!==H.d)return legacyCompute(d);return Object.fromEntries(FY.map(y=>{const a=annual(y);return[y,a?{...a,segs:a.segments,rev:a.revenue,oi:a.operatingIncome,ni:a.netIncome,sh:a.dilutedShares,gp:a.grossProfit,g:annual(y-1)?100*(a.revenue/annual(y-1).revenue-1):null,gm:a.grossProfit/a.revenue*100,ox:a.opex/a.revenue*100,opm:a.operatingIncome/a.revenue*100}:legacyCompute(MS)[y]];}));};
   function commit(next,name='自定义情景'){const calculated=WBM.calculateCase(CASE,next);overrides=next;result=calculated;title=Object.keys(overrides).length?name:'MS季度基准';H.preset=Object.keys(overrides).length?'user':'ms';sync();syncPreset();buildTable();renderGdRows();renderReconcile();error('');save();}
   function applyAnnual(year,field,value,segment){commit(WBM.setAnnualDriver(CASE,overrides,year,field,value,segment));}
-  function applyCloudForecast(rows){let next=clone(overrides);for(const row of rows.slice().sort((a,b)=>a.period.localeCompare(b.period))){const original=CASE.quarters.find(q=>q.period===row.period);if(!original||original.kind!=='estimate')throw new Error('Cloud模型只能修改已映射的未来季度');if(!valid(row.cloudRevenueBn)||row.cloudRevenueBn<0)throw new Error('Cloud收入必须为非负有限数值');const priorPeriod=String(Number(row.period.slice(0,4))-1)+row.period.slice(4),prior=WBM.calculateCase(CASE,next).quarters.find(q=>q.period===priorPeriod);if(!(prior?.segments.cloud>0))throw new Error('Cloud同比基数缺失');next[row.period]??={};next[row.period].segmentGrowthYoY??={};next[row.period].segmentGrowthYoY.cloud=row.cloudRevenueBn*1000/prior.segments.cloud-1;}commit(next,'客户与供给模型 · Cloud收入');$('#wbScenarioNote').hidden=false;$('#wbScenarioNote').textContent='Cloud收入来自上方自主模型。利润影响按本盈利表当前毛利率、费用率、税率及股数计算；独立Capex预测在上方展示，未直接扣减净利润。';$('#fullForecast').open=true;$('#fullForecast').scrollIntoView({behavior:'smooth',block:'start'});return result;}
+  function applyCloudForecast(rows){let next=clone(overrides);for(const row of rows.slice().sort((a,b)=>a.period.localeCompare(b.period))){const original=CASE.quarters.find(q=>q.period===row.period);if(!original||original.kind!=='estimate')throw new Error('Cloud模型只能修改已映射的未来季度');if(!valid(row.cloudRevenueBn)||row.cloudRevenueBn<0)throw new Error('Cloud收入必须为非负有限数值');const priorPeriod=String(Number(row.period.slice(0,4))-1)+row.period.slice(4),prior=WBM.calculateCase(CASE,next).quarters.find(q=>q.period===priorPeriod);if(!(prior?.segments.cloud>0))throw new Error('Cloud同比基数缺失');next[row.period]??={};next[row.period].segmentGrowthYoY??={};next[row.period].segmentGrowthYoY.cloud=row.cloudRevenueBn*1000/prior.segments.cloud-1;}commit(next,'客户与供给模型 · Cloud收入');$('#wbScenarioNote').hidden=false;$('#wbScenarioNote').textContent='Cloud收入来自下方自主模型。利润影响按本盈利表当前毛利率、费用率、税率及股数计算；独立Capex预测在下方展示，未直接扣减净利润。';$('#fullForecast').open=true;$('#fullForecast').scrollIntoView({behavior:'smooth',block:'start'});return result;}
   function applyPreset(p){try{if(p==='ms'){commit({});return;}if(p==='user')return;const d=PRESETS[p];let next={};for(const y of FY){for(const s of SEGS)next=WBM.setAnnualDriver(CASE,next,y,'segmentGrowthYoY',d.g[s.k][y]/100,s.k);for(const [field,key,scale] of [['grossMargin','gm',100],['opexRatio','ox',100],['taxRate','tax',100],['otherIncome','oth',1],['dilutedShares','sh',1]])next=WBM.setAnnualDriver(CASE,next,y,field,d[key][y]/scale);}commit(next,p==='cons'?'原券商样本反推情景（非独立分部共识）':'演示情景 · 原Demo透明规则');H.preset=p;syncPreset();$('#wbScenarioNote').hidden=false;$('#wbScenarioNote').textContent='此预设保留原Demo方法供对照：分部以总收入等比反推，或MS与样本中点加固定调整；不是新研究结论。实际期锁定，年度目标分配至未来季度。';}catch(e){error(e.message);}}
   function applyFactor(p,key){try{const d=p==='ms'?MS:SYN;let next=clone(overrides);const field=FKEY[key];if(!field)return;for(const y of FY){if(field.startsWith('g.'))next=WBM.setAnnualDriver(CASE,next,y,'segmentGrowthYoY',d.g[field.slice(2)][y]/100,field.slice(2));else next=WBM.setAnnualDriver(CASE,next,y,field==='gm'?'grossMargin':'opexRatio',d[field][y]/100);}commit(next,'因子情景 · '+key);}catch(e){error(e.message);}}
   function historicalRows(){
@@ -1696,7 +1697,7 @@ function initializeV11(){
   window.CloudApp=window.CloudUI.init($('#cloudLab'),CLOUD_DATA,CLM,{onChange:overview,onApply:model=>WB.applyCloudForecast(model.quarters)});
   const box=document.createElement('div');box.className='box';box.innerHTML='<h3>近期回撤的公司事件</h3><p class="note">QQQ与XLC解释共同市场背景；财报、客户采购、盈利修订和估值分歧请查看按日期连接的事件复盘。</p><button class="chip" id="goEventReview">查看10—11月事件时间线 →</button>';$('#p2 .col').prepend(box);$('#goEventReview').addEventListener('click',()=>{setTab(3);$('#wbResearch').scrollIntoView({behavior:'smooth'});});
   setTab(3);WB.focusCase();
-  if(location.hash==='#cloud')setView('forecast');
+  if(location.hash==='#cloud'){setView('forecast');requestAnimationFrame(()=>$('#cloudLab').scrollIntoView({block:'start'}));}
 }
 
 /* ---------- orchestrate ---------- */
