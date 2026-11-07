@@ -84,18 +84,20 @@ try {
   const baselineAnnual=baseline.annual.find(q=>q.period==='2027');
   const globalInputs=Array.from(document.querySelectorAll('#cloudLab [data-cl-param^="global."]'));
   assert.equal(globalInputs.length,7,'Quick global parameter controls missing or duplicated');
-  assert.ok(globalInputs.every(el=>!el.closest('details')),'Quick parameters hidden in advanced details');
+  assert.ok(globalInputs.every(el=>el.closest('details[data-cl-detail]')),'Global assumption is detached from its relevant item');
   assert.ok(query('#fullForecast').open,'Earnings model must start expanded');
   assert.equal(query('#fcCard').firstElementChild.id,'modelHome','Complete earnings model must be first');
-  click('#modelGrid [data-model-topic="revenue"]');click('#modelDetailNav [data-model-topic="cloud"]');check();
+  click('#modelGrid th [data-model-item="cloud"]');check();
   assert.equal(query('#cloudLab').parentElement.id,'modelCloudSlot','Cloud analysis must be reached from revenue detail');
-  assert.equal(query('#cloudLab .cl-line').id,'clContractLine','Contract line must precede economics');
-  for(const id of ['clContractEvidence','clEconomicsEvidence']) assert.ok(!query('#'+id).closest('details'),'Key evidence must be visible');
+  for(const id of ['enterprise','ai','tpu','summary'])assert.ok(query(`#cloudLab details[data-cl-item="${id}"]`),'Missing Cloud business item');
+  for(const id of ['clContractEvidence','clEconomicsEvidence']) assert.ok(query('#'+id).closest('details'),'Evidence must be nested under the related item');
   assert.match(query('#clEconomicsEvidence').textContent,/14.6%/,'New historical cost evidence missing');
   assert.ok(query('[data-cl-param="customers.Anthropic.reservedBillingFraction"]'),'Reserved billing editor absent');
   const paths=[...document.querySelectorAll('[data-cl-param]')].map(e=>e.dataset.clParam);
   assert.equal(new Set(paths).size,paths.length,'Duplicate parameter editors');
-  assert.ok(!/capex|资本开支/i.test(query('#cloudLab').textContent),'Removed Capex module still rendered');
+  // Source excerpts may discuss investment/leases as revenue evidence boundaries;
+  // the retired standalone Capex model and its editable controls must stay absent.
+  assert.equal(query('#cloudLab').querySelector('[id*="capex" i],[data-cl-param*="capex" i],[data-cl-param^="global.equipmentCost"],[data-cl-param^="global.facilityCost"]'),null,'Removed Capex module or controls still rendered');
   assert.ok(!/capex/i.test(query('#studyOverview').textContent),'Overview still advertises Capex');
   assert.match(query('#clAssumptionAudit').textContent,/没有直接量化证据/,'Unsupported assumptions must be explicit');
   assert.match(query('#clAssumptionAudit').textContent,/EK130/,'TPU source cells missing');
@@ -226,6 +228,7 @@ try {
   assert.ok(query('#clMSSolution').textContent.includes('2027Q1'));
   click('#clMSFit');check();
   plain(win.CloudApp.getResult().quarters).forEach((q,i)=>assert.ok(Math.abs(q.cloudRevenueBn-msBefore[i].cloudRevenueBn)<1e-6));
+  click('#modelDetailClose');click('#modelGrid th [data-model-item="cloudOperatingIncome"]');
   const cost=query('[data-profit="cloudCashCostMultiplier"]'),originalCost=Number(cost.value);
   cost.value=originalCost*.9;cost.dispatchEvent(new win.Event('change',{bubbles:true}));check();
   assert.ok(Number(query('[data-profit="cloudCashCostMultiplier"]').value)<originalCost);
@@ -243,7 +246,7 @@ try {
   assert.equal(document.querySelectorAll('#recentEventReview').length,0,'Old review did not retain its independent renderer');
   assert.ok(query('#wbResearch').textContent.includes('2024'),'Historical review absent');
   assert.ok(!/\?{5,}/.test(document.body.textContent),'Corrupted Chinese text');
-  console.log(JSON.stringify({result:'pass',scope:'non-visual DOM integration; canvas mocked',globalInputs:7,customerInputs:3,derivedBudgetUpdates:true,sensitivityRecalculated:true,localSaveReload:true,exportImport:true,wrongSnapshotRejected:true,offlineResources:true,sourcesResolved:true,publicationCutoff:true,revenueOnly:true,assumptionEvidenceVisible:true,cloudApplyToEarnings:true,actualQuarterLocked:true,reset:true,eventReactionFocus:true,emptyNavigationRemoved:true}));
+  console.log(JSON.stringify({result:'pass',scope:'non-visual DOM integration; canvas mocked',globalInputs:7,customerInputs:3,derivedBudgetUpdates:true,sensitivityRecalculated:true,localSaveReload:true,exportImport:true,wrongSnapshotRejected:true,offlineResources:true,sourcesResolved:true,publicationCutoff:true,revenueOnly:true,assumptionEvidenceByItem:true,cloudApplyToEarnings:true,actualQuarterLocked:true,reset:true,eventReactionFocus:true,emptyNavigationRemoved:true}));
 } finally {
   restored?.dom.window.close();primary?.dom.window.close();
 }
