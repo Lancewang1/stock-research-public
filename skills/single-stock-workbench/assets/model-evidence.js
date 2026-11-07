@@ -52,7 +52,7 @@ function modelItemEvidence(key,context={}){
  const aliases={margin:'grossMargin',profit:'operatingIncome',earnings:'eps',adjusted:'adjustedEps',otherOperatingExpenses:'otherOpex',taxExpense:'tax',revenueGrowth:'growth'};
  key=aliases[key]||key;
  const spec=modelEvidenceSpecs[key];
- if(!spec)return '<p class="note">该项尚无独立证据映射，保留源模型口径；不以其他科目的资料代替。</p>';
+ if(!spec)return '<p class="note">目前没有这项的单独研究材料。请先查看上方公式中的各项输入及其来源。</p>';
  const {q={},d={},b={},p={}}=context,period=q.period||'';
  const registry=new Map();
  for(const source of [...(CASE.sources||[]),...(RESEARCH.sources||[]),...(CASE.profitModel?.sources||[])])registry.set(source.id,{...registry.get(source.id),...source});
@@ -68,7 +68,8 @@ function modelItemEvidence(key,context={}){
   return detail('source-'+id,source.title||source.label||source.id,positions+paragraph(text(source.note||''))+(url?'<p><a href="'+esc(url)+'" target="_blank" rel="noreferrer">查看原始来源</a></p>':''),'model-evidence-source');
  };
  const sourceRefs=(refs,id)=>(refs||[]).map((ref,i)=>inlineSource(ref,id+'-'+i)).join('');
- let html=detail('calculation','计算关系与适用边界',paragraph(spec.formula)+paragraph(spec.note)+values([['当前期间',period],['当前性质',q.kind==='actual'?'已公布期间，数值按逐项核验范围识别':'预测情景，沿固定研究快照']]),'model-evidence-method');
+ const current=modelNumberLineage(key,q);
+ let html=detail('calculation','计算方法与数据来源',paragraph(current.formula|| (current.kind==='actual'?'历史期间直接采用资料中的对应金额。':'这一项的数值依据见上方假设说明。'))+paragraph(current.explanation)+paragraph(current.clientSource)+modelAssumptionCitations(current)+values([['查看期间',period],['数据性质',q.kind==='actual'?'历史数据':'预测情景']]),'model-evidence-method');
  const sourceRow=(period.length===4?CASE.annualBaselines:CASE.quarters)?.find(x=>x.period===period);
  const selected=(sourceRow?.sourceRefs||[]).filter(ref=>{const m=String(ref).match(/^ms:([^!]+)![A-Z]+(\d+)$/);return m&&spec.rows?.[m[1]]?.includes(Number(m[2]));});
  if(selected.length)html+=detail('model-cells','MS模型底稿 · '+period,paragraph('以下是对应科目的源模型输入位置；用户情景由当前假设重算，并不改写原工作簿。')+sourceRefs(selected,'model'));

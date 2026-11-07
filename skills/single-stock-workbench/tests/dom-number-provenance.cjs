@@ -68,7 +68,11 @@ async function main(){
       const formula=query('[data-number-formula]',panel),substitution=query('[data-number-substitution]',panel);
       assert.ok(isVisible(formula)&&formula.textContent.trim().length>5,'Formula requires another disclosure or is absent');
       assert.ok(isVisible(substitution)&&/\d/.test(substitution.textContent),'Current-period substitution is hidden or absent');
-      assert.equal(panel.querySelectorAll('[data-number-edit]').length,0,'Calculated number exposes an unrelated direct assumption editor');
+      for(const input of panel.querySelectorAll('[data-number-edit]')){
+        const sameResult=input.dataset.numberKey===key&&input.dataset.numberPeriod===period&&input.dataset.numberParameter!=='segmentGrowthYoY';
+        assert.equal(sameResult,false,'Calculated number exposes an editor for the result itself');
+        assert.ok(input.closest('[data-assumption-key]'),'Formula input lacks an explicit assumption identity');
+      }
     }
     const otherPanels=[...doc.querySelectorAll('#modelItemTree > [data-detail-item]')].filter(isVisible);
     assert.ok(otherPanels.length<=1,'Numeric popup exposes sibling financial items');
@@ -137,29 +141,34 @@ async function main(){
   }
 
   // Tracing a frozen comparison must retain the frozen baseline through its operands.
-  analysis('depreciation','2027Q1');click('#modelItemTree [data-model-item="servers"]');
-  const life='#modelItemTree [data-profit="serverLife"]';reveal(life);const originalLife=Number(query(life).value);
+  analysis('depreciation','2027Q1');click('#modelItemTree [data-model-topic][data-model-item="servers"]');
+  const life='#modelItemTree [data-number-edit][data-number-key="serverLife"][data-number-parameter="profit"]';reveal(life);const originalLife=Number(query(life).value);
   edit(life,originalLife+2);click('#modelDetailClose');
-  analysis('depreciation','2027Q1');click('#modelItemTree [data-model-item="depImpact"]');
+  analysis('depreciation','2027Q1');click('#modelItemTree [data-model-topic][data-model-item="depImpact"]');
   click('#modelItemTree [data-model-number="servers"][data-number-baseline="true"]');
-  const baselineLife=query('#modelNumberProvenance [data-model-number="serverLife"]');
-  assert.equal(baselineLife.dataset.numberBaseline,'true','Frozen depreciation operand lost baseline context');
-  baselineLife.click();check();
-  const baselinePanel=expectPanel('serverLife','2027Q1','assumption');
+  const baselinePanel=expectPanel('servers','2027Q1','calculation');
+  const baselineLife=query('[data-assumption-key="serverLife"][data-assumption-parameter="profit"]',baselinePanel);
   assert.equal(baselinePanel.querySelectorAll('[data-number-edit]').length,0,'Frozen comparison opened a current input editor');
-  assert.equal(parseFloat(query('.number-current',baselinePanel).textContent),originalLife,'Frozen comparison shows the user override');
-  assert.match(query('[data-number-source]',baselinePanel).textContent,/初始基准/,'Frozen input source loses baseline identity');
+  assert.equal(parseFloat(query('.assumption-fixed',baselineLife).textContent),originalLife,'Frozen comparison shows the user override');
+  assert.ok(isVisible(query('[data-assumption-rationale]',baselineLife)),'Frozen assumption explanation is hidden');
+  assert.match(query('[data-assumption-source]',baselineLife).textContent,/初始基准/,'Frozen input source loses baseline identity');
   reset();
 
-  // Numeric identity changes with the real override state, not simply editability.
-  analysis('grossMargin','2027Q1');
-  const gm='#modelItemTree [data-model-earnings="grossMargin"]';reveal(gm);edit(gm,Number(query(gm).value)-1);
-  assert.equal(numberKind('grossMargin','2027Q1'),'assumption','Direct margin override did not change provenance');
-  assert.equal(numberKind('grossProfit','2027Q1'),'calculation','Derived gross profit was mislabeled as a user input');
-  openNumber('grossMargin','2027Q1');assert.match(expectPanel('grossMargin','2027Q1','assumption').textContent,/用户|覆盖|自定义/,'User override source is not identified');
-  reset();assert.equal(numberKind('grossMargin','2027Q1'),'calculation','Reset did not restore derived provenance');
+  // Existing saved overrides retain their real identity without creating a new result editor.
+  win.__numberTestOverride={'2027Q1':{grossMargin:value('grossMargin')-0.01}};
+  const overrideScenario=plain(win.eval('WBM.createScenario(CASE,window.__numberTestOverride,"Saved margin assumption")'));
+  delete win.__numberTestOverride;
+  const scenarioKey=win.eval('"single-stock-v9:"+CASE.meta.ticker+":"+CASE.meta.caseId');
+  restored=mount({...app.storage(),[scenarioKey]:JSON.stringify(overrideScenario)});restored.check();
+  assert.equal(restored.query('#modelGrid [data-model-number="grossMargin"][data-model-period="2027Q1"]').dataset.numberKind,'assumption','Saved margin override lost assumption identity');
+  assert.equal(restored.query('#modelGrid [data-model-number="grossProfit"][data-model-period="2027Q1"]').dataset.numberKind,'calculation','Derived gross profit was mislabeled as an input');
+  restored.click('#modelGrid [data-model-number="grossMargin"][data-model-period="2027Q1"]');
+  assert.match(restored.query('#modelNumberProvenance [data-number-source]').textContent,/用户|覆盖|自定义/,'Saved override source is not identified');
+  restored.click('#modelDetailClose');restored.click('#wbReset');
+  assert.equal(restored.query('#modelGrid [data-model-number="grossMargin"][data-model-period="2027Q1"]').dataset.numberKind,'calculation','Reset did not restore derived identity');
+  restored.dom.window.close();restored=null;
 
-  analysis('taxRate','2027Q1');const tax='#modelItemTree [data-model-earnings="taxRate"]';reveal(tax);
+  analysis('taxRate','2027Q1');const tax='#modelItemTree [data-number-edit][data-number-key="taxRate"][data-number-parameter="driver"]';reveal(tax);
   const epsBefore=value('eps');edit(tax,Number(query(tax).value)+1);
   assert.ok(value('eps')<epsBefore,'Tax assumption failed to propagate into EPS');
   assert.equal(numberKind('taxRate','2027Q1'),'assumption');assert.equal(numberKind('taxRate','2027'),'calculation');
@@ -205,13 +214,17 @@ async function main(){
     assert.equal(panel.dataset.clNumberId,id,'Cloud clicked another number');
     assert.equal(panel.dataset.clKind,kind,'Cloud popup identity differs from its number');
     assert.ok(isVisible(query('.cl-number-basis',panel))&&query('.cl-number-basis',panel).textContent.trim().length>8,'Cloud basis missing');
-    assert.ok(isVisible(query('.cl-number-sources',panel))&&query('.cl-number-sources',panel).textContent.trim().length>8,'Cloud sources missing');
+    for(const detail of panel.querySelectorAll('details.cl-number-analysis'))assert.equal(detail.open,false,'Cloud detailed analysis starts expanded');
     assert.equal(query('#clAssumptionAudit').hidden,true,'Cloud number popup still displays sibling items');
     if(kind==='calculated'){
       assert.ok(isVisible(query('.cl-number-formula',panel)),'Cloud formula is hidden');
       assert.ok(isVisible(query('.cl-number-substitution',panel))&&/\d/.test(query('.cl-number-substitution',panel).textContent),'Cloud current substitution missing');
-      assert.equal(panel.querySelectorAll('[data-cl-param]').length,0,'Cloud calculated number contains an assumption editor');
+      for(const input of panel.querySelectorAll('[data-cl-param]')){
+        assert.ok(input.hasAttribute('data-cl-driver-input'),'Cloud calculation contains a result editor instead of a driver');
+        assert.ok(!/\.computeBudgetBn\.\d+$/.test(input.dataset.clParam),'Derived compute budget is directly editable');
+      }
     }else{
+      for(const selector of ['.cl-number-rationale','.cl-number-evidence-summary'])assert.ok(isVisible(query(selector,panel))&&query(selector,panel).textContent.trim().length>8,'Cloud assumption narrative is hidden or missing: '+selector);
       const input=query('[data-cl-param]',panel);assert.ok(isVisible(input),'Cloud assumption editor is hidden');
       assert.equal(input.dataset.clParam,id.slice(6),'Cloud popup edits a different assumption');
       assert.equal(panel.querySelectorAll('[data-cl-param]').length,1,'Cloud popup exposes sibling assumptions');

@@ -37,29 +37,64 @@ function openModelNumber(key,period,options={}){
  if(CASE.profitModel?.quarters?.[selected]){profitPeriod=selected;activePeriod=selected;modelContextPeriod=null;}else modelContextPeriod=selected;
  renderProfitPanel();$('#modelDetail').hidden=false;document.body.classList.add('model-detail-open');filterModelDetail();$('#modelDetailClose').focus();$('#modelDetail .model-dialog').scrollTop=0;
 }
+function modelAssumptionCitations(rationale){
+ const seen=new Set(),items=[];
+ for(const ref of rationale.sourceRefs||[]){
+  const raw=typeof ref==='string'?ref:ref?.id,id=sourceMap.has(raw)?raw:String(raw).split(':')[0],source=sourceMap.get(id);
+  if(!source||seen.has(id))continue;seen.add(id);
+  const date=source.publicationDate||source.date||source.asOf||'';
+  const label=id==='ms'?'摩根士丹利（MS）· Alphabet盈利预测模型 · 2026-10-29':id==='local-googl-barc-20260724'||id==='barc'?'巴克莱（Barclays）· Alphabet模型 · 2026-07-24':(source.title||source.label||id)+(date?' · '+date:'');
+  const web=/^https?:\/\//i.test(source.url||'')?source.url:null,local=/^file:\/\/\//i.test(source.localDocumentUrl||'')?source.localDocumentUrl:null;
+  if(web||local)items.push(`<a class="assumption-citation" data-model-citation="${esc(id)}" data-assumption-citation="${esc(id)}" href="${esc(web||local)}" target="_blank" rel="noopener noreferrer">${esc(label)} · ${web?'查看原文':'打开原始模型（本地）'} ↗</a>`);
+  else items.push(`<span class="assumption-citation-record"><button class="assumption-citation" data-model-citation="${esc(id)}" data-assumption-source-record="${esc(id)}" data-wb-source="${esc(id)}">${esc(label)} · 查看来源记录</button><small>当前未提供原文链接${source.kind?.includes('model')?'，原始模型未附在便携文件中':''}。</small></span>`);
+ }
+ return items.length?`<div class="assumption-citations">${items.join('')}</div>`:'';
+}
+function modelAssumptionPanel(key,q,options={},info=modelNumberLineage(key,q,options)){
+ if(info.kind!=='assumption')return '';
+ const parameter=info.parameter||options.parameter||'driver',inputKey=info.parameterKey||key,name=info.name||info.label||modelItemNames[key]||key;
+ const cloudRevenueInput=parameter==='profit'&&/^(workspace|traditional|ai|tpu)Revenue$/.test(inputKey);
+ const canEdit=info.editable&&q.kind!=='actual'&&!options.baseline&&!cloudRevenueInput;
+ const rationale=modelAssumptionRationale(key,q,options,info),paragraphs=rationale.paragraphs||[];
+ const unitLabel={ratio:'%',multiple:'倍',years:'年','USD mn':'百万美元','USD/share':'美元/股','million shares':'百万股'}[info.unit]||info.unit||'';
+ const editor=canEdit?`<label class="assumption-control">${esc(name)} <span class="note">${esc(unitLabel)}</span><input aria-label="${esc(name)}" type="number" step="any" data-number-edit data-number-key="${esc(inputKey)}" data-number-parameter="${esc(parameter)}" data-number-period="${q.period}" data-scale="${info.scale||1}" value="${valid(info.value)?+(info.value*(info.scale||1)).toFixed(8):''}"></label>`:`<div class="assumption-fixed">${esc(info.formattedValue||'—')}${options.baseline?' · 初始基准，只读':''}</div>`;
+ const cloudLink=cloudRevenueInput&&!options.baseline?`<p class="mi-note">这是当前已应用或导入的业务金额。修改客户、增长和交付假设并重新应用，即可更新这项收入。</p><button class="mi-link" data-model-topic="cloud" data-model-item="${inputKey.replace(/Revenue$/,'')}" data-model-period="${q.period}">修改这项收入的经营驱动 ›</button>`:'';
+ const analysisKey=rationale.analysisKey||info.evidenceKey,analysis=analysisKey?`<button class="mi-link" data-assumption-analysis data-model-topic="${modelTopicForItem(analysisKey)}" data-model-item="${esc(analysisKey)}" data-model-period="${q.period}">${esc(rationale.analysisLabel||'我们的分析：'+(modelItemNames[analysisKey]||name))} ›</button>`:'';
+ const sourceLabel=rationale.sourceLabel||'来源与分析依据',audit=`<details class="assumption-audit" data-assumption-audit><summary>模型取数明细</summary><p>${esc(info.source)}</p>${info.note?'<p>'+esc(info.note)+'</p>':''}${rationale.sourceRefs?.length?'<p>'+rationale.sourceRefs.map(esc).join('；')+'</p>':''}</details>`;
+ return `<section class="model-assumption" data-assumption-key="${esc(inputKey)}" data-assumption-parameter="${esc(parameter)}" data-assumption-period="${q.period}"><header><h4>${esc(name)}</h4>${modelBadge(info)}</header>${editor}${cloudLink}<div class="assumption-rationale" data-assumption-rationale><h4>${esc(rationale.title||'假设依据')}</h4>${paragraphs.map(t=>'<p>'+esc(t)+'</p>').join('')}</div><div class="assumption-source" data-assumption-source><p>${options.baseline?'初始基准 · ':''}${esc(sourceLabel)}</p>${modelAssumptionCitations(rationale)}</div>${analysis}${audit}${canEdit?'<small>修改假设后，模型将重新计算相关收入和利润。</small>':''}</section>`;
+}
+function modelFormulaContext(key,q,options={}){
+ const info=modelNumberLineage(key,q,options),deps=info.dependencies||[],seen=new Set();
+ const inputs=deps.map(dep=>{
+  const period=dep.period||q.period,row=(period.length===4?result.annual:result.quarters).find(x=>x.period===period);
+  if(!row||!dep.key||dep.navigable===false)return `<li class="formula-fixed-input"><div><span>${esc(dep.label)}</span><p data-number-fixed-source>${esc(dep.clientSource||'本项采用原始资料中的对应数值，来源见本公式下方说明。')}</p>${modelAssumptionCitations(dep)}</div><span>${esc(dep.formattedValue||'原始资料数值')}</span></li>`;
+  const opts={...(dep.options||{}),...(dep.parameter?{parameter:dep.parameter}:{}),...(options.baseline||dep.baseline?{baseline:true}:{})},child=modelNumberLineage(dep.key,row,opts);
+  const identity=[period,child.parameter||opts.parameter||'',child.parameterKey||dep.key,!!opts.baseline].join(':');if(seen.has(identity))return '';seen.add(identity);
+  if(child.kind==='assumption')return '<li class="formula-assumption-input">'+modelAssumptionPanel(dep.key,row,opts,child)+'</li>';
+  return `<li class="formula-result-input"><span>${esc(dep.label)}</span>${modelNumberButton(dep.key,row,opts,dep.formattedValue)}</li>`;
+ }).join('');
+ const formula=info.kind==='calculation'?`<section class="number-calculation"><h3>计算公式</h3><p data-number-formula>${esc(info.formula)}</p>${info.explanation?`<p data-number-explanation>${esc(info.explanation)}</p>`:''}<p data-number-substitution>${esc(info.substitution)}</p></section>`:info.formula&&info.kind!=='assumption'?`<p class="mi-note" data-number-input-note>${esc(info.formula)}</p>`:'';
+ const extra=key==='depreciation'&&q.profitDetail?`<section class="formula-asset-drivers"><h3>公式中的资产与年限假设</h3>${['serverLife','serverAssetMultiplier','otherLife','otherAssetMultiplier'].map(k=>modelAssumptionPanel(k,q,{parameter:'profit',...options})).join('')}</section>`:'';
+ const sourceSummary=info.clientSource||(info.kind==='assumption'?'假设来源：'+(modelAssumptionRationale(key,q,options,info).sourceLabel||'上方所列来源与分析')+'。':'当前材料尚未提供这一项数据。');
+ return `<div class="model-formula-context" data-model-formula-context="${esc(key)}" data-formula-kind="${info.kind}">${formula}${info.kind==='assumption'?modelAssumptionPanel(key,q,options,info):''}${inputs?`<section class="number-inputs"><h3>公式中的输入与假设</h3><ul>${inputs}</ul><p class="mi-note">点击其中的计算结果，可继续查看它的算法和数据来源。</p></section>`:''}${extra}<section class="number-source"><h3>数据来源</h3><p data-number-source>${options.baseline?'初始基准 · ':''}${esc(sourceSummary)}</p>${info.kind!=='assumption'?modelAssumptionCitations(info)+`<details class="assumption-audit"><summary>模型取数与计算口径</summary><p>${esc(info.source)}</p>${info.note?`<p>${esc(info.note)}</p>`:''}</details>`:''}</section></div>`;
+}
 function modelNumberContent(q){
  const {key,options}=modelNumberTarget,info=modelNumberLineage(key,q,options),name=info.name||info.label||modelItemNames[key]||key;
- const deps=(info.dependencies||[]).map(dep=>{
-  const period=dep.period||q.period,row=(period.length===4?result.annual:result.quarters).find(x=>x.period===period);
-  if(!row||!dep.key||dep.navigable===false)return `<li><span>${esc(dep.label)}</span><span>${esc(dep.formattedValue||'来源固定值')}</span></li>`;
-  return `<li><span>${esc(dep.label)}</span>${modelNumberButton(dep.key,row,{...(dep.options||{}),...(dep.parameter?{parameter:dep.parameter}:{}),...(options.baseline||dep.baseline?{baseline:true}:{})},dep.formattedValue)}</li>`;
- }).join('');
- const canEdit=info.editable&&q.kind!=='actual'&&!options.baseline,parameter=info.parameter||options.parameter||'driver',inputKey=info.parameterKey||key;
- const editor=canEdit?`<section class="number-edit"><h3>修改这一项假设</h3><label>${esc(name)} <span class="note">${esc(info.unit==='ratio'?'%':info.unit||'')}</span><input aria-label="${esc(name)}" type="number" step="any" data-number-edit data-number-key="${esc(inputKey)}" data-number-parameter="${esc(parameter)}" data-number-period="${q.period}" data-scale="${info.scale||1}" value="${valid(info.value)?+(info.value*(info.scale||1)).toFixed(8):''}"></label><p class="mi-note">修改后重算关联结果，并保存为当前用户情景。</p></section>`:'';
- const formula=info.kind==='calculation'?`<section class="number-calculation"><h3>计算公式</h3><p data-number-formula>${esc(info.formula)}</p><p data-number-substitution>${esc(info.substitution)}</p></section>`:info.formula?`<p class="mi-note" data-number-input-note>${esc(info.formula)}</p>`:'';
  const evidenceKey=info.evidenceKey||key,context={q,d:q.profitDetail,b:CASE.profitModel?.quarters?.[q.period],p:q.profitDetail?.parameters};
- const evidence=modelEvidenceSpecs[evidenceKey]?`<details class="number-more-evidence"><summary>进一步查看该项证据与原文定位</summary>${modelItemEvidence(evidenceKey,context)}</details>`:'';
- const topic=modelTopicForItem(evidenceKey);
- return `<article id="modelNumberProvenance" data-number-key="${esc(key)}" data-number-period="${q.period}" data-number-kind="${info.kind}"><div class="number-heading"><div><small>${q.period} · ${q.kind==='actual'?'历史实际':'预测'}${options.baseline?' · 初始基准':''}</small><h3>${esc(name)}</h3></div><div class="number-current">${esc(info.formattedValue||'—')}${modelBadge(info)}</div></div>${formula}<section class="number-source"><h3>${info.kind==='assumption'?'假设来源与依据':info.kind==='actual'?'历史数据来源':'数字来源'}</h3><p data-number-source>${esc(info.source)}</p>${info.note?`<p data-number-analysis>${esc(info.note)}</p>`:''}</section>${deps?`<section class="number-inputs"><h3>本次计算使用的输入</h3><ul>${deps}</ul></section>`:''}${editor}${evidence}<button class="mi-link" data-model-analysis data-model-topic="${topic}" data-model-item="${esc(evidenceKey)}" data-model-period="${q.period}">查看这一项分析与相关假设 ›</button></article>`;
+ const evidence=modelEvidenceSpecs[evidenceKey]?`<details class="number-more-evidence"><summary>详细分析、证据原文与来源定位</summary>${modelItemEvidence(evidenceKey,context)}</details>`:'';
+ return `<article id="modelNumberProvenance" data-number-key="${esc(key)}" data-number-period="${q.period}" data-number-kind="${info.kind}"><div class="number-heading"><div><small>${q.period} · ${q.kind==='actual'?'历史实际':'预测'}${options.baseline?' · 初始基准':''}</small><h3>${esc(name)}</h3></div><div class="number-current">${esc(info.formattedValue||'—')}${modelBadge(info)}</div></div>${modelFormulaContext(key,q,options)}${evidence}<button class="mi-link" data-model-analysis data-model-topic="${modelTopicForItem(evidenceKey)}" data-model-item="${esc(evidenceKey)}" data-model-period="${q.period}">查看这一项的详细分析 ›</button></article>`;
 }
 function decorateModelInputs(host,q){
  for(const input of host.querySelectorAll('[data-profit],[data-model-earnings],[data-business-revenue]')){
-  if(input.nextElementSibling?.classList.contains('number-input-source'))continue;
   const parameter=input.hasAttribute('data-profit')?'profit':input.hasAttribute('data-model-earnings')?'driver':'',key=input.dataset.profit||input.dataset.modelEarnings||input.dataset.businessRevenue;
-  const options=parameter?{parameter}:{},info=modelNumberLineage(key,q,options),button=document.createElement('button');
-  button.type='button';button.className='number-input-source';button.dataset.modelNumber=key;button.dataset.modelPeriod=q.period;button.dataset.numberKind=info.kind;if(parameter)button.dataset.numberParameter=parameter;
-  button.innerHTML=modelBadge(info)+'<span>查看此数来源</span>';input.insertAdjacentElement('afterend',button);
+  const options=parameter?{parameter}:{},info=modelNumberLineage(key,q,options),label=input.closest('label');
+  if(input.hasAttribute('data-business-revenue')||info.kind!=='assumption'){label?.remove();continue;}
+  const canonicalKey=info.parameterKey||key,canonicalParameter=info.parameter||parameter;
+  const existing=[...host.querySelectorAll('[data-number-edit]')].some(el=>el.dataset.numberKey===canonicalKey&&el.dataset.numberParameter===canonicalParameter&&el.dataset.numberPeriod===q.period);
+  if(existing){label?.remove();continue;}
+  label?.insertAdjacentHTML('beforebegin',modelAssumptionPanel(key,q,options,info));label?.remove();
  }
+ host.querySelectorAll('.mi-assumptions').forEach(node=>{if(!node.querySelector('input,button,.model-assumption'))node.remove();});
 }
 document.addEventListener('click',event=>{
  const button=event.target.closest('[data-model-number]');if(button){event.preventDefault();openModelNumber(button.dataset.modelNumber,button.dataset.modelPeriod,{...(button.dataset.numberParameter?{parameter:button.dataset.numberParameter}:{}),...(button.dataset.numberBaseline?{baseline:true}:{})});return;}

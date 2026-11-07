@@ -163,11 +163,34 @@ def build_dashboard(case_path: Path, output_path: Path, public: bool = False) ->
         macro=_json(root/'assets'/'macro-evidence.json')
         if macro:research['macroEvidence']=macro
     if isinstance(research.get('macroEvidence'),dict):research['macroEvidence'].pop('log',None)
+    if not public:
+        # Link only existing original documents in the local build. Portable
+        # builds retain the citation but never include private document URLs.
+        sources = [*case_data.get('sources', []), *research.get('sources', []), *cloud_data.get('sources', [])]
+        documents_by_hash = {}
+        for source in sources:
+            raw = source.get('file') or source.get('filePath') or source.get('localPath')
+            if not isinstance(raw, str):
+                continue
+            if '::' in raw:
+                archive, member = raw.split('::', 1)
+                candidates = [root.parent / Path(archive).stem / member]
+            else:
+                candidates = [root / raw, root.parent / raw]
+            for candidate in candidates:
+                if candidate.is_file() and candidate.suffix.lower() in {'.xlsx', '.xlsm', '.pdf'}:
+                    source['localDocumentUrl'] = candidate.resolve().as_uri()
+                    if source.get('sha256'):
+                        documents_by_hash[source['sha256']] = source['localDocumentUrl']
+                    break
+        for source in sources:
+            if not source.get('localDocumentUrl') and source.get('sha256') in documents_by_hash:
+                source['localDocumentUrl'] = documents_by_hash[source['sha256']]
     if public:
         def public_payload(value):
             if isinstance(value, dict):
                 return {k: public_payload(v) for k, v in value.items()
-                        if k not in {'file', 'filePath', 'localPath', 'archive', 'member', 'retrievalAudit', 'localMaterialAudits'}}
+                        if k not in {'file', 'filePath', 'localPath', 'localDocumentUrl', 'archive', 'member', 'retrievalAudit', 'localMaterialAudits'}}
             if isinstance(value, list):
                 return [public_payload(v) for v in value]
             if isinstance(value, str):
@@ -179,7 +202,7 @@ def build_dashboard(case_path: Path, output_path: Path, public: bool = False) ->
     def payload(value):
         return json.dumps(value,ensure_ascii=False,allow_nan=False,separators=(',',':')).replace('<','\\u003c').replace('\u2028','\\u2028').replace('\u2029','\\u2029')
     replacements={'__CASE_DATA__':payload(case_data),'__MODEL_CODE__':model,'__RESEARCH_DATA__':payload(research),'__WORKBENCH_CODE__':(root/'assets'/'workbench-v9.js').read_text(encoding='utf-8')}
-    replacements['__WORKBENCH_CODE__']=replacements['__WORKBENCH_CODE__'].replace('/* __PROFIT_UI__ */',(root/'assets/business-statement.js').read_text(encoding='utf-8')+'\n'+(root/'assets/model-evidence.js').read_text(encoding='utf-8')+'\n'+(root/'assets/model-lineage.js').read_text(encoding='utf-8')+'\n'+(root/'assets/model-items.js').read_text(encoding='utf-8')+'\n'+(root/'assets/model-number-ui.js').read_text(encoding='utf-8')+'\n'+(root/'assets/model-shell.js').read_text(encoding='utf-8')+'\n'+(root/'assets/profit-ui.js').read_text(encoding='utf-8'))
+    replacements['__WORKBENCH_CODE__']=replacements['__WORKBENCH_CODE__'].replace('/* __PROFIT_UI__ */',(root/'assets/business-statement.js').read_text(encoding='utf-8')+'\n'+(root/'assets/model-evidence.js').read_text(encoding='utf-8')+'\n'+(root/'assets/model-lineage.js').read_text(encoding='utf-8')+'\n'+(root/'assets/model-rationale.js').read_text(encoding='utf-8')+'\n'+(root/'assets/model-items.js').read_text(encoding='utf-8')+'\n'+(root/'assets/model-number-ui.js').read_text(encoding='utf-8')+'\n'+(root/'assets/model-shell.js').read_text(encoding='utf-8')+'\n'+(root/'assets/profit-ui.js').read_text(encoding='utf-8'))
     analysis_model=re.sub(r'^export\s+', '', (root/'scripts/review-analysis.mjs').read_text(encoding='utf-8'),flags=re.MULTILINE)
     replacements['__REVIEW_LAB__']='const REVIEW_LAB_DATA='+payload(_json(root/'assets/review-lab.json'))+';\nconst MACRO_HISTORY='+payload(_json(root/'assets/macro-history.json'))+';\nconst RAL=(()=>{'+analysis_model+'\nreturn {reviewPivots,reviewInterval,earningsMultipleBridge,datedEvidence,reviewStages,pairedStats,rollingFactor,technicalSnapshot};})();\n'+(root/'assets/review-stages.js').read_text(encoding='utf-8')+'\n'+(root/'assets/review-lab.js').read_text(encoding='utf-8')
     segment_model=re.sub(r'^export\s+', '', (root/'scripts/segment-model.mjs').read_text(encoding='utf-8'),flags=re.MULTILINE)

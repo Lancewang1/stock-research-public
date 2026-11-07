@@ -59,13 +59,16 @@ async function main(){
   click('#modelDetailClose');
   openItem('eps','2028');
   assert.equal(query('#wbProfitPeriod').value,'2028','Annual entry lost its period');
-  assert.equal(doc.querySelectorAll('#modelItemTree input:not([disabled]):not([readonly])').length,0,'Annual extension invented detailed quarterly inputs');
+  for(const input of doc.querySelectorAll('#modelItemTree input:not([disabled]):not([readonly])')){
+    assert.equal(input.dataset.numberPeriod,'2028','Annual extension invented a quarterly input');
+    assert.notEqual(input.dataset.numberParameter,'profit','Annual extension invented a quarterly business-cost input');
+  }
   assert.match(query('#modelItemTree').textContent,/年度延展|年度/,'Annual extension context is not explained');
   click('#modelDetailClose');
   const businessKeys=['search','network','youtube','youtubeSubs','otherSubs','bets','workspace','traditional','ai','tpu'];
   openItem('revenue','2027Q2');
   assert.equal(doc.querySelectorAll('#modelItemTree > [data-detail-item]').length,1,'Revenue analysis renders sibling editors');
-  for(const key of ['search','network','youtube','subs','bets','cloud'])assert.ok(query(`#modelItemTree [data-model-item="${key}"]`),'Revenue lacks business navigation: '+key);
+  for(const key of ['search','network','youtube','subs','bets','cloud'])assert.ok(query(`#modelItemTree [data-model-topic][data-model-item="${key}"]`),'Revenue lacks business navigation: '+key);
   assert.equal(doc.querySelectorAll('#modelItemTree details[data-item-evidence][open]').length,0,'Evidence must start collapsed');
   click('#modelDetailClose');
 
@@ -81,20 +84,21 @@ async function main(){
   openItem('revenue','2027Q2');
   assert.equal(query('#wbProfitPeriod').value,'2027Q2','Revenue entry lost clicked quarter');
   assert.equal(doc.querySelectorAll('#modelDetailNav [data-wb-factor]').length,0,'Detached evidence toolbar remains');
-  click('#modelItemTree [data-model-item="search"]');
+  click('#modelItemTree [data-model-topic][data-model-item="search"]');
   const search=query('#modelItemTree details[data-detail-item="search"]');
   assert.ok(search.open,'Search line did not expand');
   for(const key of businessKeys.filter(k=>k!=='search'))assert.equal(doc.querySelector(`#modelItemTree details[data-detail-item="${key}"]`),null,'Unrelated business rendered: '+key);
-  assert.equal(search.querySelector('[data-business-revenue="network"]'),null,'Search contains Network editing controls');
+  assert.equal(search.querySelector('[data-number-edit][data-number-key="network"]'),null,'Search contains Network editing controls');
+  assert.equal(search.querySelector('[data-business-revenue]'),null,'Search still edits the calculated revenue amount');
   const evidence=query('details[data-item-evidence]',search),evidenceKey=evidence.dataset.itemEvidence;
   assert.equal(evidence.open,false,'Evidence is expanded before explicit click');
   query(':scope > summary',evidence).click();assert.equal(evidence.open,true,'Evidence summary did not expand');
   assert.ok(evidence.textContent.trim().length>30,'Evidence lacks actual source/analysis content');
-  const revenueSelector='#modelItemTree [data-detail-item="search"] [data-business-revenue="search"]';
-  reveal(revenueSelector);const priorRevenue=value('revenue','2027Q2');
+  const revenueSelector='#modelItemTree [data-detail-item="search"] [data-number-edit][data-number-key="search"][data-number-parameter="segmentGrowthYoY"]';
+  reveal(revenueSelector);const priorRevenue=value('revenue','2027Q2'),priorYearSearch=value('search','2026Q2');
   query('#modelDetail .model-dialog').scrollTop=180;
   edit(revenueSelector,Number(query(revenueSelector).value)+1);
-  assert.ok(Math.abs(value('revenue','2027Q2')-priorRevenue-1000)<1e-3,'Business revenue edit did not reach selected quarter total');
+  assert.ok(Math.abs(value('revenue','2027Q2')-priorRevenue-priorYearSearch/100)<1e-3,'Search YoY edit does not follow prior-year revenue times growth');
   assert.equal(query('#modelItemTree [data-detail-item="search"]').open,true,'Editing collapsed selected business');
   assert.equal(query(`#modelItemTree [data-item-evidence="${evidenceKey}"]`).open,true,'Editing collapsed selected evidence');
   assert.equal(query('#modelDetail .model-dialog').scrollTop,180,'Editing lost drawer scroll position');
@@ -120,29 +124,32 @@ async function main(){
   // Direct entries expose only the requested financial item, while its assumptions stay live.
   openItem('taxRate','2027Q1');
   assert.ok(query('#modelItemTree [data-detail-item="taxRate"]').open,'Direct tax entry is not expanded');
-  const taxSelector='#modelItemTree [data-model-earnings="taxRate"]';reveal(taxSelector);
+  const taxSelector='#modelItemTree [data-number-edit][data-number-key="taxRate"][data-number-parameter="driver"]';reveal(taxSelector);
   const epsBefore=value('eps'),taxBefore=Number(query(taxSelector).value);
   edit(taxSelector,taxBefore+1);assert.ok(value('eps')<epsBefore,'Higher tax rate did not reduce EPS');
   assert.equal(query('#modelItemTree [data-detail-item="taxRate"]').open,true,'Tax edit collapsed the item');
   click('#modelDetailClose');click('#wbReset');
 
   openItem('rd','2027Q1');
-  const rdSelector='#modelItemTree [data-model-earnings="rdRatio"]';reveal(rdSelector);
-  const oiBefore=value('operatingIncome');edit(rdSelector,Number(query(rdSelector).value)+1);
-  assert.ok(value('operatingIncome')<oiBefore,'R&D expense edit did not affect operating profit');
+  assert.equal(doc.querySelector('#modelItemTree [data-number-edit][data-number-key="rdRatio"]'),null,'Derived R&D ratio is directly editable');
   assert.ok(!doc.querySelector('#modelItemTree [data-detail-item="taxRate"]') || doc.querySelector('#modelItemTree [data-detail-item="taxRate"]').hidden,'R&D exposes unrelated tax item');
+  click('#modelDetailClose');openItem('sbc','2027Q1');
+  const sbcSelector='#modelItemTree [data-number-edit][data-number-key="sbcMultiplier"][data-number-parameter="profit"]';reveal(sbcSelector);
+  const oiBefore=value('operatingIncome'),rdBefore=value('rd');edit(sbcSelector,Number(query(sbcSelector).value)+0.1);
+  assert.ok(value('operatingIncome')<oiBefore,'SBC assumption did not affect operating profit');
+  assert.ok(value('rd')>rdBefore,'SBC assumption did not reach the R&D expense allocation');
   click('#modelDetailClose');click('#wbReset');
 
   openItem('dilutedShares','2027Q1');
-  const sharesSelector='#modelItemTree [data-model-earnings="dilutedShares"]';reveal(sharesSelector);
+  const sharesSelector='#modelItemTree [data-number-edit][data-number-key="dilutedShares"][data-number-parameter="driver"]';reveal(sharesSelector);
   const shareEPS=value('eps'),niBefore=value('netIncome');edit(sharesSelector,Number(query(sharesSelector).value)*1.1);
   assert.ok(value('eps')<shareEPS,'Larger share count did not dilute EPS');
   assert.equal(value('netIncome'),niBefore,'Share edit changed net profit');
   click('#modelDetailClose');click('#wbReset');
 
   openItem('depreciation','2027Q1');
-  click('#modelItemTree [data-model-item="servers"]');
-  const lifeSelector='#modelItemTree [data-profit="serverLife"]';reveal(lifeSelector);
+  click('#modelItemTree [data-model-topic][data-model-item="servers"]');
+  const lifeSelector='#modelItemTree [data-number-edit][data-number-key="serverLife"][data-number-parameter="profit"]';reveal(lifeSelector);
   const depBefore=value('depreciation'),depEPS=value('eps');edit(lifeSelector,Number(query(lifeSelector).value)+1);
   assert.ok(value('depreciation')<depBefore,'Longer asset life did not reduce depreciation');
   assert.ok(value('eps')>depEPS,'Longer asset life did not reach earnings');
@@ -172,7 +179,7 @@ async function main(){
   assert.deepEqual(snapshot('2027Q1'),baselineQ1,'Final reset did not restore main model');
   // Going back through the Cloud hierarchy must carry the period selected inside Cloud.
   openItem('revenue','2027Q2');
-  click('#modelItemTree [data-model-item="ai"]');
+  click('#modelItemTree [data-model-topic][data-model-item="ai"]');
   const cloudDriver='#modelItemTree [data-detail-item="ai"] [data-model-topic="cloud"][data-model-item="ai"]';
   reveal(cloudDriver);click(cloudDriver);
   assert.equal(query('#clDetailPeriod').value,'2027Q2','AI driver entry lost the model quarter');

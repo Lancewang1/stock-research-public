@@ -1,7 +1,7 @@
 {
-  "release": "2026-11-07-number-provenance",
+  "release": "2026-11-07-model-language-audit",
   "offlineRebuild": "byte-identical",
-  "browserVisualAcceptance": "deferred_connection_blocked_user_continues_local",
+  "browserVisualAcceptance": "waived_by_user_browser_connection_unavailable",
   "rawReportsIncluded": false,
   "files": [
     {
@@ -26,8 +26,8 @@
     },
     {
       "path": "assets/cloud-lines.js",
-      "sha256": "465fb5f2f6195912fd24f35738601b9db725f2f8e141b09fd75787d65e6ea1c4",
-      "bytes": 47847
+      "sha256": "8bbc3cd8ffc013c0757320c0fa7434d5d247622e315c7a298d7ef71d7aac9bf3",
+      "bytes": 93110
     },
     {
       "path": "assets/cloud-ui.js",
@@ -71,28 +71,33 @@
     },
     {
       "path": "assets/model-evidence.js",
-      "sha256": "5ed5d0fa55c84c7422140646acfe8b7a78867856911127ee46956e558c473334",
-      "bytes": 25553
+      "sha256": "b4658ca593bdfcfac2e96daeb6b4b0478ae37a8a349ef9b7a267987a1f6efec0",
+      "bytes": 25750
     },
     {
       "path": "assets/model-items.js",
-      "sha256": "e2614482b77db07b3fdf0778beaa72d16dff0dd092e2275baa41be7badd79047",
-      "bytes": 22899
+      "sha256": "f4a644dc1c2a2ea1e161b2cdc158e4e58fc581ade676a6a4209d9ad549c9d91e",
+      "bytes": 25687
     },
     {
       "path": "assets/model-lineage.js",
-      "sha256": "f27a62247a8b0929b0db2dbe23ad54003ceb7e4148d83f89148c69944d186e7f",
-      "bytes": 50449
+      "sha256": "a0e053691b4c289d19ccf78a5ee9427d354c2ca9e1f8e1d272bad44bf6b8fc8e",
+      "bytes": 83829
     },
     {
       "path": "assets/model-number-ui.js",
-      "sha256": "6f197f8dd2dc2aa9cb300b5baa2120eb4b5479e0598c814971722d37eb4796de",
-      "bytes": 9731
+      "sha256": "010f2dcb13c56df2fb47302950dc9c6360d830debe440b6ac224c57541d6cf3c",
+      "bytes": 15583
+    },
+    {
+      "path": "assets/model-rationale.js",
+      "sha256": "b8b06f85f69064613e401d298211176bde1e00bb29a04cf84d322857202fe170",
+      "bytes": 23376
     },
     {
       "path": "assets/model-shell.js",
-      "sha256": "a70d30f209148595d7374670c501616c12fe9bea0465cf09b56683807300e607",
-      "bytes": 24637
+      "sha256": "0b268f4aec5d4f5d91b2e12bf1376bbd17980008a10f9de160357976690135a9",
+      "bytes": 27625
     },
     {
       "path": "assets/profit-inputs.json",
@@ -101,8 +106,8 @@
     },
     {
       "path": "assets/profit-ui.js",
-      "sha256": "519187e656d113a1f6adc17368418754aada05df6e636f1fab56a77c57bdd6db",
-      "bytes": 3705
+      "sha256": "aec30c22547165eb842dab1a00fc70cfa285a76e467a9188a9090fa9730113f3",
+      "bytes": 3867
     },
     {
       "path": "assets/publication_dates.json",
@@ -186,13 +191,13 @@
     },
     {
       "path": "assets/workbench-v9.js",
-      "sha256": "4acf26931fea0ecfd0ceb462af718e71216d6074b706319d62f6b06fbf1f1e9b",
-      "bytes": 49086
+      "sha256": "546f1dace56e2e1dcd643c1c18fc631d219f9db788659d03f1ed51bb13bef395",
+      "bytes": 50514
     },
     {
       "path": "outputs/googl-dashboard.html",
-      "sha256": "a1b1d94aac3f9504a88b576e040e3b1bee6a3681bff3005f208181eb60356ae7",
-      "bytes": 2686697
+      "sha256": "3b43642629b84d1bd6ce0b174f0208d811449b486249f1b04ce5458a697c4942",
+      "bytes": 2802132
     },
     {
       "path": "outputs/research/customer_evidence_20261106/historical-checks.json",
@@ -206,13 +211,18 @@
     },
     {
       "path": "README.md",
-      "sha256": "de408eb4f4d97d656dc63762271d47804fc06e13e689f13ce3543a22de901c60",
-      "bytes": 5065
+      "sha256": "ed589ccb144ea05ab51742b0552e2f47f30d4c2a800ac6ef961abd3b9dceb53e",
+      "bytes": 6717
     },
     {
       "path": "references/business-statement-and-phases.md",
       "sha256": "c44c2a2e03179176b7aea7f4d63f919de1ac5fa213575968117d0feaac9802b9",
       "bytes": 3994
+    },
+    {
+      "path": "references/client-language-audit.md",
+      "sha256": "46d22fe4528c0bbcfe59c52aa7f00ca309649cb963204df7a6920a74be562608",
+      "bytes": 2901
     },
     {
       "path": "references/cloud-model-method.md",
@@ -245,14 +255,19 @@
       "bytes": 2699
     },
     {
+      "path": "references/formula-assumption-workflow.md",
+      "sha256": "846a290d16bd898ee5d4a573ea719a3560eea976ba6c74ac30ed5b28a0709123",
+      "bytes": 7370
+    },
+    {
       "path": "references/full-model-drilldown.md",
       "sha256": "7cbfe8b0224e385628bea3ef1fb12160d2227de094f8a6d11fc246ab2e355256",
       "bytes": 5051
     },
     {
       "path": "references/item-detail-workflow.md",
-      "sha256": "6d8a52eacab6c47ce4f019020998e4097293a9215a72e1ddb1aaf93f661963ae",
-      "bytes": 5867
+      "sha256": "f309eba4c05d4089af37e06ab1560b8af6324e7f8bbc7c6264c21b31772c2eba",
+      "bytes": 7126
     },
     {
       "path": "references/local-material-review.md",
@@ -271,8 +286,8 @@
     },
     {
       "path": "references/number-provenance.md",
-      "sha256": "76116f93b6928f8f046ab03f36e03f91aeeac9ef09b2db282ea55d27714709bb",
-      "bytes": 5523
+      "sha256": "46de84f9aed82e22b5784dec0d08ddd6a0a9cb72fd0f1732b4f5a7afb5124096",
+      "bytes": 7658
     },
     {
       "path": "references/profit-model-gap-audit-20261106.md",
@@ -331,8 +346,8 @@
     },
     {
       "path": "scripts/build_dashboard.py",
-      "sha256": "b57ff2c8ef45dec283c1c75b9227d31059253ea0f4a7e8e39f6526d0e6f2d6bb",
-      "bytes": 15576
+      "sha256": "a1a139bd65f52d0c34cefd41ad37b440f7b1be7837edd440f1799f98670aa759",
+      "bytes": 16988
     },
     {
       "path": "scripts/build_ms_baseline.mjs",
@@ -391,8 +406,8 @@
     },
     {
       "path": "scripts/package_public.py",
-      "sha256": "e643470652a9fa845a84121fe9b0aec25f39a85a9fef392ad37b97036caf8b97",
-      "bytes": 4316
+      "sha256": "f275d3ccd3baf87a93670edfd899f48233958ba6d31717cfa20ebd3139f912bb",
+      "bytes": 4336
     },
     {
       "path": "scripts/profit-model.mjs",
@@ -461,28 +476,38 @@
     },
     {
       "path": "SKILL.md",
-      "sha256": "1472f62efdc3e5a8df7ed9f94caf1edc05db13b6347441b9a96d9920d96abee9",
-      "bytes": 18223
+      "sha256": "01d2e39e143a8ea12bffb0b83f6e6faa837bcd10d282158a11cf145cce0ca096",
+      "bytes": 21034
+    },
+    {
+      "path": "tests/dom-client-language.cjs",
+      "sha256": "a9b78db62ba58c36a38c41e1837970f9f2a9ff4370b9bc2d9581972fd2252eec",
+      "bytes": 24007
     },
     {
       "path": "tests/dom-cloud.cjs",
-      "sha256": "b0d089bf8531d32545824d3b54eaf2bf8b56ec754f71bcba490bdf6549e6e8e9",
-      "bytes": 21331
+      "sha256": "010f560580470053c133cc860397cafacf5934bbe0ba517b576b8f60f86b2b91",
+      "bytes": 22453
+    },
+    {
+      "path": "tests/dom-formula-assumptions.cjs",
+      "sha256": "5bda9531a059d6ceda3681971ae22febea8794f66fd3bb282cae4f631d35456a",
+      "bytes": 19883
     },
     {
       "path": "tests/dom-model-details.cjs",
-      "sha256": "decdaa83abfb4ca6a45fd38e74d4359aa1bd6b2eba9c805b929668f0f9ee0517",
-      "bytes": 16135
+      "sha256": "ef1e20dd6a0024914e8e95f7c468c03f0345ebe57542877f5d36dc06b73f88bb",
+      "bytes": 17138
     },
     {
       "path": "tests/dom-number-provenance.cjs",
-      "sha256": "aa3afe6224225d59f8fb73cf2a83baa66fcfc9225629302c3b7b47c06e94147e",
-      "bytes": 19325
+      "sha256": "317fcda84fbab705e606a94faf1793ec3a08b3c6c74c7e1d94760c91221a9805",
+      "bytes": 20891
     },
     {
       "path": "tests/dom-smoke.cjs",
-      "sha256": "c60289dfbb80b3c44edf95bfd5195e812a2249d79d13ff6915978a260b2145f9",
-      "bytes": 16918
+      "sha256": "2b44e3c500e58c42fd6979b9154aa393528510c887bc3466abdc401c947970a0",
+      "bytes": 18171
     },
     {
       "path": "tests/test_business_statement.mjs",

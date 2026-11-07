@@ -1,26 +1,178 @@
 /* Included inside CloudUI: evidence, customer editors and the two-line view. */
-  let clNumbers=new Map(),clNumberId=null,clScope=null,clMovedInput=null;
+  let clNumbers=new Map(),clNumberId=null,clScope=null,clMovedInputs=[],clNumberTrail=[];
   const clKindLabel=kind=>kind==='assumption'?'假设':'计算结果';
+  const clUnitLabel=unit=>({ratio:'%',fraction:'%',multiple:'倍','USD bn':'十亿美元','USD bn/GW':'十亿美元/GW','USD bn/GW/quarter':'十亿美元/GW/季度'}[unit]||unit||'');
   function cloudNumber(spec,value,formatted){
     if(!valid(value))return '—';
-    const entry={kind:'calculated',...spec,value,formatted:formatted??num(value,3)};clNumbers.set(entry.id,entry);
+    const entry={kind:'calculated',...spec,value,formatted:formatted??num(value,3)};Object.assign(entry,clNumberExplanation(entry));clNumbers.set(entry.id,entry);
     return `<button type="button" class="cl-number" data-cl-number="${esc(entry.id)}" data-cl-kind="${entry.kind}" aria-label="${esc(entry.period||'')} ${esc(entry.label)} ${esc(entry.formatted)}，${clKindLabel(entry.kind)}，查看来源"><span>${esc(entry.formatted)}</span><small class="cl-number-kind">${clKindLabel(entry.kind)}</small></button>`;
   }
   function clCalc(id,label,period,value,formula,substitution,formatted,basis){return cloudNumber({id,label,period,formula,substitution,basis},value,formatted);}
-  function clAssumption(id,label,period,value,basis,formatted,sources=[]){return cloudNumber({id,label,period,kind:'assumption',basis,sources},value,formatted);}
+  function clAssumption(id,label,period,value,basis,formatted,sources=[]){const rationale=id.startsWith('broker:')?'我们的分析：将这份卖方预测作为对照，比较客户收入、算力交付及企业服务增长能否解释其Cloud总额。预测差异需要落到这些具体经营因素上。':id.startsWith('sensitivity-input:')?'我们的分析：只改变这一项假设，观察全年Cloud收入的变化，从而识别最值得跟踪的经营变量。上下调整幅度是压力测试设置。':id.startsWith('ms-seed:')?'我们的分析：用最初的企业增长估计作参照，衡量达到MS Cloud预测需要额外兑现多少增长。':basis;return cloudNumber({id,label,period,kind:'assumption',basis,rationale,evidenceSummary:basis,sources},value,formatted);}
   function clSourceHTML(refs){return (refs||[]).map(ref=>{const s=typeof ref==='string'?data.sources?.find(x=>x.id===ref):ref;return s?`<p><b>${esc(s.title||s.id)}</b>${s.date||s.publicationDate?' · '+esc(s.date||s.publicationDate):''}${s.page?' · '+esc(s.page):''}${s.url&&/^https?:\/\//.test(s.url)?' · '+sourceLink(esc(s.url),'查看来源'):''}</p>`:'';}).join('');}
+  function clPublicSourceLinks(refs){
+    const sources=(refs||[]).map(ref=>typeof ref==='string'?data.sources?.find(x=>x.id===ref):ref).filter(Boolean);
+    if(sources.some(s=>s.id==='cloud-ms-implied-baseline')){const original=data.sources?.find(s=>s.id==='cloud-ms-model');if(original&&!sources.some(s=>s.id===original.id))sources.push(original);}
+    return sources.map(s=>{const label=esc((s.date||s.publicationDate||'')+' '+(s.title||s.id)),links=[];if(s.url&&/^https?:\/\//.test(s.url))links.push(sourceLink(esc(s.url),'查看原文'));if(s.localDocumentUrl&&/^file:\/\/\//.test(s.localDocumentUrl))links.push(sourceLink(esc(s.localDocumentUrl),'打开原始模型（本地）'));if(!links.length&&!/broker|sell_side/.test(s.kind||''))return '';return label+(s.id==='cloud-ms-model'&&sources.some(x=>x.id==='cloud-ms-implied-baseline')?'（企业增速由我们依据此模型总额反推）':'')+' · '+(links.join(' · ')||'此版本未附原文件');}).filter(Boolean).join('<br>');
+  }
+  const clMetricNames={cloudRevenueBn:'Cloud总收入',cloudYoY:'Cloud收入同比',enterpriseRevenueBn:'企业服务收入',externalTPURevenueBn:'独立TPU交付收入',aiRevenueBn:'AI客户服务收入',servicesRevenueBn:'持续云服务收入',revenueRunRateBn:'年化商业收入',inferenceBudgetBn:'推理采购预算',trainingBudgetBn:'训练采购预算',computeBudgetBn:'算力总预算',demandRevenueBn:'Google采购需求',capacityRevenueBn:'可交付服务能力',revenueBn:'服务收入',fullCapacityRevenueBn:'满额容量计费',reservedRevenueBn:'合同保底收入',usageRevenueBn:'额外用量收入'};
+  function clNumberExplanation(item){
+    const id=item.id,period=item.period||clPeriod,parts=id.split(':'),prefix=parts[0],defs=definitions(),allPeriods=data.forecastPeriods,periodIndex=allPeriods.indexOf(period);
+    const brokerIds={ms:'cloud-ms-model',barclays:'local-googl-barc-20260724',goldmanSachs:'cloud-gs-model',jpmorgan:'local-jpm-us-internet-202607'},brokerName={ms:'Morgan Stanley',barclays:'Barclays',goldmanSachs:'Goldman Sachs',jpmorgan:'J.P. Morgan'};
+    const source=id=>data.sources?.find(s=>s.id===id),sourceName=id=>{const s=source(id);return s?(s.title||id)+'（'+(s.date||s.publicationDate||'资料日期未标明')+'）':id==='local-googl-barc-20260724'?'Barclays《Alphabet模型》（2026-07-24）':id==='cloud-ms-model'?'Morgan Stanley《Alphabet模型》（2026-10-29）':id;};
+    const refsFor=paths=>defs.filter(d=>paths.some(path=>d.path===path||d.path.startsWith(path+'.'))).flatMap(d=>d.sourceRefs||[]);
+    const customerRefs=c=>data.customerScenarios?.[c]?.sourceRefs||[];
+    const researchRef='cloud-research-assumptions',msRef='cloud-ms-model',barcRef='local-googl-barc-20260724';
+    const selectedNote=Object.keys(state).length?'本次代入采用当前客户已保存的情景输入。':'本次代入采用我们的初始研究假设。';
+    const customerSource=c=>c==='Anthropic'?'Anthropic《Series H融资公告》（2026-05-28）的年化收入，以及与Google合作公告（2025-10-23、2026-04-06）的容量计划':c==='OpenAI'?'OpenAI CFO商业规模文章（2026-01-18）的全公司年化收入，以及供应商清单（2026-10-14）的GCP供应关系':'Alphabet 2026Q3业绩（2026-10-29）的Cloud总额及我们的其他AI客户余额分摊';
+    const currentSource=c=>`${period}的${labels[c]}研究情景：收入规模参考${customerSource(c)}；未来增长、训练预算、Google份额及验收节奏由我们或客户设置。服务每GW净收入参考${sourceName(barcRef)}，具体合同条件未披露。${selectedNote}`;
+    const enterpriseSource=`企业服务起点来自Alphabet 2026Q3 Cloud已披露总额减去我们的AI客户/TPU历史分摊；逐季增长初值依据${sourceName(msRef)}的Cloud总额反推。${selectedNote}`;
+    const tpuSource=`${period}交付GW、每GW价格和确认比例来自我们的逐季研究假设；尺度参考${sourceName(barcRef)}，并非已签订单或合同报价。${selectedNote}`;
+    const aggregateSource=`${period}企业服务使用MS总额反推的增长起点，AI客户使用收入、预算、份额与验收假设，独立TPU使用交付量、价格与确认比例；MS来源为2026-10-29模型，TPU单位收入参考Barclays 2026-07-24模型。${selectedNote}`;
+    let operation='',sourceSummary='',sources=[...(item.sources||[])],formula=item.formula,coverage='explicit',rationale=item.rationale,evidenceSummary=item.evidenceSummary;
+    if(prefix==='param'){
+      const path=id.slice(6),d=defs.find(d=>d.path===path),customer=path.match(/^customers\.([^.]+)\./)?.[1],field=path.replace(/\.\d+$/,'').split('.').at(-1);
+      if(item.kind==='calculated'){
+        operation='把该客户当季的推理采购预算与训练采购预算相加，得到总算力采购预算；不再把总预算额外加到Google服务收入。';sourceSummary=currentSource(customer);sources.push(...customerRefs(customer),researchRef);
+      }else{
+        const label=d?.label||item.label,changed=Object.hasOwn(state,path),inputOwner=changed?'客户本次输入':'我们的初始研究假设';
+        sourceSummary=`${period}的${label}采用${inputOwner}，适用于本次Cloud测算。`;
+        if(path.startsWith('global.'))sources=[researchRef];
+        else if(path.startsWith('enterprise.'))sources=['cloud-ms-implied-baseline',msRef,researchRef];
+        else if(path.startsWith('externalTPU.')||['netServicePriceBnPerGWQuarter','utilization'].includes(field))sources=[barcRef,researchRef];
+        else if(customer){
+          const incomeRef=customer==='Anthropic'?'chain-anthropic-series-h-20260528':customer==='OpenAI'?'cloud-openai-business-scale':'cloud-alphabet-2026q3';
+          sources=field==='commercialRevenueRunRateBn'?[incomeRef,researchRef]:['googleTrainingShare','googleInferenceShare','averageAcceptedCapacityGW'].includes(field)?[...customerRefs(customer).filter(x=>x!=='chain-anthropic-series-h-20260528'),researchRef]:[researchRef];
+          if(field==='reservedBillingFraction'||field==='inferenceCostRate'&&customer==='Anthropic')sources.push({id:'cloud-anthropic-s1-wind',title:'Anthropic S-1 · Wind转录',date:'2026-10-26',kind:'company_filing_via_wind',url:'https://m.wind.com.cn/mobwftweb/M/?code=885B502A5698&lan=zh&device=pc&terminaltype=COM.WINDRAG&version=26.5.0.39845&gateway=na#/NA/1AEB9390141B830B16DBFF1C7F0B6322',page:field==='reservedBillingFraction'?'第146页 · 算力承诺与费用时点':'收入与费用表；2026H1未经审计'});
+        }
+      }
+    }else if(prefix==='metric'){
+      const [,p,owner,metric]=parts,customer=owner==='cloud'?null:owner,isAnnual=p.length===4,row=result.quarters.find(q=>q.period===p),method=row?.customers?.[customer]?.serviceMethod;
+      const operations={
+        inferenceBudgetBn:'先把客户当季平均年化收入除以4，换成季度收入尺度，再乘推理采购成本率及预算倍率，得到推理采购预算。',
+        trainingBudgetBn:'把独立设置的当季训练采购预算乘预算倍率；训练预算不跟随收入或推理成本率自动变化。',
+        computeBudgetBn:'将当季推理采购预算与训练采购预算相加，得到客户用于两类工作负载的算力总预算。',
+        demandRevenueBn:'分别计算训练和推理预算中分配给Google的部分，再相加；份额乘调整倍率后最高取100%。',
+        fullCapacityRevenueBn:'先用季度平均已验收容量乘每GW、每90天净收入，再按本季度实际天数调整；这是全部容量满额计费的尺度。',
+        capacityRevenueBn:method==='contract'?'保底容量按最低比例计费，其余容量按利用率折算，两部分相加得到可计费上限。':'将全部已验收容量的满额计费乘有效利用率，得到当前容量能支持的服务收入。',
+        reservedRevenueBn:method==='contract'?'满额容量计费乘最低计费比例，得到即使用量偏低仍计入的保底收入；只有已验收容量参与。':'当前选择的收入方式没有单列合同保底，因此该栏为零，不代表客户实际合同没有保底。',
+        usageRevenueBn:method==='contract'?'先从Google采购需求中扣除保底已覆盖部分，负数按零；再与未保底容量可承接的收入比较，取较小值，避免重复计费或超过交付能力。':'当前收入方式没有单列保底，整笔已采用服务收入均放在用量栏。',
+        revenueBn:method==='contract'?'把保底收入与保底以外的额外用量收入相加；需求不足时保留保底，额外用量受未保底容量限制。':method==='budget'?'采用分配给Google的客户预算作为服务收入，用来检验需求端规模；这种方式不额外施加容量上限。':method==='capacity'?'采用已验收容量、净价和利用率测算收入，用来检验供给端规模；这种方式不额外施加客户预算上限。':'比较客户分配给Google的采购需求和可交付服务能力，取两者较小值，表示收入同时受需求和供给限制。',
+        enterpriseRevenueBn:'把上一季企业服务收入乘以“1加本季增长率”，增长率由逐季环比假设加统一调整得到。',
+        externalTPURevenueBn:'交付GW先乘整体交付倍率，再乘每GW净收入和当期确认比例，得到本季独立TPU收入。',
+        cloudRevenueBn:'把企业服务、三组AI客户服务及独立TPU交付收入相加；同一批交付不会再重复加入持续云服务。',
+        aiRevenueBn:'将Anthropic、OpenAI和其他外部AI客户的服务收入相加；不包含Google自用算力。',
+        servicesRevenueBn:'把企业服务与三组AI客户服务相加，独立TPU交付收入单独列示。',
+        cloudYoY:'用本季Cloud收入除以上年同季度Cloud收入，再减去1；用同季比较来保留季节性差异。'
+      };
+      operation=operations[metric]||'';
+      if(customer){sourceSummary=currentSource(customer);sources.push(...customerRefs(customer),barcRef,researchRef);}
+      else if(metric==='enterpriseRevenueBn'){sourceSummary=enterpriseSource;sources.push('cloud-alphabet-2026q3',msRef,researchRef);}
+      else if(metric==='externalTPURevenueBn'){sourceSummary=tpuSource;sources.push(barcRef,researchRef);}
+      else{sourceSummary=aggregateSource;sources.push(msRef,barcRef,researchRef);}
+      if(customer&&row?.customers?.[customer]?.budgetMethod==='direct'&&['inferenceBudgetBn','trainingBudgetBn'].includes(metric))operation=metric==='inferenceBudgetBn'?'把直接总预算乘预算倍率，再乘“1减训练占比”，得到留给推理的预算。':'把直接总预算乘预算倍率，再乘训练占比，得到训练采购预算。';
+      if(isAnnual){operation=`把${p}年四个季度的${clMetricNames[metric]||item.label}相加；这是季度预测的合计，没有另填一个年度金额。`;const history=(result.history||[]).filter(q=>q.period.startsWith(p));if(history.length){operation=`将${p}年已披露季度与尚未披露季度的Cloud预测相加。`;sourceSummary=`${history.map(q=>q.period).join('、')}来自Alphabet对应季度官方业绩；其余季度来自企业增长、客户预算/交付及TPU研究假设。${selectedNote}`;sources.push(...history.map(q=>'cloud-alphabet-'+q.period.toLowerCase()));}}
+      if(metric==='cloudYoY'){const prior=String(Number(p.slice(0,4))-1)+p.slice(4),history=(result.history||[]).find(q=>q.period===prior);sourceSummary+=history?` 同比分母来自Alphabet ${prior}官方业绩披露的Cloud收入。`:` 同比分母是同一研究情景的${prior} Cloud收入。`;if(history)sources.push('cloud-alphabet-'+prior.toLowerCase());}
+      if(metric==='usageRevenueBn'&&method==='contract')formula='额外用量收入 = 保底外采购需求与未保底容量收入上限中的较小值；保底外采购需求不足零时取零';
+      if(metric==='revenueBn'&&method==='constrainedBudget')formula='确认服务收入 = Google采购需求与可交付服务能力中的较小值';
+    }else if(prefix==='customer-annual'){
+      const [,customer,metric]=parts,ops={commercialRevenue:'把2027年四季平均年化收入分别除以4，再相加，得到全年商业收入尺度；它仍是研究估计，不是客户披露实绩。',budgetRatio:'用全年推理加训练的采购预算除以全年商业收入尺度，衡量收入对算力投入的支撑程度。',fundingGap:'从全年算力预算中扣除全年商业收入尺度；只有预算更高时才显示正缺口，否则显示零。未计现金余额、融资及其他费用。',coverage:'用全年分配给Google的采购需求除以全年确认服务收入，比较客户预算与服务收入是否相容；低于100%不会自动削减保底。'};
+      operation=ops[metric]||`将${labels[customer]}在2027年四个季度的${clMetricNames[metric]||item.label}相加，得到全年合计。`;sourceSummary=currentSource(customer);sources.push(...customerRefs(customer),barcRef,researchRef);if(metric==='fundingGap')formula='算力超收入缺口 = 全年算力预算 − 全年商业收入；差额为负时取零';
+    }else if(prefix==='broker'||prefix==='broker-gap'){
+      const broker=parts[1],ref=brokerIds[broker],comparison=(result.comparisons||[]).find(x=>x.broker===broker),name=brokerName[broker]||brokerLabel(broker),date=comparison?.publicationDate||source(ref)?.date||'来源版本所列日期';
+      sources=sources.filter(s=>(typeof s==='string'?s:s.id)!=='cloud-ms-implied-baseline');if(ref)sources.push(ref);
+      sourceSummary=`卖方数据来自${name}《Alphabet/互联网行业模型或报告》（${date}）对${period}的Cloud收入预测。`+(prefix==='broker-gap'?`另一项是我们的${period} Cloud收入测算，采用当前客户输入；两份预测版本日期可能不同。`:'该数值是外部预测对照，不是公司实绩或我们的经营拆分。');
+      if(prefix==='broker-gap')operation='用我们的Cloud收入减去该卖方预测；正数表示我们更高，负数表示我们更低。';
+    }else if(prefix==='ms-seed'){
+      sourceSummary=`${period}原始企业环比取Alphabet 2023—2024年相同季度Cloud环比增长的中位数，作为我们的成熟企业业务增长参考；每个季度只有两个历史观测。它并非Morgan Stanley披露的企业业务增速。`;
+      rationale='我们的分析：先用2023—2024年同一季度Cloud环比增长的中位数保留季节性，再与达到MS总额所需的企业增速比较，判断后者需要多强的增长兑现。';
+      evidenceSummary='来源为Alphabet 2023—2024年官方季度Cloud收入。Cloud合计增长包含多种业务，这里把历史增长用作企业服务的参考，并不代表公司披露了企业服务细分增速。';
+      sources.push(researchRef,...(data.calibration?.sourceRefs||[]));
+    }else if(prefix==='ms-implied'||prefix==='ms-preview'||prefix==='ms-current-growth'){
+      const method=prefix==='ms-preview'?parts[1]:'enterprise';
+      operation=prefix==='ms-current-growth'?'将本季企业环比输入与统一增减百分点相加，得到实际用于收入递推的增长率。':method==='tpu'?'先从MS目标中扣除持续服务收入，剩余金额除以每GW可确认收入，求出独立TPU需要交付多少GW。':'先从MS Cloud目标中扣除AI客户和独立TPU收入，得到企业服务需要贡献的金额，再与前季企业收入比较，求出所需环比增速。';
+      sourceSummary=prefix==='ms-implied'?`${sourceName(msRef)}提供${period} Cloud目标；AI客户、TPU收入及前一季企业基数使用建立初始研究基准时保存的数值。这里展示归档反推结果，不随本次客户编辑改变。`:prefix==='ms-current-growth'?`${period}逐季企业增长初值由${sourceName(msRef)}的Cloud总额反推；统一增长调整是我们的研究控制，已编辑时采用客户输入。`:`${sourceName(msRef)}提供${period} Cloud目标；其他经营输入采用本次客户情景。企业增速反推按季度依次进行，前季企业基数使用前一季已求得的收入。`;
+      sources.push(msRef,barcRef,researchRef);
+    }else if(prefix==='inverse'||prefix==='inverse-gap'){
+      const path=parts[2],label=defs.find(d=>d.path===path)?.label||item.label;
+      operation=prefix==='inverse-gap'?'用MS目标减去我们的Cloud收入，得到还需增加的收入；负数表示当前预测已高于MS。':`仅改变“${label}”，反复重算收入直到与MS目标一致；其他客户、价格和交付假设保持本次输入。不同单参数解不能同时叠加。`;
+      sourceSummary=`${sourceName(msRef)}提供${period}收入目标；起点来自我们的客户与交付预测及本次客户输入。`+(prefix==='inverse'?'求出的参数是达标条件，不是MS披露的原始经营假设。':'');sources.push(msRef,researchRef);
+      if(prefix==='inverse')formula=`仅调整${label}，使${period} Cloud收入等于MS目标收入`;
+    }else if(prefix==='sensitivity-input'||prefix==='sensitivity-result'){
+      const [,path,side]=parts,row=(result.sensitivity||[]).find(x=>x.path===path),d=defs.find(x=>x.path===path),label=d?.label||item.label,change=side==='down'?'降低':'提高',format=v=>path==='global.enterpriseGrowthAdjustment'?pct(v):num(v,3)+'倍';
+      const rule=path==='global.enterpriseGrowthAdjustment'?'在当前增长调整上增减1个百分点':'在当前倍率上增减10%，每次至少增减0.1倍；超出允许范围时取边界值';
+      sourceSummary=`我们的${period}单因素敏感性分析：${label}从${format(row?.baseValue)}${change}至${format(row?.[side+'Value'])}，其余输入沿当前客户情景。测试规则是${rule}，没有对应卖方或公司指引。`;
+      if(prefix==='sensitivity-input'){rationale=`我们的分析：单独${change}${label}，观察它对2027全年Cloud收入的影响，识别结果最依赖的经营条件。`;evidenceSummary=`该输入属于我们的压力测试。具体做法是${rule}；所用基础参数及业务含义见下方来源说明。`;}
+      if(prefix==='sensitivity-result')operation=`把${label}${change}后的全年收入，减去调整前全年收入；差额显示只改变这一因素对收入的影响，可能因需求或容量限制而为零。`;
+      sources.push(researchRef,...refsFor([path]));
+    }else if(prefix==='allocation-forecast'){
+      operation='保持官方历史Cloud总额不变，改变其中企业服务与AI客户的起点分摊，再使用同一套未来增长和交付假设重新计算2027收入。';
+      sourceSummary='历史总额来自Alphabet 2026Q3官方业绩（2026-10-29）；客户和TPU历史分摊为我们的估计。此处使用归档的三组分摊备选及研究基准预测，不随本次客户编辑重算。';sources.push('cloud-alphabet-2026q3',researchRef);
+    }else if(prefix==='tpu-share'){
+      operation='用全年独立TPU收入除以全年Cloud总收入，得到收入结构占比；它不是Google的TPU市场份额。';sourceSummary=`分子为2027年四季TPU量、价及确认比例的研究测算，单位收入参考${sourceName(barcRef)}；分母为同一客户情景的全年Cloud合计。`;sources.push(barcRef,researchRef);
+    }else if(prefix==='barc-tpu-gap'||prefix==='barc-services-gap'){
+      operation=prefix==='barc-tpu-gap'?'将我们的全年独立TPU收入减去Barclays外售TPU预测，比较硬件交付业务的差异。':'将我们的企业服务和AI客户服务合计，减去Barclays剔除独立TPU后的服务收入，比较持续云服务的差异。';
+      sourceSummary=`${sourceName(barcRef)}提供2027分项预测；另一项是我们采用当前客户输入测算的2027对应业务收入。双方业务范围仍需结合原模型定义判断。`;sources.push(barcRef,researchRef);
+    }else coverage='unmapped';
+    sources=sources.map(s=>typeof s==='string'?source(s):s).filter(Boolean).filter((s,i,all)=>all.findIndex(x=>x.id===s.id)===i);
+    return {operation,sourceSummary,sources,formula,rationale,evidenceSummary,explanationCoverage:coverage};
+  }
+  function clParameterNarrative(d){
+    const path=d.path,customer=path.match(/^customers\.([^.]+)\./)?.[1],field=path.replace(/\.\d+$/,'').split('.').at(-1),scenario=data.customerScenarios?.[customer],changed=Object.hasOwn(state,path),base=d.basis||d.description||'该参数用于研究情景，目前没有公司披露的独立数值。';
+    let rationale='研究假设：'+base,evidence='现有披露没有给出这项具体预测值；我们结合业务规模和兑现时间设置情景。';
+    if(path.startsWith('global.')){
+      rationale='我们的分析：'+base+' '+(field==='enterpriseGrowthAdjustment'?'初始调整为零；上调代表企业需求或订单转化快于原预期，下调代表兑现放缓。':'初始倍率为1。提高倍率表示该项经营因素整体强于逐项预测，降低倍率表示弱于逐项预测。');
+      evidence='研究假设：倍率用于检验预算、份额、交付或价格偏离预期时的收入影响。它来自我们的情景设置，没有对应的公司指引或卖方原始预测值。';
+    }else if(path.startsWith('enterprise.')){
+      rationale='我们的分析：用MS预测的Cloud总收入，减去我们测算的AI客户服务和独立TPU收入，得到企业服务需要贡献的收入，再计算逐季增速。这回答的是“要达到MS总额，企业业务需要增长多少”。';
+      evidence='卖方来源：Morgan Stanley《Alphabet模型》，2026-10-29。该模型提供Cloud总额预测；这里的企业增速是我们的拆分结果，MS没有单独披露或验证这一增速。AI客户或TPU收入假设改变时，企业业务所需增长也会变化。';
+    }else if(path.startsWith('externalTPU.')){
+      if(field==='capacitySoldGW'){rationale='我们的分析：收入应跟随交付验收，而非订单宣布。我们把独立TPU交付按季度逐步增加，并与持续云服务容量分开，检验交付加速对收入的贡献。逐季路径是研究假设。';evidence='卖方来源：Barclays《Alphabet模型》，2026-07-24，2027外售TPU约3.7GW。我们用这个规模作参照，再设置较低的季度交付路径；目前没有逐季订单或验收披露验证这一路径。';}
+      else if(field==='netPriceBnPerGW'){rationale='我们的分析：每GW收入受产品代际、交付组合和商业条款影响，故与交付量分别预测。我们参考Barclays估算后设置逐季单价路径，检验价格变化对收入的影响。';evidence='卖方来源：Barclays《Alphabet模型》，2026-07-24，2027单位收入约18.31bn/GW。这是卖方测算值；本情景没有对应的成交合同，硬件销售与TPUaaS的范围也仍待核实。';}
+      else if(field==='recognitionFraction'){rationale='研究假设：已交付批次在当季确认全部收入，因此初始确认比例为100%。如果验收或控制权转移延后，应降低当季比例；后续季度的递延收入需要另行判断。';evidence='Barclays《Alphabet模型》（2026-07-24）提供外售TPU销售测算，没有披露本批次验收或分期条款。100%的确认比例来自我们的简化假设。';}
+    }else if(customer){
+      if(field==='commercialRevenueRunRateBn'){
+        rationale=customer==='Anthropic'?'我们的分析：以2026年5月47bn年化收入为起点，假设年增长1.5倍，推至2026Q4约59.54bn，再假设之后每季增长15%。当季平均年化收入除以4，作为估计推理需求的季度收入尺度。':customer==='OpenAI'?'我们的分析：以2025年ARR超过20bn为起点，假设2026年翻倍至40bn，再假设之后每季增长15%。2倍增速低于2023—2025年约3倍的历史扩张速度，但仍需实际收入验证。':'我们的分析：其他AI客户缺少独立收入披露。我们先从Cloud历史收入中扣除企业服务、硬件及两名主要客户的估计收入，再结合采购份额反算需求规模，按近期Cloud增长外推。';
+        evidence=customer==='Anthropic'?'公司来源：Anthropic《Series H融资公告》，2026-05-28，披露47bn年化收入运行率。公告支持起点规模；1.5倍年增长和15%季度增长是我们的研究假设。年化运行率也不等于已确认季度收入。':customer==='OpenAI'?'公司来源：OpenAI CFO Sarah Friar《A business that scales with the value of intelligence》，2026-01-18，披露2025年ARR超过20bn、可用算力约1.9GW。未来增速及Google采购额由我们另作假设。':'公司来源：Alphabet 2026Q3业绩，2026-10-29，披露Cloud总额。该披露无法识别其他AI客户的独立收入和预算；本项为我们的余额估计。';
+      }else if(field==='inferenceCostRate'){
+        rationale='研究假设：初始将'+(customer==='OpenAI'?'45%':'40%')+'的客户收入用于推理算力采购，训练投入另列。我们的分析是，商业收入增长会增加推理需求，但采购成本还受模型效率、定价和自建/外购结构影响，不能与收入一比一增长。';
+        evidence=customer==='Anthropic'?'公司材料：Anthropic S-1（2026-10-26，Wind转录），2025收入成本/收入约60.5%，2026H1约14.6%。这一变化提示成本效率可能明显改善；但收入成本还含人员和分摊，不能直接确定推理采购率，40%仍是研究假设。':customer==='OpenAI'?'现有历史收入成本率来自媒体转述，尚无审计原文；收入成本也不等于推理采购现金。本项45%没有直接卖方或公司披露支持，属于我们的研究假设。':'Alphabet 2026Q3业绩仅披露Cloud总额，没有其他AI客户的推理采购成本率。本项40%是我们的研究假设。';
+      }else if(field==='trainingBudgetBn'){
+        rationale='我们的分析：训练投入跟随模型迭代和研发计划，可能先于收入增长，所以单独预测。初始训练预算由推理预算和研究训练占比推算；后续应依据新模型训练规模、频次和算力安排调整。';
+        evidence='研究假设：初始训练占总算力预算'+(customer==='otherAI'?'45%':'60%')+'。公司合作公告提供容量计划，没有逐季训练采购金额；历史算力费用还含租赁和折旧，不能全部作为训练现金预算。';
+      }else if(field==='googleTrainingShare'||field==='googleInferenceShare'){
+        rationale='我们的分析：客户同时采用多家云和不同芯片，训练与推理的Google份额应分别估计。份额上升代表更多工作负载由Google承接；具体比例是研究假设，需要合同、客户采购或部署数据验证。';
+        evidence=customer==='Anthropic'?'公司来源：Anthropic与Google的合作公告（2025-10-23）及Google/Broadcom扩容公告（2026-04-06），确认TPU合作和扩容计划，没有披露Google占客户全部训练或推理采购的比例。':customer==='OpenAI'?'公司来源：OpenAI《Sub-processor list》，2026-10-14，列GCP为云基础设施供应商。清单确认供应关系，没有给出训练用途、TPU类型或采购份额。':'公司来源：Alphabet 2026Q3业绩，2026-10-29。Cloud合计收入无法识别其他AI客户的Google采购份额；这里的客户组不含Google自身消耗。';
+      }else if(field==='averageAcceptedCapacityGW'){
+        rationale='我们的分析：服务收入取决于当季实际可供客户使用的容量。建设、送电、验收均可能分阶段完成，因此只把部分规划容量逐季纳入平均可收费GW。';
+        evidence=customer==='Anthropic'?'Anthropic 2025-10-23公告提出2026年上线超过1GW，2026-04-06公告提出新增多GW容量从2027年开始上线；两次计划可能重叠，不能直接相加，也没有逐季验收曲线。':customer==='OpenAI'?'公司材料支持GCP供应关系和全公司算力规模，未披露Google专属GW、验收日期或利用率，因此本项仍是研究分配，可低至零。':'其他AI客户容量由剩余规模和需求情景设置；没有逐客户已验收GW披露。';
+      }else if(field==='netServicePriceBnPerGWQuarter'){
+        rationale='我们的分析：参考每GW、每90天约2.7bn服务收入，再分别考虑价格变化与利用率。这样可以区分客户折扣、产品组合和空闲容量对收入的影响。';
+        evidence='卖方来源：Barclays《Alphabet模型》，2026-07-24，以平均GW×约2.7bn季度收入/GW测算服务收入。我们采用其单位收入尺度；具体客户合同价格和折扣仍未披露。';
+      }else if(field==='utilization'){
+        rationale='研究假设：初始利用率80%。我们的分析是，上线后的爬坡、工作负载调度和维护会使可用容量无法始终满负荷收费；80%用于反映这些摩擦。合同保底部分仍按最低承诺计费。';
+        evidence='Anthropic/Google合作公告和Barclays《Alphabet模型》（2026-07-24）未披露本客户实际利用率。80%由我们设定，后续应由利用率、客户消耗或计费数据验证。';
+      }else if(field==='reservedBillingFraction'){
+        rationale='研究假设：初始不计最低保底收入，即比例为0%。我们的分析是，算力承诺可能带来固定费用，但在取得Google合同条款前，无法给出可靠保底比例；可调整此项检验保底对收入稳定性的影响。';
+        evidence='公司材料：Anthropic S-1（2026-10-26，Wind转录第146页）说明算力通常提前12—18个月承诺，可用后确认费用，短期成本通常固定。它支持分析保底机制，没有披露Google合同的具体比例；0%也不代表真实合同没有保底。';
+      }
+    }
+    return {rationale:(changed?'当前值为客户调整后的情景。 ':'')+rationale,evidenceSummary:evidence,analysis:[base,scenario?.rationale,d.historicalRange?'历史参考：'+text(d.historicalRange):''].filter(Boolean).join(' ')};
+  }
   function clParameter(d,display){
     const path=d.path,match=/^customers\.([^.]+)\.computeBudgetBn\.(\d+)$/.exec(path),index=Number(path.match(/\.(\d+)$/)?.[1]),period=Number.isInteger(index)?data.forecastPeriods[index]:clPeriod;
     if(match){const c=match[1],row=result.quarters[Number(match[2])]?.customers[c];return cloudNumber({id:'param:'+path,label:labels[c]+' 算力总预算',period,formula:'算力总预算 = 推理预算 + 训练预算',substitution:`${num(row?.inferenceBudgetBn,5)} + ${num(row?.trainingBudgetBn,5)} = ${num(row?.computeBudgetBn,5)} USD bn`,basis:d.basis,sources:d.sourceRefs},parameterValue(path),display??num(parameterValue(path),3));}
     const scale=d.displayScale??(['fraction','ratio'].includes(d.unit)?100:1),value=parameterValue(path),customer=path.match(/^customers\.([^.]+)\./)?.[1];
-    return cloudNumber({id:'param:'+path,kind:'assumption',label:(customer?labels[customer]+' · ':'')+d.label,period,inputPath:path,basis:(Object.hasOwn(state,path)?'当前值由用户修改。':'当前值来自模型情景设置。')+' '+(d.basis||d.description||'研究者设定，尚无独立披露验证。'),analysis:d.historicalRange?'历史参考：'+text(d.historicalRange):'',sources:d.sourceRefs},value,display??num(value*scale,3)+(scale===100?'%':d.displayUnit||d.unit||''));
+    const narrative=clParameterNarrative(d);
+    return cloudNumber({id:'param:'+path,kind:'assumption',label:(customer?labels[customer]+' · ':'')+d.label,period,inputPath:path,basis:narrative.rationale,...narrative,sources:d.sourceRefs},value,display??num(value*scale,3)+(scale===100?'%':clUnitLabel(d.displayUnit||d.unit)));
   }
   function clMetric(period,metric,customer,display){
     const annual=String(period).length===4,row=(annual?result.annual:result.quarters).find(q=>String(q.period)===String(period)),q=row,c=customer?row?.customers?.[customer]:null,id=`metric:${period}:${customer||'cloud'}:${metric}`,p=result.parameters,g=p.global;
     const names={cloudRevenueBn:'Cloud总收入',cloudYoY:'Cloud收入同比',enterpriseRevenueBn:'企业服务收入',externalTPURevenueBn:'独立TPU交付收入',aiRevenueBn:'AI客户服务收入',servicesRevenueBn:'Cloud持续服务收入',revenueRunRateBn:'年化商业收入代理',inferenceBudgetBn:'推理采购预算',trainingBudgetBn:'训练采购预算',computeBudgetBn:'算力总预算',demandRevenueBn:'归属Google的采购需求',capacityRevenueBn:'可交付服务能力',revenueBn:'确认服务收入',fullCapacityRevenueBn:'满额容量计费',reservedRevenueBn:'合同保底收入',usageRevenueBn:'额外用量收入'};
-    let value=customer?(annual?row?.customerRevenueBn?.[customer]:c?.[metric]):metric==='aiRevenueBn'?Object.values(row?.customerRevenueBn||{}).reduce((s,v)=>s+v,0):row?.[metric],formula='',substitution='',basis='基于当前客户预算、交付、价格及企业增长假设计算；不会自动回填卖方目标。';
+    let value=customer?(annual?result.quarters.filter(x=>x.period.startsWith(String(period))).reduce((sum,x)=>sum+(x.customers?.[customer]?.[metric]||0),0):c?.[metric]):metric==='aiRevenueBn'?Object.values(row?.customerRevenueBn||{}).reduce((s,v)=>s+v,0):row?.[metric],formula='',substitution='',basis='基于当前客户预算、交付、价格及企业增长假设计算；不会自动回填卖方目标。';
     if(annual){
       const parts=[...(result.history||[]),...result.quarters].filter(r=>r.period.startsWith(String(period))),values=parts.map(r=>customer?r.customers?.[customer]?.[metric]??r.customerRevenueBn?.[customer]:metric==='aiRevenueBn'?Object.values(r.customerRevenueBn||{}).reduce((s,v)=>s+v,0):r[metric]);
+      if(metric==='servicesRevenueBn'&&values.length===4&&values.every(valid))value=values.reduce((sum,v)=>sum+v,0);
       formula='全年'+(names[metric]||metric)+' = Q1 + Q2 + Q3 + Q4';substitution=values.map(v=>num(v,5)).join(' + ')+' = '+num(value,5)+' USD bn';
       return clCalc(id,(customer?labels[customer]+' · ':'')+(names[metric]||metric),period,value,formula,substitution,display,basis);
     }
@@ -50,21 +202,72 @@
         reservedRevenueBn:method==='contract'?`${num(full,5)} × ${num(c.reservedBillingFraction,5)}`:'0',
         usageRevenueBn:method==='contract'?`min(max(${num(c.demandRevenueBn,5)} − ${num(reserved,5)}, 0), ${num(full,5)} × (1 − ${num(c.reservedBillingFraction,5)}) × ${num(c.utilization,5)})`:num(c.revenueBn,5),
         revenueBn:method==='contract'?`${num(reserved,5)} + ${num(usage,5)}`:method==='budget'?num(c.demandRevenueBn,5):method==='capacity'?`${num(full,5)} × ${num(c.utilization,5)}`:`min(${num(c.demandRevenueBn,5)}, ${num(full*c.utilization,5)})`
-      };formula=formulas[metric]||'按当前收入方法计算';substitution=(subs[metric]||num(value,5))+' = '+num(value,5)+' USD bn';basis='采用方式：'+methodNames[method]+'。有效Google份额=min(原假设×份额倍率,100%)；有效利用率=min(原假设×利用率倍率,100%)；容量及净价已分别乘对应全局倍率。';
+      };formula=formulas[metric]||'按当前收入方法计算';substitution=(subs[metric]||num(value,5))+' = '+num(value,5)+' USD bn';basis='采用方式：'+methodNames[method]+'。Google份额与利用率分别乘调整倍率，最高取100%；容量及净价也分别乘对应倍率。';
     }else if(metric==='enterpriseRevenueBn'){formula='企业服务收入 = 上季企业服务收入 × (1 + 本季环比假设 + 环比调整)';substitution=`${num(previous,5)} × (1 + ${num(p.enterprise.sequentialGrowth[idx],5)} + ${num(g.enterpriseGrowthAdjustment,5)}) = ${num(value,5)} USD bn`;}
     else if(metric==='externalTPURevenueBn'){formula='独立TPU收入 = 交付GW假设 × 交付倍率 × 单价/GW × 当期确认比例';substitution=`${num(p.externalTPU.capacitySoldGW[idx],5)} × ${num(g.tpuVolumeMultiplier,5)} × ${num(q.externalTPU.netPriceBnPerGW,5)} × ${num(q.externalTPU.recognitionFraction,5)} = ${num(value,5)} USD bn`;}
     else if(metric==='cloudYoY'){const prior=[...(result.history||[]),...result.quarters].find(r=>r.period===`${Number(period.slice(0,4))-1}${period.slice(4)}`);formula='Cloud同比 = 当季Cloud收入 ÷ 上年同季Cloud收入 − 1';substitution=`${num(q.cloudRevenueBn,5)} ÷ ${num(prior?.cloudRevenueBn,5)} − 1 = ${pct(value)}`;}
     else{const ai=Object.values(q.customerRevenueBn||{}),parts=metric==='aiRevenueBn'?ai:metric==='servicesRevenueBn'?[q.enterpriseRevenueBn,...ai]:[q.enterpriseRevenueBn,...ai,q.externalTPURevenueBn];formula=metric==='aiRevenueBn'?'AI服务收入 = Anthropic + OpenAI + 其他AI客户':metric==='servicesRevenueBn'?'持续服务收入 = 企业服务 + Anthropic + OpenAI + 其他AI客户':'Cloud总收入 = 企业服务 + Anthropic + OpenAI + 其他AI客户 + 独立TPU交付';substitution=parts.map(v=>num(v,5)).join(' + ')+' = '+num(value,5)+' USD bn';}
     return clCalc(id,(customer?labels[customer]+' · ':'')+(names[metric]||metric),period,value,formula,substitution,display,basis);
   }
-  function restoreNumberInput(){if(clMovedInput){const {input,marker}=clMovedInput;if(marker.isConnected)marker.replaceWith(input);clMovedInput=null;}}
-  function focusNumber(id){
-    restoreNumberInput();const item=clNumbers.get(id),panel=host.querySelector('#clNumberDetail');if(!item||!panel)return false;clNumberId=id;
+  function clDriverSpecs(item){
+    const defs=definitions(),period=item.period||clPeriod,index=data.forecastPeriods.indexOf(period),q=result.quarters.find(x=>x.period===period);
+    const param=path=>{const d=defs.find(d=>d.path===path);if(!d)return null;clParameter(d);return clNumbers.get('param:'+path);};
+    const cp=(customer,field)=>param(defs.some(d=>d.path===`customers.${customer}.${field}.${index}`)?`customers.${customer}.${field}.${index}`:`customers.${customer}.${field}`);
+    const metric=(key,customer=null,t=period)=>{clMetric(t,key,customer);return clNumbers.get(`metric:${t}:${customer||'cloud'}:${key}`);};
+    const fixed=(label,value,unit='USD bn',note='固定参考值')=>({label,value,formatted:num(value,unit==='天'?0:5)+' '+clUnitLabel(unit),fixed:true,note});
+    const byId=id=>clNumbers.get(id),annual=(customer,key)=>metric(key,customer,'2027');let inputs=[];
+    if(item.id.startsWith('param:')&&/\.computeBudgetBn\.\d+$/.test(item.id)){const customer=item.id.split('.')[1];inputs=[metric('inferenceBudgetBn',customer),metric('trainingBudgetBn',customer)];}
+    const match=/^metric:([^:]+):([^:]+):([^:]+)$/.exec(item.id);
+    if(match){const [,t,owner,key]=match,customer=owner==='cloud'?null:owner;
+      if(t.length===4){inputs=[...(result.history||[]),...result.quarters].filter(x=>x.period.startsWith(t)).map(x=>data.forecastPeriods.includes(x.period)?metric(key,customer,x.period):fixed(x.period+' 历史收入',x[key],'USD bn','Alphabet '+x.period+'官方季度业绩披露的Cloud收入。'));}
+      else if(customer){
+        const c=q.customers[customer],method=c.serviceMethod,direct=c.budgetMethod==='direct';
+        const utilization=[cp(customer,'utilization'),param('global.utilizationMultiplier')];
+        const fields={
+          inferenceBudgetBn:direct?[cp(customer,'computeBudgetBn'),cp(customer,'trainingShare'),param('global.customerBudgetMultiplier')]:[cp(customer,'commercialRevenueRunRateBn'),cp(customer,'inferenceCostRate'),param('global.customerBudgetMultiplier')],
+          trainingBudgetBn:direct?[cp(customer,'computeBudgetBn'),cp(customer,'trainingShare'),param('global.customerBudgetMultiplier')]:[cp(customer,'trainingBudgetBn'),param('global.customerBudgetMultiplier')],
+          computeBudgetBn:[metric('inferenceBudgetBn',customer),metric('trainingBudgetBn',customer)],
+          demandRevenueBn:[metric('trainingBudgetBn',customer),cp(customer,'googleTrainingShare'),metric('inferenceBudgetBn',customer),cp(customer,'googleInferenceShare'),param('global.googleShareMultiplier')],
+          fullCapacityRevenueBn:[cp(customer,'averageAcceptedCapacityGW'),param('global.capacityMultiplier'),cp(customer,'netServicePriceBnPerGWQuarter'),param('global.netPriceMultiplier'),fixed('本季天数',q.days,'天','日历天数；收入按90天价格调整')],
+          capacityRevenueBn:[metric('fullCapacityRevenueBn',customer),...(method==='contract'?[cp(customer,'reservedBillingFraction')]:[]),...utilization],
+          reservedRevenueBn:method==='contract'?[metric('fullCapacityRevenueBn',customer),cp(customer,'reservedBillingFraction')]:[],
+          usageRevenueBn:method==='contract'?[metric('demandRevenueBn',customer),metric('fullCapacityRevenueBn',customer),cp(customer,'reservedBillingFraction'),...utilization]:[metric('revenueBn',customer)],
+          revenueBn:method==='contract'?[metric('reservedRevenueBn',customer),metric('usageRevenueBn',customer)]:method==='budget'?[metric('demandRevenueBn',customer)]:method==='capacity'?[metric('fullCapacityRevenueBn',customer),...utilization]:[metric('demandRevenueBn',customer),metric('capacityRevenueBn',customer)]
+        };inputs=fields[key]||[];
+      }else if(key==='enterpriseRevenueBn')inputs=[index>0?metric('enterpriseRevenueBn',null,data.forecastPeriods[index-1]):fixed('基期企业服务收入',result.calibration.baseEnterpriseRevenueBn,'USD bn','Alphabet 2026Q3官方Cloud总额，扣除我们估计的AI客户和独立TPU收入；企业分项并非公司单独披露。'),param('enterprise.sequentialGrowth.'+index),param('global.enterpriseGrowthAdjustment')];
+      else if(key==='externalTPURevenueBn')inputs=['capacitySoldGW','netPriceBnPerGW','recognitionFraction'].map(k=>param(defs.some(d=>d.path===`externalTPU.${k}.${index}`)?`externalTPU.${k}.${index}`:`externalTPU.${k}`)).concat(param('global.tpuVolumeMultiplier'));
+      else if(key==='cloudYoY'){const prior=String(Number(t.slice(0,4))-1)+t.slice(4),historical=result.history.find(x=>x.period===prior);inputs=[metric('cloudRevenueBn'),historical?fixed(prior+' Cloud历史收入',historical.cloudRevenueBn,'USD bn','Alphabet '+prior+'官方季度业绩披露的Cloud收入，用作同比的同期基数。'):metric('cloudRevenueBn',null,prior)];}
+      else inputs=[...(key==='aiRevenueBn'?[]:[metric('enterpriseRevenueBn')]),...Object.keys(labels).map(c=>metric('revenueBn',c)),...(key==='cloudRevenueBn'?[metric('externalTPURevenueBn')]:[])];
+    }else if(item.id.startsWith('customer-annual:')){
+      const [,c,key]=item.id.split(':');
+      if(key==='commercialRevenue')inputs=data.forecastPeriods.filter(t=>t.startsWith('2027')).map(t=>param(`customers.${c}.commercialRevenueRunRateBn.${data.forecastPeriods.indexOf(t)}`));
+      else if(key==='budgetRatio'||key==='fundingGap')inputs=[annual(c,'computeBudgetBn'),byId(`customer-annual:${c}:commercialRevenue`)];
+      else if(key==='coverage')inputs=[annual(c,'demandRevenueBn'),annual(c,'revenueBn')];
+      else inputs=data.forecastPeriods.filter(t=>t.startsWith('2027')).map(t=>metric(key,c,t));
+    }else if(item.id.startsWith('ms-current-growth:'))inputs=[param('enterprise.sequentialGrowth.'+index),param('global.enterpriseGrowthAdjustment')];
+    else if(item.id.startsWith('ms-implied:')){const x=data.msBaseline.rows.find(x=>x.period===period);inputs=[fixed('MS目标Cloud收入',x.targetRevenueBn,'USD bn','Morgan Stanley《Alphabet模型》（2026-10-29）对'+period+'的Cloud收入预测。'),fixed('基准AI客户收入',x.aiRevenueBn,'USD bn','我们建立初始基准时对'+period+'的客户预算、份额和容量测算；此处保留最初研究值。'),fixed('基准TPU收入',x.tpuRevenueBn,'USD bn','我们建立初始基准时对'+period+'的TPU交付预测；量价尺度参考Barclays 2026-07-24模型。'),fixed('反推前一季企业收入',index?data.msBaseline.rows[index-1].enterpriseRevenueBn:result.calibration.baseEnterpriseRevenueBn,'USD bn','初始研究基准中，前一季从MS Cloud总额扣除AI客户和TPU收入的余额；首个预测季则使用Alphabet 2026Q3总额与研究分摊。')];}
+    else if(item.id.startsWith('ms-preview:')){const method=item.id.split(':')[1];inputs=[byId('broker:ms:'+period),...(method==='enterprise'?[metric('aiRevenueBn'),metric('externalTPURevenueBn'),param('global.enterpriseGrowthAdjustment')]:[metric('servicesRevenueBn'),param('global.tpuVolumeMultiplier'),param(`externalTPU.netPriceBnPerGW.${index}`),param('externalTPU.recognitionFraction')])];}
+    else if(item.id.startsWith('inverse:'))inputs=[metric('cloudRevenueBn'),byId('broker:ms:'+period)];
+    else if(item.id.startsWith('inverse-gap:'))inputs=[byId('broker:ms:'+period),metric('cloudRevenueBn')];
+    else if(item.id.startsWith('broker-gap:')){const [,broker]=item.id.split(':');inputs=[metric('cloudRevenueBn'),byId(`broker:${broker}:${period}`)];}
+    else if(item.id.startsWith('sensitivity-result:')){const [,path,side]=item.id.split(':');inputs=[param(path),byId(`sensitivity-input:${path}:${side}`),metric('cloudRevenueBn',null,'2027')];}
+    else if(item.id==='tpu-share:2027')inputs=[metric('externalTPURevenueBn',null,'2027'),metric('cloudRevenueBn',null,'2027')];
+    else if(item.id==='barc-tpu-gap:2027'||item.id==='barc-services-gap:2027'){const key=item.id.includes('tpu')?'externalTPURevenueBn':'servicesRevenueBn',b=data.comparisons?.barclays?.annual?.find(x=>x.period==='2027')?.components;inputs=[metric(key,null,'2027'),fixed('Barclays对应收入',key==='externalTPURevenueBn'?b.externalTPURevenueBn:b.gcpExExternalTPUAndWorkspaceBn+b.workspaceBn,'USD bn','Barclays《Alphabet模型》（2026-07-24）对2027年的对应业务收入预测。')];}
+    return inputs.filter(Boolean).filter((x,i,all)=>x.id!==item.id&&all.findIndex(y=>x.id?y.id===x.id:y.label===x.label)===i);
+  }
+  function clDriverRows(item){const drivers=clDriverSpecs(item);if(!drivers.length)return '';return `<section id="clNumberDrivers"><h4>本次计算的输入</h4><p class="cl-muted">假设可在这里修改；计算输入可继续查看公式与它使用的假设。</p>${drivers.map(d=>d.fixed?`<div class="cl-number-driver"><span>${esc(d.label)}</span><span>${esc(d.formatted)}</span><p class="cl-muted">${esc(d.note)}</p></div>`:`<div class="cl-number-driver" data-cl-driver="${esc(d.id)}"><span>${esc(d.label)}</span>${d.inputPath?`<label class="cl-driver-editor"><span data-cl-input-slot="${esc(d.inputPath)}"></span><span>${esc(clUnitLabel(definitions().find(x=>x.path===d.inputPath)?.unit))}</span></label>`:cloudNumber(d,d.value,d.formatted)}${d.inputPath?`<button type="button" class="cl-driver-source" data-cl-number="${esc(d.id)}" data-cl-kind="assumption">假设 · 查看采用理由与证据</button>`:''}</div>`).join('')}</section>`;}
+  function restoreNumberInput(){for(const {input,marker} of clMovedInputs){delete input.dataset.clDriverInput;if(marker.isConnected)marker.replaceWith(input);}clMovedInputs=[];}
+  function moveNumberInputs(panel){for(const slot of panel.querySelectorAll('[data-cl-input-slot]')){const path=slot.dataset.clInputSlot,input=[...host.querySelectorAll('[data-cl-param]')].find(x=>x.dataset.clParam===path);if(!input||input.readOnly||clMovedInputs.some(x=>x.input===input))continue;const marker=document.createElement('span');input.replaceWith(marker);slot.append(input);input.dataset.clDriverInput='true';clMovedInputs.push({input,marker});}}
+  function focusNumber(id,remember=true){
+    restoreNumberInput();if(!clNumbers.has(id)&&id.startsWith('metric:')){const [,period,customer,metric]=id.split(':');clMetric(period,metric,customer==='cloud'?null:customer);}
+    if(!clNumbers.has(id)&&id.startsWith('ms-preview:')){const [,method,period]=id.split(':'),solution=engine.solveMSCloudRevenue(data,state,method);solution.rows.filter(x=>x.feasible).forEach(x=>clMSSolution(x,method));if(!clNumbers.has(id))clNumbers.set(id,{id,period,kind:'calculated',value:null,formatted:'无可行解',label:method==='enterprise'?'重新反推企业环比':'重新反推TPU交付GW',formula:method==='enterprise'?'企业环比 = (MS目标 − AI服务收入 − TPU收入) ÷ 前一季已反推企业收入 − 1 − 全局环比调整':'TPU交付GW = (MS目标 − 持续服务收入) ÷ (TPU交付倍率 × 单价 × 确认比例)',substitution:'当前条件下，本季或前序季度无法在允许范围内求得条件解。',basis:'可修改下方真实输入后继续检验；没有把不可行结果写回模型。'});}
+    const item=clNumbers.get(id),panel=host.querySelector('#clNumberDetail');if(!item||!panel)return false;Object.assign(item,clNumberExplanation(item));if(remember&&clNumberId&&clNumberId!==id)clNumberTrail.push(clNumberId);clNumberId=id;
     panel.hidden=false;panel.dataset.clKind=item.kind;panel.dataset.clNumberId=id;
-    panel.innerHTML=`<button type="button" id="clNumberBack">返回当前项目</button><p class="cl-kicker">${esc(item.period||clPeriod)} · ${clKindLabel(item.kind)}</p><h3>${esc(item.label)}</h3><p class="cl-number-value">${esc(item.formatted)}</p>${item.kind==='calculated'?`<div class="cl-number-formula cl-equation">${esc(item.formula)}</div><p class="cl-number-substitution">代入当前值：${esc(item.substitution||'按当前情景逐季重算。')}</p>`:''}<p class="cl-number-basis">${esc(item.basis||'研究情景计算。')}</p>${item.analysis?`<p>${esc(item.analysis)}</p>`:''}<div class="cl-number-sources">${clSourceHTML(item.sources)||'<p class="cl-muted">'+(item.kind==='assumption'?'该具体数值没有独立披露验证；依据与限制见上方说明。':'计算输入来自当前情景；可返回对应参数查看假设依据。')+'</p>'}</div>${item.inputPath?'<label class="cl-number-edit">修改这个假设 <span id="clNumberEditSlot"></span></label>':''}`;
-    if(item.inputPath){const input=[...host.querySelectorAll('[data-cl-param]')].find(x=>x.dataset.clParam===item.inputPath);if(input){const marker=document.createElement('span');input.replaceWith(marker);panel.querySelector('#clNumberEditSlot').append(input);clMovedInput={input,marker};}}
+    const sources=clSourceHTML(item.sources),rationale=item.rationale||item.basis||'该值来自当前研究情景。',evidence=item.evidenceSummary||item.basis||'该具体数值没有独立披露验证；采用逻辑与适用边界见上方。';
+    panel.innerHTML=`<button type="button" id="clNumberBack">${clNumberTrail.length?'返回上一个数字':'返回当前项目'}</button><p class="cl-kicker">${esc(item.period||clPeriod)} · ${clKindLabel(item.kind)}</p><h3>${esc(item.label)}</h3><p class="cl-number-value">${esc(item.formatted)}</p>${item.kind==='calculated'?`<div class="cl-number-formula cl-equation">${esc(item.formula)}</div><p class="cl-number-operation">${esc(item.operation)}</p><p class="cl-number-substitution">代入当前值：${esc(item.substitution||'当前输入没有可行的数值解。')}</p><section class="cl-number-data-source"><h4>采用的数据</h4><p>${esc(item.sourceSummary)}</p>${clPublicSourceLinks(item.sources)?'<p class="cl-key-source-links">'+clPublicSourceLinks(item.sources)+'</p>':''}</section>${clDriverRows(item)}<p class="cl-number-basis">${esc(item.basis||item.operation)}</p>`:`<section class="cl-number-rationale"><h4>为什么采用这个假设</h4><p class="cl-number-basis">${esc(rationale)}</p></section><section class="cl-number-evidence-summary"><h4>关键证据支持什么</h4><p>${esc(evidence)}</p><p class="cl-number-data-source">${esc(item.sourceSummary)}</p>${clPublicSourceLinks(item.sources)?'<p class="cl-key-source-links">'+clPublicSourceLinks(item.sources)+'</p>':''}</section>`}${item.inputPath?`<label class="cl-number-edit">修改这个输入假设 <span id="clNumberEditSlot" data-cl-input-slot="${esc(item.inputPath)}"></span></label>`:''}<p class="cl-number-units cl-muted">金额单位USD bn为十亿美元；GW为吉瓦（十亿瓦）。比例以百分数展示，公式中的小数乘100即为百分比。</p>${sources||item.analysis?`<details class="cl-number-analysis"><summary>详细分析与原始材料</summary>${item.analysis?'<p>'+esc(item.analysis)+'</p>':''}<div class="cl-number-sources">${sources}</div></details>`:''}`;
+    moveNumberInputs(panel);
     host.querySelector('#clAssumptionAudit').hidden=true;host.querySelector('#clScopeNav').hidden=true;host.querySelector('.cl-context').hidden=true;
-    panel.querySelector('#clNumberBack').addEventListener('click',()=>{restoreNumberInput();clNumberId=null;panel.hidden=true;applyCloudScope();});panel.querySelector('#clNumberBack').focus({preventScroll:true});return true;
+    panel.querySelector('#clNumberBack').addEventListener('click',()=>{const previous=clNumberTrail.pop();if(previous){focusNumber(previous,false);return;}restoreNumberInput();clNumberId=null;panel.hidden=true;applyCloudScope();});panel.querySelector('#clNumberBack').focus({preventScroll:true});return true;
   }
   function applyCloudScope(){
     restoreNumberInput();const items=host.querySelector('#clAssumptionAudit'),nav=host.querySelector('#clScopeNav');if(!items||!nav)return;
@@ -81,9 +284,9 @@
   }
   function bindCloudNumbers(){
     host.querySelectorAll('[data-cl-param]').forEach(input=>{const d=definitions().find(d=>d.path===input.dataset.clParam);if(!d)return;const wrapper=document.createElement('span');wrapper.className='cl-param-identity';wrapper.innerHTML=clParameter(d);const b=wrapper.firstElementChild;b.classList.add('cl-param-kind');b.querySelector('span').textContent=clKindLabel(d.readonly?'calculated':'assumption');b.querySelector('.cl-number-kind')?.remove();input.insertAdjacentElement('afterend',wrapper);});
-    host.onclick=e=>{const number=e.target.closest('[data-cl-number]');if(number){e.preventDefault();e.stopPropagation();focusNumber(number.dataset.clNumber);return;}const link=e.target.closest('[data-cl-scope]');if(link){e.preventDefault();clNumberId=null;clScope=link.dataset.clScope||null;applyCloudScope();return;}const summary=e.target.closest('summary');if(summary&&host.contains(summary)){e.preventDefault();clNumberId=null;clScope=summary.parentElement.dataset.clDetail;applyCloudScope();}};
+    host.onclick=e=>{const number=e.target.closest('[data-cl-number]');if(number){e.preventDefault();e.stopPropagation();focusNumber(number.dataset.clNumber);return;}const link=e.target.closest('[data-cl-scope]');if(link){e.preventDefault();clNumberId=null;clNumberTrail=[];clScope=link.dataset.clScope||null;applyCloudScope();return;}const summary=e.target.closest('summary');if(summary&&host.contains(summary)&&!summary.closest('#clNumberDetail')){e.preventDefault();clNumberId=null;clNumberTrail=[];clScope=summary.parentElement.dataset.clDetail;applyCloudScope();}};
     host.onkeydown=e=>{if((e.key==='Enter'||e.key===' ')&&e.target.matches('rect[data-cl-number]')){e.preventDefault();focusNumber(e.target.dataset.clNumber);}};
-    applyCloudScope();if(clNumberId)focusNumber(clNumberId);
+    applyCloudScope();if(clNumberId)focusNumber(clNumberId,false);
   }
   const methodNames={contract:'合同情景：保底＋额外用量',constrainedBudget:'旧版：需求与容量取小',capacity:'容量计费：仅作情景',budget:'预算法：仅作情景'};
   function lineStyles(){if(document.getElementById('clLineStyles'))return;const s=document.createElement('style');s.id='clLineStyles';s.textContent=`.cl-line{margin:24px 0;padding:22px;border:1px solid var(--line);border-radius:12px;scroll-margin-top:20px}.cl-line>.cl-kicker{margin-bottom:8px}.cl-line>h3:first-of-type{font-size:21px;margin-top:5px}.cl-evidence{margin:16px 0;padding:16px;background:var(--panel2);border-radius:8px}.cl-evidence .cl-scroll{margin-top:10px}.cl-evidence .wrap{min-width:230px;line-height:1.7}.cl-evidence a{color:var(--accent);text-decoration:underline}.cl-method{display:flex;gap:12px;align-items:center;margin:10px 0 16px;font-size:13px}.cl-method select{background:var(--panel);color:var(--fg);border:1px solid var(--line);border-radius:6px;padding:8px;max-width:100%}.cl-edit-table{margin-top:14px}.cl-edit-table input{box-sizing:border-box;width:100px;max-width:100%;padding:7px;border:1px solid var(--line);border-radius:5px;background:var(--panel);color:var(--fg);font:12px var(--mono)}.cl-edit-table input[readonly]{background:var(--panel2);color:var(--muted)}.cl-edit-table input.changed{border-color:var(--accent);background:var(--accent-soft)}.cl-customer-editor{padding:12px!important;background:var(--panel);border:1px solid var(--line)!important;border-radius:8px}.cl-root a:focus-visible,.cl-root input:focus-visible,.cl-root select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}@media(max-width:700px){.cl-line{padding:12px}.cl-evidence{padding:10px}.cl-method{display:block}.cl-method select{display:block;margin-top:8px}.cl-root h2{font-size:21px}}`;document.head.append(s);}
@@ -91,13 +294,13 @@
   function controlsFor(prefix,fields){return definitions().filter(d=>d.path.startsWith(prefix)&&(!fields||fields.some(f=>d.path===prefix+f||d.path.startsWith(prefix+f+'.'))));}
   function globalControls(names){return definitions().filter(d=>names.includes(d.path)).map(d=>evidenceItem('parameter:'+d.path,d.label,definitionInput(d)+parameterEvidence([d]))).join('');}
   function evidenceItem(id,title,body){return `<details class="cl-evidence-item" data-cl-detail="${esc(id)}"><summary>${esc(title)}</summary><div class="cl-detail-body">${body}</div></details>`;}
-  function parameterEvidence(defs){const first=defs[0],refs=[...new Set(defs.flatMap(d=>d.sourceRefs||[]))];return `<p class="cl-muted">${esc(first.basis||first.description||'研究情景参数；尚无独立披露可验证。')}${first.status?' · '+esc(statusLabels[first.status]||first.status):''}</p>${first.historicalRange?'<p class="cl-muted">历史参考：'+esc(text(first.historicalRange))+'</p>':''}`+refs.map(id=>{const src=data.sources?.find(x=>x.id===id);return evidenceItem('source:'+first.path+':'+id,src?.title||id,`<p>${esc(src?.date||src?.publicationDate||'')} · ${esc(src?.page||src?.kind||'')}</p>${src?.url&&/^https?:\/\//.test(src.url)?sourceLink(esc(src.url),'打开原始来源'):''}<p class="cl-muted">该来源仅支持上方列明的依据与边界，不能据此确认未披露的采购份额或合同条件。</p>`);}).join('');}
+  function parameterEvidence(defs){const first=defs[0],current=defs.find(d=>d.path.endsWith('.'+data.forecastPeriods.indexOf(clPeriod)))||first,refs=[...new Set(defs.flatMap(d=>d.sourceRefs||[]))],narrative=clParameterNarrative(current);return `<section class="cl-parameter-rationale"><p><b>采用逻辑：</b>${esc(narrative.rationale)}</p><p><b>关键证据与边界：</b>${esc(narrative.evidenceSummary)}</p>${clPublicSourceLinks(refs)?'<p class="cl-key-source-links">'+clPublicSourceLinks(refs)+'</p>':''}</section>`+evidenceItem('analysis:'+first.path,'详细分析与原始材料',`<p>${esc(narrative.analysis)}</p>`+refs.map(id=>{const src=data.sources?.find(x=>x.id===id);return evidenceItem('source:'+first.path+':'+id,src?.title||id,`<p>${esc(src?.date||src?.publicationDate||'')} · ${esc(src?.page||src?.kind||'')}</p>${src?.url&&/^https?:\/\//.test(src.url)?sourceLink(esc(src.url),'打开原始来源'):''}<p class="cl-muted">该来源仅支持上方列明的依据与边界，不能据此确认未披露的采购份额或合同条件。</p>`);}).join(''));}
   function quarterlyEditor(defs){
     const scalar=defs.filter(d=>! /\.\d+$/.test(d.path)),arrays=defs.filter(d=>/\.\d+$/.test(d.path));
     const groups=[...new Set(arrays.map(d=>d.path.replace(/\.\d+$/,'')))];
     return scalar.map(d=>evidenceItem('parameter:'+d.path,d.label,definitionInput(d)+parameterEvidence([d]))).join('')+groups.map(path=>{
       const group=arrays.filter(d=>d.path.replace(/\.\d+$/,'')===path),first=group[0],label=first.label.replace(/^\d{4}Q[1-4]/,''),scale=first.unit==='ratio'?100:1;
-      return `<details class="cl-parameter" data-cl-detail="parameter:${esc(path)}"><summary>${esc(label)} <span class="cl-item-value">${clParameter(group.find(d=>d.path===path+'.'+Math.max(0,data.forecastPeriods.indexOf(clPeriod)))||first)}</span></summary><div class="cl-detail-body">${parameterEvidence(group)}<div class="cl-scroll cl-edit-table"><table class="cl-table"><thead><tr><th>${esc(first.unit==='ratio'?'%':first.unit)}${first.readonly?' · 计算值':' · 可编辑假设'}</th>${data.forecastPeriods.map(t=>`<th class="${t===clPeriod?'cl-current-period':''}">${esc(t)}</th>`).join('')}</tr></thead><tbody><tr><td class="wrap">${esc(label)}</td>${data.forecastPeriods.map((t,i)=>{const d=group.find(x=>x.path===path+'.'+i);if(!d)return '<td>—</td>';const value=parameterValue(d.path),aria=(labels[d.path.split('.')[1]]||'')+' '+d.label;return `<td class="${t===clPeriod?'cl-current-period':''}"><input type="number" step="any" min="${(d.min??0)*scale}" ${valid(d.max)?`max="${d.max*scale}"`:''} data-cl-param="${esc(d.path)}" data-scale="${scale}" value="${+Number(value*scale).toFixed(5)}" ${d.readonly?'readonly aria-readonly="true"':''} aria-label="${esc(aria)}" title="${esc(d.basis)}" class="${Object.hasOwn(state,d.path)?'changed':''}"></td>`;}).join('')}</tr></tbody></table></div></div></details>`;
+      return `<details class="cl-parameter" data-cl-detail="parameter:${esc(path)}"><summary>${esc(label)} <span class="cl-item-value">${clParameter(group.find(d=>d.path===path+'.'+Math.max(0,data.forecastPeriods.indexOf(clPeriod)))||first)}</span></summary><div class="cl-detail-body">${parameterEvidence(group)}<div class="cl-scroll cl-edit-table"><table class="cl-table"><thead><tr><th>${esc(clUnitLabel(first.unit))}${first.readonly?' · 计算值':' · 可编辑假设'}</th>${data.forecastPeriods.map(t=>`<th class="${t===clPeriod?'cl-current-period':''}">${esc(t)}</th>`).join('')}</tr></thead><tbody><tr><td class="wrap">${esc(label)}</td>${data.forecastPeriods.map((t,i)=>{const d=group.find(x=>x.path===path+'.'+i);if(!d)return '<td>—</td>';const value=parameterValue(d.path),aria=(labels[d.path.split('.')[1]]||'')+' '+d.label;return `<td class="${t===clPeriod?'cl-current-period':''}"><input type="number" step="any" min="${(d.min??0)*scale}" ${valid(d.max)?`max="${d.max*scale}"`:''} data-cl-param="${esc(d.path)}" data-scale="${scale}" value="${+Number(value*scale).toFixed(5)}" ${d.readonly?'readonly aria-readonly="true"':''} aria-label="${esc(aria)}" title="${esc(d.basis)}" class="${Object.hasOwn(state,d.path)?'changed':''}"></td>`;}).join('')}</tr></tbody></table></div></div></details>`;
     }).join('');
   }
   function contractEvidence(){return `<div class="cl-evidence" id="clContractEvidence"><b>最有用的证据 · 规模与时间有依据，计费条款仍待核</b><div class="cl-scroll"><table class="cl-table"><thead><tr><th>关键假设</th><th>已取得的证据</th><th>如何使用／还缺什么</th></tr></thead><tbody>
@@ -126,7 +329,7 @@
     clCalc('ms-implied:'+x.period,'MS基准隐含企业环比',x.period,x.value,'隐含企业环比 = (MS目标 − AI客户服务 − TPU收入) ÷ 上季企业服务收入 − 1 − 基准全局环比调整',`(${num(x.targetRevenueBn,5)} − ${num(x.aiRevenueBn,5)} − ${num(x.tpuRevenueBn,5)}) ÷ ${num(previous,5)} − 1 − ${num(data.parameters.global.enterpriseGrowthAdjustment,5)} = ${pct(x.value)}`,pct(x.value),'该值为模型基准建立时的条件解，修改客户假设不会自动重新拟合。'),
     clCalc('ms-current-growth:'+x.period,'当前企业有效环比',x.period,growth,'当前企业环比 = 本季环比假设 + 全局环比调整',`${pct(result.parameters.enterprise.sequentialGrowth[i])} + ${pct(adjustment)} = ${pct(growth)}`,pct(growth))
   ].map(v=>'<td>'+v+'</td>').join('');}
-  function clMSSolution(x,method){return clCalc(`ms-preview:${method}:${x.period}`,method==='enterprise'?'重新反推企业环比':'重新反推TPU交付GW',x.period,x.value,method==='enterprise'?'企业环比 = (MS目标 − AI服务收入 − TPU收入) ÷ 上季企业收入 − 1 − 全局环比调整':'TPU交付GW = (MS目标 − 持续服务收入) ÷ (TPU交付倍率 × 单价 × 确认比例)',`固定其余当前假设后，求解该季度目标；条件解 = ${num(x.value,7)}。`,method==='enterprise'?pct(x.value):num(x.value,3)+' GW','仅预览条件解；点击反推并应用后才替换原参数。');}
+  function clMSSolution(x,method){const i=data.forecastPeriods.indexOf(x.period),q=result.quarters[i],g=result.parameters.global,prior=result.quarters[i-1],previous=i?msFor(prior.period,'cloudRevenueBn')-Object.values(prior.customerRevenueBn).reduce((a,b)=>a+b,0)-prior.externalTPURevenueBn:result.calibration.baseEnterpriseRevenueBn,ai=Object.values(q.customerRevenueBn).reduce((a,b)=>a+b,0),substitution=method==='enterprise'?`(${num(x.targetRevenueBn,5)} − ${num(ai,5)} − ${num(q.externalTPURevenueBn,5)}) ÷ ${num(previous,5)} − 1 − ${num(g.enterpriseGrowthAdjustment,5)} = ${pct(x.value)}`:`(${num(x.targetRevenueBn,5)} − ${num(q.servicesRevenueBn,5)}) ÷ (${num(g.tpuVolumeMultiplier,5)} × ${num(q.externalTPU.netPriceBnPerGW,5)} × ${num(q.externalTPU.recognitionFraction,5)}) = ${num(x.value,5)} GW`;return clCalc(`ms-preview:${method}:${x.period}`,method==='enterprise'?'重新反推企业环比':'重新反推TPU交付GW',x.period,x.value,method==='enterprise'?'企业环比 = (MS目标 − AI服务收入 − TPU收入) ÷ 前一季已反推企业收入 − 1 − 全局环比调整':'TPU交付GW = (MS目标 − 持续服务收入) ÷ (TPU交付倍率 × 单价 × 确认比例)',substitution,method==='enterprise'?pct(x.value):num(x.value,3)+' GW','这是固定其余当前假设后的条件解；修改下方输入会重算预览，点击反推并应用后才替换所求参数。');}
   function msBaselinePanel(){if(!data.msBaseline)return '';return `<section id="clMSBaseline" class="cl-box"><h3>MS收入基准 · 条件反推</h3><p>${esc(data.msBaseline.fixed)} ${esc(data.msBaseline.solved)}</p><p><b>反推只确定所选自由参数，不证明客户份额、成本率或交付量是真的。</b> 用户改假设后，结果自然偏离MS，不自动再拟合。</p><div class="cl-scroll"><table class="cl-table"><thead><tr><th>季度</th><th>MS收入bn</th><th>当前收入bn</th><th>原参考企业环比</th><th>MS隐含企业环比</th><th>当前企业环比</th></tr></thead><tbody>${data.msBaseline.rows.map((x,i)=>`<tr><td>${x.period}</td>${msNumbers(x,i)}</tr>`).join('')}</tbody></table></div><p class="cl-muted">反推企业收入 = MS Cloud总额 − AI客户服务 − 独立TPU；环比由相邻季度企业收入推导。若反推增速过高，说明固定的客户/TPU假设与MS总额可能不相容，需要研究，不是验证成功。</p><label>重新反推的自由参数 <select id="clMSMethod"><option value="enterprise">企业服务环比（固定客户/TPU）</option><option value="tpu">TPU交付GW（固定服务收入）</option></select></label> <button id="clMSPreview">预览反推</button> <button id="clMSFit">反推并应用全部预测季</button><div id="clMSSolution"></div><p class="cl-muted">两种方法是互斥的条件解释，不能把两组解叠加后称为原MS假设。保留客户/TPU/份额等全部编辑窗口。主表利润另用现金成本倍率反推。</p></section>`;}
   function bindMS(){const show=apply=>{try{const method=host.querySelector('#clMSMethod').value,s=engine.solveMSCloudRevenue(data,state,method);if(apply){if(!s.feasible)throw new Error('固定当前条件后，所选反推参数无法在范围内达到MS目标；未应用任何修改。');update(s.overrides);return;}host.querySelector('#clMSSolution').innerHTML='<p>只预览，不改模型。</p>'+s.rows.map(x=>'<p>'+esc(x.period)+'：'+(x.feasible?clMSSolution(x,method):'无可行解 / '+esc(x.status))+'</p>').join('');showError('');}catch(e){showError(e.message);}};host.querySelector('#clMSPreview')?.addEventListener('click',()=>show(false));host.querySelector('#clMSFit')?.addEventListener('click',()=>show(true));}
   let clPeriod='2027Q1';
@@ -143,14 +346,14 @@
   }
   function cloudItemStyles(){if(document.getElementById('clItemStyles'))return;const s=document.createElement('style');s.id='clItemStyles';s.textContent=`.cl-root .cl-head h2{font-size:19px;margin:4px 0}.cl-root .cl-items{border-top:2px solid #28456a}.cl-root .cl-item{margin:0;padding:0;border:0;border-bottom:1px solid var(--line);border-radius:0}.cl-root .cl-item>summary{display:flex;gap:15px;align-items:center;justify-content:space-between;padding:16px 8px;margin:0;font-size:14px;list-style:none}.cl-root .cl-item>summary:before{content:'▸';color:var(--muted)}.cl-root .cl-item[open]>summary:before{content:'▾'}.cl-root .cl-item>summary>span:first-of-type{flex:1}.cl-root .cl-item>summary:hover,.cl-root .cl-item[open]>summary{background:var(--panel2)}.cl-item-value{font:12px var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--fg)}.cl-detail-body{padding:4px 14px 16px;border-left:2px solid var(--line);margin:0 8px 12px}.cl-root .cl-evidence-item,.cl-root .cl-parameter{margin:8px 0;padding:9px 0 0;border-top:1px solid var(--line)}.cl-root .cl-evidence-item>summary,.cl-root .cl-parameter>summary{font-size:12px;margin:0;padding:5px 0;font-weight:500}.cl-root summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px}.cl-root .cl-current-period{background:var(--accent-soft)}.cl-root .cl-period{font-size:12px;display:flex;gap:8px;align-items:center;margin:12px 0}.cl-root .cl-period select{padding:6px;background:var(--panel);color:var(--fg);border:1px solid var(--line)}.cl-root .cl-context{font-size:12px;color:var(--muted);margin:12px 0}.cl-root .cl-customer-editor{margin:8px 0;border-radius:0}.cl-root .cl-box{border-radius:0}.cl-root .cl-actions{margin:12px 0}.cl-root .cl-actions button{font-size:12px}.cl-root .cl-evidence-item p{font-size:12px}.cl-root .cl-parameter input{min-width:85px}@media(max-width:700px){.cl-detail-body{padding:4px 7px 12px;margin:0 2px}.cl-root .cl-item>summary{padding:13px 5px}.cl-item-value{font-size:11px}}`;document.head.append(s);}
   function focusItem(item,period){
-    clNumberId=null;restoreNumberInput();if(data.forecastPeriods.includes(period)&&period!==clPeriod){clPeriod=period;render();}
+    clNumberId=null;clNumberTrail=[];restoreNumberInput();if(data.forecastPeriods.includes(period)&&period!==clPeriod){clPeriod=period;render();}
     const aliases={workspace:'enterprise',traditional:'enterprise',externalTPU:'tpu',cloud:'summary'};const id=aliases[item]||item;
     const target=[...host.querySelectorAll('[data-cl-item]')].find(x=>x.dataset.clItem===id);if(!target)return false;
     clScope=target.dataset.clDetail;applyCloudScope();
     target.querySelector('summary')?.focus();target.scrollIntoView?.({block:'nearest',behavior:'auto'});return true;
   }
   function render(){
-    restoreNumberInput();clNumbers=new Map();lineStyles();cloudItemStyles();cloudNumberStyles();if(!data.forecastPeriods.includes(clPeriod))clPeriod=data.forecastPeriods[0];
+    restoreNumberInput();clNumbers=new Map();lineStyles();cloudItemStyles();cloudNumberStyles();cloudDriverStyles();if(!data.forecastPeriods.includes(clPeriod))clPeriod=data.forecastPeriods[0];
     const q=result.quarters.find(r=>r.period===clPeriod),year=result.annual.find(r=>String(r.period)==='2027'),contract=extractedEvidence(contractEvidence()),audit=extractedEvidence(assumptionAudit()),economics=extractedEvidence(economicsEvidence()).firstElementChild;
     const upstream=[...audit.querySelectorAll('details>p')];
     const aiTotal=Object.values(q?.customerRevenueBn||{}).reduce((a,b)=>a+(b||0),0);
@@ -161,6 +364,7 @@
     host.innerHTML=`<div class="cl-root"><div class="cl-head"><div><div class="cl-kicker">CLOUD / 收入分项</div><h2>逐项查看收入驱动</h2><p class="cl-muted">资料截至 ${esc(data.asOf)} · 金额 USD bn</p></div><span class="cl-badge">${Object.keys(state).length?'自定义情景':'MS隐含假设基准'}</span></div><label class="cl-period">查看季度 <select id="clDetailPeriod" aria-label="Cloud明细季度">${data.forecastPeriods.map(t=>`<option ${t===clPeriod?'selected':''}>${esc(t)}</option>`).join('')}</select></label><p class="cl-context">${clPeriod} Cloud ${clMetric(clPeriod,'cloudRevenueBn',null,num(q?.cloudRevenueBn,3))} bn · 2027全年 ${clMetric('2027','cloudRevenueBn',null,num(year?.cloudRevenueBn,2))} bn。点击项目展开证据、计算说明与可编辑假设。</p><p id="clError" class="cl-error" hidden></p><nav id="clScopeNav"></nav><section id="clNumberDetail" aria-live="polite" hidden></section><div class="cl-items" id="clAssumptionAudit">${detailItem('enterprise','企业服务 · Workspace与传统GCP',clMetric(clPeriod,'enterpriseRevenueBn',null,num(q?.enterpriseRevenueBn,3)+' bn'),enterprise)}${detailItem('ai','AI云服务 · 按客户展开',clMetric(clPeriod,'aiRevenueBn',null,num(aiTotal,3)+' bn'),ai)}${detailItem('tpu','独立TPU交付',clMetric(clPeriod,'externalTPURevenueBn',null,num(q?.externalTPURevenueBn,3)+' bn'),tpu)}${detailItem('summary','Cloud汇总、MS对照与模型校验',clMetric(clPeriod,'cloudRevenueBn',null,num(q?.cloudRevenueBn,3)+' bn'),summary)}</div><div class="cl-actions"><button id="clApply" class="cl-primary">将Cloud情景应用到盈利模型</button><button data-cl-preset="base" class="${Object.keys(state).length?'':'on'}">恢复MS基准</button><button data-cl-preset="bull">较快兑现</button><button data-cl-preset="bear">较慢兑现</button><button id="clExport">导出情景</button><button id="clImport">导入情景</button><input id="clFile" type="file" accept=".json" hidden></div><p id="clSave" class="cl-muted">修改即重算并保存在当前浏览器；点击应用后写入盈利模型。利润表成本率、税率与股数沿用当前假设。</p></div>`;
     host.querySelectorAll('details').forEach((d,i)=>{if(!d.dataset.clDetail)d.dataset.clDetail='nested:'+i;});
     bind();bindMS();host.querySelectorAll('[data-cl-method]').forEach(input=>input.addEventListener('change',()=>{try{update({...state,[input.dataset.clMethod]:input.value});}catch(e){showError(e.message);}}));
-    host.querySelector('#clDetailPeriod').addEventListener('change',e=>{clPeriod=e.target.value;clNumberId=null;update(state);});bindCloudNumbers();options?.onChange?.(result,state);
+    host.querySelector('#clDetailPeriod').addEventListener('change',e=>{clPeriod=e.target.value;clNumberId=null;clNumberTrail=[];update(state);});bindCloudNumbers();options?.onChange?.(result,state);
   }
+  function cloudDriverStyles(){if(document.getElementById('clDriverStyles'))return;const s=document.createElement('style');s.id='clDriverStyles';s.textContent=`#clNumberDrivers{margin:18px 0;border-top:1px solid var(--line)}#clNumberDrivers h4,.cl-number-rationale h4,.cl-number-evidence-summary h4{font-size:13px;margin:14px 0 6px}.cl-number-driver{display:grid;grid-template-columns:minmax(160px,1fr) auto;gap:8px 18px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line);font-size:12px}.cl-number-driver>p{grid-column:1/-1;margin:0}.cl-driver-editor{display:flex;align-items:center;justify-content:flex-end;gap:7px}.cl-driver-editor input{box-sizing:border-box;width:126px;max-width:100%;padding:7px;border:1px solid var(--accent);border-radius:4px;background:var(--panel);color:var(--fg);font:12px var(--mono)}.cl-driver-source{grid-column:1/-1;justify-self:start;border:0;border-bottom:1px dotted var(--accent);padding:0;background:transparent;color:var(--accent);font-size:11px;cursor:pointer}.cl-number-analysis{margin-top:18px!important}.cl-number-analysis>summary{font-size:12px}.cl-number-analysis p,.cl-parameter-rationale p{font-size:12px;line-height:1.8}.cl-number-evidence-summary{padding:2px 12px 8px;border-left:2px solid var(--accent);background:var(--panel2);margin:12px 0}@media(max-width:580px){.cl-number-driver{grid-template-columns:1fr}.cl-driver-editor{justify-content:flex-start}.cl-number-driver>.cl-number{justify-self:start}}`;document.head.append(s);}
   function cloudNumberStyles(){if(document.getElementById('clNumberStyles'))return;const s=document.createElement('style');s.id='clNumberStyles';s.textContent=`.cl-root [hidden]{display:none!important}.cl-number{display:inline-flex;flex-direction:column;align-items:flex-end;gap:3px;border:0;border-bottom:1px dotted var(--accent);background:transparent;color:var(--fg);padding:2px 3px;cursor:pointer;font:inherit;white-space:nowrap;vertical-align:middle}.cl-number:hover{background:var(--accent-soft)}.cl-number-kind{font:10px var(--sans);color:var(--muted);letter-spacing:.02em}.cl-number[data-cl-kind="assumption"] .cl-number-kind{color:var(--accent)}.cl-param-identity{display:inline-block;margin-left:5px}.cl-param-kind{font-size:10px;color:var(--accent)}.cl-number-value{font:600 25px var(--mono)}#clNumberDetail{padding:20px 0;max-width:850px}#clNumberDetail>button,#clScopeNav button{border:1px solid var(--line);background:var(--panel);color:var(--fg);padding:6px 10px;cursor:pointer;font-size:12px}#clScopeNav{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin:12px 0}#clScopeNav button:last-child{background:var(--accent-soft)}.cl-number-edit{display:flex;flex-wrap:wrap;gap:15px;align-items:center;padding:14px;background:var(--panel2);border:1px solid var(--line);font-size:13px}.cl-number-edit input{width:130px;padding:8px;background:var(--panel);color:var(--fg);border:1px solid var(--accent);font:14px var(--mono)}.cl-number-formula{white-space:normal}.cl-number-substitution{font-family:var(--mono);overflow-wrap:anywhere}.cl-root .cl-number:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.cl-root .cl-context .cl-number{display:inline-flex;align-items:center}@media(max-width:650px){.cl-number-kind{font-size:9px}.cl-number{padding:2px}.cl-root .cl-table td{padding:9px 7px}}`;document.head.append(s);}

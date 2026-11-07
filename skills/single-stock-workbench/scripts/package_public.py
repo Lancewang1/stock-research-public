@@ -9,7 +9,7 @@ import sys
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-REMOVED_KEYS = {'file', 'filePath', 'localPath', 'archive', 'member', 'retrievalAudit', 'localMaterialAudits'}
+REMOVED_KEYS = {'file', 'filePath', 'localPath', 'localDocumentUrl', 'archive', 'member', 'retrievalAudit', 'localMaterialAudits'}
 
 
 def sanitize(value):
@@ -55,8 +55,8 @@ def main():
     expected = {str(p.relative_to(ROOT)).replace('\\', '/') for p in selected} | {'outputs/googl-dashboard.html', 'MANIFEST.json'}
     if any(p.relative_to(target).as_posix() not in expected for p in files):
         raise RuntimeError('Unexpected files in public skill staging directory')
-    manifest = {'release': '2026-11-07-number-provenance', 'offlineRebuild': 'byte-identical',
-                'browserVisualAcceptance': 'deferred_connection_blocked_user_continues_local', 'rawReportsIncluded': False,
+    manifest = {'release': '2026-11-07-model-language-audit', 'offlineRebuild': 'byte-identical',
+                'browserVisualAcceptance': 'waived_by_user_browser_connection_unavailable', 'rawReportsIncluded': False,
                 'files': [{'path': p.relative_to(target).as_posix(), 'sha256': hashlib.sha256(p.read_bytes()).hexdigest(),
                            'bytes': p.stat().st_size} for p in files if p.name != 'MANIFEST.json']}
     (target/'MANIFEST.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding='utf-8', newline='\n')
