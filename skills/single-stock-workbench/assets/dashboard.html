@@ -802,5 +802,6 @@ S.sel=D.events[D.events.length-1].i; S.month=D.d[S.sel].slice(0,7);
 initializeV11();
 initializeReviewLab();
 initializeCompanyTrial();
+if(location.hash!=='#review'){setView('forecast');if(location.hash==='#cloud')WB.openModelDetail('cloud');}
 drawAll();
 </script>

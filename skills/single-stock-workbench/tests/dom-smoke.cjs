@@ -25,6 +25,33 @@ const click = selector=>{const el=document.querySelector(selector);assert.ok(el,
 const checkErrors=()=>assert.equal(errors.length,0,errors.join('\n'));
 try {
   checkErrors();
+  assert.equal(dom.window.eval('S.view'),'forecast','Initial view must show full model');
+  assert.equal(document.querySelector('#modelDetail').hidden,true,'Deep dives must be closed initially');
+  assert.equal(document.querySelectorAll('#modelGrid tbody tr').length,40,'Full MS income-statement rows missing');
+  assert.equal(document.querySelectorAll('#modelGrid input').length,0,'Default model must not become a wall of input boxes');
+  assert.equal(document.querySelectorAll('#modelGrid [data-model-period="2026Q3"] button').length,0,'Actual quarter is editable');
+  assert.equal(dom.window.getComputedStyle(document.querySelector('#fullForecast')).display,'none','Legacy model duplicates default display');
+  assert.equal(dom.window.getComputedStyle(document.querySelector('#cloudLab')).display,'none','Cloud deep dive is visible before income click');
+  assert.equal(dom.window.getComputedStyle(document.querySelector('#studyOverview')).display,'none','Narrative overview precedes full model');
+  const expected=dom.window.eval('WBM.calculateCase(CASE)'),near=(a,b)=>assert.ok(Math.abs(a-b)<1e-7,`${a} != ${b}`);
+  for(const field of ['revenue','cogs','grossProfit','rd','sm','ga','opex','operatingIncome','otherIncome','pretaxIncome','taxRate','netIncome','dilutedShares','eps','sbc','depreciation']){
+    for(const period of ['2026Q3','2027Q1','2027']){const row=(period.length===4?expected.annual:expected.quarters).find(q=>q.period===period);near(Number(document.querySelector(`[data-model-row="${field}"] td[data-model-period="${period}"]`).dataset.modelValue),row[field]);}
+  }
+  const gridBefore=document.querySelector('#modelGrid').textContent;
+  click('#modelGrid [data-model-topic="revenue"][data-model-period="2027Q2"]');checkErrors();
+  assert.equal(document.querySelector('#wbProfitPeriod').value,'2027Q2');assert.equal(document.querySelector('#modelDetail').hidden,false);
+  assert.equal(document.querySelector('#wbBusinessStatement .ib-bridge').hidden,true,'Unrelated depreciation/EPS details leak into revenue');
+  const revenueInput=document.querySelector('[data-business-revenue="search"]');revenueInput.value=String(Number(revenueInput.value)+1);revenueInput.dispatchEvent(new Event('change',{bubbles:true}));checkErrors();
+  assert.notEqual(document.querySelector('#modelGrid').textContent,gridBefore);assert.equal(document.querySelector('#modelDetail').hidden,false,'Detail must stay open on edit');
+  click('#modelDetailClose');assert.equal(document.querySelector('#modelDetail').hidden,true);
+  click('#modelGrid [data-model-topic="margin"][data-model-period="2027Q2"]');
+  const marginInput=document.querySelector('[data-profit="searchGrossMargin"]');marginInput.value=String(Number(marginInput.value)+1);marginInput.dispatchEvent(new Event('change',{bubbles:true}));checkErrors();
+  assert.equal(document.querySelector('[data-business-row="search"] td:nth-child(2)').hidden,true,'Revenue controls leak into margin detail');
+  document.querySelector('#modelDetail').dispatchEvent(new dom.window.KeyboardEvent('keydown',{key:'Escape',bubbles:true}));assert.equal(document.querySelector('#modelDetail').hidden,true);
+  click('#modelGrid [data-model-topic="opex"][data-model-period="2027Q2"]');const rd=document.querySelector('[data-model-earnings="rdRatio"]');rd.value=String(Number(rd.value)+1);rd.dispatchEvent(new Event('change',{bubbles:true}));checkErrors();
+  click('#modelDetailClose');click('#wbReset');assert.equal(document.querySelector('#modelGrid').textContent,gridBefore,'Full-model reset failed');
+  click('[data-model-topic="history"]');assert.equal(document.querySelector('#modelHistorySlot').hidden,false);assert.ok(document.querySelector('#modelHistorySlot #ft'));click('#modelDetailClose');
+  click('#modelGrid [data-model-topic="revenue"][data-model-period="2027Q1"]');click('#modelDetailClose');
   assert.match(document.querySelector('#px').textContent,/288\.93/);
   for(const tab of [1,2,3]){click(`#tabs [data-tab="${tab}"]`);checkErrors();}
   for(const sub of ['piv','val','cmp']){click(`#t3sub [data-s="${sub}"]`);checkErrors();}
@@ -33,10 +60,11 @@ try {
   assert.equal(document.querySelectorAll('#ft input[data-period="2026Q3"]').length,0,'Actual period editable');
   const before=document.querySelector('#wbReconcile').textContent;
   assert.ok(document.querySelector('#wbProfit'),'Detailed profit panel missing');
+  click('#modelGrid [data-model-topic="depreciation"][data-model-period="2027Q1"]');
   const life=document.querySelector('[data-profit="serverLife"]');
-  life.closest('details').open=true;life.value='8';life.dispatchEvent(new Event('change',{bubbles:true}));checkErrors();
+  life.value='8';life.dispatchEvent(new Event('change',{bubbles:true}));checkErrors();
   assert.notEqual(document.querySelector('#wbReconcile').textContent,before,'Useful life did not reach EPS');
-  assert.ok(document.querySelector('[data-profit="serverLife"]').closest('details').open,'Editor collapsed on edit');
+  assert.equal(document.querySelector('#modelDetail').hidden,false,'Editor closed on edit');
   const saved=JSON.parse(dom.window.localStorage.getItem(dom.window.eval("'single-stock-v9:'+CASE.meta.ticker+':'+CASE.meta.caseId")));
   assert.equal(saved.overrides['2027Q1'].profit.serverLife,8,'Nested profit parameters not saved');
   click('#wbProfitNoResidual');checkErrors();
@@ -90,7 +118,7 @@ try {
   assert.ok(document.querySelector('#reviewLab'),'Review lab absent');
   const set=(selector,value)=>{const el=document.querySelector(selector);assert.ok(el,selector);el.value=value;el.dispatchEvent(new Event('change',{bubbles:true}));};
   assert.equal(document.querySelectorAll('#wbBusinessStatement [data-business-row]').length,10);
-  assert.ok(document.querySelector('#wbProfit').compareDocumentPosition(document.querySelector('#tblwrap'))&dom.window.Node.DOCUMENT_POSITION_FOLLOWING,'Business statement must precede historical table');
+  assert.equal(document.querySelector('#fcCard').firstElementChild.id,'modelHome','Full model must precede details');
   const statementBefore=document.querySelector('#wbGAAPBridge').textContent;
   const gm=document.querySelector('[data-profit="searchGrossMargin"]');set('[data-profit="searchGrossMargin"]',Number(gm.value)+1);checkErrors();
   assert.notEqual(document.querySelector('#wbGAAPBridge').textContent,statementBefore,'Margin edit must change earnings');

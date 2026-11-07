@@ -86,7 +86,9 @@ try {
   assert.equal(globalInputs.length,7,'Quick global parameter controls missing or duplicated');
   assert.ok(globalInputs.every(el=>!el.closest('details')),'Quick parameters hidden in advanced details');
   assert.ok(query('#fullForecast').open,'Earnings model must start expanded');
-  assert.equal(query('#fcCard').firstElementChild.id,'fullForecast','Earnings model must be first');
+  assert.equal(query('#fcCard').firstElementChild.id,'modelHome','Complete earnings model must be first');
+  click('#modelGrid [data-model-topic="revenue"]');click('#modelDetailNav [data-model-topic="cloud"]');check();
+  assert.equal(query('#cloudLab').parentElement.id,'modelCloudSlot','Cloud analysis must be reached from revenue detail');
   assert.equal(query('#cloudLab .cl-line').id,'clContractLine','Contract line must precede economics');
   for(const id of ['clContractEvidence','clEconomicsEvidence']) assert.ok(!query('#'+id).closest('details'),'Key evidence must be visible');
   assert.match(query('#clEconomicsEvidence').textContent,/14.6%/,'New historical cost evidence missing');

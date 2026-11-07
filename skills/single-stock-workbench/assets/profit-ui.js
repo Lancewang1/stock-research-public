@@ -38,6 +38,7 @@ function renderProfitPanel(){
   <p>净利润 ${bn(q.netIncome,2)} + SBC ${bn(q.sbc,2)} − SBC税效应 ${bn(q.sbcTaxBenefit,2)} = 调整后净利润 <b>${bn(q.adjustedNetIncome,2)} bn</b>；扣优先股股息后 ÷ 稀释股数 = 调整后 EPS <b>${nf(q.adjustedEps,3)}</b>（原EPS ${nf(q.eps,3)}）。调整后营业利润 ${bn(q.adjustedOperatingIncome,2)} bn。</p><p class="note">此调整口径仅加回SBC并扣相关税效应，不排除投资收益等其他项目，非公司公布Non-GAAP指标。年度按季度分子合计÷天数加权股数，不加总季度EPS。SBC分项用MS费用构成；Cloud占比及业务分配属研究假设。</p></details>
   <details><summary>证据位置与计算边界</summary><p>MS 2026-10-29：${esc(b.sourceCells.ms)}</p><p>Barclays 2026-07-24：${esc(b.sourceCells.barclays)}</p><p>MS Cloud营业利润本身由集团减其他业务残差得到，不能当独立利润率证据。Barclays TPU 25%为营业利润率，不是毛利率。</p><p>${esc(d.allocationNote)}；现金成本残余按初始MS固定，不重新拟合。资产与SBC成本在Cloud收入降至零时仍保留。</p></details></details>`;
   host.querySelectorAll('details').forEach((x,i)=>{if(i<opened.length)x.open=opened[i];});
+  renderModelHome();
 }
 document.addEventListener('change',event=>{
   if(event.target.id==='wbProfitPeriod'){profitPeriod=event.target.value;activePeriod=profitPeriod;renderProfitPanel();renderGdRows();return;}
