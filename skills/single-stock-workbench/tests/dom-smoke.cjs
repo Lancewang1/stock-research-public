@@ -23,6 +23,11 @@ const dom = new JSDOM(html, {runScripts:'dangerously',url:'http://localhost/dash
 const {document, Event} = dom.window;
 const click = selector=>{const el=document.querySelector(selector);assert.ok(el,'Missing '+selector);el.click();};
 const checkErrors=()=>assert.equal(errors.length,0,errors.join('\n'));
+const openAnalysis=(item,period)=>{
+  click(`#modelGrid ${period?'td':'th'} [data-model-item="${item}"]${period?`[data-model-period="${period}"]`:''}`);
+  if(period)click('#modelNumberProvenance [data-model-analysis]');
+  checkErrors();
+};
 try {
   checkErrors();
   assert.equal(dom.window.eval('S.view'),'forecast','Initial view must show full model');
@@ -38,20 +43,20 @@ try {
     for(const period of ['2026Q3','2027Q1','2027']){const row=(period.length===4?expected.annual:expected.quarters).find(q=>q.period===period);near(Number(document.querySelector(`[data-model-row="${field}"] td[data-model-period="${period}"]`).dataset.modelValue),row[field]);}
   }
   const gridBefore=document.querySelector('#modelGrid').textContent;
-  click('#modelGrid [data-model-topic="revenue"][data-model-period="2027Q2"]');checkErrors();
+  openAnalysis('search','2027Q2');
   assert.equal(document.querySelector('#wbProfitPeriod').value,'2027Q2');assert.equal(document.querySelector('#modelDetail').hidden,false);
   assert.ok(!document.querySelector('#modelItemTree [data-detail-item="depreciation"]') || document.querySelector('#modelItemTree [data-detail-item="depreciation"]').hidden,'Unrelated depreciation details leak into revenue');
   const revenueInput=document.querySelector('[data-business-revenue="search"]');revenueInput.value=String(Number(revenueInput.value)+1);revenueInput.dispatchEvent(new Event('change',{bubbles:true}));checkErrors();
   assert.notEqual(document.querySelector('#modelGrid').textContent,gridBefore);assert.equal(document.querySelector('#modelDetail').hidden,false,'Detail must stay open on edit');
   click('#modelDetailClose');assert.equal(document.querySelector('#modelDetail').hidden,true);
-  click('#modelGrid [data-model-topic="margin"][data-model-period="2027Q2"]');
+  openAnalysis('search','2027Q2');
   const marginInput=document.querySelector('[data-profit="searchGrossMargin"]');marginInput.value=String(Number(marginInput.value)+1);marginInput.dispatchEvent(new Event('change',{bubbles:true}));checkErrors();
   assert.ok(!document.querySelector('#modelItemTree [data-detail-item="taxRate"]') || document.querySelector('#modelItemTree [data-detail-item="taxRate"]').hidden,'Tax details leak into margin detail');
   document.querySelector('#modelDetail').dispatchEvent(new dom.window.KeyboardEvent('keydown',{key:'Escape',bubbles:true}));assert.equal(document.querySelector('#modelDetail').hidden,true);
-  click('#modelGrid [data-model-topic="opex"][data-model-period="2027Q2"]');const rd=document.querySelector('[data-model-earnings="rdRatio"]');rd.value=String(Number(rd.value)+1);rd.dispatchEvent(new Event('change',{bubbles:true}));checkErrors();
+  openAnalysis('rd','2027Q2');const rd=document.querySelector('[data-model-earnings="rdRatio"]');rd.value=String(Number(rd.value)+1);rd.dispatchEvent(new Event('change',{bubbles:true}));checkErrors();
   click('#modelDetailClose');click('#wbReset');assert.equal(document.querySelector('#modelGrid').textContent,gridBefore,'Full-model reset failed');
   click('[data-model-topic="history"]');assert.equal(document.querySelector('#modelHistorySlot').hidden,false);assert.ok(document.querySelector('#modelHistorySlot #ft'));click('#modelDetailClose');
-  click('#modelGrid [data-model-topic="revenue"][data-model-period="2027Q1"]');click('#modelDetailClose');
+  click('#modelGrid [data-model-number="revenue"][data-model-period="2027Q1"]');click('#modelDetailClose');
   assert.match(document.querySelector('#px').textContent,/288\.93/);
   for(const tab of [1,2,3]){click(`#tabs [data-tab="${tab}"]`);checkErrors();}
   for(const sub of ['piv','val','cmp']){click(`#t3sub [data-s="${sub}"]`);checkErrors();}
@@ -60,14 +65,14 @@ try {
   assert.equal(document.querySelectorAll('#ft input[data-period="2026Q3"]').length,0,'Actual period editable');
   const before=document.querySelector('#wbReconcile').textContent;
   assert.ok(document.querySelector('#wbProfit'),'Detailed profit panel missing');
-  click('#modelGrid [data-model-topic="depreciation"][data-model-period="2027Q1"]');
+  openAnalysis('depreciation','2027Q1');click('#modelItemTree [data-model-item="servers"]');
   const life=document.querySelector('[data-profit="serverLife"]');
   life.value='8';life.dispatchEvent(new Event('change',{bubbles:true}));checkErrors();
   assert.notEqual(document.querySelector('#wbReconcile').textContent,before,'Useful life did not reach EPS');
   assert.equal(document.querySelector('#modelDetail').hidden,false,'Editor closed on edit');
   const saved=JSON.parse(dom.window.localStorage.getItem(dom.window.eval("'single-stock-v9:'+CASE.meta.ticker+':'+CASE.meta.caseId")));
   assert.equal(saved.overrides['2027Q1'].profit.serverLife,8,'Nested profit parameters not saved');
-  click('#modelDetailClose');click('#modelGrid th [data-model-item="cloudOperatingIncome"]');click('#wbProfitNoResidual');checkErrors();
+  click('#modelDetailClose');openAnalysis('cloudOperatingIncome');click('#modelItemTree [data-model-item="cloudResidual"]');click('#wbProfitNoResidual');checkErrors();
   assert.equal(document.querySelector('[data-profit="cloudUnallocatedCost"]').value,'0');
   click('#wbReset');assert.equal(document.querySelector('#wbReconcile').textContent,before);
   const input=document.querySelector('#ft input[data-period="2026Q4"][data-field="grossMargin"]');
@@ -83,7 +88,9 @@ try {
   assert.equal(document.querySelector('#wbScenarioNote').hidden,false,'Example not labelled');
   click('#wbReset');
   click('#hfreq [data-f="q"]');
-  click('[data-wb-factor="cloud"][data-period="2027Q2"]');checkErrors();
+  click('#modelGrid [data-model-number="cloud"][data-model-period="2027Q2"]');checkErrors();
+  assert.equal(document.querySelector('#modelNumberProvenance').dataset.numberPeriod,'2027Q2');
+  click('#modelDetailClose');click('#gdRows [data-f="cloud"]');checkErrors();
   assert.match(document.querySelector('#drBody').textContent,/2027Q2/,'Evidence lost selected quarter');
   assert.match(document.querySelector('#drBody').textContent,/Anthropic/,'Customer evidence absent');
   assert.match(document.querySelector('#drBody').textContent,/NVIDIA/,'Supplier evidence absent');
@@ -117,18 +124,24 @@ try {
   assert.ok(!/\?{5,}/.test(document.body.textContent),'Corrupted Chinese text');
   assert.ok(document.querySelector('#reviewLab'),'Review lab absent');
   const set=(selector,value)=>{const el=document.querySelector(selector);assert.ok(el,selector);el.value=value;el.dispatchEvent(new Event('change',{bubbles:true}));};
-  click('#modelGrid th [data-model-item="revenue"]');
-  for(const key of ['search','network','youtube','youtubeSubs','otherSubs','bets','workspace','traditional','ai','tpu'])assert.ok(document.querySelector(`#modelItemTree [data-detail-item="${key}"]`),'Missing business item '+key);
+  openAnalysis('revenue');
+  assert.equal(document.querySelectorAll('#modelItemTree > [data-detail-item]').length,1,'Income dialog renders sibling analysis');
+  for(const key of ['search','network','youtube','subs','bets','cloud'])assert.ok(document.querySelector(`#modelItemTree [data-model-item="${key}"]`),'Missing business navigation '+key);
   assert.equal(document.querySelector('#fcCard').firstElementChild.id,'modelHome','Full model must precede details');
   const statementBefore=document.querySelector('#wbReconcile').textContent;
+  click('#modelItemTree [data-model-item="search"]');
   const gm=document.querySelector('[data-profit="searchGrossMargin"]');set('[data-profit="searchGrossMargin"]',Number(gm.value)+1);checkErrors();
   assert.notEqual(document.querySelector('#wbReconcile').textContent,statementBefore,'Margin edit must change earnings');
   const marginResult=document.querySelector('#wbReconcile').textContent;
-  click('#modelDetailClose');click('#modelGrid th [data-model-item="depreciation"]');
+  click('#modelDetailClose');openAnalysis('depreciation');click('#modelItemTree [data-model-item="servers"]');
   set('#modelItemTree [data-profit="serverLife"]',8);checkErrors();assert.notEqual(document.querySelector('#wbReconcile').textContent,marginResult,'Depreciation must remain active after margin edit');
-  click('#modelDetailClose');click('#modelGrid th [data-model-item="revenue"]');
-  const subs=document.querySelector('[data-business-revenue="youtubeSubs"]'),otherRevenue=document.querySelector('[data-business-revenue="otherSubs"]').value;
-  set('[data-business-revenue="youtubeSubs"]',Number(subs.value)+1);checkErrors();assert.ok(Math.abs(Number(document.querySelector('[data-business-revenue="otherSubs"]').value)-Number(otherRevenue))<1e-5,'Subscription revenue edit double counted');
+  click('#modelDetailClose');openAnalysis('subs');click('#modelItemTree [data-model-item="otherSubs"]');
+  const otherRevenue=Number(document.querySelector('[data-business-revenue="otherSubs"]').value);
+  click('#modelDetailClose');openAnalysis('subs');click('#modelItemTree [data-model-item="youtubeSubs"]');
+  const subs=document.querySelector('[data-business-revenue="youtubeSubs"]');
+  set('[data-business-revenue="youtubeSubs"]',Number(subs.value)+1);checkErrors();
+  click('#modelDetailClose');openAnalysis('subs');click('#modelItemTree [data-model-item="otherSubs"]');
+  assert.ok(Math.abs(Number(document.querySelector('[data-business-revenue="otherSubs"]').value)-otherRevenue)<1e-5,'Subscription revenue edit double counted');
   click('#wbReset');assert.equal(document.querySelector('#wbReconcile').textContent,statementBefore);
   click('[data-wb-case="googl-2026-q3-drawdown"]');checkErrors();assert.equal(document.querySelectorAll('#recentEventReview .stage-card').length,5,'Stages missing from event narrative');
   set('#rlRise','20');set('#rlFall','10');set('#rlWindow','252');click('#rlPivApply');checkErrors();

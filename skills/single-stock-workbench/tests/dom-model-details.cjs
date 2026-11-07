@@ -32,7 +32,10 @@ function mount(saved = {}) {
   const row=item=>query(`#modelGrid tbody th [data-model-item="${item}"]`).closest('tr');
   const value=(item,period='2027Q1')=>Number(query(`td[data-model-period="${period}"]`,row(item)).dataset.modelValue);
   const snapshot=period=>[...doc.querySelectorAll(`#modelGrid tbody td[data-model-period="${period}"]`)].map(x=>x.dataset.modelValue);
-  const openItem=(item,period)=>click(`#modelGrid ${period?'td':'th'} [data-model-item="${item}"]${period?`[data-model-period="${period}"]`:''}`);
+  const openItem=(item,period)=>{
+    click(`#modelGrid ${period?'td':'th'} [data-model-item="${item}"]${period?`[data-model-period="${period}"]`:''}`);
+    if(period)click('#modelNumberProvenance [data-model-analysis]');
+  };
   const storage=()=>Object.fromEntries(Array.from({length:win.localStorage.length},(_,i)=>{const key=win.localStorage.key(i);return [key,win.localStorage.getItem(key)];}));
   const reveal=selector=>{const el=query(selector),parents=[];for(let p=el.parentElement;p;p=p.parentElement)if(p.tagName==='DETAILS')parents.unshift(p);for(const p of parents)if(!p.open)query(':scope > summary',p).click();check();};
   const uniqueIds=()=>{const ids=[...doc.querySelectorAll('[id]')].map(x=>x.id);assert.equal(new Set(ids).size,ids.length,'Duplicate element IDs after detail navigation');};
@@ -61,7 +64,8 @@ async function main(){
   click('#modelDetailClose');
   const businessKeys=['search','network','youtube','youtubeSubs','otherSubs','bets','workspace','traditional','ai','tpu'];
   openItem('revenue','2027Q2');
-  for(const key of businessKeys)assert.equal(query(`#modelItemTree details[data-detail-item="${key}"]`).open,false,'Business must start collapsed: '+key);
+  assert.equal(doc.querySelectorAll('#modelItemTree > [data-detail-item]').length,1,'Revenue analysis renders sibling editors');
+  for(const key of ['search','network','youtube','subs','bets','cloud'])assert.ok(query(`#modelItemTree [data-model-item="${key}"]`),'Revenue lacks business navigation: '+key);
   assert.equal(doc.querySelectorAll('#modelItemTree details[data-item-evidence][open]').length,0,'Evidence must start collapsed');
   click('#modelDetailClose');
 
@@ -77,11 +81,10 @@ async function main(){
   openItem('revenue','2027Q2');
   assert.equal(query('#wbProfitPeriod').value,'2027Q2','Revenue entry lost clicked quarter');
   assert.equal(doc.querySelectorAll('#modelDetailNav [data-wb-factor]').length,0,'Detached evidence toolbar remains');
-  for(const key of businessKeys)query(`#modelItemTree details[data-detail-item="${key}"]`).open=false;
-  click('#modelItemTree details[data-detail-item="search"] > summary');
+  click('#modelItemTree [data-model-item="search"]');
   const search=query('#modelItemTree details[data-detail-item="search"]');
   assert.ok(search.open,'Search line did not expand');
-  for(const key of businessKeys.filter(k=>k!=='search'))assert.equal(query(`#modelItemTree details[data-detail-item="${key}"]`).open,false,'Unrelated business opened: '+key);
+  for(const key of businessKeys.filter(k=>k!=='search'))assert.equal(doc.querySelector(`#modelItemTree details[data-detail-item="${key}"]`),null,'Unrelated business rendered: '+key);
   assert.equal(search.querySelector('[data-business-revenue="network"]'),null,'Search contains Network editing controls');
   const evidence=query('details[data-item-evidence]',search),evidenceKey=evidence.dataset.itemEvidence;
   assert.equal(evidence.open,false,'Evidence is expanded before explicit click');
@@ -138,6 +141,7 @@ async function main(){
   click('#modelDetailClose');click('#wbReset');
 
   openItem('depreciation','2027Q1');
+  click('#modelItemTree [data-model-item="servers"]');
   const lifeSelector='#modelItemTree [data-profit="serverLife"]';reveal(lifeSelector);
   const depBefore=value('depreciation'),depEPS=value('eps');edit(lifeSelector,Number(query(lifeSelector).value)+1);
   assert.ok(value('depreciation')<depBefore,'Longer asset life did not reduce depreciation');
@@ -148,6 +152,7 @@ async function main(){
   click('#wbReset');assert.deepEqual(snapshot('2027Q1'),baselineQ1,'Reset failed after financial-item edits');
 
   openItem('cloud','2027Q1');
+  click('#modelItemTree [data-model-topic="cloud"][data-model-item="cloud"]');
   assert.equal(query('#modelCloudSlot').hidden,false,'Cloud line did not reach scoped analysis');
   assert.equal(typeof win.CloudApp.focusItem,'function','Cloud detail cannot focus a specific business/customer');
   win.CloudApp.focusItem('Anthropic','2027Q1');check();
@@ -167,14 +172,19 @@ async function main(){
   assert.deepEqual(snapshot('2027Q1'),baselineQ1,'Final reset did not restore main model');
   // Going back through the Cloud hierarchy must carry the period selected inside Cloud.
   openItem('revenue','2027Q2');
+  click('#modelItemTree [data-model-item="ai"]');
   const cloudDriver='#modelItemTree [data-detail-item="ai"] [data-model-topic="cloud"][data-model-item="ai"]';
   reveal(cloudDriver);click(cloudDriver);
   assert.equal(query('#clDetailPeriod').value,'2027Q2','AI driver entry lost the model quarter');
   edit('#clDetailPeriod','2027Q4');
-  click('#modelDetailNav [data-model-topic="cloud"]');
-  assert.equal(query('#clDetailPeriod').value,'2027Q4','Cloud parent navigation reverted to stale entry quarter');
-  click('#modelDetailNav [data-model-topic="revenue"]');
+  click('#modelDetailNav [data-model-back]');
+  assert.equal(query('#modelItemTree > [data-detail-item]').dataset.detailItem,'ai','Cloud Back did not return to the clicked business');
+  assert.equal(query('#wbProfitPeriod').value,'2027Q4','Cloud parent navigation reverted to stale entry quarter');
+  click('#modelDetailNav [data-model-back]');
   assert.equal(query('#wbProfitPeriod').value,'2027Q4','Returning from Cloud lost the current quarter');
+  click('#modelDetailNav [data-model-back]');
+  assert.equal(query('#modelNumberProvenance').dataset.numberKey,'revenue','Back lost the original numeric selection');
+  assert.equal(query('#modelNumberProvenance').dataset.numberPeriod,'2027Q2','Analysis navigation overwrote the original number period');
   click('#modelDetailClose');click('#wbReset');check();
   assert.deepEqual(snapshot('2027Q1'),baselineQ1,'Cloud navigation changed model values');
   console.log(JSON.stringify({result:'pass',scope:'non-visual item-detail workflows; canvas mocked',modelEntries:40,businessEntries:10,nestedEvidence:true,contextAndOpenStateRetained:true,mainModelRecalculation:true,actualHistoryLocked:true,scenarioReload:true,cloudPreviewApply:true,uniqueControls:true}));

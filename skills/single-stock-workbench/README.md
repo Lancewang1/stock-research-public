@@ -1,6 +1,6 @@
 # Single Stock Workbench · 个股研究工作台
 
-完整技能源码及固定GOOGL案例。首页展示40行完整盈利模型；点击科目进入分项明细，具体分析、证据和可编辑假设在该条目下逐层展开。Cloud按企业服务、AI客户和独立TPU组织，情景须显式应用到盈利表。研究快照2026-11-05，费用证据更新2026-11-06；不是实时数据。
+完整技能源码及固定GOOGL案例。首页展示40行完整盈利模型；每个预测数字标明“假设”或“计算结果”，点击数字直接看来源或本期公式及代入值。分析窗口只显示当前条目，通过相关条目逐层查看，保留假设编辑和返回导航。Cloud按企业服务、AI客户和独立TPU组织，情景须显式应用到盈利表。研究快照2026-11-05，费用证据更新2026-11-06；不是实时数据。
 
 ## 安装与打开
 
@@ -29,6 +29,7 @@ DOM测试另需jsdom。用npm在自选工具目录安装`jsdom@26`，将`STOCK_D
 node tests/dom-cloud.cjs outputs/googl-dashboard.html
 node tests/dom-smoke.cjs outputs/googl-dashboard.html
 node tests/dom-model-details.cjs outputs/googl-dashboard.html
+node tests/dom-number-provenance.cjs outputs/googl-dashboard.html
 ```
 
 这些是非视觉测试，不能替代浏览器截图验收。最近一次浏览器工具被网址校验阻断，尚未完成视觉验收。

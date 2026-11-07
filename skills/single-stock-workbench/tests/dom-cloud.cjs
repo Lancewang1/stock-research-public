@@ -109,7 +109,9 @@ try {
     const label=input.getAttribute('aria-label') || input.closest('label')?.textContent || '';
     const group=input.closest('fieldset')?.querySelector('legend')?.textContent || input.closest('[data-cl-customer]')?.dataset.clCustomer || '';
     assert.ok((label+group).includes(clientNames[client]) || group===client,`Customer input lacks visible identity: ${param}`);
-    query('#cl-contract-'+client).open=true;
+    win.CloudApp.focusItem(client,'2027Q1');check();
+    click('#cl-contract-'+client+' > summary');
+    click(`#cl-contract-${client} [data-cl-detail="parameter:customers.${client}.averageAcceptedCapacityGW"] > summary`);check();
     const previous=baseline.quarters.find(q=>q.period==='2027Q1');
     edit(param,Number(input.value)*0.1);
     const changed=plain(win.CloudApp.getResult()).quarters.find(q=>q.period==='2027Q1');
@@ -229,6 +231,7 @@ try {
   click('#clMSFit');check();
   plain(win.CloudApp.getResult().quarters).forEach((q,i)=>assert.ok(Math.abs(q.cloudRevenueBn-msBefore[i].cloudRevenueBn)<1e-6));
   click('#modelDetailClose');click('#modelGrid th [data-model-item="cloudOperatingIncome"]');
+  click('#modelItemTree [data-model-item="cloudCost"]');
   const cost=query('[data-profit="cloudCashCostMultiplier"]'),originalCost=Number(cost.value);
   cost.value=originalCost*.9;cost.dispatchEvent(new win.Event('change',{bubbles:true}));check();
   assert.ok(Number(query('[data-profit="cloudCashCostMultiplier"]').value)<originalCost);

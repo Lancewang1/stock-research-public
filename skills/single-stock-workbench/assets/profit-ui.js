@@ -2,18 +2,19 @@
 let profitPeriod='2027Q1';
 function renderProfitPanel(){
  let host=$('#wbProfit');if(!host){host=document.createElement('div');host.id='wbProfit';host.className='wb-extra';$('#tblwrap').insertAdjacentElement('beforebegin',host);}
- const period=modelContextPeriod||profitPeriod,q=(period.length===4?result.annual:result.quarters).find(x=>x.period===period);if(!q)return;
+ const period=modelNumberTarget?.period||modelContextPeriod||profitPeriod,q=(period.length===4?result.annual:result.quarters).find(x=>x.period===period);if(!q)return;
  const d=q.profitDetail,b=CASE.profitModel?.quarters?.[period],p=d?.parameters;
  const open=new Set([...host.querySelectorAll('details[open]')].map(modelDisclosureKey));
  const dialog=$('#modelDetail .model-dialog'),scroll=dialog?.scrollTop||0;
- const active=document.activeElement,attr=['data-business-revenue','data-profit','data-model-earnings'].find(a=>active?.hasAttribute(a)),focusKey=attr?active.getAttribute(attr):null;
- host.innerHTML=`<div class="mi-period"><label>查看期间 <select id="wbProfitPeriod" aria-label="利润模型季度">${[...result.quarters,...result.annual.filter(x=>x.period>='2026')].map(x=>`<option value="${x.period}" ${x.period===period?'selected':''}>${x.period}${x.kind==='actual'?'A':'E'}</option>`).join('')}</select></label><span>${q.kind==='actual'?'历史实际值·只读':period.length===4?'年度汇总·按季度查看假设':'点击项目展开分析，展开“修改假设”编辑'}</span></div><div id="modelItemTree">${modelItemsContent(q,d,b,p)}</div>`;
+ const active=document.activeElement,attr=['data-business-revenue','data-profit','data-model-earnings','data-number-key'].find(a=>active?.hasAttribute(a)),focusKey=attr?active.getAttribute(attr):null;
+ host.innerHTML=`<div class="mi-period"><label>查看期间 <select id="wbProfitPeriod" aria-label="利润模型季度">${[...result.quarters,...result.annual.filter(x=>x.period>='2026')].map(x=>`<option value="${x.period}" ${x.period===period?'selected':''}>${x.period}${x.kind==='actual'?'A':'E'}</option>`).join('')}</select></label><span>${q.kind==='actual'?'历史实际值·只读':period.length===4?'年度汇总·按季度查看假设':'点击项目展开分析，展开“修改假设”编辑'}</span></div>${modelNumberTarget?modelNumberContent(q):'<div id="modelItemTree">'+modelItemsContent(q,d,b,p)+'</div>'}`;
+ if(!modelNumberTarget)decorateModelInputs(host,q);
  host.querySelectorAll('details').forEach(x=>x.open=open.has(modelDisclosureKey(x)));
  renderModelHome();if(dialog)dialog.scrollTop=scroll;
  if(attr&&focusKey){const input=[...host.querySelectorAll('['+attr+']')].find(x=>x.getAttribute(attr)===focusKey);input?.focus({preventScroll:true});}
 }
 document.addEventListener('change',event=>{
-  if(event.target.id==='wbProfitPeriod'){const selected=event.target.value;if(CASE.profitModel.quarters[selected]){profitPeriod=selected;activePeriod=selected;modelContextPeriod=null;}else modelContextPeriod=selected;renderProfitPanel();renderGdRows();return;}
+  if(event.target.id==='wbProfitPeriod'){const selected=event.target.value;if(modelNumberTarget)modelNumberTarget.period=selected;if(CASE.profitModel.quarters[selected]){profitPeriod=selected;activePeriod=selected;modelContextPeriod=null;}else modelContextPeriod=selected;renderProfitPanel();renderGdRows();return;}
   const el=event.target.closest('[data-profit]');if(!el)return;
   try{if(!el.value.trim())throw new Error('参数不可留空');const next=clone(overrides);next[profitPeriod]??={};next[profitPeriod].profit??={};next[profitPeriod].profit[el.dataset.profit]=Number(el.value)/Number(el.dataset.scale);commit(next,'Cloud分业务盈利情景');}catch(e){error(e.message);renderProfitPanel();}
 });
