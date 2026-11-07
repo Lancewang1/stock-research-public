@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import {reviewStages} from '../scripts/review-analysis.mjs';
+const dates=['2026-10-26','2026-10-27','2026-10-28','2026-10-29','2026-10-30','2026-11-02'];
+const series={GOOGL:[100,98,97,85,84,80],QQQ:[100,99,98,96,95,94],XLC:[100,99,98,95,95,94]};
+const a={id:'old',eps:10,broker:'MS',period:'2027',basis:'GAAP',publicationDate:'2026-10-20',effectiveDate:'2026-10-21'},b={...a,id:'new',eps:9,publicationDate:'2026-10-29',effectiveDate:'2026-10-30'};
+const events=[{id:'release',date:'2026-10-28',effectiveDate:'2026-10-29'},{id:'late',date:'2026-11-03',effectiveDate:'2026-11-04'}];
+const result=reviewStages({dates,series,start:dates[0],end:dates.at(-1),snapshots:[a,b],events,boundaries:['2026-10-28','2026-10-29']});
+assert.equal(result.phases.length,4);assert.ok(result.phases[0].label.includes('不能判定纯杀估值'));
+assert.equal(result.phases[1].evidence[0].id,'release');assert.ok(result.phases.every(p=>!p.evidence.some(e=>e.id==='late')));
+assert.equal(result.phases[2].bridge.a.id,'old');assert.equal(result.phases[2].bridge.b.id,'new');assert.ok(result.phases[2].caveat.includes('累计差异'));
+for(let i=1;i<result.phases.length;i++)assert.equal(result.phases[i].start,result.phases[i-1].end);
+const compounded=result.phases.reduce((p,s)=>p*(1+s.returns.GOOGL),1)-1;assert.ok(Math.abs(compounded-result.interval.returns.GOOGL)<1e-10);
+const before=reviewStages({dates,series,start:dates[0],end:'2026-10-29',snapshots:[a,b],events});assert.ok(before.phases.every(p=>p.bridge.b.id==='old'));
+const none=reviewStages({dates,series,start:dates[0],end:dates.at(-1),snapshots:[],events});assert.ok(none.phases.every(p=>!p.bridge.available));
+console.log('PASS: phase compounding, publication/effective-date gates, no future evidence, stale EPS caveat and cumulative revision recognition');

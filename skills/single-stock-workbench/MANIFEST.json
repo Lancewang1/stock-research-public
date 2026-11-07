@@ -1,7 +1,7 @@
 {
-  "release": "2026-11-06-ms-implied-baseline",
+  "release": "2026-11-07-business-statement-phase-review",
   "offlineRebuild": "byte-identical",
-  "browserVisualAcceptance": "waived_by_user",
+  "browserVisualAcceptance": "deferred_connection_blocked_user_continues_local",
   "rawReportsIncluded": false,
   "files": [
     {
@@ -13,6 +13,11 @@
       "path": "assets/amzn-trial.json",
       "sha256": "2310b63baac0e26d5e3cead79e719f24c67e3cad7639e4f677a13dc5505fa317",
       "bytes": 7174
+    },
+    {
+      "path": "assets/business-statement.js",
+      "sha256": "f61482770e77a75aa1de07c70b3cd3865cb6a5dcc8c3fa4e262c243f757f1955",
+      "bytes": 12628
     },
     {
       "path": "assets/cloud-inputs.json",
@@ -36,8 +41,8 @@
     },
     {
       "path": "assets/dashboard.html",
-      "sha256": "8cb8eefdb1e1e1105b697aef5d27af922f260e8058e90c5aae1e4e37f15168fb",
-      "bytes": 103973
+      "sha256": "610013f115893cf1aa697e341d2b1b7a92dc6affcd943c1125ed64eaf2a1f170",
+      "bytes": 103996
     },
     {
       "path": "assets/example-googl-case.json",
@@ -71,8 +76,8 @@
     },
     {
       "path": "assets/profit-ui.js",
-      "sha256": "e5213b36cc2d8771510d7f1dd616cd5f81c7ebf16361d8ad12b12d1e00f84f59",
-      "bytes": 12497
+      "sha256": "048cb49c64b65e9ab996dc534d143e18706929eb6c55985e294127d938ef5255",
+      "bytes": 13076
     },
     {
       "path": "assets/publication_dates.json",
@@ -121,13 +126,13 @@
     },
     {
       "path": "assets/review-events.json",
-      "sha256": "fea9cd36f800f08c05556a8bcced75108b29130253e0e2557cff7bf569adc8e5",
-      "bytes": 63574
+      "sha256": "28844b96a4dffef2aeb5bf0731f7d8d74aa0e4dda02581e7956365c6bfbdb738",
+      "bytes": 63694
     },
     {
       "path": "assets/review-lab.js",
-      "sha256": "8fe304413d16d614d198482b6d4ca28468a74bcd798087eaa6203fffb107f60b",
-      "bytes": 12722
+      "sha256": "1ebd63a44fdac9f9fe374d5f0b7d70adeadb0c170c8bfc95913437ebc5c9f286",
+      "bytes": 13095
     },
     {
       "path": "assets/review-lab.json",
@@ -135,9 +140,14 @@
       "bytes": 44840
     },
     {
+      "path": "assets/review-stages.js",
+      "sha256": "98ed25c280e6ae472daabca5911973da60058b0e76f462a468d92fd7f9e4958d",
+      "bytes": 4467
+    },
+    {
       "path": "assets/review-v11.js",
-      "sha256": "2d7952d9c7dad481aa840ae9663aa9a1e195312b05424fbd0299a9bbc11bedb5",
-      "bytes": 19659
+      "sha256": "b5c54dfbc3d4c2588d228529d022291c4b9ec0e33bf5490048979612b5752f37",
+      "bytes": 21008
     },
     {
       "path": "assets/v11-integration.js",
@@ -156,8 +166,8 @@
     },
     {
       "path": "outputs/googl-dashboard.html",
-      "sha256": "a5f950a63f94195589cd160b0a238aa525e906253bcb45734fd5edc1d297a725",
-      "bytes": 2502723
+      "sha256": "9c61e3cca0b80b71c3dc27dc5ed76a28ca80c05582135989073cdace270df75b",
+      "bytes": 2528484
     },
     {
       "path": "outputs/research/customer_evidence_20261106/historical-checks.json",
@@ -171,8 +181,13 @@
     },
     {
       "path": "README.md",
-      "sha256": "37cce73d14c934c25fbb9c44a10f1074bc38bd6d2ae62ed1d89c4bb83ffe8916",
-      "bytes": 4124
+      "sha256": "c9c585e098ff7782b682e1b23791a8bdbdc15cc4fc1565088c892c4e1f21a89e",
+      "bytes": 4444
+    },
+    {
+      "path": "references/business-statement-and-phases.md",
+      "sha256": "c44c2a2e03179176b7aea7f4d63f919de1ac5fa213575968117d0feaac9802b9",
+      "bytes": 3994
     },
     {
       "path": "references/cloud-model-method.md",
@@ -276,8 +291,8 @@
     },
     {
       "path": "scripts/build_dashboard.py",
-      "sha256": "afc04d78f7023e96f464e793521fa252b1cea4ed74ea8d59f0d767aa22bb753f",
-      "bytes": 15097
+      "sha256": "6447f9d93ee7b1e5f42bf9f2c308745bb7d1d5204d3c55c4a11c4bd929fecb5d",
+      "bytes": 15247
     },
     {
       "path": "scripts/build_ms_baseline.mjs",
@@ -296,8 +311,8 @@
     },
     {
       "path": "scripts/build_review_events.py",
-      "sha256": "9f4905c5c1b21fe6019e4a98e989710df922ec13976ec6801f55dd3d464d52a2",
-      "bytes": 26232
+      "sha256": "68860d54ff3681661ad359cc9c7c10596ba9fa7a809b66e9b9ede5c67223d7fa",
+      "bytes": 26352
     },
     {
       "path": "scripts/build_review_lab.py",
@@ -336,13 +351,13 @@
     },
     {
       "path": "scripts/package_public.py",
-      "sha256": "c38a8652af6380b75ed4060b737be86ac851d64d0db093f62478939a3d9f8240",
-      "bytes": 4270
+      "sha256": "76246d9e1fe94b4ce0e861a8f8eec3ba75f79e817be9b225363ff818dd31ab42",
+      "bytes": 4330
     },
     {
       "path": "scripts/profit-model.mjs",
-      "sha256": "b0f3f42fd6072988062a4a1c0c35c6201231c811432e822d79198df736d5afe2",
-      "bytes": 9402
+      "sha256": "0bfde99678a237f160bd526245140157e74e42ef705532cc2603f878abca6b87",
+      "bytes": 12818
     },
     {
       "path": "scripts/research_anthropic.py",
@@ -381,8 +396,8 @@
     },
     {
       "path": "scripts/review-analysis.mjs",
-      "sha256": "54db7bad0a91dfbb6e0bf8098b37e607b1a54b2d7355e1cd837906510ef9c357",
-      "bytes": 6223
+      "sha256": "5c9f68fa75869dd0b4442d65dd8d3981b0a5f94ca1e08be744ace3e5ed28a0dd",
+      "bytes": 9028
     },
     {
       "path": "scripts/segment-model.mjs",
@@ -406,8 +421,8 @@
     },
     {
       "path": "SKILL.md",
-      "sha256": "228e1802c2dacc0c7cce01cd322dd3a7d6cf8faad88ab9f6ba7bffdef4dd26d2",
-      "bytes": 15516
+      "sha256": "6096d163c6e4d0225738f87ccea8a3f17ff1a72bbabb7b3a0d3464254a126495",
+      "bytes": 15975
     },
     {
       "path": "tests/dom-cloud.cjs",
@@ -416,8 +431,13 @@
     },
     {
       "path": "tests/dom-smoke.cjs",
-      "sha256": "dbedf33e20e114344069b8b36b184383f2c0e9de17fa4cdfe78b6c88060f295a",
-      "bytes": 10039
+      "sha256": "9a6989397981b6e4012145a7c80a8e9cc659515fb51cde229934f0b4eb48c789",
+      "bytes": 11838
+    },
+    {
+      "path": "tests/test_business_statement.mjs",
+      "sha256": "2656a176c6c5cb50e0d019bfbe136f40bc223f31e25cdaa56d169ace12bc0976",
+      "bytes": 2728
     },
     {
       "path": "tests/test_cloud_model.mjs",
@@ -443,6 +463,11 @@
       "path": "tests/test_review_analysis.mjs",
       "sha256": "61db18a4a977107a9367a75c393ce10452912903e9df58e18525a146677cfd85",
       "bytes": 4704
+    },
+    {
+      "path": "tests/test_review_stages.mjs",
+      "sha256": "96085cf711f156248ae1d2449f0c5ea86bde3842a5a5bebaffa325ea3803078a",
+      "bytes": 1845
     }
   ]
 }

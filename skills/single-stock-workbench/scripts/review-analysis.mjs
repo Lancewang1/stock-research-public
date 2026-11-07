@@ -28,6 +28,29 @@ export function earningsMultipleBridge({start,end,priceStart,priceEnd,snapshots,
   return {available:true,a,b,multipleStart,multipleEnd,epsReturn,multipleReturn,interaction:epsReturn*multipleReturn,total:priceEnd/priceStart-1,sameSnapshot:a.id===b.id,ageStart:(Date.parse(start)-Date.parse(a.publicationDate))/864e5,ageEnd:(Date.parse(end)-Date.parse(b.publicationDate))/864e5};
 }
 export function datedEvidence(events,start,end){return {known:events.filter(e=>e.effectiveDate<=start),during:events.filter(e=>e.effectiveDate>start&&e.effectiveDate<=end),later:events.filter(e=>e.effectiveDate>end)};}
+/** Close-to-close chronological phases. EPS updates are recognition dates, not daily causal shocks. */
+export function reviewStages({dates,series,start,end,snapshots=[],events=[],maxAge=120,boundaries=[]}){
+  const full=reviewInterval(dates,series,start,end),cuts=new Set([full.i,full.j]);
+  const anchors=boundaries.length?boundaries:events.map(e=>e.effectiveDate);
+  for(const date of [...anchors,...snapshots.map(s=>s.effectiveDate)]){
+    if(date<=full.start||date>=full.end)continue;
+    const i=dates.findIndex(d=>d>=date);if(i>full.i&&i<full.j)cuts.add(i);
+  }
+  const idx=[...cuts].sort((a,b)=>a-b),phases=[];
+  for(let k=1;k<idx.length;k++){
+    const i=idx[k-1],j=idx[k],interval=reviewInterval(dates,series,dates[i],dates[j]);
+    const bridge=earningsMultipleBridge({start:dates[i],end:dates[j],priceStart:series.GOOGL[i],priceEnd:series.GOOGL[j],snapshots,maxAge});
+    const evidence=events.filter(e=>e.effectiveDate>dates[i]&&e.effectiveDate<=dates[j]);
+    const revisions=snapshots.filter(s=>s.effectiveDate>dates[i]&&s.effectiveDate<=dates[j]&&s.publicationDate<=dates[j]);
+    const r=interval.returns,ex=interval.excess,updated=bridge.available&&!bridge.sameSnapshot;
+    const label=!bridge.available?'盈利样本不足，暂不拆分':!updated?'无新EPS快照，不能判定纯杀估值':bridge.epsReturn<0&&bridge.multipleReturn<0?'EPS下修与倍数压缩并存':bridge.epsReturn<0?'EPS下修，倍数抵消部分影响':bridge.multipleReturn<0?'EPS未下修，样本倍数压缩':'EPS与倍数共同变化';
+    const market=r.GOOGL<0&&r.QQQ<0&&r.XLC<0?'公司与QQQ、XLC同跌，存在共同市场背景；':r.GOOGL<0?'公司下跌，QQQ与XLC未同时下跌；':'公司反弹/上涨，需与基准相对表现一起观察；';
+    const relative=Number.isFinite(ex.QQQ)&&Number.isFinite(ex.XLC)?ex.QQQ<0&&ex.XLC<0?'同时跑输两个基准，仍需公司层面的证据解释。':ex.QQQ>0&&ex.XLC>0?'同时跑赢两个基准，不能将走势简单归于行业。':'相对两个基准的表现分化。':'基准数据不足。';
+    const caveat=updated?`盈利修订是${bridge.a.publicationDate}至${bridge.b.publicationDate}两版${bridge.a.broker}固定${bridge.a.period}年EPS的累计差异，记在新版本可用阶段；不能解释为该阶段才发生的全部预期变化。`:bridge.available?'同一旧EPS使算术EPS变化为零，但无法观察期间市场预期；倍数只是冻结该预测后的价格残差。':bridge.reason;
+    phases.push({number:k,...interval,bridge,evidence,revisions,label,narrative:market+relative,caveat,knownAtStart:events.filter(e=>e.effectiveDate<=dates[i])});
+  }
+  return {interval:full,phases,method:'阶段首尾相接，区间收益按复利衔接；QQQ/XLC超额为简单百分点差，不是因果或Beta归因。'};
+}
 export function pairedStats(pairs){
   if(pairs.length<20)return {n:pairs.length,correlation:null,beta:null,reason:'有效配对不足20，不输出相关性'};
   const n=pairs.length,mx=pairs.reduce((s,p)=>s+p.x,0)/n,my=pairs.reduce((s,p)=>s+p.y,0)/n;

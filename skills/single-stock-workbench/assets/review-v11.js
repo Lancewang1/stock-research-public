@@ -95,11 +95,23 @@
       '<details class="rv11-section"><summary>区间收益与方法说明</summary><div class="rv11-detail-body"><p>' + esc(data.priceBasis) + ' 相对收益为简单百分点差，不是因果分解。</p><div class="rv11-scroll"><table><thead><tr><th>窗口</th><th>GOOGL</th><th>QQQ</th><th>XLC</th><th>相对QQQ</th><th>相对XLC</th></tr></thead><tbody>' + windowRows + '</tbody></table></div><ul>' + list(data.limitations) + '</ul><p>扩大到9/01起点时，最大收盘回撤是9/21→11/02的−21.40%；本页10/13起点是十月局部高点，两者不混用。</p></div></details>' +
       '<p class="rv11-foot">价格观察不等于催化归因。原始时间戳、材料位置及证据强度可在每个节点展开；Wind数据来源于万得Wind金融数据服务。</p></section>';
 
+    if(typeof global.getRecentReviewStages==='function'){
+      const phases=global.getRecentReviewStages();
+      const timeline=container.querySelector('.rv11-events');
+      const nodes=new Map([...timeline.querySelectorAll('[data-event]')].map(n=>[n.dataset.event,n]));
+      timeline.innerHTML=global.reviewStagesHTML(phases);
+      for(const phase of phases.phases){const card=timeline.querySelector('[data-stage-end="'+phase.end+'"]'),detail=document.createElement('details');detail.className='stage-event-details';detail.innerHTML='<summary>逐日事件、行情定位与原文审计</summary>';card.append(detail);
+        for(const event of data.events){const day=event.priceObservation.endDate;if((day>phase.start||(phase.number===1&&day===phase.start))&&day<=phase.end){const node=nodes.get(event.id);if(node){detail.append(node);nodes.delete(event.id);}}}
+      }
+      if(nodes.size){const extra=document.createElement('details');extra.innerHTML='<summary>区间外事件与补充节点</summary>';for(const node of nodes.values())extra.append(node);timeline.append(extra);}
+    }
     function onClick(evt) {
       const button = evt.target.closest('button[data-focus]');
       if (!button || !container.contains(button)) return;
       const event = data.events.find(item => item.id === button.dataset.focus);
       if (!event) return;
+      const selectedNode=container.querySelector('[data-event="'+event.id+'"]');
+      if(selectedNode){let parent=selectedNode.parentElement;while(parent&&parent!==container){if(parent.tagName==='DETAILS')parent.open=true;parent=parent.parentElement;}}
       container.querySelectorAll('button[data-focus]').forEach(el => el.setAttribute('aria-pressed', String(el.dataset.focus === event.id)));
       container.querySelectorAll('.rv11-event').forEach(el => el.classList.toggle('rv11-selected', el.dataset.event === event.id));
       const obs = event.priceObservation;

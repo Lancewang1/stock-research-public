@@ -230,7 +230,7 @@ def build(root=ROOT):
         "schemaVersion": 1, "id": "googl-2026-q3-drawdown", "asOf": "2026-11-05",
         "marketAsOf": market["asOf"], "supplementRetrievedOn": "2026-11-06",
         "title": "近期回撤：从财报前分歧，到财报后的现金与估值重估",
-        "summary": "这轮回撤分两段：财报前GOOGL已跌8.17%，与XLC接近，已知搜索竞争、Cloud交付和投资回报分歧，尚无证据把全部跌幅归于单一催化。10/28盘后搜索低于事前媒体样本、Cloud高增却伴随负FCF，次日放量跌12.64%，机构随后重估搜索变现与现金回报。11/02触及低点后反弹，经营争议仍待数据验证。",
+        "summary": "按信息时点分五阶段：财报前、财报冲击、新预测入样本、继续探底、低点后反弹。财报前GOOGL已跌8.17%，与XLC接近，但缺少逐日EPS修订，不能直接判为纯杀估值。10/28盘后搜索低于事前样本、Cloud高增伴随负FCF，次日放量跌12.64%。MS两版2027 EPS累计下修约1.76%，在10/30可用阶段入样本，不代表全部下修在当天发生。后续目标价与不同年份盈利修订分开检验；11/02低点是事后观察。",
         "controversies": controversies, "events": events, "windows": windows,
         "expectationComparisons": expectations, "brokerComparisons": legacy["brokerComparisons"],
         "materials": materials, "sources": [sources[s] for s in sorted(used)], "newsArchive": manifest,

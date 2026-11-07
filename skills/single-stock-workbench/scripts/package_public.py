@@ -55,17 +55,17 @@ def main():
     expected = {str(p.relative_to(ROOT)).replace('\\', '/') for p in selected} | {'outputs/googl-dashboard.html', 'MANIFEST.json'}
     if any(p.relative_to(target).as_posix() not in expected for p in files):
         raise RuntimeError('Unexpected files in public skill staging directory')
-    manifest = {'release': '2026-11-06-ms-implied-baseline', 'offlineRebuild': 'byte-identical',
-                'browserVisualAcceptance': 'waived_by_user', 'rawReportsIncluded': False,
+    manifest = {'release': '2026-11-07-business-statement-phase-review', 'offlineRebuild': 'byte-identical',
+                'browserVisualAcceptance': 'deferred_connection_blocked_user_continues_local', 'rawReportsIncluded': False,
                 'files': [{'path': p.relative_to(target).as_posix(), 'sha256': hashlib.sha256(p.read_bytes()).hexdigest(),
                            'bytes': p.stat().st_size} for p in files if p.name != 'MANIFEST.json']}
-    (target/'MANIFEST.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding='utf-8')
+    (target/'MANIFEST.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding='utf-8', newline='\n')
     archive = repo/'downloads/single-stock-workbench.zip'
     archive.parent.mkdir(parents=True, exist_ok=True)
     with zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED) as z:
         for p in sorted(target.rglob('*')):
             if p.is_file():
-                info = zipfile.ZipInfo('single-stock-workbench/'+p.relative_to(target).as_posix(), (2026,11,6,0,0,0))
+                info = zipfile.ZipInfo('single-stock-workbench/'+p.relative_to(target).as_posix(), (2026,11,7,0,0,0))
                 info.compress_type = zipfile.ZIP_DEFLATED
                 z.writestr(info, p.read_bytes())
     with zipfile.ZipFile(archive) as z:

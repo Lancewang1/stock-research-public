@@ -1,5 +1,6 @@
 /** Detailed Cloud profit bridge. USD million. Frozen calibration, no residual refit. */
 export const PROFIT_BUSINESSES=['workspace','traditional','ai','tpu'];
+export const NONCLOUD_BUSINESSES=['search','network','youtube','youtubeSubs','otherSubs','bets'];
 export const PROFIT_LIMITS={
   cloudCashCostMultiplier:[0,3],
   searchTacRate:[0,2],networkTacRate:[0,2],youtubeContentRate:[0,2],youtubeSubsShare:[0,1],nflContentCost:[0,1e7],
@@ -12,6 +13,7 @@ export const PROFIT_LIMITS={
   depreciationCogsShare:[0,1],sbcMultiplier:[0,5],sbcTaxBenefitRate:[0,1],
   cloudSbcShare:[0,1],cloudUnallocatedCost:[-1e7,1e7]
 };
+for(const k of [...PROFIT_BUSINESSES,...NONCLOUD_BUSINESSES])PROFIT_LIMITS[k+'GrossMargin']=[-5,1];
 export function validateProfitChanges(changes){
   if(!changes||typeof changes!=='object'||Array.isArray(changes))throw new TypeError('利润驱动参数必须是对象');
   for(const [k,v]of Object.entries(changes)){
@@ -35,12 +37,20 @@ export function cloudProfitBuild(p,base){
   for(const k of PROFIT_BUSINESSES){
     const r=p[k+'Revenue'],directRate=k==='ai'?p.aiThirdPartyShare*p.aiThirdPartyCostRate+(1-p.aiThirdPartyShare)*p.aiOwnOperatingRate:p[k+'DirectRate'];
     const cashMultiplier=p.cloudCashCostMultiplier??1;
-    const direct=r*directRate*cashMultiplier,opex=r*p[k+'OpexRate']*cashMultiplier,d=cloudDA*depWeights[k],stock=cloudSbc*(revenue>0?r/revenue:base.parameters[k+'Revenue']/base.cloudRevenue);
+    let direct=r*directRate*cashMultiplier;
+    const opex=r*p[k+'OpexRate']*cashMultiplier,d=cloudDA*depWeights[k],stock=cloudSbc*(revenue>0?r/revenue:base.parameters[k+'Revenue']/base.cloudRevenue);
+    if(Number.isFinite(p[k+'GrossMargin'])){
+      const bp=base.parameters,bw={workspace:bp.workspaceDepShare,traditional:bp.traditionalDepShare,ai:1-bp.workspaceDepShare-bp.traditionalDepShare,tpu:0};
+      const reference=(base.depreciation+base.amortization)*bp.cloudDepShare*bw[k]*bp.depreciationCogsShare+base.sbc*bp.cloudSbcShare*bp[k+'Revenue']/base.cloudRevenue*base.sbcAllocation.cogs;
+      direct=r*(1-p[k+'GrossMargin']-(bp[k+'Revenue']>0?reference/bp[k+'Revenue']:0));
+      if(direct < -1e-7)throw new RangeError(k+'毛利率过高，隐含现金成本为负；请降低毛利率或恢复成本驱动');
+      direct=Math.max(0,direct);
+    }
     const cogs=direct+d*p.depreciationCogsShare+stock*base.sbcAllocation.cogs;
     const expense={};for(const f of ['rd','sm','ga'])expense[f]=opex*base.opexAllocation[f]+stock*base.sbcAllocation[f]+(f==='rd'?d*(1-p.depreciationCogsShare):0);
     const gp=r-cogs,op=gp-expense.rd-expense.sm-expense.ga;
-    parts[k]={revenue:r,directCost:direct,cashOpex:opex,effectiveDirectRate:directRate*cashMultiplier,effectiveOpexRate:p[k+'OpexRate']*cashMultiplier,thirdPartyCost:k==='ai'?r*p.aiThirdPartyShare*p.aiThirdPartyCostRate*cashMultiplier:0,
-      ownOperatingCost:k==='ai'?r*(1-p.aiThirdPartyShare)*p.aiOwnOperatingRate*cashMultiplier:0,da:d,sbc:stock,cogs,...expense,grossProfit:gp,operatingIncome:op,
+    parts[k]={revenue:r,directCost:direct,cashOpex:opex,effectiveDirectRate:r?direct/r:0,effectiveOpexRate:p[k+'OpexRate']*cashMultiplier,thirdPartyCost:k==='ai'&&!Number.isFinite(p.aiGrossMargin)?r*p.aiThirdPartyShare*p.aiThirdPartyCostRate*cashMultiplier:null,
+      ownOperatingCost:k==='ai'&&!Number.isFinite(p.aiGrossMargin)?r*(1-p.aiThirdPartyShare)*p.aiOwnOperatingRate*cashMultiplier:null,da:d,daCogs:d*p.depreciationCogsShare,sbc:stock,cogs,...expense,grossProfit:gp,operatingIncome:op,
       grossMargin:r>0?gp/r:null,operatingMargin:r>0?op/r:null};
   }
   const totals={};for(const f of ['revenue','cogs','rd','sm','ga','grossProfit','operatingIncome'])totals[f]=Object.values(parts).reduce((s,x)=>s+x[f],0);
@@ -53,8 +63,9 @@ export function cloudProfitBuild(p,base){
 export function solveMSProfit(base,p){
   const clean={...p,cloudUnallocatedCost:0,cloudCashCostMultiplier:1},d=cloudProfitBuild(clean,base);
   const cash=Object.values(d.parts).reduce((s,x)=>s+x.directCost+x.cashOpex,0),allowance=d.totals.revenue-base.cloudOperatingIncome-d.cloudDA-d.cloudSbc;
-  const value=cash>0?allowance/cash:null,feasible=value!==null&&value>=0&&value<=3;
-  return {target:base.cloudOperatingIncome,revenue:d.totals.revenue,cashAtOne:cash,cashAllowance:allowance,value,feasible,bounds:[0,3],status:cash<=0?'non_identifiable':feasible?'feasible':'out_of_range',changes:feasible?{cloudCashCostMultiplier:value,cloudUnallocatedCost:0}:null};
+  const zero=cloudProfitBuild({...clean,cloudCashCostMultiplier:0},base),fixed=Object.values(zero.parts).reduce((s,x)=>s+x.directCost+x.cashOpex,0),slope=cash-fixed;
+  const value=slope>0?(allowance-fixed)/slope:null,feasible=Number.isFinite(value)&&value>=0&&value<=3;
+  return {target:base.cloudOperatingIncome,revenue:d.totals.revenue,cashAtOne:cash,fixedCashCost:fixed,cashAllowance:allowance,value,feasible,bounds:[0,3],status:slope<=0?'non_identifiable':feasible?'feasible':'out_of_range',changes:feasible?{cloudCashCostMultiplier:value,cloudUnallocatedCost:0}:null};
 }
 export function nonCloudDirect(p,segments){
   if(!segments||!Number.isFinite(p.searchTacRate))return null;
@@ -77,8 +88,34 @@ export function calculateProfitQuarter(base,p,nonCloudRevenue,segments){
     if(group[field]<-1e-7)throw new RangeError('情景导致集团'+field+'费用为负，请检查未分配项和业务拆分');
   }
   nonCloud.otherOpex=base.groupCosts.otherOpex*scale;group.otherOpex=nonCloud.otherOpex;
+  // Explicit research allocation: distribute remaining NonCloud costs by revenue.
+  // No segment disclosure is inferred from this allocation; total remains unchanged.
+  const businessParts={...detail.parts};
+  if(direct&&oldDirect){
+    const total=Object.values(direct.parts).reduce((s,x)=>s+x.revenue,0),oldTotal=Object.values(oldDirect.parts).reduce((s,x)=>s+x.revenue,0);
+    const residual=nonCloud.cogs-direct.total-otherDA*p.depreciationCogsShare-otherSbc*base.sbcAllocation.cogs;
+    const oldResidual=base.groupCosts.cogs-frozen.totals.cogs-oldDirect.total-oldOtherDA*base.parameters.depreciationCogsShare-oldOtherSbc*base.sbcAllocation.cogs;
+    for(const k of NONCLOUD_BUSINESSES){
+      const x=direct.parts[k],old=oldDirect.parts[k],w=total>0?x.revenue/total:old.revenue/oldTotal,ow=old.revenue/oldTotal;
+      const da=otherDA*w,stock=otherSbc*w,daCogs=da*p.depreciationCogsShare;
+      const referenceCogs=(old.cost??0)+(oldResidual+oldOtherDA*base.parameters.depreciationCogsShare+oldOtherSbc*base.sbcAllocation.cogs)*ow;
+      let cash=(x.cost??0)+residual*w;
+      if(Number.isFinite(p[k+'GrossMargin'])){
+        const refNonCash=(oldOtherDA*base.parameters.depreciationCogsShare+oldOtherSbc*base.sbcAllocation.cogs)*ow;
+        cash=x.revenue*(1-p[k+'GrossMargin']-(old.revenue>0?refNonCash/old.revenue:0));
+        if(cash < -1e-7)throw new RangeError(k+'毛利率隐含负现金成本，请降低假设');
+        cash=Math.max(0,cash);
+      }
+      const cogs=cash+daCogs+stock*base.sbcAllocation.cogs,originalCogs=(x.cost??0)+(nonCloud.cogs-direct.total)*w;
+      // Use the unmodified total for all allocation weights; accumulate separately below.
+      businessParts[k]={revenue:x.revenue,cogs,da,daCogs,sbc:stock,grossProfit:x.revenue-cogs,grossMargin:x.revenue?1-cogs/x.revenue:null,
+        referenceGrossMargin:old.revenue?1-referenceCogs/old.revenue:null,rd:nonCloud.rd*w,sm:nonCloud.sm*w,ga:nonCloud.ga*w,otherOpex:nonCloud.otherOpex*w,cogsAdjustment:cogs-originalCogs};
+      const b=businessParts[k];b.operatingIncome=b.grossProfit-b.rd-b.sm-b.ga-b.otherOpex;
+    }
+    const delta=NONCLOUD_BUSINESSES.reduce((s,k)=>s+businessParts[k].cogsAdjustment,0);nonCloud.cogs+=delta;group.cogs+=delta;
+  }
   group.opex=group.rd+group.sm+group.ga+group.otherOpex;
-  return {...detail,group,nonCloud,nonCloudDirect:direct,cloudOperatingIncome:detail.totals.operatingIncome,
+  return {...detail,group,businessParts,nonCloud,nonCloudDirect:direct,cloudOperatingIncome:detail.totals.operatingIncome,
     cloudUnallocatedCost:p.cloudUnallocatedCost,sbcTaxBenefit:detail.sbc*p.sbcTaxBenefitRate,
     allocationNote:'Cloud成本率、资产/SBC分配与固定校准项为研究假设；非Cloud可识别TAC/内容成本按业务驱动，其余共享现金成本随非Cloud总收入变化'};
 }
