@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-11-08T13:38:12+00:00",
+  "generatedAt": "2026-11-08T18:31:23+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
+    {
+      "date": "09 Nov",
+      "time": "01:00 HKT",
+      "publishedAt": "2026-11-09T01:00:46+08:00",
+      "kind": "NEWS",
+      "source": "Bloomberg",
+      "eventId": "us-cpi-aug",
+      "title": "US Inflation Set to Simmer Down Some After Recent Pickup",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNMHB3c0hUZDUwNkFjQmh3VW9PTGE3dmpzRkUwRWI2d25MZWhOcmRPOHhmaVdBNGp0YTF3WU9IaVQ0NVNtVG1nZDZTbXlYRVNWdmdpcUJ3cVdVcE5mMUltMWdwZE10Q3lmcFdHR2RINEtlcW54RW56ZkY1MnNsell5b3VLanVoTnh1Y0FKUVhZampkZ2xWUHJPOWxhSWVxa0VFRWhPbzdITTdjRzA?oc=5"
+    },
+    {
+      "date": "09 Nov",
+      "time": "00:20 HKT",
+      "publishedAt": "2026-11-09T00:20:06+08:00",
+      "kind": "NEWS",
+      "source": "Financial Times",
+      "eventId": "us-cpi-aug",
+      "title": "Will US inflation data ease affordability concerns?",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNb1gxeFlicC03N0VwSW1fUFZpUlV0UDdCQ2Q2SkJoVGF2d2YzUEg1RDNHbWJTNDgzMTd0TURpVkRoRTl6UjZrd0NMbG5vZFh5VjRxXzU4bmVFdzl4Szl1RlNvdXpGTUpKMjZqYjdmbEFaNmtaNHZUTFdRR0pobFJzZ1Z4M2U?oc=5"
+    },
     {
       "date": "07 Nov",
       "time": "06:04 HKT",
@@ -89,30 +113,6 @@
     },
     {
       "date": "06 Nov",
-      "time": "19:06 HKT",
-      "publishedAt": "2026-11-06T19:06:00+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-cpi-aug",
-      "title": "Wall St Week Ahead: As tech swoon roils market, US inflation data on tap",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPYWlPMS1sdHZxcTUxa3RDeUkwRFNDMFhEeGVNRktDVW9xeTNnMTFXbWMxQjlOTkttTkx5b19EVlVZOThRRGNCX0FrR2dIVTZpUHQzblctejRubG4yTWNyajJVaU8yV3JoYjZ1T19HY1U2dHBlMVE2a2oyUHpBZFZtb2g0T3FtSWRaT0hscHhkdGMwNktlb092R2g4cUFWWE9QS2RCOHh6d1QteW5pcWc?oc=5"
-    },
-    {
-      "date": "06 Nov",
-      "time": "18:32 HKT",
-      "publishedAt": "2026-11-06T18:32:09+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-cpi-aug",
-      "title": "US inflation too high; essential to get back to 2%: Fed's Williams",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNVTNvM3BqdWl4SmprODlFb250cjZNZU1FOVdHWEEtdU9QczJHVmVlUFA3dVRGd3BSUmNvN1hYQ0RQZzZ6N0NWLUFJOGhBTGhoUWNKTUE2Zmpqcmt2cWV4V1dQSmgzYW1Yb3VXN3lidjlBdE0zQ2hIc1ZnVlZJM2N0RlZCYlJPemdvcEhndWNnLWtiSVBQeEYxQ1BGbmVYeUdneWFn?oc=5"
-    },
-    {
-      "date": "06 Nov",
       "time": "04:43 HKT",
       "publishedAt": "2026-11-06T04:43:47+08:00",
       "kind": "NEWS",
@@ -184,18 +184,6 @@
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOb01WZnNoVWtvSG5SMU1hTzNBQkF4V2JVTWY1ZVV2bFdiYjlMM3FXakV1UXJyU2l3a290U2VZU1hQMHZ4dHZrSlV4Z0x4c01Gc0pBZ3BHMzl2MUJGd0ZEdTNPUWJqUi13T2V5YVJURWNFa19GTS05dkJFVUJIUUZJTElreWQ?oc=5"
     },
     {
-      "date": "21 Oct",
-      "time": "15:00 HKT",
-      "publishedAt": "2026-10-21T15:00:00+08:00",
-      "kind": "NEWS",
-      "source": "Bloomberg",
-      "eventId": "us-cpi-aug",
-      "title": "Sticky Inflation Is Testing the Fed’s Resolve",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPQkUxWWNmVENYWHNyd3ZtSlV1SGVPSGpFdXl0dm5GWHpVVktsMi1wZ3RmdG4xdkV4SUpmaVMxLTFhQkpDLUs0VDdWOXZnVGZidXVZRGdkOUFNS0E4Tmd2Z3VLZ0wyUjY3SGptbjZnLWp5TUVJekdodHdId0trTWFWUTZQT09YVWluWkdCNFBIaFhfYjZRQkRfNEVRS21PV181TlQyaklJNVM1Qm8?oc=5"
-    },
-    {
       "date": "15 Oct",
       "time": "15:00 HKT",
       "publishedAt": "2026-10-15T15:00:00+08:00",
@@ -218,6 +206,18 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPRTlXdFl1T0lRV3lDTk1HeDB5eEoyUkhIUERBWi02S1ZRU2tGX0hyQk9GdThWZUNUUFBKcUxqNEd1WkU4WFpyUHV6ZmU4VXl3MWRBSjN5UWM2WjVmbDl6RGhYYzV3SF8yTGwtTGJWTTR2OHN4LVVvVzlpTGs0RkFPX2dQWmNZTUF2MVFRMU5fWXZjbjlxd2NISDgyckdMQ3lYYTZv?oc=5"
+    },
+    {
+      "date": "14 Oct",
+      "time": "15:00 HKT",
+      "publishedAt": "2026-10-14T15:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-cpi-aug",
+      "title": "US inflation heats up in September; Fed rate hike this month back on table",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNX3hkV3J5em1xWWY4V0hQODFTamFtU3NvdkpPRUUzMGY0TnlKaVlneXZPc0J6bFpWdDZWb2hLRkZZaHhZVElDSXNFbGNYMVVBRGR6c1RlNDA4cEhkMEcwck5VMFRtZ1QxOFJqNTkyaGJzWWFLSXp2Z0l1Z19vMDh5bGd6N1FJSkJFR2tZUXd1UWUzeVlvZi1xNTVONk00ejJ5cE0xSGY4THFsaUo0RGxPV3dpaW4tbEZseUE?oc=5"
     }
   ]
 }
