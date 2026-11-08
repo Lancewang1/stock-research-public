@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-11-08T18:31:23+00:00",
+  "generatedAt": "2026-11-08T22:30:43+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
     {
       "date": "09 Nov",
-      "time": "01:00 HKT",
-      "publishedAt": "2026-11-09T01:00:46+08:00",
+      "time": "05:33 HKT",
+      "publishedAt": "2026-11-09T05:33:47+08:00",
       "kind": "NEWS",
-      "source": "Bloomberg",
-      "eventId": "us-cpi-aug",
-      "title": "US Inflation Set to Simmer Down Some After Recent Pickup",
+      "source": "Financial Times",
+      "eventId": "us-fomc-sep",
+      "title": "US High School Economics class: US economy beats forecasts to grow at 3.4% rate in third quarter",
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNMHB3c0hUZDUwNkFjQmh3VW9PTGE3dmpzRkUwRWI2d25MZWhOcmRPOHhmaVdBNGp0YTF3WU9IaVQ0NVNtVG1nZDZTbXlYRVNWdmdpcUJ3cVdVcE5mMUltMWdwZE10Q3lmcFdHR2RINEtlcW54RW56ZkY1MnNsell5b3VLanVoTnh1Y0FKUVhZampkZ2xWUHJPOWxhSWVxa0VFRWhPbzdITTdjRzA?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5CdXREWVpwNFlrX2toRjE3T1lMMEc5WlZtcWEtZ0prUTNONURuOWt0bHpRblBQNGtIUnYwZ3QtUmRpb3U0c1RrNHVXOVgzLTZyQmdQczVTVE9Dd3MzeEZJcVRWZ2RhWDd1azE0aFZCdlA?oc=5"
     },
     {
       "date": "09 Nov",
