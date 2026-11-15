@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15T00:25:54+00:00",
+  "generatedAt": "2026-11-15T07:15:15+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
@@ -41,6 +41,18 @@
     },
     {
       "date": "14 Nov",
+      "time": "08:00 HKT",
+      "publishedAt": "2026-11-14T08:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Bloomberg",
+      "eventId": "us-cpi-aug",
+      "title": "Fed’s Jefferson Says Inflation Will Determine Rate Decisions",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPZzBwMC1SRHV2ZUJHLTJ2STdWWFlSSXhKN1lkajNFZ0VTNUZNTnRGeW1uMXJRWXhyR05ic2JDMU9xcGxTV0JKZFM3WVByb0gwbEhrQW1WaTViQm12d1FZT1FnU29xX0tZSjJXOXhaWkI5bnk0aENFVTNOTUNYV09RQmJid1E4bFZxeUliR01kTkVCcXFMRDVnTWFUbTFrbk1HM1Q4MDBHbkVVSm9LUHNxMA?oc=5"
+    },
+    {
+      "date": "14 Nov",
       "time": "03:55 HKT",
       "publishedAt": "2026-11-14T03:55:01+08:00",
       "kind": "NEWS",
@@ -65,18 +77,6 @@
     },
     {
       "date": "14 Nov",
-      "time": "01:46 HKT",
-      "publishedAt": "2026-11-14T01:46:45+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-cpi-aug",
-      "title": "US producer prices rise moderately in October, but inflation broadens out",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNZTNDTVIxbVNEWDkyN3QzVk9YR2stVjFURXFqcDNXeGZ2S3FUcmhJNzJqcEp5R3JMY0dDdnl3MDEyRXVKRnB1ZGhMVHpQeTRYNnZwZDQ3UlpnTG5mR1o0akdxWDRhWDU1dm1CY2M3bFZQNHhNRHZyaUZFU1VPODZIdFJrbXBaM2UzTnRXOA?oc=5"
-    },
-    {
-      "date": "14 Nov",
       "time": "00:10 HKT",
       "publishedAt": "2026-11-14T00:10:44+08:00",
       "kind": "NEWS",
@@ -86,6 +86,18 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQdEwzV3pSLU9vQ2tmOXhVYzdoTzhyaEcxUjdBdzM2NXE2VC0xNlFDaFhUOGlXa0ZqeTBDTFByTE1xVlVEejBIdEdSUlYwZlZhZnE0MXhzTUtQUlcyNFZYNE1rcVZKV1RWVHRmUXYydWNvbC03V0RFd3NjZUtpS2VtVFl1Umh2RWxDbzQ5a0hlR2F1bDhIN0paOW5sNFdTaU1lOEUwNVNZaHI?oc=5"
+    },
+    {
+      "date": "13 Nov",
+      "time": "23:40 HKT",
+      "publishedAt": "2026-11-13T23:40:04+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-cpi-aug",
+      "title": "Bessent, Fed's Goolsbee divided on role of energy shock in inflation",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOWGl4M3I4cEx4Q1pteUwtd3I3OFBYWWFUU096V1Y3X2oxdl9KOFprODJXTEoxallGdk8tXzNuMzlWSXdjTTBFNjUxUHFwWmdVZTFHeTh0TEVYcWtNSXI2aUJkRFdKVFgtNmpWS01zTlhMS21ndThYQjY2bDhXSFpnV2c0Sl8wSzdBWnJzNmZVR05iUGdxU3BCUnBIYlcteEQtRkNMbDBQRF82QXVESmZSRGNvZG9yaGtfbm5QNHBTUE1jNjA?oc=5"
     },
     {
       "date": "13 Nov",
@@ -101,8 +113,8 @@
     },
     {
       "date": "13 Nov",
-      "time": "09:35 HKT",
-      "publishedAt": "2026-11-13T09:35:00+08:00",
+      "time": "09:38 HKT",
+      "publishedAt": "2026-11-13T09:38:36+08:00",
       "kind": "NEWS",
       "source": "Reuters",
       "eventId": "us-cpi-aug",
@@ -158,18 +170,6 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPdTFLUXEwMGczMGIxWWMwRGxGM1hoUmcxcGp5V0pzOUNzcFp5aEVfODRwal9Td1J2U21kYlh4elljeFlvRU01bGJPMVRzOThEQWFoaXNiVVNzclJmVWFjYVFzTC1heUJkV1pnNkl2MU56ZWtxT1dWSWxIbl9XODJ3RE9haDM?oc=5"
-    },
-    {
-      "date": "12 Nov",
-      "time": "23:28 HKT",
-      "publishedAt": "2026-11-12T23:28:30+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-fomc-sep",
-      "title": "Fed's Hammack signals support for gradual rate-hike path",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQWi1FbTBFZzFKNzU2S1UweWQ3Vk56U2NXRlRhbHgwSVdYN3NiOEhvOXgxOFh6ckNVbXZabEtCeVNDZzZIYkNud0N0OXd0dV9UY2dCdlpDQkZhX0VER2xpZ2xISmFIUUZIdEQzMDYxQ2s1Mkg5cW9LVWVwQ3d2QXl1dktYMHlpcDZoNHYwYmh1WHZWSDFneWgzeHZlbVc3cG8?oc=5"
     },
     {
       "date": "12 Nov",
