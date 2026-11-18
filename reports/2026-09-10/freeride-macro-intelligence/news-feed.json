@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-18T01:21:30+00:00",
+  "generatedAt": "2026-11-18T09:14:03+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
@@ -101,18 +101,6 @@
     },
     {
       "date": "16 Nov",
-      "time": "02:43 HKT",
-      "publishedAt": "2026-11-16T02:43:43+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-cpi-aug",
-      "title": "Fed 'has some work to do on inflation,' KC Fed chief says",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxORXg3dWdlUEMzckhPaldaYlFrSXlzQnVLeEJLRGtnMFFpeWh5VXI3akUxWEtLQ3JwSk92b2pvWi1FdjNFWVpBZm9Jck56NDUwQkZDUGZpUG01X3RDLS02enpGcWpnXzc3ZWctengxamdOTDY1MzdYMzgxR0V2THk3Zl9xbXZhTEcyWHEzRDU2YWZ2dTZVaFVpNA?oc=5"
-    },
-    {
-      "date": "16 Nov",
       "time": "02:40 HKT",
       "publishedAt": "2026-11-16T02:40:00+08:00",
       "kind": "NEWS",
@@ -134,6 +122,18 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQMnhYS2hsVENzOW9lbGxhZHNXZGptazRlOW5IUk1MRThqUi02N3N6VklkTDVnMk9DT3lKWVNJVzBacW5zVUNEamw5TzhtTWluRVNheC1pcDZFUGVEREZHMG5aVGxXT1RQVEQ0Q1dnT3BWMHNQMkFUWWZZeTZaWkQydWtvVEctbnpnZWV0MExYa29fTEZjcFJjemNHSEpjdHM5Y2tsZkpUYkhrX0xRRU5ybTNxTDM?oc=5"
+    },
+    {
+      "date": "14 Nov",
+      "time": "01:46 HKT",
+      "publishedAt": "2026-11-14T01:46:45+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-cpi-aug",
+      "title": "US producer prices rise moderately in October, but inflation broadens out",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNZTNDTVIxbVNEWDkyN3QzVk9YR2stVjFURXFqcDNXeGZ2S3FUcmhJNzJqcEp5R3JMY0dDdnl3MDEyRXVKRnB1ZGhMVHpQeTRYNnZwZDQ3UlpnTG5mR1o0akdxWDRhWDU1dm1CY2M3bFZQNHhNRHZyaUZFU1VPODZIdFJrbXBaM2UzTnRXOA?oc=5"
     },
     {
       "date": "13 Nov",
