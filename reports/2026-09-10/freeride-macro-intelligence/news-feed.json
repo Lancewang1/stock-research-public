@@ -1,8 +1,20 @@
 {
-  "generatedAt": "2026-11-17T18:45:50+00:00",
+  "generatedAt": "2026-11-18T01:21:30+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
+    {
+      "date": "18 Nov",
+      "time": "04:16 HKT",
+      "publishedAt": "2026-11-18T04:16:59+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-fomc-sep",
+      "title": "Fed's Williams still favors tighter monetary policy, but says now is not the time for 'dramatic action'",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxObk9OREc3MG52anFIVXNNUy1VaUhIWnJ3bTZjS2RhQVZaSHgzV1VXZEpqSmVMR2pHdGpVdTFRbXlKWFhPLXBXTWtVX0NvQ2xScUk0dnI5MjA5VVpLQTF0YkIwYi1uMjNyTGZaTlloNjE4c0dlMmhlOTJxWVQ0RVkzMG12WEZPRTFyZnNLU3V2TmFqYmNMUUhYRXJ2SGdySEFKdnN4c1Q2MDdrVW5NTTY0UFBVeTVpb1QzODBOMHFLQlRCaDA?oc=5"
+    },
     {
       "date": "17 Nov",
       "time": "22:36 HKT",
@@ -65,27 +77,15 @@
     },
     {
       "date": "17 Nov",
-      "time": "08:13 HKT",
-      "publishedAt": "2026-11-17T08:13:00+08:00",
+      "time": "03:26 HKT",
+      "publishedAt": "2026-11-17T03:26:58+08:00",
       "kind": "NEWS",
       "source": "Bloomberg",
       "eventId": "us-fomc-sep",
-      "title": "Fed’s Hammack Reiterates Preference for Small, Incremental Hikes",
+      "title": "Fed’s Hammack Prefers Slow, Steady Interest-Rate Hikes",
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOa3MwUUp3QjVuS0NGTWhLN0hYZldpQkJHUUZKRDZSRlhvdXJ1d2VXTVk1UkVzZ2swX1N1OWdQM1g1cC10cnMwaTRCRzEtVWNfWHBLdjdYY19wUEpZZERkQl9zVzNsbjVuZ25zQUFsaXFBMnBVX1I1X1pPU01SdEpPZzA1clBJZkx5TjYwV29QUmxHRmxfYW8wdWFLazlLbXVBRk9nUm01aVppdHRtS2RjRHlJeW0?oc=5"
-    },
-    {
-      "date": "17 Nov",
-      "time": "04:16 HKT",
-      "publishedAt": "2026-11-17T04:16:40+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-fomc-sep",
-      "title": "Fed's Hammack reiterates case for slow, steady rate hikes -Bloomberg TV",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNYk9kal9uc0hmSGMySFhuVE1BbTd3dkV1SkdjbEx3U2NuZFdoMFI1TThKSHVnLUNGTVNOOVpRM3VVUnBZdkxISEhKdVloQzBxUGlEcm15ZkQyUGZjWW5IbVhhZVNKWnBleE1PZzAyNUtmQUVrWHZ1R2YwU1FSZWVjczdVWXcwX3Z4VWhsVXZwUE1EaWMtZ3I0d1I2WlVOdm5rdGdZMFl4VVJENHRaSUE?oc=5"
     },
     {
       "date": "17 Nov",
