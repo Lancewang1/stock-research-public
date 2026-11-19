@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-19T00:28:22+00:00",
+  "generatedAt": "2026-11-19T07:59:07+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
@@ -17,8 +17,8 @@
     },
     {
       "date": "19 Nov",
-      "time": "02:39 HKT",
-      "publishedAt": "2026-11-19T02:39:43+08:00",
+      "time": "02:38 HKT",
+      "publishedAt": "2026-11-19T02:38:00+08:00",
       "kind": "NEWS",
       "source": "Reuters",
       "eventId": "us-fomc-sep",
@@ -50,6 +50,18 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNLUF1UUFWUUVaUExtZTQ5Vlo0dmRMMUtnUUFDTU5RcjdOSkJYbV9JRzBzNlZWUkIxTm53a04xbEwxZHB0V0lRamxzRlJXYzVPbmx1MzFQNVYxaXFTQUQ5Q1ZXaHUyT1R1TXU0dDBHcDhVQ2NFVE1fcnZXdjhPMUZBbmhEQ2UwR1dtZEZpc3lLS2dFbjhIYWdvZ1ByTXM3cGJrMnh6YmZ6T2NSWVoy?oc=5"
+    },
+    {
+      "date": "18 Nov",
+      "time": "09:34 HKT",
+      "publishedAt": "2026-11-18T09:34:00+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-fomc-sep",
+      "title": "Dollar firmer as hawkish Waller backs aggressive Fed action",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOU3BnNkxnajFsX0xFNklvRnJ0OHJtQVR0Zk56aGhVN19YY0Z5aFRjMnVTb1pIakt6cHNXajVNalNrUmVUWWpZWjk1Ukh6T0RhY2ZTX2dLRTdpWTNlVU1vY1hGUl84SlIwcUNQcW51NzlzZDFoNHNiT3hiSHpfSl9ENUhtWWExWWxkT2ZYUUJ4WHdWWjVSOVpkQzZycmpaOXhnbm96Q0RWMmJLYnlkTDFJRFVWbGhqWXkydEE?oc=5"
     },
     {
       "date": "18 Nov",
@@ -113,6 +125,18 @@
     },
     {
       "date": "17 Nov",
+      "time": "19:00 HKT",
+      "publishedAt": "2026-11-17T19:00:03+08:00",
+      "kind": "NEWS",
+      "source": "Bloomberg",
+      "eventId": "us-cpi-aug",
+      "title": "The Fed's 'Immaculate Disinflation' Strategy Will Fail",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNRUJYdloyd3NVVjR5Mm4yd0xYbjV4aHlxd2NpcVdvTVpxWk1jcmxmRjhpbl9sNHRTRFJQRHJMamVQV3Eyb00welR0VXUzYlRMU1Y4R0ttemVLS0o2bnN5MUVOVFZXeTBxUzRYZjMwUjFRcm1SMUo5bE03alJWZmR5ZHpWbHJIaURhQVdIZlQ3d1piWFVkQnI1YVVyWDQ1VkdjLW9TcTBrb1VsZw?oc=5"
+    },
+    {
+      "date": "17 Nov",
       "time": "03:26 HKT",
       "publishedAt": "2026-11-17T03:26:58+08:00",
       "kind": "NEWS",
@@ -134,30 +158,6 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPX3h5VmhlVnFXRnoyYTFyd2dVbDhrRlNKT1gzNEoxQ01CQ1hJYW53UXRDMkhnUndZX21zWGpMaHNDZ2FIUHl2TGdpX2N1emdJY19jZmY3RzZjdnQwTUswbldMLS1pOUQ2d2ZiNjFDbVU5elc2elN5OTVYZGFyYXBnQVBiZzM?oc=5"
-    },
-    {
-      "date": "16 Nov",
-      "time": "02:40 HKT",
-      "publishedAt": "2026-11-16T02:40:00+08:00",
-      "kind": "NEWS",
-      "source": "Bloomberg",
-      "eventId": "us-cpi-aug",
-      "title": "Schmid Says Fed Has More Work To Do to Bring Down Inflation",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQYlRIUFR3TDJ6U21FdjlsZlNxZHBNQXJUaUpRZjNjNld2bUZianpsUEExS0NVQWVmN0RwVGY0VndQQk5oVGhHZ3pzcV9IMmJrS05tVzBrMWZ6WTV3X0JGWFR3NXJvLUMtTzZVNlRieXBENWhTX3k0S0JpeWRicVFaSmpiVjBBdWwwNkxrRV9ZLXFZNnNlS1A5LTA3VzYwWHRCRV9XSkdZYXAzWE9vYVM0?oc=5"
-    },
-    {
-      "date": "14 Nov",
-      "time": "18:00 HKT",
-      "publishedAt": "2026-11-14T18:00:00+08:00",
-      "kind": "NEWS",
-      "source": "Bloomberg",
-      "eventId": "us-cpi-aug",
-      "title": "Charting the Global Economy: Inflation in US Exceeds Projections",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQMnhYS2hsVENzOW9lbGxhZHNXZGptazRlOW5IUk1MRThqUi02N3N6VklkTDVnMk9DT3lKWVNJVzBacW5zVUNEamw5TzhtTWluRVNheC1pcDZFUGVEREZHMG5aVGxXT1RQVEQ0Q1dnT3BWMHNQMkFUWWZZeTZaWkQydWtvVEctbnpnZWV0MExYa29fTEZjcFJjemNHSEpjdHM5Y2tsZkpUYkhrX0xRRU5ybTNxTDM?oc=5"
     },
     {
       "date": "14 Nov",
