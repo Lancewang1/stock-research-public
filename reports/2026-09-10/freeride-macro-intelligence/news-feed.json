@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-22T21:18:51+00:00",
+  "generatedAt": "2026-11-23T01:59:50+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
@@ -50,18 +50,6 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQQ1N1UEpzQUo3X0NFTW1tdEhiWlRtQzFzVEdCa1R4V1hJbjc4VUo4cWxZdHZEdHVUT0JZWkIyMHdfSThfVUNPeFRKanpxTndYTnA2d1BwN0hyVWtCamhiYVRMYW1qTWxNMDkwa1ZMcF9pY0xWVHBxUDBrTWItX2trcTZxOHZiOWhGVVBSLWZNREh0QVJBRFhONThHRUs0WHhpNmZhTlFlSEJoaWRzU04xRzJKS0ZCYjFvSkZ0dQ?oc=5"
-    },
-    {
-      "date": "20 Nov",
-      "time": "16:37 HKT",
-      "publishedAt": "2026-11-20T16:37:22+08:00",
-      "kind": "NEWS",
-      "source": "Financial Times",
-      "eventId": "us-cpi-aug",
-      "title": "October inflation data keeps BoJ on course for further tightening",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1WQmxNWnBBUXR6eE91c194OTlJMEoyczc1c0JEMV9NeXZJY0RtVVBZclduZHQwXzQwNkJWQ0dMSVV1RmdjX3dKblR5eXpPeTBDMFZNbzE4ZlVaaGJqZ0tRNDBZTDktTnpxUXlyZEYtUGw?oc=5"
     },
     {
       "date": "20 Nov",
@@ -122,18 +110,6 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPX3h5VmhlVnFXRnoyYTFyd2dVbDhrRlNKT1gzNEoxQ01CQ1hJYW53UXRDMkhnUndZX21zWGpMaHNDZ2FIUHl2TGdpX2N1emdJY19jZmY3RzZjdnQwTUswbldMLS1pOUQ2d2ZiNjFDbVU5elc2elN5OTVYZGFyYXBnQVBiZzM?oc=5"
-    },
-    {
-      "date": "14 Nov",
-      "time": "18:00 HKT",
-      "publishedAt": "2026-11-14T18:00:00+08:00",
-      "kind": "NEWS",
-      "source": "Bloomberg",
-      "eventId": "us-cpi-aug",
-      "title": "Charting the Global Economy: Inflation in US Exceeds Projections",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxON1RkRk45eWY2Y2NwazN0cGVzZm1OQWpzLVNxWmZGVEh6MlBtZXM4QTVaOFp4eVdwaGZQcEZVN3hXVTJfQ29tQ0ZaRkJjcmhzZl9qM1NnR3pYSEZHQ3Y3ZjhaWUhsRnRic0cxUzhVcmRPTlltS0ZHUzVMdjhxMURMUkxVc3k1Wml1R3FLaWlldnRWUDk4MWMxR2pIcFJQTW5RY1psUURaUEhCdnRxN2xPWHoxdGNzQ3BJU0Y5RDJ5U1owTG5rWnBmTWNDYVp6MVNwNDNGWFFxOA?oc=5"
     },
     {
       "date": "13 Nov",
@@ -218,6 +194,30 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQelNoMFNyY01hVzlXME5aeHpRMGpzd1NVc2pxVHlMNFFWYVdUSjdDMkZxdF9fS01fS0xxc3Z3bDN3R28tMlB5TlV2djZib0JZak84MExhcEV4emhRWGpoTURjcTAzOThSU3dqRWFMVEE3VDRjb1FTS1c1b09uU2lFMWlZdkZVWENsWjE4WVUyQTZxZ1pXTDhnTE90czBGb1E2T2o3RHk0ODkxUDZ5ZzVfdDl3?oc=5"
+    },
+    {
+      "date": "10 Nov",
+      "time": "16:00 HKT",
+      "publishedAt": "2026-11-10T16:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Bloomberg",
+      "eventId": "us-cpi-aug",
+      "title": "Fed’s Waller, Logan Spark Rate-Hike Debate After Hot Inflation",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOZkZoTlZOa05oRHYwaUNCM1pDVHdhNnF3ajlxMzBBd1R0Z3plbEVKbm4xemxmbm1penlwS1hrY09URU4zbDZoZFlWV213ZnZkWVlseUE1U0JyeE8zQWpqcU9YVUlKbUJldG9NT21UVkpmN2F6eFlWZWtiZlhrZUZGLUFpUTRlcmdWYnduUDB5MTNOY0xFQW5TSDZfaDNac0N5VVpuUE43WTJYeEZIZTBDbFRKdw?oc=5"
+    },
+    {
+      "date": "07 Nov",
+      "time": "16:00 HKT",
+      "publishedAt": "2026-11-07T16:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Bloomberg",
+      "eventId": "us-cpi-aug",
+      "title": "US Inflation Set to Simmer Down Some After Recent Pickup",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNMHB3c0hUZDUwNkFjQmh3VW9PTGE3dmpzRkUwRWI2d25MZWhOcmRPOHhmaVdBNGp0YTF3WU9IaVQ0NVNtVG1nZDZTbXlYRVNWdmdpcUJ3cVdVcE5mMUltMWdwZE10Q3lmcFdHR2RINEtlcW54RW56ZkY1MnNsell5b3VLanVoTnh1Y0FKUVhZampkZ2xWUHJPOWxhSWVxa0VFRWhPbzdITTdjRzA?oc=5"
     }
   ]
 }
