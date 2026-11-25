@@ -1,8 +1,20 @@
 {
-  "generatedAt": "2026-11-25T02:49:25+00:00",
+  "generatedAt": "2026-11-25T13:07:42+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
+    {
+      "date": "25 Nov",
+      "time": "19:02 HKT",
+      "publishedAt": "2026-11-25T19:02:09+08:00",
+      "kind": "NEWS",
+      "source": "Reuters",
+      "eventId": "us-cpi-aug",
+      "title": "Fed policymakers at odds over causes of high inflation",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNZ2Vtdjdia2xUaVF5bWxRSVlPUTZjc1JmWG9Uam1QSHpNcXZuREdQVmRyX2hkNEtMbWhFd1VFb3l6QVJGYkJHZlZXUDJLVlM4cDdDR0RSVTRPMmZaUHAtMlhtSDlQeFF4UGJadUhrQmhlaWlJT1cwSG9IRnF1cC1COEtKdTBsUWVsXzhkYWhUWHNKTjJsUVJuNw?oc=5"
+    },
     {
       "date": "25 Nov",
       "time": "09:19 HKT",
@@ -10,7 +22,7 @@
       "kind": "NEWS",
       "source": "Reuters",
       "eventId": "us-cpi-aug",
-      "title": "Dollar takes breather ahead of US data on Fed path; Aussie jumps on CPI",
+      "title": "Risk-off mood lifts dollar ahead of inflation data",
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPUUFucHFRbGxzR3laOUhHVU5fQ215SV82VkdMcExqZy1DMmpLalE4RHkyUDgyaEVLQmhVQ3l1VFZXcUV2ZV9UQmlqX1p2X09UbjlfbzlTY1EwUld2Z2dFV0d3cTI0bDlUejkxbFRsczJ5Q2ZmdXVaTkNNTXNKLUZkYkxLVVhFejU1VjdVTXp4d3ctRmc2NWhDbFdJV1NDRTE4UFQzOGQ4eXI4bXdjLWJB?oc=5"
@@ -22,10 +34,22 @@
       "kind": "NEWS",
       "source": "Reuters",
       "eventId": "us-cpi-aug",
-      "title": "Gold ticks lower ahead of US inflation data",
+      "title": "Gold falters ahead of key US inflation print",
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOV1p3ZkduX2FrdGJhMEMtbmNXNTgxN05HeDFsX2xxNDBkWXZQVkFWS3NzNFpITzZ2RnRyYXVZQ1k5bmthekYzdG9aSDVxcGZGS1RxMnNTTHNRRkQyQWFoWm1zNXVfd2hVQW96VHQ1ZFd4eU04cXNTRWk0cFJ4LS1PLUd1eUFmN3Y4ZjJQbXZpVkd3UQ?oc=5"
+    },
+    {
+      "date": "24 Nov",
+      "time": "22:00 HKT",
+      "publishedAt": "2026-11-24T22:00:02+08:00",
+      "kind": "NEWS",
+      "source": "Financial Times",
+      "eventId": "us-fomc-sep",
+      "title": "How Donald Trump helped orchestrate Jensen Huang’s return to Nvidia",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPWnFjb3FPMVFfV25XdkVHYkVDZXJ6aU9fU2h5eWtJd0VlWWZrd3BNVFpLakRnSHBkR3cxRExIY0w2SDVuX0h6akNKcG5XejJNNnVOVmtvOERqX3I2VDBSVFBBQ0JJcE9vTTFfYWpVN1lMaDNKVkdIVXdUbDRBR25MZEd5eHo?oc=5"
     },
     {
       "date": "24 Nov",
@@ -40,6 +64,54 @@
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNa3lvbHFTMGFKUm9paUJYVzFoQzd1QnQtSzAtTlZmSlFyRW5Sc1hic3p2MVV0VWVrYjFkNDdQZlFTUWMzZGFueG5yMTVMcGhLWUxwQi16Ujk5b2ppMVRWTGowaHlMZDQ4Z19xbWpCQTRFVzFHSHhxeW9kbG80OTVtSEZsb3REX29FRFFPR0xzTnFjYXh6?oc=5"
     },
     {
+      "date": "24 Nov",
+      "time": "07:18 HKT",
+      "publishedAt": "2026-11-24T07:18:55+08:00",
+      "kind": "NEWS",
+      "source": "Financial Times",
+      "eventId": "us-fomc-sep",
+      "title": "Top Fed official probed over whether she breached ‘blackout period’",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPTmJyOUFmRmd5eE9ua2hLR3dXQmI5WDlzRW1CSy11UUdGTGZLUmZIZlFqWHJJM1YtMkJqMks2Yk1yazExM0VCMlY3WldSdjRkWFpyTW9KRzJOOEdna2lBZmdndXNRVVBHZF9XbXAzMk1xQ3hQWElUSllzbm1ndWtOZWVUSnk?oc=5"
+    },
+    {
+      "date": "24 Nov",
+      "time": "06:55 HKT",
+      "publishedAt": "2026-11-24T06:55:09+08:00",
+      "kind": "NEWS",
+      "source": "Bloomberg",
+      "eventId": "us-cpi-aug",
+      "title": "Fed’s Williams Says Officials Must Act ‘Over Time’ On Inflation",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPd2hFTElab1BSaGQzN2hEczFEakZGaGV3TW00N2laRU0zb3prdDc4am9uR3MwOGtucDNsRU9UT0d6eG5aZjYzcnpIUXRnOGJ0eFhuX0pCRnoyLXJCMEJnMnMtd01xVXd0MVItSVVPUWZ3QzE3UGdTNVVFWkZiUkxoNW9BcG94WnNnQ21FejZnQUs1Nm9HdFMyeUxlazZEY2hOSUhFaFl5dWNUdG5HdDBDM3ZR?oc=5"
+    },
+    {
+      "date": "23 Nov",
+      "time": "13:34 HKT",
+      "publishedAt": "2026-11-23T13:34:23+08:00",
+      "kind": "NEWS",
+      "source": "Financial Times",
+      "eventId": "us-fomc-sep",
+      "title": "The Federal Reserve’s balance sheet yo-yo",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1zVWg4dzdvbGJIdk9fOVIxTVBCNUdjVkFMSGQwSTBINldJZWdXQXlhRU9qSGRjZnpZdkRhdERmcFpQX2ZHZkxCUk5nOFZjZWlOWkpIaUFHQW5ZcFIyVGdIcU5xd3pJaFNZXzRZMFAtYXg?oc=5"
+    },
+    {
+      "date": "20 Nov",
+      "time": "18:00 HKT",
+      "publishedAt": "2026-11-20T18:00:02+08:00",
+      "kind": "NEWS",
+      "source": "Bloomberg",
+      "eventId": "us-fomc-sep",
+      "title": "A ‘Shock’ Rate Hike by the Fed? In This Economy?",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQQ1N1UEpzQUo3X0NFTW1tdEhiWlRtQzFzVEdCa1R4V1hJbjc4VUo4cWxZdHZEdHVUT0JZWkIyMHdfSThfVUNPeFRKanpxTndYTnA2d1BwN0hyVWtCamhiYVRMYW1qTWxNMDkwa1ZMcF9pY0xWVHBxUDBrTWItX2trcTZxOHZiOWhGVVBSLWZNREh0QVJBRFhONThHRUs0WHhpNmZhTlFlSEJoaWRzU04xRzJKS0ZCYjFvSkZ0dQ?oc=5"
+    },
+    {
       "date": "20 Nov",
       "time": "13:01 HKT",
       "publishedAt": "2026-11-20T13:01:51+08:00",
@@ -50,6 +122,18 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOSkZnaUY5Ni1VV2RvQXB3YWdWTnByc0xNYUt0MW5yYUlZLThpWXpNTzJBSjBROF9CQV9hd1M0MVVCNnB4QW0zd1VIdVhjQ3ZScEZvQ01HblVPTFQ4emlReFRfVnlnOFV1emJvQWtZU3BYT2tOY1JWUThTcUZlMzkzZTlaMnY?oc=5"
+    },
+    {
+      "date": "16 Nov",
+      "time": "16:00 HKT",
+      "publishedAt": "2026-11-16T16:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Financial Times",
+      "eventId": "us-fomc-sep",
+      "title": "Fed chair Kevin Warsh says AI boom could help sustain ‘substantially higher’ US growth",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPX3h5VmhlVnFXRnoyYTFyd2dVbDhrRlNKT1gzNEoxQ01CQ1hJYW53UXRDMkhnUndZX21zWGpMaHNDZ2FIUHl2TGdpX2N1emdJY19jZmY3RzZjdnQwTUswbldMLS1pOUQ2d2ZiNjFDbVU5elc2elN5OTVYZGFyYXBnQVBiZzM?oc=5"
     },
     {
       "date": "12 Nov",
@@ -134,90 +218,6 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQelNoMFNyY01hVzlXME5aeHpRMGpzd1NVc2pxVHlMNFFWYVdUSjdDMkZxdF9fS01fS0xxc3Z3bDN3R28tMlB5TlV2djZib0JZak84MExhcEV4emhRWGpoTURjcTAzOThSU3dqRWFMVEE3VDRjb1FTS1c1b09uU2lFMWlZdkZVWENsWjE4WVUyQTZxZ1pXTDhnTE90czBGb1E2T2o3RHk0ODkxUDZ5ZzVfdDl3?oc=5"
-    },
-    {
-      "date": "10 Nov",
-      "time": "16:00 HKT",
-      "publishedAt": "2026-11-10T16:00:00+08:00",
-      "kind": "NEWS",
-      "source": "Bloomberg",
-      "eventId": "us-cpi-aug",
-      "title": "Fed’s Waller, Logan Spark Rate-Hike Debate After Hot Inflation",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOZkZoTlZOa05oRHYwaUNCM1pDVHdhNnF3ajlxMzBBd1R0Z3plbEVKbm4xemxmbm1penlwS1hrY09URU4zbDZoZFlWV213ZnZkWVlseUE1U0JyeE8zQWpqcU9YVUlKbUJldG9NT21UVkpmN2F6eFlWZWtiZlhrZUZGLUFpUTRlcmdWYnduUDB5MTNOY0xFQW5TSDZfaDNac0N5VVpuUE43WTJYeEZIZTBDbFRKdw?oc=5"
-    },
-    {
-      "date": "10 Nov",
-      "time": "16:00 HKT",
-      "publishedAt": "2026-11-10T16:00:00+08:00",
-      "kind": "NEWS",
-      "source": "Bloomberg",
-      "eventId": "us-cpi-aug",
-      "title": "Dollar Set for Best Day Since September as CPI Lifts Hike Bets",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQTnFlNTgybjJDT2dpTXUyYV9MWGR2bS1ET0E5VlF3Z3VyRHV6c1FyX296QnhGUmNFNTJraVFfVklZSjRXVXEyMHIxUnhQU1VTdlg1dkxTT1g1Q2V3cGotM2FQZ2hvazdBVm1VLXEtSmVidnBla3JTZXlSVFdvM1l5X0NKZ20xWlY2WE1xaFl2UER2Z2YzY3J4MkluclhlLVdUVFhEZWZZellrRWJWRFlvMXREOA?oc=5"
-    },
-    {
-      "date": "07 Nov",
-      "time": "16:00 HKT",
-      "publishedAt": "2026-11-07T16:00:00+08:00",
-      "kind": "NEWS",
-      "source": "Bloomberg",
-      "eventId": "us-cpi-aug",
-      "title": "US Inflation Set to Simmer Down Some After Recent Pickup",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNMHB3c0hUZDUwNkFjQmh3VW9PTGE3dmpzRkUwRWI2d25MZWhOcmRPOHhmaVdBNGp0YTF3WU9IaVQ0NVNtVG1nZDZTbXlYRVNWdmdpcUJ3cVdVcE5mMUltMWdwZE10Q3lmcFdHR2RINEtlcW54RW56ZkY1MnNsell5b3VLanVoTnh1Y0FKUVhZampkZ2xWUHJPOWxhSWVxa0VFRWhPbzdITTdjRzA?oc=5"
-    },
-    {
-      "date": "06 Nov",
-      "time": "16:00 HKT",
-      "publishedAt": "2026-11-06T16:00:00+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-payrolls-aug",
-      "title": "Fed policymakers consider rate hike after strong jobs report",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQMF93ekZ4N2wtdW4zX1llS2FoZWpNVlhMLTRNOGVJTUktZmpLQUNBSzY2bW16Mm9mb3lrZERqNFZ6WkRmYkhBTG00Z2k2NFYyNTVLcmVBSkV5eVJRU1RwZFc5blM4MkRmcUxYU2hadXRWbVh0VXpjektqM1BGS3ZlZlNMeW43VWxmeE5TQm13d0E3bTVwUnp5dzFFNA?oc=5"
-    },
-    {
-      "date": "06 Nov",
-      "time": "16:00 HKT",
-      "publishedAt": "2026-11-06T16:00:00+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-payrolls-aug",
-      "title": "Dollar jumps after strong US payrolls report",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQcTZYNGtkV0pONThjTHhjTkdYS0JYX1YtSlJISko4bVRPZDlUSzZaTmhRU0ZtQmtnZWFRQUkxRDhUWHR2akFsSkhSZmQxdVE4dURkRlJ4ekEtc1lFSTlTT3VaU1VRa0VKRjZFZkdZUWVpR3NNT1hfR1JhLVkxWHlLUDVZT04wMnJYTFMyX0haakxHcWdIdWg2SFVpNGF4eWFwNXV0eGZ3Q2ZDeTYzbGtyZXpGM05XNDVBb0U2dUtScEM?oc=5"
-    },
-    {
-      "date": "06 Nov",
-      "time": "16:00 HKT",
-      "publishedAt": "2026-11-06T16:00:00+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-payrolls-aug",
-      "title": "Gold drops as strong US payrolls boost dollar, yields",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQQVNBUlY0RkQ3Vm5qcDFmbS12Nlo0Wjd4RWNEWkROOFRSX0hha1VobWJkTW82YTM1QzNMUXlzX1V5bktiSHJDYklFR2ZDUnN4aEhGM3U0UmlRT3pDcjVFRkR5ak9IZ1NVbG4wempaX1Y0R2JXb0U2THRLcE80d0l1NFppQ3l5b2M4c3RQZU1sS1RNRHdiYmFsYmw0czRoUnVJRVJLNTl0VmVNODg3NWVR?oc=5"
-    },
-    {
-      "date": "06 Nov",
-      "time": "16:00 HKT",
-      "publishedAt": "2026-11-06T16:00:00+08:00",
-      "kind": "NEWS",
-      "source": "Reuters",
-      "eventId": "us-payrolls-aug",
-      "title": "VIEW Strong October jobs report sends yields higher",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNTnpMd1ZuR2N2T2ZIelhxU25lLVpES1EteXlqbW4zVXM1V2M3SkppUlRRZkctZ181TzNsYnhPdFV4OXhzejdscG5TRHJWbGx6M0hrMXZmLS03MDFaQ2VGU0xjaHA1UDhZQ3lsUTNyVVFGODdjR253T2ZGVlNieDZ5dWRwQ3dqa0pqR21pYi1FNUlWOFpMTjZ0VEU4VGc?oc=5"
     }
   ]
 }
