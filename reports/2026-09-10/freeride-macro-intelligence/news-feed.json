@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-27T23:45:27+00:00",
+  "generatedAt": "2026-11-28T05:00:57+00:00",
   "displayTimeZone": "Asia/Hong_Kong",
   "method": "Publisher-labelled Google News RSS; public headline metadata only",
   "items": [
@@ -88,42 +88,6 @@
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9PRFBSb2VsUUJKLUswaWxQVWNsbExmci1mc2dlUEpsT19SaFpzc0NmMUlvb3RnbFB4VkU1Y1ByUk1XX1lDYTRITHZjdTk2MGJpWUJlME9HeVlHVGlPZjZwdV9PNVFoZEdaU0llcUZ6QXg?oc=5"
     },
     {
-      "date": "25 Nov",
-      "time": "20:00 HKT",
-      "publishedAt": "2026-11-25T20:00:01+08:00",
-      "kind": "NEWS",
-      "source": "Bloomberg",
-      "eventId": "us-cpi-aug",
-      "title": "Your Thanksgiving Meal Costs More as US Food Inflation Returns",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNZ091d1V6STMzbmJEYnBWQnNNMDlueHo4ZC1MLVpaRktic0psNjJZaDZoWWlSSFdnaFZBcmV2X3pQZmFSSlBDdTc5YWtxT0FEMHdBNTBGajRSUVRmRzZ5ak16amhBSTBZNjFuSEJtbGpYYmFTMkx3TlVyRVFweEFEN2RMSW90V0sybmw1UGV5ZnlqazFnNzlHSTYxUTIzODJuWlFqR3dLS1BwRnhfUFVNZHlJQnJSdUE?oc=5"
-    },
-    {
-      "date": "25 Nov",
-      "time": "12:03 HKT",
-      "publishedAt": "2026-11-25T12:03:00+08:00",
-      "kind": "NEWS",
-      "source": "Bloomberg",
-      "eventId": "us-fomc-sep",
-      "title": "‘Huang Put’ Is the Fed’s Thanksgiving Pardon",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPNExna2VaMnE5QzZoMmctX0NzNnY2QTJpZlk2T2I4cVZ6Nld3QU5qZWNVZ1lMM05QVjhvWVFja2xnRVZqbUpBVmtjYXlWZ3ZZSGxaMnR5a1dsYVdxS1l4MUNVVzA4MW5UMVBQSFU3Yk1UTm9laDkzOWNUWjVxMHhSQW9pZzlWdGdaV3FvVi1EVTgyb0VDbnpGSDdmbGdLaVNRQUE?oc=5"
-    },
-    {
-      "date": "23 Nov",
-      "time": "00:46 HKT",
-      "publishedAt": "2026-11-23T00:46:04+08:00",
-      "kind": "NEWS",
-      "source": "Bloomberg",
-      "eventId": "us-cpi-aug",
-      "title": "US Consumers Are Holding Up Against Inflation Going Into Holiday Season",
-      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
-      "access": "Open original article",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOVzdHalZYY2s3bHVEeENKX0g4T0M4WWxHV3lacDRlejl2b2E5VWNPd1AxbXhaaUVyNXBFLWlYZFlKTk93R3QzeFdVazI3ajljUFVLYnFpb1VVQmNrVlNvYTIyajhxM1JBbjYxTkhJMkhObEJGSVdRdmZDVzItblZFd1A4NHZaWTZiZWdFVVc4REI2RGF5UjlGWndXeDFha2k0MWdqRkE4X1ozQ1h5N0ZxZmVVTVFldC1VRi1keUdBQQ?oc=5"
-    },
-    {
       "date": "16 Nov",
       "time": "16:00 HKT",
       "publishedAt": "2026-11-16T16:00:00+08:00",
@@ -146,6 +110,18 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPaGZrcC11RmpmMVp3a09iZl9aR2N6TDVFV2d1eE50MzBMT0hkZFMtbXFteWFvcDBnSEM0MXdhWFJmM0d4eXZNVFMtNDA2VHozS0UyeEdWcGtQanctN3pxdVVVeWRacnFxS2d3N1I1MktUbUVISWhwZ0VibFgtTWVUX0ZtelYwSmJMQXdUbDJqZmxPMklpS2c?oc=5"
+    },
+    {
+      "date": "11 Nov",
+      "time": "16:00 HKT",
+      "publishedAt": "2026-11-11T16:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Bloomberg",
+      "eventId": "us-cpi-aug",
+      "title": "Watch CoreWeave Quiets Doubts, US CPI Fuels Fed-Hike Bets",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPNFdpMnlkbjBGUmlnZkdLVE1McHhmc3ExREFnWXRHb19iNHR2QVEzaTkzZXh1YzlFbENyNldzQ2R0ZjBwV2oyUi1TMS1oLVk5bTdUanBWSE51RGlmWmc3UkRQcEE3aHhIZU9TTUFUTVEzXzMzM2c2UmlubFVJdlBkZWxQcUxIYjRNWi1Z?oc=5"
     },
     {
       "date": "10 Nov",
@@ -218,6 +194,30 @@
       "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
       "access": "Open original article",
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOcDdJZWZTVGp6N25nUmVzN2E0anpESlN6a3ZRd3hRTEVyZVB0MzRTT3E2TDQzNmd5LV9GQi1nblV1dGcwd0Vxa3BJclZnUUpDRl9JUmxaQzFVc1hoaVNhNVJUbTNCb3RRODVtSEJkWXhYR0hlOGFfRHlpNkZkbm04cHJnWm8?oc=5"
+    },
+    {
+      "date": "10 Nov",
+      "time": "16:00 HKT",
+      "publishedAt": "2026-11-10T16:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Financial Times",
+      "eventId": "us-fomc-sep",
+      "title": "Top Federal Reserve official considers largest rate rise since 2022",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPM0lSR0FINzZ0S3ZhdnRQcDh4ZkRBVnZUY05NMHFhZ0JsdmNQaE02NEY2M2l0WXM4RHVBbXBCRWdXM21ndjlRLW9jWVFXQWxoVzMtcjhwMU80dE56dlVERFVwZ0NiblNPM0Q3cGx3SDFBc0NFcGNvNHlsR1lGQVFoQzJVUWs?oc=5"
+    },
+    {
+      "date": "10 Nov",
+      "time": "16:00 HKT",
+      "publishedAt": "2026-11-10T16:00:00+08:00",
+      "kind": "NEWS",
+      "source": "Financial Times",
+      "eventId": "us-cpi-aug",
+      "title": "Hot US inflation seals December rise and brings larger increase into play",
+      "summary": "Public headline monitored for its read-through to the US inflation, labor and Federal Reserve event path.",
+      "access": "Open original article",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1jeXphTVB4SFhwbmpsZFpjYkFkUy1PcFpaZ2VNQ0FpLTlJNlRZQUVKYll5aHJGYXViSEQtLUdwb1FYR2pZTFBGTlc1b2lKV19VeGx0Nk5vZ3dVcHpVQUNGRXItbzJLQTNvOHlvNEZ4a2U?oc=5"
     }
   ]
 }
